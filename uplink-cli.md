@@ -2,7 +2,7 @@
 
 The Uplink CLI is our client-side application that supports interacting with
 the Storj network. This tutorial assumes you have an account on a running
-Satellite and uses a [test network satellite](test-network.md) by default.
+Satellite and uses a [test network](test-network.md) Satellite by default.
 
 # Installation and configuration
 
@@ -54,29 +54,38 @@ documentation, but some example commands are listed below:
 #### Make a bucket
 
 ```bash
-uplink mb s3://bucket-name
+uplink mb sj://bucket-name
 ```
 
 #### Upload a file
 
 ```bash
-uplink cp ~/Desktop/your-large-file.mp4 s3://bucket-name
+uplink cp ~/Desktop/your-large-file.mp4 sj://bucket-name
 ```
 
 #### List files in a bucket
 
 ```bash
-uplink ls s3://bucket-name/
+uplink ls sj://bucket-name/
 ```
 
 #### Download a file
 
 ```bash
-uplink cp s3://bucket-name/your-large-file.mp4 ~/Desktop/your-large-file.mp4
+uplink cp sj://bucket-name/your-large-file.mp4 ~/Desktop/your-large-file.mp4
 ```
 
 #### Delete a file
 
 ```bash
-uplink rm s3://bucket-name/your-large-file.mp4
+uplink rm sj://bucket-name/your-large-file.mp4
 ```
+
+#### Show files in filesystem
+
+```bash
+mkdir -p ~/bucket-name
+uplink mount sj://bucket-name/ ~/bucket-name/
+```
+
+This only works well on Linux for now, but macOS and Windows support is planned!

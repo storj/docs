@@ -106,7 +106,10 @@ aws s3 --endpoint=http://localhost:7777/ rm s3://bucket-name/your-large-file.mp4
 
 ## Conclusion
 
-And that's it! You've learned how to use our AWS-mimicing Gateway. Ideally, you'll see how easy it is to swap out AWS for Storj, going forward. Feel that thhis could be easier, or maybe just that this tutorial could be improved? Open an issue or file a PR!
+And that's it! You've learned how to use our S3-compatible Gateway. Ideally,
+you'll see how easy it is to swap out AWS for Storj, going forward. Feel that
+this could be easier, or maybe just that this tutorial could be improved?
+Open an issue or file a PR!
 
 You could also check out the tutorial on [Uplink](uplink-cli.md).
 

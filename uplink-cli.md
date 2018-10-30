@@ -94,6 +94,6 @@ This only works well on Linux for now, but macOS and Windows support is planned!
 
 And that's it! You now know how to perform basic operations on a Storj bucket, and you've been able to get `uplink` working.
 
-We also have a tutorial on [s3 integration](s3-gateway.md) which you could check out. Or, think this could be improved? Open a PR or file an issue.
+We also have a tutorial on [S3 integration](s3-gateway.md) which you could check out. Or, think this could be improved? Open a PR or file an issue.
 
 Now go and decentralize all the things!

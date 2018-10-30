@@ -20,4 +20,4 @@ Want to talk about how to make these methods work further? Need more help, or wo
 
 ## License
 
-Apache 2.0 © Storj Labs Inc.
+Apache 2.0 Copyright © 2018 Storj Labs, Inc.

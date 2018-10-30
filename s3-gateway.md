@@ -4,7 +4,7 @@ The Storj S3 gateway is our service that mimics the Amazon S3 API using the
 Storj network. This tutorial assumes you have an account on a running
 Satellite and uses a [test network](test-network.md) Satellite by default.
 
-# Installation and configuration
+## Installation and configuration
 
 First, you'll need at least [Go 1.11](https://www.golang.org/). Once Go is
 installed, you should be able to run:
@@ -35,7 +35,7 @@ command uses the defaults for the test network:
 
 You are now ready to interact with your files in Storj!
 
-# Running
+## Running
 
 The `gateway` command functions as a daemon. You'll want to start it running
 and leave it running. If you're using the test network, a gateway is already
@@ -48,7 +48,7 @@ running, and you'll want to select a different port for this new one.
 The gateway should output your S3-compatible endpoint, access key, and secret
 key.
 
-# Using the AWS S3 commandline interface
+## Using the AWS S3 commandline interface
 
 To show that this gateway is working, first make sure you have the [AWS S3 CLI
 installed](https://docs.aws.amazon.com/cli/latest/userguide/installing.html).
@@ -103,3 +103,11 @@ aws s3 --endpoint=http://localhost:7777/ presign s3://bucket-name/your-large-fil
 ```bash
 aws s3 --endpoint=http://localhost:7777/ rm s3://bucket-name/your-large-file.mp4
 ```
+
+## Conclusion
+
+And that's it! You've learned how to use our AWS-mimicing Gateway. Ideally, you'll see how easy it is to swap out AWS for Storj, going forward. Feel that thhis could be easier, or maybe just that this tutorial could be improved? Open an issue or file a PR!
+
+You could also check out the tutorial on [Uplink](uplink-cli.md).
+
+Now go and decentralize all the things!

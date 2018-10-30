@@ -3,7 +3,7 @@
 The Storj Test Network allows you to run all of the components of the Storj
 system on your local computer.
 
-![network components](components.png)
+![network components](assets/components.png)
 
 In every day Storj usage, the Satellite, Storage node, and Uplink are run
 separately, but for the test network, all three components are set up and run

@@ -4,7 +4,7 @@ The Uplink CLI is our client-side application that supports interacting with
 the Storj network. This tutorial assumes you have an account on a running
 Satellite and uses a [test network](test-network.md) Satellite by default.
 
-# Installation and configuration
+## Installation and configuration
 
 First, you'll need at least [Go 1.11](https://www.golang.org/). Once Go is
 installed, you should be able to run:
@@ -35,7 +35,7 @@ command uses the defaults for the test network:
 
 You are now ready to interact with your files in Storj!
 
-# Usage
+## Usage
 
 The `uplink` command has a number of operations that can be performed, such as:
 
@@ -89,3 +89,11 @@ uplink mount sj://bucket-name/ ~/bucket-name/
 ```
 
 This only works well on Linux for now, but macOS and Windows support is planned!
+
+## Conclusion
+
+And that's it! You now know how to perform basic operations on a Storj bucket, and you've been able to get `uplink` working.
+
+We also have a tutorial on [s3 integration](s3-gateway.md) which you could check out. Or, think this could be improved? Open a PR or file an issue.
+
+Now go and decentralize all the things!

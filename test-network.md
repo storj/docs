@@ -15,19 +15,22 @@ contains all the powers combined of the Satellite, Storage node, and Uplink.
 # Installation and configuration
 
 First, you'll need at least [Go 1.11](https://www.golang.org/). Once Go is
-installed, you should be able to run:
+installed run:
 
 ```bash
-go get -u storj.io/storj/cmd/captplanet
+git clone https://github.com/storj/storj.git storj
+cd storj
+go install ./cmd/captplanet
 ```
 
-This will install the `captplanet` binary to wherever Go is configured to
-output binaries on your system, by default `~/go/bin`.
+_Ensure that `storj` folder is outside of `GOPATH`, otherwise you may see errors._
+
+This will install the `captplanet` binary to wherever Go is configured to output binaries on your system, by default ~/go/bin.
 
 Next, run setup:
 
 ```bash
-~/go/bin/captplanet setup
+captplanet setup
 ```
 
 You now have a configured Storj test network with default configuration options.
@@ -42,7 +45,7 @@ Captain Planet runs all of the required components of the Storj system. To
 start the test network with your configuration, run:
 
 ```bash
-~/go/bin/captplanet run
+captplanet run
 ```
 
 Your test network is now running. You should see output containing your

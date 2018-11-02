@@ -20,17 +20,17 @@ installed run:
 ```bash
 git clone https://github.com/storj/storj.git storj
 cd storj
-go build ./cmd/captplanet
+go install ./cmd/captplanet
 ```
 
 _Ensure that `storj` folder is outside of `GOPATH`, otherwise you may see errors._
 
-This will create the `captplanet` binary to `storj` directory.
+This will install the `captplanet` binary to wherever Go is configured to output binaries on your system, by default ~/go/bin.
 
 Next, run setup:
 
 ```bash
-./captplanet setup
+captplanet setup
 ```
 
 You now have a configured Storj test network with default configuration options.
@@ -45,7 +45,7 @@ Captain Planet runs all of the required components of the Storj system. To
 start the test network with your configuration, run:
 
 ```bash
-./captplanet run
+captplanet run
 ```
 
 Your test network is now running. You should see output containing your

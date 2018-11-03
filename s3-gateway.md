@@ -2,7 +2,9 @@
 
 The Storj S3 gateway is our service that mimics the Amazon S3 API using the
 Storj network. This tutorial assumes you have an account on a running
-Satellite and uses a [test network](test-network.md) Satellite by default.
+Satellite and use a [test network](test-network.md) Satellite by default.
+
+One gateway is already included in the [test network](test-network.md), so you need to go through this tutorial only if you want to add another gateway.
 
 ## Installation and configuration
 

@@ -2,9 +2,9 @@
 
 The Storj S3 gateway is our service that mimics the Amazon S3 API using the
 Storj network. This tutorial assumes you have an account on a running
-Satellite and use a [test network](test-network.md) Satellite by default.
+Satellite and use a [test network](Test-network) Satellite by default.
 
-One gateway is already included in the [test network](test-network.md), so you need to go through this tutorial only if you want to add another gateway.
+One gateway is already included in the [test network](Test-network), so you need to go through this tutorial only if you want to add another gateway.
 
 ## Installation and configuration
 
@@ -19,7 +19,7 @@ This will install the `gateway` binary to wherever Go is configured to
 output binaries on your system, by default `~/go/bin`.
 
 To configure the Gateway for your Satellite, you'll need to make note of your
-Satellite address and your account's API key. The [Uplink CLI](uplink-cli.md)
+Satellite address and your account's API key. The [Uplink CLI](Uplink-CLI)
 and the Gateway share a configuration file, so if your Uplink CLI is configured
 you can skip the remaining setup.
 
@@ -113,6 +113,6 @@ you'll see how easy it is to swap out AWS for Storj, going forward. Feel that
 this could be easier, or maybe just that this tutorial could be improved?
 Open an issue or file a PR!
 
-You could also check out the tutorial on [Uplink](uplink-cli.md).
+You could also check out the tutorial on [Uplink](Uplink-CLI).
 
 Now go and decentralize all the things!

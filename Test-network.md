@@ -52,5 +52,5 @@ Your test network is now running. You should see output containing your
 Amazon S3 gateway access and secret keys, which you will need to connect
 Amazon S3 compatible clients.
 
-Please see the [Uplink CLI](uplink-cli.md) or [S3 Gateway](s3-gateway.md)
+Please see the [Uplink CLI](Uplink-CLI) or [S3 Gateway](S3-Gateway)
 tutorial for how to upload and download data to the test network.

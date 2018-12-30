@@ -1,4 +1,4 @@
-# Documentation repo!
+# Documentation repo
 
 This repository is where we do development on documentation.
 

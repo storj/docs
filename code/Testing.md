@@ -70,9 +70,15 @@ Preassigned addresses also interfere with running all tests in parallel.
 
 CI environment blocks attempts to use fixed port numbers.
 
-## Avoid mocks
+## Logging
 
-Avoid using mocks, if possible. By using mocks we are not testing the actual system and how the systems work together.
+Use `log := zaptest.NewLogger(t)` as the root logger for services. Use `t.Log`, if you need single logging.
+
+Using `fmt.Print` or other global loggers bypasses built in logging behavior in `testing` package. This means that when running tests in parallel logs can appear in wrong places.
+
+## Real dependencies
+
+Use real dependencies that are used in production. Avoid using mocks, if possible. By using mocks we are not testing the actual system and how the systems work together; hence missing some bugs.
 
 Package `internal/testplanet` helps to setup a full environment that can be used for testing. For the basic examples see https://github.com/storj/storj/blob/master/internal/testplanet/planet_test.go. Of course many packages already use it, so refer them for more examples.
 

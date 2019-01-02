@@ -98,7 +98,7 @@ Better example:
 type DB interface {
 ```
 
-_Comments should have a space after `//`, e.g. `// DB` instead of `//DB`.
+Comments should have a space after `//`, e.g. `// DB` instead of `//DB`.
 
 ## Argument order
 
@@ -117,33 +117,35 @@ Of course, if an argument is not needed then there is no need to add it.
 
 ## Variable naming
 
-Avoid single letter receivers. For variables a single letter variable can be fine only if the scope doesn't exceed one page (~50 lines).
+Avoid single letter receivers. Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `sync.Mutex` is usually called `mu`.) For variables a single letter variable can be fine only if the scope doesn't exceed one page (~50 lines).
 
-Prefer hard-to-confuse variables with 3-7 letters.
+Single letter receivers can be convenient, however when moving between a lot of pacakges it can be quickly confusing.
 
-_Exceptions: Prefer the conventional naming when there is one. e.g. `sync.Mutex` is usually called `mu`._
-
-_Reasoning: Single letter receivers can be convenient, however when moving between a lot of pacakges it can be quickly confusing._
-
-Facilitated example (assume these declarations are in different files):
+Facilitated example (assume these declarations are in different packages):
 
 ```
-func (p *Printer) Print(project *Project) error { ... }
+func (p *Printer) Print(pr *Project) error {
+	...
+}
 
-func (p *Project) PrintTo(printer *Printer) error { return printer.Print(p) }
+func (p *Project) PrintTo(pr *Printer) error {
+	return pr.Print(p)
+}
 ```
 
-It's easier to follow the code when a longer consistent name is used:
+It's easier to follow the code with:
 
 ```
 func (printer *Printer) Print(project *Project) error { ... }
 
-func (project *Project) PrintTo(printer *Printer) error { return printer.Print(project) }
+func (project *Project) PrintTo(printer *Printer) error {
+	return printer.Print(project)
+}
 ```
 
-## Type naming
+## Type and method naming
 
-Avoid stutter andc onsider package name as part of the full type name.
+Consider package name as part of the type name, this avoids stutter when using the types or methods.
 
 ```
 identity.FullIdentity // not great due to stutter
@@ -155,6 +157,8 @@ There are places where it's difficult to avoid, example:
 ```
 kademlia.Kademlia
 ```
+
+Avoid using initialisms unless they are widely known like `ID`, `URL` and `DB`.
 
 ## Package aliases
 

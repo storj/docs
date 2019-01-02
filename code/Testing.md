@@ -66,6 +66,8 @@ Tests should only use automatic port selection when starting servers. Use `net.L
 
 Developers usually have many things running on their own system, so eventually we will use a port that is already in use and cause a failure. Similarly this prevents the test being tested in parallel. Using `"127.0.0.1:0"` is necessary for Windows users, because using `":0"` causes firewall notices when running tests.
 
+Preassigned addresses also interfere with running all tests in parallel.
+
 CI environment blocks attempts to use fixed port numbers.
 
 ## Avoid mocks

@@ -182,3 +182,9 @@ type GraphiteDest struct {
 	stopped bool
 }
 ```
+
+## Logging
+
+Use properly namespaced `*zap.Logger`. By properly namespacing and passing in the logger we can better find how things are working.
+
+Avoid using global loggers like `zap.L().Print` and `log.Print`.

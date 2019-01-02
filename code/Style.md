@@ -50,7 +50,7 @@ _Exceptions: printing to console or log (e.g. `fmt.Println`, `log.Print`)_
 
 To combine multiple errors use `errs.Combine`. To collect multiple similar errors use `errs.Group`.
 
-To handle errors with things that need closing use `errs.Combine` together with `defer. As an example:
+To handle errors with things that need closing use `errs.Combine` together with `defer`. As an example:
 
 ```
 func Example() (err error) {
@@ -115,9 +115,15 @@ func Do(
 
 Of course, if an argument is not needed then there is no need to add it.
 
+## Logging
+
+Use properly namespaced `*zap.Logger`. By properly namespacing and passing in the logger we can better find how things are working. Tests should use `zaptest.NewLogger(t)` as the root logger.
+
+Avoid using global loggers (e.g. `zap.L().Error`, `log.Print`, `fmt.Print`), unless it is `package main`.
+
 ## Variable naming
 
-Avoid single letter receivers. Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `sync.Mutex` is usually called `mu`.) For variables a single letter variable can be fine only if the scope doesn't exceed one page (~50 lines).
+Avoid single letter receivers. Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `sync.Mutex` is usually called `mu`.) For variables a single letter variable can be fine only if the scope doesn't exceed one page (about 50 lines).
 
 Single letter receivers can be convenient, however when moving between a lot of pacakges it can be quickly confusing.
 
@@ -182,9 +188,3 @@ type GraphiteDest struct {
 	stopped bool
 }
 ```
-
-## Logging
-
-Use properly namespaced `*zap.Logger`. By properly namespacing and passing in the logger we can better find how things are working.
-
-Avoid using global loggers like `zap.L().Print` and `log.Print`.

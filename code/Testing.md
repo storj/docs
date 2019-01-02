@@ -12,6 +12,16 @@ All errors must be handled and checked.
 
 See (Error Handling)[code/Style.md#Error Handling] for more details.
 
+## Use `_test` in test package names
+
+By using different package name we are testing the exposed behavior rather than the internal behavior making the tests more robust against changes.
+
+## Logging
+
+Use `log := zaptest.NewLogger(t)` as the root logger for services. Use `t.Log`, if you need single logging.
+
+Using `fmt.Print` or other global loggers bypasses built in logging behavior in `testing` package. This means that when running tests in parallel logs can appear in wrong places.
+
 ## Data in temporary directory
 
 Tests should only create data in temp directory. The created data must be cleaned-up.
@@ -70,13 +80,7 @@ Preassigned addresses also interfere with running all tests in parallel.
 
 CI environment blocks attempts to use fixed port numbers.
 
-## Logging
-
-Use `log := zaptest.NewLogger(t)` as the root logger for services. Use `t.Log`, if you need single logging.
-
-Using `fmt.Print` or other global loggers bypasses built in logging behavior in `testing` package. This means that when running tests in parallel logs can appear in wrong places.
-
-## Real dependencies
+## Real dependencies and data
 
 Use real dependencies that are used in production. Avoid using mocks, if possible. By using mocks we are not testing the actual system and how the systems work together; hence missing some bugs.
 

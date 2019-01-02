@@ -1,3 +1,5 @@
+# Code Style
+
 This document describes Storj stylistic choices. Occasionally, code may diverge from this guide, however it should be a significant reason for the alternate behavior.
 
 We follow most of the suggestions in [Go Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments). We have written out few alterations and clarifications here.

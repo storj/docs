@@ -44,25 +44,29 @@ All code must have a copyright header.
 
 ## Error handling
 
-All errors must be handled and checked.
+All errors must be handled and checked. Don't hide errors.
 
 _Exceptions: printing to console or log (e.g. `fmt.Println`, `log.Print`)_
+
+Use `errs.Class` to annotate errors with more information.
 
 To combine multiple errors use `errs.Combine`. To collect multiple similar errors use `errs.Group`.
 
 To handle errors with things that need closing use `errs.Combine` together with `defer`. As an example:
 
 ```
+var Error = errs.Class("example error")
+
 func Example() (err error) {
 	file, err := os.Open("example.txt")
 	if err != nil {
-		return err
+		return Error.Wrap(err)
 	}
 	defer func() {
-		err = errs.Combine(err, file.Close())
+		err = errs.Combine(err, Error.Wrap(file.Close()))
 	}
 
-	...
+	return Process(file)
 }
 ```
 
@@ -100,21 +104,6 @@ type DB interface {
 
 Comments should have a space after `//`, e.g. `// DB` instead of `//DB`.
 
-## Argument order
-
-The following argument order should be used for consistency (split into multiple lines for clarity only):
-
-```
-func Do(
-    ctx context.Context, // associated context with the operation
-    log *zap.Logger,     // logger used by Do
-    dep1, dep2,          // dependencies needed by Do
-    conf1, conf2,        // different configuration flags
-)
-```
-
-Of course, if an argument is not needed then there is no need to add it.
-
 ## Logging
 
 Use properly namespaced `*zap.Logger`. By properly namespacing and passing in the logger we can better find how things are working. Tests should use `zaptest.NewLogger(t)` as the root logger.
@@ -142,7 +131,9 @@ func (p *Project) PrintTo(pr *Printer) error {
 It's easier to follow the code with:
 
 ```
-func (printer *Printer) Print(project *Project) error { ... }
+func (printer *Printer) Print(project *Project) error {
+	...
+}
 
 func (project *Project) PrintTo(printer *Printer) error {
 	return printer.Print(project)
@@ -166,11 +157,57 @@ kademlia.Kademlia
 
 Avoid using initialisms unless they are widely known like `ID`, `URL` and `DB`.
 
-## Package aliases
+## Methods
+
+### Argument order
+
+The following argument order should be used for consistency (split into multiple lines for clarity only):
+
+```
+func Do(
+    ctx context.Context, // associated context with the operation
+    log *zap.Logger,     // logger used by Do
+    dep1, dep2,          // dependencies needed by Do
+    conf1, conf2,        // different configuration flags
+)
+```
+
+Of course, if an argument is not needed then there is no need to add it.
+
+### Arguments
+
+Prefer separate func or a typed enum instead of a boolean argument. They keep the callers clearer:
+
+```
+Create(true), Create(false) //
+
+Create(), CreateNested()         // separate func
+Create(Unnested), Create(Nested) // typed enum
+```
+
+### Prefer less than 5 arguments
+
+Cognitive load at 5 arguments is quite high already, so at that moment prefer combining some of the arguments into a configuration struct.
+
+_Exclude `ctx` and `log` from the count of 5, since common arguments don't have as drastic effect._
+
+## Package naming and aliases
+
+For package naming see https://blog.golang.org/package-names. Prefer names that are easy to say when talking.
 
 Avoid package aliases, they make it harder to understand which package is actually being used especially, if the names are inconsistent.
 
 If a package alias is required prefer to rename the external packages rather than `storj.io/`.
+
+## Prefer synchronous to asynchronous methods
+
+Making synchronous methods to asynchornous is usually easier than making an asynchronous method to synchronous. This also keeps code simpler when the asynchrony is not needed.
+
+## Avoid sleeps for synchronization
+
+Sleeps usually hide racy behavior, proper synchronization usually doesn't need them.
+
+Of course using sleeps, tickers for scheduling or for avoiding thundering herd problem is acceptable.
 
 ## Mutexes
 

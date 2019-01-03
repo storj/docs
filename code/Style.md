@@ -199,7 +199,7 @@ Avoid package aliases, they make it harder to understand which package is actual
 
 If a package alias is required prefer to rename the external packages rather than `storj.io/`.
 
-## Prefer synchronous to asynchronous methods
+## Prefer synchronous methods
 
 Making synchronous methods to asynchornous is usually easier than making an asynchronous method to synchronous. This also keeps code simpler when the asynchrony is not needed.
 

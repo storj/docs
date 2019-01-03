@@ -112,11 +112,9 @@ Avoid using global loggers (e.g. `zap.L().Error`, `log.Print`, `fmt.Print`), unl
 
 ## Variable naming
 
-Avoid single letter receivers. Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `sync.Mutex` is usually called `mu`.) For variables a single letter variable can be fine only if the scope doesn't exceed one page (about 50 lines).
+Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `mu sync.Mutex`) 
 
-Single letter receivers can be convenient, however when moving between a lot of packages it can be quickly confusing.
-
-Facilitated example (assume these declarations are in different packages):
+Small variables can be fine in small scopes (up to 40 lines) and when there isn't a danger of confusion. Take into account that the confusion can arise also due to moving between packages. As an example:
 
 ```
 func (p *Printer) Print(pr *Project) error {

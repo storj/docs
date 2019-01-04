@@ -223,3 +223,15 @@ type GraphiteDest struct {
 	stopped bool
 }
 ```
+
+## Contexts
+
+### Context creation
+
+`context.Background()` should barely ever get called. 
+
+ * If you don't already have a `ctx` variable in your scope, you should expect to take one as the first argument to your function.
+ * If threading a `ctx` variable through your callstack is more work than reasonable for your PR, use `context.TODO()` instead of `context.Background()` so you can come back to it later.
+ * In a `main()` method, if you're using `pkg/process.Exec` with `*cobra.Cmd`, you can use `process.Ctx(cmd)` to retrieve a command-specific context, instead of making a new one.
+ * In unit tests, please make a single, global `var ctx = context.Background()` line at the top of one of your `_test.go` files. This reduces the likelihood of accidentally propagating a test-only `context.Background()` call into real code.
+ * The only remaining times it's okay to call `context.Background()` are if your code is legitimately starting a brand new execution context. Examples are if you're working with `pkg/process` internals, `net/http` internals, `grpc` internals, another RPC mechanism, or a job scheduler of some kind.

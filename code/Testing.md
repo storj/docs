@@ -87,6 +87,46 @@ func (_ erroringServer) Do(ctx context.Context) error { return errors.New("inval
 
 Note: there are places where using mocks are unavoidable or have a significant benefit.
 
+## Table tests
+
+Prefer table-driven tests when you have multiple similar tests. Try to keep the table as simple as possible. Needing a function closure often indicates a table has become too complicated. Separating erroring and non-erroring examples makes the code easier to read.
+
+Example:
+
+```
+func TestNormalizeEmail(t *testing.T) {
+	type test struct {
+		input    string
+		expected string
+	}
+	validEmails := []test{
+		{"alpha@example.com", "alpha@example.com",
+		{"aLPha+bETa@example.com", "alpha@example.com",
+		...
+	}
+
+	for i, tt := range validEmails {
+		errTag := fmt.Sprintf("%d. %+v", i, tt)
+
+		normalized, err := normalizeEmail(tt.input)
+		if assert.NoError(t, err, errTag) {
+			assert.Equal(t, tt.expected, normalized, errTag)
+		}
+	}
+}
+
+func TestNormalizeEmail_Invalid(t *testing.T) {
+	invalidEmails := []string{
+		"@example.com",
+		...
+	}
+	for i, tt := range invalidEmails {
+		errTag := fmt.Sprintf("%d. %+v", i, tt)
+		_, err := normalizeEmail(tt)
+		assert.Error(t, err, errTag)
+	}
+}
+```
 
 ## Automatically choose ports
 

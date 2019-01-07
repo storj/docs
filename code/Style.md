@@ -197,6 +197,15 @@ Avoid package aliases, they make it harder to understand which package is actual
 
 If a package alias is required prefer to rename the external packages rather than `storj.io/`.
 
+## Contexts
+
+`context.Background()` should be only called at the top-level. For example in `main`, `pkg/process`, `net/http` internals. A good rule of thumb is that you should be able to count calls to `context.Background()` in your whole program on one hand.
+
+* If you need a `ctx` then take it as the first argument from outside. See [Argument Order](#argument-order).
+* In tests use `ctx := testcontext.New(t); defer ctx.Cleanup()`.
+* If threading a `ctx` variable through your callstack is more work than reasonable for your PR, use `context.TODO()` instead of `context.Background()` so you can come back to it later.
+* In a `main()` method, if you're using `pkg/process.Exec` with `*cobra.Cmd`, you can use `process.Ctx(cmd)` to retrieve a command-specific context, instead of making a new one.
+
 ## Prefer synchronous methods
 
 Making synchronous methods to asynchornous is usually easier than making an asynchronous method to synchronous. This also keeps code simpler when the asynchrony is not needed.
@@ -223,14 +232,3 @@ type GraphiteDest struct {
 	stopped bool
 }
 ```
-
-## Contexts
-
-### Context creation
-
-`context.Background()` should be only called at the top-level. For example in `main`, `pkg/process`, `net/http` internals. A good rule of thumb is that you should be able to count calls to `context.Background()` in your whole program on one hand.
-
-* If you need a `ctx` then take it as the first argument from outside. See [Argument Order](#argument-order).
-* In tests use `ctx := testcontext.New(t); defer ctx.Cleanup()`.
-* If threading a `ctx` variable through your callstack is more work than reasonable for your PR, use `context.TODO()` instead of `context.Background()` so you can come back to it later.
-* In a `main()` method, if you're using `pkg/process.Exec` with `*cobra.Cmd`, you can use `process.Ctx(cmd)` to retrieve a command-specific context, instead of making a new one.

@@ -4,14 +4,14 @@ This document describes testing guidelines for Storj. Occasionally, code may div
 
 If the guide is not followed then CI may fail.
 
-Refer to [Style](code/Style.md) for information about the style.
+Refer to [Style](Style.md) for information about the style.
 
 
 ## Error handling
 
 All errors must be handled and checked and don't hide errors.
 
-See (Error Handling)[code/Style.md#Error Handling] for more details.
+See [Error Handling](Style.md#error-handling) for more details.
 
 
 ## Prefer `_test` in test package names
@@ -72,7 +72,7 @@ Use real dependencies that are used in production. Try to create the appropriate
 
 Avoid using mocks and stub-data, if possible. By using mocks we are not testing the actual system and how the systems work together; hence missing some bugs.
 
-Package `internal/testplanet` helps to setup a full environment that can be used for testing. For the basic examples see https://github.com/storj/storj/blob/master/internal/testplanet/planet_test.go. Of course many packages already use it, so refer them for more examples.
+Package `internal/testplanet` helps to setup a full environment that can be used for testing. For the basic examples see [internal/testplanet/planet_test.go](https://github.com/storj/storj/blob/master/internal/testplanet/planet_test.go). Of course many packages already use it, so refer them for more examples.
 
 For testing erroring behavior a wrapper can be used. For example:
 

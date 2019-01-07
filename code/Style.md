@@ -228,10 +228,9 @@ type GraphiteDest struct {
 
 ### Context creation
 
-`context.Background()` should barely ever get called. 
+`context.Background()` should be only called at the top-level. For example in `main`, `pkg/process`, `net/http` internals. A good rule of thumb is that you should be able to count calls to `context.Background()` in your whole program on one hand.
 
- * If you don't already have a `ctx` variable in your scope, you should expect to take one as the first argument to your function.
- * If threading a `ctx` variable through your callstack is more work than reasonable for your PR, use `context.TODO()` instead of `context.Background()` so you can come back to it later.
- * In a `main()` method, if you're using `pkg/process.Exec` with `*cobra.Cmd`, you can use `process.Ctx(cmd)` to retrieve a command-specific context, instead of making a new one.
- * In unit tests, please make a single, global `var ctx = context.Background()` line at the top of one of your `_test.go` files. This reduces the likelihood of accidentally propagating a test-only `context.Background()` call into real code.
- * The only remaining times it's okay to call `context.Background()` are if your code is legitimately starting a brand new execution context. Examples are if you're working with `pkg/process` internals, `main()` without `pkg/process`, `net/http` internals, `grpc` internals, another RPC mechanism, or a job scheduler of some kind. A good rule of thumb is that you should be able to count calls to `context.Background()` in your whole program on one hand.
+* If you need a `ctx` then take it as the first argument from outside. See [Argument Order](#argument-order).
+* In tests use `ctx := testcontext.New(t); defer ctx.Cleanup()`.
+* If threading a `ctx` variable through your callstack is more work than reasonable for your PR, use `context.TODO()` instead of `context.Background()` so you can come back to it later.
+* In a `main()` method, if you're using `pkg/process.Exec` with `*cobra.Cmd`, you can use `process.Ctx(cmd)` to retrieve a command-specific context, instead of making a new one.

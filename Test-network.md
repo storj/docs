@@ -5,7 +5,8 @@ The `storj-sim` tool enables you to run all the components of the Storj network 
 ![network components](assets/components.png)
 
 In every day Storj usage, the Satellite, Storage Node, and Uplink are run
-on separate servers and computers, but for the test network, all of the components are running locally.
+on separate servers and computers, but for the purposes of the test network,
+all of the components are run locally.
 
 # Installation and configuration
 
@@ -35,7 +36,7 @@ You might also want to take a look at the config by navigating to the root
 directory `--config-dir` where all the configs are specified.
 You can tweak the configuration settings there as needed.
 
-To see what is happening under the hood you can use `-x` or `--print-commands` to see how the processes are exactly started.
+For insight into what is happening under the hood you can use `-x` or `--print-commands` to see how the processes are started.
 
 The next step is to run it!
 
@@ -78,7 +79,7 @@ For a real-world example you can take a look in [https://github.com/storj/storj/
 
 While developing it's often nice to be able to delete the network and set it up from scratch.
 
-It can be very convenient to run the command in a single line, like so:
+For convenience, you may run the command in a single line, like so:
 
 `storj-sim network destroy && storj-sim network setup && storj-sim network test bash my-test-script.sh`
 

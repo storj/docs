@@ -6,7 +6,7 @@
 
 This repository holds some basic tutorials for working with the Storj v3 architecture:
 
-- [Learn how to run the Storj-SDK test network](Test-network)
+- [Learn how to run the storj-sim test network](Test-network)
 - [Use the Storj Uplink CLI tool to manipulate files](Uplink-CLI)
 - [Use the Gateway to mimic AWS s3 filestores](S3-Gateway)
 

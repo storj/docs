@@ -71,7 +71,7 @@ The information about the network is exposed via environment flags. All the flag
 * Keys: `GATEWAY_0_ACCESS_KEY`, `GATEWAY_0_SECRET_KEY`
 * Directory: `STORAGENODE_0_DIR`, `SATELLITE_0_DIR`, `GATEWAY_0_DIR`
 
-For a real-world example you can take a look in [https://github.com/storj/storj/blob/master/scripts/test-sim.sh](test-sim.sh) and [https://github.com/storj/storj/blob/master/scripts/test-sim-aws.sh](test-sim-aws.sh).
+For a real-world example you can take a look in [test-sim.sh](https://github.com/storj/storj/blob/master/scripts/test-sim.sh) and [test-sim-aws.sh](https://github.com/storj/storj/blob/master/scripts/test-sim-aws.sh).
 
 ### Wiping the Testnet
 

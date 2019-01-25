@@ -23,15 +23,18 @@ Make sure you have an email with your personal single use authorization token. I
 
 	`$ ./identity_darwin_amd64 create storagenode`
 
+
 3) Sign the identity you created with your personal single-use authorization token by running the following command: 
 
 
 	`$ ./identity_darwin_amd64 authorize storagenode <authorization-token>`
 
+
 4) Download the docker container from docker hub: 
 
 
 	`$ docker pull storjlabs/storagenode:alpha`
+
 
 5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, and `<storage-dir>`
     
@@ -42,17 +45,21 @@ Make sure you have an email with your personal single use authorization token. I
   
   *__Caution:__ Before proceeding to the next step, please be sure to back up your identity files located in your ~/identity/storagenode/ folder. This will allow you to restore your node to working order in case of an unfortunate incident such as a hard drive crash.*
 
+
 `$ docker run -d -p -e WALLET="" -e EMAIL="" -e ADDRESS="" -v "<identity-dir>":/app/identity -v <storage-dir>:/app/config --name storagenode storjlabs/storagenode:alpha`
+
 
 6) Start your storage node dashboard by running the following command:
 
 
 	`$ docker exec -it storagenode dashboard`
 
+
 7) If step 5 or 6 failed for you, run: 
 
 
 	`$ docker ps -a`
+
 
 Take note of the container ID of the storage node container
 

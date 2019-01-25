@@ -24,7 +24,7 @@ Make sure you have an email with your personal single use authorization token. I
 
 3) Sign the identity you created with your personal single-use authorization token by running the following command: 
 
-	`$ identity authorize storagenode <authorization-token>`
+	`$ ./identity_darwin_amd64 authorize storagenode <authorization-token>`
 
 4) Download the docker container from docker hub: 
 

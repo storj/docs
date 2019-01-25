@@ -51,19 +51,14 @@ Make sure you have an email with your personal single use authorization token. I
 
 6) Start your storage node dashboard by running the following command:
 
-
-	`$ docker exec -it storagenode dashboard`
-
+`$ docker exec -it storagenode dashboard`
 
 7) If step 5 or 6 failed for you, run: 
 
-
-	`$ docker ps -a`
-
+`$ docker ps -a`
 
 Take note of the container ID of the storage node container
 
-
-	`$ docker logs -t <container-id>`
+`$ docker logs -t <container-id>`
 
 *If you need help setting up your storage node, sign up for our [community chat](https://community.storj.io/home) and ask for assistance in the #storagenode channel. Provide your logs and stacktrace when requested by the community leader attending your issue.*

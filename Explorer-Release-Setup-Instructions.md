@@ -6,7 +6,8 @@ Hello Storj Node Operators! First off, we want to say thank you for your patienc
 Make sure you have an email with your personal single use authorization token. If you don’t have an authorization token yet, please join our [waitlist](https://storj.io/sign-up-farmer). Install the necessary dependencies and configure your network appropriately using the following steps: 
 
 - Install `docker` please visit: [docker.com](https://docs.docker.com/install/) and follow the installation guide for your operating system. 
-- Set up port forwarding! The port you must specify is `28967` Please follow the instructions for your router on [portforward.com](https://portforward.com/).
+- Set up port forwarding! The port you must specify is `28967`. Please follow the instructions for your router on [portforward.com](https://portforward.com/).
+- Set up dynamic DDNS 
 
 #### Setting up your Storage Node on the V3 Network!
 
@@ -20,37 +21,58 @@ Download the correct binary for your operating system:
 
 2) Unzip the file and run the following command to start creating an identity (this example is for Mac OS, substitute the appropriate identity binary for your OS):
 
-	`$ ./identity_darwin_amd64 create storagenode`
+```bash
+$ ./identity_darwin_amd64 create storagenode
+```
 
 3) Sign the identity you created with your personal single-use authorization token by running the following command: 
 
-	`$ ./identity_darwin_amd64 authorize storagenode <authorization-token>`
+```bash
+$ ./identity_darwin_amd64 authorize storagenode <authorization-token>
+```
+
+*__Caution:__ Before proceeding to the next step, please be sure to back up your identity files located in the output path of the previous command. This will allow you to restore your node to working order in case of an unfortunate incident such as a hard drive crash.*
 
 4) Download the docker container from docker hub: 
 
-	`$ docker pull storjlabs/storagenode:alpha`
+```bash
+$ docker pull storjlabs/storagenode:alpha
+```
 
-5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, and `<storage-dir>`
+5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, `<identity-dir>`, and `<storage-dir>`.
     
-	`WALLET`: ethereum address for payments
- 	`EMAIL`: email address so that we can notify you when a new version has been released (optional)
-	`ADDRESS`: external IP address or the DDNS you configured and the port you opened on your router `<ip>:<port>`
-	`<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
-  
-__Caution:__ Before proceeding to the next step, please be sure to back up your identity files located in your ~/identity/storagenode/ folder. This will allow you to restore your node to working order in case of an unfortunate incident such as a hard drive crash.
+- `WALLET`: ethereum address for payments
+- `EMAIL`: email address so that we can notify you when a new version has been released (optional)
+- `ADDRESS`: external IP address or the DDNS you configured and the port you opened on your router `<ip>:<port>`
+- `<identity-dir>`: the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier
+- `<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
 
-	`$ docker run -d -p -e WALLET="" -e EMAIL="" -e ADDRESS="" -v "<identity-dir>":/app/identity -v <storage-dir>:/app/config --name storagenode storjlabs/storagenode:alpha`
+```bash
+$ docker run -d -p 29867:29867 \
+    -e WALLET="" \
+    -e EMAIL="" \
+    -e ADDRESS="" \
+    -v "<identity-dir>":/app/identity \
+    -v "<storage-dir>":/app/config \
+    --name storagenode storjlabs/storagenode:alpha
+```
 
 6) Start your storage node dashboard by running the following command:
 
-	`$ docker exec -it storagenode dashboard`
+```bash
+$ docker exec -it storagenode /app/dashboard.sh
+```
 
 7) If step 5 or 6 failed for you, run: 
 
-	`$ docker ps -a`
+```bash
+$ docker ps -a
+```
 
-	Take note of the container ID of the storage node container
+Take note of the container ID of the storage node container
 
-	`$ docker logs -t <container-id>`
+```bash
+$ docker logs -t <container-id>
+```
 
 *If you need help setting up your storage node, sign up for our [community chat](https://community.storj.io/home) and ask for assistance in the #storagenode channel. Provide your logs and stacktrace when requested by the community leader attending your issue.*

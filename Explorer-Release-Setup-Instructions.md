@@ -42,8 +42,7 @@ Make sure you have an email with your personal single use authorization token. I
   
   *__Caution:__ Before proceeding to the next step, please be sure to back up your identity files located in your ~/identity/storagenode/ folder. This will allow you to restore your node to working order in case of an unfortunate incident such as a hard drive crash.*
 
-
-	`$ docker run -d -p -e WALLET="" -e EMAIL="" -e ADDRESS="" -v "<identity-dir>":/app/identity -v <storage-dir>:/app/config --name storagenode storjlabs/storagenode:alpha`
+`$ docker run -d -p -e WALLET="" -e EMAIL="" -e ADDRESS="" -v "<identity-dir>":/app/identity -v <storage-dir>:/app/config --name storagenode storjlabs/storagenode:alpha`
 
 6) Start your storage node dashboard by running the following command:
 
@@ -55,7 +54,7 @@ Make sure you have an email with your personal single use authorization token. I
 
 	`$ docker ps -a`
 
-	Take note of the container ID of the storage node container
+Take note of the container ID of the storage node container
 
 
 	`$ docker logs -t <container-id>`

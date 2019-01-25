@@ -37,7 +37,7 @@ Download the correct binary for your operating system:
 	`ADDRESS`: external IP address or the DDNS you configured and the port you opened on your router `<ip>:<port>`
 	`<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
   
-  *__Caution:__ Before proceeding to the next step, please be sure to back up your identity files located in your ~/identity/storagenode/ folder. This will allow you to restore your node to working order in case of an unfortunate incident such as a hard drive crash.*
+__Caution:__ Before proceeding to the next step, please be sure to back up your identity files located in your ~/identity/storagenode/ folder. This will allow you to restore your node to working order in case of an unfortunate incident such as a hard drive crash.
 
 	`$ docker run -d -p -e WALLET="" -e EMAIL="" -e ADDRESS="" -v "<identity-dir>":/app/identity -v <storage-dir>:/app/config --name storagenode storjlabs/storagenode:alpha`
 

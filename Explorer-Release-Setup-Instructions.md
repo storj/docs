@@ -33,8 +33,8 @@ Make sure you have an email with your personal single use authorization token. I
 5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, and `<storage-dir>`
     
 	`WALLET`: ethereum address for payments
-  `EMAIL`: email address (optional)
-  `ADDRESS`: external IP address or the DDNS you configured and the number of the port you manually opened on your router, separated by a colon for example `<ip>:<port>`
+  `EMAIL`: email address so that we can notify you when a new version has been released (optional)
+  `ADDRESS`: external IP address or the DDNS you configured and the port you opened on your router `<ip>:<port>`
   `<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
   
   *__Caution:__ Before proceeding to the next step, please be sure to back up your identity files located in your ~/identity/storagenode/ folder. This will allow you to restore your node to working order in case of an unfortunate incident such as a hard drive crash.*

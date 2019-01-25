@@ -14,10 +14,10 @@ Make sure you have an email with your personal single use authorization token. I
 1) Download the Identity tool binary and create an Identity. The process of generating an identity could take several hours; it is dependent on your machine´s processing power & luck.
 
 Download the correct binary for your operating system:
-	- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_darwin_amd64.zip)
-	- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_linux_amd64.zip)
-	- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_linux_arm.zip)
-	- Windows: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_windows_amd64.zip)
+- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_darwin_amd64.zip)
+- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_linux_amd64.zip)
+- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_linux_arm.zip)
+- Windows: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_windows_amd64.zip)
 
 2) Unzip the file and run the following command to start creating an identity (this example is for Mac OS, substitute the appropriate identity binary for your OS):
 

@@ -53,7 +53,7 @@ $ docker pull storjlabs/storagenode:arm
 - `<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
 
 ```bash
-$ docker run -d -p 28967:28967 \
+$ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="" \
     -e EMAIL="" \
     -e ADDRESS="" \
@@ -65,7 +65,7 @@ $ docker run -d -p 28967:28967 \
 _For Raspberry Pi and similar ARM-based platforms use:_
 
 ```bash
-$ docker run -d -p 28967:28967 \
+$ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="" \
     -e EMAIL="" \
     -e ADDRESS="" \

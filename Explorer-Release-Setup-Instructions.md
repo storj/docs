@@ -48,7 +48,7 @@ $ docker pull storjlabs/storagenode:alpha
 - `<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
 
 ```bash
-$ docker run -d -p 29867:29867 \
+$ docker run -d -p 28967:28967 \
     -e WALLET="" \
     -e EMAIL="" \
     -e ADDRESS="" \

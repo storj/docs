@@ -5,7 +5,7 @@ Hello Storj Node Operators! First off, we want to say thank you for your patienc
 #### Before you begin
 Make sure you have an email with your personal single use authorization token. If you don’t have an authorization token yet, please join our [waitlist](https://storj.io/sign-up-farmer). Install the necessary dependencies and configure your network appropriately using the following steps: 
 
-*__Note:__ This is an early release, and will have limited functionality for some users. If you are running a windows home OS and received an invite to set up your node, you will encounter issues when installing docker. Please save your one-time-use authorization token and we will notify everyone when this is no longer an issue.*
+*__Note:__ This is an early release, and will have limited functionality for some users. For example, we currently only support Windows Pro and not Windows Home. If you are on Windows Home, please save your one-time-use authorization token and we will notify everyone when this is no longer an issue.*
 
 - Install `docker` please visit: [docker.com](https://docs.docker.com/install/) and follow the installation guide for your operating system. 
 - Set up port forwarding & Dynamic DNS! The port you must specify is `28967`. Please visit our [knowledge base article](https://storjlabs.atlassian.net/wiki/spaces/SCKB/pages/4423868/Need+help+port-forwarding) or [portforward.com](https://portforward.com/) and follow the instructions for your router.
@@ -18,7 +18,7 @@ Download the correct binary for your operating system:
 - Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_darwin_amd64.zip)
 - Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_linux_amd64.zip)
 - Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_linux_arm.zip)
-- Windows: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_windows_amd64.zip)
+- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/8ba4b61-go1.11/identity_windows_amd64.zip)
 
 2) Unzip the file and run the following command to start creating an identity (this example is for Mac OS, substitute the appropriate identity binary for your OS):
 

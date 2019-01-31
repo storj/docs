@@ -46,11 +46,13 @@ _For Raspberry Pi and similar ARM-based platforms use:_
 $ docker pull storjlabs/storagenode:arm
 ```
 
-5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, `<identity-dir>`, and `<storage-dir>`.
+5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
     
 - `WALLET`: ethereum address for payments
 - `EMAIL`: email address so that we can notify you when a new version has been released (optional)
 - `ADDRESS`: external IP address or the DDNS you configured and the port you opened on your router `<ip>:<port>`
+- `BANDWIDTH`: how much bandwidth you want to allocate to the Storj network
+- `STORAGE`: how much disk space you want to allocate to the Storj network
 - `<identity-dir>`: the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier
 - `<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
 
@@ -59,6 +61,8 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="" \
     -e EMAIL="" \
     -e ADDRESS="" \
+    -e BANDWIDTH="2TB" \
+    -e STORAGE="2TB" \
     -v "<identity-dir>":/app/identity \
     -v "<storage-dir>":/app/config \
     --name storagenode storjlabs/storagenode:alpha
@@ -71,6 +75,8 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="" \
     -e EMAIL="" \
     -e ADDRESS="" \
+    -e BANDWIDTH="2TB" \
+    -e STORAGE="2TB" \
     -v "<identity-dir>":/app/identity \
     -v "<storage-dir>":/app/config \
     --name storagenode storjlabs/storagenode:arm

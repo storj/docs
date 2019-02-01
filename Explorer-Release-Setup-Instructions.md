@@ -113,3 +113,33 @@ $ docker logs -t <container-id>
 ```
 
 *If you need help setting up your storage node, sign up for our [community chat](https://community.storj.io/home) and ask for assistance in the #storagenode channel. Provide your logs and stacktrace when requested by the community leader attending your issue.*
+
+#### Upgrading your Storage Node
+
+1) Stop the running storagenode container by running the following command:
+```bash
+$ docker kill storagenode 
+```
+
+2) Remove the existing container by running the following command:
+```bash
+$ docker rm storagenode
+```
+
+3) Pull the latest image for docker by running the following command:
+```bash
+$ docker pull storjlabs/storagenode:alpha
+```
+
+4) Start your Storage node again by running the following command after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
+```bash
+$ docker run -d --restart unless-stopped -p 28967:28967 \
+    -e WALLET="" \
+    -e EMAIL="" \
+    -e ADDRESS="" \
+    -e BANDWIDTH="2TB" \
+    -e STORAGE="2TB" \
+    -v "<identity-dir>":/app/identity \
+    -v "<storage-dir>":/app/config \
+    --name storagenode storjlabs/storagenode:alpha
+```

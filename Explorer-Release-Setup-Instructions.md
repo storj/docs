@@ -14,7 +14,7 @@ Storage node set up tutorial [video](https://youtu.be/cd6gWMgSyqI)
 
 
 #### Before you begin
-Make sure you have an email with your personal single-use authorization token. Note that the format of the authorization token is `email:95characterstring`. If you don’t have an authorization token yet, please join our [waitlist](https://storj.io/sign-up-farmer). 
+Make sure you have an email with your personal single-use authorization token. Note that the format of the authorization token is `email:94characterstring`. If you don’t have an authorization token yet, please join our [waitlist](https://storj.io/sign-up-farmer). 
 
 *__Note:__ This early release has limited support for some operating systems. If your OS is not explicitly supported, please save your one-time-use authorization token and we will notify everyone when this is no longer an issue.*
 

@@ -105,13 +105,7 @@ $ docker exec -it storagenode /app/dashboard.sh
 7) If step 5 or 6 failed for you, run: 
 
 ```bash
-$ docker ps -a
-```
-
-Take note of the container ID of the storage node container
-
-```bash
-$ docker logs -t <container-id>
+$ docker logs -t storagenode
 ```
 
 *If you need help setting up your storage node, sign up for our [community chat](https://community.storj.io/home) and ask for assistance in the #storagenode channel. Provide your logs and stacktrace when requested by the community leader attending your issue.*

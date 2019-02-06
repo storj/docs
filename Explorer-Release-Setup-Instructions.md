@@ -99,8 +99,9 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
 
 _For Windows Operatins Systems use the following line:_
 ```bash
-$ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" -v "D:\identity\storagenode\":/app/identity -v "D:\data\":/app/config --name storagenode storjlabs/storagenode:alpha
+$ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" -v "<identity-dir>":/app/identity -v "<storage-dir>":/app/config --name storagenode storjlabs/storagenode:alpha
 ```
+- Note: On Windows you need to format the paths like this: `D:\identity\storagenode\` or `D:\data\`
 
 6) Start your storage node dashboard by running the following command:
 

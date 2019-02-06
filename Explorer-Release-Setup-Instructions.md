@@ -65,6 +65,7 @@ $ docker pull storjlabs/storagenode:arm
 - `WALLET`: ethereum address for payments
 - `EMAIL`: email address so that we can notify you when a new version has been released (optional)
 - `ADDRESS`: external IP address or the DDNS you configured and the port you opened on your router `<ip>:<port>`
+   - Note: If you are using a custom port other than 28967, then you have to change the `-p 28967:28967` to `-p <port>:28967`
 - `BANDWIDTH`: how much bandwidth you want to allocate to the Storj network
 - `STORAGE`: how much disk space you want to allocate to the Storj network
 - `<identity-dir>`: the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier
@@ -72,9 +73,9 @@ $ docker pull storjlabs/storagenode:arm
 
 ```bash
 $ docker run -d --restart unless-stopped -p 28967:28967 \
-    -e WALLET="" \
-    -e EMAIL="" \
-    -e ADDRESS="" \
+    -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
+    -e EMAIL="user@example.com" \
+    -e ADDRESS="domain.ddns.net:28967" \
     -e BANDWIDTH="2TB" \
     -e STORAGE="2TB" \
     -v "<identity-dir>":/app/identity \
@@ -86,15 +87,21 @@ _For Raspberry Pi and similar ARM-based platforms use:_
 
 ```bash
 $ docker run -d --restart unless-stopped -p 28967:28967 \
-    -e WALLET="" \
-    -e EMAIL="" \
-    -e ADDRESS="" \
+    -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
+    -e EMAIL="user@example.com" \
+    -e ADDRESS="domain.ddns.net:28967" \
     -e BANDWIDTH="2TB" \
     -e STORAGE="2TB" \
     -v "<identity-dir>":/app/identity \
     -v "<storage-dir>":/app/config \
     --name storagenode storjlabs/storagenode:arm
 ```
+
+_For Windows Operatins Systems use the following line:_
+```bash
+$ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" -v "<identity-dir>":/app/identity -v "<storage-dir>":/app/config --name storagenode storjlabs/storagenode:alpha
+```
+- Note: On Windows you need to format the paths like this: `D:\identity\storagenode\` or `D:\data\`
 
 6) Start your storage node dashboard by running the following command:
 

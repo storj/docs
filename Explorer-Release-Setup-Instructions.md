@@ -13,6 +13,10 @@ If these instructions are a little more complex than you can handle, don’t wor
 Storage node set up tutorial [video](https://youtu.be/cd6gWMgSyqI)
 
 
+#### Important security considerations
+
+ * Our software serves requests from internet, but not all software you may have installed is designed to be exposed to the internet directly! **Do not connect your computer directly to the internet without the assistance of a firewall.** This is especially true for users on Windows with applications respond to requests on all IPs.
+
 #### Before you begin
 Make sure you have an email with your personal single-use authorization token. Note that the format of the authorization token is `email:characterstring`. If you don’t have an authorization token yet, please join our [waitlist](https://storj.io/sign-up-farmer). 
 
@@ -20,7 +24,8 @@ Make sure you have an email with your personal single-use authorization token. N
 
 Install the necessary dependencies and configure your network appropriately using the following steps: 
 
-- Install `docker` please visit: [docker.com](https://docs.docker.com/install/) and follow the installation guide for your operating system. 
+- Make sure your computer is *not* connected directly to the internet. If you already have a reasonable router you should be okay. See the Important security considerations section.
+- Install `docker`. Please visit: [docker.com](https://docs.docker.com/install/) and follow the installation guide for your operating system. 
 - Set up port forwarding & Dynamic DNS! The port you must specify is `28967`. Please visit our [knowledge base article](https://storjlabs.atlassian.net/wiki/spaces/SCKB/pages/4423868/Need+help+port-forwarding) or [portforward.com](https://portforward.com/) and follow the instructions for your router.
 
 #### Setting up your Storage Node on the V3 Network!

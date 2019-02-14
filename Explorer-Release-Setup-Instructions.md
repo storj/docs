@@ -134,9 +134,13 @@ $ docker kill storagenode
 $ docker rm storagenode
 ```
 
-3) Pull the latest image for docker by running the following command:
+3) Pull the latest image for docker by running the following command depending on your architecture:
 ```bash
 $ docker pull storjlabs/storagenode:alpha
+```
+or
+```bash
+$ docker pull storjlabs/storagenode:arm
 ```
 
 4) Start your Storage node again by running the following command after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
@@ -150,4 +154,16 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -v "<identity-dir>":/app/identity \
     -v "<storage-dir>":/app/config \
     --name storagenode storjlabs/storagenode:alpha
+```
+For ARM based machines use:
+```bash
+$ docker run -d --restart unless-stopped -p 28967:28967 \
+    -e WALLET="" \
+    -e EMAIL="" \
+    -e ADDRESS="" \
+    -e BANDWIDTH="2TB" \
+    -e STORAGE="2TB" \
+    -v "<identity-dir>":/app/identity \
+    -v "<storage-dir>":/app/config \
+    --name storagenode storjlabs/storagenode:arm
 ```

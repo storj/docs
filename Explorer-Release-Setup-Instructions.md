@@ -15,7 +15,7 @@ Storage node set up tutorial [video](https://youtu.be/cd6gWMgSyqI)
 
 #### Important security considerations
 
- * Our software serves requests from internet, but not all software you may have installed is designed to be exposed to the internet directly! **Do not connect your computer directly to the internet without the assistance of a firewall.** This is especially true for users on Windows with applications respond to requests on all IPs.
+ * Our software serves requests from the internet, but not all software you may have installed is designed to be exposed to the internet directly! **Do not connect your computer directly to the internet without the assistance of a firewall.** This is especially true for users on Windows with applications responding to requests on all IPs.
 
 #### Before you begin
 Make sure you have an email with your personal single-use authorization token. Note that the format of the authorization token is `email:characterstring`. If you don’t have an authorization token yet, please join our [waitlist](https://storj.io/sign-up-farmer). 

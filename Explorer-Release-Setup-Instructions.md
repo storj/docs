@@ -33,10 +33,10 @@ Install the necessary dependencies and configure your network appropriately usin
 1) Download the Identity tool binary and create an Identity. The process of generating an identity could take several hours; it is dependent on your machine´s processing power & luck.
 
 Download the correct binary for your operating system:
-- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0f662b8-go1.11/identity_darwin_amd64.zip)
-- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0f662b8-go1.11/identity_linux_amd64.zip)
-- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0f662b8-go1.11/identity_linux_arm.zip)
-- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0f662b8-go1.11/identity_windows_amd64.zip)
+- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/df20597-go1.11/identity_darwin_amd64.zip)
+- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/df20597-go1.11/identity_linux_amd64.zip)
+- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/df20597-go1.11/identity_linux_arm.zip)
+- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/df20597-go1.11/identity_windows_amd64.zip)
 
 2) Unzip the file and run the following command to start creating an identity (this example is for Mac OS, substitute the appropriate identity binary for your OS):
 

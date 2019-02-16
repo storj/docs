@@ -13,6 +13,10 @@ If these instructions are a little more complex than you can handle, don’t wor
 Storage node set up tutorial [video](https://youtu.be/cd6gWMgSyqI)
 
 
+#### Important security considerations
+
+ * Our software serves requests from the internet, but not all software you may have installed is designed to be exposed to the internet directly! **Do not connect your computer directly to the internet without the assistance of a firewall.** This is especially true for users on Windows with applications responding to requests on all IPs.
+
 #### Before you begin
 Make sure you have an email with your personal single-use authorization token. Note that the format of the authorization token is `email:characterstring`. If you don’t have an authorization token yet, please join our [waitlist](https://storj.io/sign-up-farmer). 
 
@@ -20,7 +24,8 @@ Make sure you have an email with your personal single-use authorization token. N
 
 Install the necessary dependencies and configure your network appropriately using the following steps: 
 
-- Install `docker` please visit: [docker.com](https://docs.docker.com/install/) and follow the installation guide for your operating system. 
+- Make sure your computer is *not* connected directly to the internet. If you already have a reasonable router you should be okay. See the Important security considerations section.
+- Install `docker`. Please visit: [docker.com](https://docs.docker.com/install/) and follow the installation guide for your operating system. 
 - Set up port forwarding & Dynamic DNS! The port you must specify is `28967`. Please visit our [knowledge base article](https://storjlabs.atlassian.net/wiki/spaces/SCKB/pages/4423868/Need+help+port-forwarding) or [portforward.com](https://portforward.com/) and follow the instructions for your router.
 
 #### Setting up your Storage Node on the V3 Network!
@@ -28,10 +33,10 @@ Install the necessary dependencies and configure your network appropriately usin
 1) Download the Identity tool binary and create an Identity. The process of generating an identity could take several hours; it is dependent on your machine´s processing power & luck.
 
 Download the correct binary for your operating system:
-- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0f662b8-go1.11/identity_darwin_amd64.zip)
-- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0f662b8-go1.11/identity_linux_amd64.zip)
-- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0f662b8-go1.11/identity_linux_arm.zip)
-- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0f662b8-go1.11/identity_windows_amd64.zip)
+- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/df20597-go1.11/identity_darwin_amd64.zip)
+- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/df20597-go1.11/identity_linux_amd64.zip)
+- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/df20597-go1.11/identity_linux_arm.zip)
+- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/df20597-go1.11/identity_windows_amd64.zip)
 
 2) Unzip the file and run the following command to start creating an identity (this example is for Mac OS, substitute the appropriate identity binary for your OS):
 
@@ -97,11 +102,11 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     --name storagenode storjlabs/storagenode:arm
 ```
 
-_For Windows Operatins Systems use the following line:_
+_For Windows Operating Systems use the following line:_
 ```bash
 $ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" -v "<identity-dir>":/app/identity -v "<storage-dir>":/app/config --name storagenode storjlabs/storagenode:alpha
 ```
-- Note: On Windows you need to format the paths like this: `D:\identity\storagenode\` or `D:\data\`
+- Note: On Windows you need to format the paths like this: `D:\\identity\\storagenode\\` or `D:\\data\\`
 
 6) Start your storage node dashboard by running the following command:
 
@@ -129,9 +134,13 @@ $ docker kill storagenode
 $ docker rm storagenode
 ```
 
-3) Pull the latest image for docker by running the following command:
+3) Pull the latest image for docker by running the following command depending on your architecture:
 ```bash
 $ docker pull storjlabs/storagenode:alpha
+```
+or
+```bash
+$ docker pull storjlabs/storagenode:arm
 ```
 
 4) Start your Storage node again by running the following command after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
@@ -145,4 +154,16 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -v "<identity-dir>":/app/identity \
     -v "<storage-dir>":/app/config \
     --name storagenode storjlabs/storagenode:alpha
+```
+For ARM based machines use:
+```bash
+$ docker run -d --restart unless-stopped -p 28967:28967 \
+    -e WALLET="" \
+    -e EMAIL="" \
+    -e ADDRESS="" \
+    -e BANDWIDTH="2TB" \
+    -e STORAGE="2TB" \
+    -v "<identity-dir>":/app/identity \
+    -v "<storage-dir>":/app/config \
+    --name storagenode storjlabs/storagenode:arm
 ```

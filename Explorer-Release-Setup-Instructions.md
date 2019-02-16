@@ -45,7 +45,7 @@ $ ./identity_darwin_amd64 create storagenode
 ```
 
 3) Sign the identity you created with your personal single-use authorization token by running the following command:
-*By using the authorization token, you agree to be bound by the [Storage Sharing Terms and Conditions](https://storj.io/storj-share-terms.html).*
+*By using the authorization token, you agree to be bound by the [Storage Sharing Terms and Conditions](https://storj.io/storj-share-terms.html).* In order to authorize, you will need to configure both outbound tcp port 8888 access on your firewall, as well as to ensure this port is included in your NAT/port-forwarding setup. On most if not all home routers this will already be enabled with your default router configuration.
 
 ```bash
 $ ./identity_darwin_amd64 authorize storagenode <authorization-token>

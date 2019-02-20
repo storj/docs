@@ -123,6 +123,17 @@ $ docker logs -t storagenode
 
 *If you need help setting up your storage node, sign up for our [community chat](https://community.storj.io/home) and ask for assistance in the #storagenode channel. Provide your logs and stacktrace when requested by the community leader attending your issue.*
 
+#### Short Maintenance Shutdown
+
+In case you need to shutdown the storagenode for short maintenance on your system, you can shut it down safely with this command:
+```bash
+$ docker stop storagenode
+```
+After you finished your maintenance you can bring it back up like this:
+```bash
+$ docker start storagenode
+```
+
 #### Upgrading your Storage Node
 
 1) Stop the running storagenode container by running the following command:

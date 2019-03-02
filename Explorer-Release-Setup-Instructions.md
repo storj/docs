@@ -46,7 +46,7 @@ $ ./identity_darwin_amd64 create storagenode
 ```
 
 3) Sign the identity you created with your personal single-use authorization token by running the following command:
-*By using the authorization token, you agree to be bound by the [Storage Sharing Terms and Conditions](https://storj.io/storj-share-terms.html).*
+*By using the authorization token, you agree to be bound by the [Storage Sharing Terms and Conditions](https://storj.io/storj-share-terms/).*
 
 ```bash
 $ ./identity_darwin_amd64 authorize storagenode <authorization-token>

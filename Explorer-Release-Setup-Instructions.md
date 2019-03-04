@@ -39,6 +39,8 @@ Download the correct binary for your operating system:
 - Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_linux_arm.zip)
 - Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_windows_amd64.zip)
 
+*__Note:__ If you are using Synology NAS or other device with less computing power, you can create Identity on a more powerful machine and transfer it over to the smaller device.*
+
 2) Unzip the file and run the following command to start creating an identity (this example is for Mac OS, substitute the appropriate identity binary for your OS):
 
 ```bash
@@ -52,6 +54,8 @@ $ ./identity_darwin_amd64 create storagenode
 $ ./identity_darwin_amd64 authorize storagenode <authorization-token>
 ```
 
+*__Note:__ If you are using Synology you must add "sudo" in front of commands for creating and signing identity. Otherwise you will receive error. Default folder for created identity on Synology is /root/.local/share/storj/identity/storagenode/.*
+
 *__Caution:__ Before proceeding to the next step, please be sure to back up your identity files located in the output path of the previous command. This will allow you to restore your node to working order in case of an unfortunate incident such as a hard drive crash.*
 
 4) Download the docker container from docker hub: 
@@ -64,6 +68,12 @@ _For Raspberry Pi and similar ARM-based platforms use:_
 
 ```bash
 $ docker pull storjlabs/storagenode:arm
+```
+
+_For Synology NAS with Intel CPU use:_
+
+```bash
+$ sudo docker pull storjlabs/storagenode:alpha
 ```
 
 5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
@@ -103,6 +113,20 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     --name storagenode storjlabs/storagenode:arm
 ```
 
+_For Synology NAS use:_
+
+```bash
+$ sudo docker run -d --restart unless-stopped -p 28967:28967 \
+    -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
+    -e EMAIL="user@example.com" \
+    -e ADDRESS="domain.ddns.net:28967" \
+    -e BANDWIDTH="2TB" \
+    -e STORAGE="2TB" \
+    -v "<identity-dir>":/app/identity \
+    -v "<storage-dir>":/app/config \
+    --name storagenode storjlabs/storagenode:alpha
+```
+
 _For Windows Operating Systems use the following line:_
 ```bash
 $ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" -v "<identity-dir>":/app/identity -v "<storage-dir>":/app/config --name storagenode storjlabs/storagenode:alpha
@@ -120,6 +144,8 @@ $ docker exec -it storagenode /app/dashboard.sh
 ```bash
 $ docker logs -t storagenode
 ```
+
+- Note: If you are using Synology you must add "sudo" in front of commands.
 
 *If you need help setting up your storage node, sign up for our [community chat](https://community.storj.io/home) and ask for assistance in the #storagenode channel. Provide your logs and stacktrace when requested by the community leader attending your issue.*
 

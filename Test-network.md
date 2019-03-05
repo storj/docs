@@ -86,7 +86,7 @@ For convenience, you may run the command in a single line, like so:
 ***
 
 ## Next Steps
-Please see the [Uplink CLI](Uplink-CLI) or [S3 Gateway](S3-Gateway)
+Please see the [Uplink CLI](https://github.com/storj/docs/blob/master/Uplink-CLI.md) or [S3 Gateway](https://github.com/storj/docs/blob/master/S3-Gateway.md)
 tutorial for how to upload and download data to the test network.
 
 Let's 'be the cloud' and decentralize all the things together!

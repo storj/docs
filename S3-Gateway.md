@@ -44,7 +44,7 @@ and leave it running. If you're using the test network, a gateway is already
 running, and you'll want to select a different port for this new one.
 
 ```bash
-~/go/bin/gateway run --address :7776
+~/go/bin/gateway run --server.address :7776
 ```
 
 The gateway should output your S3-compatible endpoint, access key, and secret

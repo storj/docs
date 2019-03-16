@@ -12,7 +12,7 @@ The purpose of this document is to outline the steps to create a new table in th
 
 - Install `DBX` package.  `DBX` has a dependency on [Mercerial](https://www.mercurial-scm.org/wiki/), so you may need to install that if you get an error like `hg clone -U [...] "hg": executable file not found in $PATH`.
 
-`go get -v gopkg.in/spacemonkeygo/dbx.v1`
+`$ go get -v gopkg.in/spacemonkeygo/dbx.v1`
 
 ## Steps to create a new table
 
@@ -22,9 +22,9 @@ Assumes all steps occur from the home directory of the [Storj](https://github.co
 
 2. Generate the `*.dbx.go` code by running the following commands:
 
-`cd satellite/satellitedb/dbx/`
+`$ cd satellite/satellitedb/dbx/`
 
-`go generate`
+`$ go generate`
 
 4. Add a migration to `satellite/satellitedb/migrate.go`. The version must be incremented for each migration. You can add multiple migration queries in one migration.
 

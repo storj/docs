@@ -20,7 +20,6 @@ Storage Nodes have two databases:
 2. Kademlia Routing Table.
 
 ![storj-components-with-databases](dbs.png)
-
 See below for more details about each database.
 
 ## Satellites
@@ -88,13 +87,19 @@ Uplinks do not have any persistent storage.
 
 To view the contents of a sqlite3 database file, you can use the command `sqlite3`. This comes installed by default on OSX.  See documentation on for details [SQLite CLI](https://sqlite.org/cli.html).
 
+`$ sqlite3 path/to/db/file`
+
 #### BoltDB
 
 To view the contents of a BoltDB database file, there are a number of BoltDB browser tools.  See [bolt browser](https://github.com/br0xen/boltbrowser) or [bolter](https://github.com/hasit/bolter) as options.
 
+`$ boltbrowser path/to/boltdb/file`
+
 #### PostgreSQL
 
 To view the contents of a PostgreSQL database, use the `psql` command line program.  See [`psql` docs](https://www.postgresql.org/docs/9.2/app-psql.html) for details.
+
+`$ psql -h hostname -U user`
 
 ## Steps to Modify Existing Databases
 

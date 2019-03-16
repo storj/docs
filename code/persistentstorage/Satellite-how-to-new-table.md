@@ -16,7 +16,7 @@ The purpose of this document is to outline the steps to create a new table in th
 
 ## Steps to create a new table
 
-Assumes all steps occur from the home directory of the [Storj](https://github.com/storj/storj) repo.
+Assumes all steps occur from the home directory of the https://github.com/storj/storj repo.
 
 1. Add a table model in `satellite/satellitedb/dbx/satellitedb.dbx`. See `DBX` docs for details on creating a model: https://github.com/spacemonkeygo/dbx.
 

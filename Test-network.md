@@ -57,6 +57,7 @@ At the moment it's assinging ports in the following way:
 * Gateways start from port `9000`
 * Bootstrap server is at port `9999`
 * Satellites start from port `10000`
+* Satellite Console starts on port `10100`
 * Storage Nodes start from port `11000`
 
 ### Running Tests

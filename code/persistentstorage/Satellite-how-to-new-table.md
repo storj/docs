@@ -1,10 +1,10 @@
-# How to Add a New Table to SatelliteDB
+# How to Add a New Table to Satellite.DB
 
-The purpose of this document is to outline the steps to create a new table in the SatelliteDB.
+The purpose of this document is to outline the steps to create a new table in the Satellite.DB.
 
 ## Background
 
-[`DBX`](https://github.com/spacemonkeygo/dbx) is a tool to generate database schemas and code to operate with it. SatelliteDB  uses `DBX` to generate the database code for SQLite and PostgreSQL.
+[`DBX`](https://github.com/spacemonkeygo/dbx) is a tool to generate database schemas and code to operate with it. Satellite.DB  uses `DBX` to generate the database code for SQLite and PostgreSQL.
 
 ## Requirements
 

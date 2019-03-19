@@ -10,32 +10,40 @@ This document decribes the following:
 
 Each component of the Storj network (i.e. satellites, storage nodes, uplinks) has different persistent data stores.
 
-Satellites have three databases:
-1. SatelliteDB, also called the master database.
-2. PointerDB.
-3. Kademlia Routing Table.
+Satellites and Storage Nodes both have a single Database interface, referred to as the master DB. The master DB specifies which databases are needed, it doesn't specify how they are implemented. So, different satellites can use different backends.
 
-Storage Nodes have two databases:
-1. Piecestore database.
-2. Kademlia Routing Table.
+Satellites have three databases behind the master DB interface.
+
+The three databases are:
+1. Satellite.DB
+2. PointerDB
+3. Kademlia Routing Table
+
+Storage Nodes have many databases behind the master DB interface.
+
+The databases include:
+1. pieces
+2. infodb
+3. psdb
+4. Kademlia Routing Table
 
 ![storj-components-with-databases](dbs.png)
 See below for more details about each database.
 
 ## Satellites
 
-Satellites store the most data of all the components.
+Satellites store the most data of all the components. Satellites have three databases behind one interface. The interface is called the master DB. The master database specifies which databases are needed, it doesn't specify how they are implemented. So, different satellites can end up with different backends.
 
 Satellites have three databases:
-1. SatelliteDB, also called the master database.
+1. Satellite.DB.
 2. PointerDB.
 3. Kademlia Routing Table.
 
-#### SatelliteDB
+#### Satellite.DB
 
-The SatelliteDB is a SQL relational database. Currently supported are SQLite3 and PostgreSQL.
+The Satellite.DB is a SQL relational database. Currently supported are SQLite3 and PostgreSQL.
 
-There are a number of different tables in the SatelliteDB including the following:
+There are a number of different tables in the Satellite.DB including the following:
 - Users
 - Accounting
 - Nodes and Overlay Cache Nodes
@@ -64,18 +72,30 @@ Kademlia Routing Table is a BoltDB key/value store. The routing table is represe
 
 ## Storage Nodes
 
-Storage Nodes have two databases:
-1. Piecestore database.
-2. Kademlia Routing Table.
+Storage Nodes have four databases behind a single master DB interface.
 
-#### Piecestore Database
+The databases include:
+1. pieces
+2. infodb
+3. psdb
+4. Kademlia Routing Table
 
-The Piecestore Database is a SQL relational database. Currently SQLite3 is supported.
+#### pieces Database
 
-The Piecestore database stores metadata about the data pieces the Storage Node is storing.
+pieces is an interface to disk blob storage.  pieces saves the actual pieces.
 
-Reference:
-- Source code for [Piecestore database](https://github.com/storj/storj/tree/master/pkg/piecestore/psserver/psdb).
+#### info Database
+
+A SQL database that contains six tables.  The tables contain information on:
+- OrderArchive and UnsentOrders: stores sent and unsent orders to track what still needs to be sent to the Satellite.
+- PieceInfo: stores piece meta info, tracking what pieces are currently stored.
+- Cert: stores uplink and satellite certificates.
+- Bandwidth: stores bandwidth usage info, tracking how much bandwidth has been transferred.
+- UserSerials: stores serial numbers that have already been used.
+
+#### psdb Database
+
+Is a SQL database that stores bandwidth agreements.
 
 ## Uplinks
 
@@ -105,4 +125,4 @@ To view the contents of a PostgreSQL database, use the `psql` command line progr
 
 #### Satellite
 
-- [How to add a new table to SatelliteDB](Satellite-how-to-new-table.md)
+- [How to add a new table to Satellite.DB](Satellite-how-to-new-table.md)

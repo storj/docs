@@ -31,3 +31,5 @@ Assumes all steps occur from the home directory of the https://github.com/storj/
 3. If a check that fails when there's a breaking API change, this command may need to be executed to override:
 
 `$ protolock commit --force`
+
+** Note: overriding the breaking API is only allowed during alpha/beta development.

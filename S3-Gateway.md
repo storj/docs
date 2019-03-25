@@ -32,7 +32,7 @@ command uses the defaults for the test network:
 
 ```bash
 ~/go/bin/gateway setup --api-key abc123 --satellite-addr 127.0.0.1:7778 \
-  --enc-key highlydistributedridiculouslyresilient
+  --enc.key highlydistributedridiculouslyresilient
 ```
 
 You are now ready to interact with your files in Storj!

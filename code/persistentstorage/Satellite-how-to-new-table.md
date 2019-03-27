@@ -26,6 +26,12 @@ Assumes all steps occur from the home directory of the https://github.com/storj/
 
 `$ go generate`
 
+3. Generate the `locked.go` code for the database:
+
+`$ cd ..` // from satellite/satellitedb dir
+
+`$ go generate`
+
 4. Add a migration to `satellite/satellitedb/migrate.go`. The version must be incremented for each migration. You can add multiple migration queries in one migration.
 
 5. Add new testdata file to `satellite/satellitedb/testdata/postgres.vX.sql`,where X matches the version of the migration. To create a new testdata file, copy the last testdata file and add the migration changes to this new copy.  If the migration adds a new table, use `-- NEW DATA --` at the end and add lines that insert data into the table (this is used for testing future migrations).

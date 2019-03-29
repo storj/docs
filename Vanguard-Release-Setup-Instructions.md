@@ -4,8 +4,10 @@ Hello, data storage seekers! We are thrilled you are interested in storing your 
 
 We have been building up the available supply of storage capacity and bandwidth on the network for the last two months during the Explorer phase of our alpha.  The Vanguard release will welcome the first clients looking to store data to the network. This release is gated so we will be controlling how many invitations we send and each user will have disk space and egress bandwidth caps of 25 GB per month. We want to ensure you have a great experience during this alpha, and that the network grows at a sustainable pace. Your invitation to join the Vanguard alpha will give you early access to the V3 network to start integrating with our library and build applications with our V3 network as your storage layer. Since this is still an alpha please use extreme caution with the data you store on the network and make sure you have backwards. We are not guaranteeing backward compatibility or any SLAs. 
 
+
 ### Before you begin
 - Make sure you have received an email invitation to the Vanguard release. This email will contain a link to a Satellite with an authorization token in the URL, which you will use to create an account. As mentioned before, the Vanguard alpha release is gated, so you may not receive an invitation right away at launch. 
+
 
 ### Creating your Satellite account and configuring your Uplink/S3 gateway:
 
@@ -15,8 +17,26 @@ We have been building up the available supply of storage capacity and bandwidth 
 
 3) Create an API key for your project on the API Keys page. For each project, you can create multiple API keys but API keys do not work for multiple projects, just one. You will need at least 1 set of API keys in order to configure your Uplink or use our library. 
 
-4) Set up your Uplink by following these instructions on GitHub: https://github.com/storj/docs/blob/master/Uplink-CLI.md
+##### Create an Identity for your Uplink
 
-5) Set up your S3 gateway by following these  instructions on GitHub: https://github.com/storj/docs/blob/master/Explorer-Release-Setup-Instructions.md
+4) Download the Identity tool binary and create an Identity. The process of generating an identity could take several hours; it is dependent on your machine´s processing power & luck.
+
+Download the correct binary for your operating system:
+- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_darwin_amd64.zip)
+- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_linux_amd64.zip)
+- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_linux_arm.zip)
+- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_windows_amd64.zip)
+
+*__Note:__ If you are using Synology NAS or other device with less computing power, you can create Identity on a more powerful machine and transfer it over to the smaller device.*
+
+5) Unzip the file and run the following command to start creating an identity (this example is for Mac OS, substitute the appropriate identity binary for your OS):
+
+```bash
+$ ./identity_darwin_amd64 create uplink --difficulty 1
+```
+
+6) Set up your Uplink by following these instructions on GitHub: https://github.com/storj/docs/blob/master/Uplink-CLI.md
+
+7) Set up your S3 gateway by following these  instructions on GitHub: https://github.com/storj/docs/blob/master/Explorer-Release-Setup-Instructions.md
 
 

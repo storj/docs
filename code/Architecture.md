@@ -1,6 +1,6 @@
 # Architecture
 
-This document describes code architecture of Storj and how things are implemented.
+This document describes how things are implemented.
 
 ## Concepts
 
@@ -13,7 +13,7 @@ The code-level architecture is categorized into a few concepts:
 
 In principle we can think of the full flow of Storage Node and Satellite as:
 
-1. Identity of the particular peer class is loaded. This is the public and private key.
+1. Identity of the particular peer class is loaded. This is use to uniquely identify the peer on the network.
 2. A connection(s) to the database is made.
 3. Peer is created:
 3.1. Creation takes identity and database as an argument

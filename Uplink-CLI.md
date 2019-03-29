@@ -8,17 +8,17 @@ Satellite and uses a [test network](Test-network) Satellite by default.
 
 First, Download the correct binary for your operating system:
 
-Mac OS: [uplink_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_darwin_amd64.zip)
-Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_linux_amd64.zip)
-Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_linux_arm.zip)
-Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_windows_amd64.zip)
+- Mac OS: [uplink_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_darwin_amd64.zip)
+- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_linux_amd64.zip)
+- Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_linux_arm.zip)
+- Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_windows_amd64.zip)
 
 
 Run the Uplink setup command after editing `client.api-key`, `satellite-addr`, `enc.key`. 
 
-`client.api-key`: API key that you generate for a project on the Satellite console.
-`satellite-addr`: The satellite you want to connect your uplink to is mars.tardigrade.io:7777.
-`enc.key`: The passphrase you choose in order to encrypt your files. Keep this secret and
+- `client.api-key`: API key that you generate for a project on the Satellite console.
+- `satellite-addr`: The satellite you want to connect your uplink to is mars.tardigrade.io:7777.
+- `enc.key`: The passphrase you choose in order to encrypt your files. Keep this secret and
 safe. This passphrase will grant you access to all of your files, and if you
 lose it, you will not be able to recover your files. 
 

@@ -9,34 +9,21 @@ We have been building up the available supply of storage capacity and bandwidth 
 - Make sure you have received an email invitation to the Vanguard release. This email will contain a link to a Satellite with an authorization token in the URL, which you will use to create an account. As mentioned before, the Vanguard alpha release is gated, so you may not receive an invitation right away at launch. 
 
 
-### Creating your Satellite account and configuring your Uplink/S3 gateway:
+### Creating your Satellite account
 
 1) Click on the link you received in the Vanguard invitation email. This will navigate you to the Mars Satellite account creation page where you can create your account. 
 
-2) In the Satellite console, begin by creating a project. 
+2) In the Satellite console, begin by creating a project. Click New Project in the top right corner and fill in the project name and description.
 
-3) Create an API key for your project on the API Keys page. For each project, you can create multiple API keys but API keys do not work for multiple projects, just one. You will need at least 1 set of API keys in order to configure your Uplink or use our library. 
+3) Create an API key for your project on the API Keys page. You will need to create an API key to configure your Uplink or use our library. 
+*__NOTE:__ API keys are unique to one project, each project can have multiple API keys.*
 
-##### Create an Identity for your Uplink
-
-4) Download the Identity tool binary and create an Identity. The process of generating an identity could take several hours; it is dependent on your machine´s processing power & luck.
-
-Download the correct binary for your operating system:
-- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_darwin_amd64.zip)
-- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_linux_amd64.zip)
-- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_linux_arm.zip)
-- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_windows_amd64.zip)
-
-*__Note:__ If you are using Synology NAS or other device with less computing power, you can create Identity on a more powerful machine and transfer it over to the smaller device.*
-
-5) Unzip the file and run the following command to start creating an identity (this example is for Mac OS, substitute the appropriate identity binary for your OS):
-
-```bash
-$ ./identity_darwin_amd64 create uplink --difficulty 1
-```
-
-6) Set up your Uplink by following these instructions on GitHub: https://github.com/storj/docs/blob/master/Uplink-CLI.md
-
-7) Set up your S3 gateway by following these  instructions on GitHub: https://github.com/storj/docs/blob/master/Explorer-Release-Setup-Instructions.md
+### Configuring your Uplink CLI
 
 
+5) Set up your Uplink CLI by following these instructions on GitHub: https://github.com/storj/docs/blob/master/Uplink-CLI.md
+The uplink CLI is one of the ways you can interact with the network to upload and download files. 
+
+### Configuring your S3 gateway:
+
+5) Set up your S3 gateway by following these instructions on GitHub: https://github.com/storj/docs/blob/master/Explorer-Release-Setup-Instructions.md

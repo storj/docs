@@ -27,3 +27,4 @@ The uplink CLI is one of the ways you can interact with the network to upload an
 ### Configuring your S3 gateway:
 
 5) Set up your S3 gateway by following these instructions on GitHub: https://github.com/storj/docs/blob/master/S3-Gateway.md
+The S3 gateway is our service that mimics the Amazon S3 API using the Tardigrade network.

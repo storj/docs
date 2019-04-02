@@ -4,26 +4,26 @@ The Uplink CLI is our client-side application that supports interacting with
 the Storj network. This tutorial assumes you have an account on a running
 Satellite and uses a [test network](Test-network) Satellite by default.
 
-## Installation and configuration 
+## Installation and configuration
 
 First, Download the correct binary for your operating system:
 
-- Mac OS: [uplink_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_darwin_amd64.zip)
-- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_linux_amd64.zip)
-- Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_linux_arm.zip)
-- Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/fc611d6-release-alpha6-go1.11/uplink_windows_amd64.zip)
+- Mac OS: [uplink_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0bacce7-release-alpha7-go1.11/uplink_darwin_amd64.zip)
+- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0bacce7-release-alpha7-go1.11/uplink_linux_amd64.zip)
+- Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0bacce7-release-alpha7-go1.11/uplink_linux_arm.zip)
+- Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0bacce7-release-alpha7-go1.11/uplink_windows_amd64.zip)
 
 
-Run the Uplink setup command after editing `client.api-key`, `satellite-addr`, `enc.key`. 
+Run the Uplink setup command after editing `api-key`, `satellite-addr`, `enc.key`. 
 
-- `client.api-key`: API key that you generate for a project on the Satellite console.
-- `satellite-addr`: The satellite you want to connect your uplink to is mars.tardigrade.io:7777.
+- `api-key`: API key that you generate for a project on the Satellite console. If you are using the test network, you can use the API key provided when you run it.
+- `satellite-addr`: The satellite you want to connect your uplink to, eg. mars.tardigrade.io:7777 or 127.0.0.1:10000 if you are using the test network.
 - `enc.key`: The passphrase you choose in order to encrypt your files. Keep this secret and
 safe. This passphrase will grant you access to all of your files, and if you
 lose it, you will not be able to recover your files. 
 
 ```bash
-./uplink_darwin_amd64 setup --client.api-key <<apikey>> --satellite-addr mars.tardigrade.io:7777 \
+./uplink_darwin_amd64 setup --api-key <<apikey>> --satellite-addr mars.tardigrade.io:7777 \
   --enc.key <<passphrase>>
 ```
 

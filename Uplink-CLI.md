@@ -2,7 +2,7 @@
 
 The Uplink CLI is our client-side application that supports interacting with
 the Storj network. This tutorial assumes you have an account on a running
-Satellite and uses a [test network](Test-network) Satellite by default.
+Satellite and uses a [test network](https://github.com/storj/storj/wiki/Test-network) Satellite by default.
 
 ## Installation and configuration
 
@@ -88,6 +88,6 @@ This only works well on Linux for now, but macOS and Windows support is planned!
 
 And that's it! You now know how to perform basic operations on a Storj bucket, and you've been able to get `uplink` working.
 
-We also have a tutorial on [S3 integration](S3-Gateway) which you could check out. Or, think this could be improved? Open a PR or file an issue.
+We also have a tutorial on [S3 integration](https://github.com/storj/storj/wiki/S3-Gateway) which you could check out. Or, think this could be improved? Open a PR or file an issue.
 
 Now go and decentralize all the things!

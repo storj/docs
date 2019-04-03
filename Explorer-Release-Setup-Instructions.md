@@ -76,6 +76,12 @@ _For Synology NAS with Intel CPU use:_
 $ sudo docker pull storjlabs/storagenode:alpha
 ```
 
+_For QNAP NAS with AMD x86 CPU use:_
+
+```bash
+$ docker pull storjlabs/storagenode:alpha
+```
+
 5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
     
 - `WALLET`: ethereum address for payments
@@ -114,6 +120,20 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
 ```
 
 _For Synology NAS use:_
+
+```bash
+$ sudo docker run -d --restart unless-stopped -p 28967:28967 \
+    -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
+    -e EMAIL="user@example.com" \
+    -e ADDRESS="domain.ddns.net:28967" \
+    -e BANDWIDTH="2TB" \
+    -e STORAGE="2TB" \
+    -v "<identity-dir>":/app/identity \
+    -v "<storage-dir>":/app/config \
+    --name storagenode storjlabs/storagenode:alpha
+```
+
+_For QNAP NAS use:_
 
 ```bash
 $ sudo docker run -d --restart unless-stopped -p 28967:28967 \

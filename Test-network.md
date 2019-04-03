@@ -58,9 +58,10 @@ At the moment it's assinging ports in the following way:
 * Bootstrap server is at port `9999`
 * Satellites start from port `10000`
 * Satellite Console starts on port `10100`
-* Storage Nodes start from port `11000`
+* Storage Nodes public ports start from port `12000`
+* Storage Nodes private ports start from port `13000`
 
-To get access to a gateway and test your keys, you open http://127.0.0.1/9000 in a web browser.
+To get access to a gateway and test your keys, you open http://127.0.0.1:9000 in a web browser.
 
 You can access a storage node dashboard using the storage command. For example for accessing storage node 4 dashboard using the default configuration:
 ```bash

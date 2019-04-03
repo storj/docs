@@ -136,7 +136,7 @@ $ sudo docker run -d --restart unless-stopped -p 28967:28967 \
 _For QNAP NAS use:_
 
 ```bash
-$ sudo docker run -d --restart unless-stopped -p 28967:28967 \
+$ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
     -e EMAIL="user@example.com" \
     -e ADDRESS="domain.ddns.net:28967" \

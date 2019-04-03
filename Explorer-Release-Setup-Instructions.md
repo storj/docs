@@ -164,7 +164,7 @@ $ docker start storagenode
 
 1) Stop the running storagenode container by running the following command:
 ```bash
-$ docker kill storagenode 
+$ docker stop storagenode 
 ```
 
 2) Remove the existing container by running the following command:

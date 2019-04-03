@@ -26,7 +26,7 @@ Install the necessary dependencies and configure your network appropriately usin
 
 - Make sure your computer is *not* connected directly to the internet. If you already have a reasonable router you should be okay. See the Important security considerations section.
 - Install `docker`. Please visit: [docker.com](https://docs.docker.com/install/) and follow the installation guide for your operating system. 
-    - _**Note:** Docker Toobox is not supported_
+    - _**Note:** Docker Toolbox is not supported_
 - Set up port forwarding & Dynamic DNS! The port you must specify is `28967`. Please visit our [knowledge base article](https://storjlabs.atlassian.net/wiki/spaces/SCKB/pages/4423868/Need+help+port-forwarding) or [portforward.com](https://portforward.com/) and follow the instructions for your router.
 
 #### Setting up your Storage Node on the V3 Network!

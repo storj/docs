@@ -6,34 +6,28 @@ Satellite and uses a [test network](Test-network) Satellite by default.
 
 ## Installation and configuration
 
-First, you'll need at least [Go 1.11](https://www.golang.org/). Once Go is
-installed, you should be able to run:
+First, Download the correct binary for your operating system:
 
-```bash
-go get -u storj.io/storj/cmd/uplink
-```
+- Mac OS: [uplink_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0bacce7-release-alpha7-go1.11/uplink_darwin_amd64.zip)
+- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0bacce7-release-alpha7-go1.11/uplink_linux_amd64.zip)
+- Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0bacce7-release-alpha7-go1.11/uplink_linux_arm.zip)
+- Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/0bacce7-release-alpha7-go1.11/uplink_windows_amd64.zip)
 
-This will install the `uplink` binary to wherever Go is configured to
-output binaries on your system, by default `~/go/bin`.
 
-To configure the Uplink for your Satellite, you'll need to make note of your
-Satellite address and your account's API key. The [S3 gateway](S3-Gateway)
-and the Uplink share a configuration file, so if your S3 gateway is configured
-you can skip the remaining setup.
+Run the Uplink setup command after editing `api-key`, `satellite-addr`, `enc.key`. 
 
-Next, you'll need to choose an encryption passphrase. Keep this secret and
+- `api-key`: API key that you generate for a project on the Satellite console. If you are using the test network, you can use the API key provided when you run it.
+- `satellite-addr`: The satellite you want to connect your uplink to, eg. mars.tardigrade.io:7777 or 127.0.0.1:10000 if you are using the test network.
+- `enc.key`: The passphrase you choose in order to encrypt your files. Keep this secret and
 safe. This passphrase will grant you access to all of your files, and if you
-lose it, you will not be able to recover your files.
-
-Then you'll need to configure the Uplink with these values. The below example
-command uses the defaults for the test network:
+lose it, you will not be able to recover your files. 
 
 ```bash
-~/go/bin/uplink setup --api-key abc123 --satellite-addr 127.0.0.1:7778 \
-  --enc-key highlydistributedridiculouslyresilient
+./uplink_darwin_amd64 setup --api-key <<apikey>> --satellite-addr mars.tardigrade.io:7777 \
+  --enc.key <<passphrase>>
 ```
 
-You are now ready to interact with your files in Storj!
+You are now ready to interact with your files on the Taridgrade Network!
 
 ## Usage
 
@@ -54,31 +48,31 @@ documentation, but some example commands are listed below:
 #### Make a bucket
 
 ```bash
-uplink mb sj://bucket-name
+./uplink_darwin_amd64 mb sj://bucket-name
 ```
 
 #### Upload a file
 
 ```bash
-uplink cp ~/Desktop/your-large-file.mp4 sj://bucket-name
+./uplink_darwin_amd64 cp ~/Desktop/your-large-file.mp4 sj://bucket-name
 ```
 
 #### List files in a bucket
 
 ```bash
-uplink ls sj://bucket-name/
+./uplink_darwin_amd64 ls sj://bucket-name/
 ```
 
 #### Download a file
 
 ```bash
-uplink cp sj://bucket-name/your-large-file.mp4 ~/Desktop/your-large-file.mp4
+./uplink_darwin_amd64 cp sj://bucket-name/your-large-file.mp4 ~/Desktop/your-large-file.mp4
 ```
 
 #### Delete a file
 
 ```bash
-uplink rm sj://bucket-name/your-large-file.mp4
+./uplink_darwin_amd64 rm sj://bucket-name/your-large-file.mp4
 ```
 
 #### Show files in filesystem

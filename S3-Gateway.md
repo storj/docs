@@ -32,7 +32,7 @@ command uses the defaults for the test network:
 
 ```bash
 ~/go/bin/gateway setup --api-key abc123 --satellite-addr 127.0.0.1:7778 \
-  --enc-key highlydistributedridiculouslyresilient
+  --enc.key highlydistributedridiculouslyresilient
 ```
 
 You are now ready to interact with your files in Storj!
@@ -44,7 +44,7 @@ and leave it running. If you're using the test network, a gateway is already
 running, and you'll want to select a different port for this new one.
 
 ```bash
-~/go/bin/gateway run --address :7776
+~/go/bin/gateway run --server.address :7776
 ```
 
 The gateway should output your S3-compatible endpoint, access key, and secret

@@ -1,96 +1,171 @@
 # Peer
 
+Peer is the top-level entity in Storj. In the production network there's a server for each Peer.
+
+Peers describe how a particular network participant is setup, wired together and run.
+
+Currently there network contains peers:
+
+1. Bootstrap
+2. Storage Node
+3. Satellite
+4. Uplink
+5. Version Control
+
+## Lifecycle
+
+In principle we can think of the full flow of Storage Node and Satellite as:
+
+1. Identity of the particular peer class is loaded. This is use to uniquely identify the peer on the network.
+2. A connection(s) to the database is made.
+3. Peer is created:
+3.1. Creation takes identity and database as an argument
+3.2. Listeners and servers are started.
+3.3. Every subsystem is created one by one:
+3.3.1. every sub-system consists of services and endpoints
+3.3.2. uses other services or databases as dependencies
+3.3.3. endpoints register themselves to the server
+4. Peer is started using `Run`, which:
+4.1. starts the services,
+4.2. starts waiting for network requests.
+5. Peer is running until,
+6. Peer is stopped via canceling the context used for `Run`.
+6.1. This cancels all subsystems in the reverse creation order.
+7. Peer is closed and all service and endpoint resources released.
+8. Database is closed
+
+Other peers may have a simplified setup.
+
+## Example Peer
+
+Here we show an facilitated Peer to show the general layout and how it works internally:
+
 ```
-package projectconsole
+package example
 
+// DB is the master database for Example Peer
 type DB interface {
-	Projects() projects.DB
+	CreateTables() error
+	Close() error
+
+	Overlay() overlay.DB
 }
 
+// Config is all the configuration parameters for a Example Node
 type Config struct {
-	Database string
-	Public   server.Config
-	Private  server.Config
-	Projects projects.Config
+	Identity identity.Config
+
+	Server  server.Config
+	Overlay overlay.Config
 }
 
+// Peer is the representation of a Example Node.
 type Peer struct {
+	// core dependencies
 	Log      *zap.Logger
-	Identity *identity.Full
+	Identity *identity.FullIdentity
 	DB       DB
 
-	Public  *server.Server
-	Private *server.Server
+	Transport transport.Client
+	Server    *server.Server
 
-	Projects struct {
-		Service   *projects.Service
-		Endpoint  *projects.Endpoint
-		Inspector *projects.Inspector
+	Overlay struct {
+		Service  *overlay.Service
+		Endpoint *overlay.Endpoint
 	}
 }
 
-func New(log *zap.Logger, identity *identity.Full, db DB, config Config) (*Peer, error) {
+// New creates a new example Peer
+func New(log *zap.Logger, full *identity.FullIdentity, db DB, config Config) (*Peer, error) {
 	peer := &Peer{
-		Log: log,
-		Identity: identity,
-		DB: db,
+		Log:      log,
+		Identity: full,
+		DB:       db,
 	}
+
 	var err error
-
-	{ // create the servers
-		peer.Public, err = server.NewPublic(peer.Log.Named("public"), identity, config.Public)
+	{
+		// setup listener and server
+		//
+		// here we setup TLS for servers and transport.Client for connecting to other peers.
+		
+		sc := config.Server
+		options, err := tlsopts.NewOptions(peer.Identity, sc.Config)
 		if err != nil {
 			return nil, errs.Combine(err, peer.Close())
 		}
 
-		peer.Private, err = server.NewPrivate(peer.Log.Named("private"), identity, config.Private)
+		peer.Transport = transport.NewClient(options)
+
+		peer.Server, err = server.New(options, sc.Address, sc.PrivateAddress, nil)
+		
+		// in case of any errors we need to close everything that was already started
 		if err != nil {
 			return nil, errs.Combine(err, peer.Close())
 		}
-	}s
+	}
 
-	{ // create a sub-system
-		config := config.Projects
+	{ // setup overlay
+		config := config.Overlay
 
-		peer.Projects.Service, err = projects.New(peer.Log.Named("projects"), peer.DB.Projects())
+		// create an overlay service using the database that is retrieved from master database
+		peer.Overlay.Service, err = overlay.NewService(peer.DB.Overlay(), config)
+		
+		// in case of any errors we close everything that was already started
 		if err != nil {
 			return nil, errs.Combine(err, peer.Close())
 		}
 
-		peer.Projects.Endpoint = projects.NewEndpoint(peer.Log.Named("projects:endpoint"), peer.Project.Service)
-		pb.RegisterProjectsEndpoint(peer.Public.GRPC(), peer.Projects.Endpoint)
-
-		peer.Projects.Inspector = projects.NewInspector(peer.Log.Named("projects:inspector"), peer.Project.Inspector)
-		pb.RegisterProjectsEndpoint(peer.Private.GRPC(), peer.Projects.Inspector)
+		// create an overlay endpoint, which uses overlay service for domain logic
+		peer.Service.Endpoint = overlay.NewEndpoint(peer.Log.Named("overlay:endpoint"), peer.Overlay.Service)
+		
+		// register overlay endpoint to the server
+		pb.RegisterOverlayServer(peer.Server.GRPC(), peer.Overlay.Endpoint)
 	}
 
 	return peer, nil
 }
 
+// Run runs bootstrap node until it's either closed or it errors.
 func (peer *Peer) Run(ctx context.Context) error {
-	var group errgroup.Group
+	// setup a errgroup, such that we stop the peer together when one of the endpoint or services fails.
+	group, ctx := errgroup.WithContext(ctx)
+
+	// start overlay service as a separate goroutine
 	group.Go(func() error {
-		return ignoreCancel(peer.Projects.Service.Run(ctx))
+		return ignoreCancel(peer.Overlay.Service.Run(ctx))
 	})
+
+	// start the public server
 	group.Go(func() error {
-		return ignoreCancel(peer.Projects.Service.Run(ctx))
+		return ignoreCancel(peer.Server.Run(ctx))
 	})
+
+	// wait for termination
 	return group.Wait()
 }
 
-func (peer *Peer) Close() error {
-	if peer == nil {
+// we ignore cancellation and stopping errors since they are expected
+func ignoreCancel(err error) error {
+	if err == context.Canceled || err == grpc.ErrServerStopped || err == http.ErrServerClosed {
 		return nil
 	}
+	return err
+}
 
+// Close closes all the resources.
+func (peer *Peer) Close() error {
+	// error list for collecting all the errors
 	var errlist errs.Group
-	{ // close projects sub-system
-		errlist.Add(peer.Projects.Service.Close())
+
+	// close servers, to avoid new connections to closing subsystems
+	if peer.Server != nil {
+		errlist.Add(peer.Server.Close())
 	}
 
-	{ // close servers
-		errlist.Add(peer.Public.Close())
-		errlist.Add(peer.Private.Close())
+	// stop the service
+	if peer.Overlay.Service != nil {
+		errlist.Add(peer.Overlay.Service.Close())
 	}
 
 	return errlist.Err()

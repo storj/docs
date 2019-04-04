@@ -2,14 +2,29 @@
 
 This document describes how things are implemented.
 
-## Concepts
+## Layers
 
-The code-level architecture is categorized into a few concepts:
+The code-level architecture is categorized into a few layers:
 
-* [Peer](code/Peer.md) - which is a top-level concept that wires all dependencies together for Satellite, Storage Node or Uplink;
+* [Peer](code/Peer.md) - is a top-level concept that wires all dependencies together for Satellite, Storage Node or Uplink;
+* Subsystem - is a collection of endpoints and services related to a single problem;
 * [Endpoint](code/Endpoint.md) - responds to network requests, usually using grpc;
-* [Service](code/Service.md) - contains business logic for different parts;
+* [Service](code/Service.md) - contains business logic;
 * [Database](code/Database.md) - contains peristence and data consistency logic.
+
+## Interactions between layers
+
+Peer wires together endpoints, services and databases. It does not create the database or it's own identity.
+
+Peer is organized into subsystems (e.g. overlay, kademlia).
+
+Endpoint can depend on services and databases, however it must not depend on endpoints.
+
+Service can depend on other services and databases, however it must not depend on endpoints.
+
+Databases must not depend on calling services nor endpoints.
+
+## Peer Lifecycle
 
 In principle we can think of the full flow of Storage Node and Satellite as:
 
@@ -21,7 +36,7 @@ In principle we can think of the full flow of Storage Node and Satellite as:
 3.3. Every subsystem is created one by one:
 3.3.1. every sub-system consists of services and endpoints
 3.3.2. uses other services or databases as dependencies
-3.3.3. endpoints register themselves to the server.
+3.3.3. endpoints register themselves to the server
 4. Peer is started using `Run`, which:
 4.1. starts the services,
 4.2. starts waiting for network requests.

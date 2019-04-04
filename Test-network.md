@@ -58,7 +58,15 @@ At the moment it's assinging ports in the following way:
 * Bootstrap server is at port `9999`
 * Satellites start from port `10000`
 * Satellite Console starts on port `10100`
-* Storage Nodes start from port `11000`
+* Storage Nodes public ports start from port `12000`
+* Storage Nodes private ports start from port `13000`
+
+To get access to a gateway and test your keys, you open http://127.0.0.1:9000 in a web browser.
+
+You can access a storage node dashboard using the storage command. For example for accessing storage node 4 dashboard using the default configuration:
+```bash
+storagenode dashboard --config-dir ~/.local/share/storj/local-network/storagenode/4/ --identity-dir ~/.local/share/storj/local-network/storagenode/4 --address :13004 --color
+```
 
 ### Running Tests
 
@@ -71,6 +79,11 @@ The information about the network is exposed via environment flags. All the flag
 * Address: `STORAGENODE_0_ADDR`, `SATELLITE_0_ADDR`, `GATEWAY_0_ADDR`
 * Keys: `GATEWAY_0_ACCESS_KEY`, `GATEWAY_0_SECRET_KEY`
 * Directory: `STORAGENODE_0_DIR`, `SATELLITE_0_DIR`, `GATEWAY_0_DIR`
+
+You can obtain the list of environment flags by running:
+```bash
+storj-sim network env
+```
 
 For a real-world example you can take a look in [test-sim.sh](https://github.com/storj/storj/blob/master/scripts/test-sim.sh) and [test-sim-aws.sh](https://github.com/storj/storj/blob/master/scripts/test-sim-aws.sh).
 

@@ -31,7 +31,7 @@ Install the necessary dependencies and configure your network appropriately usin
 
 #### Setting up your Storage Node on the V3 Network!
 
-*__Note:__ It is highly recommended to perform the following steps local to the machine, and not via a remote connection. If you must use a remote connection, due to the length of time it takes for some of the steps, it is highly recommended to run them inside a virtual console like [TMUX](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/) or [SCREEN](https://linuxize.com/post/how-to-use-linux-screen/) to run the commands. The identity binary in the steps below does not save the progress while its generating keys, so if you lose connectivity to your remote shell. You will have to re-run the command and start the process over.*
+*__Note:__ It is highly recommended to perform the following steps local to the machine, and not via a remote connection. If you must use a remote connection, due to the length of time it takes for some of the steps, it is highly recommended to run them inside a virtual console like [TMUX](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/) or [SCREEN](https://linuxize.com/post/how-to-use-linux-screen/).*
 
 1) Download the Identity tool binary and create an Identity. The process of generating an identity could take several hours; it is dependent on your machine´s processing power & luck.
 

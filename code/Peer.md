@@ -1,6 +1,6 @@
 # Peer
 
-Peer is the top-level entity in Storj. In the production network there's a server for each Peer.
+Peer is the top-level entity in Storj. In the production network there's every peer runs in a standalone process. For tests multiple peers may run in a single process.
 
 Peers describe how a particular network participant is setup, wired together and run.
 

@@ -129,19 +129,6 @@ $ sudo docker run -d --restart unless-stopped -p 28967:28967 \
     --name storagenode storjlabs/storagenode:alpha
 ```
 
-_For QNAP NAS use:_
-
-```bash
-$ docker run -d --restart unless-stopped -p 28967:28967 \
-    -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
-    -e EMAIL="user@example.com" \
-    -e ADDRESS="domain.ddns.net:28967" \
-    -e BANDWIDTH="2TB" \
-    -e STORAGE="2TB" \
-    -v "<identity-dir>":/app/identity \
-    -v "<storage-dir>":/app/config \
-    --name storagenode storjlabs/storagenode:alpha
-```
 
 _For Windows Operating Systems use the following line:_
 ```bash

@@ -76,11 +76,7 @@ _For Synology NAS with Intel CPU use:_
 $ sudo docker pull storjlabs/storagenode:alpha
 ```
 
-_For QNAP NAS with AMD x86 CPU use:_
 
-```bash
-$ docker pull storjlabs/storagenode:alpha
-```
 
 5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
     

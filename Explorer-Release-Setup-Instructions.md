@@ -71,7 +71,7 @@ $ docker pull storjlabs/storagenode:arm
 ```
 
 _For Synology or QNAP NAS with Intel CPU use:_
-
+*__Note:__ For Synology run the command with sudo
 ```bash
 $ docker pull storjlabs/storagenode:alpha
 ```
@@ -114,9 +114,9 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
 ```
 
 _For Synology or QNAP NAS use:_
-
+*__Note:__ For Synology run the command with sudo
 ```bash
-$ sudo docker run -d --restart unless-stopped -p 28967:28967 \
+$ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
     -e EMAIL="user@example.com" \
     -e ADDRESS="domain.ddns.net:28967" \

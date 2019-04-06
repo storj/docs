@@ -71,10 +71,11 @@ $ docker pull storjlabs/storagenode:arm
 ```
 
 _For Synology or QNAP NAS with Intel CPU use:_
-__Note:__ For Synology run the command with sudo
+
 ```bash
 $ docker pull storjlabs/storagenode:alpha
 ```
+- Note: If you are using Synology you must add "sudo" in front of commands.
 
 5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
     
@@ -114,7 +115,7 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
 ```
 
 _For Synology or QNAP NAS use:_
-__Note:__ For Synology run the command with sudo
+
 ```bash
 $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
@@ -126,6 +127,7 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -v "<storage-dir>":/app/config \
     --name storagenode storjlabs/storagenode:alpha
 ```
+- Note: If you are using Synology you must add "sudo" in front of commands.
 
 _For Windows Operating Systems use the following line:_
 ```bash

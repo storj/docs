@@ -1,10 +1,10 @@
 # Database
 
-Well database is a database. It is responsible for providing persistence and ensuring data-consistency.
+Database is responsible for providing data access, persistence and ensuring data-consistency. 
 
 ## Master Database
 
-Every peer needs a collection of databases to work. This collection is called an master database.
+Every peer needs a collection of databases to work. This collection is called a master database.
 
 It links together all the sub-system specific databases. It places no specific requirement how the databases are implemented. It can be one or multiple backends, whichever is more useful for a particular database.
 

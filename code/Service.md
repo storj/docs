@@ -19,7 +19,7 @@ To add a new service there are few steps:
 
 ## Implementation
 
-A basic endpoint implementation looks like:
+A basic service implementation looks like:
 
 ```
 package orders

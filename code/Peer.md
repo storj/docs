@@ -1,10 +1,10 @@
 # Peer
 
-Peer is the top-level entity in Storj. In the production network there's every peer runs in a standalone process. For tests multiple peers may run in a single process.
+Peer is the top-level entity in Storj. In the production network every peer runs in a standalone process. For tests multiple peers may run in a single process.
 
 Peers describe how a particular network participant is setup, wired together and run.
 
-Currently there network contains peers:
+Currently the network contains these peers:
 
 1. Bootstrap
 2. Storage Node
@@ -16,7 +16,7 @@ Currently there network contains peers:
 
 In principle we can think of the full flow of Storage Node and Satellite as:
 
-1. Identity of the particular peer class is loaded. This is use to uniquely identify the peer on the network.
+1. Identity of the particular peer class is loaded. This is used to uniquely identify the peer on the network.
 2. A connection(s) to the database is made.
 3. Peer is created:
 3.1. Creation takes identity and database as an argument
@@ -38,7 +38,7 @@ Other peers may have a simplified setup.
 
 ## Example Peer
 
-Here we show an facilitated Peer to show the general layout and how it works internally:
+Here is an example showing how a Peer works internally and its general layout.
 
 ```
 package example

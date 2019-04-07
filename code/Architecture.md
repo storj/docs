@@ -1,6 +1,6 @@
 # Architecture
 
-This document describes how things are implemented.
+This document describes how different architectural concepts are defined and how they interact.
 
 ## Layers
 

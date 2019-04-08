@@ -35,7 +35,7 @@ type DB interface {
 	// Get looks up the node by nodeID
 	Get(ctx context.Context, nodeID storj.NodeID) (*pb.Node, error)
 
-    // SelectStorageNodes looks up nodes based on criteria
+	// SelectStorageNodes looks up nodes based on criteria
 	SelectStorageNodes(ctx context.Context, count int, criteria *NodeCriteria) ([]*pb.Node, error)
 }
 ```
@@ -46,13 +46,13 @@ _Database interfaces may implement domain specific concerns, if there's a signif
 
 Each master database has an implementation. The master database and sub-databases are located in `<peer>/<peer>db`. As an example implementation for `satellite.DB` interface is at `satellite/satellitedb/*.go`.
 
-Often the databases have in-memory variants, which are useful for testing. They can also support different backends, such as SQLite and Postgres. For satellite the function `satellite/satellitedb/satellitedbtest.Run` loops through different backends making testing easier. Storage Node has a similar func.
+Often the databases have in-memory variants, which are useful for testing. They can also support different backends, such as SQLite and Postgres. For satellite the function `satellite/satellitedb/satellitedbtest.Run` loops through different backends making testing easier. Storage Node has a similar function.
 
 Master Database will return a specific struct to fulfill the specific database interfaces.
 
 ## dbx code generation
 
-For satellite we also use [`dbx`](https://github.com/spacemonkeygo/dbx/) which helps to support Sqlite and Postgres at the same time. Of course, this complicates some of the queries as a result.
+For satellite we also use [`dbx`](https://github.com/spacemonkeygo/dbx/) which helps to support SQLite and Postgres at the same time. Of course, this complicates some of the queries as a result.
 
 dbx file for satellite is located in `satellite/satellitedb/satellite.dbx`. To regenerate or modify it, run `go generate` in that folder.
 

@@ -28,20 +28,26 @@ Databases must not depend on calling services nor endpoints.
 
 In principle we can think of the full flow of Storage Node and Satellite as:
 
-1. Identity of the particular peer class is loaded. This is use to uniquely identify the peer on the network.
-2. A connection(s) to the database is made.
-3. Peer is created:
-3.1. Creation takes identity and database as an argument
-3.2. Listeners and servers are started.
-3.3. Every subsystem is created one by one:
-3.3.1. every sub-system consists of services and endpoints
-3.3.2. uses other services or databases as dependencies
-3.3.3. endpoints register themselves to the server
-4. Peer is started using `Run`, which:
-4.1. starts the services,
-4.2. starts waiting for network requests.
-5. Peer is running until,
-6. Peer is stopped via canceling the context used for `Run`.
-6.1. This cancels all subsystems in the reverse creation order.
-7. Peer is closed and all service and endpoint resources released.
-8. Database is closed
+<ol>
+<li>Identity of the particular peer class is loaded. This is use to uniquely identify the peer on the network.</li>
+<li>A connection(s) to the database is made.</li>
+<li>Peer is created:<ol>
+    <li>Creation takes identity and database as an argument</li>
+    <li>Listeners and servers are started.</li>
+    <li>Every subsystem is created one by one: <ol>
+        <li>every sub-system consists of services and endpoints</li>
+        <li>uses other services or databases as dependencies</li>
+        <li>endpoints register themselves to the server</li>
+    </ol></li>
+</ol></li>
+<li>Peer is started using `Run`, which:<ol>
+    <li>starts the services,</li>
+    <li>starts waiting for network requests.</li>
+</ol></li>
+<li>Peer is running until,</li>
+<li>Peer is stopped via canceling the context used for `Run`.<ol>
+    <li>This cancels all subsystems in the reverse creation order.</li>
+</ol></li>
+<li>Peer is closed and all service and endpoint resources released.</li>
+<li>Database is closed</li>
+</ol>

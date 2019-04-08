@@ -11,7 +11,7 @@ We have been building up the available supply of storage capacity and bandwidth 
 
 ### Creating your Satellite account
 
-1) Click on the link you received in the Vanguard invitation email. This will navigate you to the Mars Satellite account creation page where you can create your account. 
+1) Click on the link you received in the Vanguard invitation email. This will navigate you to the Mars Satellite account creation page where you can create your account. Once you create an account you will recive an account activate email to confirm it.
 
 2) In the Satellite console, begin by creating a project. Click New Project in the top right corner and fill in the project name and description.
 

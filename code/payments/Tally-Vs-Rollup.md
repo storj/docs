@@ -3,14 +3,19 @@
 The terms "tally" and "rollup" are used throughout the code base. Their specific meanings have been a source of confusion since their meanings are similar.
 
 The purpose of this document is to:
-- define the terms "tally" and "rollup".
-- provide details about how tally and rollup are used in the code base.
+- [define the terms "tally" and "rollup".](#Definitions)
+- [explain what problem is being solved with tallies and rollups.](#What-Problem-is-Being-Solved)
+- [provide details about how tally and rollup are used in the code base.](#Implementations-of-Tally-and-Rollup)
 
 ## Definitions
 
 Tally adds up values over a span of time. The span of time depends on how long it takes to iteratively add up all values. Transactions that happen during tallying may or may not be accounted in the current result. Transactions that happened before tallying started are always included.
 
-Rollup involves summarizing data along some dimension. In our case the dimension is a time interval, for example 1 hr, 1 day, 1 month, etc. Rollups can aggregate the tally data or some other data, for example `Order` amounts.
+Rollup involves summarizing data over a time interval. Where the time interval can be 1 hr, 1 day, 1 month, etc. Rollups can aggregate the tally data or some other data, for example `Order` amounts.
+
+## What Problem is Being Solved
+
+We need to create invoices from Uplinks to display what they are paying for. We also need generate payments for storage nodes. Uplinks pay for/storage nodes get paid for two things. One, bytes of egress bandwidth and two, bytes of data stored. In order to calculate bandwidth and storage bytes, we need a way to keep track of usage.  We do this with tally and rollups.
 
 ## Implementations of Tally and Rollup
 

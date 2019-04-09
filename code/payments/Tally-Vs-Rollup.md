@@ -8,62 +8,56 @@ The purpose of this document is to:
 
 ## Definitions
 
-Both tally and rollup sum an amount of something (i.e. storage or bandwidth) as it relates to a period of time.
+Tally adds up values over a span of time. The span of time depends on how long it takes to iteratively add up all values. Transactions that happen during tallying may or may not be accounted in the current result. Transactions that happened before tallying started are always included.
 
-They differ in what the period of time is.
-- For tally, the period of time is just a single moment in time, typically the most recent or current moment.
-- For rollup, the period of time is a time frame, for example 1 hr or 1 day time interval.
-
-This means that tally is a snapshot of the current state. And rollup is an aggregate of those snapshots.
+Rollup involves summarizing data along some dimension. In our case the dimension is a time interval, for example 1 hr, 1 day, 1 month, etc. Rollups can aggregate the tally data or some other data, for example `Order` amounts.
 
 ## Implementations of Tally and Rollup
 
 Here is a high level overview of how tallies and rollups are used in the code base.
 
-The items that need to be tallied and rolledup include:
-- bandwidth usage for storage nodes
-- bandwidth usage for uplinks
+The items that are tallied include:
+- storage usage (i.e. bytes stored) for storage nodes
+- storage usage (i.e. bytes stored) for uplinks
+
+The items that are rolled-up include:
 - storage usage for storage nodes
 - storage usage for uplinks
+- bandwidth usage for storage nodes
+- bandwidth usage for uplinks
 
-#### Bandwidth usage is tallied when Orders are created
-
-Details:
-
-OrderLimits are created by the Satellite (SA) when an Uplink uploads/downloads a file. OrderLimits indicate the maximum amount of bandwidth an Uplink can use per Storage node (SN) when storing a file. Orders are created by the Uplink when storing a file on a SN.  The Uplink sends the Orders to the SN. The Order has an "amount" field which is the "tally" and indicates how much bandwidth the Uplink is currently using. The SN saves this and once the file is done being uploaded, then sends the Orders to the SA to finanlize (i.e. "settle") that amount.
-
-#### Bandwidth usage is rolledup when SA settles Orders
+#### Storage usage is tallied when the Tally service runs
 
 Details:
 
-When the SA receives the request to settle the Orders from the SN, the SA then adds/updates a record to the `storagenode_bandwidth_rollup` and `bucket_bandwidth_rollup` database tables with the settled amount. The SA updates the record if there is already a rollup created in same interval.
+There is a Tally service which runs every x mins (where x is configurable, defaults to 1 hr). This Tally service loops through PointerDB and adds up all the inline and remote data currently stored on each SN then creates a record in `bucket_storage_tallies` and `storagenode_storage_tallies` database tables with that information.
 
-####  Storage usage is tallied when the Tally service runs
-
-Details:
-
-There is a Tally service which runs every x mins (where x is configuratble, defaults to 1 hr). This Tally service loops through PointerDB and adds up all the inline and remote data currently stored on each SN then creates a record in `bucket_storage_tally` and `storagenode_storage_tally` database tables with that information.
-
-####  Storage usage is rolledup when the Rollup service runs
+#### Storage usage is rolled-up when the Rollup service runs
 
 Details:
 
-There is a Rollup service which runs every x mins (where x is configuratble, defaults to 120 seconds). This Rollup service aggregates all the tally records since the last time the Rollup service ran. Then a record is created in `bucket_storage_rollup` and `storagenode_storage_rollup` tables with that information.
+There is a Rollup service which runs every x mins (where x is configurable, defaults to 120 seconds). This Rollup service aggregates all the tally records since the last time the Rollup service ran. Then a record is created in `bucket_storage_rollups` and `storagenode_storage_rollups` tables with that information.
+
+#### Bandwidth usage is rolled-up when SA settles Orders
+
+Details:
+
+When the SA receives requests to settle Orders from the SN, the SA then adds/updates a record to the `storagenode_bandwidth_rollups` and `bucket_bandwidth_rollups` Satellite.DB tables with the settled amount. The SA updates the record if a rollup already exists for the time interval (currently 1 hr interval), or creates a new record otherwise.
 
 #### List of databases and the tables involved in tallies and rollups:
 
 Satellite.DB tables:
-- `storagenode_bandwidth_rollup`
-- `bucket_bandwidth_rollup`
-- `bucket_storage_tally`
-- `storagenode_storage_tally`
-- `bucket_storage_rollup`
-- `storagenode_storage_rollup`
+- `storagenode_bandwidth_rollups`
+- `bucket_bandwidth_rollups`
+- `bucket_storage_tallyies`
+- `storagenode_storage_tallies`
+- `bucket_storage_rollups`
+- `storagenode_storage_rollups`
 
 #### Summary table:
 
-| | Tally for bandwidth | Rollup for bandwidth | Tally for storage | Rollup for storage |
-| --- | --- | --- |--- | --- |
-| **who creates data** | Uplinks or SA | SA  | Tally service | Rollup service |
-| **when is data created** | Uplink uploads/downloads a file| SA creates/updates rollup when settling `Orders` from SN | when Tally service runs | when Rollup service runs |
-| **where is data stored** | Uplink creates `Orders` with an amount that represents the tally | adds/updates a record in `storagenode_bandwidth_rollup` & `bucket_bandwidth_rollup` table | adds a record in `bucket_storage_tally` & `storagenode_storage_tally` table | adds a record in `bucket_storage_rollup` & `storagenode_storage_rollup` table |
+| | Rollup for bandwidth | Tally for storage | Rollup for storage |
+| --- | --- |--- | --- |
+| **who creates data** | SA  | Tally service | Rollup service |
+| **when is data created** | SA creates/updates rollup when settling `Orders` from SN | when Tally service runs | when Rollup service runs |
+| **where is data stored** | adds/updates a record in `storagenode_bandwidth_rollup` & `bucket_bandwidth_rollup` table | adds a record in `bucket_storage_tally` & `storagenode_storage_tally` table | adds a record in `bucket_storage_rollup` & `storagenode_storage_rollup` table |

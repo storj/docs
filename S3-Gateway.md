@@ -10,10 +10,10 @@ One gateway is already included in the [test network](Test-network), so you need
 
 First, Download the correct binary for your operating system:
 
-- Mac OS: [uplink_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_darwin_amd64.zip)
-- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_linux_amd64.zip)
-- Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_linux_arm.zip)
-- Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_windows_amd64.zip)
+- Mac OS: [gateway_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_darwin_amd64.zip)
+- Linux: [gateway_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_linux_amd64.zip)
+- Raspberry Pi: [gateway_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_linux_arm.zip)
+- Windows Pro: [gateway_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_windows_amd64.zip)
 
 To configure the Gateway for your Satellite, you'll need to make note of your
 Satellite address and your account's API key. The [Uplink CLI](Uplink-CLI)

@@ -8,15 +8,12 @@ One gateway is already included in the [test network](Test-network), so you need
 
 ## Installation and configuration
 
-First, you'll need at least [Go 1.11](https://www.golang.org/). Once Go is
-installed, you should be able to run:
+First, Download the correct binary for your operating system:
 
-```bash
-go get -u storj.io/storj/cmd/gateway
-```
-
-This will install the `gateway` binary to wherever Go is configured to
-output binaries on your system, by default `~/go/bin`.
+- Mac OS: [uplink_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_darwin_amd64.zip)
+- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_linux_amd64.zip)
+- Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_linux_arm.zip)
+- Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_windows_amd64.zip)
 
 To configure the Gateway for your Satellite, you'll need to make note of your
 Satellite address and your account's API key. The [Uplink CLI](Uplink-CLI)
@@ -31,7 +28,7 @@ Then you'll need to configure the Gateway with these values. The below example
 command uses the defaults for the test network:
 
 ```bash
-~/go/bin/gateway setup --api-key abc123 --satellite-addr 127.0.0.1:7778 \
+./gateway_darwin_amd64 setup --api-key abc123 --satellite-addr 127.0.0.1:7778 \
   --enc.key highlydistributedridiculouslyresilient
 ```
 
@@ -44,7 +41,7 @@ and leave it running. If you're using the test network, a gateway is already
 running, and you'll want to select a different port for this new one.
 
 ```bash
-~/go/bin/gateway run --server.address :7776
+./gateway_darwin_amd64 run --server.address :7776
 ```
 
 The gateway should output your S3-compatible endpoint, access key, and secret

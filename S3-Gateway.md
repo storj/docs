@@ -16,7 +16,7 @@ First, Download the correct binary for your operating system:
 - Windows Pro: [gateway_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/gateway_windows_amd64.zip)
 
 To configure the Gateway for your Satellite, you'll need to make note of your
-Satellite address and your account's API key. The [Uplink CLI](Uplink-CLI)
+Satellite address and your projects API key. The [Uplink CLI](Uplink-CLI)
 and the Gateway share a configuration file, so if your Uplink CLI is configured
 you can skip the remaining setup.
 

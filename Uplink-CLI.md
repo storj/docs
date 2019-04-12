@@ -23,8 +23,7 @@ safe. This passphrase will grant you access to all of your files, and if you
 lose it, you will not be able to recover your files. 
 
 ```bash
-./uplink_darwin_amd64 setup --api-key <<apikey>> --satellite-addr mars.tardigrade.io:7777 \
-  --enc.key <<passphrase>>
+./uplink_darwin_amd64 setup
 ```
 
 You are now ready to interact with your files on the Taridgrade Network!

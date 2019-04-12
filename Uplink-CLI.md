@@ -27,7 +27,7 @@ safe. This passphrase will grant you access to all of your files, and if you
 lose it, you will not be able to recover your files. 
 
 
-You are now ready to interact with your files on the Taridgrade Network!
+You are now ready to interact with your files on the Tardigrade Network!
 
 ## Usage
 

@@ -14,7 +14,11 @@ First, Download the correct binary for your operating system:
 - Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/09f7799-heads-v0.8.8-go1.11/uplink_windows_amd64.zip)
 
 
-Run the Uplink setup command after editing `api-key`, `satellite-addr`, `enc.key`. 
+Setup your uplink by running the following command:
+
+```bash
+./uplink_darwin_amd64 setup
+```
 
 - `api-key`: API key that you generate for a project on the Satellite console. If you are using the test network, you can use the API key provided when you run it.
 - `satellite-addr`: The satellite you want to connect your uplink to, eg. mars.tardigrade.io:7777 or 127.0.0.1:10000 if you are using the test network.
@@ -22,9 +26,6 @@ Run the Uplink setup command after editing `api-key`, `satellite-addr`, `enc.key
 safe. This passphrase will grant you access to all of your files, and if you
 lose it, you will not be able to recover your files. 
 
-```bash
-./uplink_darwin_amd64 setup
-```
 
 You are now ready to interact with your files on the Taridgrade Network!
 

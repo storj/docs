@@ -18,11 +18,36 @@ We have been building up the available supply of storage capacity and bandwidth 
 3) Create an API key for your project on the API Keys page. You will need to create an API key to configure your Uplink or use our library. 
 *__NOTE:__ API keys are unique to one project, each project can have multiple API keys.*
 
+
+#### Setting up your Uplink/ Gateway on the V3 Network!
+
+1) Download the Identity tool binary and create an Identity.
+
+Download the correct binary for your operating system:
+- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_darwin_amd64.zip)
+- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_linux_amd64.zip)
+- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_linux_arm.zip)
+- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_windows_amd64.zip)
+
+2) Unzip the file and run the following command to create an identity for the uplink and/or gateway. (this example is for Mac OS, substitute the appropriate identity binary for your OS):
+
+```bash
+$ ./identity_darwin_amd64 create uplink --difficulty 1
+```
+
+Then run: 
+
+```bash
+$ ./identity_darwin_amd64 create gateway --difficulty 1
+```
+
+
 ### Configuring your Uplink CLI
 
 
 5) Set up your Uplink CLI by following these instructions on GitHub: https://github.com/storj/docs/blob/master/Uplink-CLI.md
 The uplink CLI is one of the ways you can interact with the network to upload and download files. 
+
 
 ### Configuring your S3 gateway:
 

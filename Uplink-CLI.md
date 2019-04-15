@@ -8,10 +8,10 @@ Satellite and uses a [test network](Test-network) Satellite by default.
 
 First, Download the correct binary for your operating system:
 
-- Mac OS: [uplink_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/1b8976a-go1.12.1/uplink_darwin_amd64.zip)
-- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/1b8976a-go1.12.1/uplink_linux_amd64.zip)
-- Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/1b8976a-go1.12.1/uplink_linux_arm.zip)
-- Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/1b8976a-go1.12.1/uplink_windows_amd64.exe.zip)
+- Mac OS: [uplink_darwin_amd64.zip](http://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/uplink_darwin_amd64.zip)
+- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/uplink_linux_amd64.zip)
+- Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/uplink_linux_arm.zip)
+- Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/uplink_windows_amd64.exe.zip)
 
 
 Setup your uplink by running the following command:

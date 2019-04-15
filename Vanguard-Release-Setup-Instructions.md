@@ -47,11 +47,13 @@ $ ./identity_darwin_amd64 create gateway --difficulty=0
 ### Configuring your Uplink CLI
 
 
-5) Set up your Uplink CLI by following these instructions on GitHub: https://github.com/storj/docs/blob/master/Uplink-CLI.md
+5) Set up your Uplink CLI by following these instructions on GitHub: https://github.com/storj/storj/wiki/Uplink-CLI
+
 The uplink CLI is one of the ways you can interact with the network to upload and download files. 
 
 
 ### Configuring your S3 gateway:
 
-5) Set up your S3 gateway by following these instructions on GitHub: https://github.com/storj/docs/blob/master/S3-Gateway.md
+5) Set up your S3 gateway by following these instructions on GitHub: https://github.com/storj/storj/wiki/S3-Gateway
+
 The S3 gateway is our service that mimics the Amazon S3 API using the Tardigrade network.

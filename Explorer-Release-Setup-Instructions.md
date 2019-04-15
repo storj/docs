@@ -166,7 +166,9 @@ $ docker start storagenode
 
 You can set up automatic updates for your Storage Node docker container using watchtower with the command below. Watchtower will look for new updates to the docker container on docker hub and automatically update your Storage Node when it sees a new version. This is the best way to ensure your Storage Node stays up to date.
 
-```docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower```
+```bash
+$ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower
+```
 
 
 For manual updates run the following commands: 

@@ -29,13 +29,15 @@ Download the correct binary for your operating system:
 - Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/identity_linux_arm.zip)
 - Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/identity_windows_amd64.exe.zip)
 
-2) Unzip the file and run the following command to create an identity for the uplink and/or gateway. (this example is for Mac OS, substitute the appropriate identity binary for your OS):
+2) Unzip the file and run the following command to create an identity for the uplink and/or gateway. (this example is for Mac OS, substitute the appropriate identity binary for your OS).
+
+To create an identity for the uplink tool:
 
 ```bash
 $ ./identity_darwin_amd64 create uplink --difficulty=0
 ```
 
-Then run: 
+To create an identity for the gateway tool:
 
 ```bash
 $ ./identity_darwin_amd64 create gateway --difficulty=0

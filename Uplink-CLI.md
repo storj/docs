@@ -6,7 +6,9 @@ Satellite and uses a [test network](Test-network) Satellite by default.
 
 ## Installation and configuration
 
-First, Download the correct binary for your operating system:
+First, if you haven't already followed the preparation steps in https://github.com/storj/storj/wiki/Vanguard-Release-Setup-Instructions, please do so.
+
+Next, Download the correct binary for your operating system:
 
 - Mac OS: [uplink_darwin_amd64.zip](http://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/uplink_darwin_amd64.zip)
 - Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/uplink_linux_amd64.zip)

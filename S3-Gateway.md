@@ -2,9 +2,9 @@
 
 The Storj S3 gateway is our service that mimics the Amazon S3 API using the
 Storj network. This tutorial assumes you have an account on a running
-Satellite and use a [test network](Test-network) Satellite by default.
+Satellite and use a [test network](Test-network.md) Satellite by default.
 
-One gateway is already included in the [test network](Test-network), so you need to go through this tutorial only if you want to add another gateway.
+One gateway is already included in the [test network](Test-network.md), so you need to go through this tutorial only if you want to add another gateway.
 
 ## Installation and configuration
 
@@ -111,6 +111,6 @@ you'll see how easy it is to swap out AWS for Storj, going forward. Feel that
 this could be easier, or maybe just that this tutorial could be improved?
 Open an issue or file a PR!
 
-You could also check out the tutorial on [Uplink](Uplink-CLI).
+You could also check out the tutorial on [Uplink](Uplink-CLI.md).
 
 Now go and decentralize all the things!

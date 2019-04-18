@@ -111,8 +111,8 @@ Now that we have finished setting everything up, let’s write some code to uplo
     err = bucket.UploadObject(ctx, uploadPath, buf, nil)
     if err != nil {
         return fmt.Errorf("could not upload: %v", err)
-```
     }
+```
 
 
 To download it, let’s another method to call the file back. We want to download the whole file, so let’s specify the range from 0 to -1.   We will also want to read everything from the stream.  Write:

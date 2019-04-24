@@ -36,10 +36,10 @@ Install the necessary dependencies and configure your network appropriately usin
 1) Download the Identity tool binary and create an Identity. The process of generating an identity could take several hours; it is dependent on your machine´s processing power & luck.
 
 Download the correct binary for your operating system:
-- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_darwin_amd64.zip)
-- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_linux_amd64.zip)
-- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_linux_arm.zip)
-- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/01031fd-go1.11/identity_windows_amd64.zip)
+- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_darwin_amd64.zip)
+- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_linux_amd64.zip)
+- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_linux_arm.zip)
+- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_windows_amd64.exe.zip)
 
 *__Note:__ If you are using Synology NAS or other device with less computing power, you can create Identity on a more powerful machine and transfer it over to the smaller device.*
 

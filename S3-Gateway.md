@@ -12,10 +12,10 @@ First, if you haven't already followed the preparation steps in https://github.c
 
 Next, Download the correct binary for your operating system:
 
-- Mac OS: [gateway_darwin_amd64.zip](http://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/gateway_darwin_amd64.zip)
-- Linux: [gateway_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/gateway_linux_amd64.zip)
-- Raspberry Pi: [gateway_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/gateway_linux_arm.zip)
-- Windows Pro: [gateway_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/gateway_windows_amd64.exe.zip)
+- Mac OS: [gateway_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_darwin_amd64.zip)
+- Linux: [gateway_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_linux_amd64.zip)
+- Raspberry Pi: [gateway_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_linux_arm.zip)
+- Windows Pro: [gateway_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_windows_amd64.exe.zip)
 
 To configure the Gateway for your Satellite, you'll need to make note of your
 Satellite address and your account's API key. 

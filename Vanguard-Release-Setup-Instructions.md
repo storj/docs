@@ -24,10 +24,10 @@ We have been building up the available supply of storage capacity and bandwidth 
 1) Download the Identity tool binary and create an Identity.
 
 Download the correct binary for your operating system:
-- Mac OS: [identity_darwin_amd64.zip](http://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/identity_darwin_amd64.zip)
-- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/identity_linux_amd64.zip)
-- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/identity_linux_arm.zip)
-- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/identity_windows_amd64.exe.zip)
+- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_darwin_amd64.zip)
+- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_linux_amd64.zip)
+- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_linux_arm.zip)
+- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_windows_amd64.exe.zip)
 
 2) Unzip the file and run the following command to create an identity for the uplink and/or gateway. (this example is for Mac OS, substitute the appropriate identity binary for your OS).
 

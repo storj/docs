@@ -11,7 +11,7 @@ First, if you haven't already followed the preparation steps in https://github.c
 Next, Download the correct binary for your operating system:
 
 - Mac OS: [uplink_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/uplink_darwin_amd64.zip)
-- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/uplink_linux_amd64.zipp)
+- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/uplink_linux_amd64.zip)
 - Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/uplink_linux_arm.zip)
 - Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/uplink_windows_amd64.exe.zip)
 

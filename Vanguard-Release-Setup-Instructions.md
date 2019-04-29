@@ -57,3 +57,8 @@ The uplink CLI is one of the ways you can interact with the network to upload an
 5) Set up your S3 gateway by following these instructions on GitHub: https://github.com/storj/storj/wiki/S3-Gateway
 
 The S3 gateway is our service that mimics the Amazon S3 API using the Tardigrade network.
+
+### Using the Libuplink Library (golang)
+
+We have a great walkthrough you can reference [here](https://github.com/storj/docs/blob/master/Libuplink-Walkthrough.md)
+Libuplink Library golang documentation [godoc.org](http://godoc.org/storj.io/storj/lib/uplink)

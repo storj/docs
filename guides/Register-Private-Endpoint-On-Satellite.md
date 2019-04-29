@@ -4,14 +4,13 @@
 2) Create a folder inside of `satellite/` with the name of your service. IE `satellite/privatething`. Add your server endpoint functions here
 3) Register your service on the satellite’s private endpoints by adding it to `satellite/peer.go`
     * Add your server endpoint struct to the `Peer` struct inside of `satellite/peer.go`
+    * Register this struct on the satellite’s private endpoints by adding to the `New` function in `satellite/peer.go`
 
 ```golang
 Privatething struct {
     Endpoint *privatething.Endpoint
 }
 ```
-
-    * Register this struct on the satellite’s private endpoints by adding to the `New` function in `satellite/peer.go`
 
 ```golang
 { // setup inspector

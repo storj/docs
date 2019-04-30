@@ -104,6 +104,14 @@ type DB interface {
 
 Comments should have a space after `//`, e.g. `// DB` instead of `//DB`.
 
+### Package
+
+Every package should have at least _package comment_ with concise information of the purpose of it; when its usage isn't trivial despite of the comments that the top-level exported names must have and non-trivial unexported, the _package comment_ should also contain specific clarifications.
+
+One example of a package that requires specific clarifications is the [fmt standard package](https://golang.org/pkg/fmt/).
+
+Go allows to place the _package comment_ on any non test go file that the package contains and one of the used patterns is to have a `doc.go` file which only contains the _package comment_ (e.g. [fmt standard package](https://golang.org/src/fmt/doc.go)). For keep it simple in order to choose which file should contain the _package comment_, we place the _package comment_ in a `doc.go` even when the package has only one Go file because we always know where such _package comment_ is written and there is no need to move it in case that a package with just one initial file grow to have more in the future.
+
 ## Logging
 
 Use properly namespaced `*zap.Logger`. By properly namespacing and passing in the logger we can better find how things are working. Tests should use `zaptest.NewLogger(t)` as the root logger.

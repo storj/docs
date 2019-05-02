@@ -170,6 +170,10 @@ You can set up automatic updates for your Storage Node docker container using wa
 $ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower
 ```
 
+For ARM use
+```bash
+$ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower:latest-arm32v6
+```
 
 For manual updates run the following commands: 
 

@@ -18,6 +18,8 @@ An Uplink is an entry point into the Storj network. It connects to a specific Sa
 
 In the near future, additional library language wrappers will be released, allowing you to programmatically interface the Storj network with other programming languages. The first language binding that we are planning to release are for C, Java (Android), and iOS - with additional language bindings planned through community bounties.
 
+For the complete documentation around libuplink, check out the [Go Docs](http://godoc.org/storj.io/storj/lib/uplink).
+
 
 ### Prerequisites
 

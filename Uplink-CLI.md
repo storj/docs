@@ -10,10 +10,10 @@ First, if you haven't already followed the preparation steps in https://github.c
 
 Next, Download the correct binary for your operating system:
 
-- Mac OS: [uplink_darwin_amd64.zip](http://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/uplink_darwin_amd64.zip)
-- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/uplink_linux_amd64.zip)
-- Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/uplink_linux_arm.zip)
-- Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2f7405a-heads-v0.9.2-go1.12.1/uplink_windows_amd64.exe.zip)
+- Mac OS: [uplink_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2925371-heads-v0.10.2-go1.12.1/uplink_darwin_amd64.zip)
+- Linux: [uplink_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2925371-heads-v0.10.2-go1.12.1/uplink_linux_amd64.zip)
+- Raspberry Pi: [uplink_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2925371-heads-v0.10.2-go1.12.1/uplink_linux_arm.zip)
+- Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/2925371-heads-v0.10.2-go1.12.1/uplink_windows_amd64.exe.zip)
 
 
 Setup your uplink by running the following command:
@@ -25,7 +25,7 @@ Setup your uplink by running the following command:
 You will be prompted for:
 
 - `api-key`: API key that you generate for a project on the Satellite console. If you are using the test network, you can use the API key provided when you run it.
-- `satellite-addr`: The satellite you want to connect your uplink to, eg. mars.tardigrade.io:7777 or 127.0.0.1:10000 if you are using the test network.
+- `satellite-addr`: The satellite you want to connect your uplink to, eg. `mars.tardigrade.io:7777` or `127.0.0.1:10000` if you are using the test network.
 - `enc.key`: The passphrase you choose in order to encrypt your files. Keep this secret and
 safe. This passphrase will grant you access to all of your files, and if you
 lose it, you will not be able to recover your files. 

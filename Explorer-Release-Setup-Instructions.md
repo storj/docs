@@ -164,15 +164,15 @@ $ docker start storagenode
 
 #### Upgrading your Storage Node
 
-You can set up automatic updates for your Storage Node docker container using watchtower with the command below. Watchtower will look for new updates to the docker container on docker hub and automatically update your Storage Node when it sees a new version. This is the best way to ensure your Storage Node stays up to date. The commands below set up watchtower to only monitor the storagenode container. If you want to use watchtower for other containers as well, please refer to the [watchtower documentation](https://hub.docker.com/r/containrrr/watchtower).
+You can set up automatic updates for your Storage Node docker container using watchtower with the command below. Watchtower will look for new updates to the docker container on docker hub and automatically update your Storage Node when it sees a new version. This is the best way to ensure your Storage Node stays up to date. The commands below set up watchtower to only monitor the storagenode container and itself. If you want to use watchtower for other containers as well, please refer to the [watchtower documentation](https://hub.docker.com/r/containrrr/watchtower).
 
 ```bash
-$ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower storagenode
+$ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower storagenode watchtower
 ```
 
 For ARM based machines use:
 ```bash
-$ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower:latest-arm32v6 storagenode
+$ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower:latest-arm32v6 storagenode watchtower
 ```
 
 For manual updates run the following commands: 

@@ -98,7 +98,6 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e STORAGE="2TB" \
     -v "<identity-dir>":/app/identity \
     -v "<storage-dir>":/app/config \
-    --label=com.centurylinklabs.watchtower.enable=true \
     --name storagenode storjlabs/storagenode:alpha
 ```
 
@@ -113,7 +112,6 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e STORAGE="2TB" \
     -v "<identity-dir>":/app/identity \
     -v "<storage-dir>":/app/config \
-    --label=com.centurylinklabs.watchtower.enable=true \
     --name storagenode storjlabs/storagenode:arm
 ```
 
@@ -128,13 +126,12 @@ $ sudo docker run -d --restart unless-stopped -p 28967:28967 \
     -e STORAGE="2TB" \
     -v "<identity-dir>":/app/identity \
     -v "<storage-dir>":/app/config \
-    --label=com.centurylinklabs.watchtower.enable=true \
     --name storagenode storjlabs/storagenode:alpha
 ```
 
 _For Windows Operating Systems use the following line:_
 ```bash
-$ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" -v "<identity-dir>":/app/identity -v "<storage-dir>":/app/config --label=com.centurylinklabs.watchtower.enable=true --name storagenode storjlabs/storagenode:alpha
+$ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" -v "<identity-dir>":/app/identity -v "<storage-dir>":/app/config --name storagenode storjlabs/storagenode:alpha
 ```
 - Note: On Windows you need to format the paths like this: `D:\\identity\\storagenode\\` or `D:\\data\\`
 
@@ -167,15 +164,15 @@ $ docker start storagenode
 
 #### Upgrading your Storage Node
 
-You can set up automatic updates for your Storage Node docker container using watchtower with the command below. Watchtower will look for new updates to the docker container on docker hub and automatically update your Storage Node when it sees a new version. This is the best way to ensure your Storage Node stays up to date.
+You can set up automatic updates for your Storage Node docker container using watchtower with the command below. Watchtower will look for new updates to the docker container on docker hub and automatically update your Storage Node when it sees a new version. This is the best way to ensure your Storage Node stays up to date. The commands below set up watchtower to only monitor the storagenode container. If you want to use watchtower for other containers as well, please refer to the [watchtower documentation](https://hub.docker.com/r/containrrr/watchtower).
 
 ```bash
-$ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower --label-enable
+$ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower storagenode
 ```
 
 For ARM based machines use:
 ```bash
-$ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower:latest-arm32v6
+$ docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower:latest-arm32v6 storagenode
 ```
 
 For manual updates run the following commands: 
@@ -209,7 +206,6 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e STORAGE="2TB" \
     -v "<identity-dir>":/app/identity \
     -v "<storage-dir>":/app/config \
-    --label=com.centurylinklabs.watchtower.enable=true \
     --name storagenode storjlabs/storagenode:alpha
 ```
 For ARM based machines use:
@@ -222,6 +218,5 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e STORAGE="2TB" \
     -v "<identity-dir>":/app/identity \
     -v "<storage-dir>":/app/config \
-    --label=com.centurylinklabs.watchtower.enable=true \
     --name storagenode storjlabs/storagenode:arm
 ```

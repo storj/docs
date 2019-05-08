@@ -70,7 +70,7 @@ _For Raspberry Pi and similar ARM-based platforms use:_
 ```bash
 $ docker pull storjlabs/storagenode:arm
 ```
-*__Note:__ If you get a permission error for docker commands, please follow the [docker post install instructions](https://docs.docker.com/install/linux/linux-postinstall/) or start  commands with `sudo`.*
+*__Note:__ If you get a permission error for docker commands, please follow the [docker post install instructions](https://docs.docker.com/install/linux/linux-postinstall/) or start commands with `sudo`.*
 
 5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
     
@@ -83,7 +83,7 @@ $ docker pull storjlabs/storagenode:arm
 - `<identity-dir>`: the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier
 - `<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
 
-_For AMD/Intel based systems use:_
+_For Intel/AMD based systems use:_
 
 ```bash
 $ docker run -d --restart unless-stopped -p 28967:28967 \

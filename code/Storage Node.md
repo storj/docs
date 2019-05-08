@@ -26,7 +26,7 @@ Is the endpoint that implements data transfer protocol. It allows uplinks to upl
 
 Piecestore contains logic to validate order limits, orders and piece hashes.
 
-Piecestore uses Pieces to store the data and Trust to verify allowed peers. It updates Bandwidth, Orders and other databases while uploading/downloading.
+Piecestore uses Pieces to store the data and [Trust](#Trust) to verify allowed peers. It updates [Bandwidth](#Bandwidth), [Orders](#Orders) and other databases while uploading/downloading.
 
 ## Pieces
 
@@ -50,7 +50,7 @@ Bandwidth system keeps track of bandwidth usage as reported by order limits and 
 
 ## Collector
 
-Collector system every interval purges expired pieces from the system.
+Collector system implements expired piece deletion from storage node.
 
 ## Inspector
 

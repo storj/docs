@@ -18,7 +18,7 @@ Storage node set up tutorial [video](https://youtu.be/cd6gWMgSyqI)
  * Our software serves requests from the internet, but not all software you may have installed is designed to be exposed to the internet directly! **Do not connect your computer directly to the internet without the assistance of a firewall.** This is especially true for users on Windows with applications responding to requests on all IPs.
 
 #### Before you begin
-Make sure you have an email with your personal single-use authorization token. Note that the format of the authorization token is `email:characterstring`. If you don’t have an authorization token yet, please join our [waitlist](https://storj.io/sign-up-farmer). 
+Make sure you have an email with your personal single-use authorization token. If you don’t have an authorization token yet, please join our [waitlist](https://storj.io/sign-up-farmer). 
 
 *__Note:__ This early release has limited support for some operating systems. If your OS is not explicitly supported, please save your one-time-use authorization token and we will notify everyone when this is no longer an issue.*
 
@@ -41,7 +41,7 @@ Download the correct binary for your operating system:
 - Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_linux_arm.zip)
 - Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_windows_amd64.exe.zip)
 
-*__Note:__ If you are using Synology NAS or other device with less computing power, you can create Identity on a more powerful machine and transfer it over to the smaller device.*
+*__Note:__ If you are using Raspberry Pi, a NAS or other device with less computing power, you can create an identity on a more powerful machine and transfer it over to the less powerful device.*
 
 2) Unzip the file and run the following command to start creating an identity (this example is for Mac OS, substitute the appropriate identity binary for your OS):
 
@@ -55,8 +55,7 @@ $ ./identity_darwin_amd64 create storagenode
 ```bash
 $ ./identity_darwin_amd64 authorize storagenode <authorization-token>
 ```
-
-*__Note:__ If you are using Synology you must add "sudo" in front of commands for creating and signing identity. Otherwise you will receive error. Default folder for created identity on Synology is /root/.local/share/storj/identity/storagenode/.*
+*__Note:__ Your email address is part of the authorization-token. The format of the authorization token is `email:characterstring`.*
 
 *__Caution:__ Before proceeding to the next step, please be sure to back up your identity files located in the output path of the previous command. This will allow you to restore your node to working order in case of an unfortunate incident such as a hard drive crash.*
 
@@ -71,13 +70,7 @@ _For Raspberry Pi and similar ARM-based platforms use:_
 ```bash
 $ docker pull storjlabs/storagenode:arm
 ```
-
-_For Synology or QNAP NAS with Intel CPU use:_
-
-```bash
-$ docker pull storjlabs/storagenode:alpha
-```
-- Note: If you are using Synology you must add "sudo" in front of commands.
+*__Note:__ If you get a permission error for docker commands, please follow the [docker post install instructions](https://docs.docker.com/install/linux/linux-postinstall/) or start  commands with `sudo`.*
 
 5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
     
@@ -85,10 +78,12 @@ $ docker pull storjlabs/storagenode:alpha
 - `EMAIL`: email address so that we can notify you when a new version has been released (optional)
 - `ADDRESS`: external IP address or the DDNS you configured and the port you opened on your router `<ip>:<port>`
    - Note: If you are using a custom port other than 28967, then you have to change the `-p 28967:28967` to `-p <port>:28967`
-- `BANDWIDTH`: how much bandwidth you want to allocate to the Storj network
+- `BANDWIDTH`: how much bandwidth you want to allocate to the Storj network per month
 - `STORAGE`: how much disk space you want to allocate to the Storj network
 - `<identity-dir>`: the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier
 - `<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
+
+_For AMD/Intel based systems use:_
 
 ```bash
 $ docker run -d --restart unless-stopped -p 28967:28967 \
@@ -116,40 +111,24 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     --name storagenode storjlabs/storagenode:arm
 ```
 
-_For Synology or QNAP NAS use:_
-
-```bash
-$ docker run -d --restart unless-stopped -p 28967:28967 \
-    -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
-    -e EMAIL="user@example.com" \
-    -e ADDRESS="domain.ddns.net:28967" \
-    -e BANDWIDTH="2TB" \
-    -e STORAGE="2TB" \
-    -v "<identity-dir>":/app/identity \
-    -v "<storage-dir>":/app/config \
-    --name storagenode storjlabs/storagenode:alpha
-```
-- Note: If you are using Synology you must add "sudo" in front of commands.
-
 _For Windows Operating Systems use the following line:_
 ```bash
 $ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" -v "<identity-dir>":/app/identity -v "<storage-dir>":/app/config --name storagenode storjlabs/storagenode:alpha
 ```
-- Note: On Windows you need to format the paths like this: `D:\\identity\\storagenode\\` or `D:\\data\\`
+*__Note:__ On Windows you need to use CMD and format the paths like this: `D:\\identity\\storagenode\\` or `D:\\data\\`*
 
 6) Start your storage node dashboard by running the following command:
 
 ```bash
 $ docker exec -it storagenode /app/dashboard.sh
 ```
+*__Note:__ Last contact on the dashboard should always be below 30s. If it says OFFLINE or keeps increasing, double check port forwards, DDNS setup up and IP addresses.*
 
 7) If step 5 or 6 failed for you, run: 
 
 ```bash
 $ docker logs -t storagenode
 ```
-
-- Note: If you are using Synology you must add "sudo" in front of commands.
 
 *If you need help setting up your storage node, sign up for our [community chat](https://community.storj.io/home) and ask for assistance in the #storagenode channel. Provide your logs and stacktrace when requested by the community leader attending your issue.*
 

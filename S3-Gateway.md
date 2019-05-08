@@ -2,36 +2,34 @@
 
 The Storj S3 gateway is our service that mimics the Amazon S3 API using the
 Storj network. This tutorial assumes you have an account on a running
-Satellite and use a [test network](Test-network) Satellite by default.
+Satellite and use a [test network](Test-network.md) Satellite by default.
 
-One gateway is already included in the [test network](Test-network), so you need to go through this tutorial only if you want to add another gateway.
+One gateway is already included in the [test network](Test-network.md), so you need to go through this tutorial only if you want to add another gateway.
 
 ## Installation and configuration
 
-First, you'll need at least [Go 1.11](https://www.golang.org/). Once Go is
-installed, you should be able to run:
+First, if you haven't already followed the preparation steps in https://github.com/storj/storj/wiki/Vanguard-Release-Setup-Instructions, please do so.
 
-```bash
-go get -u storj.io/storj/cmd/gateway
-```
+Next, Download the correct binary for your operating system:
 
-This will install the `gateway` binary to wherever Go is configured to
-output binaries on your system, by default `~/go/bin`.
+- Mac OS: [gateway_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_darwin_amd64.zip)
+- Linux: [gateway_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_linux_amd64.zip)
+- Raspberry Pi: [gateway_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_linux_arm.zip)
+- Windows Pro: [gateway_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_windows_amd64.exe.zip)
 
 To configure the Gateway for your Satellite, you'll need to make note of your
-Satellite address and your account's API key. The [Uplink CLI](Uplink-CLI)
-and the Gateway share a configuration file, so if your Uplink CLI is configured
-you can skip the remaining setup.
+Satellite address and your account's API key. 
 
-Next, you'll need to choose an encryption passphrase. Keep this secret and
-safe. This passphrase will grant you access to all of your files, and if you
-lose it, you will not be able to recover your files.
+Next, you'll need to choose an encryption passphrase. This needs to be the same
+encryption passphrase any other tools that want to access these files will use.
+Keep this secret and safe. This passphrase will grant you access to all of 
+your files, and if you lose it, you will not be able to recover your files.
 
 Then you'll need to configure the Gateway with these values. The below example
-command uses the defaults for the test network:
+command uses the defaults for the alpha network:
 
 ```bash
-~/go/bin/gateway setup --api-key abc123 --satellite-addr 127.0.0.1:7778 \
+~/go/bin/gateway setup --api-key abc123 --satellite-addr mars.tardigrade.io:7777 \
   --enc.key highlydistributedridiculouslyresilient
 ```
 
@@ -113,6 +111,6 @@ you'll see how easy it is to swap out AWS for Storj, going forward. Feel that
 this could be easier, or maybe just that this tutorial could be improved?
 Open an issue or file a PR!
 
-You could also check out the tutorial on [Uplink](Uplink-CLI).
+You could also check out the tutorial on [Uplink](Uplink-CLI.md).
 
 Now go and decentralize all the things!

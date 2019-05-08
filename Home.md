@@ -4,11 +4,17 @@
 
 ![logo](assets/logo.png)
 
-This repository holds some basic tutorials for working with the Storj v3 architecture:
+This repository holds some basic tutorials for working with the Storj V3 architecture.  Check out:
 
+- [Use the Storj Uplink CLI tool to manipulate files from the command line](Uplink-CLI)
+- [Integrate the Gateway to mimic AWS S3 filestores](S3-Gateway)
+- [Learn the Libuplink Go library to programmatically interface with the network](Libuplink-Walkthrough)
+
+If you are interested in setting up your own Storage Node, and monetizing your underutilized resources, check out:
+- [Explorer Release Setup Instructions](Explorer-Release-Setup-Instructions)
+
+Finally, if you'd like to spin up a local instance of the V3 Network components (Uplink, Satellite, Storage Nodes) for testing, see:
 - [Learn how to run the storj-sim test network](Test-network)
-- [Use the Storj Uplink CLI tool to manipulate files](Uplink-CLI)
-- [Use the Gateway to mimic AWS s3 filestores](S3-Gateway)
 
 Have fun!
 

@@ -72,11 +72,12 @@ _For Raspberry Pi and similar ARM-based platforms use:_
 $ docker pull storjlabs/storagenode:arm
 ```
 
-_For Synology NAS with Intel CPU use:_
+_For Synology or QNAP NAS with Intel CPU use:_
 
 ```bash
-$ sudo docker pull storjlabs/storagenode:alpha
+$ docker pull storjlabs/storagenode:alpha
 ```
+- Note: If you are using Synology you must add "sudo" in front of commands.
 
 5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
     
@@ -115,10 +116,10 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     --name storagenode storjlabs/storagenode:arm
 ```
 
-_For Synology NAS use:_
+_For Synology or QNAP NAS use:_
 
 ```bash
-$ sudo docker run -d --restart unless-stopped -p 28967:28967 \
+$ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
     -e EMAIL="user@example.com" \
     -e ADDRESS="domain.ddns.net:28967" \
@@ -128,6 +129,7 @@ $ sudo docker run -d --restart unless-stopped -p 28967:28967 \
     -v "<storage-dir>":/app/config \
     --name storagenode storjlabs/storagenode:alpha
 ```
+- Note: If you are using Synology you must add "sudo" in front of commands.
 
 _For Windows Operating Systems use the following line:_
 ```bash

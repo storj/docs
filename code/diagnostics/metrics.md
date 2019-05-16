@@ -8,7 +8,7 @@ There are a number of packages and services involved in metric gathering for the
 
 This diagram displays the high level flow of metric data. Below describes the diagram in detail.
 
-![storj-metrics-data-flow](metrics-data-flow.png)
+![storj-metrics-data-flow](dataflow.png)
 
 1. All of the Storj peers (i.e. satellite, storage node, uplink, etc) participate in metric collection. When a peer starts up, it begins collecting the following metrics via the telemetry client:
 - [package's environment data](https://godoc.org/gopkg.in/spacemonkeygo/monkit.v2/environment)
@@ -38,7 +38,9 @@ Reference:
 
 For debugging purposes, `statrecevier` can be run locally along with `storj-sim` to collect and view metrics. Here are the steps on how to set that up:
 
-1. create a `lua` pipline config that says describes the source and destination of the metrics
+The following steps assume the [Storj repo](https://github.com/storj/storj) can already be built and run locally. All commands occur from root of the storj repo directory.
+
+1. create a `lua` pipline config that defines the source and destination of the metrics
 
 ```
 # pipeline.lua

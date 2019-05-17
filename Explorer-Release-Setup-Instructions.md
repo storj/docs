@@ -223,3 +223,17 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -v "<storage-dir>":/app/config \
     --name storagenode storjlabs/storagenode:arm
 ```
+
+## How to execute other Storage Node commands
+
+While the sotragenode container is running you can
+
+```bash
+$ docker exec -it storagenode /app/storagenode <<command>>
+```
+
+Where `<<command>>` is any of the commands that storagenode has; for knowing them you can execute the command `help`
+
+```bash
+$ docker exec -it storagenode /app/storagenode help
+```

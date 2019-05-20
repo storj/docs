@@ -48,6 +48,8 @@ All errors must be handled and checked. Don't hide errors.
 
 _Exceptions: printing to console or log (e.g. `fmt.Println`, `log.Print`)_
 
+For error handling we lean on the package [github.com/zeebo/errs](https://godoc.org/github.com/zeebo/errs) for adding call stack traces and annoate them.
+
 Use `errs.Class` to annotate errors with more information.
 
 To combine multiple errors use `errs.Combine`. To collect multiple similar errors use `errs.Group`.

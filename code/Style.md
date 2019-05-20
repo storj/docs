@@ -94,6 +94,26 @@ func OpenDataFile(filename string) (*os.File, error) {
 }
 ```
 
+### Conditionals for _Not Found_ error values
+
+It's pretty common in Go to find functions that return an error when a function should return a value but such value "isn't found". The most classic example of this is the [`sql.ErrNoRows`](https://golang.org/pkg/database/sql/#pkg-variables) which may be returned by function like [`sql#DB.QueryRow`](https://golang.org/pkg/database/sql/#DB.QueryRow). Under this circumstances we first check for such error and if it doesn't match then we do a second check for non `nil` error, rather than nesting them.
+
+```go
+var ErrUser = errs.Class("user")
+
+func (reg *Registry) GetUser(ctx context.Context, username string) (*User, error) {
+	user, := reg.db.Get_User_By_Username(ctx, username)
+	if err == sql.ErrNoRows {
+		return nil, ErrUser.New("not found %s", username)
+	}
+	if err != nil {
+		return nil, Error.Wrap(err)
+	}
+
+	return user, nil
+}
+```
+
 ## Comments
 
 See [Comment Sentences](https://github.com/golang/go/wiki/CodeReviewComments#comment-sentences). Comments should help the reader to orient to the constraints and relations with other packages.

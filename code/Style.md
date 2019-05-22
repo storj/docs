@@ -155,7 +155,7 @@ We only use _unsigned integers_ (e.g. `uint`, `uint32`, etc.) on the following c
 
 On the rest of the cases, __always__ use _signed integers_ (e.g. `int`, `int64`, etc.).
 
-The rationale behind this convention is that the last thing that we want is to have wacky behavior around common values and _zero_ is a common one, so we want to avoid `-1` from an unsigned integer variable with `0` value.
+The rationale behind this convention is that the last thing that we want is to have wacky behavior around common values and _zero_ is a common one, so we want to avoid to not get a negative number when subtracting _one_ from an _unsigned integer_ variable with value _zero_.
 
 ## Type and method naming
 

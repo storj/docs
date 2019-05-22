@@ -16,7 +16,7 @@ All code is formatted with `goimports -local storj.io`. Where `goimports` is usi
 
 Import statements are in three groups in the following order:
 
-```
+```go
 import (
 	// standard packages
 	"context"
@@ -54,7 +54,7 @@ To combine multiple errors use `errs.Combine`. To collect multiple similar error
 
 To handle errors with things that need closing use `errs.Combine` together with `defer`. As an example:
 
-```
+```go
 var Error = errs.Class("example error")
 
 func Example() (err error) {
@@ -76,28 +76,28 @@ See [Comment Sentences](https://github.com/golang/go/wiki/CodeReviewComments#com
 
 Bad example:
 
-```
+```go
 // Encode encodes req to w.
 func Encode(w io.Writer, req *Request)
 ```
 
 Better example:
 
-```
+```go
 // Encode encodes req as JSON to w, which is used by Server.
 func Encode(w io.Writer, req *Request)
 ```
 
 Avoid tautological comments:
 
-```
+```go
 // DB is a database.
 type DB interface {
 ```
 
 Better example:
 
-```
+```go
 // DB stores raw accounting information gathered by tally.
 type DB interface {
 ```
@@ -120,11 +120,11 @@ Avoid using global loggers (e.g. `zap.L().Error`, `log.Print`, `fmt.Print`), unl
 
 ## Variable naming
 
-Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `mu sync.Mutex`) 
+Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `mu sync.Mutex`)
 
 Small variables can be fine in small scopes (up to 40 lines) and when there isn't a danger of confusion. Take into account that the confusion can arise also due to moving between packages. As an example:
 
-```
+```go
 func (p *Printer) Print(pr *Project) error {
 	...
 }
@@ -136,7 +136,7 @@ func (p *Project) PrintTo(pr *Printer) error {
 
 It's easier to follow the code with:
 
-```
+```go
 func (printer *Printer) Print(project *Project) error {
 	...
 }
@@ -169,7 +169,7 @@ Avoid using initialisms unless they are widely known like `ID`, `URL` and `DB`.
 
 The following argument order should be used for consistency (split into multiple lines for clarity only):
 
-```
+```go
 func Do(
     ctx context.Context, // associated context with the operation
     log *zap.Logger,     // logger used by Do
@@ -226,11 +226,11 @@ Of course using sleeps, tickers for scheduling or for avoiding thundering herd p
 
 ## Mutexes
 
-When using synchronizing structures like mutexes or condition variables organize them in the struct such that they make clear which fields are protected and which are unprotected. 
+When using synchronizing structures like mutexes or condition variables organize them in the struct such that they make clear which fields are protected and which are unprotected.
 
 For example:
 
-```
+```go
 type GraphiteDest struct {
 	address string
 

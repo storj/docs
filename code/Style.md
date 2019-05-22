@@ -146,6 +146,17 @@ func (project *Project) PrintTo(printer *Printer) error {
 }
 ```
 
+## Integers
+
+We only use _unsigned integers_ (e.g. `uint`, `uint32`, etc.) on the following circumstances:
+
+* They are used as _bitmasks_.
+* They are used for serialized formats.
+
+On the rest of the cases, __always__ use _signed integers_ (e.g. `int`, `int64`, etc.).
+
+The rationale behind this convention is that the last thing that we want is to have wacky behavior around common values and _zero_ is a common one, so we want to avoid `-1` from an unsigned integer variable with `0` value.
+
 ## Type and method naming
 
 Consider package name as part of the type name, this avoids stutter when using the types or methods.

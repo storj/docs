@@ -54,12 +54,17 @@ Amazon S3 compatible clients.
 
 At the moment it's assinging ports in the following way:
 
-* Gateways start from port `9000`
-* Bootstrap server is at port `9999`
+The port format is: "1PXXE", where P is the peer class, XX is the index of the instance, and E is the endpoint.
+
+* Gateways start from port `11000`
+* Version control is at port `12000`
+* Bootstrap server is at port `13000`
 * Satellites start from port `10000`
-* Satellite Console starts on port `10100`
-* Storage Nodes public ports start from port `12000`
-* Storage Nodes private ports start from port `13000`
+* Satellite Console starts on port `10002`
+* Storage Nodes public ports start from port `14000`
+* Storage Nodes private ports start from port `14001`
+
+See [storj-sim network source code](https://github.com/storj/storj/blob/master/cmd/storj-sim/network.go#L36) for more details.
 
 To get access to a gateway and test your keys, you open http://127.0.0.1:9000 in a web browser.
 
@@ -96,6 +101,37 @@ While developing it's often nice to be able to delete the network and set it up 
 For convenience, you may run the command in a single line, like so:
 
 `storj-sim network destroy && storj-sim network setup && storj-sim network test bash my-test-script.sh`
+
+### Running Tests With Postgres
+
+Here are the steps to run storj-sim with postgres instead of the default sqlite:
+
+Step 1: Start postgres container running locally:
+
+```
+$ docker pull postgres
+
+$ docker run --rm -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=<pw> postgres
+
+// in a different tab run this command to log into the postgres
+// interactive terminal
+$ psql -h localhost -U postgres
+
+// there will be a pw prompt
+
+// once in the psql terminal, create the database
+$ create database <dbName>;
+```
+
+Step 2: Run storj sim with postgres
+
+```
+// setup storj-sim network with postgres connection string. You can supply any password
+// and database name as long as they match the postgres instance running above
+$ storj-sim network --postgres=postgres://postgres:<pw>@localhost/<dbName>?sslmode=disable setup
+
+$ storj-sim network run
+```
 
 ***
 

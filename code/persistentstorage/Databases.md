@@ -78,7 +78,7 @@ The node bolt bucket stores the following data:
 - value: contact info for that node
 
 Resources:
-- [Slide deck](https://docs.google.com/presentation/d/1jY9mu8SVmVqirbo_yFIJjHWbeHrEc1NxWkFS1iauT_I/edit#slide=id.p) to a great talk [Jennifer](https://github.com/jenlij) did on storj Kademlia implementation.
+- [Slide deck](https://docs.google.com/presentation/d/1jY9mu8SVmVqirbo_yFIJjHWbeHrEc1NxWkFS1iauT_I/edit?usp=sharing) to a great talk [Jennifer](https://github.com/jenlij) did on storj Kademlia implementation.
 
 ## Storage Nodes
 

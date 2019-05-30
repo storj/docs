@@ -66,7 +66,7 @@ The port format is: "1PXXE", where P is the peer class, XX is the index of the i
 
 See [storj-sim network source code](https://github.com/storj/storj/blob/master/cmd/storj-sim/network.go#L36) for more details.
 
-To get access to a gateway and test your keys, you open http://127.0.0.1:9000 in a web browser.
+To get access to a gateway and test your keys, you open http://127.0.0.1:11000 in a web browser.
 
 You can access a storage node dashboard using the storage command. For example for accessing storage node 4 dashboard using the default configuration:
 ```bash
@@ -106,9 +106,14 @@ For convenience, you may run the command in a single line, like so:
 
 Here are the steps to run storj-sim with postgres instead of the default sqlite:
 
-Step 1: Start postgres container running locally:
+Step 1: Start a postgres instance.
+
+One way to do this is to run a postgres container locally. For example, the following commands will run a postgres docker container locally:
 
 ```
+// Setup: install docker and psql
+
+// pull down official docker image
 $ docker pull postgres
 
 $ docker run --rm -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=<pw> postgres

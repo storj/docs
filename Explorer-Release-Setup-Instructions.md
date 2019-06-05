@@ -89,6 +89,7 @@ $ docker pull storjlabs/storagenode:alpha
 - `STORAGE`: how much disk space you want to allocate to the Storj network
 - `<identity-dir>`: the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier
 - `<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
+   - Note: the current database backend is [BoltDB](https://github.com/boltdb/bolt), which [requires _mmap_](https://github.com/boltdb/bolt/issues/704), hence you have use file system which supports _mmap_.
 
 ```bash
 $ docker run -d --restart unless-stopped -p 28967:28967 \

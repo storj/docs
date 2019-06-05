@@ -225,6 +225,16 @@ If a package alias is required prefer to rename the external packages rather tha
 * If threading a `ctx` variable through your callstack is more work than reasonable for your PR, use `context.TODO()` instead of `context.Background()` so you can come back to it later.
 * In a `main()` method, if you're using `pkg/process.Exec` with `*cobra.Cmd`, you can use `process.Ctx(cmd)` to retrieve a command-specific context, instead of making a new one.
 
+## Telemetry
+
+For any "non-trivial" function (i.e., a function that takes more than microseconds to run), please add monkit instrumentation to it. Make sure the function takes a context (see above) and returns a named error, and add this line to the very top of the function:
+
+```golang
+defer mon.Task()(&ctx)(&err)
+```
+
+If the function really can't take a context, then either create a context first with `context.TODO()`, or pass `nil` instead of `&ctx`. If the function really won't ever error, then you can pass `nil` instead of `&err` as well.
+
 ## Prefer synchronous methods
 
 Making synchronous methods to asynchornous is usually easier than making an asynchronous method to synchronous. This also keeps code simpler when the asynchrony is not needed.

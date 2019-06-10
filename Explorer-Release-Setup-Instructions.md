@@ -87,8 +87,8 @@ $ docker pull storjlabs/storagenode:alpha
    - Note: If you are using a custom port other than 28967, then you have to change the `-p 28967:28967` to `-p <port>:28967`
 - `BANDWIDTH`: how much bandwidth you want to allocate to the Storj network
 - `STORAGE`: how much disk space you want to allocate to the Storj network
-- `<identity-dir>`: the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier
-- `<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
+- `<identity-dir>`: replace to the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier
+- `<storage-dir>`: replace to the local directory where you want files to be stored on your hard drive for the network
    - Note: the current database backend is [BoltDB](https://github.com/boltdb/bolt), which [requires _mmap_](https://github.com/boltdb/bolt/issues/704), hence you have use file system which supports _mmap_.
 
 ```bash
@@ -98,8 +98,8 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e ADDRESS="domain.ddns.net:28967" \
     -e BANDWIDTH="2TB" \
     -e STORAGE="2TB" \
-    -v "<identity-dir>":/app/identity \
-    -v "<storage-dir>":/app/config \
+    --mount type=bind,source="<identity-dir>",destination=/app/identity \
+    --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:alpha
 ```
 
@@ -112,8 +112,8 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e ADDRESS="domain.ddns.net:28967" \
     -e BANDWIDTH="2TB" \
     -e STORAGE="2TB" \
-    -v "<identity-dir>":/app/identity \
-    -v "<storage-dir>":/app/config \
+    --mount type=bind,source="<identity-dir>",destination=/app/identity \
+    --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:arm
 ```
 
@@ -126,8 +126,8 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e ADDRESS="domain.ddns.net:28967" \
     -e BANDWIDTH="2TB" \
     -e STORAGE="2TB" \
-    -v "<identity-dir>":/app/identity \
-    -v "<storage-dir>":/app/config \
+    --mount type=bind,source="<identity-dir>",destination=/app/identity \
+    --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:alpha
 ```
 - Note: If you are using Synology you must add "sudo" in front of commands.
@@ -207,8 +207,8 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e ADDRESS="" \
     -e BANDWIDTH="2TB" \
     -e STORAGE="2TB" \
-    -v "<identity-dir>":/app/identity \
-    -v "<storage-dir>":/app/config \
+    --mount type=bind,source="<identity-dir>",destination=/app/identity \
+    --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:alpha
 ```
 For ARM based machines use:
@@ -219,7 +219,7 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e ADDRESS="" \
     -e BANDWIDTH="2TB" \
     -e STORAGE="2TB" \
-    -v "<identity-dir>":/app/identity \
-    -v "<storage-dir>":/app/config \
+    --mount type=bind,source="<identity-dir>",destination=/app/identity \
+    --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:arm
 ```

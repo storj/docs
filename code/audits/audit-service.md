@@ -25,7 +25,7 @@ This document describes the following:
 
 The audit cursor uses the metainfoDB to select a random stripe from a random remote segment. The audit verifier downloads all erasure shares generated for that stripe. The verifier needs at least the Reed-Solomon minimum required number of pieces (K) in order to verify the stripe's correctness. The verifier uses the Berlekamp-Welch algorithm to determine if any shares have been damaged or altered. If so, the verifier marks the culpable nodes as having failed the audit. If the share has not been altered, then the verifier will record the responsible nodes' audit successes. If the node appears to be offline at the time of downloading, the verifier will record the node as offline.
 
-In a special case, if a node appears to be online but does not send the requested share data to the satellite, then the verifier will mark the node as `contained`, and a pending audit will be entered in the ContainmentDB. The contained node will have three more opportunities (the configurable `MaxReverifyCount`) to produce the correct data, before it's automatically marked as an audit failure.
+In a special case, if a node appears to be online but does not send the requested share data to the satellite, then the verifier will mark the node as `contained`, and a pending audit will be entered in the ContainmentDB. The contained node will have a `MaxReverifyCount` number of opportunities (a configurable parameter with default 3) to produce the correct data, before it's automatically marked as an audit failure.
 
 Steps within Service:
 1. The audit service uses the cursor to select a random stripe.

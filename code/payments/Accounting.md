@@ -43,14 +43,14 @@ See detailed steps that describe this image below.
 2. SA does the following in response to this request (as it pertains to OrderLimits):
    - creates the OrderLimit for each appropriate SN.
    - creates a record for each new OrderLimit in the `serial_number` table.
-   - creates (or updates if within interval window) a record for each new OrderLimit into the `bucket_bandwidth_rollup` and `storagenode_bw_rollup` table with the "allocated" field set.
+   - creates (or updates if within interval window) a record for each new OrderLimit into the `bucket_bandwidth_rollup` and `storagenode_bandwidth_rollup` table with the "allocated" field set.
 3. The SA responds to the Uplink's request with a list of these newly created OrderLimits.
 4. The Uplink then makes requests to each SN from each of the OrderLimits to store the pieces of the file.  The Uplink sends small Orders one at a time to the SN increasing total amount a small amount at a time.
 5. Once the files are uploaded to all the SN, the Uplink creates a pointer for each file and stores it in PointerDB on the SA. The pointer keeps track of which storage nodes the pieces of a remote segment were stored on.
 6. At some point in the future, the SN will send the finalized Orders to the SA.
 7. When the SA gets the finalized Orders from the SN, it will do the following:
-   - Update the existing `bucket_bandwidth_rollup` and `storagenode_bw_rollup` records with the "settled" amount on the Orders.
-   - Insert a new record into the `user_serial` table for each Order serial number.
+   - Update the existing `bucket_bandwidth_rollup` and `storagenode_bandwidth_rollup` records with the "settled" amount on the Orders.
+   - Insert a new record into the `used_serial` table for each Order serial number.
 
 Resources:
 - More details about definitions of data see [Storj Whitepaper](https://storj.io/storjv3.pdf) Section 4.1.2.

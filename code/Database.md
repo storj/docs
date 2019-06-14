@@ -1,6 +1,6 @@
 # Database
 
-Database is responsible for providing data access, persistence and ensuring data-consistency. 
+Database is responsible for providing data access, persistence and ensuring data-consistency.
 
 ## Master Database
 
@@ -46,7 +46,7 @@ _Database interfaces may implement domain specific concerns, if there's a signif
 
 Each master database has an implementation. The master database and sub-databases are located in `<peer>/<peer>db`. As an example implementation for `satellite.DB` interface is at `satellite/satellitedb/*.go`.
 
-Often the databases have in-memory variants, which are useful for testing. They can also support different backends, such as SQLite and Postgres. For satellite the function `satellite/satellitedb/satellitedbtest.Run` loops through different backends making testing easier. Storage Node has a similar function.
+Often the databases have in-memory variants, which are useful for testing. They can also support different backends, such as SQLite and Postgres. For satellite the function `satellite/satellitedb/satellitedbtest#Run` loops through different backends making testing easier. Storage Node has a similar function.
 
 Master Database will return a specific struct to fulfill the specific database interfaces.
 
@@ -54,7 +54,7 @@ Master Database will return a specific struct to fulfill the specific database i
 
 For satellite we also use [`dbx`](https://github.com/spacemonkeygo/dbx/) which helps to support SQLite and Postgres at the same time. Of course, this complicates some of the queries as a result.
 
-dbx file for satellite is located in `satellite/satellitedb/satellite.dbx`. To regenerate or modify it, run `go generate` in that folder.
+`dbx` file for satellite is located in `satellite/satellitedb/dbx/satellite.dbx`. To regenerate or modify it, run `go generate` in that folder.
 
 ## Migrations
 

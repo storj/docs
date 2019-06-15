@@ -36,10 +36,10 @@ Install the necessary dependencies and configure your network appropriately usin
 1) Download the Identity tool binary and create an Identity. The process of generating an identity could take several hours; it is dependent on your machine´s processing power & luck.
 
 Download the correct binary for your operating system:
-- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_darwin_amd64.zip)
-- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_linux_amd64.zip)
-- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_linux_arm.zip)
-- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_windows_amd64.exe.zip)
+- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/17c224f-heads-v0.11.2-go1.12.1/identity_darwin_amd64.zip)
+- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/17c224f-heads-v0.11.2-go1.12.1/identity_linux_amd64.zip)
+- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/17c224f-heads-v0.11.2-go1.12.1/identity_linux_arm.zip)
+- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/17c224f-heads-v0.11.2-go1.12.1/identity_windows_amd64.exe.zip)
 
 *__Note:__ If you are using Raspberry Pi, a NAS or other device with less computing power, you can create an identity on a more powerful machine and transfer it over to the less powerful device.*
 
@@ -80,8 +80,9 @@ $ docker pull storjlabs/storagenode:arm
    - Note: If you are using a custom port other than 28967, then you have to change the `-p 28967:28967` to `-p <port>:28967`
 - `BANDWIDTH`: how much bandwidth you want to allocate to the Storj network per month
 - `STORAGE`: how much disk space you want to allocate to the Storj network
-- `<identity-dir>`: the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier
-- `<storage-dir>`: local directory where you want files to be stored on your hard drive for the network
+- `<identity-dir>`: replace to the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier
+- `<storage-dir>`: replace to the local directory where you want files to be stored on your hard drive for the network
+   - Note: the current database backend is [BoltDB](https://github.com/boltdb/bolt), which [requires _mmap_](https://github.com/boltdb/bolt/issues/704), hence you have use file system which supports _mmap_.
 
 _For Intel/AMD based systems use:_
 
@@ -92,8 +93,8 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e ADDRESS="domain.ddns.net:28967" \
     -e BANDWIDTH="2TB" \
     -e STORAGE="2TB" \
-    -v "<identity-dir>":/app/identity \
-    -v "<storage-dir>":/app/config \
+    --mount type=bind,source="<identity-dir>",destination=/app/identity \
+    --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:alpha
 ```
 
@@ -106,14 +107,14 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e ADDRESS="domain.ddns.net:28967" \
     -e BANDWIDTH="2TB" \
     -e STORAGE="2TB" \
-    -v "<identity-dir>":/app/identity \
-    -v "<storage-dir>":/app/config \
+    --mount type=bind,source="<identity-dir>",destination=/app/identity \
+    --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:arm
 ```
 
 _For Windows Operating Systems use the following line:_
 ```bash
-$ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" -v "<identity-dir>":/app/identity -v "<storage-dir>":/app/config --name storagenode storjlabs/storagenode:alpha
+$ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" --mount type=bind,source="<identity-dir>",destination=/app/identity --mount type=bind,source="<storage-dir>",destination=/app/config --name storagenode storjlabs/storagenode:alpha
 ```
 *__Note:__ On Windows you need to use CMD and format the paths like this: `D:\\identity\\storagenode\\` or `D:\\data\\`*
 
@@ -185,8 +186,8 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e ADDRESS="" \
     -e BANDWIDTH="2TB" \
     -e STORAGE="2TB" \
-    -v "<identity-dir>":/app/identity \
-    -v "<storage-dir>":/app/config \
+    --mount type=bind,source="<identity-dir>",destination=/app/identity \
+    --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:alpha
 ```
 For ARM based machines use:
@@ -197,7 +198,7 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e ADDRESS="" \
     -e BANDWIDTH="2TB" \
     -e STORAGE="2TB" \
-    -v "<identity-dir>":/app/identity \
-    -v "<storage-dir>":/app/config \
+    --mount type=bind,source="<identity-dir>",destination=/app/identity \
+    --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:arm
 ```

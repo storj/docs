@@ -19,42 +19,18 @@ We have been building up the available supply of storage capacity and bandwidth 
 *__NOTE:__ API keys are unique to one project, but each project can have multiple API keys.*
 
 
-#### Setting up your Uplink/ Gateway on the V3 Network!
-
-1) Download the Identity tool binary and create an Identity.
-
-Download the correct binary for your operating system:
-- Mac OS: [identity_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_darwin_amd64.zip)
-- Linux: [identity_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_linux_amd64.zip)
-- Raspberry Pi: [identity_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_linux_arm.zip)
-- Windows Pro: [identity_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/identity_windows_amd64.exe.zip)
-
-2) Unzip the file and run the following command to create an identity for the uplink and/or gateway. (this example is for Mac OS, substitute the appropriate identity binary for your OS).
-
-To create an identity for the uplink tool:
-
-```bash
-$ ./identity_darwin_amd64 create uplink --difficulty=0
-```
-
-To create an identity for the gateway tool:
-
-```bash
-$ ./identity_darwin_amd64 create gateway --difficulty=0
-```
+## Setting up your Uplink/ Gateway on the V3 Network!
 
 
 ### Configuring your Uplink CLI
 
-
-5) Set up your Uplink CLI by following these instructions on GitHub: https://github.com/storj/storj/wiki/Uplink-CLI
+Set up your Uplink CLI by following these instructions on GitHub: https://github.com/storj/storj/wiki/Uplink-CLI
 
 The uplink CLI is one of the ways you can interact with the network to upload and download files. 
 
-
 ### Configuring your S3 gateway:
 
-5) Set up your S3 gateway by following these instructions on GitHub: https://github.com/storj/storj/wiki/S3-Gateway
+Set up your S3 gateway by following these instructions on GitHub: https://github.com/storj/storj/wiki/S3-Gateway
 
 The S3 gateway is our service that mimics the Amazon S3 API using the Tardigrade network.
 

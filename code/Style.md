@@ -16,7 +16,7 @@ All code is formatted with `goimports -local storj.io`. Where `goimports` is usi
 
 Import statements are in three groups in the following order:
 
-```
+```go
 import (
 	// standard packages
 	"context"
@@ -54,7 +54,7 @@ To combine multiple errors use `errs.Combine`. To collect multiple similar error
 
 To handle errors with things that need closing use `errs.Combine` together with `defer`. As an example:
 
-```
+```go
 var Error = errs.Class("example error")
 
 func Example() (err error) {
@@ -76,28 +76,28 @@ See [Comment Sentences](https://github.com/golang/go/wiki/CodeReviewComments#com
 
 Bad example:
 
-```
+```go
 // Encode encodes req to w.
 func Encode(w io.Writer, req *Request)
 ```
 
 Better example:
 
-```
+```go
 // Encode encodes req as JSON to w, which is used by Server.
 func Encode(w io.Writer, req *Request)
 ```
 
 Avoid tautological comments:
 
-```
+```go
 // DB is a database.
 type DB interface {
 ```
 
 Better example:
 
-```
+```go
 // DB stores raw accounting information gathered by tally.
 type DB interface {
 ```
@@ -120,11 +120,11 @@ Avoid using global loggers (e.g. `zap.L().Error`, `log.Print`, `fmt.Print`), unl
 
 ## Variable naming
 
-Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `mu sync.Mutex`) 
+Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `mu sync.Mutex`)
 
 Small variables can be fine in small scopes (up to 40 lines) and when there isn't a danger of confusion. Take into account that the confusion can arise also due to moving between packages. As an example:
 
-```
+```go
 func (p *Printer) Print(pr *Project) error {
 	...
 }
@@ -136,7 +136,7 @@ func (p *Project) PrintTo(pr *Printer) error {
 
 It's easier to follow the code with:
 
-```
+```go
 func (printer *Printer) Print(project *Project) error {
 	...
 }
@@ -145,6 +145,17 @@ func (project *Project) PrintTo(printer *Printer) error {
 	return printer.Print(project)
 }
 ```
+
+## Integers
+
+We only use _unsigned integers_ (e.g. `uint`, `uint32`, etc.) on the following circumstances:
+
+* They are used as _bitmasks_.
+* They are used for serialized formats.
+
+On the rest of the cases, __always__ use _signed integers_ (e.g. `int`, `int64`, etc.).
+
+The rationale behind this convention is that the last thing that we want is to have wacky behavior around common values and _zero_ is a common one, so we want to avoid to not get a negative number when subtracting _one_ from an _unsigned integer_ variable with value _zero_.
 
 ## Type and method naming
 
@@ -169,7 +180,7 @@ Avoid using initialisms unless they are widely known like `ID`, `URL` and `DB`.
 
 The following argument order should be used for consistency (split into multiple lines for clarity only):
 
-```
+```go
 func Do(
     ctx context.Context, // associated context with the operation
     log *zap.Logger,     // logger used by Do
@@ -214,6 +225,16 @@ If a package alias is required prefer to rename the external packages rather tha
 * If threading a `ctx` variable through your callstack is more work than reasonable for your PR, use `context.TODO()` instead of `context.Background()` so you can come back to it later.
 * In a `main()` method, if you're using `pkg/process.Exec` with `*cobra.Cmd`, you can use `process.Ctx(cmd)` to retrieve a command-specific context, instead of making a new one.
 
+## Telemetry
+
+For any "non-trivial" function (i.e., a function that takes more than microseconds to run), please add monkit instrumentation to it. Make sure the function takes a context (see above) and returns a named error, and add this line to the very top of the function:
+
+```golang
+defer mon.Task()(&ctx)(&err)
+```
+
+If the function really can't take a context, then either create a context first with `context.TODO()`, or pass `nil` instead of `&ctx`. If the function really won't ever error, then you can pass `nil` instead of `&err` as well.
+
 ## Prefer synchronous methods
 
 Making synchronous methods to asynchornous is usually easier than making an asynchronous method to synchronous. This also keeps code simpler when the asynchrony is not needed.
@@ -226,11 +247,11 @@ Of course using sleeps, tickers for scheduling or for avoiding thundering herd p
 
 ## Mutexes
 
-When using synchronizing structures like mutexes or condition variables organize them in the struct such that they make clear which fields are protected and which are unprotected. 
+When using synchronizing structures like mutexes or condition variables organize them in the struct such that they make clear which fields are protected and which are unprotected.
 
 For example:
 
-```
+```go
 type GraphiteDest struct {
 	address string
 

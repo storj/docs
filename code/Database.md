@@ -110,5 +110,3 @@ To modify the database the following steps must be completed:
 2. Add a new `migrate.Step` into the migrations list, modifying the previous database state to match the new one. The migration version must be incremented by `1` from previous.
 3. Add a new `testdata/*.v<N>.sql`, where `N` is the specific migration step.
 4. If there are new tables, then add a `-- NEW DATA --` and insert rows to the new tables.
-
-See [How to add a new table to Satellite.DB](Satellite-how-to-new-table.md) for more detailed instructions.

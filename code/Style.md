@@ -235,6 +235,24 @@ defer mon.Task()(&ctx)(&err)
 
 If the function really can't take a context, then either create a context first with `context.TODO()`, or pass `nil` instead of `&ctx`. If the function really won't ever error, then you can pass `nil` instead of `&err` as well.
 
+## SQL code
+
+SQL statements must use query arguments to avoid potential current and future issues with SQL injection. See [OWASP SQL Injection](https://www.owasp.org/index.php/SQL_Injection) for more information.
+
+Bad:
+
+```
+db.QueryRow(`SELECT id FROM nodes WHERE owner = ` + owner)
+db.QueryRow(`SELECT id FROM nodes WHERE last_updated = ` + timeToString(lastUpdated))
+```
+
+Should be:
+
+```
+db.QueryRow(`SELECT id FROM nodes WHERE owner = ?`, owner)
+db.QueryRow(`SELECT id FROM nodes WHERE last_updated = ?`, timeToString(lastUpdated))
+```
+
 ## Prefer synchronous methods
 
 Making synchronous methods to asynchornous is usually easier than making an asynchronous method to synchronous. This also keeps code simpler when the asynchrony is not needed.

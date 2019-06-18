@@ -146,6 +146,8 @@ func (project *Project) PrintTo(printer *Printer) error {
 }
 ```
 
+The litmus test about naming is whether it confuses the reader. So, if a reviewer finds the naming hard to understand, then he should suggest better naming and discuss to find a better name.
+
 ## Integers
 
 We only use _unsigned integers_ (e.g. `uint`, `uint32`, etc.) on the following circumstances:

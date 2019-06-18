@@ -46,7 +46,7 @@ _Database interfaces may implement domain specific concerns, if there's a signif
 
 Each master database has an implementation. The master database and sub-databases are located in `<peer>/<peer>db`. As an example implementation for `satellite.DB` interface is at `satellite/satellitedb/*.go`.
 
-Often the databases have in-memory variants, which are useful for testing. They can also support different backends, such as SQLite and Postgres. For satellite the function `satellite/satellitedb/satellitedbtest#Run` loops through different backends making testing easier. Storage Node has a similar function.
+Often the databases have in-memory variants, which are useful for testing. They can also support different backends, such as SQLite and Postgres. For satellite the function `satellite/satellitedb/satellitedbtest.Run` loops through different backends making testing easier. Storage Node has a similar function.
 
 Master Database will return a specific struct to fulfill the specific database interfaces.
 

@@ -241,14 +241,14 @@ SQL statements must use query arguments to avoid potential current and future is
 
 Bad:
 
-```
+```go
 db.QueryRow(`SELECT id FROM nodes WHERE owner = ` + owner)
 db.QueryRow(`SELECT id FROM nodes WHERE last_updated = ` + timeToString(lastUpdated))
 ```
 
 Should be:
 
-```
+```go
 db.QueryRow(`SELECT id FROM nodes WHERE owner = ?`, owner)
 db.QueryRow(`SELECT id FROM nodes WHERE last_updated = ?`, timeToString(lastUpdated))
 ```

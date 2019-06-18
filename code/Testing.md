@@ -157,6 +157,14 @@ func TestBasic(t *testing.T) {
 }
 ```
 
+## Domain Names
+
+Use only domains intended for testing and examples, otherwise tests may end up accidentally sending an email to an actual person.
+
+For testing or documentation use [`.test`](https://en.wikipedia.org/wiki/.test) domain, it is reserved for that purpose. Examples: `mail.test`, `example.test`.
+
+For documentation [`example.com`](https://www.iana.org/domains/reserved) can also be used.
+
 ## Running test through PostgreSQL
 
 Part of our [current implementation uses different _database backends_](Database), some of them are used to run the test in local without having to always depend of third party external systems when developing.

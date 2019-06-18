@@ -241,24 +241,6 @@ Cognitive load at 5 arguments is quite high already, so at that moment prefer co
 
 _Exclude `ctx` and `log` from the count of 5, since common arguments don't have as drastic effect._
 
-## Struct types constructors
-
-Constructor functions of struct types must always return a pointer to the type rather than a value.
-
-```go
-
-type User struct {
-	Username string
-}
-
-func NewUser(username string) *User {
-	return &User{
-		Username: username,
-	}
-}
-
-```
-
 ## Package naming and aliases
 
 For package naming see https://blog.golang.org/package-names. Prefer names that are easy to say when talking.

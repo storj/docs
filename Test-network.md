@@ -10,7 +10,7 @@ all of the components are run locally.
 
 # Installation and configuration
 
-First, you'll need at least [Go 1.11](https://www.golang.org/). Once Go is
+First, you'll need at least [Go 1.12](https://www.golang.org/). Once Go is
 installed run:
 
 ```bash

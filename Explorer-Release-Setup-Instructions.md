@@ -1,10 +1,10 @@
 # Storage Node Setup Instructions
 
-#### [Storage node set up video tutorial](https://youtu.be/cd6gWMgSyqI)
+#### [Storage Node Set up Video Tutorial](https://youtu.be/cd6gWMgSyqI)
 
-## Before you begin
+## Before You Begin
 
-#### Important security considerations
+#### Important Security Considerations
 
  * Our software serves requests from the internet, but not all software you may have installed is designed to be exposed to the internet directly! **Do not connect your computer directly to the internet without the assistance of a firewall.** This is especially true for users on Windows with applications responding to requests on all IPs.
 
@@ -23,16 +23,12 @@ Our current release has limited support for operating systems. If your OS is not
     - _**Note:** Docker Toolbox is not supported_
 - Set up port forwarding & Dynamic DNS! The port you must specify is `28967`. Please visit our [knowledge base article](https://storjlabs.atlassian.net/wiki/spaces/SCKB/pages/4423868/Need+help+port-forwarding) or [portforward.com](https://portforward.com/) and follow the instructions for your router.
 
-## Setting up your Storage Node on the V3 Network!
-
 #### Notes
 - It is highly recommended to perform the following steps local to the machine, and not via a remote connection. If you must use a remote connection, due to the length of time it takes for some of the steps, it is highly recommended to run them inside a virtual console like [TMUX](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/) or [SCREEN](https://linuxize.com/post/how-to-use-linux-screen/).
-
 - If you are using Synology NAS or other device with less computing power, you can create Identity on a more powerful machine and transfer it over to the smaller device.
+- If you are using Synology you must add "sudo" in front of commands.
 
-- Note: If you are using Synology you must add "sudo" in front of commands.
-
-
+## Setup
 
 1. Download the Identity binary and unzip it.
 
@@ -142,7 +138,7 @@ After you finished your maintenance, start it with:
 $ docker start storagenode
 ```
 
-## Upgrading your Storage Node
+## Upgrading Your Storage Node
 
 You can set up automatic updates for your Storage Node docker container using watchtower with the command below. Watchtower will look for new updates to the docker container on docker hub and automatically update your Storage Node when it sees a new version. This is the best way to ensure your Storage Node stays up to date. The commands below set up watchtower to only monitor the storagenode container and itself. If you want to use watchtower for other containers as well, please refer to the [watchtower documentation](https://hub.docker.com/r/containrrr/watchtower).
 
@@ -211,7 +207,7 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     --name storagenode storjlabs/storagenode:arm
 ```
 
-## How to execute other Storage Node commands
+## Execute Other Storage Node Commands
 
 Run `help` to see other commands. 
 

@@ -38,21 +38,21 @@ Download the correct binary for your operating system:
 - [Raspberry Pi ARM](https://storj-v3-alpha-builds.storage.googleapis.com/88653a3-v0.13.5-go1.12.5/identity_linux_arm.zip)
 - [Windows Pro AMD64](https://storj-v3-alpha-builds.storage.googleapis.com/88653a3-v0.13.5-go1.12.5/identity_windows_amd64.exe.zip)
 
+
 2) Create an identity, this can take several hours depending on your machines processing power & luck. (this example is for Mac OS, substitute the appropriate identity binary for your OS)
 
 ```bash
 $ ./identity_darwin_amd64 create storagenode
 ```
 
+
 3) Sign the identity you created with your single-use authorization token.
 
 ```bash
 $ ./identity_darwin_amd64 authorize storagenode <authorization-token>
 ```
-
-*__Note:__ If you are using Synology you must add "sudo" in front of commands for creating and signing identity. Otherwise you will receive error. Default folder for created identity on Synology is /root/.local/share/storj/identity/storagenode/.*
-
 *__Caution:__ Before proceeding to the next step, please be sure to back up your identity files located in the output path of the previous command. This will allow you to restore your node to working order in case of an unfortunate incident such as a hard drive crash.*
+
 
 4) Download the Docker container (all non ARM based platforms).
 
@@ -65,6 +65,7 @@ _ARM-based platforms use:_
 ```bash
 $ docker pull storjlabs/storagenode:arm
 ```
+
 
 5) Run storage node with the following command, after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
 
@@ -112,11 +113,13 @@ $ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXX
 ```
 - Note: On Windows you need to format the paths like this: `D:\\identity\\storagenode\\` or `D:\\data\\`
 
+
 6) Start your storage node dashboard.
 
 ```bash
 $ docker exec -it storagenode /app/dashboard.sh
 ```
+
 
 7) If step 5 or 6 failed for you, run:
 
@@ -124,7 +127,9 @@ $ docker exec -it storagenode /app/dashboard.sh
 $ docker logs -t storagenode
 ```
 
+
 *If you need help setting up your storage node, sign up for our [community chat](https://community.storj.io/home) and ask for assistance in the #storagenode channel. Provide your logs and stacktrace when requested by the community leader attending your issue.*
+
 
 ## Short Maintenance Shutdown
 
@@ -137,6 +142,7 @@ After you finished your maintenance, start it with:
 ```bash
 $ docker start storagenode
 ```
+
 
 ## Upgrading Your Storage Node
 
@@ -158,10 +164,12 @@ For manual updates run the following commands:
 $ docker stop storagenode
 ```
 
+
 2) Remove the existing container.
 ```bash
 $ docker rm storagenode
 ```
+
 
 3) Pull the latest image from docker.
 
@@ -176,6 +184,7 @@ _ARM-based platforms use:_
 ```bash
 $ docker pull storjlabs/storagenode:arm
 ```
+
 
 4) Start your Storage node again by running the following command after editing `WALLET`, `EMAIL`, `ADDRESS`, `BANDWIDTH`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`.
 
@@ -206,6 +215,7 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:arm
 ```
+
 
 ## Execute Other Storage Node Commands
 

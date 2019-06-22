@@ -33,10 +33,10 @@ Our current release has limited support for operating systems. If your OS is not
 1. Download the Identity binary and unzip it.
 
 Download the correct binary for your operating system:
-- [Mac OS AMD64](https://storj-v3-alpha-builds.storage.googleapis.com/88653a3-v0.13.5-go1.12.5/identity_darwin_amd64.zip)
-- [Linux AMD64](https://storj-v3-alpha-builds.storage.googleapis.com/88653a3-v0.13.5-go1.12.5/identity_linux_amd64.zip)
-- [Raspberry Pi ARM](https://storj-v3-alpha-builds.storage.googleapis.com/88653a3-v0.13.5-go1.12.5/identity_linux_arm.zip)
-- [Windows Pro AMD64](https://storj-v3-alpha-builds.storage.googleapis.com/88653a3-v0.13.5-go1.12.5/identity_windows_amd64.exe.zip)
+- [Mac OS AMD64](https://storj-v3-alpha-builds.storage.googleapis.com/05b221b-v.12.6-go1.12.5/identity_darwin_amd64.zip)
+- [Linux AMD64](https://storj-v3-alpha-builds.storage.googleapis.com/05b221b-v.12.6-go1.12.5/identity_linux_amd64.zip)
+- [Raspberry Pi ARM](https://storj-v3-alpha-builds.storage.googleapis.com/05b221b-v.12.6-go1.12.5/identity_linux_arm.zip)
+- [Windows Pro AMD64](https://storj-v3-alpha-builds.storage.googleapis.com/05b221b-v.12.6-go1.12.5/identity_windows_amd64.exe.zip)
 
 
 2) Create an identity, this can take several hours depending on your machines processing power & luck. (this example is for Mac OS, substitute the appropriate identity binary for your OS)

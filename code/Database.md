@@ -1,6 +1,6 @@
 # Database
 
-Database is responsible for providing data access, persistence and ensuring data-consistency. 
+Database is responsible for providing data access, persistence and ensuring data-consistency.
 
 ## Master Database
 
@@ -111,4 +111,4 @@ To modify the database the following steps must be completed:
 3. Add a new `testdata/*.v<N>.sql`, where `N` is the specific migration step.
 4. If there are new tables, then add a `-- NEW DATA --` and insert rows to the new tables.
 
-See [How to add a new table to Satellite.DB](Satellite-how-to-new-table.md) for more detailed instructions.
+See [How to add a new table to Satellite.DB](Satellite-how-to-new-table) for more detailed instructions.

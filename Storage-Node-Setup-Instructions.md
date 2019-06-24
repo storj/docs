@@ -24,7 +24,8 @@ Our current release has limited support for operating systems. If your OS is not
 - Set up port forwarding & Dynamic DNS! The port you must specify is `28967`. Please visit our [knowledge base article](https://storjlabs.atlassian.net/wiki/spaces/SCKB/pages/4423868/Need+help+port-forwarding) or [portforward.com](https://portforward.com/) and follow the instructions for your router.
 
 #### Notes
-- It is highly recommended to perform the following steps local to the machine, and not via a remote connection. If you must use a remote connection, due to the length of time it takes for some of the steps, it is highly recommended to run them inside a virtual console like [TMUX](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/) or [SCREEN](https://linuxize.com/post/how-to-use-linux-screen/).
+- It is highly recommended to have your Storage Node connected via LAN instead of wifi to ensure you have a consistent and stable connection.
+- It is recommended to perform the following steps local to the machine, and not via a remote connection. If you must use a remote connection, due to the length of time it takes for some of the steps, it is highly recommended to run them inside a virtual console like [TMUX](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/) or [SCREEN](https://linuxize.com/post/how-to-use-linux-screen/).
 - If you are using Synology NAS or other device with less computing power, you can create Identity on a more powerful machine and transfer it over to the smaller device.
 - If you are using Synology you must add "sudo" in front of commands.
 

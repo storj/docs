@@ -87,7 +87,7 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
     -e EMAIL="user@example.com" \
     -e ADDRESS="domain.ddns.net:28967" \
-    -e BANDWIDTH="2TB" \
+    -e BANDWIDTH="20TB" \
     -e STORAGE="2TB" \
     --mount type=bind,source="<identity-dir>",destination=/app/identity \
     --mount type=bind,source="<storage-dir>",destination=/app/config \
@@ -101,7 +101,7 @@ $ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
     -e EMAIL="user@example.com" \
     -e ADDRESS="domain.ddns.net:28967" \
-    -e BANDWIDTH="2TB" \
+    -e BANDWIDTH="20TB" \
     -e STORAGE="2TB" \
     --mount type=bind,source="<identity-dir>",destination=/app/identity \
     --mount type=bind,source="<storage-dir>",destination=/app/config \

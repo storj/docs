@@ -83,7 +83,7 @@ $ docker pull storjlabs/storagenode:arm
 _All non ARM based platforms:_
 
 ```bash
-$ docker run -d --restart unless-stopped --stop-timeout 300 -p 28967:28967 \
+$ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
     -e EMAIL="user@example.com" \
     -e ADDRESS="domain.ddns.net:28967" \
@@ -97,7 +97,7 @@ $ docker run -d --restart unless-stopped --stop-timeout 300 -p 28967:28967 \
 _ARM-based platforms use:_
 
 ```bash
-$ docker run -d --restart unless-stopped --stop-timeout 300 -p 28967:28967 \
+$ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" \
     -e EMAIL="user@example.com" \
     -e ADDRESS="domain.ddns.net:28967" \
@@ -110,7 +110,7 @@ $ docker run -d --restart unless-stopped --stop-timeout 300 -p 28967:28967 \
 
 _Windows Operating Systems:_
 ```bash
-$ docker run -d --restart unless-stopped --stop-timeout 300 -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" --mount type=bind,source="<identity-dir>",destination=/app/identity --mount type=bind,source="<storage-dir>",destination=/app/config --name storagenode storjlabs/storagenode:alpha
+$ docker run -d --restart unless-stopped -p 28967:28967 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e BANDWIDTH="2TB" -e STORAGE="2TB" --mount type=bind,source="<identity-dir>",destination=/app/identity --mount type=bind,source="<storage-dir>",destination=/app/config --name storagenode storjlabs/storagenode:alpha
 ```
 - Note: On Windows you need to format the paths like this: `D:\\identity\\storagenode\\` or `D:\\data\\`
 
@@ -192,7 +192,7 @@ $ docker pull storjlabs/storagenode:arm
 _All non ARM based platforms:_
 
 ```bash
-$ docker run -d --restart unless-stopped --stop-timeout 300 -p 28967:28967 \
+$ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="" \
     -e EMAIL="" \
     -e ADDRESS="" \
@@ -206,7 +206,7 @@ $ docker run -d --restart unless-stopped --stop-timeout 300 -p 28967:28967 \
 _ARM-based platforms use:_
 
 ```bash
-$ docker run -d --restart unless-stopped --stop-timeout 300 -p 28967:28967 \
+$ docker run -d --restart unless-stopped -p 28967:28967 \
     -e WALLET="" \
     -e EMAIL="" \
     -e ADDRESS="" \

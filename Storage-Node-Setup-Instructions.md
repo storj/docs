@@ -8,7 +8,7 @@
 
  * Our software serves requests from the internet, but not all software you may have installed is designed to be exposed to the internet directly! **Do not connect your computer directly to the internet without the assistance of a firewall.** This is especially true for users on Windows with applications responding to requests on all IPs.
 
-Make sure you have an email with your personal single-use authorization token. Note that the format of the authorization token is `email:characterstring`. You must include the entire string, including the email address, and not just the part  after the colon. By using the authorization token, you agree to be bound by the [Storage Sharing Terms and Conditions](https://storj.io/storj-share-terms/). 
+Make sure you have an email with your personal single-use authorization token. By using the authorization token, you agree to be bound by the [Storage Sharing Terms and Conditions](https://storj.io/storj-share-terms/). 
 
 If you don’t have an authorization token yet, please join our [waitlist](https://storj.io/sign-up-farmer).
 
@@ -20,15 +20,15 @@ Our current release has limited support for operating systems. If your OS is not
 
 - Make sure your computer is *not* connected directly to the internet. If you already have a reasonable router, you should be okay. See the Important security considerations section.
 - To use the Alpha version of `storagenode` for Storage Node Operators, you first must have Docker installed. Install Docker by following the appropriate installation guide for your operating system. 
-    - For Windows: https://docs.docker.com/docker-for-windows/install/ 
-       Note: *Please be sure to use the default setting of Linux containers, otherwise `storagenode` will not work properly.*
-    - For MacOS: https://docs.docker.com/docker-for-mac/install/
-    - For Linux: 
-      - Ubuntu: https://docs.docker.com/install/linux/docker-ce/ubuntu/
-      - CentOS: https://docs.docker.com/install/linux/docker-ce/centos/
-      - Debian: https://docs.docker.com/install/linux/docker-ce/debian/
-      - Fedora: https://docs.docker.com/install/linux/docker-ce/fedora/
-    - _**Note:** Docker Toolbox is not supported_ - This means that currently, you cannot run `storagenode` on Windows Home Edition.
+    - [Windows](https://docs.docker.com/docker-for-windows/install/) 
+        Note: *please be sure to use the default setting of Linux containers, otherwise `storagenode` will not work properly.* **Docker Toolbox is not supported - This means that currently, you cannot run `storagenode` on Windows Home Edition.**
+    - [MacOS](https://docs.docker.com/docker-for-mac/install/)
+    - Linux: 
+      - [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+      - [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
+      - [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
+      - [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
+
 - Set up port forwarding & Dynamic DNS! The port you must specify is `28967`. Please visit our [knowledge base article](https://storjlabs.atlassian.net/wiki/spaces/SCKB/pages/4423868/Need+help+port-forwarding) or [portforward.com](https://portforward.com/) and follow the instructions for your router.
 
 #### Notes
@@ -54,10 +54,10 @@ $ ./identity_darwin_amd64 create storagenode
 ```
 
 
-3) Sign the identity you created with your single-use authorization token (again, use the appropriate identity binary for your own OS). 
+3) Sign the identity you created with your single-use authorization token (again, use the appropriate identity binary for your own OS). Note: *The format of the authorization token is `email:characterstring`. You must include the entire string, including the email address, and not just the part  after the colon.* 
 
 ```bash
-$ ./identity_darwin_amd64 authorize storagenode <authorization-token>
+$ ./identity_darwin_amd64 authorize storagenode <email:characterstring>
 ```
 
 - Note: *Auth tokens do not have an expiration date. You can save an unused auth token and use it to sign an identity later, when you are ready with your hardware. A valid, signed identity is also reuseable indefinitely, to set up the same node again on a different hard drive or computer, as long as the user has not lost any of the data the node had already stored in its storage folder. On the other hand, you cannot use the same Auth token again to sign a new identity once you already used it once for your a node.*

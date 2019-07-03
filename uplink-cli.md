@@ -1,7 +1,5 @@
 # Uplink CLI tutorial
 
-Setup your uplink by running the following command and following the wizard:
-
 The Uplink CLI is our client-side application that supports interacting with the Storj network. This tutorial assumes you have an account on a running Satellite and uses a [test network](https://github.com/storj/docs/tree/543f364e6ede7e9046e2dfc35ac55ce6df33dcc1/Test-network/README.md) Satellite by default.
 
 ## Installation and configuration
@@ -15,7 +13,7 @@ Next, Download the correct binary for your operating system:
 * Raspberry Pi: [uplink\_linux\_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/ab7f561-v0.14.4-go1.12.5/uplink_linux_arm.zip)
 * Windows Pro: [uplink\_windows\_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/ab7f561-v0.14.4-go1.12.5/uplink_windows_amd64.exe.zip)
 
-Setup your uplink by running the following command and following the wizzard:
+Setup your uplink by running the following command and following the wizard:
 
 ```bash
 ./uplink_darwin_amd64 setup

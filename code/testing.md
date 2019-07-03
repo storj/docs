@@ -4,27 +4,23 @@ This document describes testing guidelines for Storj. Occasionally, code may div
 
 If the guide is not followed then CI may fail.
 
-Refer to [Style](Style.md) for information about the style.
-
+Refer to [Style](style.md) for information about the style.
 
 ## Error handling
 
 All errors must be handled and checked and don't hide errors.
 
-See [Error Handling](Style.md#error-handling) for more details.
-
+See [Error Handling](style.md#error-handling) for more details.
 
 ## Prefer `_test` in test package names
 
 By using different package name we are testing the exposed behavior rather than the internal behavior making the tests more robust against changes.
-
 
 ## Logging
 
 Use `log := zaptest.NewLogger(t)` as the root logger for services. Use `t.Log`, if you need single logging.
 
 Using `fmt.Print` or other global loggers bypasses built in logging behavior in `testing` package. This means that when running tests in parallel logs can appear in wrong places.
-
 
 ## Close all opened resources
 
@@ -33,38 +29,36 @@ In tests we should check all closing errors and check that everything gets close
 Following are the common resources that are leaked:
 
 1. Files
-1. Database Connections
-1. Connections
-1. Servers
-1. Goroutines
-
+2. Database Connections
+3. Connections
+4. Servers
+5. Goroutines
 
 `internal/testcontext` package contains useful utilities for it:
 
-```
+```text
 func TestBasic(t *testing.T) {
-	ctx := testcontext.New(t) // we create a context with the specific test
-	defer ctx.Cleanup()       // this waits for all goroutines to terminate
+    ctx := testcontext.New(t) // we create a context with the specific test
+    defer ctx.Cleanup()       // this waits for all goroutines to terminate
 
-	db, err := CreateDatabase(ctx.File("example.db"))
-	if err != nil {
-		t.Fatal(err)
-	}
-	defer ctx.Check(db.Close)
+    db, err := CreateDatabase(ctx.File("example.db"))
+    if err != nil {
+        t.Fatal(err)
+    }
+    defer ctx.Check(db.Close)
 
-	server := NewServer(db)
-	defer ctx.Check(server.Stop)
+    server := NewServer(db)
+    defer ctx.Check(server.Stop)
 
-	ctx.Go(func() error {
-		return server.Run(ctx)
-	})
+    ctx.Go(func() error {
+        return server.Run(ctx)
+    })
 }
 ```
 
 When `server.Stop` is not called then this func will stall with a message: "some goroutines are still running...".
 
-https://github.com/loov/leakcheck can be used to detect open files or connections either in tests or the final binaries.
-
+[https://github.com/loov/leakcheck](https://github.com/loov/leakcheck) can be used to detect open files or connections either in tests or the final binaries.
 
 ## Real dependencies and data
 
@@ -72,11 +66,11 @@ Use real dependencies that are used in production. Try to create the appropriate
 
 Avoid using mocks and stub-data, if possible. By using mocks we are not testing the actual system and how the systems work together; hence missing some bugs.
 
-Package `internal/testplanet` helps to setup a full environment that can be used for testing. For the basic examples see [internal/testplanet/planet_test.go](https://github.com/storj/storj/blob/master/internal/testplanet/planet_test.go). Of course many packages already use it, so refer them for more examples.
+Package `internal/testplanet` helps to setup a full environment that can be used for testing. For the basic examples see [internal/testplanet/planet\_test.go](https://github.com/storj/storj/blob/master/internal/testplanet/planet_test.go). Of course many packages already use it, so refer them for more examples.
 
 For testing erroring behavior a wrapper can be used. For example:
 
-```
+```text
 // assume we want to test this interface
 type Server interface { Do(ctx context.Context) error }
 
@@ -93,38 +87,38 @@ Prefer table-driven tests when you have multiple similar tests. Try to keep the 
 
 Example:
 
-```
+```text
 func TestNormalizeEmail(t *testing.T) {
-	type test struct {
-		input    string
-		expected string
-	}
-	validEmails := []test{
-		{"alpha@example.com", "alpha@example.com",
-		{"aLPha+bETa@example.com", "alpha@example.com",
-		...
-	}
+    type test struct {
+        input    string
+        expected string
+    }
+    validEmails := []test{
+        {"alpha@example.com", "alpha@example.com",
+        {"aLPha+bETa@example.com", "alpha@example.com",
+        ...
+    }
 
-	for i, tt := range validEmails {
-		errTag := fmt.Sprintf("%d. %+v", i, tt)
+    for i, tt := range validEmails {
+        errTag := fmt.Sprintf("%d. %+v", i, tt)
 
-		normalized, err := normalizeEmail(tt.input)
-		if assert.NoError(t, err, errTag) {
-			assert.Equal(t, tt.expected, normalized, errTag)
-		}
-	}
+        normalized, err := normalizeEmail(tt.input)
+        if assert.NoError(t, err, errTag) {
+            assert.Equal(t, tt.expected, normalized, errTag)
+        }
+    }
 }
 
 func TestNormalizeEmail_Invalid(t *testing.T) {
-	invalidEmails := []string{
-		"@example.com",
-		...
-	}
-	for i, tt := range invalidEmails {
-		errTag := fmt.Sprintf("%d. %+v", i, tt)
-		_, err := normalizeEmail(tt)
-		assert.Error(t, err, errTag)
-	}
+    invalidEmails := []string{
+        "@example.com",
+        ...
+    }
+    for i, tt := range invalidEmails {
+        errTag := fmt.Sprintf("%d. %+v", i, tt)
+        _, err := normalizeEmail(tt)
+        assert.Error(t, err, errTag)
+    }
 }
 ```
 
@@ -138,7 +132,6 @@ Preassigned addresses also interfere with running all tests in parallel.
 
 CI environment blocks attempts to use fixed port numbers.
 
-
 ## Data in temporary directory
 
 Tests should only create data in temp directory. The created data must be cleaned-up.
@@ -147,13 +140,13 @@ By creating things inside source directory we risk the data being committed or a
 
 `internal/testcontext` package contains useful utilities for it:
 
-```
+```text
 func TestBasic(t *testing.T) {
-	ctx := testcontext.New(t) // we create a context with the specific test
-	defer ctx.Cleanup() // this deletes all created directories
+    ctx := testcontext.New(t) // we create a context with the specific test
+    defer ctx.Cleanup() // this deletes all created directories
 
-	t.Log(ctx.Dir("a", "b", "c")) // create a directory inside a temporary directory
-	t.Log(ctx.File("a", "w", "c.txt")) // get a filename inside a temporary directory
+    t.Log(ctx.Dir("a", "b", "c")) // create a directory inside a temporary directory
+    t.Log(ctx.File("a", "w", "c.txt")) // get a filename inside a temporary directory
 }
 ```
 
@@ -167,16 +160,17 @@ For documentation [`example.com`](https://www.iana.org/domains/reserved) can als
 
 ## Running test through PostgreSQL
 
-Part of our [current implementation uses different _database backends_](Database), some of them are used to run the test in local without having to always depend of third party external systems when developing.
+Part of our [current implementation uses different _database backends_](https://github.com/storj/docs/tree/cbd1d7cf9363ad8e8a9fd4923b9a56d87c70b8b2/code/Database/README.md), some of them are used to run the test in local without having to always depend of third party external systems when developing.
 
-Because using a different _database backend_ for development than in production can cause that some tests pass in local meanwhile fail using the production _database_ backend_, the CI runs all the tests with all the supported _backends_ or at least with the one used in production.
+Because using a different _database backend_ for development than in production can cause that some tests pass in local meanwhile fail using the production _database_ backend_, the CI runs all the tests with all the supported \_backends_ or at least with the one used in production.
 
 Sometimes, meanwhile developing, it's less than ideal that for having feedback of each change the developer must push the code to run the CI, making pretty convenient to run the tests which the production _databse backend_. Currently this is the case for PostgreSQL in:
 
-* [Database migrations](Database).
-* Test SIM (i.e. `make test-sim`).
+* [Database migrations](https://github.com/storj/docs/tree/cbd1d7cf9363ad8e8a9fd4923b9a56d87c70b8b2/code/Database/README.md).
+* Test SIM \(i.e. `make test-sim`\).
 
 In order to use PostgreSQL for running the tests in a local development machine you have to setup and run PostgreSQL v11 in your machine or run a Docker container using a [PostgreSQL image](https://hub.docker.com/_/postgres) and run the tests as follow:
 
-1. For _Go tests_, use the environment variable `STORJ_POSTGRES_TEST` to specify a connection URL (i.e. `postgres://[user][:password]@[host]?sslmode=disable`) when running them, for example `STORJ_POSTGRES_TEST="postgres://postgres:pass@localhost?sslmode=disable" go test ./...`
-2. For _test sim_ use the environment variable `STORJ_SIM_POSTGRES` to specify a connection URL with an existing database (preferably an empty one) (i.e `postgres://[user][:password]@[host]/[database]?sslmode=disable`) when running them, for example `STORJ_SIM_POSTGRES="postgres://postgres:pass@localhost/teststorj?sslmode=disable" make test-sim`. For creating an empty database in Postgres, you can easily do with it's Postgres client running for example `psql -U postgres -c 'create database teststorj;'` for creating a database named `teststorj` (you can also use the Docker image commented above rather than the locally installed Postgres client `psql`).
+1. For _Go tests_, use the environment variable `STORJ_POSTGRES_TEST` to specify a connection URL \(i.e. `postgres://[user][:password]@[host]?sslmode=disable`\) when running them, for example `STORJ_POSTGRES_TEST="postgres://postgres:pass@localhost?sslmode=disable" go test ./...`
+2. For _test sim_ use the environment variable `STORJ_SIM_POSTGRES` to specify a connection URL with an existing database \(preferably an empty one\) \(i.e `postgres://[user][:password]@[host]/[database]?sslmode=disable`\) when running them, for example `STORJ_SIM_POSTGRES="postgres://postgres:pass@localhost/teststorj?sslmode=disable" make test-sim`. For creating an empty database in Postgres, you can easily do with it's Postgres client running for example `psql -U postgres -c 'create database teststorj;'` for creating a database named `teststorj` \(you can also use the Docker image commented above rather than the locally installed Postgres client `psql`\).
+

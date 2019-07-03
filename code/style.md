@@ -18,19 +18,19 @@ Import statements are in three groups in the following order:
 
 ```go
 import (
-	// standard packages
-	"context"
-	...
-	"sort"
+    // standard packages
+    "context"
+    ...
+    "sort"
 
-	// external packages
-	"github.com/gogo/protobuf/proto"
-	...
-	"go.uber.org/zap"
+    // external packages
+    "github.com/gogo/protobuf/proto"
+    ...
+    "go.uber.org/zap"
 
-	// storj.io packages
-	"storj.io/storj/internal/fpath"
-	...
+    // storj.io packages
+    "storj.io/storj/internal/fpath"
+    ...
 )
 ```
 
@@ -46,7 +46,7 @@ All code must have a copyright header.
 
 All errors must be handled and checked. Don't hide errors.
 
-_Exceptions: printing to console or log (e.g. `fmt.Println`, `log.Print`)_
+_Exceptions: printing to console or log \(e.g. `fmt.Println`, `log.Print`\)_
 
 Use `errs.Class` to annotate errors with more information.
 
@@ -58,15 +58,15 @@ To handle errors with things that need closing use `errs.Combine` together with 
 var Error = errs.Class("example error")
 
 func Example() (err error) {
-	file, err := os.Open("example.txt")
-	if err != nil {
-		return Error.Wrap(err)
-	}
-	defer func() {
-		err = errs.Combine(err, Error.Wrap(file.Close()))
-	}
+    file, err := os.Open("example.txt")
+    if err != nil {
+        return Error.Wrap(err)
+    }
+    defer func() {
+        err = errs.Combine(err, Error.Wrap(file.Close()))
+    }
 
-	return Process(file)
+    return Process(file)
 }
 ```
 
@@ -110,27 +110,27 @@ Every package should have at least _package comment_ with concise information of
 
 One example of a package that requires specific clarifications is the [fmt standard package](https://golang.org/pkg/fmt/).
 
-Go allows to place the _package comment_ on any non test go file that the package contains and one of the used patterns is to have a `doc.go` file which only contains the _package comment_ (e.g. [fmt standard package](https://golang.org/src/fmt/doc.go)). For keep it simple in order to choose which file should contain the _package comment_, we place the _package comment_ in a `doc.go` even when the package has only one Go file because we always know where such _package comment_ is written and there is no need to move it in case that a package with just one initial file grow to have more in the future.
+Go allows to place the _package comment_ on any non test go file that the package contains and one of the used patterns is to have a `doc.go` file which only contains the _package comment_ \(e.g. [fmt standard package](https://golang.org/src/fmt/doc.go)\). For keep it simple in order to choose which file should contain the _package comment_, we place the _package comment_ in a `doc.go` even when the package has only one Go file because we always know where such _package comment_ is written and there is no need to move it in case that a package with just one initial file grow to have more in the future.
 
 ## Logging
 
 Use properly namespaced `*zap.Logger`. By properly namespacing and passing in the logger we can better find how things are working. Tests should use `zaptest.NewLogger(t)` as the root logger.
 
-Avoid using global loggers (e.g. `zap.L().Error`, `log.Print`, `fmt.Print`), unless it is `package main`.
+Avoid using global loggers \(e.g. `zap.L().Error`, `log.Print`, `fmt.Print`\), unless it is `package main`.
 
 ## Variable naming
 
-Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `mu sync.Mutex`)
+Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one \(e.g. `mu sync.Mutex`\)
 
-Small variables can be fine in small scopes (up to 40 lines) and when there isn't a danger of confusion. Take into account that the confusion can arise also due to moving between packages. As an example:
+Small variables can be fine in small scopes \(up to 40 lines\) and when there isn't a danger of confusion. Take into account that the confusion can arise also due to moving between packages. As an example:
 
 ```go
 func (p *Printer) Print(pr *Project) error {
-	...
+    ...
 }
 
 func (p *Project) PrintTo(pr *Printer) error {
-	return pr.Print(p)
+    return pr.Print(p)
 }
 ```
 
@@ -138,11 +138,11 @@ It's easier to follow the code with:
 
 ```go
 func (printer *Printer) Print(project *Project) error {
-	...
+    ...
 }
 
 func (project *Project) PrintTo(printer *Printer) error {
-	return printer.Print(project)
+    return printer.Print(project)
 }
 ```
 
@@ -150,12 +150,12 @@ The litmus test about naming is whether it confuses the reader. So, if a reviewe
 
 ## Integers
 
-We only use _unsigned integers_ (e.g. `uint`, `uint32`, etc.) on the following circumstances:
+We only use _unsigned integers_ \(e.g. `uint`, `uint32`, etc.\) on the following circumstances:
 
 * They are used as _bitmasks_.
 * They are used for serialized formats.
 
-On the rest of the cases, __always__ use _signed integers_ (e.g. `int`, `int64`, etc.).
+On the rest of the cases, **always** use _signed integers_ \(e.g. `int`, `int64`, etc.\).
 
 The rationale behind this convention is that the last thing that we want is to have wacky behavior around common values and _zero_ is a common one, so we want to avoid to not get a negative number when subtracting _one_ from an _unsigned integer_ variable with value _zero_.
 
@@ -163,14 +163,14 @@ The rationale behind this convention is that the last thing that we want is to h
 
 Consider package name as part of the type name, this avoids stutter when using the types or methods.
 
-```
+```text
 identity.FullIdentity // not great due to stutter
 identity.Full         // better
 ```
 
 There are places where it's difficult to avoid, example:
 
-```
+```text
 kademlia.Kademlia
 ```
 
@@ -180,7 +180,7 @@ Avoid using initialisms unless they are widely known like `ID`, `URL` and `DB`.
 
 ### Argument order
 
-The following argument order should be used for consistency (split into multiple lines for clarity only):
+The following argument order should be used for consistency \(split into multiple lines for clarity only\):
 
 ```go
 func Do(
@@ -197,7 +197,7 @@ Of course, if an argument is not needed then there is no need to add it.
 
 Prefer separate func or a typed enum instead of a boolean argument. They keep the callers clearer:
 
-```
+```text
 Create(true), Create(false) //
 
 Create(), CreateNested()         // separate func
@@ -212,7 +212,7 @@ _Exclude `ctx` and `log` from the count of 5, since common arguments don't have 
 
 ## Package naming and aliases
 
-For package naming see https://blog.golang.org/package-names. Prefer names that are easy to say when talking.
+For package naming see [https://blog.golang.org/package-names](https://blog.golang.org/package-names). Prefer names that are easy to say when talking.
 
 Avoid package aliases, they make it harder to understand which package is actually being used especially, if the names are inconsistent.
 
@@ -222,16 +222,16 @@ If a package alias is required prefer to rename the external packages rather tha
 
 `context.Background()` should be only called at the top-level. For example in `main`, `pkg/process`, `net/http` internals. A good rule of thumb is that you should be able to count calls to `context.Background()` in your whole program on one hand.
 
-* If you need a `ctx` then take it as the first argument from outside. See [Argument Order](#argument-order).
+* If you need a `ctx` then take it as the first argument from outside. See [Argument Order](style.md#argument-order).
 * In tests use `ctx := testcontext.New(t); defer ctx.Cleanup()`.
 * If threading a `ctx` variable through your callstack is more work than reasonable for your PR, use `context.TODO()` instead of `context.Background()` so you can come back to it later.
 * In a `main()` method, if you're using `pkg/process.Exec` with `*cobra.Cmd`, you can use `process.Ctx(cmd)` to retrieve a command-specific context, instead of making a new one.
 
 ## Telemetry
 
-For any "non-trivial" function (i.e., a function that takes more than microseconds to run), please add monkit instrumentation to it. Make sure the function takes a context (see above) and returns a named error, and add this line to the very top of the function:
+For any "non-trivial" function \(i.e., a function that takes more than microseconds to run\), please add monkit instrumentation to it. Make sure the function takes a context \(see above\) and returns a named error, and add this line to the very top of the function:
 
-```golang
+```go
 defer mon.Task()(&ctx)(&err)
 ```
 
@@ -273,11 +273,12 @@ For example:
 
 ```go
 type GraphiteDest struct {
-	address string
+    address string
 
-	mu      sync.Mutex
-	conn    net.Conn
-	buf     *bufio.Writer
-	stopped bool
+    mu      sync.Mutex
+    conn    net.Conn
+    buf     *bufio.Writer
+    stopped bool
 }
 ```
+

@@ -5,14 +5,14 @@ Storage Node implements piece storing on the network.
 ## Sub-Systems
 
 1. Kademlia
-1. Piecestore
-1. Pieces
-1. Trust
-1. Monitor
-1. Orders
-1. Bandwidth
-1. Collector
-1. Inspector
+2. Piecestore
+3. Pieces
+4. Trust
+5. Monitor
+6. Orders
+7. Bandwidth
+8. Collector
+9. Inspector
 
 ## Kademlia
 
@@ -26,7 +26,7 @@ Is the endpoint that implements data transfer protocol. It allows uplinks to upl
 
 Piecestore contains logic to validate order limits, orders and piece hashes.
 
-Piecestore uses Pieces to store the data and [Trust](#Trust) to verify allowed peers. It updates [Bandwidth](#Bandwidth), [Orders](#Orders) and other databases while uploading/downloading.
+Piecestore uses Pieces to store the data and [Trust](storage-node.md#Trust) to verify allowed peers. It updates [Bandwidth](storage-node.md#Bandwidth), [Orders](storage-node.md#Orders) and other databases while uploading/downloading.
 
 ## Pieces
 
@@ -55,3 +55,4 @@ Collector system implements expired piece deletion from storage node.
 ## Inspector
 
 Inspector provides a private endpoint for monitoring status of the storage node.
+

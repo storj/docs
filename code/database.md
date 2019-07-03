@@ -8,16 +8,16 @@ Every peer needs a collection of databases to work. This collection is called a 
 
 It links together all the sub-system specific databases. It places no specific requirement how the databases are implemented. It can be one or multiple backends, whichever is more useful for a particular database.
 
-```
+```text
 // DB is the master database for the satellite
 type DB interface {
-	// CreateTables initializes the database
-	CreateTables() error
-	// Close closes the database
-	Close() error
+    // CreateTables initializes the database
+    CreateTables() error
+    // Close closes the database
+    Close() error
 
-	// Overlay returns database for caching overlay information
-	Overlay() overlay.DB
+    // Overlay returns database for caching overlay information
+    Overlay() overlay.DB
 }
 ```
 
@@ -29,14 +29,14 @@ Every sub-system declares an interface what it needs from persistence system. Th
 
 For example this is a partial declaration of overlay cache database:
 
-```
+```text
 // DB is for storing node information.
 type DB interface {
-	// Get looks up the node by nodeID
-	Get(ctx context.Context, nodeID storj.NodeID) (*pb.Node, error)
+    // Get looks up the node by nodeID
+    Get(ctx context.Context, nodeID storj.NodeID) (*pb.Node, error)
 
-	// SelectStorageNodes looks up nodes based on criteria
-	SelectStorageNodes(ctx context.Context, count int, criteria *NodeCriteria) ([]*pb.Node, error)
+    // SelectStorageNodes looks up nodes based on criteria
+    SelectStorageNodes(ctx context.Context, count int, criteria *NodeCriteria) ([]*pb.Node, error)
 }
 ```
 
@@ -62,26 +62,26 @@ Currently Storj uses minimal implementation for arbitrary migrations. It allows 
 
 Implementation uses a `versions` table to track, at which version a specific database is at. Migrations are then defined as a sequence of functions or SQL queries:
 
-```
+```text
 m := migrate.Migration{
-	Table: "versions",
-	Steps: []*migrate.Step{
-		{
-			Description: "Initialize Table",
-			Version:     1,
-			Action: migrate.SQL{
-				`CREATE TABLE users (id int)`,
-				`INSERT INTO users (id) VALUES (1)`,
-			},
-		},
-		{
-			Description: "Move files",
-			Version:     2,
-			Action: migrate.Func(func(log *zap.Logger, _ migrate.DB, tx *sql.Tx) error {
-				return os.Rename(ctx.File("alpha.txt"), ctx.File("beta.txt"))
-			}),
-		},
-	},
+    Table: "versions",
+    Steps: []*migrate.Step{
+        {
+            Description: "Initialize Table",
+            Version:     1,
+            Action: migrate.SQL{
+                `CREATE TABLE users (id int)`,
+                `INSERT INTO users (id) VALUES (1)`,
+            },
+        },
+        {
+            Description: "Move files",
+            Version:     2,
+            Action: migrate.Func(func(log *zap.Logger, _ migrate.DB, tx *sql.Tx) error {
+                return os.Rename(ctx.File("alpha.txt"), ctx.File("beta.txt"))
+            }),
+        },
+    },
 }
 // run the migration
 err = m.Run(zap.NewNop(), testDB)
@@ -101,14 +101,14 @@ For each migration step the test verifies that the database schema and data in t
 
 Migration tests use `internal/dbutil/pgutil` and `internal/dbutil/sqliteutil` packages to load the schema and data from the database itself.
 
-
 ### Modifying database
 
 To modify the database the following steps must be completed:
 
-1. Modify `dbx` file and regenerate the model (only for satellite)
+1. Modify `dbx` file and regenerate the model \(only for satellite\)
 2. Add a new `migrate.Step` into the migrations list, modifying the previous database state to match the new one. The migration version must be incremented by `1` from previous.
 3. Add a new `testdata/*.v<N>.sql`, where `N` is the specific migration step.
 4. If there are new tables, then add a `-- NEW DATA --` and insert rows to the new tables.
 
-See [How to add a new table to Satellite.DB](Satellite-how-to-new-table) for more detailed instructions.
+See [How to add a new table to Satellite.DB](https://github.com/storj/docs/tree/cbd1d7cf9363ad8e8a9fd4923b9a56d87c70b8b2/code/Satellite-how-to-new-table/README.md) for more detailed instructions.
+

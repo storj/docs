@@ -1,7 +1,9 @@
 # Code of Conduct
+
 Storj strives to create a welcoming and thriving environment. In order to ensure that every community member is respected and supported, we’ve adopted some general community guidelines.
 
 ## Our Pledge
+
 We value diversity and inclusiveness in our community and encourage participation by fostering an open and welcoming environment. We as contributors and maintainers pledge to keep our community respectful and inclusive. By participating in our project, you pledge to keep our community a harassment-free experience for everyone, regardless of race, color, religion, gender, sexual orientation, national origin, age, disability, pregnancy, marital status, body size, appearance, education, level of experience, education, or socioeconomic status.
 
 ## Our Standards
@@ -25,7 +27,7 @@ We value diversity and inclusiveness in our community and encourage participatio
 
 ## Our Responsibilities
 
-Project maintainers are responsible for clarifying the standards of acceptable behavior and agree to take appropriate and fair corrective action in response to any instances of unacceptable behavior. 
+Project maintainers are responsible for clarifying the standards of acceptable behavior and agree to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
 
 Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned with this Code of Conduct, or to ban temporarily or permanently any contributor for any behavior that they deem inappropriate, threatening, offensive, or harmful.
 
@@ -35,10 +37,11 @@ This Code of Conduct applies both within project spaces and in public spaces whe
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported anonymously or by contacting the project team at conduct@storj.io. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately. 
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported anonymously or by contacting the project team at conduct@storj.io. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
 
 Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership or maintainers.
 
 ## Attribution
 
-This Code of Conduct is adapted from the Contributor Covenant, version 1.4 (https://www.contributor-covenant.org).
+This Code of Conduct is adapted from the Contributor Covenant, version 1.4 \([https://www.contributor-covenant.org](https://www.contributor-covenant.org)\).
+

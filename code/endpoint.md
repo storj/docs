@@ -22,19 +22,22 @@ To add a new endpoint there are few steps:
 
 1. ensure that the endpoint is actually necessary, every endpoint has a potential for abuse
 2. define endpoint in an appropriate `.pb` file
-3. [regenerate protobuf files](code/Protobuf.md)
+3. [regenerate protobuf files](https://github.com/storj/docs/tree/cbd1d7cf9363ad8e8a9fd4923b9a56d87c70b8b2/code/code/Protobuf.md)
 4. add a new endpoint implementation
 5. add a new config definition, if needed
 6. add the endpoint to the corresponding peer
-6.1. add it to the appropriate subsystem in the peer struct definition
-6.2. wire it together in `New`
+
+   6.1. add it to the appropriate subsystem in the peer struct definition
+
+   6.2. wire it together in `New`
+
 7. add config to testplanet
 
 ## GRPC Implementation
 
 A basic grpc endpoint implementation looks like:
 
-```
+```text
 package kademlia
 
 import (
@@ -46,35 +49,36 @@ var EndpointError = errs.Class("kademlia endpoint error")
 
 // Endpoint implements the kademlia Endpoints
 type Endpoint struct {
-	// common fields
-	log          *zap.Logger
-	// dependencies: services, databases
-	service      *Kademlia
-	routingTable *RoutingTable
-	// internal state
-	connected    int32
+    // common fields
+    log          *zap.Logger
+    // dependencies: services, databases
+    service      *Kademlia
+    routingTable *RoutingTable
+    // internal state
+    connected    int32
 }
 
 // NewEndpoint returns a new kademlia endpoint
 func NewEndpoint(log *zap.Logger, service *Kademlia, routingTable *RoutingTable) *Endpoint {
-	return &Endpoint{
-		log:          log,
-		service:      service,
-		routingTable: routingTable,
-	}
+    return &Endpoint{
+        log:          log,
+        service:      service,
+        routingTable: routingTable,
+    }
 }
 
 // Query is a node to node communication query
 func (endpoint *Endpoint) Query(ctx context.Context, req *pb.QueryRequest) (*pb.QueryResponse, error) {
-	endpoint.service.Queried()
+    endpoint.service.Queried()
 
-	nodes, err := endpoint.routingTable.FindNear(req.Target.Id, int(req.Limit))
-	if err != nil {
-		return &pb.QueryResponse{}, EndpointError.New("could not find near endpoint: %v", err)
-	}
+    nodes, err := endpoint.routingTable.FindNear(req.Target.Id, int(req.Limit))
+    if err != nil {
+        return &pb.QueryResponse{}, EndpointError.New("could not find near endpoint: %v", err)
+    }
 
-	return &pb.QueryResponse{Sender: req.Sender, Response: nodes}, nil
+    return &pb.QueryResponse{Sender: req.Sender, Response: nodes}, nil
 }
 ```
 
 This is registered to a peer by using `pb.RegisterXyzServer(peer.Server.GRPC(), endpoint)`.
+

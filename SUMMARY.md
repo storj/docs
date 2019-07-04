@@ -26,16 +26,10 @@
 * [Using the Storj network](home.md)
 * [S3 gateway tutorial](s3-gateway.md)
 * [Test-network](test-network.md)
+* [Storage Node Setup Instructions](storage-node-setup-instructions.md)
 * [Code of Conduct](code-of-conduct.md)
 * [Explorer-Release-Setup-Instructions](explorer-release-setup-instructions.md)
 * [Getting Started](libuplink-walkthrough.md)
 * [Uplink CLI tutorial](uplink-cli.md)
 * [Vanguard Alpha Release - Setup Instructions!](vanguard-release-setup-instructions.md)
-
-## Getting Started as a Storage Node
-
-* [Before You Begin](getting-started-as-a-storage-node/before-you-begin.md)
-* [Storage Node Setup Instructions](getting-started-as-a-storage-node/storage-node-setup-instructions.md)
-* [Storage Node Setup \(Video Tutorial\)](getting-started-as-a-storage-node/storage-node-setup-video-tutorial.md)
-* [Set Up Port Forwarding](getting-started-as-a-storage-node/set-up-port-forwarding.md)
 

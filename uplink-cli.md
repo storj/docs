@@ -13,7 +13,7 @@ Next, Download the correct binary for your operating system:
 * Raspberry Pi: [uplink\_linux\_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/ab7f561-v0.14.4-go1.12.5/uplink_linux_arm.zip)
 * Windows Pro: [uplink\_windows\_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/ab7f561-v0.14.4-go1.12.5/uplink_windows_amd64.exe.zip)
 
-Setup your uplink by running the following command and following the wizard:
+Setup your uplink by running the following command and following the wizzard:
 
 ```bash
 ./uplink_darwin_amd64 setup

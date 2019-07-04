@@ -16,7 +16,7 @@ Next, Download the correct binary for your operating system:
 - Windows Pro: [uplink_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/ab7f561-v0.14.4-go1.12.5/uplink_windows_amd64.exe.zip)
 
 
-Setup your uplink by running the following command and following the wizzard:
+Setup your uplink by running the following command and following the wizard:
 
 ```bash
 ./uplink_darwin_amd64 setup

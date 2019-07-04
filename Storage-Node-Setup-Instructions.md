@@ -23,7 +23,8 @@ Our current release has limited support for operating systems. If your OS is not
     - [Windows](https://docs.docker.com/docker-for-windows/install/) 
         Note: *please be sure to use the default setting of Linux containers, otherwise `storagenode` will not work properly.* **Docker Toolbox is not supported - This means that currently, you cannot run `storagenode` on Windows Home Edition.**
     - [MacOS](https://docs.docker.com/docker-for-mac/install/)
-    - Linux: 
+      Note: **Docker Toolbox is not supported**
+    - Linux:
       - [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
       - [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
       - [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
@@ -85,7 +86,7 @@ $ docker pull storjlabs/storagenode:arm
 - `EMAIL`: email address so that we can notify you when a new version has been released (optional)
 - `ADDRESS`: external IP address or the DDNS you configured and the port you opened on your router `<ip>:<port>`
    - Note: If you are using a custom port other than 28967, then you have to change the `-p 28967:28967` to `-p <port>:28967`
-- `BANDWIDTH`: how much bandwidth you can allocate to the Storj network. Be sure to allow for other use cases you have for your internet connection, and do not allocate more than your ISP supplied up and download speed can physically supply. To calculate the maximum monthly BANDWIDTH you can enter here, follow instructions [here](https://storjlabs.atlassian.net/wiki/spaces/SCKB/pages/64323607/How+do+I+calculate+my+Total+monthly+bandwidth+from+my+Mbit+s+up-+and+download+speed). 
+- `BANDWIDTH`: how much bandwidth per month you can allocate to the Storj network. Be sure to allow for other use cases you have for your internet connection, and do not allocate more than your ISP supplied up and download speed can physically supply. To calculate the maximum monthly BANDWIDTH you can enter here, follow instructions [here](https://storjlabs.atlassian.net/wiki/spaces/SCKB/pages/64323607/How+do+I+calculate+my+Total+monthly+bandwidth+from+my+Mbit+s+up-+and+download+speed).
 - `STORAGE`: how much disk space you want to allocate to the Storj network. Be sure to not over-allocate space! **Allow at least 10% extra for overhead.** While we don't have garbage collection implemented yet, you should also reduce total allocated space on your disk sufficiently to have enough space for storing garbage data until it can be purged in a later release. If you over-allocate space, **you may corrupt your database** when the system attempts to store pieces when no more physical space is actually available on your drive.
 - `<identity-dir>`: this is the path to the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier. 
     - Note: If you created your identity on a Windows machine, using PowerShell, you can find the path to the default identity folder where your identity files were stored typing at the command prompt: 

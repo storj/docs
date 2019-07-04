@@ -17,7 +17,7 @@ Next, Download the correct binary for your operating system:
 - Raspberry Pi: [gateway_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/571877d-v0.14.3-go1.12.5/gateway_linux_arm.zip)
 - Windows Pro: [gateway_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/571877d-v0.14.3-go1.12.5/gateway_windows_amd64.exe.zip)
 
-Setup your gateway by running the following command and following the wizzard:
+Setup your gateway by running the following command and following the wizard:
 
 ```bash
 ./gateway_darwin_amd64 setup

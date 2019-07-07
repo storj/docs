@@ -142,7 +142,7 @@ $ docker exec -it storagenode /app/dashboard.sh
 
 7) With the command `docker logs -t storagenode`, you can look at your logs to see if you have some errors indicating that something is not functioning properly.
     - Log too big? Use this command if you just want to see the last 20 lines of the log: `docker logs --tail 20 storagenode`
-    - To redirect the logs to a file, stop your node: `docker stop storagenode`, edit your config.yaml and add `log.output: "/app/config/node.log"` then start your node again with the usual `docker run` command. 
+    - To redirect the logs to a file, stop your node: `docker stop storagenode`, edit your config.yaml and add `log.output: "/app/config/node.log"` then start your node again `docker start storagenode`. Note: When you use this option docker logs commands no longer show your node log. Use the file instead.
     - Also, you can redirect logs to a file like this: `docker logs storagenode 2>&1 > d:\file.txt`
 
 *If you need help setting up your storage node, sign up for our [community chat](https://community.storj.io/home) and ask for assistance in the #storagenode channel. Provide your logs and stacktrace when requested by the community leader attending your issue.*

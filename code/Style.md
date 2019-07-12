@@ -149,7 +149,7 @@ func (project *Project) PrintTo(printer *Printer) error {
 The litmus test about naming is whether it confuses the reader. So, if a reviewer finds the naming hard to understand, then he should suggest better naming and discuss to find a better name.
 
 Additionally, avoid naming your variables the same as those of imported packages. For example, if you've imported
-`storj.io/storj/uplink`, use something like `var uplinkPeer`rather than `var uplink` in that file.
+`storj.io/storj/uplink`, use something like `var uplinkPeer` rather than `var uplink` in that file.
 
 ## Integers
 

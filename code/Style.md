@@ -287,4 +287,4 @@ type GraphiteDest struct {
 
 ## Unused Code
 
-Avoid merging unused code into master unless there is a justifiable reason to do so. This includes methods,functions, constants, variables, and parameters. A reason one may leave unused code is if the method is necessary to implement an interface.
+Avoid merging unused code into master unless there is a justifiable reason to do so. This includes methods, functions, constants, variables, and parameters. A reason one may leave unused code is if the method is necessary to implement an interface.

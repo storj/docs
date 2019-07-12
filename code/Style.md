@@ -148,6 +148,9 @@ func (project *Project) PrintTo(printer *Printer) error {
 
 The litmus test about naming is whether it confuses the reader. So, if a reviewer finds the naming hard to understand, then he should suggest better naming and discuss to find a better name.
 
+Additionally, avoid naming your variables the same as those of imported packages. For example, if you've imported
+`storj.io/storj/uplink`, use something like `var uplinkPeer` rather than `var uplink` in that file.
+
 ## Integers
 
 We only use _unsigned integers_ (e.g. `uint`, `uint32`, etc.) on the following circumstances:
@@ -281,3 +284,7 @@ type GraphiteDest struct {
 	stopped bool
 }
 ```
+
+## Unused Code
+
+Avoid merging unused code into master unless there is a justifiable reason to do so. This includes methods, functions, constants, variables, and parameters. A reason one may leave unused code is if the method is necessary to implement an interface.

@@ -118,6 +118,8 @@ Use properly namespaced `*zap.Logger`. By properly namespacing and passing in th
 
 Avoid using global loggers (e.g. `zap.L().Error`, `log.Print`, `fmt.Print`), unless it is `package main`.
 
+__DO NOT LOG__ secrets except that you're doing so with the `DEBUG` level.
+
 ## Variable naming
 
 Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `mu sync.Mutex`)

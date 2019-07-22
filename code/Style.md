@@ -118,6 +118,8 @@ Use properly namespaced `*zap.Logger`. By properly namespacing and passing in th
 
 Avoid using global loggers (e.g. `zap.L().Error`, `log.Print`, `fmt.Print`), unless it is `package main`.
 
+Secrets (database, api, tokens) __should only be logged at `DEBUG` level__. Production systems should not be running at DEBUG level, thus keeping secrets out of logs.
+
 ## Variable naming
 
 Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `mu sync.Mutex`)

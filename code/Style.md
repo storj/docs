@@ -107,7 +107,7 @@ func (reg *Registry) GetUser(ctx context.Context, username string) (*User, error
 		return nil, ErrUser.New("not found %s", username)
 	}
 	if err != nil {
-		return nil, ErrUser.Wrap(err)
+		return nil, Error.Wrap(err)
 	}
 
 	return user, nil

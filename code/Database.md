@@ -54,7 +54,7 @@ Master Database will return a specific struct to fulfill the specific database i
 
 For satellite we also use [`dbx`](https://github.com/spacemonkeygo/dbx/) which helps to support SQLite and Postgres at the same time. Of course, this complicates some of the queries as a result.
 
-dbx file for satellite is located in `satellite/satellitedb/satellite.dbx`. To regenerate or modify it, run `go generate` in that folder.
+`dbx` file for satellite is located in `satellite/satellitedb/dbx/satellite.dbx`. To regenerate or modify it, run `go generate` in that folder.
 
 ## Migrations
 

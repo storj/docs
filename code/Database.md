@@ -1,6 +1,6 @@
 # Database
 
-Database is responsible for providing data access, persistence and ensuring data-consistency. 
+Database is responsible for providing data access, persistence and ensuring data-consistency.
 
 ## Master Database
 

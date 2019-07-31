@@ -156,3 +156,27 @@ func TestBasic(t *testing.T) {
 	t.Log(ctx.File("a", "w", "c.txt")) // get a filename inside a temporary directory
 }
 ```
+
+## Domain Names
+
+Use only domains intended for testing and examples, otherwise tests may end up accidentally sending an email to an actual person.
+
+For testing or documentation use [`.test`](https://en.wikipedia.org/wiki/.test) domain, it is reserved for that purpose. Examples: `mail.test`, `example.test`.
+
+For documentation [`example.com`](https://www.iana.org/domains/reserved) can also be used.
+
+## Running test through PostgreSQL
+
+Part of our [current implementation uses different _database backends_](Database), some of them are used to run the test in local without having to always depend of third party external systems when developing.
+
+Because using a different _database backend_ for development than in production can cause that some tests pass in local meanwhile fail using the production _database_ backend_, the CI runs all the tests with all the supported _backends_ or at least with the one used in production.
+
+Sometimes, meanwhile developing, it's less than ideal that for having feedback of each change the developer must push the code to run the CI, making pretty convenient to run the tests which the production _databse backend_. Currently this is the case for PostgreSQL in:
+
+* [Database migrations](Database).
+* Test SIM (i.e. `make test-sim`).
+
+In order to use PostgreSQL for running the tests in a local development machine you have to setup and run PostgreSQL v11 in your machine or run a Docker container using a [PostgreSQL image](https://hub.docker.com/_/postgres) and run the tests as follow:
+
+1. For _Go tests_, use the environment variable `STORJ_POSTGRES_TEST` to specify a connection URL (i.e. `postgres://[user][:password]@[host]?sslmode=disable`) when running them, for example `STORJ_POSTGRES_TEST="postgres://postgres:pass@localhost?sslmode=disable" go test ./...`
+2. For _test sim_ use the environment variable `STORJ_SIM_POSTGRES` to specify a connection URL with an existing database (preferably an empty one) (i.e `postgres://[user][:password]@[host]/[database]?sslmode=disable`) when running them, for example `STORJ_SIM_POSTGRES="postgres://postgres:pass@localhost/teststorj?sslmode=disable" make test-sim`. For creating an empty database in Postgres, you can easily do with it's Postgres client running for example `psql -U postgres -c 'create database teststorj;'` for creating a database named `teststorj` (you can also use the Docker image commented above rather than the locally installed Postgres client `psql`).

@@ -12,37 +12,28 @@ First, if you haven't already followed the preparation steps in https://github.c
 
 Next, Download the correct binary for your operating system:
 
-- Mac OS: [gateway_darwin_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_darwin_amd64.zip)
-- Linux: [gateway_linux_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_linux_amd64.zip)
-- Raspberry Pi: [gateway_linux_arm.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_linux_arm.zip)
-- Windows Pro: [gateway_windows_amd64.zip](https://storj-v3-alpha-builds.storage.googleapis.com/5ac1622-heads-v0.10.1-go1.12.1/gateway_windows_amd64.exe.zip)
+- Mac OS: [gateway_darwin_amd64.zip](https://github.com/storj/storj/releases/download/v0.16.1/gateway_darwin_amd64.zip)
+- Linux: [gateway_linux_amd64.zip](https://github.com/storj/storj/releases/download/v0.16.1/gateway_linux_amd64.zip)
+- Raspberry Pi: [gateway_linux_arm.zip](https://github.com/storj/storj/releases/download/v0.16.1/gateway_linux_arm.zip)
+- Windows Pro: [gateway_windows_amd64.zip](https://github.com/storj/storj/releases/download/v0.16.1/gateway_windows_amd64.exe.zip)
 
-To configure the Gateway for your Satellite, you'll need to make note of your
-Satellite address and your account's API key. 
-
-Next, you'll need to choose an encryption passphrase. This needs to be the same
-encryption passphrase any other tools that want to access these files will use.
-Keep this secret and safe. This passphrase will grant you access to all of 
-your files, and if you lose it, you will not be able to recover your files.
-
-Then you'll need to configure the Gateway with these values. The below example
-command uses the defaults for the alpha network:
+Setup your gateway by running the following command and following the wizard:
 
 ```bash
-~/go/bin/gateway setup --api-key abc123 --satellite-addr mars.tardigrade.io:7777 \
-  --enc.key highlydistributedridiculouslyresilient
+./gateway_darwin_amd64 setup
 ```
+You will be prompted for:
 
-You are now ready to interact with your files in Storj!
+- Satellite: The satellite you want to connect your uplink to. You can choose one from the list of type one eg. `mars.tardigrade.io:7777` or `127.0.0.1:10000` if you are using the test network.
+- API key: The API key that you generate for a project on the Satellite console. If you are using the test network, you can use the API key provided when you run it.
+- Encryption passphrase: The passphrase you choose in order to encrypt your files. Keep this secret and safe. This passphrase will grant you access to all of your files, and if you lose it, you will not be able to recover your files. 
 
 ## Running
 
-The `gateway` command functions as a daemon. You'll want to start it running
-and leave it running. If you're using the test network, a gateway is already
-running, and you'll want to select a different port for this new one.
+The gateway functions as a daemon. You'll want to start it and leave it running. If you're using the test network, and a gateway is already running, and you'll want to select a different port for this new one.
 
 ```bash
-~/go/bin/gateway run --server.address :7776
+./gateway_darwin_amd64 run
 ```
 
 The gateway should output your S3-compatible endpoint, access key, and secret

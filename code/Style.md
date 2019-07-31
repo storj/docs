@@ -81,6 +81,8 @@ There are __2 exceptions__ when an error **NEVER MUST BE** wrapped nor annotated
 On the other hand Sometimes, there are situations where a function, calls another function that only needs to return the value or the error returned by the call; when the called function return errors not created or wrapped by `errs` package the error must be  wrapped or annotated, however it isn't needed to have a conditional to achieve such purpose, because the functions that `errs` package have ignore the `nil` value when they are passed through; for example
 
 ```go
+var Error = errs.Class("data")
+
 func OpenDataFile(filename string) (*os.File, error) {
 	file, err := os.Open(filepath.Join("data", filename))
 	if err != nil {
@@ -94,9 +96,11 @@ func OpenDataFile(filename string) (*os.File, error) {
 should be written like
 
 ```go
+var Error = errs.Class("data")
+
 func OpenDataFile(filename string) (*os.File, error) {
 	file, err := os.Open(filepath.Join("data", filename))
-	return file, errs.Wrap(err)
+	return file, Error.Wrap(err)
 }
 ```
 

@@ -110,13 +110,15 @@ Every package should have at least _package comment_ with concise information of
 
 One example of a package that requires specific clarifications is the [fmt standard package](https://golang.org/pkg/fmt/).
 
-Go allows to place the _package comment_ on any non test go file that the package contains and one of the used patterns is to have a `doc.go` file which only contains the _package comment_ (e.g. [fmt standard package](https://golang.org/src/fmt/doc.go)). For keep it simple in order to choose which file should contain the _package comment_, we place the _package comment_ in a `doc.go` even when the package has only one Go file because we always know where such _package comment_ is written and there is no need to move it in case that a package with just one initial file grow to have more in the future.
+Go allows to place the _package comment_ on any non test go file that the package contains and one of the used patterns is to have a `doc.go` file which only contains the _package comment_ (e.g. [fmt standard package](https://golang.org/src/fmt/doc.go)). For keep it simple in order to choose which file should contain the _package comment_, we place the _package comment_ in a `doc.go` even when the package has only one Go file because we always know where such _package comment_ is written and there is no need to move it, in case that a package with just one initial file grows to have more in the future.
 
 ## Logging
 
 Use properly namespaced `*zap.Logger`. By properly namespacing and passing in the logger we can better find how things are working. Tests should use `zaptest.NewLogger(t)` as the root logger.
 
 Avoid using global loggers (e.g. `zap.L().Error`, `log.Print`, `fmt.Print`), unless it is `package main`.
+
+Secrets (database, api, tokens) __should only be logged at `DEBUG` level__. Production systems should not be running at DEBUG level, thus keeping secrets out of logs.
 
 ## Variable naming
 
@@ -145,6 +147,11 @@ func (project *Project) PrintTo(printer *Printer) error {
 	return printer.Print(project)
 }
 ```
+
+The litmus test about naming is whether it confuses the reader. So, if a reviewer finds the naming hard to understand, then he should suggest better naming and discuss to find a better name.
+
+Additionally, avoid naming your variables the same as those of imported packages. For example, if you've imported
+`storj.io/storj/uplink`, use something like `var uplinkPeer` rather than `var uplink` in that file.
 
 ## Integers
 
@@ -235,6 +242,24 @@ defer mon.Task()(&ctx)(&err)
 
 If the function really can't take a context, then either create a context first with `context.TODO()`, or pass `nil` instead of `&ctx`. If the function really won't ever error, then you can pass `nil` instead of `&err` as well.
 
+## SQL code
+
+SQL statements must use query arguments to avoid potential current and future issues with SQL injection. See [OWASP SQL Injection](https://www.owasp.org/index.php/SQL_Injection) for more information.
+
+Bad:
+
+```go
+db.QueryRow(`SELECT id FROM nodes WHERE owner = ` + owner)
+db.QueryRow(`SELECT id FROM nodes WHERE last_updated = ` + timeToString(lastUpdated))
+```
+
+Should be:
+
+```go
+db.QueryRow(`SELECT id FROM nodes WHERE owner = ?`, owner)
+db.QueryRow(`SELECT id FROM nodes WHERE last_updated = ?`, timeToString(lastUpdated))
+```
+
 ## Prefer synchronous methods
 
 Making synchronous methods to asynchornous is usually easier than making an asynchronous method to synchronous. This also keeps code simpler when the asynchrony is not needed.
@@ -261,3 +286,7 @@ type GraphiteDest struct {
 	stopped bool
 }
 ```
+
+## Unused Code
+
+Avoid merging unused code into master unless there is a justifiable reason to do so. This includes methods, functions, constants, variables, and parameters. A reason one may leave unused code is if the method is necessary to implement an interface.

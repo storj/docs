@@ -11,7 +11,7 @@ This repository holds some basic tutorials for working with the Storj V3 archite
 - [Learn the Libuplink Go library to programmatically interface with the network](Libuplink-Walkthrough)
 
 If you are interested in setting up your own Storage Node, and monetizing your underutilized resources, check out:
-- [Explorer Release Setup Instructions](Explorer-Release-Setup-Instructions)
+- [Storage Node Setup Instructions](https://storj-labs.gitbook.io/docs/)
 
 Finally, if you'd like to spin up a local instance of the V3 Network components (Uplink, Satellite, Storage Nodes) for testing, see:
 - [Learn how to run the storj-sim test network](Test-network)

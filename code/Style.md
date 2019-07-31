@@ -120,6 +120,34 @@ Avoid using global loggers (e.g. `zap.L().Error`, `log.Print`, `fmt.Print`), unl
 
 Secrets (database, api, tokens) __should only be logged at `DEBUG` level__. Production systems should not be running at DEBUG level, thus keeping secrets out of logs.
 
+Logging shouldn't be very chatty, except the `DEBUG` level which is useful during development and problem diagnosis. For these reason we don't log any possible error and we should only log errors which we don't know why they may happen and having the most information as possible about them is important for being able to diagnose what went wrong; those errors are mostly the one that we classify as an _internal error_ and despite that they are returned to the caller, not always are returned with all the information, because the error doesn't contain all of it or we are not interested in returning such internal information to the caller, one example of this is when the error is returned through the wire (e.g. gRPC, HTTP, etc.)
+
+```go
+  // All the validations have been done before the following instruction, the
+  // only error that could be returned is because of an unexpected error by the
+  // DB
+
+  result, err := server.AddUserToInvitationList(user)
+  if err != nil {
+    // This log the error giving a context through the given message and the
+    // error field (structured logger).
+    // Zap will log the stack trace of this log operation but if the `err`
+    // contains a stack trace (as the ones created with zeebo/errs package
+    // offers) it will be also logged under the `error` field.
+    server.log.Error("internal error while accessing to the DB", zap.Error(err))
+
+    // This error will only contain the err's message, the client doesn't need
+    // more than that, but although the server may have a middleware which log
+    // such error response, that information isn't enough to diagnose what could
+    // be wrong with the DB, while the log function call of above will provide
+    // much more information about it.
+    return status.Error(codes.Internal, err.Error())
+  }
+```
+
+The exception about logging more information than `DEBUG` and unrecognized errors are the command line tools; those one use the logger for also informing to the user about the important operations which are executed.
+
+
 ## Variable naming
 
 Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `mu sync.Mutex`)

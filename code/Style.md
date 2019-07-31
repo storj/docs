@@ -72,7 +72,13 @@ func Example() (err error) {
 }
 ```
 
-Sometimes, there are situations where a function, calls another function that only needs to return the value or the error returned by the call; when the called function return errors not created or wrapped by `errs` package the error must be  wrapped or annotated, however it isn't needed to have a conditional to achieve such purpose, because the functions that `errs` package have ignore the `nil` value when they are passed through; for example
+There are __2 exceptions__ when an error **NEVER MUST BE** wrapped nor annotated nor combined:
+
+1. Those functions which return the [`io.EOF`](https://golang.org/pkg/io/#pkg-variables) to indicate that they have finished and they don't have to be called again, like the types which implement the [`io.Reader` interface](https://golang.org/pkg/io/#Reader).
+2. Some packages which require that user specific functions return specific error types for acting appropriately, like [_gRPC status](https://godoc.org/google.golang.org/grpc/status) for being able to respond a [specific protocol error status code](https://github.com/grpc/grpc/blob/master/doc/statuscodes.md).
+
+
+On the other hand Sometimes, there are situations where a function, calls another function that only needs to return the value or the error returned by the call; when the called function return errors not created or wrapped by `errs` package the error must be  wrapped or annotated, however it isn't needed to have a conditional to achieve such purpose, because the functions that `errs` package have ignore the `nil` value when they are passed through; for example
 
 ```go
 func OpenDataFile(filename string) (*os.File, error) {

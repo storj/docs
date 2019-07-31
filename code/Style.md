@@ -144,7 +144,7 @@ Avoid using global loggers (e.g. `zap.L().Error`, `log.Print`, `fmt.Print`), unl
 
 ## Variable naming
 
-Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `mu sync.Mutex`) 
+Prefer hard-to-confuse variables with 3-7 letters. Use conventional naming when there is one (e.g. `mu sync.Mutex`)
 
 Small variables can be fine in small scopes (up to 40 lines) and when there isn't a danger of confusion. Take into account that the confusion can arise also due to moving between packages. As an example:
 
@@ -250,7 +250,7 @@ Of course using sleeps, tickers for scheduling or for avoiding thundering herd p
 
 ## Mutexes
 
-When using synchronizing structures like mutexes or condition variables organize them in the struct such that they make clear which fields are protected and which are unprotected. 
+When using synchronizing structures like mutexes or condition variables organize them in the struct such that they make clear which fields are protected and which are unprotected.
 
 For example:
 

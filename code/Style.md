@@ -72,9 +72,9 @@ func Example() (err error) {
 }
 ```
 
-There are __2 exceptions__ when an error **NEVER MUST BE** wrapped nor annotated nor combined:
+There are __a few exceptions__ when an error **NEVER MUST BE** wrapped nor annotated nor combined:
 
-1. Those functions which return the [`io.EOF`](https://golang.org/pkg/io/#pkg-variables) to indicate that they have finished and they don't have to be called again, like the types which implement the [`io.Reader` interface](https://golang.org/pkg/io/#Reader).
+1. Those functions which return the sentinel errors for indicating specific statuses. For example, the [`io.EOF`](https://golang.org/pkg/io/#pkg-variables) which is expected to be returned by [`io.Reader` interface](https://golang.org/pkg/io/#Reader) implementations.
 2. Some packages which require that user specific functions return specific error types for acting appropriately, like [_gRPC status](https://godoc.org/google.golang.org/grpc/status) for being able to respond a [specific protocol error status code](https://github.com/grpc/grpc/blob/master/doc/statuscodes.md).
 
 

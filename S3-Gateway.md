@@ -24,7 +24,7 @@ Setup your gateway by running the following command and following the wizard:
 ```
 You will be prompted for:
 
-- Satellite: The satellite you want to connect your uplink to. You can choose one from the list of type one eg. `mars.tardigrade.io:7777` or `127.0.0.1:10000` if you are using the test network.
+- Satellite: The satellite you want to connect your uplink to. You can choose one from the list of type one eg. `us-central-1.tardigrade.io:7777` or `127.0.0.1:10000` if you are using the test network.
 - API key: The API key that you generate for a project on the Satellite console. If you are using the test network, you can use the API key provided when you run it.
 - Encryption passphrase: The passphrase you choose in order to encrypt your files. Keep this secret and safe. This passphrase will grant you access to all of your files, and if you lose it, you will not be able to recover your files. 
 

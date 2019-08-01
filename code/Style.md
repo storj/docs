@@ -226,6 +226,8 @@ func Do(
 
 Of course, if an argument is not needed then there is no need to add it.
 
+There are cases where this order is not ideal; use your best judgment when deciding whether to deviate.
+
 ### Arguments
 
 Prefer separate func or a typed enum instead of a boolean argument. They keep the callers clearer:

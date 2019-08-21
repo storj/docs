@@ -8,12 +8,12 @@ Satellite and uses a [test network](Test-network) Satellite by default.
 
 First, if you haven't already followed the preparation steps in https://github.com/storj/storj/wiki/Vanguard-Release-Setup-Instructions, please do so.
 
-Next, download the correct binary for your operating system: https://github.com/storj/storj/releases/latest
+Next, download the correct binary for your operating system:
 
-- Mac OS: _uplink_darwin_amd64.zip_
-- Linux: _uplink_linux_amd64.zip_
-- Raspberry Pi: _uplink_linux_arm.zip_
-- Windows: _uplink_windows_amd64.zip_
+- Mac OS: [uplink_darwin_amd64.zip](https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip)
+- Linux: [uplink_linux_amd64.zip](https://github.com/storj/storj/releases/latest/download/uplink_linux_amd64.zip)
+- Raspberry Pi: [uplink_linux_arm.zip](https://github.com/storj/storj/releases/latest/download/uplink_linux_arm.zip)
+- Windows: [uplink_windows_amd64.exe.zip](https://github.com/storj/storj/releases/latest/download/uplink_windows_amd64.exe.zip)
 
 
 Setup your uplink by running the following command and following the wizard:

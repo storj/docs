@@ -2,7 +2,7 @@
 
 Services handle internal peer logic. Services use databases or other services to fulfill their logic.
 
-Services may have a lifecycle, which means they must be explicitly shut down or they run in intervals.
+Services do not have a life-cycle, usually, which means they must be explicitly shut down. It should be safe to run the same service concurrently in the same process or multiple processes.
 
 ## Adding a new service
 
@@ -13,7 +13,6 @@ To add a new service there are few steps:
 3. add the service to the corresponding peer
 3.1. add it to the appropriate subsystem in the peer struct definition
 3.2. wire it together in `New`
-3.3. call `Run` in `peer.Run`, if needed
 3.3. call `Close` in `peer.Close`, if needed
 4. add config to testplanet
 
@@ -28,90 +27,58 @@ import (
     ...
 )
 
-// DB implements storing orders for sending to the satellite.
+// DB implements saving order after receiving from storage node
 type DB interface {
-	// Enqueue inserts order to the list of orders needing to be sent to the satellite.
-	Enqueue(ctx context.Context, info *Info) error
-	// ListUnsent returns orders that haven't been sent yet.
-	ListUnsent(ctx context.Context, limit int) ([]*Info, error)
-	// ListUnsentBySatellite returns orders that haven't been sent yet grouped by satellite.
-	ListUnsentBySatellite(ctx context.Context) (map[storj.NodeID][]*Info, error)
-
-	// Archive marks order as being handled.
-	Archive(ctx context.Context, satellite storj.NodeID, serial storj.SerialNumber, status Status) error
-
-	// ListArchived returns orders that have been sent.
-	ListArchived(ctx context.Context, limit int) ([]*ArchivedInfo, error)
+	// CreateSerialInfo creates serial number entry in database
+	CreateSerialInfo(ctx context.Context, serialNumber storj.SerialNumber, bucketID []byte, limitExpiration time.Time) error
+	// UseSerialNumber creates serial number entry in database
+	UseSerialNumber(ctx context.Context, serialNumber storj.SerialNumber, storageNodeID storj.NodeID) ([]byte, error)
+	// UnuseSerialNumber removes pair serial number -> storage node id from database
+	UnuseSerialNumber(ctx context.Context, serialNumber storj.SerialNumber, storageNodeID storj.NodeID) error
+	...
 }
 
-// SenderConfig defines configuration for sending orders.
-type SenderConfig struct {
-	Interval time.Duration `help:"duration between sending" default:"1h0m0s"`
-	Timeout  time.Duration `help:"timeout for sending" default:"1h0m0s"`
+// Config is a configuration struct for orders Service.
+type Config struct {
+	Expiration time.Duration `help:"how long until an order expires" default:"168h"` // 7 days
 }
 
 // Sender sends every interval unsent orders to the satellite.
 type Sender struct {
 	// common things
 	log    *zap.Logger
-	config SenderConfig
+	config Config
 	// dependencies
-	transport transport.Client
-	kademlia  *kademlia.Kademlia
+	satellite signing.Signer
+	overlay   *overlay.Service
 	orders    DB
-
-	Loop sync2.Cycle // use cycle to run things in intervals
+	address   *pb.NodeAddress
 }
 
-// NewSender creates an order sender.
-func NewSender(log *zap.Logger, transport transport.Client, kademlia *kademlia.Kademlia, orders DB, config SenderConfig) *Sender {
-	return &Sender{
-		log:       log,
-		transport: transport,
-		kademlia:  kademlia,
-		orders:    orders,
-		config:    config,
-
-		Loop: *sync2.NewCycle(config.Interval),
+// NewService creates new service for creating order limits.
+func NewService(
+	log *zap.Logger, satellite signing.Signer, overlay *overlay.Service,
+	orders DB, orderExpiration time.Duration, satelliteAddress *pb.NodeAddress,
+) *Service {
+	return &Service{
+		log:              log,
+		satellite:        satellite,
+		overlay:          overlay,
+		orders:           orders,
+		satelliteAddress: satelliteAddress,
+		orderExpiration:  orderExpiration,
 	}
 }
 
-// Run sends orders on every interval to the appropriate satellites.
-func (sender *Sender) Run(ctx context.Context) error {
-	return sender.Loop.Run(ctx, func(ctx context.Context) error {
-		sender.log.Debug("sending")
-
-		ordersBySatellite, err := sender.orders.ListUnsentBySatellite(ctx)
-		if err != nil {
-			sender.log.Error("listing orders", zap.Error(err))
-			return nil
-		}
-
-		if len(ordersBySatellite) > 0 {
-			var group errgroup.Group
-			ctx, cancel := context.WithTimeout(ctx, sender.config.Timeout)
-			defer cancel()
-
-			for satelliteID, orders := range ordersBySatellite {
-				satelliteID, orders := satelliteID, orders
-				group.Go(func() error {
-
-					sender.Settle(ctx, satelliteID, orders)
-					return nil
-				})
-			}
-			_ = group.Wait() // doesn't return errors
-		} else {
-			sender.log.Debug("no orders to send")
-		}
-
-		return nil
-	})
+// VerifyOrderLimitSignature verifies that the signature inside order limit belongs to the satellite.
+func (service *Service) VerifyOrderLimitSignature(ctx context.Context, signed *pb.OrderLimit) (err error) {
+	defer mon.Task()(&ctx)(&err)
+	return signing.VerifyOrderLimitSignature(ctx, service.satellite, signed)
 }
 
-// Close stops the sending service.
+// Close stops the service.
 func (sender *Sender) Close() error {
-	sender.Loop.Stop()
+	// This is usually used to close any opened resources.
 	return nil
 }
 ```

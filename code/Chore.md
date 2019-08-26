@@ -21,7 +21,7 @@ To add a new chore there are few steps:
 
 A basic chore implementation looks like:s
 
-```
+```go
 package orders
 
 import (

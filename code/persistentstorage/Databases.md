@@ -11,20 +11,18 @@ Each component of the Storj network (i.e. satellites, storage nodes, uplinks) ha
 
 Satellites and Storage Nodes both have a single Database interface, referred to as the master DB. The master DB specifies which databases are needed, it doesn't specify how they are implemented. This means different satellites can use different backends.
 
-Satellites have three databases behind the master DB interface.
+Satellites have two databases behind the master DB interface.
 
 The three databases are:
 1. Satellite.DB
 2. PointerDB
-3. Kademlia Routing Table
 
-Storage Nodes have many databases behind the master DB interface.
+Storage Nodes have three databases behind the master DB interface.
 
 The databases include:
 1. pieces
 2. infodb
 3. psdb
-4. Kademlia Routing Table
 
 ![storj-components-with-databases](dbs.png)
 See below for more details about each database.
@@ -33,10 +31,9 @@ See below for more details about each database.
 
 Satellites store the most data of all the components. Satellites have three databases behind one interface. The interface is called the master DB. The master database specifies which databases are needed, it doesn't specify how they are implemented. This means different satellites can end up with different backends.
 
-Satellites have three databases:
+Satellites have two databases:
 1. Satellite.DB.
 2. PointerDB.
-3. Kademlia Routing Table.
 
 #### Satellite.DB
 
@@ -65,30 +62,14 @@ Reference:
 - Source code for [Pointer objects](https://github.com/storj/storj/blob/master/pkg/pb/pointerdb.pb.go#L263).
 - [BoltDB](https://github.com/boltdb/bolt) documentation.
 
-#### Kademlia Routing Table
-
-Kademlia Routing Table is a BoltDB key/value store. The routing table is represented by two bolt buckets ("bucket" in bolt is the same as "table"): 1) a kademlia key/value store (i.e. bolt bucket) and 2) a node key/value store (i.e. bolt bucket) in one BoltDB instance.
-
-The kademlia bolt bucket stores the following data:
-- key: k-bucket IDs (k-buckets are groupings of nodeIDs based on prefix, read original [kademlia paper](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) for details of k-buckets)
-- value: timestamp
-
-The node bolt bucket stores the following data:
-- key: nodeIDs
-- value: contact info for that node
-
-Resources:
-- [Slide deck](https://docs.google.com/presentation/d/1jY9mu8SVmVqirbo_yFIJjHWbeHrEc1NxWkFS1iauT_I/edit?usp=sharing) to a great talk [Jennifer](https://github.com/jenlij) did on storj Kademlia implementation.
-
 ## Storage Nodes
 
-Storage Nodes have four databases behind a single master DB interface.
+Storage Nodes have three databases behind a single master DB interface.
 
 The databases include:
 1. pieces
 2. infodb
 3. psdb
-4. Kademlia Routing Table
 
 #### pieces Database
 

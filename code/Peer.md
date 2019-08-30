@@ -6,11 +6,10 @@ Peers describe how a particular network participant is setup, wired together and
 
 Currently the network contains these peers:
 
-1. Bootstrap
-2. Storage Node
-3. Satellite
-4. Uplink
-5. Version Control
+1. Storage Node
+2. Satellite
+3. Uplink
+4. Version Control
 
 ## Lifecycle
 
@@ -126,7 +125,7 @@ func New(log *zap.Logger, full *identity.FullIdentity, db DB, config Config) (*P
 	return peer, nil
 }
 
-// Run runs bootstrap node until it's either closed or it errors.
+// Run runs the peer until it's either closed or it errors.
 func (peer *Peer) Run(ctx context.Context) error {
 	// setup a errgroup, such that we stop the peer together when one of the endpoint or services fails.
 	group, ctx := errgroup.WithContext(ctx)

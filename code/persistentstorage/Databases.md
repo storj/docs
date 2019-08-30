@@ -24,8 +24,8 @@ The databases include:
 2. infodb
 3. psdb
 
-![storj-components-with-databases](dbs.png)
-See below for more details about each database.
+![storj-components-with-databases](https://github.com/storj/docs/blob/master/code/persistentstorage/dbs.png)
+See below for more details about each database. Note: Kademlia has been deprecated.
 
 ## Satellites
 

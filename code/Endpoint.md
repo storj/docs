@@ -34,7 +34,7 @@ To add a new endpoint there are few steps:
 
 A basic grpc endpoint implementation looks like:
 
-```
+```go
 package kademlia
 
 import (
@@ -70,7 +70,8 @@ func (endpoint *Endpoint) Query(ctx context.Context, req *pb.QueryRequest) (*pb.
 
 	nodes, err := endpoint.routingTable.FindNear(req.Target.Id, int(req.Limit))
 	if err != nil {
-		return &pb.QueryResponse{}, EndpointError.New("could not find near endpoint: %v", err)
+		endpoint.log.Error("could not find near endpoint", EndpointError.Wrap(err))
+		return &pb.QueryResponse{}, status.Error(codes.Internal, "could not find near endpoint")
 	}
 
 	return &pb.QueryResponse{Sender: req.Sender, Response: nodes}, nil
@@ -78,3 +79,5 @@ func (endpoint *Endpoint) Query(ctx context.Context, req *pb.QueryRequest) (*pb.
 ```
 
 This is registered to a peer by using `pb.RegisterXyzServer(peer.Server.GRPC(), endpoint)`.
+
+NOTE gRPC endpoints must return errors which gRPC codes; they can be created with `google.golang.org/grpc/status` package.

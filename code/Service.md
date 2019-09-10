@@ -4,6 +4,8 @@ Services handle internal peer logic. Services use databases or other services to
 
 Services do not have a life-cycle, usually, which means they must be explicitly shut down. It should be safe to run the same service concurrently in the same process or multiple processes.
 
+Services must not depend on trasport implementations, [Endpoints](Endpoint.md) must deal with them.
+
 ## Adding a new service
 
 To add a new service there are few steps:
@@ -20,7 +22,7 @@ To add a new service there are few steps:
 
 A basic service implementation looks like:
 
-```
+```go
 package orders
 
 import (
@@ -71,6 +73,8 @@ func NewService(
 }
 
 // VerifyOrderLimitSignature verifies that the signature inside order limit belongs to the satellite.
+//
+// NOTE it accepts pb.OrderLimit becase it uses its serialization to verify the signature.
 func (service *Service) VerifyOrderLimitSignature(ctx context.Context, signed *pb.OrderLimit) (err error) {
 	defer mon.Task()(&ctx)(&err)
 	return signing.VerifyOrderLimitSignature(ctx, service.satellite, signed)

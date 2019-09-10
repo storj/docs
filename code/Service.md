@@ -4,7 +4,7 @@ Services handle internal peer logic. Services use databases or other services to
 
 Services do not have a life-cycle, usually, which means they must be explicitly shut down. It should be safe to run the same service concurrently in the same process or multiple processes.
 
-Services must not depend on trasport implementations, [Endpoints](Endpoint.md) must deal with them.
+Arguments to / return values from services should be hand-crafted Go types, rather than generated protobuf types. Exceptions for this are types that require signatures. This is to ensure that services aren't tied to a specific transport implementation.
 
 ## Adding a new service
 

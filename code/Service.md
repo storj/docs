@@ -74,7 +74,7 @@ func NewService(
 
 // VerifyOrderLimitSignature verifies that the signature inside order limit belongs to the satellite.
 //
-// NOTE it accepts pb.OrderLimit becase it uses its serialization to verify the signature.
+// NOTE it accepts pb.OrderLimit because it uses its serialization to verify the signature.
 func (service *Service) VerifyOrderLimitSignature(ctx context.Context, signed *pb.OrderLimit) (err error) {
 	defer mon.Task()(&ctx)(&err)
 	return signing.VerifyOrderLimitSignature(ctx, service.satellite, signed)

@@ -4,6 +4,8 @@ Services handle internal peer logic. Services use databases or other services to
 
 Services do not have a life-cycle, usually, which means they must be explicitly shut down. It should be safe to run the same service concurrently in the same process or multiple processes.
 
+Arguments to / return values from services should be hand-crafted Go types, rather than generated protobuf types. Exceptions for this are types that require signatures. This is to ensure that services aren't tied to a specific transport implementation.
+
 ## Adding a new service
 
 To add a new service there are few steps:
@@ -20,7 +22,7 @@ To add a new service there are few steps:
 
 A basic service implementation looks like:
 
-```
+```go
 package orders
 
 import (
@@ -71,6 +73,8 @@ func NewService(
 }
 
 // VerifyOrderLimitSignature verifies that the signature inside order limit belongs to the satellite.
+//
+// NOTE it accepts pb.OrderLimit because it uses its serialization to verify the signature.
 func (service *Service) VerifyOrderLimitSignature(ctx context.Context, signed *pb.OrderLimit) (err error) {
 	defer mon.Task()(&ctx)(&err)
 	return signing.VerifyOrderLimitSignature(ctx, service.satellite, signed)

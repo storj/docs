@@ -48,6 +48,22 @@ To setup a shared folder:
 1. Find the shared folder under `Network > VBOXSRV`
     * You may see an error dialog that the Network Discovery is turned off. Turn it on from the prompt in Windows Explorer and try again.
 
+
+### Setup storage disk
+The minimum size of the storage partition is set to 500 GB and the default allocated space is set to 1 TB. If you don't have a partition with enough space, you can create a dynamically-allocated VDI disk image and attach it your VM.
+
+1. Right-click on the Windows VM in VirtualBox
+1. Select `Settings...`
+1. Select `Storage`
+1. Click on the '+' icon to create a new controller
+1. Right click on the newly created controller and select `add a hard drive`
+1. Select "create a new disk"
+1. As disk type, select VDI
+1. Choose "dynamically allocated"
+1. Select the desired size (2 TB) and confirm
+
+To be able to use the disk, you need to create a NTFS partition using the windows disk management panel.
+
 ## Setup Dev Tools
 
 On your Windows VM/system, install the following tools:

@@ -102,29 +102,26 @@ For convenience, you may run the command in a single line, like so:
 
 `storj-sim network destroy && storj-sim network setup && storj-sim network test bash my-test-script.sh`
 
-### Running Tests With Postgres
+### Running Tests as storj-sim With Postgres
 
-Here are the steps to run storj-sim with postgres instead of the default sqlite:
+Here are the steps to run storj-sim with postgres:
 
 Step 1: Start a postgres instance.
 
 One way to do this is to run a postgres container locally. For example, the following commands will run a postgres docker container locally:
 
+The following assumes that docker and psql are already installed.
 ```
-// Setup: install docker and psql
-
 // pull down official docker image
 $ docker pull postgres
 
-$ docker run --rm -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=<pw> postgres
+$ docker run --rm -p 5432:5432 --name postgres postgres
 
 // in a different tab run this command to log into the postgres
 // interactive terminal
 $ psql -h localhost -U postgres
 
-// there will be a pw prompt
-
-// once in the psql terminal, create the database
+// once in the psql terminal, create a database for storj-sim to use
 $ create database <dbName>;
 ```
 
@@ -133,7 +130,7 @@ Step 2: Run storj sim with postgres
 ```
 // setup storj-sim network with postgres connection string. You can supply any password
 // and database name as long as they match the postgres instance running above
-$ storj-sim network --postgres=postgres://postgres:<pw>@localhost/<dbName>?sslmode=disable setup
+$ storj-sim network --postgres=postgres://postgres@localhost/<dbName>?sslmode=disable setup
 
 $ storj-sim network run
 ```

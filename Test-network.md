@@ -26,8 +26,10 @@ This will install the storj-sim satellite storage node gateway and uplink binari
 
 Next, run setup:
 
+Postgres is required for storj-sim. There needs to be a postgres instance running and the connection string needs to be provided to storj-sim on setup. See section on [using postgres](#using-postgres) below for details.
+
 ```bash
-storj-sim network setup
+storj-sim network setup --postgres=postgresql://[user]@[addr][:port]/[dbname]?sslmode=disable
 ```
 
 You now have a configured Storj test network with default configuration options.
@@ -102,7 +104,7 @@ For convenience, you may run the command in a single line, like so:
 
 `storj-sim network destroy && storj-sim network setup && storj-sim network test bash my-test-script.sh`
 
-### Running Tests as storj-sim With Postgres
+### Using Postgres
 
 Here are the steps to run storj-sim with postgres:
 
@@ -130,7 +132,7 @@ Step 2: Run storj sim with postgres
 ```
 // setup storj-sim network with postgres connection string. You can supply any password
 // and database name as long as they match the postgres instance running above
-$ storj-sim network --postgres=postgres://postgres@localhost/<dbName>?sslmode=disable setup
+$ storj-sim network setup --postgres=postgres://postgres@localhost/<dbName>?sslmode=disable
 
 $ storj-sim network run
 ```

@@ -26,8 +26,10 @@ This will install the storj-sim satellite storage node gateway and uplink binari
 
 Next, run setup:
 
+Postgres is required for storj-sim. There needs to be a postgres instance running and the connection string needs to be provided to storj-sim on setup. See section on [using postgres](#using-postgres) below for details.
+
 ```bash
-storj-sim network setup
+storj-sim network setup --postgres=postgresql://[user]@[addr][:port]/[dbname]?sslmode=disable
 ```
 
 You now have a configured Storj test network with default configuration options.
@@ -94,7 +96,7 @@ For a real-world example you can take a look in [test-sim.sh](https://github.com
 
 ### Wiping the Testnet
 
-`storj-sim network destroy` can be used to wipe the network easily.
+`storj-sim network destroy` can be used to wipe the network easily. However postgres database is not wiped.
 
 While developing it's often nice to be able to delete the network and set it up from scratch.
 
@@ -102,29 +104,26 @@ For convenience, you may run the command in a single line, like so:
 
 `storj-sim network destroy && storj-sim network setup && storj-sim network test bash my-test-script.sh`
 
-### Running Tests With Postgres
+### Using Postgres
 
-Here are the steps to run storj-sim with postgres instead of the default sqlite:
+Here are the steps to run storj-sim with postgres:
 
 Step 1: Start a postgres instance.
 
 One way to do this is to run a postgres container locally. For example, the following commands will run a postgres docker container locally:
 
+The following assumes that docker and psql are already installed.
 ```
-// Setup: install docker and psql
-
 // pull down official docker image
 $ docker pull postgres
 
-$ docker run --rm -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=<pw> postgres
+$ docker run --rm -p 5432:5432 --name postgres postgres
 
 // in a different tab run this command to log into the postgres
 // interactive terminal
 $ psql -h localhost -U postgres
 
-// there will be a pw prompt
-
-// once in the psql terminal, create the database
+// once in the psql terminal, create a database for storj-sim to use
 $ create database <dbName>;
 ```
 
@@ -133,7 +132,7 @@ Step 2: Run storj sim with postgres
 ```
 // setup storj-sim network with postgres connection string. You can supply any password
 // and database name as long as they match the postgres instance running above
-$ storj-sim network --postgres=postgres://postgres:<pw>@localhost/<dbName>?sslmode=disable setup
+$ storj-sim network setup --postgres=postgres://postgres@localhost/<dbName>?sslmode=disable
 
 $ storj-sim network run
 ```

@@ -96,7 +96,7 @@ For a real-world example you can take a look in [test-sim.sh](https://github.com
 
 ### Wiping the Testnet
 
-`storj-sim network destroy` can be used to wipe the network easily.
+`storj-sim network destroy` can be used to wipe the network easily. However postgres database is not wiped.
 
 While developing it's often nice to be able to delete the network and set it up from scratch.
 

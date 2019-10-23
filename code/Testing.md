@@ -14,7 +14,7 @@ All errors must be handled and checked and don't hide errors.
 See [Error Handling](Style.md#error-handling) for more details.
 
 
-## Prefer `_test` in test package names
+## Prefer `test` in test package names
 
 By using different package name we are testing the exposed behavior rather than the internal behavior making the tests more robust against changes.
 
@@ -169,7 +169,7 @@ For documentation [`example.com`](https://www.iana.org/domains/reserved) can als
 
 Part of our [current implementation uses different _database backends_](Database), some of them are used to run the test in local without having to always depend of third party external systems when developing.
 
-Because using a different _database backend_ for development than in production can cause that some tests pass in local meanwhile fail using the production _database_ backend_, the CI runs all the tests with all the supported _backends_ or at least with the one used in production.
+Because using a different _database backend_ for development than in production can cause that some tests pass in local meanwhile fail using the production _database backend_, the CI runs all the tests with all the supported _backends_ or at least with the one used in production.
 
 Sometimes, meanwhile developing, it's less than ideal that for having feedback of each change the developer must push the code to run the CI, making pretty convenient to run the tests which the production _databse backend_. Currently this is the case for PostgreSQL in:
 

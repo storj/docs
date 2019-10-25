@@ -23,7 +23,7 @@ By using different package name we are testing the exposed behavior rather than 
 
 Use `log := zaptest.NewLogger(t)` as the root logger for services. Use `t.Log`, if you need single logging.
 
-Using `fmt.Print` or other global loggers bypasses built in logging behavior in `testing` package. This means that when running tests in parallel logs can appear in wrong places.
+Using `fmt.Print` or other global loggers bypass built-in logging behavior in `testing` package. This means that when running tests in parallel logs can appear in the wrong places.
 
 
 ## Close all opened resources

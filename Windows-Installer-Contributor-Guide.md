@@ -68,6 +68,7 @@ To be able to use the disk, you need to create a NTFS partition using the window
 
 On your Windows VM/system, install the following tools:
 
+1. Microsoft Dot Net Framework 3.5 from https://www.microsoft.com/en-us/download/confirmation.aspx?id=21 (it's required by Wix Toolset see issue: https://github.com/wixtoolset/issues/issues/5523).
 1. Latest WiX Toolset 3.x from https://wixtoolset.org/
 1. Visual Studio 2019 Community: https://visualstudio.microsoft.com/downloads/
     * It comes with a free license. After the 30 days trial, you will be asked to sign-in with your Microsoft account (which is free to create) and you will be able to continue using it for free.

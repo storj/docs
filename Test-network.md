@@ -141,20 +141,24 @@ $ storj-sim network run
 A few different processes can use redis as their database. Live accounting cache and revocation db both need to use redis on the Satellite. They will exist as separate databases on the same redis instance. For example, live accouning may use `redis://127.0.0.1:6379?db=0` while revocation may use `redis://127.0.0.1:6379?db=1`. 
 
 The default on storj-sim is to create a test redis server automatically and assign databases to processes incrementally based on how many Satellites are run. For example, if you're running 2 satellites, a configuration like the following may be generated.
+```
+// satellite 0
+--live-accounting.db: redis://127.0.0.1:5678?db=0
+--server.revocation-dburl: redis://127.0.0.1:5678?db=1
+```
 
-satellite 0:
-`--live-accounting.db: redis://127.0.0.1:5678?db=0`
-`--server.revocation-dburl: redis://127.0.0.1:5678?db=1`
+```
+satellite 1
+--live-accounting.db: redis://127.0.0.1:5678?db=2
+--server.revocation-dburl: redis://127.0.0.1:5678?db=3
+```
 
-satellite 1:
-`--live-accounting.db: redis://127.0.0.1:5678?db=2`
-`--server.revocation-dburl: redis://127.0.0.1:5678?db=3`
- 
 However, on setup, you may pass in a redis address for a `redis-server` you're already running locally like in this example: `storj-sim network setup --redis redis://127.0.0.1:6379` 
 
 Note: 
 To set up a redis server locally, you can download redis here: https://redis.io/download
-Once downloaded, simply run `redis-server` or `redis-server -port <port>` in a separate terminal.
+Once downloaded, simply run `redis-server` or `redis-server -port <port>` in a separate terminal window.
+
 ***
 
 ## Next Steps

@@ -148,7 +148,7 @@ The default on storj-sim is to create a test redis server automatically and assi
 ```
 
 ```
-satellite 1
+// satellite 1
 --live-accounting.db: redis://127.0.0.1:5678?db=2
 --server.revocation-dburl: redis://127.0.0.1:5678?db=3
 ```

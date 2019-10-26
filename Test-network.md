@@ -137,6 +137,9 @@ $ storj-sim network setup --postgres=postgres://postgres@localhost/<dbName>?sslm
 $ storj-sim network run
 ```
 
+### Using Redis
+
+
 ***
 
 ## Next Steps

@@ -156,9 +156,7 @@ The default on storj-sim is to create a test redis server automatically and assi
 However, on setup, you may pass in a redis address for a `redis-server` you're already running locally like in this example: `storj-sim network setup --redis redis://127.0.0.1:6379` 
 
 Note: 
-To set up a redis server locally, you can download redis here: https://redis.io/download
-
-Once downloaded, simply run `redis-server` or `redis-server -port <port>` in a separate terminal window.
+To set up a redis server locally, you can download redis here: https://redis.io/download. Once downloaded, simply run `redis-server` or `redis-server -port <port>` in a separate terminal window.
 
 ***
 

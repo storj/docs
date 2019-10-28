@@ -32,7 +32,7 @@ Assumes all steps occur from the home directory of the https://github.com/storj/
 
     $ protolock commit
 
-4. If step 3 fails with an error, your changes are not backward compatible! You should fix that, because we need to maintain backward compatibility so that versions of storagenode/satellite/uplink/etc built at different times can still communicate with each other. We should not break backward compatibility without _very_ careful investigation of the ramifications. If we are sure that the change is still ok, you can use the `--force` argument to protolock to override its complaint:
+4. If step 3 fails with an error, your changes are not backward compatible! You should fix that, because we need to maintain backward compatibility so that versions of storagenode/satellite/uplink/etc built at different times can still communicate with each other. We should not break backward compatibility without _very_ careful investigation of the ramifications. For example, a backward-incompatible change might be fine if none of the protobufs are actually used for communication between any existing system components yet. If we are sure that the change is still ok, you can use the `--force` argument to protolock to override its complaint:
 
     $ protolock commit --force
 

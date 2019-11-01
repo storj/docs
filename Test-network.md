@@ -140,23 +140,57 @@ $ storj-sim network run
 ### Using Redis
 A few different processes can use redis as their database. Live accounting cache and revocation db both need to use redis on the Satellite. They will exist as separate databases on the same redis instance. For example, live accouning may use `redis://127.0.0.1:6379?db=0` while revocation may use `redis://127.0.0.1:6379?db=1`. 
 
-The default on storj-sim is to create a test redis server automatically and assign databases to processes incrementally based on how many Satellites are run. For example, if you're running 2 satellites, a configuration like the following may be generated.
+By default, storj-sim will start a redis server for each Satellite that is run and write the respective connection string for each database to a redis.conf file. You must have `redis-server` installed locally for this process to run. You can download redis at https://redis.io/download.
+
+For example, if you're running 2 satellites...
+
+```
+storj-sim network --satellites 2 setup
+storj-sim network --satellites 2 run
+```
+
+...a configuration like the following may be generated.
+
 ```
 // satellite 0
---live-accounting.db: redis://127.0.0.1:5678?db=0
---server.revocation-dburl: redis://127.0.0.1:5678?db=1
+--live-accounting.db: redis://127.0.0.1:10004?db=0
+--server.revocation-dburl: redis://127.0.0.1:10004?db=1
 ```
 
 ```
 // satellite 1
---live-accounting.db: redis://127.0.0.1:5678?db=2
---server.revocation-dburl: redis://127.0.0.1:5678?db=3
+--live-accounting.db: redis://127.0.0.1:10014?db=0
+--server.revocation-dburl: redis://127.0.0.1:10014?db=1
 ```
 
-However, on setup, you may pass in a redis address for a `redis-server` you're already running locally like in this example: `storj-sim network setup --redis redis://127.0.0.1:6379` 
+Alternatively, you can set up your own redis server and connect storj-sim directly. 
 
-Note: 
-To set up a redis server locally, you can download redis here: https://redis.io/download. Once downloaded, simply run `redis-server` or `redis-server -port <port>` in a separate terminal window.
+For example, you may run `redis-server` (default port = `6379`) or `redis-server --port <port>` then `storj-sim network setup --redis 127.0.0.1:<port>`. You can also set an environment variable for $STORJ_SIM_REDIS, e.g. `export STORJ_SIM_REDIS=127.0.0.1:<port>` then simply run `storj-sim network setup` without passing in a flag. All Satellites will use the same server but different dbs if you run a redis server yourself.
+
+Example for 2 satellites:
+```
+storj-sim network --satellites 2 --redis 127.0.0.1:6379 setup
+storj-sim network --satellites 2 run
+```
+OR
+```
+export STORJ_SIM_REDIS=127.0.0.1:6379
+storj-sim network --satellites 2 setup
+storj-sim network --satellites 2 run
+```
+results in:
+
+```
+// satellite 0
+--live-accounting.db: redis://127.0.0.1:6379?db=0
+--server.revocation-dburl: redis://127.0.0.1:6379?db=1
+```
+
+```
+// satellite 1
+--live-accounting.db: redis://127.0.0.1:6379?db=2
+--server.revocation-dburl: redis://127.0.0.1:6379?db=3
+```
 
 ***
 

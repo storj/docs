@@ -140,7 +140,7 @@ $ storj-sim network run
 ### Using Redis
 A few different processes can use redis as their database. Live accounting cache and revocation db both need to use redis on the Satellite. They will exist as separate databases on the same redis instance. For example, live accouning may use `redis://127.0.0.1:6379?db=0` while revocation may use `redis://127.0.0.1:6379?db=1`. 
 
-By default, storj-sim will start a redis server for each Satellite that is run and write the respective connection string for each database to a redis.conf file. You must have `redis-server` installed locally for this process to run. You can download redis at https://redis.io/download.
+By default, storj-sim will start a redis server for each Satellite that is run and write the respective connection string for each database to a redis.conf file. You must have `redis-server` installed locally for this process to run. You can download redis at https://redis.io/download. (On macOS you can install redis with homebrew `brew install redis`)
 
 For example, if you're running 2 satellites...
 
@@ -191,6 +191,8 @@ results in:
 --live-accounting.db: redis://127.0.0.1:6379?db=2
 --server.revocation-dburl: redis://127.0.0.1:6379?db=3
 ```
+
+If you're running your own redis server, you can designate the database value to start with flag `--db-start` which defaults to `0`. For example, `storj-sim network --satellites 2 --redis 127.0.0.1:6379 --db-start 3 setup` will start incrementing the dbs from 3 (db=3,4,5,6 for 2 satellites). It assumes all databases from the start value onward are available.
 
 ***
 

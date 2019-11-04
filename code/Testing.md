@@ -14,7 +14,7 @@ All errors must be handled and checked and don't hide errors.
 See [Error Handling](Style.md#error-handling) for more details.
 
 
-## Prefer `_test` in test package names
+## Prefer `test` in test package names
 
 By using different package name we are testing the exposed behavior rather than the internal behavior making the tests more robust against changes.
 
@@ -23,7 +23,7 @@ By using different package name we are testing the exposed behavior rather than 
 
 Use `log := zaptest.NewLogger(t)` as the root logger for services. Use `t.Log`, if you need single logging.
 
-Using `fmt.Print` or other global loggers bypasses built in logging behavior in `testing` package. This means that when running tests in parallel logs can appear in wrong places.
+Using `fmt.Print` or other global loggers bypass built-in logging behavior in `testing` package. This means that when running tests in parallel logs can appear in the wrong places.
 
 
 ## Close all opened resources
@@ -169,14 +169,16 @@ For documentation [`example.com`](https://www.iana.org/domains/reserved) can als
 
 Part of our [current implementation uses different _database backends_](Database), some of them are used to run the test in local without having to always depend of third party external systems when developing.
 
-Because using a different _database backend_ for development than in production can cause that some tests pass in local meanwhile fail using the production _database_ backend_, the CI runs all the tests with all the supported _backends_ or at least with the one used in production.
+Because using a different _database backend_ for development than in production can cause that some tests pass in local meanwhile fail using the production _database backend_, the CI runs all the tests with all the supported _backends_ or at least with the one used in production.
 
 Sometimes, meanwhile developing, it's less than ideal that for having feedback of each change the developer must push the code to run the CI, making pretty convenient to run the tests which the production _databse backend_. Currently this is the case for PostgreSQL in:
 
 * [Database migrations](Database).
 * Test SIM (i.e. `make test-sim`).
 
-In order to use PostgreSQL for running the tests in a local development machine you have to setup and run PostgreSQL v11 in your machine or run a Docker container using a [PostgreSQL image](https://hub.docker.com/_/postgres) and run the tests as follow:
+In order to use PostgreSQL<sup>1</sup> for running the tests in a local development machine you have to setup and run PostgreSQL v9.6 in your machine or run a Docker container using a [PostgreSQL image](https://hub.docker.com/_/postgres) and run the tests as follow:
 
 1. For _Go tests_, use the environment variable `STORJ_POSTGRES_TEST` to specify a connection URL (i.e. `postgres://[user][:password]@[host]?sslmode=disable`) when running them, for example `STORJ_POSTGRES_TEST="postgres://postgres:pass@localhost?sslmode=disable" go test ./...`
 2. For _test sim_ use the environment variable `STORJ_SIM_POSTGRES` to specify a connection URL with an existing database (preferably an empty one) (i.e `postgres://[user][:password]@[host]/[database]?sslmode=disable`) when running them, for example `STORJ_SIM_POSTGRES="postgres://postgres:pass@localhost/teststorj?sslmode=disable" make test-sim`. For creating an empty database in Postgres, you can easily do with it's Postgres client running for example `psql -U postgres -c 'create database teststorj;'` for creating a database named `teststorj` (you can also use the Docker image commented above rather than the locally installed Postgres client `psql`).
+
+<sup>1</sup>PostgreSQL is currently required to run some Go tests.

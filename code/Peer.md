@@ -1,15 +1,15 @@
 # Peer
 
-Peer is the top-level entity in Storj. In the production network every peer runs in a standalone process. For tests multiple peers may run in a single process.
+Peer is the top-level entity in Storj. In the production network every peer runs in a standalone process (except Satellite, which is many processes). For tests multiple peers may run in a single process.
 
 Peers describe how a particular network participant is setup, wired together and run.
 
 Currently the network contains these peers:
 
 1. Storage Node
-2. Satellite
-3. Uplink
-4. Version Control
+2. Uplink
+3. Version Control
+4. Satellite (the satellite peer is made up of satellite.Core, satellite.API, and satellite.Repairer)
 
 ## Lifecycle
 

@@ -192,7 +192,7 @@ results in:
 --server.revocation-dburl: redis://127.0.0.1:6379?db=3
 ```
 
-If you're running your own redis server, you can designate the database value to start with flag `--db-start` which defaults to `0`. For example, `storj-sim network --satellites 2 --redis 127.0.0.1:6379 --db-start 3 setup` will start incrementing the dbs from 3 (db=3,4,5,6 for 2 satellites). It assumes all databases from the start value onward are available.
+If you're running your own redis server, you can designate the database value to start with flag `--redis-startdb` which defaults to `0`. For example, `storj-sim network --satellites 2 --redis 127.0.0.1:6379 --redis-startdb 3 setup` will start incrementing the dbs from 3 (db=3,4,5,6 for 2 satellites). It assumes all databases from the start value onward are available.
 
 ***
 

@@ -77,11 +77,12 @@ On your Windows VM/system, install the following tools:
 
 ## Build Storage Node Binaries for Windows
 
-You need to build the Storage Node Binaries for Windows to include them in the project of the Windows Installer.
+You need to build the Storage Node Binaries for Windows to include them in the project of the Windows Installer. You also have to tag a version, as the version of the Windows Installer is bound to the version of the Storage Node binary.
 
-The easiest way to do this is to execute the following two commands in the root of the locally cloned https://github.com/storj/storj repository:
+The easiest way to do this is to execute the following three commands in the root of the locally cloned https://github.com/storj/storj repository, assuming you are compiling version v1.2.3:
 
 ```
+git tag v1.2.3
 make storagenode_windows_amd64
 make storagenode-updater_windows_amd64
 ```

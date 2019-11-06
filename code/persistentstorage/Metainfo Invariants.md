@@ -12,6 +12,8 @@ At all times, we need to remember:
 
 **Data in metainfo can change at any time.**
 
+When this document talks about ordering changes, then it implies that they are flushed and committed to the database and not part of a transaction.
+
 ## Update and Delete data you know.
 
 When deleting or updating data, we always need to provide the "original data" we started the operation with and use `CompareAndSwap` either directly or indirectly.

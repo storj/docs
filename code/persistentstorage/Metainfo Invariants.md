@@ -67,7 +67,7 @@ Example problem scenario:
     mark graceful exiting piece X to node Q
     update X to contain Q in pointer db
     // satellite crashes
-    receive response from node Q
+    receive response from node Q // this doesn't get executed
 }
 
 {

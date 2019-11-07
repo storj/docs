@@ -147,6 +147,36 @@ Logging shouldn't be very chatty, except the `DEBUG` level which is useful durin
 
 The exception about logging more information than `DEBUG` and unrecognized errors are the command line tools; those one use the logger for also informing to the user about the important operations which are executed.
 
+### Avoid log names in log messages
+
+Treat the log name `log.Named("XYZ")` as part of the log message. It's expected to have log names turned on for production and development.
+
+For example:
+
+```
+package contact
+type Chore struct {
+	log *zap.Logger
+	...
+}
+
+func (chore *Chore) Run(ctx context.Context) (err error) {
+	chore.log.Info("storagenode contact chore starting up")
+```
+
+Would end up looking like this in storj-sim log:
+
+```
+storagenode/4        127iLKuetd 17:10:31.537 | INFO     contact:chore   contact/chore.go:49     Storagenode contact chore starting up
+storagenode/7                   17:10:31.390 | INFO     gracefulexit:chore      gracefulexit/chore.go:67        running graceful exit chore.
+```
+
+We know that the log is related to `storagenode` and the `contact:chore` based on the logname and the thing logging. The code could be replaced with:
+
+```
+func (chore *Chore) Run(ctx context.Context) (err error) {
+	chore.log.Info("starting")
+```
 
 ## Variable naming
 

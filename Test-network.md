@@ -29,7 +29,7 @@ Next, run setup:
 Postgres is required for storj-sim. There needs to be a postgres instance running and the connection string needs to be provided to storj-sim on setup. See section on [using postgres](#using-postgres) below for details.
 
 ```bash
-storj-sim network setup --postgres=postgresql://[user]@[addr][:port]/[dbname]?sslmode=disable
+storj-sim network setup --postgres=postgres://[user]@[addr][:port]/[dbname]?sslmode=disable
 ```
 
 You now have a configured Storj test network with default configuration options.

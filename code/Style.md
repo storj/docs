@@ -312,6 +312,17 @@ defer mon.Task()(&ctx)(&err)
 
 If the function really can't take a context, then either create a context first with `context.TODO()`, or pass `nil` instead of `&ctx`. If the function really won't ever error, then you can pass `nil` instead of `&err` as well.
 
+### Intentional Metrics
+When we add a monkit call to track information outside the basic `mon.Task()` telemetry discussed above, make sure it is locked with the `//locked` comment and run `go generate ./scripts/check-monitoring.go` to update the `monkit.lock` file.
+
+This is to ensure that we do not accidentally lose metric tracking when code moves around or changes.
+
+Example:
+```
+mon.FloatVal("audit_successful_percentage").Observe(successfulPercentage) //locked
+
+```
+
 ## SQL code
 
 SQL statements must use query arguments to avoid potential current and future issues with SQL injection. See [OWASP SQL Injection](https://www.owasp.org/index.php/SQL_Injection) for more information.

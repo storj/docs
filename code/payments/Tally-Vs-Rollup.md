@@ -22,7 +22,7 @@ We need to create invoices from Uplinks to display what they are paying for. We 
 Here is a high level overview of how tallies and rollups are used in the code base.
 
 The items that are tallied include:
-- storage usage (i.e. bytes stored) for storage nodes
+- storage usage (i.e. byte hours stored) for storage nodes
 - storage usage (i.e. bytes stored) for uplinks
 
 The items that are rolled-up include:
@@ -54,7 +54,7 @@ When the SA receives requests to settle Orders from the SN, the SA then adds/upd
 Satellite.DB tables:
 - `storagenode_bandwidth_rollups`
 - `bucket_bandwidth_rollups`
-- `bucket_storage_tallyies`
+- `bucket_storage_tallies`
 - `storagenode_storage_tallies`
 - `bucket_storage_rollups`
 - `storagenode_storage_rollups`
@@ -66,3 +66,16 @@ Satellite.DB tables:
 | **who creates data** | SA  | Tally service | Rollup service |
 | **when is data created** | SA creates/updates rollup when settling `Orders` from SN | when Tally service runs | when Rollup service runs |
 | **where is data stored** | adds/updates a record in `storagenode_bandwidth_rollup` & `bucket_bandwidth_rollup` table | adds a record in `bucket_storage_tally` & `storagenode_storage_tally` table | adds a record in `bucket_storage_rollup` & `storagenode_storage_rollup` table |
+
+
+#### Notes on units and calculations
+
+As stated above, storage usage for storagenodes is stored in the `storagenode_storage_tallies` as byte hours.
+These values are calculated within the `Tally` method of the tally service. Each quantity of storage is multiplied by the 
+time since the service last ran.
+
+The storage usage for uplinks (buckets) is slightly different. First the storage usage for buckets is calculated within the same
+`Tally` method as that of the storagenodes. Then it's stored within `bucket_storage_tallies` as simply bytes, not byte hours. 
+The units are converted to byte hours within the `ProjecAccounting` interface's `GetBucketUsageRollups` method which sums the 
+data from `bucket_storage_tallies` for a given period.
+

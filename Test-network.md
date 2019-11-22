@@ -8,7 +8,7 @@ In every day Storj usage, the Satellite, Storage Node, and Uplink are run
 on separate servers and computers, but for the purposes of the test network,
 all of the components are run locally.
 
-# Installation and configuration
+## Installation and configuration
 
 First, you'll need at least [Go 1.13](https://www.golang.org/). Once Go is
 installed run:
@@ -42,7 +42,7 @@ For insight into what is happening under the hood you can use `-x` or `--print-c
 
 The next step is to run it!
 
-# Running the test network
+## Running the test network
 
 Now that the configuration has been completed, we can fire up the test network with:
 

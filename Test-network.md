@@ -34,7 +34,7 @@ storj-sim network setup --postgres=postgres://[user]@[addr][:port]/[dbname]?sslm
 
 You now have a configured Storj test network with default configuration options.
 
-You might also want to take a look at the config by navigating to the root 
+You might also want to take a look at the config by navigating to the root
 directory `--config-dir` where all the configs are specified.
 You can tweak the configuration settings there as needed.
 
@@ -138,7 +138,7 @@ $ storj-sim network run
 ```
 
 ### Using Redis
-A few different processes can use redis as their database. Live accounting cache and revocation db both need to use redis on the Satellite. They will exist as separate databases on the same redis instance. For example, live accouning may use `redis://127.0.0.1:6379?db=0` while revocation may use `redis://127.0.0.1:6379?db=1`. 
+A few different processes can use redis as their database. Live accounting cache and revocation db both need to use redis on the Satellite. They will exist as separate databases on the same redis instance. For example, live accouning may use `redis://127.0.0.1:6379?db=0` while revocation may use `redis://127.0.0.1:6379?db=1`.
 
 By default, storj-sim will start a redis server for each Satellite that is run and write the respective connection string for each database to a redis.conf file. You must have `redis-server` installed locally for this process to run. You can download redis at https://redis.io/download. (On macOS you can install redis with homebrew `brew install redis`)
 
@@ -163,7 +163,7 @@ storj-sim network --satellites 2 run
 --server.revocation-dburl: redis://127.0.0.1:10014?db=1
 ```
 
-Alternatively, you can set up your own redis server and connect storj-sim directly. 
+Alternatively, you can set up your own redis server and connect storj-sim directly.
 
 For example, you may run `redis-server` (default port = `6379`) or `redis-server --port <port>` then `storj-sim network setup --redis 127.0.0.1:<port>`. You can also set an environment variable for $STORJ_SIM_REDIS, e.g. `export STORJ_SIM_REDIS=127.0.0.1:<port>` then simply run `storj-sim network setup` without passing in a flag. All Satellites will use the same server but different dbs if you run a redis server yourself.
 

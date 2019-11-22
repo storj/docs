@@ -312,6 +312,28 @@ defer mon.Task()(&ctx)(&err)
 
 If the function really can't take a context, then either create a context first with `context.TODO()`, or pass `nil` instead of `&ctx`. If the function really won't ever error, then you can pass `nil` instead of `&err` as well.
 
+NOTE the function returned by `mon.Task()` [accepts a list of variadic arguments](https://godoc.org/gopkg.in/spacemonkeygo/monkit.v2#Task) after the first `*context.Context` parameter. This arguments are attached to the trace and they can be helpful for having more insights of them.
+The arguments should be the ones of the parent functions, however, some arguments may not be very useful, for example a raw protocol buffer request. Think about the arguments of the function and pass them to monkit instrumentation when they can give insights to the instrumentation.
+
+
+```golang
+func (endpoint *Endpoint) DeletePiece(ctx context.Context, req pb.DeletePieceRequest) (*pb.DeletePieceResponse, err error) {
+	// req only contains one field PieceID. PieceID is a slice of bytes which won't bring to much
+	// human readable information, however it will its string representation, hence we pass it.
+	defer mon.Task()(&ctx, req.PieceID.String())(&err)
+
+	// .... The rest of the function logic
+}
+
+// ...
+
+func (reader ContextWriter) Writer(ctx context.Context, data []byte) (n int, err error) {
+	// We don't pass data because it won't bring any useful information to the metric.
+	defer mon.Task()(&ctx)(&err)
+}
+
+```
+
 ### Intentional Metrics
 When we add a monkit call to track information outside the basic `mon.Task()` telemetry discussed above, make sure it is locked with the `//locked` comment and run `go generate ./scripts/check-monitoring.go` to update the `monkit.lock` file.
 

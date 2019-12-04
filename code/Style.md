@@ -292,6 +292,14 @@ If a package alias is required prefer to rename the external packages rather tha
 * If threading a `ctx` variable through your callstack is more work than reasonable for your PR, use `context.TODO()` instead of `context.Background()` so you can come back to it later.
 * In a `main()` method, if you're using `pkg/process.Exec` with `*cobra.Cmd`, you can use `process.Ctx(cmd)` to retrieve a command-specific context, instead of making a new one.
 
+When you need to check for premature exit use `ctx.Err()` directly, selecting on `context.Done()` is not necessary:
+
+```
+if err := ctx.Err(); err != nil {
+	return err
+}
+```
+
 ## Implementing Interfaces
 
 To show that a type implements a particular interface use:

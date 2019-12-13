@@ -119,12 +119,12 @@ $ docker pull postgres
 
 $ docker run --rm -p 5432:5432 --name postgres postgres
 
-// in a different tab run this command to log into the postgres
+// in a different tab run this command to create a database for storj-sim to use
+$ docker exec -it postgres createdb -U postgres teststorj
+
+// if you want to run your own postgres queries, run this command to log into the postgres
 // interactive terminal
 $ psql -h localhost -U postgres
-
-// once in the psql terminal, create a database for storj-sim to use
-$ create database <dbName>;
 ```
 
 Step 2: Run storj sim with postgres

@@ -39,7 +39,6 @@ The `uplink` command has a number of operations that can be performed, such as:
  * `cp` - copy a file from outside of Storj to inside or vice versa
  * `ls` - list buckets or files in Storj
  * `mb` - make a new bucket
- * `mount` - mount a bucket to a location in your Linux filesystem for read-only access.
  * `put` - writes data from standard in to a file in Storj
  * `rb` - remove a bucket
  * `rm` - remove a file.
@@ -76,15 +75,6 @@ documentation, but some example commands are listed below:
 ```bash
 ./uplink_darwin_amd64 rm sj://bucket-name/your-large-file.mp4
 ```
-
-#### Show files in filesystem
-
-```bash
-mkdir -p ~/bucket-name
-uplink mount sj://bucket-name/ ~/bucket-name/
-```
-
-This only works well on Linux for now, but macOS and Windows support is planned!
 
 ## Conclusion
 

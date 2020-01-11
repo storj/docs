@@ -11,4 +11,4 @@ Have fun!
 
 ## License
 
-Apache 2.0 Copyright © 2018 Storj Labs, Inc.
+Apache 2.0 Copyright © 2020 Storj Labs, Inc.

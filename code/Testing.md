@@ -167,7 +167,7 @@ For documentation [`example.com`](https://www.iana.org/domains/reserved) can als
 
 ## Running test through PostgreSQL
 
-Part of our [current implementation uses different _database backends_](Database), some of them are used to run the test in local without having to always depend of third party external systems when developing.
+Part of our [current implementation uses different _database backends_](https://github.com/storj/docs/blob/master/code/Database.md), some of them are used to run the test in local without having to always depend of third party external systems when developing.
 
 Because using a different _database backend_ for development than in production can cause that some tests pass in local meanwhile fail using the production _database backend_, the CI runs all the tests with all the supported _backends_ or at least with the one used in production.
 

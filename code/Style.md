@@ -34,6 +34,8 @@ import (
 )
 ```
 
+Note: for https://golang.org/pkg/sync/atomic/#pkg-note-BUG you would need to align the memory. Either use padding or reorder to fix the possible issue.
+
 ## Linting
 
 All code should pass the linters setup in the project folder.
@@ -358,6 +360,32 @@ Making synchronous methods to asynchornous is usually easier than making an asyn
 Sleeps usually hide racy behavior, proper synchronization usually doesn't need them.
 
 Of course using sleeps, tickers for scheduling or for avoiding thundering herd problem is acceptable.
+
+## Field order
+
+Prefer consistency in field ordering. The usual ordering is "dependencies", "immutable information" (e.g. configuration) and finally "internal state". In some cases it's beneficial to have multiple groupings in "internal state" (e.g. when dealing with mutexes). For example:
+
+```go
+type Service struct {
+	log *zap.Logger     // most common dependencies first
+	Loop *metainfo.Loop // dependencies
+	DB   satellitedb.DB // ... (prefer same order as constructor arguments, if possible)
+
+	// immutable information, such as configuration
+	config      Config
+	dialTimeout time.Duration
+
+	// internal state
+	alive   errgroup.Group
+	running int64 // atomic
+}
+
+// embedding first, however avoid, if possible
+type DB struct {
+	*sql.DB
+	log *zap.Logger
+}
+```
 
 ## Mutexes
 

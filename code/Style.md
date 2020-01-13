@@ -359,6 +359,32 @@ Sleeps usually hide racy behavior, proper synchronization usually doesn't need t
 
 Of course using sleeps, tickers for scheduling or for avoiding thundering herd problem is acceptable.
 
+## Field order
+
+Prefer consistency in field ordering. For example:
+
+```go
+type Service struct {
+	log *zap.Logger     // most common dependencies first
+	Loop *metainfo.Loop // dependencies
+	DB   satellitedb.DB // ... (prefer same order as constructor arguments, if possible)
+
+	// immutable information, such as configuration
+	config      Config
+	dialTimeout time.Duration
+
+	// internal state
+	alive   errgroup.Group
+	running int64 // atomic
+}
+
+// embedding first, however avoid, if possible
+type DB struct {
+	*sql.DB
+	log *zap.Logger
+}
+```
+
 ## Mutexes
 
 When using synchronizing structures like mutexes or condition variables organize them in the struct such that they make clear which fields are protected and which are unprotected.

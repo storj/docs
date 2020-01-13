@@ -361,7 +361,7 @@ Of course using sleeps, tickers for scheduling or for avoiding thundering herd p
 
 ## Field order
 
-Prefer consistency in field ordering. For example:
+Prefer consistency in field ordering. The usual ordering is "dependencies", "immutable information" (e.g. configuration) and finally "internal state". In some cases it's beneficial to have multiple groupings in "internal state" (e.g. when dealing with mutexes). For example:
 
 ```go
 type Service struct {

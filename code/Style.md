@@ -34,6 +34,8 @@ import (
 )
 ```
 
+Note: for https://golang.org/pkg/sync/atomic/#pkg-note-BUG you would need to align the memory. Either use padding or reorder to fix the possible issue.
+
 ## Linting
 
 All code should pass the linters setup in the project folder.

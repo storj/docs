@@ -8,10 +8,32 @@ In every day Storj usage, the Satellite, Storage Node, and Uplink are run
 on separate servers and computers, but for the purposes of the test network,
 all of the components are run locally.
 
-# Installation and configuration
+# Installing dependencies
 
-First, you'll need at least [Go 1.13](https://www.golang.org/). Once Go is
-installed run:
+You need to install:
+
+1. Go 1.13
+2. C tooling
+3. Postgres
+4. Redis
+
+Go 1.13 can be installed by following instructions at [golang.org](https://www.golang.org/).
+
+Installing C tooling:
+
+* Linux: `apt install build-essential`. Adjust for your distro.
+* Mac: Install XCode and then `xcode-select --install`.
+* Windows: [TDM-GCC](https://tdm-gcc.tdragon.net/download) is the easiest to get started with. mingw2, MSYS2 and similar would work as well, however their setup is slightly more complicated.
+
+You can setup postgres through docker. See [Using Postgres](#Using-Postgres) section for more information. Otherwise, find the appropriate installation guide for your system.
+
+Installing redis:
+
+* Linux: `apt install redis-server`. Adjust for your distro.
+* Mac: `brew install redis`.
+* Windows: Download [https://github.com/ServiceStack/redis-windows/raw/master/downloads/redis-latest.zip]. Extract to any location and add it to your Environment Variable `PATH`.
+
+# Installation and configuration
 
 ```bash
 git clone https://github.com/storj/storj.git storj

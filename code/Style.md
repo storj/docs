@@ -224,6 +224,12 @@ On the rest of the cases, __always__ use _signed integers_ (e.g. `int`, `int64`,
 
 The rationale behind this convention is that the last thing that we want is to have wacky behavior around common values and _zero_ is a common one, so we want to avoid to not get a negative number when subtracting _one_ from an _unsigned integer_ variable with value _zero_.
 
+## Dates and UTC
+
+Remember that Go stores time zone as part of `time.Time`.  This means that date/times that are functionally equal may not be `==`.  When storing a date/time to a database, make sure you use `timestamp with time zone`.  It takes up the same amount of room as a `timestamp` but automatically ensures the time is saved in UTC.  Finally, be aware that date/times stored in a database may lose/alter their time zone information.  This is particularly important when using `time.Time` in a way where binary equality matters, such as they key in a `map[time.Time]`.  In that case, always convert the date/time to UTC in your Go code first.
+
+https://wiki.postgresql.org/wiki/Don't_Do_This#Don.27t_use_timestamp_.28without_time_zone.29
+
 ## Type and method naming
 
 Consider package name as part of the type name, this avoids stutter when using the types or methods.

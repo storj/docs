@@ -18,22 +18,21 @@ An Uplink is an entry point into the Storj network. It connects to a specific Sa
 
 In the near future, additional library language wrappers will be released, allowing you to programmatically interface the Storj network with other programming languages. The first language binding that we are planning to release are for C, Java (Android), and iOS - with additional language bindings planned through community bounties.
 
-For the complete documentation around libuplink, check out the [Go Docs](http://godoc.org/storj.io/storj/lib/uplink).
-
+For the complete documentation around libuplink, check out the [Go Docs](https://pkg.go.dev/storj.io/uplink).
 
 ### Prerequisites
 
-This walkthrough assumes that the user has already created an account on a satellite and has done the following:
-* Selected a Satellite
-* Generated an API Key
-* Created a Project
-* Created a bucket
+This walkthrough assumes that the user has already has done the following:
+* [Created an account on a Satellite](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/prerequisites)
+* [Created a Project](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/create-a-project)
+* [Generated an API Key](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/create-an-api-key)
+* [Created a Bucket](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/create-a-bucket)
 
-For more information on these prerequisites, check out a walkthrough of our satellite, located [here:](https://storj.io/blog/2019/04/starting-your-first-project-on-the-tardigrade-cloud-storage-network/)
+For more information on these prerequisites, check out a walkthrough on uploading your first object, located [here:](https://documentation.tardigrade.io/getting-started/uploading-your-first-object)
 
 ### Let's write code
 
-Now that we have created  a project and generated an API key, let’s get started with some code! We are going to write a Go program with functions that will upload a file to a project that we created on the Satellite in the previous walkthrough. The full code for this walkthrough can be found at the very bottom.
+Now that we have created a project and generated an API key, let's get started with some code! We are going to write a Go program with functions that will upload a file to a project that we created on the Satellite in the previous walkthrough. The full code for this walkthrough can be found at the very bottom.
 
 First, we need to list the package and import dependencies related to the Uplink. Every Go program must be a part of some package - and because this is a standalone executable Go program, we must first make a `package main` declaration, and import some additional package dependencies as well. Write:
 

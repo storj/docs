@@ -226,7 +226,11 @@ The rationale behind this convention is that the last thing that we want is to h
 
 ## Dates and UTC
 
-Remember that Go stores time zone as part of `time.Time`.  This means that date/times that are functionally equal may not be `==`.  When storing a date/time to a database, make sure you use `timestamp with time zone`.  It takes up the same amount of room as a `timestamp` but automatically ensures the time is saved in UTC.  Finally, be aware that date/times stored in a database may lose/alter their time zone information.  This is particularly important when using `time.Time` in a way where binary equality matters, such as they key in a `map[time.Time]`.  In that case, always convert the date/time to UTC in your Go code first.
+Remember that Go stores time zone as part of `time.Time`.  This means that date/times that are functionally equal may not compare as equal (`==`).  When storing a date/time to a database, make sure you use `timestamp with time zone`.  It takes up the same amount of room as a `timestamp` but automatically ensures the time is saved in UTC.  This means that date/times stored in Postgres or CockroachDB lose/alter their time zone information.  This is particularly important when using `time.Time` in a way where binary equality matters, such as they key in a `map[time.Time]`.  This is one case where using UTC in Go make sense.  When writing tests, prefer `.True(t, date1.Equal(date2))` over `.Equals(t, date1.UTC(), date2.UTC())`.
+
+Another case where UTC may be appropriate in Go is within a Storage Node SQLite database calls.  SQLite does not have a native timestamps datatype of sufficient precision.  Date time comparisons in SQLite may be handled as string comparisons and UTC should be ensured in Go.
+
+The final use case for UTC is when creating a new date/time based on an existing date/time.  What is Monday in one time zone maybe be Tuesday in another, February may be March, or 1999 may be 2000.  To ensure consistent rounding or batching of dates, it makes sense to perform these operations in UTC.  Unless the requirements forbid it, please take this approach and be careful to express this approach in any user interface elements.
 
 https://wiki.postgresql.org/wiki/Don't_Do_This#Don.27t_use_timestamp_.28without_time_zone.29
 

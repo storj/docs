@@ -12,6 +12,8 @@ If the guide is not followed then CI may fail.
 
 All code is formatted with `goimports -local storj.io`. Where `goimports` is using the latest supported stable Go version.
 
+We use `staticcheck` and `golangci-lint` for linting. The configuration file for all repositories is in [.golangci.yml](https://github.com/storj/ci/blob/master/.golangci.yml). Jenkins runs this check automatically.
+
 ### Imports
 
 Import statements are in three groups in the following order:

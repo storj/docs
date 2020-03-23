@@ -230,7 +230,7 @@ Remember that Go stores time zone as part of `time.Time`.  This means that date/
 
 Another case where UTC may be appropriate in Go is within a Storage Node SQLite database calls.  SQLite does not have a native timestamps datatype of sufficient precision.  Date time comparisons in SQLite may be handled as string comparisons and UTC should be ensured in Go.
 
-The final use case for UTC is when creating a new date/time based on an existing date/time.  What is Monday in one time zone maybe be Tuesday in another, February may be March, or 1999 may be 2000.  To ensure consistent rounding or batching of dates, it makes sense to perform these operations in UTC.  Unless the requirements forbid it, please take this approach and be careful to express this approach in any user interface elements.
+Another use case for UTC is when creating a new date/time based on an existing date/time.  What is Monday in one time zone maybe be Tuesday in another, February may be March, or 1999 may be 2000.  To ensure consistent rounding or batching of dates, it makes sense to perform these operations in UTC.  Unless the requirements forbid it, please take this approach and be careful to express this approach in any user interface elements.
 
 https://wiki.postgresql.org/wiki/Don't_Do_This#Don.27t_use_timestamp_.28without_time_zone.29
 

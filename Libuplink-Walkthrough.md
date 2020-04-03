@@ -1,24 +1,23 @@
 ## Getting Started
 
-The `libuplink` developer library is written for the Go language, and will allow Storj partners and clients to start to integrate with the Storj object store programmatically. We’ve created this library to make it as easy as possible for developers to leverage decentralized object storage in their applications. 
+The `uplink` developer library is written for the Go language, and will allow Storj partners and clients to start to integrate with the Storj object store programmatically. We’ve created this library to make it as easy as possible for developers to leverage decentralized object storage in their applications.
 
 There are more than a number of reasons why you may wish to utilize decentralized storage over legacy alternatives, namely:
-<ul>
-<li>Better performance</li>
-<li>Simple, and economical pricing</li>
-<li>Ease of integration</li>
-<li>Client-side encryption and key-based ownership of object data</li>
-</ul>
 
-`libuplink` contains a number of interesting components, including pre-written code and subroutines, classes, values or type specifications, message templates, configuration walkthroughs, and great documentation.
+* Better performance
+* Simple, and economical pricing
+* Ease of integration
+* Client-side encryption and key-based ownership of object data
+
+`uplink` contains a number of interesting components, including pre-written code and subroutines, classes, values or type specifications, message templates, configuration walkthroughs, and great documentation.
 
 ### Background
 
-An Uplink is an entry point into the Storj network. It connects to a specific Satellite and caches connections and resources, allowing users to create sessions. At its core, `libuplink` is a Go library that you can use to programmatically interact with the Storj network. 
+An Uplink is an entry point into the Storj network. It connects to a specific Satellite and caches connections and resources, allowing users to create sessions. At its core, `storj.io/uplink` is a Go library that you can use to programmatically interact with the Storj network.
 
 In the near future, additional library language wrappers will be released, allowing you to programmatically interface the Storj network with other programming languages. The first language binding that we are planning to release are for C, Java (Android), and iOS - with additional language bindings planned through community bounties.
 
-For the complete documentation around libuplink, check out the [Go Docs](https://pkg.go.dev/storj.io/uplink).
+For the complete documentation around uplink, check out the [Go Docs](https://pkg.go.dev/storj.io/uplink).
 
 ### Prerequisites
 
@@ -33,7 +32,15 @@ For more information on these prerequisites, check out a walkthrough on uploadin
 
 Now that we have created a project and generated an API key, let's get started with some code! We are going to write a Go program with functions that will upload a file to a project that we created on the Satellite. The full code for this walkthrough can be found at the very bottom.
 
-First, we need to list the package and import dependencies related to the Uplink. Every Go program must be a part of some package - and because this is a standalone executable Go program, we must first make a `package main` declaration, and import some additional package dependencies as well. Write:
+First it is necessary to setup a go module for your program. This helps go keep track and use the right version of libraries. For a more thorough guide, please read [Using Go Modules](https://blog.golang.org/using-go-modules). However, the simplest way to get started is to create a new folder outside of your `GOPATH` and run commands:
+
+``` sh
+$ go mod init example.test
+```
+
+You can replace "example.test" with your github project, e.g. `github.com/<username>/<project>`, if you wish.
+
+Then we need to list the package and import dependencies related to the Uplink. Every Go program must be a part of some package - and because this is a standalone executable Go program, we must first make a `package main` declaration, and import some additional package dependencies as well. Write:
 
 ```golang
 package main
@@ -72,14 +79,14 @@ const (
 	myPassphrase = "you'll never guess this"
 )
 ```
-Next, let’s define a function, `WorkWithLibUplink`, that uploads data to a specified path in a bucket, ingesting a Satellite address, encryption passphrase, and API key, bucket name, upload key, and data to upload as parameters.
+Next, let’s define a function, `UploadAndDownloadData`, that uploads data to a specified path in a bucket, ingesting a Satellite address, encryption passphrase, and API key, bucket name, upload key, and data to upload as parameters.
 
 Write:
 
 ```golang
-// WorkWithLibUplink uploads the specified data to the specified key in the
+// UploadAndDownloadData uploads the specified data to the specified key in the
 // specified bucket, using the specified Satellite, API key, and passphrase.
-func WorkWithLibUplink(ctx context.Context,
+func UploadAndDownloadData(ctx context.Context,
 	satelliteAddress, apiKey, passphrase, bucketName, uploadKey string,
 	dataToUpload []byte) error {
 ```
@@ -159,7 +166,7 @@ Now that we have defined our primary functions, let’s write a main function th
 
 ```golang
 func main() {
-	err := WorkWithLibUplink(context.Background(),
+	err := UploadAndDownloadData(context.Background(),
 		satellite, myAPIKey, myPassphrase, myBucket, myUploadKey, []byte(myData))
 	if err != nil {
 		log.Fatalln("error:", err)
@@ -200,9 +207,9 @@ const (
 	myPassphrase = "you'll never guess this"
 )
 
-// WorkWithLibUplink uploads the specified data to the specified key in the
+// UploadAndDownloadData uploads the specified data to the specified key in the
 // specified bucket, using the specified Satellite, API key, and passphrase.
-func WorkWithLibUplink(ctx context.Context,
+func UploadAndDownloadData(ctx context.Context,
 	satelliteAddress, apiKey, passphrase, bucketName, uploadKey string,
 	dataToUpload []byte) error {
 
@@ -267,7 +274,7 @@ func WorkWithLibUplink(ctx context.Context,
 }
 
 func main() {
-	err := WorkWithLibUplink(context.Background(),
+	err := UploadAndDownloadData(context.Background(),
 		satellite, myAPIKey, myPassphrase, myBucket, myUploadKey, []byte(myData))
 	if err != nil {
 		log.Fatalln("error:", err)

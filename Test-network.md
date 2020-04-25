@@ -23,7 +23,7 @@ Installing C tooling:
 
 * Linux: `apt install build-essential`. Adjust for your distro.
 * Mac: Install XCode and then `xcode-select --install`.
-* Windows: [TDM-GCC](https://tdm-gcc.tdragon.net/download) is the easiest to get started with. mingw2, MSYS2 and similar would work as well, however their setup is slightly more complicated.
+* Windows: [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) is the easiest to get started with. mingw2, MSYS2 and similar would work as well, however their setup is slightly more complicated.
 
 You can setup postgres through docker. See [Using Postgres](#Using-Postgres) section for more information. Otherwise, find the appropriate installation guide for your system.
 

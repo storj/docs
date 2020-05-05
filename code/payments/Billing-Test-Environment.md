@@ -68,3 +68,45 @@ DO NOT use real credit or debit cards for testing purposes!
 Check the [Stripe documentation](https://stripe.com/docs/testing) for testing credit card numbers like `4242 4242 4242 4242`.
 
 These testing credit card numbers work if storj-sim is configured with our staging Stripe account. They won't work on the production satellites.
+
+## Add STORJ payment
+
+For testing purposes it is recommended to use the [LTCT](https://www.coinpayments.net/help-testnet) cryptocurrency instead of STORJ. Using LTCT involves absolutely no cost for the transaction.
+
+In the first section of this document we patched the source code of the satellite to use LTCT instead of STORJ.
+
+### Setup a CoinPayments account
+
+One easy way to be able to make transactions in LTCT is to make your own account on [CoinPayments](https://www.coinpayments.net).
+
+You don't need to complete the KYC work with LTCT.
+
+### Request LTCT coins
+
+After you setup the account, you can request LTCT coins by [clicking here](https://www.coinpayments.net/login?return=acct_req_ltct).
+
+10 LTCT coins will be added immediately to your wallet.
+
+You can check the balance of your LTCT coins in the [dashboard](https://www.coinpayments.net/acct-home).
+
+### Deposit LTCT coins to the satellite account
+
+1. On the satellite initiate a payment with STORJ by selecting an amount in USD and clicking the `Continue to CoinPayments` button.
+1. A new web page to CoinPayments pops up displaying the details for completing the transaction.
+1. Go to [your wallet](https://www.coinpayments.net/acct-balances) in CoinPayments.
+1. Find the LTCT coin in the list.
+1. Select `LTCT Options` > `Send / Withdraw`.
+1. Enter the amount in LTCT. The amount should be exactly the same as requested by the CoinPayments popup from step 2. Do not enter any value for USD.
+1. Enter the Litecoin Testnet address. The address should be exactly the same as requested by the CoinPayments popup from step 2.
+1. Click the `Request Withdrawal/Send` button.
+1. Check your inbox for a new email and confirm the transaction. It takes a few minutes for the transaction to confirm.
+1. In a few minutes the CoinPayments popup from step 2 will display that the transaction is payed.
+1. In a few more minutes the paymnet will be reflected on the satellite too.
+
+## Find user on Stripe
+
+You need to request login information to our staging Stripe account from Brandon.
+
+Once you login, switch the `View test data` toggle on the left-side menu.
+
+Now you can search for your test users by email.

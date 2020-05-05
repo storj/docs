@@ -50,9 +50,13 @@ payments.stripe-coin-payments.coinpayments-public-key: ask-littleskunk-on-keybas
 ```
 Ask littleskunk on Keybase for the actual keys for staging Stripe and CoinPayments accounts.
 
-## Login to the satellite
+Now you can start storj-sim with the `storj-sim network run` command.
+
+## Create new user
 
 1. Open the satellite GUI in your browser: http://localhost:10002
-2. Enter `alice@mail.test` for email.
-3. Enter `123a123` for password.
-4. Click the Login button.
+1. Click the `Create Account` button at the top right corner.
+1. Enter user name, email, and password. The email does NOT need to be valid.
+1. Accept the Term of Service and click the `Create Account` button.
+1. The "Account Created" page will be displayed stating that a confirmation email has been sent. In fact, no email has been sent and the account does NOT need to be confirmed.
+1. Click on the `Login` button and login with the new user.

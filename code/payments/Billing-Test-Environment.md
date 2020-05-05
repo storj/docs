@@ -52,7 +52,7 @@ Ask littleskunk on Keybase for the actual keys for staging Stripe and CoinPaymen
 
 Now you can start storj-sim with the `storj-sim network run` command.
 
-## Create new user
+## Create new user and login
 
 1. Open the satellite GUI in your browser: http://localhost:10002
 1. Click the `Create Account` button at the top right corner.
@@ -60,3 +60,11 @@ Now you can start storj-sim with the `storj-sim network run` command.
 1. Accept the Term of Service and click the `Create Account` button.
 1. The "Account Created" page will be displayed stating that a confirmation email has been sent. In fact, no email has been sent and the account does NOT need to be confirmed.
 1. Click on the `Login` button and login with the new user.
+
+## Add credit card
+
+DO NOT use real credit or debit cards for testing purposes!
+
+Check the [Stripe documentation](https://stripe.com/docs/testing) for testing credit card numbers like `4242 4242 4242 4242`.
+
+These testing credit card numbers work if storj-sim is configured with our staging Stripe account. They won't work on the production satellites.

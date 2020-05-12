@@ -52,6 +52,12 @@ Ask littleskunk on Keybase for the actual keys for staging Stripe and CoinPaymen
 
 Now you can start storj-sim with the `storj-sim network run` command.
 
+**NOTE:** To create Access Grant you will need satellite Node ID. To find it search `storj-sim` logs and look for line like this: 
+```
+storagenode/1                  1ac27vuf38 09:41:21.159 | DEBUG	contact:endpoint	contact/endpoint.go:52	pinged	{"by": "1aE3vja9wQv7UXqAD91ecwj1rjoWBTiRLkbaNjp3EnqqnMmktE", "srcAddr": "127.0.0.1:44040"}
+```
+Field `by` will be the satellite Node ID.
+
 ## Create new user and login
 
 1. Open the satellite GUI in your browser: http://localhost:10002

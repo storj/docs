@@ -24,14 +24,7 @@ npm install
 npm run build
 cd $HOME/storj
 ```
-5. Build the storagenode GUI:
-```sh
-cd $HOME/storj/web/satellite
-npm install
-npm run build
-cd $HOME/storj
-```
-6. Build storj-sim:
+5. Build storj-sim:
 ```sh
 go install ./...
 ```

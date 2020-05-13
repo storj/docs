@@ -109,3 +109,20 @@ You need to request login information to our staging Stripe account from Brandon
 Once you login, switch the `View test data` toggle on the left-side menu.
 
 Now you can search for your test users by email.
+
+## Create invoices
+
+Invoices for the past month can be created with by executing these inspector commands (order matters):
+
+```
+inspector --identity-path ~/.local/share/storj/local-network/satellite/0 --address localhost:10001 payments prepare-invoice-records 04/2020
+
+inspector --identity-path ~/.local/share/storj/local-network/satellite/0 --address localhost:10001 payments create-invoice-items
+
+inspector --identity-path ~/.local/share/storj/local-network/satellite/0 --address localhost:10001 payments create-invoice-coupons
+
+inspector --identity-path ~/.local/share/storj/local-network/satellite/0 --address localhost:10001 payments create-invoice-credits
+
+inspector --identity-path ~/.local/share/storj/local-network/satellite/0 --address localhost:10001 payments create-invoices
+```
+The invoices will be created in Draft state and can be found in the Stripe account.

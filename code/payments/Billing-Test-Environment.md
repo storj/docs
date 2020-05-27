@@ -112,17 +112,17 @@ Now you can search for your test users by email.
 
 ## Create invoices
 
-Invoices for the past month can be created with by executing these inspector commands (order matters):
+Invoices for the past month can be created with by executing these satellite commands (order matters):
 
 ```
-inspector --identity-path ~/.local/share/storj/local-network/satellite/0 --address localhost:10001 payments prepare-invoice-records 04/2020
+satellite --config-dir ~/.local/share/storj/local-network/satellite/0 --log.level info billing prepare-invoice-records 04/2020
 
-inspector --identity-path ~/.local/share/storj/local-network/satellite/0 --address localhost:10001 payments create-invoice-items
+satellite --config-dir ~/.local/share/storj/local-network/satellite/0 --log.level info billing create-invoice-items 04/2020
 
-inspector --identity-path ~/.local/share/storj/local-network/satellite/0 --address localhost:10001 payments create-invoice-coupons
+satellite --config-dir ~/.local/share/storj/local-network/satellite/0 --log.level info billing create-invoice-coupons 04/2020
 
-inspector --identity-path ~/.local/share/storj/local-network/satellite/0 --address localhost:10001 payments create-invoice-credits
+satellite --config-dir ~/.local/share/storj/local-network/satellite/0 --log.level info billing create-invoice-credits 04/2020
 
-inspector --identity-path ~/.local/share/storj/local-network/satellite/0 --address localhost:10001 payments create-invoices
+satellite --config-dir ~/.local/share/storj/local-network/satellite/0 --log.level info billing create-invoices 04/2020
 ```
 The invoices will be created in Draft state and can be found in the Stripe account.

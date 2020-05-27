@@ -100,7 +100,7 @@ You can check the balance of your LTCT coins in the [dashboard](https://www.coin
 1. Click the `Request Withdrawal/Send` button.
 1. Check your inbox for a new email and confirm the transaction. It takes a few minutes for the transaction to confirm.
 1. In a few minutes the CoinPayments popup from step 2 will display that the transaction is payed.
-1. In a few more minutes the paymnet will be reflected on the satellite too.
+1. In a few more minutes the payment will be reflected on the satellite too.
 
 ## Find user on Stripe
 
@@ -109,6 +109,21 @@ You need to request login information to our staging Stripe account from Brandon
 Once you login, switch the `View test data` toggle on the left-side menu.
 
 Now you can search for your test users by email.
+
+## Simulate usage for past month
+
+1. Create a bucket, upload a file, and download it.
+1. Restart storj-sim to trigger Tally service faster.
+1. Edit the `created_at` column in the `projects` DB table to simulate the project was created earlier.
+1. Edit the `created_at` column in the `stripe_customers` DB table to simulate that the stripe customer was created earlier.
+1. Edit one or more records in the `bucket_bandwidth_rollups` DB table:
+   1. The records should have `action` of type `2` which means "download".
+   1. Change the time in the `interval_start` column to match the desired billing period.
+   1. Change the `allocated` and `settled` columns to match the desired Egress value in bytes.
+1. Edit at least two adjucent records (one is not enough) in the `bucket_storage_tallies` DB table:
+   1. Change the time in the `interval_start` column to match the desired billing period.
+   1. Change the `object_count` column to the maximum possible value (e.g. `420000000`) to generate some noticeable Object-Month usage.
+   1. Change the `remote` column to some big value (e.g. `356673702400000000`) to generate some noticeable GB-Month usage.
 
 ## Create invoices
 

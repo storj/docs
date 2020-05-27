@@ -126,3 +126,14 @@ satellite --config-dir ~/.local/share/storj/local-network/satellite/0 --log.leve
 satellite --config-dir ~/.local/share/storj/local-network/satellite/0 --log.level info billing create-invoices 04/2020
 ```
 The invoices will be created in Draft state and can be found in the Stripe account.
+
+## Revert invoices
+
+To revert the changes done by the invoice generating commands:
+
+1. Delete the draft invoices in Stripe.
+1. Delete any pending invoice items Stripe. Pending invoice items might be left if the last `create-invoices` commands has not been executed.
+1. Delete the records for the respective billing period from the `stripecoinpayments_invoice_project_records` DB table.
+1. Delete the records for the respective billing period from the `credits_spendings` DB table.
+1. Delete the records for the respective billing period from the `coupon_usages` DB table.
+1. Change the `status` to `0` for the respective records in the `coupons` DB table.

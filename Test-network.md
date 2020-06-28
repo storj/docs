@@ -43,7 +43,7 @@ make install-sim
 
 _Ensure that `storj` folder is outside of `GOPATH`, otherwise you may see errors._
 
-This will install the storj-sim satellite storage node gateway and uplink binaries to wherever Go is configured to output binaries on your system. By default, this is `~/go/bin`.
+This will install the storj-sim satellite storage node gateway and uplink binaries to wherever Go is configured to output binaries on your system. By default, this is `~/go/bin`. If this location is not in your `$PATH` add it by running `export PATH="~/go/bin:$PATH".
 
 
 Next, run setup:
@@ -139,7 +139,7 @@ The following assumes that docker and psql are already installed.
 // pull down official docker image
 $ docker pull postgres
 
-$ docker run --rm -p 5432:5432 --name postgres postgres
+$ docker run --rm -e POSTGRES_PASSWORD=storj -p 5432:5432 --name postgres postgres
 
 // in a different tab run this command to create a database for storj-sim to use
 $ docker exec -it postgres createdb -U postgres teststorj

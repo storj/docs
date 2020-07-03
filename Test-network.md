@@ -139,7 +139,7 @@ The following assumes that docker and psql are already installed.
 // pull down official docker image
 $ docker pull postgres
 
-$ docker run --rm -e POSTGRES_PASSWORD=storj -p 5432:5432 --name postgres postgres
+$ docker run --rm -e POSTGRES_HOST_AUTH_METHOD=trust -p 5432:5432 --name postgres postgres
 
 // in a different tab run this command to create a database for storj-sim to use
 $ docker exec -it postgres createdb -U postgres teststorj

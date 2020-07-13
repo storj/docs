@@ -1,41 +1,46 @@
 ## Getting Started
 
-The `libuplink` developer library is written for the Go language, and will allow Storj partners and clients to start to integrate with the Storj object store programmatically. We’ve created this library to make it as easy as possible for developers to leverage decentralized object storage in their applications. 
+The `uplink` developer library is written for the Go language, and will allow Storj partners and clients to start to integrate with the Storj object store programmatically. We’ve created this library to make it as easy as possible for developers to leverage decentralized object storage in their applications.
 
 There are more than a number of reasons why you may wish to utilize decentralized storage over legacy alternatives, namely:
-<ul>
-<li>Better performance</li>
-<li>Simple, and economical pricing</li>
-<li>Ease of integration</li>
-<li>Client-side encryption and key-based ownership of object data</li>
-</ul>
 
-`libuplink` contains a number of interesting components, including pre-written code and subroutines, classes, values or type specifications, message templates, configuration walkthroughs, and great documentation.
+* Better performance
+* Simple, and economical pricing
+* Ease of integration
+* Client-side encryption and key-based ownership of object data
+
+`uplink` contains a number of interesting components, including pre-written code and subroutines, classes, values or type specifications, message templates, configuration walkthroughs, and great documentation.
 
 ### Background
 
-An Uplink is an entry point into the Storj network. It connects to a specific Satellite and caches connections and resources, allowing users to create sessions. At its core, `libuplink` is a Go library that you can use to programmatically interact with the Storj network. 
+An Uplink is an entry point into the Storj network. It connects to a specific Satellite and caches connections and resources, allowing users to create sessions. At its core, `storj.io/uplink` is a Go library that you can use to programmatically interact with the Storj network.
 
 In the near future, additional library language wrappers will be released, allowing you to programmatically interface the Storj network with other programming languages. The first language binding that we are planning to release are for C, Java (Android), and iOS - with additional language bindings planned through community bounties.
 
-For the complete documentation around libuplink, check out the [Go Docs](http://godoc.org/storj.io/storj/lib/uplink).
-
+For the complete documentation around uplink, check out the [Go Docs](https://pkg.go.dev/storj.io/uplink).
 
 ### Prerequisites
 
-This walkthrough assumes that the user has already created an account on a satellite and has done the following:
-* Selected a Satellite
-* Generated an API Key
-* Created a Project
-* Created a bucket
+This walkthrough assumes that the user has already has done the following:
+* [Created an account on a Satellite](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/prerequisites)
+* [Created a Project](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/create-a-project)
+* [Generated an API Key](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/create-an-api-key)
 
-For more information on these prerequisites, check out a walkthrough of our satellite, located [here:](https://storj.io/blog/2019/04/starting-your-first-project-on-the-tardigrade-cloud-storage-network/)
+For more information on these prerequisites, check out a walkthrough on uploading your first object, located [here:](https://documentation.tardigrade.io/getting-started/uploading-your-first-object)
 
 ### Let's write code
 
-Now that we have created  a project and generated an API key, let’s get started with some code! We are going to write a Go program with functions that will upload a file to a project that we created on the Satellite in the previous walkthrough. The full code for this walkthrough can be found at the very bottom.
+Now that we have created a project and generated an API key, let's get started with some code! We are going to write a Go program with functions that will upload a file to a project that we created on the Satellite. The full code for this walkthrough can be found at the very bottom.
 
-First, we need to list the package and import dependencies related to the Uplink. Every Go program must be a part of some package - and because this is a standalone executable Go program, we must first make a `package main` declaration, and import some additional package dependencies as well. Write:
+First it is necessary to setup a go module for your program. This helps go keep track and use the right version of libraries. For a more thorough guide, please read [Using Go Modules](https://blog.golang.org/using-go-modules). However, the simplest way to get started is to create a new folder outside of your `GOPATH` and run commands:
+
+``` sh
+$ go mod init example.test
+```
+
+You can replace "example.test" with your github project, e.g. `github.com/<username>/<project>`, if you wish.
+
+Then we need to list the package and import dependencies related to the Uplink. Every Go program must be a part of some package - and because this is a standalone executable Go program, we must first make a `package main` declaration, and import some additional package dependencies as well. Write:
 
 ```golang
 package main
@@ -44,134 +49,116 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 
-	"storj.io/storj/lib/uplink"
+	"storj.io/uplink"
 )
 ```
 
-Next, let’s define our constants that we have pulled from the satellite.  In Go, constants are declared like variables, but with the `const` keyword.  These constants include constants for our API key, Satellite address, bucket name, upload path, and encryption passphrase. The following values are fillers for what you would be using in real life. 
+Next, let’s define our constants that we have pulled from the satellite.  In Go, constants are declared like variables, but with the `const` keyword.  These constants include constants for our API key, Satellite address, bucket name, upload key, and encryption passphrase. The following values are fillers for what you would be using in real life. 
 
-In this example, `satellite` will define the Satellite URL, 
-* `myBucket` will be an example bucket, created on the satellite in the previous walkthrough, (ie. `uplink mb sj://example-bucket`
-* `myUploadPath` will take the path
+In this example:
+* `satellite` will define the Satellite URL 
+* `myBucket` will be an example bucket
+* `myUploadKey` will take the object's key (this is the unique identifier of the object in the bucket)
 * `myData` will be the data that you are uploading
 * `myAPIKey` will be the API Key generated previously in the previous walkthrough
+* `myPassphrase` will be the passphrase for encrypting data
 
 Write: 
 ```golang
 const (
 	myAPIKey = "change-me-to-the-api-key-created-in-satellite-gui"
 
-	satellite              = "mars.tardigrade.io:7777"
-	myBucket               = "my-first-bucket"
-	myUploadPath           = "foo/bar/baz"
-	myData                 = "one fish two fish red fish blue fish"
-	myEncryptionPassphrase = "you'll never guess this"
+	satellite    = "us-central-1.tardigrade.io:7777"
+	myBucket     = "my-first-bucket"
+	myUploadKey  = "foo/bar/baz"
+	myData       = "one fish two fish red fish blue fish"
+	myPassphrase = "you'll never guess this"
 )
 ```
-Next, let’s define a function, `WorkWithLibUplink`, that uploads data to a specified path in a bucket, ingesting a Satellite address, encryption passphrase, and API key, bucket name, upload path, and data to upload as parameters.
+Next, let’s define a function, `UploadAndDownloadData`, that uploads data to a specified path in a bucket, ingesting a Satellite address, encryption passphrase, and API key, bucket name, upload key, and data to upload as parameters.
 
 Write:
 
 ```golang
-// WorkWithLibUplink uploads the specified data to the specified path in the
-// specified bucket, using the specified Satellite, encryption key, and API key.
-func WorkWithLibUplink(ctx context.Context,
-	satelliteAddress string, encryptionPassphrase string, apiKey uplink.APIKey,
-	bucketName, uploadPath string, dataToUpload []byte) error {
+// UploadAndDownloadData uploads the specified data to the specified key in the
+// specified bucket, using the specified Satellite, API key, and passphrase.
+func UploadAndDownloadData(ctx context.Context,
+	satelliteAddress, apiKey, passphrase, bucketName, uploadKey string,
+	dataToUpload []byte) error {
 ```
 
-Now, let’s get started and upload an object programatically. To do so, we will need to initialize our Uplink and open a project and bucket that we are working with.  Write:
+Now, let’s get started and upload an object programatically. To do so, we will need to request an access grant from the satellite, open the project, and ensure the bucket that we are working with.  Write:
 
 ```golang
- 	// Create an Uplink object with a default config
-	upl, err := uplink.NewUplink(ctx, nil)
+	// Request access grant to the satellite with the API key and passphrase.
+	access, err := uplink.RequestAccessWithPassphrase(ctx, satelliteAddress, apiKey, passphrase)
 	if err != nil {
-		return fmt.Errorf("could not create new Uplink object: %v", err)
+		return fmt.Errorf("could not request access grant: %v", err)
 	}
-	defer upl.Close()
 
-	// Open up the Project we will be working with
-	proj, err := upl.OpenProject(ctx, satelliteAddress, apiKey)
+	// Open up the Project we will be working with.
+	project, err := uplink.OpenProject(ctx, access)
 	if err != nil {
 		return fmt.Errorf("could not open project: %v", err)
 	}
-	defer proj.Close()
+	defer project.Close()
 
-	// Create the desired Bucket within the Project
-	_, err = proj.CreateBucket(ctx, bucketName, nil)
+	// Ensure the desired Bucket within the Project is created.
+	_, err = project.EnsureBucket(ctx, bucketName)
 	if err != nil {
-		return fmt.Errorf("could not create bucket: %v", err)
+		return fmt.Errorf("could not ensure bucket: %v", err)
 	}
 ```
 
-Before we can open a bucket, we will need to set up an `EncryptionAccess` context. 
-An `EncryptionAccess` can be created from scratch using a passphrase and an open `*Project` 
-handle for the cost of some non-trivial CPU usage, or it can be parsed and loaded cheaply.
-Let's create a new one:
+Now, let’s write some code to upload an object!
 
 ```golang
-	// Create a default encryption key using your passphrase.
-	encryptionKey, err := proj.SaltedKeyFromPassphrase(ctx, encryptionPassphrase)
+	// Intitiate the upload of our Object to the specified bucket and key.
+	upload, err := project.UploadObject(ctx, bucketName, uploadKey, nil)
 	if err != nil {
-		return fmt.Errorf("could not create encryption key: %v", err)
+		return fmt.Errorf("could not initiate upload: %v", err)
 	}
-	// Then make an encryption access context.
-	access := uplink.NewEncryptionAccessWithDefaultKey(*encryptionKey)
-```
 
-and then open the bucket:
-
-```golang
-	// Open up the desired Bucket within the Project
-	bucket, err := proj.OpenBucket(ctx, bucketName, access)
-	if err != nil {
-		return fmt.Errorf("could not open bucket %q: %v", bucketName, err)
-	}
-	defer bucket.Close()
-```
-
-Now that we have finished setting everything up, let’s write some code to upload an object!
-
-```golang
-	// Upload our Object to the specified path
+	// Copy the data to the upload.
 	buf := bytes.NewBuffer(dataToUpload)
-	err = bucket.UploadObject(ctx, uploadPath, buf, nil)
+	_, err = io.Copy(upload, buf)
 	if err != nil {
-		return fmt.Errorf("could not upload: %v", err)
+		_ = upload.Abort()
+		return fmt.Errorf("could not upload data: %v", err)
+	}
+
+	// Commit the uploaded object.
+	err = upload.Commit()
+	if err != nil {
+		return fmt.Errorf("could not commit uploaded object: %v", err)
 	}
 ```
 
 
-To download it, let’s write another method to call the file back. We want to download the whole file, so let’s specify the range from 0 to -1.   We will also want to read everything from the stream.  Write:
+To download it, let’s write the code to call the file back.  Write:
 
 ```golang
 	// Initiate a download of the same object again
-	readBack, err := bucket.OpenObject(ctx, uploadPath)
+	download, err := project.DownloadObject(ctx, bucketName, uploadKey, nil)
 	if err != nil {
-		return fmt.Errorf("could not open object at %q: %v", uploadPath, err)
+		return fmt.Errorf("could not open object: %v", err)
 	}
-	defer readBack.Close()
+	defer download.Close()
 
-	// We want the whole thing, so range from 0 to -1
-	strm, err := readBack.DownloadRange(ctx, 0, -1)
+	// Read everything from the download stream
+	receivedContents, err := ioutil.ReadAll(download)
 	if err != nil {
-		return fmt.Errorf("could not initiate download: %v", err)
-	}
-	defer strm.Close()
-
-	// Read everything from the stream
-	receivedContents, err := ioutil.ReadAll(strm)
-	if err != nil {
-		return fmt.Errorf("could not read object: %v", err)
+		return fmt.Errorf("could not read data: %v", err)
 	}
 
+	// Check that the downloaded data is the same as the uploaded data.
 	if !bytes.Equal(receivedContents, dataToUpload) {
 		return fmt.Errorf("got different object back: %q != %q", dataToUpload, receivedContents)
 	}
-	return nil
 }
 ```
 
@@ -179,13 +166,8 @@ Now that we have defined our primary functions, let’s write a main function th
 
 ```golang
 func main() {
-	apiKey, err := uplink.ParseAPIKey(myAPIKey)
-	if err != nil {
-		log.Fatalln("could not parse api key:", err)
-	}
-
-	err = WorkWithLibUplink(context.Background(),
-		satellite, myEncryptionPassphrase, apiKey, myBucket, myUploadPath, []byte(myData))
+	err := UploadAndDownloadData(context.Background(),
+		satellite, myAPIKey, myPassphrase, myBucket, myUploadKey, []byte(myData))
 	if err != nil {
 		log.Fatalln("error:", err)
 	}
@@ -196,7 +178,7 @@ func main() {
 
 Congrats, you have now written a basic Go program with functions that upload a file from the Tardigrade Network and download it back to your machine!	
 
-For the full file,  see below:
+For the full file, see below:
 
 ```golang
 // Copyright (C) 2019 Storj Labs, Inc.
@@ -208,110 +190,92 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 
-	"storj.io/storj/lib/uplink"
+	"storj.io/uplink"
 )
 
 const (
 	myAPIKey = "change-me-to-the-api-key-created-in-satellite-gui"
 
-	satellite              = "mars.tardigrade.io:7777"
-	myBucket               = "my-first-bucket"
-	myUploadPath           = "foo/bar/baz"
-	myData                 = "one fish two fish red fish blue fish"
-	myEncryptionPassphrase = "you'll never guess this"
+	satellite    = "us-central-1.tardigrade.io:7777"
+	myBucket     = "my-first-bucket"
+	myUploadKey  = "foo/bar/baz"
+	myData       = "one fish two fish red fish blue fish"
+	myPassphrase = "you'll never guess this"
 )
 
-// WorkWithLibUplink uploads the specified data to the specified path in the
-// specified bucket, using the specified Satellite, encryption key, and API key.
-func WorkWithLibUplink(ctx context.Context,
-	satelliteAddress string, encryptionPassphrase string, apiKey uplink.APIKey,
-	bucketName, uploadPath string, dataToUpload []byte) error {
+// UploadAndDownloadData uploads the specified data to the specified key in the
+// specified bucket, using the specified Satellite, API key, and passphrase.
+func UploadAndDownloadData(ctx context.Context,
+	satelliteAddress, apiKey, passphrase, bucketName, uploadKey string,
+	dataToUpload []byte) error {
 
-	// Create an Uplink object with a default config
-	upl, err := uplink.NewUplink(ctx, nil)
+	// Request access grant to the satellite with the API key and passphrase.
+	access, err := uplink.RequestAccessWithPassphrase(ctx, satelliteAddress, apiKey, passphrase)
 	if err != nil {
-		return fmt.Errorf("could not create new Uplink object: %v", err)
+		return fmt.Errorf("could not request access grant: %v", err)
 	}
-	defer upl.Close()
 
-	// Open up the Project we will be working with
-	proj, err := upl.OpenProject(ctx, satelliteAddress, apiKey)
+	// Open up the Project we will be working with.
+	project, err := uplink.OpenProject(ctx, access)
 	if err != nil {
 		return fmt.Errorf("could not open project: %v", err)
 	}
-	defer proj.Close()
+	defer project.Close()
 
-	// Create the desired Bucket within the Project
-	_, err = proj.CreateBucket(ctx, bucketName, nil)
+	// Ensure the desired Bucket within the Project is created.
+	_, err = project.EnsureBucket(ctx, bucketName)
 	if err != nil {
-		return fmt.Errorf("could not create bucket: %v", err)
+		return fmt.Errorf("could not ensure bucket: %v", err)
 	}
 
-	// Create a default encryption key using your passphrase.
-	encryptionKey, err := proj.SaltedKeyFromPassphrase(ctx, encryptionPassphrase)
+	// Intitiate the upload of our Object to the specified bucket and key.
+	upload, err := project.UploadObject(ctx, bucketName, uploadKey, nil)
 	if err != nil {
-		return fmt.Errorf("could not create encryption key: %v", err)
+		return fmt.Errorf("could not initiate upload: %v", err)
 	}
-	// Then make an encryption access context.
-	access := uplink.NewEncryptionAccessWithDefaultKey(*encryptionKey)
 
-	// Keep in mind that SaltedKeyFromPassphrase is slow, to prevent
-	// brute-force attacks. If you want to load your encryption key
-	// quicker, you should generate the key using SaltedKeyFromPassphrase
-	// once, then serialize the encryption access context and load it,
-	// using access.Serialize or uplink.ParseEncryptionAccess
-
-	// Open up the desired Bucket within the Project
-	bucket, err := proj.OpenBucket(ctx, bucketName, access)
-	if err != nil {
-		return fmt.Errorf("could not open bucket %q: %v", bucketName, err)
-	}
-	defer bucket.Close()
-
-	// Upload our Object to the specified path
+	// Copy the data to the upload.
 	buf := bytes.NewBuffer(dataToUpload)
-	err = bucket.UploadObject(ctx, uploadPath, buf, nil)
+	_, err = io.Copy(upload, buf)
 	if err != nil {
-		return fmt.Errorf("could not upload: %v", err)
+		_ = upload.Abort()
+		return fmt.Errorf("could not upload data: %v", err)
+	}
+
+	// Commit the uploaded object.
+	err = upload.Commit()
+	if err != nil {
+		return fmt.Errorf("could not commit uploaded object: %v", err)
 	}
 
 	// Initiate a download of the same object again
-	readBack, err := bucket.OpenObject(ctx, uploadPath)
+	download, err := project.DownloadObject(ctx, bucketName, uploadKey, nil)
 	if err != nil {
-		return fmt.Errorf("could not open object at %q: %v", uploadPath, err)
+		return fmt.Errorf("could not open object: %v", err)
 	}
-	defer readBack.Close()
+	defer download.Close()
 
-	// We want the whole thing, so range from 0 to -1
-	strm, err := readBack.DownloadRange(ctx, 0, -1)
+	// Read everything from the download stream
+	receivedContents, err := ioutil.ReadAll(download)
 	if err != nil {
-		return fmt.Errorf("could not initiate download: %v", err)
-	}
-	defer strm.Close()
-
-	// Read everything from the stream
-	receivedContents, err := ioutil.ReadAll(strm)
-	if err != nil {
-		return fmt.Errorf("could not read object: %v", err)
+		return fmt.Errorf("could not read data: %v", err)
 	}
 
+	// Check that the downloaded data is the same as the uploaded data.
 	if !bytes.Equal(receivedContents, dataToUpload) {
 		return fmt.Errorf("got different object back: %q != %q", dataToUpload, receivedContents)
 	}
+
 	return nil
 }
 
 func main() {
-	apiKey, err := uplink.ParseAPIKey(myAPIKey)
-	if err != nil {
-		log.Fatalln("could not parse api key:", err)
-	}
-
-	err = WorkWithLibUplink(context.Background(),
-		satellite, myEncryptionPassphrase, apiKey, myBucket, myUploadPath, []byte(myData))
+	err := UploadAndDownloadData(context.Background(),
+		satellite, myAPIKey, myPassphrase, myBucket, myUploadKey, []byte(myData))
 	if err != nil {
 		log.Fatalln("error:", err)
 	}

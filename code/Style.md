@@ -12,6 +12,8 @@ If the guide is not followed then CI may fail.
 
 All code is formatted with `goimports -local storj.io`. Where `goimports` is using the latest supported stable Go version.
 
+We use `staticcheck` and `golangci-lint` for linting. The configuration file for all repositories is in [.golangci.yml](https://github.com/storj/ci/blob/master/.golangci.yml). Jenkins runs this check automatically.
+
 ### Imports
 
 Import statements are in three groups in the following order:
@@ -33,6 +35,8 @@ import (
 	...
 )
 ```
+
+Note: for https://golang.org/pkg/sync/atomic/#pkg-note-BUG you would need to align the memory. Either use padding or reorder to fix the possible issue.
 
 ## Linting
 
@@ -222,6 +226,16 @@ On the rest of the cases, __always__ use _signed integers_ (e.g. `int`, `int64`,
 
 The rationale behind this convention is that the last thing that we want is to have wacky behavior around common values and _zero_ is a common one, so we want to avoid to not get a negative number when subtracting _one_ from an _unsigned integer_ variable with value _zero_.
 
+## Dates and UTC
+
+Remember that Go stores time zone as part of `time.Time`.  This means that date/times that are functionally equal may not compare as equal (`==`).  When storing a date/time to a database, make sure you use `timestamp with time zone`.  It takes up the same amount of room as a `timestamp` but automatically ensures the time is saved in UTC.  This means that date/times stored in Postgres or CockroachDB lose/alter their time zone information.  This is particularly important when using `time.Time` in a way where binary equality matters, such as they key in a `map[time.Time]`.  This is one case where using UTC in Go may make sense.  When writing tests, prefer `.True(t, date1.Equal(date2))` over `.Equals(t, date1.UTC(), date2.UTC())`.
+
+Another case where UTC may be appropriate in Go is within a Storage Node SQLite database calls.  SQLite does not have a native timestamps datatype of sufficient precision.  Date time comparisons in SQLite may be handled as string comparisons and UTC should be ensured in Go.
+
+Another use case for UTC is when creating a new date/time based on an existing date/time.  What is Monday in one time zone maybe be Tuesday in another, February may be March, or 1999 may be 2000.  To ensure consistent rounding or batching of dates, it makes sense to perform these operations in UTC.  Unless the requirements forbid it, please take this approach and be careful to express this approach in any user interface elements.
+
+https://wiki.postgresql.org/wiki/Don't_Do_This#Don.27t_use_timestamp_.28without_time_zone.29
+
 ## Type and method naming
 
 Consider package name as part of the type name, this avoids stutter when using the types or methods.
@@ -292,6 +306,14 @@ If a package alias is required prefer to rename the external packages rather tha
 * If threading a `ctx` variable through your callstack is more work than reasonable for your PR, use `context.TODO()` instead of `context.Background()` so you can come back to it later.
 * In a `main()` method, if you're using `pkg/process.Exec` with `*cobra.Cmd`, you can use `process.Ctx(cmd)` to retrieve a command-specific context, instead of making a new one.
 
+When you need to check for premature exit use `ctx.Err()` directly, selecting on `context.Done()` is not necessary:
+
+```
+if err := ctx.Err(); err != nil {
+	return err
+}
+```
+
 ## Implementing Interfaces
 
 To show that a type implements a particular interface use:
@@ -311,6 +333,28 @@ defer mon.Task()(&ctx)(&err)
 ```
 
 If the function really can't take a context, then either create a context first with `context.TODO()`, or pass `nil` instead of `&ctx`. If the function really won't ever error, then you can pass `nil` instead of `&err` as well.
+
+NOTE the function returned by `mon.Task()` [accepts a list of variadic arguments](https://godoc.org/gopkg.in/spacemonkeygo/monkit.v2#Task) after the first `*context.Context` parameter. This arguments are attached to the trace and they can be helpful for having more insights of them.
+The arguments should be the ones of the parent functions, however, some arguments may not be very useful, for example a raw protocol buffer request. Think about the arguments of the function and pass them to monkit instrumentation when they can give insights to the instrumentation.
+
+
+```golang
+func (endpoint *Endpoint) DeletePiece(ctx context.Context, req pb.DeletePieceRequest) (*pb.DeletePieceResponse, err error) {
+	// req only contains one field PieceID. PieceID is a slice of bytes which won't bring to much
+	// human readable information, however it will its string representation, hence we pass it.
+	defer mon.Task()(&ctx, req.PieceID.String())(&err)
+
+	// .... The rest of the function logic
+}
+
+// ...
+
+func (reader ContextWriter) Writer(ctx context.Context, data []byte) (n int, err error) {
+	// We don't pass data because it won't bring any useful information to the metric.
+	defer mon.Task()(&ctx)(&err)
+}
+
+```
 
 ### Intentional Metrics
 When we add a monkit call to track information outside the basic `mon.Task()` telemetry discussed above, make sure it is locked with the `//locked` comment and run `go generate ./scripts/check-monitoring.go` to update the `monkit.lock` file.
@@ -350,6 +394,32 @@ Making synchronous methods to asynchornous is usually easier than making an asyn
 Sleeps usually hide racy behavior, proper synchronization usually doesn't need them.
 
 Of course using sleeps, tickers for scheduling or for avoiding thundering herd problem is acceptable.
+
+## Field order
+
+Prefer consistency in field ordering. The usual ordering is "dependencies", "immutable information" (e.g. configuration) and finally "internal state". In some cases it's beneficial to have multiple groupings in "internal state" (e.g. when dealing with mutexes). For example:
+
+```go
+type Service struct {
+	log *zap.Logger     // most common dependencies first
+	Loop *metainfo.Loop // dependencies
+	DB   satellitedb.DB // ... (prefer same order as constructor arguments, if possible)
+
+	// immutable information, such as configuration
+	config      Config
+	dialTimeout time.Duration
+
+	// internal state
+	alive   errgroup.Group
+	running int64 // atomic
+}
+
+// embedding first, however avoid, if possible
+type DB struct {
+	*sql.DB
+	log *zap.Logger
+}
+```
 
 ## Mutexes
 

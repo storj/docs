@@ -8,10 +8,32 @@ In every day Storj usage, the Satellite, Storage Node, and Uplink are run
 on separate servers and computers, but for the purposes of the test network,
 all of the components are run locally.
 
-## Installation and configuration
+## Installing dependencies
 
-First, you'll need at least [Go 1.13](https://www.golang.org/). Once Go is
-installed run:
+You need to install:
+
+1. Go 1.13
+2. C tooling
+3. Postgres
+4. Redis
+
+Go 1.13 can be installed by following instructions at [golang.org](https://www.golang.org/).
+
+Installing C tooling:
+
+* Linux: `apt install build-essential`. Adjust for your distro.
+* Mac: Install XCode and then `xcode-select --install`.
+* Windows: [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) is the easiest to get started with. mingw2, MSYS2 and similar would work as well, however their setup is slightly more complicated.
+
+You can setup postgres through docker. See [Using Postgres](#Using-Postgres) section for more information. Otherwise, find the appropriate installation guide for your system.
+
+Installing redis:
+
+* Linux: `apt install redis-server`. Adjust for your distro.
+* Mac: `brew install redis`.
+* Windows: Download [https://github.com/ServiceStack/redis-windows/raw/master/downloads/redis-latest.zip]. Extract to any location and add it to your Environment Variable `PATH`.
+
+# Installation and configuration
 
 ```bash
 git clone https://github.com/storj/storj.git storj
@@ -21,7 +43,7 @@ make install-sim
 
 _Ensure that `storj` folder is outside of `GOPATH`, otherwise you may see errors._
 
-This will install the storj-sim satellite storage node gateway and uplink binaries to wherever Go is configured to output binaries on your system. By default, this is `~/go/bin`.
+This will install the storj-sim satellite storage node gateway and uplink binaries to wherever Go is configured to output binaries on your system. By default, this is `~/go/bin`. If this location is not in your `$PATH` add it by running `export PATH="~/go/bin:$PATH".
 
 
 Next, run setup:
@@ -136,14 +158,14 @@ The following assumes that docker and psql are already installed.
 // pull down official docker image
 $ docker pull postgres
 
-$ docker run --rm -p 5432:5432 --name postgres postgres
+$ docker run --rm -e POSTGRES_HOST_AUTH_METHOD=trust -p 5432:5432 --name postgres postgres
 
-// in a different tab run this command to log into the postgres
+// in a different tab run this command to create a database for storj-sim to use
+$ docker exec -it postgres createdb -U postgres teststorj
+
+// if you want to run your own postgres queries, run this command to log into the postgres
 // interactive terminal
 $ psql -h localhost -U postgres
-
-// once in the psql terminal, create a database for storj-sim to use
-$ create database <dbName>;
 ```
 
 Step 2: Run storj sim with postgres

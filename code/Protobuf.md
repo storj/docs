@@ -14,9 +14,11 @@ This document outlines the steps for creating or modifying a protobuf.
 
       brew install protobuf
 
-- Install a protobuf specification linter, the protolock tool, and their dependencies. (This step is idempotent, so run it again if you're not sure whether your tools need updating):
+- Install the following tools with specific versions. You can use [gobin](https://github.com/myitcv/gobin) to make installation easier:
 
-    $ go run scripts/protobuf.go install
+* github.com/ckaznocha/protoc-gen-lint@68a05858965b31eb872cbeb8d027507a94011acc
+* storj.io/drpc/cmd/protoc-gen-drpc
+* github.com/nilslice/protolock/cmd/protolock@v0.12.0
 
 ## Steps to Modify `.proto` Files
 
@@ -26,7 +28,7 @@ Assumes all steps occur from the home directory of the https://github.com/storj/
 
 2. To update the generated code related to your `.proto` file changes, use `go generate` on the pb directory:
 
-    $ go generate ./pkg/pb/...
+    $ go generate ./pb/...
 
 3. Update the proto.lock file to match your changes:
 

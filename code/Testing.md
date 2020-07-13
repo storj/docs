@@ -178,7 +178,7 @@ Sometimes, meanwhile developing, it's less than ideal that for having feedback o
 
 In order to use PostgreSQL<sup>1</sup> for running the tests in a local development machine you have to setup and run PostgreSQL v9.6 in your machine or run a Docker container using a [PostgreSQL image](https://hub.docker.com/_/postgres) and run the tests as follow:
 
-1. For _Go tests_, use the environment variable `STORJ_POSTGRES_TEST` to specify a connection URL (i.e. `postgres://[user][:password]@[host]?sslmode=disable`) when running them, for example `STORJ_POSTGRES_TEST="postgres://postgres:pass@localhost?sslmode=disable" go test ./...`
+1. For _Go tests_, use the environment variable `STORJ_TEST_POSTGRES` to specify a connection URL (i.e. `postgres://[user][:password]@[host]?sslmode=disable`) when running them, for example `STORJ_TEST_POSTGRES="postgres://postgres:pass@localhost?sslmode=disable" go test ./...`
 2. For _test sim_ use the environment variable `STORJ_SIM_POSTGRES` to specify a connection URL with an existing database (preferably an empty one) (i.e `postgres://[user][:password]@[host]/[database]?sslmode=disable`) when running them, for example `STORJ_SIM_POSTGRES="postgres://postgres:pass@localhost/teststorj?sslmode=disable" make test-sim`. For creating an empty database in Postgres, you can easily do with it's Postgres client running for example `psql -U postgres -c 'create database teststorj;'` for creating a database named `teststorj` (you can also use the Docker image commented above rather than the locally installed Postgres client `psql`).
 
 <sup>1</sup>PostgreSQL is currently required to run some Go tests.

@@ -27,6 +27,7 @@ To add a new dependency evaluate the following things:
 	* If it contains parsing, does it have fuzzing?
 	* Does the project have vetters and linters setup for PR-s?
 	* Are they following semantic versioning?
+	* Ideally there are two independent reviewers.
 
 * Are there any critical issues or PR-s open?
 

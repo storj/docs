@@ -23,6 +23,8 @@ To add a new dependency evaluate the following things:
 	* Would you be able to do a critical fix under a day?
 	* How idiomatic is the code?
 	* Does it have code that is really hard to follow?
+	* Does it have global variables/state (either private or public)?
+	* Does it use global logging? Is it customizable? (i.e. can you supply different logger for different tests)
 	* Does the code have comprehensive testsuite?
 	* If it contains parsing, does it have fuzzing?
 	* Does the project have vetters and linters setup for PR-s?

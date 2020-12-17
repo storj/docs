@@ -1,14 +1,14 @@
 # Uplink CLI tutorial
 
+**Please check out our most up-to-date Tardigrade Uplink CLI documentation [here](https://documentation.tardigrade.io/api-reference/uplink-cli).**
+
 The Uplink CLI is our client-side application that supports interacting with
-the Storj network. This tutorial assumes you have an account on a running
+the Storj Tardigrade network. This tutorial assumes you have an account on a running
 Satellite and uses a [test network](Test-network) Satellite by default.
 
 ## Installation and configuration
 
-First, if you haven't already followed the preparation steps in https://github.com/storj/storj/wiki/Vanguard-Release-Setup-Instructions, please do so.
-
-Next, download the correct binary for your operating system:
+Download the correct binary for your operating system:
 
 - Mac OS: [uplink_darwin_amd64.zip](https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip)
 - Linux: [uplink_linux_amd64.zip](https://github.com/storj/storj/releases/latest/download/uplink_linux_amd64.zip)
@@ -26,22 +26,23 @@ You will be prompted for:
 
 - Satellite: The satellite you want to connect your uplink to. You can choose one from the list of type one eg. `us-central-1.tardigrade.io:7777` or `127.0.0.1:10000` if you are using the test network.
 - API key: The API key that you generate for a project on the Satellite console. If you are using the test network, you can use the API key provided when you run it.
-- Encryption passphrase: The passphrase you choose in order to encrypt your files. Keep this secret and safe. This passphrase will grant you access to all of your files, and if you lose it, you will not be able to recover your files. 
+- Encryption passphrase: The passphrase you choose in order to encrypt your objects. Keep this secret and safe. This passphrase will grant you access to all of your objects, and if you lose it, you will not be able to recover your objects. 
 
 
-You are now ready to interact with your files on the Tardigrade Network!
+You are now ready to interact with your objects on the Tardigrade Network!
 
 ## Usage
 
 The `uplink` command has a number of operations that can be performed, such as:
 
- * `cat` - output a file to standard out
- * `cp` - copy a file from outside of Storj to inside or vice versa
- * `ls` - list buckets or files in Storj
+ * `cat` - output an object to standard out
+ * `cp` - copy an object from outside of Tardigrade to inside or vice versa
+ * `ls` - list buckets or objects on your Tardigrade project
  * `mb` - make a new bucket
- * `put` - writes data from standard in to a file in Storj
+ * `put` - writes data from standard in to an object on your Tardigrade project
  * `rb` - remove a bucket
- * `rm` - remove a file.
+ * `rm` - remove an object
+ * `share` - share an object
 
 More information for each command is provided in the command's `--help`
 documentation, but some example commands are listed below:
@@ -80,6 +81,6 @@ documentation, but some example commands are listed below:
 
 And that's it! You now know how to perform basic operations on a Storj bucket, and you've been able to get `uplink` working.
 
-We also have a tutorial on [S3 integration](https://github.com/storj/docs/blob/master/S3-Gateway.md) which you could check out. Or, think this could be improved? Open a PR or file an issue.
+We also have a tutorial on [S3 integration](https://documentation.tardigrade.io/api-reference/s3-gateway).
 
 Now go and decentralize all the things!

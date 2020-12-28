@@ -12,7 +12,7 @@ If the guide is not followed then CI may fail.
 
 All code is formatted with `goimports -local storj.io`. Where `goimports` is using the latest supported stable Go version.
 
-We use `staticcheck` and `golangci-lint` for linting. The configuration file for all repositories is in [.golangci.yml](https://github.com/storj/ci/blob/master/.golangci.yml). Jenkins runs this check automatically.
+We use `staticcheck` and `golangci-lint` for linting. The configuration file for all repositories is in [.golangci.yml](https://github.com/storj/ci/blob/main/.golangci.yml). Jenkins runs this check automatically.
 
 ### Imports
 
@@ -440,4 +440,4 @@ type GraphiteDest struct {
 
 ## Unused Code
 
-Avoid merging unused code into master unless there is a justifiable reason to do so. This includes methods, functions, constants, variables, and parameters. A reason one may leave unused code is if the method is necessary to implement an interface.
+Avoid merging unused code into main unless there is a justifiable reason to do so. This includes methods, functions, constants, variables, and parameters. A reason one may leave unused code is if the method is necessary to implement an interface.

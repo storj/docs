@@ -31,7 +31,7 @@ go install ./...
 
 ## Setup and run storj-sim
 
-Check [Storj Test Network](https://github.com/storj/docs/blob/master/Test-network.md) on how to setup and run storj-sim.
+Check [Storj Test Network](https://github.com/storj/docs/blob/main/Test-network.md) on how to setup and run storj-sim.
 
 After executing the `storj-sim network setup` command, open the satellite's config.yaml (located at `~/.local/share/storj/local-network/satellite/0/config.yaml`) and enable the following configuration:
 ```yaml

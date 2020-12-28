@@ -16,16 +16,16 @@ This diagram displays the high level flow of metric data. Below describes the di
 - [storj source code tracing](https://github.com/spacemonkeygo/monkit)
 
 Reference:
-- [metrics init source code](https://github.com/storj/storj/blob/master/pkg/process/metrics.go#L32)
-- [telemetry client source code](https://github.com/storj/storj/blob/master/pkg/telemetry/client.go#L105)
+- [metrics init source code](https://github.com/storj/storj/blob/main/pkg/process/metrics.go#L32)
+- [telemetry client source code](https://github.com/storj/storj/blob/main/pkg/telemetry/client.go#L105)
 
 2. The telemetry client is configured via the peer config.yaml file. By default it sends the metrics to a server, `collectora.storj.io`, which is running the `statreceiver` binary.
 
 3. `statreceiver` allows you to filter and process incoming timeseries metrics. `statreceiver` is configed with a [`lua`](http://www.lua.org/) config file. This config file describes where metrics will be received from, how to parse/filter the metrics, where to store the metrics.
 
 Reference:
-- [`statreceiver` source code](https://github.com/storj/storj/tree/master/cmd/statreceiver)
-- [example `lua` config file](https://github.com/storj/storj/blob/master/cmd/statreceiver/example.lua)
+- [`statreceiver` source code](https://github.com/storj/storj/tree/main/cmd/statreceiver)
+- [example `lua` config file](https://github.com/storj/storj/blob/main/cmd/statreceiver/example.lua)
 
 4. Metrics are stored in a number of datastores, each of which have a different purpose.
 - `postgres` stores metrics used by the data science team.

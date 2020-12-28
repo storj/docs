@@ -24,7 +24,7 @@ curl "localhost:<saDebugPort>/debug/pprof/heap" -o mem.prof
 Unlike the CPU profile, this command creates a "snapshot" of the memory profile at a given time, rather than over an interval like 30 seconds. For example, one may need to curl the memory profile several times over the course of a load test as stress on the Satellite grows.
 
 Reference:
-- [debug endpoint source code](https://github.com/storj/storj/blob/master/pkg/process/debug.go#L32)
+- [debug endpoint source code](https://github.com/storj/storj/blob/main/pkg/process/debug.go#L32)
 - [go pprof docs](https://golang.org/pkg/net/http/pprof/)
 
 ### Uplink profiling

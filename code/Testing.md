@@ -72,7 +72,7 @@ Use real dependencies that are used in production. Try to create the appropriate
 
 Avoid using mocks and stub-data, if possible. By using mocks we are not testing the actual system and how the systems work together; hence missing some bugs.
 
-Package `internal/testplanet` helps to setup a full environment that can be used for testing. For the basic examples see [internal/testplanet/planet_test.go](https://github.com/storj/storj/blob/master/internal/testplanet/planet_test.go). Of course many packages already use it, so refer them for more examples.
+Package `internal/testplanet` helps to setup a full environment that can be used for testing. For the basic examples see [internal/testplanet/planet_test.go](https://github.com/storj/storj/blob/main/internal/testplanet/planet_test.go). Of course many packages already use it, so refer them for more examples.
 
 For testing erroring behavior a wrapper can be used. For example:
 

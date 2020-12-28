@@ -88,7 +88,7 @@ The port format is: "1PXXE", where P is the peer class, XX is the index of the i
 * Storage Nodes public ports start from port `14000`
 * Storage Nodes private ports start from port `14001`
 
-See [storj-sim network source code](https://github.com/storj/storj/blob/master/cmd/storj-sim/network.go#L36) for more details.
+See [storj-sim network source code](https://github.com/storj/storj/blob/main/cmd/storj-sim/network.go#L36) for more details.
 
 To get access to a gateway and test your keys, you open http://127.0.0.1:11000 in a web browser.
 
@@ -114,7 +114,7 @@ You can obtain the list of environment flags by running:
 storj-sim network env
 ```
 
-For a real-world example you can take a look in [test-sim.sh](https://github.com/storj/storj/blob/master/scripts/test-sim.sh) and [test-sim-aws.sh](https://github.com/storj/storj/blob/master/scripts/test-sim-aws.sh).
+For a real-world example you can take a look in [test-sim.sh](https://github.com/storj/storj/blob/main/scripts/test-sim.sh) and [test-sim-aws.sh](https://github.com/storj/storj/blob/main/scripts/test-sim-aws.sh).
 
 ### Using Uplink
 
@@ -238,7 +238,7 @@ If you're running your own redis server, you can designate the database value to
 ***
 
 ## Next Steps
-Please see the [Uplink CLI](https://github.com/storj/docs/blob/master/Uplink-CLI.md) or [S3 Gateway](https://github.com/storj/docs/blob/master/S3-Gateway.md)
+Please see the [Uplink CLI](https://github.com/storj/docs/blob/main/Uplink-CLI.md) or [S3 Gateway](https://github.com/storj/docs/blob/main/S3-Gateway.md)
 tutorial for how to upload and download data to the test network.
 
 Let's 'be the cloud' and decentralize all the things together!

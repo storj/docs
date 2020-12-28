@@ -36,5 +36,5 @@ The S3 gateway is our service that mimics the Amazon S3 API using the Tardigrade
 
 ### Using the Libuplink Library (golang)
 
-- We have a great walkthrough you can reference [here](https://github.com/storj/docs/blob/master/Libuplink-Walkthrough.md)
+- We have a great walkthrough you can reference [here](https://github.com/storj/docs/blob/main/Libuplink-Walkthrough.md)
 - Libuplink Library golang documentation [godoc.org](http://godoc.org/storj.io/storj/lib/uplink)

@@ -24,7 +24,7 @@ The databases include:
 2. infodb
 3. psdb
 
-![storj-components-with-databases](https://github.com/storj/docs/blob/master/code/persistentstorage/dbs.png)
+![storj-components-with-databases](https://github.com/storj/docs/blob/main/code/persistentstorage/dbs.png)
 See below for more details about each database. Note: Kademlia has been deprecated.
 
 ## Satellites
@@ -59,7 +59,7 @@ Keys in PointerDB are a path name (Storj.Path object) in the format "projectName
 Values in PointerDB are Pointer objects. Pointer objects store metadata about where pieces are stored on which nodes.
 
 Reference:
-- Source code for [Pointer objects](https://github.com/storj/storj/blob/master/pkg/pb/pointerdb.pb.go#L263).
+- Source code for [Pointer objects](https://github.com/storj/storj/blob/main/pkg/pb/pointerdb.pb.go#L263).
 - [BoltDB](https://github.com/boltdb/bolt) documentation.
 
 ## Storage Nodes

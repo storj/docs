@@ -17,7 +17,7 @@ This document outlines the steps for creating or modifying a protobuf.
 - Install the following tools with specific versions. You can use [gobin](https://github.com/myitcv/gobin) to make installation easier:
 
 * github.com/ckaznocha/protoc-gen-lint@68a05858965b31eb872cbeb8d027507a94011acc
-* storj.io/drpc/cmd/protoc-gen-drpc
+* storj.io/drpc/cmd/protoc-gen-go-drpc
 * github.com/nilslice/protolock/cmd/protolock@v0.12.0
 
 ## Steps to Modify `.proto` Files

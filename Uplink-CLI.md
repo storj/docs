@@ -1,9 +1,9 @@
 # Uplink CLI tutorial
 
-**Please check out our most up-to-date Tardigrade Uplink CLI documentation [here](https://documentation.tardigrade.io/api-reference/uplink-cli).**
+**Please check out our most up-to-date Storj DCS Uplink CLI documentation [here](https://docs.storj.io/api-reference/uplink-cli).**
 
 The Uplink CLI is our client-side application that supports interacting with
-the Storj Tardigrade network. This tutorial assumes you have an account on a running
+the Storj DCS network. This tutorial assumes you have an account on a running
 Satellite and uses a [test network](Test-network) Satellite by default.
 
 ## Installation and configuration
@@ -29,17 +29,17 @@ You will be prompted for:
 - Encryption passphrase: The passphrase you choose in order to encrypt your objects. Keep this secret and safe. This passphrase will grant you access to all of your objects, and if you lose it, you will not be able to recover your objects. 
 
 
-You are now ready to interact with your objects on the Tardigrade Network!
+You are now ready to interact with your objects on the Storj DCS Network!
 
 ## Usage
 
 The `uplink` command has a number of operations that can be performed, such as:
 
  * `cat` - output an object to standard out
- * `cp` - copy an object from outside of Tardigrade to inside or vice versa
- * `ls` - list buckets or objects on your Tardigrade project
+ * `cp` - copy an object from outside of Storj DCS to inside or vice versa
+ * `ls` - list buckets or objects on your Storj DCS project
  * `mb` - make a new bucket
- * `put` - writes data from standard in to an object on your Tardigrade project
+ * `put` - writes data from standard in to an object on your Storj DCS project
  * `rb` - remove a bucket
  * `rm` - remove an object
  * `share` - share an object
@@ -81,6 +81,6 @@ documentation, but some example commands are listed below:
 
 And that's it! You now know how to perform basic operations on a Storj bucket, and you've been able to get `uplink` working.
 
-We also have a tutorial on [S3 integration](https://documentation.tardigrade.io/api-reference/s3-gateway).
+We also have a tutorial on [S3 integration](https://docs.storj.io/api-reference/s3-gateway).
 
 Now go and decentralize all the things!

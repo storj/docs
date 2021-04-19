@@ -22,11 +22,10 @@ For the complete documentation around uplink, check out the [Go Docs](https://pk
 ### Prerequisites
 
 This walkthrough assumes that the user has already has done the following:
-* [Created an account on a Satellite](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/prerequisites)
-* [Created a Project](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/create-a-project)
-* [Generated an API Key](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/create-an-api-key)
+* [Created an account on a Satellite](https://docs.storj.io/getting-started/quickstart-uplink-cli/uploading-your-first-object/prerequisites)
+* [Generated an Access grant](https://docs.storj.io/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant)
 
-For more information on these prerequisites, check out a walkthrough on uploading your first object, located [here:](https://documentation.tardigrade.io/getting-started/uploading-your-first-object)
+For more information on these prerequisites, check out a walkthrough on uploading your first object, located [here:](https://docs.storj.io/getting-started/quickstart-uplink-cli/uploading-your-first-object)
 
 ### Let's write code
 
@@ -72,7 +71,7 @@ Write:
 const (
 	myAPIKey = "change-me-to-the-api-key-created-in-satellite-gui"
 
-	satellite    = "us-central-1.tardigrade.io:7777"
+	satellite    = "us1.storj.io:7777"
 	myBucket     = "my-first-bucket"
 	myUploadKey  = "foo/bar/baz"
 	myData       = "one fish two fish red fish blue fish"
@@ -176,7 +175,7 @@ func main() {
 }
 ```
 
-Congrats, you have now written a basic Go program with functions that upload a file from the Tardigrade Network and download it back to your machine!	
+Congrats, you have now written a basic Go program with functions that upload a file from the Storj Network and download it back to your machine!	
 
 For the full file, see below:
 
@@ -200,7 +199,7 @@ import (
 const (
 	myAPIKey = "change-me-to-the-api-key-created-in-satellite-gui"
 
-	satellite    = "us-central-1.tardigrade.io:7777"
+	satellite    = "us1.storj.io:7777"
 	myBucket     = "my-first-bucket"
 	myUploadKey  = "foo/bar/baz"
 	myData       = "one fish two fish red fish blue fish"

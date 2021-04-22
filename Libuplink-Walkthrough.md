@@ -70,7 +70,7 @@ Next, let's define our constants that we have pulled from the satellite. In Go, 
 In this example:
 * `myAccessGrant` will be the Access Grant generated on the satellite
 * `myBucket` will be an example bucket
-* `myUploadKey` will take the object's key (this is the unique identifier of the object in the bucket)
+* `myObjectKey` will take the object's key (this is the unique identifier of the object in the bucket)
 * `myData` will be the data that you are uploading
 
 Write: 
@@ -78,7 +78,7 @@ Write:
 const (
 	myAccessGrant = "change-me-to-the-access-grant-created-in-satellite-gui"
 	myBucket      = "mybucket"
-	myUploadKey   = "foo/bar/baz"
+	myObjectKey   = "foo/bar/baz"
 	myData        = "one fish two fish red fish blue fish"
 )
 ```
@@ -87,10 +87,10 @@ Next, let's define a function, `UploadAndDownloadData`, that uploads data to a s
 Write:
 
 ```golang
-// UploadAndDownloadData uploads the data to uploadKey in
+// UploadAndDownloadData uploads the data to objectKey in
 // bucketName, using accessGrant.
 func UploadAndDownloadData(ctx context.Context,
-	accessGrant, bucketName, uploadKey string,
+	accessGrant, bucketName, objectKey string,
 	data []byte) error {
 ```
 
@@ -174,7 +174,7 @@ Now that we have defined our primary functions, let's write a main function that
 ```golang
 func main() {
 	err := UploadAndDownloadData(context.Background(),
-		myAccessGrant, myBucket, myUploadKey, []byte(myData))
+		myAccessGrant, myBucket, myObjectKey, []byte(myData))
 	if err != nil {
 		log.Fatalln("error:", err)
 	}
@@ -210,7 +210,7 @@ import (
 const (
 	myAccessGrant = "change-me-to-the-access-grant-created-in-satellite-gui"
 	myBucket      = "mybucket"
-	myUploadKey   = "foo/bar/baz"
+	myObjectKey   = "foo/bar/baz"
 	myData        = "one fish two fish red fish blue fish"
 )
 
@@ -282,7 +282,7 @@ func UploadAndDownloadData(ctx context.Context,
 
 func main() {
 	err := UploadAndDownloadData(context.Background(),
-		myAccessGrant, myBucket, myUploadKey, []byte(myData))
+		myAccessGrant, myBucket, myObjectKey, []byte(myData))
 	if err != nil {
 		log.Fatalln("error:", err)
 	}

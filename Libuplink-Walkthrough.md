@@ -39,11 +39,10 @@ $ go mod init example.test
 
 You can replace "example.test" with your Github project, e.g. `github.com/<username>/<project>`, if you wish.
 
-We need to add the `storj.io/uplink` package as a dependency to the module. Run these commands:
+We need to add the `storj.io/uplink` package as a dependency to the module. Run this command:
 
 ``` sh
-$ go mod edit -require storj.io/uplink@latest
-$ go mod tidy
+$ go get storj.io/uplink
 ```
 
 Next, create a file with the name `main.go` where we will write the code of our program. Open this file in your text or code editor.

@@ -219,7 +219,7 @@ const (
 func UploadAndDownloadData(ctx context.Context,
 	accessGrant, bucketName, objectKey string,
 	data []byte) error {
-	
+
 	// Parse the Access Grant.
 	access, err := uplink.ParseAccess(accessGrant)
 	if err != nil {
@@ -238,7 +238,7 @@ func UploadAndDownloadData(ctx context.Context,
 	if err != nil {
 		return fmt.Errorf("could not ensure bucket: %v", err)
 	}
-	
+
 	// Intitiate the upload of our Object to the specified bucket and key.
 	upload, err := project.UploadObject(ctx, bucketName, objectKey, nil)
 	if err != nil {

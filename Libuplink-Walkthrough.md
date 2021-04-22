@@ -1,6 +1,6 @@
 ## Getting Started
 
-The `uplink` developer library is written for the Go language, and will allow Storj partners and clients to start to integrate with the Storj object store programmatically. We’ve created this library to make it as easy as possible for developers to leverage decentralized object storage in their applications.
+The `uplink` developer library is written for the Go language and allows Storj partners and clients to integrate with the Storj object store programmatically. We created this library to make it as easy as possible for developers to leverage decentralized object storage in their applications.
 
 There are more than a number of reasons why you may wish to utilize decentralized storage over legacy alternatives, namely:
 
@@ -13,33 +13,42 @@ There are more than a number of reasons why you may wish to utilize decentralize
 
 ### Background
 
-An Uplink is an entry point into the Storj network. It connects to a specific Satellite and caches connections and resources, allowing users to create sessions. At its core, `storj.io/uplink` is a Go library that you can use to programmatically interact with the Storj network.
+Uplink is the entry point into the Storj network. It connects to a specific Satellite and caches connections and resources, allowing users to create sessions. At its core, `storj.io/uplink` is a Go library that you can use to programmatically interact with the Storj network.
 
-In the near future, additional library language wrappers will be released, allowing you to programmatically interface the Storj network with other programming languages. The first language binding that we are planning to release are for C, Java (Android), and iOS - with additional language bindings planned through community bounties.
+Additional library language wrappers are released, allowing you to programmatically interface the Storj network with other programming languages: [C](https://github.com/storj/uplink-c), [Java](https://github.com/storj/uplink-java), [Android](https://github.com/storj/uplink-android), [Swift](https://github.com/storj-thirdparty/uplink-swift), [PHP](https://github.com/storj-thirdparty/uplink-php), [Python](https://github.com/storj-thirdparty/uplink-python), [JavaScript](https://github.com/storj-thirdparty/uplink-js), and [Node.js](https://github.com/storj-thirdparty/uplink-nodejs). Additional language bindings are planned through community bounties.
 
 For the complete documentation around uplink, check out the [Go Docs](https://pkg.go.dev/storj.io/uplink).
 
 ### Prerequisites
 
-This walkthrough assumes that the user has already has done the following:
+This walkthrough assumes that the user has already done the following:
 * [Created an account on a Satellite](https://docs.storj.io/getting-started/quickstart-uplink-cli/uploading-your-first-object/prerequisites)
 * [Generated an Access grant](https://docs.storj.io/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant)
 
-For more information on these prerequisites, check out a walkthrough on uploading your first object, located [here:](https://docs.storj.io/getting-started/quickstart-uplink-cli/uploading-your-first-object)
+For more information on these prerequisites, check out a walkthrough on uploading your first object, located [here](https://docs.storj.io/getting-started/quickstart-uplink-cli/uploading-your-first-object).
 
 ### Let's write code
 
-Now that we have created a project and generated an API key, let's get started with some code! We are going to write a Go program with functions that will upload a file to a project that we created on the Satellite. The full code for this walkthrough can be found at the very bottom.
+Now that we have created a project and generated an Access Grant, let's get started with some code! We are going to write a Go program with functions that will upload a file to a project that we created on the Satellite. The full code for this walkthrough can be found at the very bottom.
 
-First it is necessary to setup a go module for your program. This helps go keep track and use the right version of libraries. For a more thorough guide, please read [Using Go Modules](https://blog.golang.org/using-go-modules). However, the simplest way to get started is to create a new folder outside of your `GOPATH` and run commands:
+First, it is necessary to set up a Go module for your program. This helps Go keep track and use the right version of libraries. For a more thorough guide, please read [Using Go Modules](https://blog.golang.org/using-go-modules). However, the simplest way to get started is to create a new folder outside of your `GOPATH` and run commands:
 
 ``` sh
 $ go mod init example.test
 ```
 
-You can replace "example.test" with your github project, e.g. `github.com/<username>/<project>`, if you wish.
+You can replace "example.test" with your Github project, e.g. `github.com/<username>/<project>`, if you wish.
 
-Then we need to list the package and import dependencies related to the Uplink. Every Go program must be a part of some package - and because this is a standalone executable Go program, we must first make a `package main` declaration, and import some additional package dependencies as well. Write:
+We need to add the `storj.io/uplink` package as a dependency to the module. Run these commands:
+
+``` sh
+$ go mod edit -require storj.io/uplink@latest
+$ go mod tidy
+```
+
+Next, create a file with the name `main.go` where we will write the code of our program. Open this file in your text or code editor.
+
+We need to list the package and import dependencies related to the Uplink. Every Go program must be a part of some package - and because this is a standalone executable Go program, we must first make a `package main` declaration, and import some additional package dependencies as well. Write:
 
 ```golang
 package main
@@ -56,47 +65,42 @@ import (
 )
 ```
 
-Next, let’s define our constants that we have pulled from the satellite.  In Go, constants are declared like variables, but with the `const` keyword.  These constants include constants for our API key, Satellite address, bucket name, upload key, and encryption passphrase. The following values are fillers for what you would be using in real life. 
+Next, let's define our constants that we have pulled from the satellite. In Go, constants are declared like variables, but with the `const` keyword.  These constants include constants for our Access Grant, Satellite address, bucket name, upload key, and data to upload. The following values are fillers for what you would be using in real life. 
 
 In this example:
-* `satellite` will define the Satellite URL 
+* `myAccessGrant` will be the Access Grant generated on the satellite
 * `myBucket` will be an example bucket
 * `myUploadKey` will take the object's key (this is the unique identifier of the object in the bucket)
 * `myData` will be the data that you are uploading
-* `myAPIKey` will be the API Key generated previously in the previous walkthrough
-* `myPassphrase` will be the passphrase for encrypting data
 
 Write: 
 ```golang
 const (
-	myAPIKey = "change-me-to-the-api-key-created-in-satellite-gui"
-
-	satellite    = "us1.storj.io:7777"
-	myBucket     = "my-first-bucket"
-	myUploadKey  = "foo/bar/baz"
-	myData       = "one fish two fish red fish blue fish"
-	myPassphrase = "you'll never guess this"
+	myAccessGrant = "change-me-to-the-access-grant-created-in-satellite-gui"
+	myBucket      = "mybucket"
+	myUploadKey   = "foo/bar/baz"
+	myData        = "one fish two fish red fish blue fish"
 )
 ```
-Next, let’s define a function, `UploadAndDownloadData`, that uploads data to a specified path in a bucket, ingesting a Satellite address, encryption passphrase, and API key, bucket name, upload key, and data to upload as parameters.
+Next, let's define a function, `UploadAndDownloadData`, that uploads data to a specified path in a bucket, ingesting an Access Grant, bucket name, upload key, and data to upload as parameters.
 
 Write:
 
 ```golang
-// UploadAndDownloadData uploads the specified data to the specified key in the
-// specified bucket, using the specified Satellite, API key, and passphrase.
+// UploadAndDownloadData uploads the data to uploadKey in
+// bucketName, using accessGrant.
 func UploadAndDownloadData(ctx context.Context,
-	satelliteAddress, apiKey, passphrase, bucketName, uploadKey string,
-	dataToUpload []byte) error {
+	accessGrant, bucketName, uploadKey string,
+	data []byte) error {
 ```
 
-Now, let’s get started and upload an object programatically. To do so, we will need to request an access grant from the satellite, open the project, and ensure the bucket that we are working with.  Write:
+Now, let's get started and upload an object programmatically. To do so, we will need to parse the access grant, open the project, and ensure the bucket that we are working with is created. Write:
 
 ```golang
-	// Request access grant to the satellite with the API key and passphrase.
-	access, err := uplink.RequestAccessWithPassphrase(ctx, satelliteAddress, apiKey, passphrase)
+	// Parse the Access Grant.
+	access, err := uplink.ParseAccess(accessGrant)
 	if err != nil {
-		return fmt.Errorf("could not request access grant: %v", err)
+		return fmt.Errorf("could not parse access grant: %v", err)
 	}
 
 	// Open up the Project we will be working with.
@@ -113,17 +117,17 @@ Now, let’s get started and upload an object programatically. To do so, we will
 	}
 ```
 
-Now, let’s write some code to upload an object!
+Now, let's write some code to upload an object!
 
 ```golang
 	// Intitiate the upload of our Object to the specified bucket and key.
-	upload, err := project.UploadObject(ctx, bucketName, uploadKey, nil)
+	upload, err := project.UploadObject(ctx, bucketName, objectKey, nil)
 	if err != nil {
 		return fmt.Errorf("could not initiate upload: %v", err)
 	}
 
 	// Copy the data to the upload.
-	buf := bytes.NewBuffer(dataToUpload)
+	buf := bytes.NewBuffer(data)
 	_, err = io.Copy(upload, buf)
 	if err != nil {
 		_ = upload.Abort()
@@ -135,14 +139,16 @@ Now, let’s write some code to upload an object!
 	if err != nil {
 		return fmt.Errorf("could not commit uploaded object: %v", err)
 	}
+	if err != nil {
+		return fmt.Errorf("could not commit uploaded object: %v", err)
+	}
 ```
 
-
-To download it, let’s write the code to call the file back.  Write:
+To download it, let's write the code to call the file back.  Write:
 
 ```golang
 	// Initiate a download of the same object again
-	download, err := project.DownloadObject(ctx, bucketName, uploadKey, nil)
+	download, err := project.DownloadObject(ctx, bucketName, objectKey, nil)
 	if err != nil {
 		return fmt.Errorf("could not open object: %v", err)
 	}
@@ -155,18 +161,20 @@ To download it, let’s write the code to call the file back.  Write:
 	}
 
 	// Check that the downloaded data is the same as the uploaded data.
-	if !bytes.Equal(receivedContents, dataToUpload) {
-		return fmt.Errorf("got different object back: %q != %q", dataToUpload, receivedContents)
+	if !bytes.Equal(receivedContents, data) {
+		return fmt.Errorf("got different object back: %q != %q", data, receivedContents)
 	}
+
+	return nil
 }
 ```
 
-Now that we have defined our primary functions, let’s write a main function that ingests the const parameters. Write:
+Now that we have defined our primary functions, let's write a main function that ingests the const parameters. Write:
 
 ```golang
 func main() {
 	err := UploadAndDownloadData(context.Background(),
-		satellite, myAPIKey, myPassphrase, myBucket, myUploadKey, []byte(myData))
+		myAccessGrant, myBucket, myUploadKey, []byte(myData))
 	if err != nil {
 		log.Fatalln("error:", err)
 	}
@@ -175,14 +183,17 @@ func main() {
 }
 ```
 
-Congrats, you have now written a basic Go program with functions that upload a file from the Storj Network and download it back to your machine!	
+Congrats, you have now written a basic Go program with functions that upload a file from the Storj Network and download it back to your machine!
 
-For the full file, see below:
+You can run the program with this command:
+
+``` sh
+$ go run main.go
+```
+
+For the full source code, see below:
 
 ```golang
-// Copyright (C) 2019 Storj Labs, Inc.
-// See LICENSE for copying information.
-
 package main
 
 import (
@@ -197,25 +208,22 @@ import (
 )
 
 const (
-	myAPIKey = "change-me-to-the-api-key-created-in-satellite-gui"
-
-	satellite    = "us1.storj.io:7777"
-	myBucket     = "my-first-bucket"
-	myUploadKey  = "foo/bar/baz"
-	myData       = "one fish two fish red fish blue fish"
-	myPassphrase = "you'll never guess this"
+	myAccessGrant = "change-me-to-the-access-grant-created-in-satellite-gui"
+	myBucket      = "mybucket"
+	myUploadKey   = "foo/bar/baz"
+	myData        = "one fish two fish red fish blue fish"
 )
 
-// UploadAndDownloadData uploads the specified data to the specified key in the
-// specified bucket, using the specified Satellite, API key, and passphrase.
+// UploadAndDownloadData uploads the data to objectKey in
+// bucketName, using accessGrant.
 func UploadAndDownloadData(ctx context.Context,
-	satelliteAddress, apiKey, passphrase, bucketName, uploadKey string,
-	dataToUpload []byte) error {
-
-	// Request access grant to the satellite with the API key and passphrase.
-	access, err := uplink.RequestAccessWithPassphrase(ctx, satelliteAddress, apiKey, passphrase)
+	accessGrant, bucketName, objectKey string,
+	data []byte) error {
+	
+	// Parse the Access Grant.
+	access, err := uplink.ParseAccess(accessGrant)
 	if err != nil {
-		return fmt.Errorf("could not request access grant: %v", err)
+		return fmt.Errorf("could not parse access grant: %v", err)
 	}
 
 	// Open up the Project we will be working with.
@@ -230,15 +238,15 @@ func UploadAndDownloadData(ctx context.Context,
 	if err != nil {
 		return fmt.Errorf("could not ensure bucket: %v", err)
 	}
-
+	
 	// Intitiate the upload of our Object to the specified bucket and key.
-	upload, err := project.UploadObject(ctx, bucketName, uploadKey, nil)
+	upload, err := project.UploadObject(ctx, bucketName, objectKey, nil)
 	if err != nil {
 		return fmt.Errorf("could not initiate upload: %v", err)
 	}
 
 	// Copy the data to the upload.
-	buf := bytes.NewBuffer(dataToUpload)
+	buf := bytes.NewBuffer(data)
 	_, err = io.Copy(upload, buf)
 	if err != nil {
 		_ = upload.Abort()
@@ -252,7 +260,7 @@ func UploadAndDownloadData(ctx context.Context,
 	}
 
 	// Initiate a download of the same object again
-	download, err := project.DownloadObject(ctx, bucketName, uploadKey, nil)
+	download, err := project.DownloadObject(ctx, bucketName, objectKey, nil)
 	if err != nil {
 		return fmt.Errorf("could not open object: %v", err)
 	}
@@ -265,8 +273,8 @@ func UploadAndDownloadData(ctx context.Context,
 	}
 
 	// Check that the downloaded data is the same as the uploaded data.
-	if !bytes.Equal(receivedContents, dataToUpload) {
-		return fmt.Errorf("got different object back: %q != %q", dataToUpload, receivedContents)
+	if !bytes.Equal(receivedContents, data) {
+		return fmt.Errorf("got different object back: %q != %q", data, receivedContents)
 	}
 
 	return nil
@@ -274,7 +282,7 @@ func UploadAndDownloadData(ctx context.Context,
 
 func main() {
 	err := UploadAndDownloadData(context.Background(),
-		satellite, myAPIKey, myPassphrase, myBucket, myUploadKey, []byte(myData))
+		myAccessGrant, myBucket, myUploadKey, []byte(myData))
 	if err != nil {
 		log.Fatalln("error:", err)
 	}

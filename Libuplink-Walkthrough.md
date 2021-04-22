@@ -138,9 +138,6 @@ Now, let's write some code to upload an object!
 	if err != nil {
 		return fmt.Errorf("could not commit uploaded object: %v", err)
 	}
-	if err != nil {
-		return fmt.Errorf("could not commit uploaded object: %v", err)
-	}
 ```
 
 To download it, let's write the code to call the file back.  Write:

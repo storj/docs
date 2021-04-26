@@ -12,12 +12,12 @@ all of the components are run locally.
 
 You need to install:
 
-1. Go 1.14
+1. Go 1.16
 2. C tooling
 3. Postgres
 4. Redis
 
-Go 1.14 can be installed by following instructions at [golang.org](https://www.golang.org/).
+Go 1.16 can be installed by following instructions at [golang.org](https://www.golang.org/).
 
 Installing C tooling:
 
@@ -43,7 +43,7 @@ make install-sim
 
 _Ensure that `storj` folder is outside of `GOPATH`, otherwise you may see errors._
 
-This will install the storj-sim satellite storage node gateway and uplink binaries to wherever Go is configured to output binaries on your system. By default, this is `~/go/bin`. If this location is not in your `$PATH` add it by running `export PATH="~/go/bin:$PATH".
+This will install the storj-sim satellite storage node gateway and uplink binaries to wherever Go is configured to output binaries on your system. By default, this is `$HOME/go/bin`. If this location is not in your `$PATH` add it by running `export PATH="$HOME/go/bin:$PATH".
 
 
 Next, run setup:

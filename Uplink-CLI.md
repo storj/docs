@@ -13,7 +13,7 @@ Download the correct binary for your operating system:
 - Mac OS: [uplink_darwin_amd64.zip](https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip)
 - Linux: [uplink_linux_amd64.zip](https://github.com/storj/storj/releases/latest/download/uplink_linux_amd64.zip)
 - Raspberry Pi: [uplink_linux_arm.zip](https://github.com/storj/storj/releases/latest/download/uplink_linux_arm.zip)
-- Windows: [uplink_windows_amd64.exe.zip](https://github.com/storj/storj/releases/latest/download/uplink_windows_amd64.exe.zip)
+- Windows: [uplink_windows_amd64.zip](https://github.com/storj/storj/releases/latest/download/uplink_windows_amd64.zip)
 
 
 Setup your uplink by running the following command and following the wizard:

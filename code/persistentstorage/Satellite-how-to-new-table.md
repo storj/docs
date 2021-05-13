@@ -4,7 +4,7 @@ The purpose of this document is to outline the steps to create a new table in th
 
 ## Background
 
-[`DBX`](https://github.com/spacemonkeygo/dbx) is a tool to generate database schemas and code to operate with it. Satellite.DB  uses `DBX` to generate the database code for SQLite and PostgreSQL.
+[`DBX`](https://github.com/storj/dbx) is a tool to generate database schemas and code to operate with it. Satellite.DB  uses `DBX` to generate the database code for SQLite and PostgreSQL.
 
 ## Requirements
 
@@ -12,7 +12,7 @@ The purpose of this document is to outline the steps to create a new table in th
 
 - Install `DBX` package.  `DBX` has a dependency on [Mercerial](https://www.mercurial-scm.org/wiki/), so you may need to install that if you get an error like `hg clone -U [...] "hg": executable file not found in $PATH`.
 
-`$ go get -v gopkg.in/spacemonkeygo/dbx.v1`
+`$ go get -v storj.io/dbx`
 
 ## Steps to create a new table
 

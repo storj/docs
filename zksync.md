@@ -35,11 +35,11 @@ docker run ... storjlabs/storagenode:latest --operator.wallet-features=zksync
 
 ---
 
-Once you have the line to your config file, save it and restart your node.
+Once you have the line to your config file, save it and restart your node. If you decided to specify the `zksync` wallet feature as an option, you need to stop and remove the container and run it back with all your parameters include added option for wallet feature.
 ![The change to the payment method will be indicated in your personal dashboard](https://user-images.githubusercontent.com/26858949/138343309-f013facd-90a3-4bf0-8817-aad06b173595.png)
 
 After opting-in for zkSync payouts for STORJ payments, gather your ETH address and private key, navigate to the zkSync Wallet (https://wallet.zksync.io/), and connect your ethereum account. If you have problems accessing your wallet, you might want to change your payout address to an address that you can access (for which you control the private keys).
-![image](https://user-images.githubusercontent.com/26858949/138344398-bd1284a1-11fe-4e51-9ce3-1ae0bb7630ff.png)
+![Storagenode web-dashboard](https://user-images.githubusercontent.com/26858949/138344398-bd1284a1-11fe-4e51-9ce3-1ae0bb7630ff.png)
 
 **Supported Wallets**: zkSync supports WalletConnect, an open source protocol for connecting decentralized applications to mobile wallets.  The protocol also supports hardware wallets like Trezor/Ledger and software wallets like Metamask, Fortmatic, Portis, Oper, Dapper, Lattice and Torus.
 

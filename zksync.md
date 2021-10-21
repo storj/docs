@@ -61,6 +61,9 @@ curl -X POST -H 'Content-type: application/json'   -d '{
      "id":1, "method": "get_tx_fee",
      "params": ["Withdraw", "0x80a52B7F26426d2b16578FC5f376c349F54772A7", "STORJ"]
      }'   https://api.zksync.io/jsrpc | jq
+```
+Example output:
+```
 {
   "jsonrpc": "2.0",
   "result": {
@@ -83,6 +86,9 @@ curl -X POST -H 'Content-type: application/json'   -d '{
     "id":1, "method": "get_tx_fee",
     "params": ["Transfer", "0x80a52B7F26426d2b16578FC5f376c349F54772A7", "STORJ"]
     }'   https://api.zksync.io/jsrpc | jq
+```
+Example output:
+```
 {
   "jsonrpc": "2.0",
   "result": {

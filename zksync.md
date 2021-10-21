@@ -17,10 +17,17 @@ ZkSync also dramatically lowers network transfer fees (compared to layer 1 fees)
 One of the most interesting things about zkSync is it supports "gasless meta-transactions" that allow users to pay transaction fees in the tokens being transferred. For example, if you want to transfer STORJ to an exchange, smart contract, or other address, there is no need for you to own ETH or any other tokens.
 
 ### Get Started and Opt-in
-To opt-in to zkSync you need to do a simple change in your Node configuration by following these steps:
-* Open your storage node's `config.yaml` (see [Where can I find the config.yaml?](https://docs.storj.io/node/resources/faq/where-can-i-find-a-config.yaml)) and add  
+*To opt-in to zkSync you need to do a simple change in your Node configuration by following these steps:*
+
+Open your storage node's `config.yaml` (see [Where can I find the config.yaml?](https://docs.storj.io/node/resources/faq/where-can-i-find-a-config.yaml)) and add  
 ```
 operator.wallet-features: ["zksync"]
+```
+
+If you use a docker version, you can also specify the `zksync` wallet feature as an option after the image name, for example:
+
+```
+docker run ... storjlabs/storagenode:latest --operator.wallet-features=zksync
 ```
 
 ---
@@ -38,7 +45,7 @@ After opting-in for zkSync payouts for STORJ payments, gather your ETH address a
 
 Finally, zkSync enables our Storage Node Operators to more easily interact directly with the world of DeFi through solutions like Curve, Numio, Uniswap V3, and others.
 
-**We are excited to share this update around payment scaling with our community of operators.  If you have any questions about using zkSync, check out our documentation. If you have ideas, or would like to talk with the team, please feel free to .**
+**We are excited to share this update around payment scaling with our community of operators. If you have any questions about using zkSync, check out our documentation. If you have ideas, or would like to talk with the team, please feel free to [reach out on our forum](http://forum.storj.io/).**
 
 ## Understanding zkSync fees
 Matter Labs runs an API for calculating transfer fees. Here's an example session to determine the Layer 2 to Layer 1 withdrawal fee:

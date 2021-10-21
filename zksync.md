@@ -134,7 +134,7 @@ You may see the account activation request if this is your first withdrawal.
 
 Then finally, you will see a window where you can select a destination L1 address to send the tokens to. By default the address will be your own L1 wallet address (which is the same as on L2), but you can change it to any other L1 address. For example, if you plan to immediately sell the tokens, you could choose an exchange's STORJ deposit address. This way you could directly withdraw STORJ from your L2 zkSync wallet address to an exchange deposit address in one single transaction.
 
-This window also allows you to select which type of token to use to pay for the withdrawal fee, so you could choose STORJ in order to avoid spending eth for gas fees with the Change fee token button.
+This window also allows you to select which type of token to use to pay for the withdrawal fee, so you could choose STORJ in order to avoid spending eth for gas fees with the **Change fee token** button.
 
 ![zkSync Wallet, Withraw to L1](https://user-images.githubusercontent.com/26858949/138350461-53d103ca-b923-4f32-bd98-dbdc63f0335a.png)
 

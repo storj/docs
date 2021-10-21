@@ -18,16 +18,16 @@ One of the most interesting things about zkSync is it supports "gasless meta-tra
 ## Get Started and Opt-in
 *To opt-in to zkSync you need to do a simple change in your Node configuration by following these steps:*
 
----
-*Please enter everything in lowercase and double-check for spelling mistakes. This is a very basic implementation without any validations.*
-
----
-
 ### Binary versions (include Windows/Linux GUI)
 Open your storage node's `config.yaml` (see [Where can I find the config.yaml?](https://docs.storj.io/node/resources/faq/where-can-i-find-a-config.yaml)) and add  
 ```
 operator.wallet-features: ["zksync"]
 ```
+
+---
+*Please enter everything in lowercase and double-check for spelling mistakes. This is a very basic implementation without any validations.*
+
+---
 
 Once you have the line to your config file, save it and restart your node.
 
@@ -37,6 +37,11 @@ If you use a docker version, you can also specify the `zksync` wallet feature as
 ```
 docker run ... storjlabs/storagenode:latest --operator.wallet-features=zksync
 ```
+
+---
+*Please enter everything in lowercase and double-check for spelling mistakes. This is a very basic implementation without any validations.*
+
+---
 
 If you decided to specify the `zksync` wallet feature as an option, you need to stop and remove the container and run it back with all your parameters include added option for wallet feature, otherwise you can just restart the container.
 
@@ -106,31 +111,39 @@ This tells us that at a gas price of 121 Gwei, the transfer fee would be 1.2 STO
 You can learn more in the [zkSync Documentation](https://zksync.io/api/).
 
 ## Withdrawal from zkSync to L1
-If you want to withdraw your tokens to any L1 address, you need to connect your wallet to zkSync Wallet https://wallet.zksync.io/
+If you want to withdraw your tokens from your zkSync L2 wallet address to any L1 address, you need to reconnect your L1 ethereum wallet to zkSync with https://wallet.zksync.io/ - once connected, it will show your L2 token balance as shown below.
+
 ![zkSync Wallet, Withdraw](https://user-images.githubusercontent.com/26858949/138349332-d6248871-73e9-453d-8ac5-454bffea3eee.png)
 
-and click the **Withdraw** button
+Now click the **Withdraw** button.
 
-You may see the activation account request
+You may see the account activation request if this is your first withdrawal.
 
-1. Authorize an account:
+---
+*Currently, zkSync requires users to pay a one-time registration fee of ~11000 gas for registering your address to zkSync, as this requires an on-chain transaction (you can elect to pay it with your STORJ tokens rather than ETH). This one-time fee should be eliminated in the near future.*
+
+---
+
+1. Authorize your account:
 
 ![zkSync Wallet, authorize account](https://user-images.githubusercontent.com/26858949/138349571-fe03acea-0388-42b5-91f0-93bc98689c58.png)
 
-2. Sign an account activation:
+2. Sign the account activation:
 
 ![zkSync Wallet, sign account activation](https://user-images.githubusercontent.com/26858949/138349770-a6a247b6-c1b1-4ab3-b093-079f6a95e220.png)
 
-Then finally you will see a window where you can select a destination L1 address (it's the same as on L2 by default), token to withdraw and token for fee.
+Then finally, you will see a window where you can select a destination L1 address to send the tokens to. By default the address will be your own L1 wallet address (which is the same as on L2), but you can change it to any other L1 address. For example, if you plan to immediately sell the tokens, you could choose an exchange's STORJ deposit address. This way you could directly withdraw STORJ from your L2 zkSync wallet address to an exchange deposit address in one single transaction.
+
+This window also allows you to select which type of token to use to pay for the withdrawal fee, so you could choose STORJ in order to avoid spending eth for gas fees with the Change fee token button.
 
 ![zkSync Wallet, Withraw to L1](https://user-images.githubusercontent.com/26858949/138350461-53d103ca-b923-4f32-bd98-dbdc63f0335a.png)
 
 ### Complete withdrawal to L1
-1. Replace the address to needed one or select it from your contacts list with button **Own account [v]**. You can save the entered address to contacts later.
-2. Click the **Select token** button and select STORJ
+1. Replace the destination address with the one you want to send the tokens to. If you want to just withdraw to your own wallet address on L1, select it from your contacts list with the button **Own account [v]**. You can save the entered address to contacts later.
+2. Click the **Select token** button and select STORJ.
 ![zkSync Wallet, Withdraw to L1, Select a token](https://user-images.githubusercontent.com/26858949/138351536-04d615fb-384b-4af8-ba6e-6f059a18bef9.png)
 
-3. Enter amount into **Amount** field. You will see a withdrawal fee, one-time activation fee, and estimated sums in USD
+3. Enter the amount you want to withdraw into the **Amount** field. You will see a withdrawal fee, one-time activation fee (only the first time you make a withdrawal), and the estimated fee values expressed USD.
 ![zkSync Wallet, Withdraw to L1, Amount](https://user-images.githubusercontent.com/26858949/138352317-71a843f9-957a-4c55-ac4f-7baef7e86904.png)
 
-4. Confirm withdrawal by button **Withdraw to L1**
+4. Confirm withdrawal by pressing the **Withdraw to L1** button. You should be able to confirm the withdrawal transaction in History.

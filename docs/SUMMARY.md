@@ -66,6 +66,7 @@
   * [mb](api-reference/uplink-cli/uplink-mb-command.md)
   * [meta](api-reference/uplink-cli/meta-command/README.md)
     * [meta get](api-reference/uplink-cli/meta-command/meta-get-command.md)
+  * [mv](api-reference/uplink-cli/mv.md)
   * [put](api-reference/uplink-cli/put-command.md)
   * [rb](api-reference/uplink-cli/rb-command.md)
   * [revoke](api-reference/uplink-cli/revoke.md)

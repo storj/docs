@@ -9,19 +9,19 @@ description: Copies a local file or Storj object to another location locally or 
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe cp [flags] <SOURCE> <DESTINATION>
+./uplink.exe cp SOURCE DESTINATION [flags]
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink cp [flags] <SOURCE> <DESTINATION>
+uplink cp SOURCE DESTINATION [flags]
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink cp [flags] <SOURCE> <DESTINATION>
+uplink cp SOURCE DESTINATION [flags]
 ```
 {% endtab %}
 {% endtabs %}
@@ -36,13 +36,14 @@ The `cp` command is used to upload and download objects. The `cp` command abstra
 | `--expires string`  | <p>optional expiration date of an object. <br>Please use format (<code>yyyy-mm-ddThh:mm:ssZhh:mm</code>)</p> |
 | `--help`, `-h`      | help for cp                                                                                                  |
 | `--metadata string` | optional metadata for the object. Please use a single level JSON object of string to string only             |
+| `--parallelism int` | controls how many parallel uploads/downloads of a single object will be performed (default 1)                |
 | `--progress`        | if true, show progress (default true)                                                                        |
 
 ## Examples
 
 ### Copy a local file into an existing bucket
 
-When the `cpm` command is used to copy a file to Storj DCS (upload), the CLI first encrypts the file client-side, then splits it into a minimum of x erasure-coded pieces, and finally, the x pieces are uploaded in parallel to x different storage nodes. x currently equals 80 but is subject to change depending on continuous optimization.&#x20;
+When the `cp` command is used to copy a file to Storj DCS (upload), the CLI first encrypts the file client-side, then splits it into a minimum of x erasure-coded pieces, and finally, the x pieces are uploaded in parallel to x different storage nodes. x currently equals 80 but is subject to change depending on continuous optimization.&#x20;
 
 To copy `cheesecake.jpg` into the existing bucket `cakes`, use the following command:
 
@@ -131,6 +132,102 @@ The date is given in the `yyyy-mm-ddThh:mm:ssZhh:mm` format defined in ISO 8601.
 The command above gives the following output:
 
 ![](../../.gitbook/assets/upload\_file.png)
+
+### Copy an object with parallelism
+
+If you have enough upstream bandwidth you can use the multipart functionality to upload object faster.
+
+To increase upload speed you can use the `cp` command with the `--parallelism 10`  flag (the number you can set accordingly your preferences and available upstream bandwidth):
+
+{% tabs %}
+{% tab title="Windows" %}
+```
+./uplink.exe cp cheesecake.jpg sj://cakes --parallelism 10
+```
+{% endtab %}
+
+{% tab title="Linux" %}
+```
+uplink cp cheesecake.jpg sj://cakes --parallelism 10
+```
+{% endtab %}
+
+{% tab title="macOS" %}
+```
+uplink cp cheesecake.jpg sj://cakes --parallelism 10
+```
+{% endtab %}
+{% endtabs %}
+
+Since our sample object is small, you likely will not notice a difference.
+
+![](../../.gitbook/assets/upload\_file.png)
+
+It would be significant different with the big objects, like videos or OS images, etc. and upstream bandwidth much more than 100Mbps.
+
+### Copy an object from the one location to another on Storj
+
+It is possible to copy a file from one Storj DCS location to another Storj DCS location within the same project.
+
+When the `cp` command is used to copy a file from the one Storj DCS location to another Storj DCS location, the CLI will **download** the object from the previous location and **upload** it to a new location.
+
+{% hint style="warning" %}
+The download will use your egress limits. You can be charged for egress traffic accordingly your [tariff plan](broken-reference).
+{% endhint %}
+
+To create a new bucket we will use the `mb` command, the copy is possible only to the existing bucket.
+
+{% tabs %}
+{% tab title="Windows" %}
+```
+./uplink.exe mb sj://new-recipes
+```
+{% endtab %}
+
+{% tab title="Linux" %}
+```
+uplink mb sj://new-recipes
+```
+{% endtab %}
+
+{% tab title="macOS" %}
+```
+uplink mb sj://new-recipes
+```
+{% endtab %}
+{% endtabs %}
+
+```powershell
+Bucket new-recipes created
+```
+
+{% hint style="info" %}
+Nested buckets are not supported, but you can use prefixes, they would act almost as subfolders.
+{% endhint %}
+
+To copy a file from a project to another bucket in the same project and with prefix `cakes`, use:
+
+{% tabs %}
+{% tab title="Windows" %}
+```
+./uplink.exe cp sj://cakes/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
+```
+{% endtab %}
+
+{% tab title="Linux" %}
+```
+uplink cp sj://cakes/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
+```
+{% endtab %}
+
+{% tab title="macOS" %}
+```
+uplink cp sj://cakes/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
+```
+{% endtab %}
+{% endtabs %}
+
+![](<../../.gitbook/assets/image (124).png>)
 
 ### Copy a file to a bucket with metadata
 

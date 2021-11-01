@@ -1,5 +1,5 @@
 ---
-description: Moves a Storj object to another location in Storj
+description: Moves a Storj object to another location in Storj DCS
 ---
 
 # mv
@@ -26,7 +26,7 @@ uplink mv SOURCE DESTINATION [flags]
 {% endtab %}
 {% endtabs %}
 
-The `mv` command is used to move or rename objects within the same Storj DCS project. The `mv` command uses a server-side move (rename) method, it does not incurring the fee for download and performed with no delay.
+The `mv` command is used to move or rename objects within the same Storj DCS project. The `mv` command uses a server-side move (rename) method, it does not incur a fee for downloading and will be performed with no delay.
 
 ## Flags
 
@@ -67,15 +67,15 @@ uplink mv sj://cakes/cheesecake.jpg sj://cakes/New-York/cheesecake.jpg
 You cannot use regular expressions to specify which files to copy (e.g. `uplink mv sj://cakes/cheese* sj://cakes/New-York/` will not work). Also, you can only specify one source at a time (no ~~`uplink mv sj://cakes/cheesecake.jpg sj://cakes/cheesecake2.png sj://cakes`~~)
 {% endhint %}
 
-Output:
+Sample Output:
 
 ![](<../../.gitbook/assets/image (127).png>)
 
 ### Move an object from a one bucket to another
 
-When the `mv` command is used to move an object from the one Storj DCS bucket to another Storj DCS bucket, the CLI will use a server-side move method.
+When the `mv` command is used to move an object from one Storj DCS bucket to another Storj DCS bucket, the CLI will use a server-side move method.
 
-To create a new bucket we will use the `mb` command, the move is possible only to the existing bucket.
+To create a new bucket, we will use the `mb` command, as a move is possible only to an existing bucket.
 
 {% tabs %}
 {% tab title="Windows" %}
@@ -102,10 +102,10 @@ Bucket new-recipes created
 ```
 
 {% hint style="info" %}
-Nested buckets are not supported, but you can use prefixes, they would act almost as subfolders.
+Nested buckets are not supported, but you can use prefixes, as they would act almost like subfolders.
 {% endhint %}
 
-To move an object from a one bucket to another, use:
+To move an object from one bucket to another, use:
 
 {% tabs %}
 {% tab title="Windows" %}
@@ -127,7 +127,7 @@ uplink mv sj://cakes/New-York/cheesecake.jpg sj://new-recipes/cakes/cheesecake.j
 {% endtab %}
 {% endtabs %}
 
-Output:
+Sample Output:
 
 ![](<../../.gitbook/assets/image (129).png>)
 
@@ -143,8 +143,8 @@ uplink mv sj://cakes/New-York/cheesecake.jpg sj://new-recipes/cakes/cheesecake.j
 Error: uplink: metaclient: metabase: unable to update object: ERROR: duplicate key value violates unique constraint "primary" (SQLSTATE 23505)
 ```
 
-This is mean, that the destination object is already exist. You should either use a different destination name/prefix or remove the existing object from the destination.
+This error means that the destination object already exists. You should either use a different destination name/prefix or remove the existing object from the destination.
 
 {% hint style="info" %}
-To remove an object use the [`uplink rm`](rm-command.md) command.
+To remove an object, use the [`uplink rm`](rm-command.md) command.
 {% endhint %}

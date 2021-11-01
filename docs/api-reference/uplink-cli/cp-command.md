@@ -1,5 +1,7 @@
 ---
-description: Copies a local file or Storj object to another location locally or in Storj
+description: >-
+  Copies a local file or Storj object to another location locally or in Storj
+  DCS
 ---
 
 # cp
@@ -135,9 +137,9 @@ The command above gives the following output:
 
 ### Copy an object with parallelism
 
-If you have enough upstream bandwidth you can use the multipart functionality to upload object faster.
+If you have enough upstream bandwidth, you can use the multipart functionality to upload objects faster.
 
-To increase upload speed you can use the `cp` command with the `--parallelism 10`  flag (the number you can set accordingly your preferences and available upstream bandwidth):
+To increase upload speed, you can use the `cp` command with the `--parallelism 10`  flag (the number you can set according to your preferences and available upstream bandwidth):
 
 {% tabs %}
 {% tab title="Windows" %}
@@ -163,19 +165,19 @@ Since our sample object is small, you likely will not notice a difference.
 
 ![](../../.gitbook/assets/upload\_file.png)
 
-It would be significant different with the big objects, like videos or OS images, etc. and upstream bandwidth much more than 100Mbps.
+It would be significantly different with big objects like videos or OS images etc. and for upstream bandwidth much greater than 100Mbps.
 
-### Copy an object from the one location to another on Storj
+### Copy an object from one location to another in Storj DCS
 
 It is possible to copy a file from one Storj DCS location to another Storj DCS location within the same project.
 
-When the `cp` command is used to copy a file from the one Storj DCS location to another Storj DCS location, the CLI will **download** the object from the previous location and **upload** it to a new location.
+When the `cp` command is used to copy a file from one Storj DCS location to another Storj DCS location, the CLI will **download** the object from the previous location and **upload** it to a new location.
 
 {% hint style="warning" %}
-The download will use your egress limits. You can be charged for egress traffic accordingly your [tariff plan](broken-reference).
+The download bandwidth will count against your egress limits. You can be charged for egress traffic according to your [tariff plan](broken-reference).
 {% endhint %}
 
-To create a new bucket we will use the `mb` command, the copy is possible only to the existing bucket.
+To create a new bucket, we will use the `mb` command, as copying is possible only to an existing bucket.
 
 {% tabs %}
 {% tab title="Windows" %}
@@ -202,7 +204,7 @@ Bucket new-recipes created
 ```
 
 {% hint style="info" %}
-Nested buckets are not supported, but you can use prefixes, they would act almost as subfolders.
+Nested buckets are not supported, but you can use prefixes, as they would act almost like subfolders.
 {% endhint %}
 
 To copy a file from a project to another bucket in the same project and with prefix `cakes`, use:
@@ -226,6 +228,8 @@ uplink cp sj://cakes/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
 ```
 {% endtab %}
 {% endtabs %}
+
+Sample Output:
 
 ![](<../../.gitbook/assets/image (124).png>)
 

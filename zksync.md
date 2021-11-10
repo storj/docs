@@ -52,11 +52,13 @@ Navigate to your personal web-dashboard, you should see an indication of zkSync 
 After opting-in for zkSync payouts for STORJ payments, gather your ETH address and private key, navigate to the zkSync Wallet (https://wallet.zksync.io/), and connect your ethereum account. If you have problems accessing your wallet, you might want to change your payout address to an address that you can access (for which you control the private keys).
 ![zkSync Wallet](https://user-images.githubusercontent.com/26858949/138344398-bd1284a1-11fe-4e51-9ce3-1ae0bb7630ff.png)
 
-**Supported Wallets**: zkSync supports WalletConnect, an open source protocol for connecting decentralized applications to mobile wallets.  The protocol also supports hardware wallets like Trezor/Ledger and software wallets like Metamask, Fortmatic, Portis, Oper, Dapper, Lattice and Torus.
+**Supported Wallets**: zkSync supports WalletConnect, an open source protocol for connecting decentralized applications to mobile wallets. The protocol also supports hardware wallets like Trezor/Ledger and software wallets like Metamask, Fortmatic, Portis, Oper, Dapper, Lattice and Torus.
 
 Finally, zkSync enables our Storage Node Operators to more easily interact directly with the world of DeFi through solutions like Curve, Numio, Uniswap V3, and others.
 
 **We are excited to share this update around payment scaling with our community of operators. If you have any questions about using zkSync, check out our documentation. If you have ideas, or would like to talk with the team, please feel free to [reach out on our forum](http://forum.storj.io/).**
+
+[You can read more about our approach to storage node payouts in general here](https://docs.storj.io/node/dependencies/storage-node-operator-payout-information).
 
 ## Understanding zkSync fees
 Matter Labs runs an API for calculating transfer fees. Here's an example session to determine the Layer 2 to Layer 1 withdrawal fee:
@@ -115,7 +117,7 @@ If you want to withdraw your tokens from your zkSync L2 wallet address to any L1
 
 ![zkSync Wallet, Send to Ethereum (L1)](https://user-images.githubusercontent.com/26858949/140198871-f58a0835-5af4-42b1-a619-a6f9b32e6ee0.png)
 
-Now click the **Send** button. In the next window you will be able to send to Ethereum (L1).
+Now click the **Send** button, and in the next window you will be able to send to Ethereum (L1).
 
 ![Send window](https://user-images.githubusercontent.com/26858949/140199260-8dbd5884-c7a1-4036-8391-2cebcf8d070d.png)
 
@@ -123,29 +125,31 @@ Click the **Send to Ethereum (L1)** link.
 
 ![Send to Ethereum](https://user-images.githubusercontent.com/26858949/140199706-eb69b79a-9fae-43ba-b79f-0aafe982bbbd.png)
 
-In the _**Send to Ethereum**_ window you can select or specify the L1 address in the *Address* field. There will be your address by default (which is the same as on L2), but you can change it to any other L1 address. For example, if you plan to immediately sell the tokens, you could choose an exchange's STORJ deposit address. This way you could directly withdraw STORJ from your L2 zkSync wallet address to an exchange deposit address in one single transaction.
+In the _**Send to Ethereum**_ window you can select or specify the L1 address in the *Address* field. This field will display your own L1 wallet address by default (which is the same as on L2), but you can change it to any other L1 address. For example, if you plan to immediately sell the tokens, you could choose an exchange's STORJ deposit address. This will allow you to directly withdraw STORJ from your L2 zkSync wallet address to an exchange L1 deposit address in one single transaction.
 
-To select a different address from your **Contacts** you can click on **Own account[v]** link.
+To select a different address from your **Contacts** you can click on the **Own account[v]** link.
 
-This window also allows you to change which type of token to use to pay for the withdrawal fee, by default it will use STORJ, but you can select ETH for example. To change a token for gas fees click the **Change fee token** button and select a different token.
+This window also allows you to change which type of token to use to pay for the withdrawal fee. So if you are sending STORJ, by default part of your STORJ balance will be used for paying the withdrawal fee, but you can also select ETH for example, if you have sufficient ETH in the same wallet address to pay the withdrawal fee. To change the type of token to use for paying the gas fees, click the **Change fee token** button and select a different token.
 
 ---
-*Currently, zkSync requires users to pay a one-time registration fee of ~11000 gas for registering your address to zkSync, as this requires an on-chain transaction (you can elect to pay it with your STORJ tokens rather than ETH). This one-time fee should be eliminated in the near future.*
+*Currently, zkSync requires users to pay a one-time activation fee for registering your address to zkSync, as this requires an on-chain transaction (you can elect to pay it with your STORJ tokens rather than ETH). See [What is the activation fee on zkSync](https://zksync.io/faq/faq.html#what-is-the-account-activation-fee).*
 
 ---
 
 ### Complete Send to Ethereum
-1. Replace the destination L1 address with the one you want to send the tokens to. You can save the entered address to **Contacts** later.
+1. Replace the destination address with the one you want to send the tokens to. You can save the entered address to **Contacts** later.
 2. Click the **Select token** button and select STORJ.
 
 ![zkSync Wallet, Send to Ethereum, Select a token](https://user-images.githubusercontent.com/26858949/138351536-04d615fb-384b-4af8-ba6e-6f059a18bef9.png)
 
-3. Enter the amount you want to send into the **Amount** field. You will see a transaction fee, one-time activation fee (only the first time you make a send to Ethereum), and the estimated fee values expressed USD.
+3. Enter the amount you want to send into the **Amount** field. You will see a transaction fee, [one-time activation fee](https://zksync.io/faq/tutorials.html#account-activation) (only the first time you make a send to Ethereum), and the estimated fee values expressed in the token you selected (STORJ) and its equivalent value in USD.
 
 ![zkSync Wallet, Send to Ethereum, Amount](https://user-images.githubusercontent.com/26858949/140204515-b3721258-e635-4bc7-94db-06b73e752535.png)
 
-4. Authorize the Send to Ethereum by pressing the **Authorize to Send to Ethereum** button. You will be asked for confirmation on your Wallet.
+4. Authorize the *Send to Ethereum* by pressing the **Authorize to Send to Ethereum** button. You will be asked for confirmation in your Wallet.
 
 ![zkSync Wallet, Send to Ethereum, Authorized](https://user-images.githubusercontent.com/26858949/140221078-18306a83-bacd-4a8b-aeea-39efc8a7e10c.png)
 
-5. Confirm sending by pressing the **Send to Ethereum** button. You should be able to confirm the withdrawal transaction in **History**.
+5. Confirm sending by pressing the **Send to Ethereum** button. You should be able to verify the withdrawal transaction was successful in **History**.
+
+See also [Send Funds to Ethereum](https://zksync.io/faq/tutorials.html#send-funds-to-ethereum) for details.

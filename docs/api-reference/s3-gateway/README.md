@@ -47,12 +47,12 @@ Download, unzip, and install the binary for your OS:
 #### Curl Download (PowerShell)
 
 ```
-curl https://github.com/storj/gateway/releases/latest/download/gateway_windows_amd64.exe.zip -o gateway_windows_amd64.exe.zip; Expand-Archive gateway_windows_amd64.exe.zip -Destination . -Force
+curl https://github.com/storj/gateway-st/releases/latest/download/gateway_windows_amd64.exe.zip -o gateway_windows_amd64.exe.zip; Expand-Archive gateway_windows_amd64.exe.zip -Destination . -Force
 ```
 
 #### Direct Download
 
-[Windows Gateway Binary](https://github.com/storj/gateway/releases/latest/download/gateway\_windows\_amd64.exe.zip)
+[Windows Gateway Binary](https://github.com/storj/gateway-st/releases/latest/download/gateway\_windows\_amd64.exe.zip)
 {% endtab %}
 
 {% tab title="Linux" %}
@@ -61,42 +61,44 @@ curl https://github.com/storj/gateway/releases/latest/download/gateway_windows_a
 #### Curl Download
 
 ```
-curl -L https://github.com/storj/gateway/releases/latest/download/gateway_linux_amd64.zip -O && unzip gateway_linux_amd64.zip
+curl -L https://github.com/storj/gateway-st/releases/latest/download/gateway_linux_amd64.zip -O && unzip gateway_linux_amd64.zip
 chmod 755 gateway
 sudo mv gateway /usr/local/bin/gateway
 ```
 
 #### Direct Download
 
-[Linux AMD64 Gateway Binary](https://github.com/storj/gateway/releases/latest/download/gateway\_linux\_amd64.zip)
+[Linux AMD64 Gateway Binary](https://github.com/storj/gateway-st/releases/latest/download/gateway\_linux\_amd64.zip)
+
+
 
 ### ARM
 
 #### Curl Download
 
 ```
-curl -L https://github.com/storj/gateway/releases/latest/download/gateway_linux_arm.zip -O && unzip gateway_linux_arm.zip
+curl -L https://github.com/storj/gateway-st/releases/latest/download/gateway_linux_arm.zip -O && unzip gateway_linux_arm.zip
 chmod 755 gateway
 sudo mv gateway /usr/local/bin/gateway
 ```
 
 #### Direct Download
 
-[Linux ARM Gateway Binary](https://github.com/storj/gateway/releases/latest/download/gateway\_linux\_arm.zip)
+[Linux ARM Gateway Binary](https://github.com/storj/gateway-st/releases/latest/download/gateway\_linux\_arm.zip)
 {% endtab %}
 
 {% tab title="macOS" %}
 #### Curl Download
 
 ```
-curl -L https://github.com/storj/gateway/releases/latest/download/gateway_darwin_amd64.zip -O && unzip gateway_darwin_amd64.zip
+curl -L https://github.com/storj/gateway-st/releases/latest/download/gateway_darwin_amd64.zip -O && unzip gateway_darwin_amd64.zip
 chmod 755 gateway
 sudo mv gateway /usr/local/bin/gateway
 ```
 
 #### Direct Download
 
-[macOS Gateway Binary](https://github.com/storj/gateway/releases/latest/download/gateway\_darwin\_amd64.zip)
+[macOS Gateway Binary](https://github.com/storj/gateway-st/releases/latest/download/gateway\_darwin\_amd64.zip)
 {% endtab %}
 
 {% tab title="Docker" %}

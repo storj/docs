@@ -28,7 +28,7 @@ To give you a sense of how the Storj DCS service is different, it’s helpful to
 
 ## What Happens When You Upload
 
-When a file is uploaded, it’s first encrypted by the Uplink client using an encryption key held by that client. Next, it’s erasure-coded, meaning it’s broken up into at least 80 pieces, of which only 29 (any 29) are required to reconstitute a file. (The redundancy from erasure coding is far more efficient than replicating files and is technology used by most data storage systems, including DVDs, which is why you can still watch a movie even if there are scratches and fingerprints on the disk.)&#x20;
+When a file is uploaded, it’s first encrypted by the Uplink client using an encryption key held by that client. Next, it’s erasure-coded, meaning it’s broken up into at least 80 pieces, of which only 29 (any 29) are required to reconstitute a file. (The redundancy from erasure coding is far more efficient than replicating files and this technology used by most data storage systems, including DVDs, which is why you can still watch a movie even if there are scratches and fingerprints on the disk.)&#x20;
 
 The Uplink Client then contacts the satellite to get a list of Storage Nodes on which to store the pieces. The satellite returns more than 80 Storage Node addresses. The Uplink Client uploads pieces peer-to-peer, in parallel, directly to the Storage Nodes. The Uplink client stops attempting to upload pieces once 80 pieces have been successfully uploaded to at least 80 Storage Nodes.&#x20;
 

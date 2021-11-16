@@ -12,21 +12,23 @@ To setup `uplink` see [Prerequisites](../../getting-started/quickstart-uplink-cl
 
 The `uplink` command can take the following child commands:
 
-| Command                        | Description                                                      |
-| ------------------------------ | ---------------------------------------------------------------- |
-| [`access`](access-command/)    | set of commands to manage accesses                               |
-| [`cat`](cat-command.md)        | output a file to standard-out                                    |
-| [`cp`](cp-command.md)          | copy a file from outside of Storj bucket to inside or vice versa |
-| [`help`](help-command.md)      | help about any command                                           |
-| [`import`](import-command.md)  | imports an access into configuration                             |
-| [`ls`](ls-command.md)          | List objects and prefixes or all buckets                         |
-| [`mb`](uplink-mb-command.md)   | make a new bucket                                                |
-| [`meta`](meta-command/)        | metadata related commands                                        |
-| [`put`](put-command.md)        | writes data from standard-in to a file in a Storj bucket         |
-| [`rb`](rb-command.md)          | remove a bucket                                                  |
-| [`revoke`](revoke.md)          | revoke an access grants to objects                               |
-| [`rm`](rm-command.md)          | remove a file from a Storj bucket                                |
-| [`share`](share-command.md)    | shares restricted access to objects                              |
+| Command                                                | Description                                                      |
+| ------------------------------------------------------ | ---------------------------------------------------------------- |
+| [access-command](access-command/ "mention")            | set of commands to manage accesses                               |
+| [cat-command.md](cat-command.md "mention")             | output a file to standard-out                                    |
+| [cp-command.md](cp-command.md "mention")               | copy a file from outside of Storj bucket to inside or vice versa |
+| [help-command.md](help-command.md "mention")           | help about any command                                           |
+| [import-command.md](import-command.md "mention")       | imports an access into configuration                             |
+| [ls-command.md](ls-command.md "mention")               | List objects and prefixes or all buckets                         |
+| [uplink-mb-command.md](uplink-mb-command.md "mention") | make a new bucket                                                |
+| [meta-command](meta-command/ "mention")                | metadata related commands                                        |
+| [mv.md](mv.md "mention")                               | moves a Storj object to another location in Storj DCS            |
+| [put-command.md](put-command.md "mention")             | writes data from standard-in to a file in a Storj bucket         |
+| [rb-command.md](rb-command.md "mention")               | remove a bucket                                                  |
+| [revoke.md](revoke.md "mention")                       | revoke an access grants to objects                               |
+| [rm-command.md](rm-command.md "mention")               | remove a file from a Storj bucket                                |
+| [setup-command.md](setup-command.md "mention")         | create an uplink config file                                     |
+| [share-command.md](share-command.md "mention")         | shares restricted access to objects                              |
 
 ## Flags
 

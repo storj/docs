@@ -8,7 +8,7 @@ description: >-
 
 If the default Project Limits do not appear to be appropriate for your use case, you may request a [Project Limit Increase form](https://supportdcs.storj.io/hc/en-us/requests/new?ticket\_form\_id=360000683212). Increases in Project Limits may result in increased costs associated with your usage of Storj DCS.
 
-## Free Tier
+## Free Plan
 
 The Free Tier is not eligible for Project Limit Increases.
 

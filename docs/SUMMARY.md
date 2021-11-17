@@ -154,7 +154,7 @@
 
 * [Billing, Payment and Accounts](billing-payment-and-accounts-1/pricing/README.md)
   * [How Billing is Calculated](billing-payment-and-accounts-1/pricing/billing-and-payment.md)
-  * [Free Tier](billing-payment-and-accounts-1/pricing/free-tier.md)
+  * [Free Plan](billing-payment-and-accounts-1/pricing/free-tier.md)
   * [Usage Limit Increases](billing-payment-and-accounts-1/pricing/usage-limit-increases.md)
 * [Payment Methods](billing-payment-and-accounts-1/storj-token/README.md)
   * [Promotional Credits](billing-payment-and-accounts-1/storj-token/promotional-credits.md)

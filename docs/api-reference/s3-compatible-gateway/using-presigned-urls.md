@@ -12,7 +12,7 @@ All objects and paths are private and encrypted by default. However, it is possi
 
 While we support this behavior via the S3-compatible pre-signed URL function, as an alternative to sharing with a customer/user via a GET, consider utilizing our [Linkshare service](../linksharing-service.md). One advantage of this approach is the ability to easily create perpetual share links, valid until you remove them or until a configurable end date of any duration. You can even [host a static webpage on Storj DCS](../../how-tos/host-a-static-website/) via Linkshare.
 
-## **Tutorial **
+## **Tutorial**&#x20;
 
 The goal of the following tutorial is to guide you in the creation of pre-signed URLs for storage DCS using a Python script and our multi-tenant hosted gateway.
 
@@ -38,7 +38,7 @@ This script will create a “put” pre-signed URL to be used for uploading
 
 Below you can see we need to set the following parameters:
 
-* **ACCESS\_KEY **- S3 Credential created with Access
+* **ACCESS\_KEY** - S3 Credential created with Access
 * **SECRET\_KEY** - S3 Credential created with Access
 * **URL** - You can use us1, eu1, or ap1 depending on location
 * **BUCKET NAME** - Name of the bucket related to this URL

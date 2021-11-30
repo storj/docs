@@ -4,7 +4,7 @@ Check [Prerequisites](../prerequisites.md).
 
 ## The Object we'll upload
 
-Right-click and save as **cheesecake.jpg **to your** Desktop**:
+Right-click and save as **cheesecake.jpg** to your **Desktop**:
 
 ![](../../../.gitbook/assets/cheesecake.jpg)
 

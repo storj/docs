@@ -60,7 +60,7 @@ Please, think twice before using the described method above - it exposes your ac
 
 The Storj DCS service allows you to **host static websites** along with multimedia streaming, large file distribution, and other web-delivered assets.&#x20;
 
-Since your webpages and assets are simply objects stored on the network and there is no server/database, Storj DCS does **not** support the hosting of **dynamic websites. **However, you can store all of your unchanging assets on Storj DCS and reference them from your dynamic site that is hosted on an external compute service of your choice.
+Since your webpages and assets are simply objects stored on the network and there is no server/database, Storj DCS does **not** support the hosting of **dynamic websites.** However, you can store all of your unchanging assets on Storj DCS and reference them from your dynamic site that is hosted on an external compute service of your choice.
 
 There are a few ways you can host your static site on Storj DCS. We recommend using the [Uplink CLI ](../how-tos/host-a-static-website/host-a-static-website-with-the-cli-and-linksharing-service.md)but you may also use the [single-tenant S3 Gateway](../api-reference/s3-gateway/#running-the-gateway-to-host-a-static-website) to host your site.
 
@@ -93,7 +93,7 @@ If you want to learn more, check out the [Key Architecture Constructs](../concep
 Access Grants created using the Satellite user interface my be deleted using the Remove button on the Access page. Check the box next to the Access Grant(s) you want to delete, then click the Remove Selected button and follow the prompts. &#x20;
 
 {% hint style="success" %}
-**Important: **If you delete an Access Grant from the Satellite user interface, that Access Grant will immediately cease to function, and all hierarchically derived child Access Grants will also cease to function.  Any data uploaded with that Access Grant will persist on Storj DCS. If you didn't back up the encryption passphrase used with the Access Grant you are deleting, you will not be able to decrypt that data without that encryption passphrase, and it will be effectively unrecoverable.
+**Important:** If you delete an Access Grant from the Satellite user interface, that Access Grant will immediately cease to function, and all hierarchically derived child Access Grants will also cease to function.  Any data uploaded with that Access Grant will persist on Storj DCS. If you didn't back up the encryption passphrase used with the Access Grant you are deleting, you will not be able to decrypt that data without that encryption passphrase, and it will be effectively unrecoverable.
 {% endhint %}
 
 If you created a child Access Grant client-side, using the CLI, the client Go library, or any other client-side tool or implementation, you can't "delete" the access because, by design and for enhanced privacy and security, the Satellite is not aware of Access Grants created in a client. When presented with any Access Grant, the Satellite can only verify whether the Access Grant is valid for the resource being requested.  For this reason, Access Grants that have been created client-side cannot be deleted, but must be revoked instead.
@@ -174,4 +174,4 @@ For detailed information on how to close your account on Storj DCS, please see t
 
 ## Does Storj DCS provide tools for end-user identity management for applications that store data on the service?
 
-The Storj DCS service is not designed to handle** **identity management for end users of applications that store data on the service. User authentication is expected to be handled by applications. Application developers may then make further design decisions related to use the authorization management functions of the service to enable secure and private sharing of data between users of an application or sharing data with a publicly available URL.&#x20;
+The Storj DCS service is not designed to handle **** identity management for end users of applications that store data on the service. User authentication is expected to be handled by applications. Application developers may then make further design decisions related to use the authorization management functions of the service to enable secure and private sharing of data between users of an application or sharing data with a publicly available URL.&#x20;

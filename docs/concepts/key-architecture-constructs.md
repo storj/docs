@@ -101,8 +101,8 @@ The Satellite Address is contained within the Access Grant so that an Uplink cli
 An Access Grant contains an API Key that is based on a type of bearer token called a Macaroon. API Keys are both hierarchically derived from a parent and may also also contain programmatic restrictions based on:
 
 1. **Specific Operations**: Caveats can restrict whether an Access Grant can permit any of the following operations: Read, Write, Delete, List
-2. **Bucket: **Caveats can restrict whether an Access Grant can permit operations on one or more Buckets.
-3. **Object key and path prefix: ** Caveats can restrict whether an Access Grant can permit operations on Objects that share a common path component prefix.
+2. **Bucket:** Caveats can restrict whether an Access Grant can permit operations on one or more Buckets.
+3. **Object key and path prefix:** Caveats can restrict whether an Access Grant can permit operations on Objects that share a common path component prefix.
 4. **Time Window:** Caveats can restrict when an Access Grant can permit operations on objects stored on the platform.
 
 Restrictions applied to an API Key within an Access Grant are hierarchically derived from the access restrictions contained in the API Key within the Parent Access Grant from which the Restricted Access Grant was created. That means a Restricted Access Grant can have the same level of access or less access than its Parent Access Grant, but never more access.

@@ -85,7 +85,7 @@ You should see your MongoDB cluster once connected:
 
 ## **Setting up the S3 Blockstore pointing to local gateway**
 
-**You can configure backups for your app databases following this guide: **[**Backup Overview**](https://docs.opsmanager.mongodb.com/current/core/backup-overview/)**. **\
+**You can configure backups for your app databases following this guide:** [**Backup Overview**](https://docs.opsmanager.mongodb.com/current/core/backup-overview/)**.** \
 
 
 ![Backup in Action](https://lh6.googleusercontent.com/TOBjoo8U5xfwccYtIKk3L8bjSMZmepuzkcAUfwgRGhkvQHw\_qWC3-JQN7DYR4rBnODHKRKPf1pn4RrK0TZz6vebhWrz9E-q7wZQVBMsnU8k2NVTCLjdjWZJask4tbXYe6cWeM7XA)
@@ -112,4 +112,4 @@ Storj DCS delivers on all of these needs, while still offering the same enterpri
 **Learn more**
 
 * [**MongoDB Ops Manager**](https://www.mongodb.com/products/ops-manager)
-* [**Deploying MongoDB in Kubernetes **](https://www.mongodb.com/kubernetes)
+* [**Deploying MongoDB in Kubernetes** ](https://www.mongodb.com/kubernetes)

@@ -16,7 +16,7 @@ This is the only integration available for the **free version of Filezilla**. If
 
 ## **Background**
 
-The_** FileZilla**_ Client is a fast and reliable cross-platform (Windows, Linux and Mac OS X) FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.
+The _**FileZilla**_ Client is a fast and reliable cross-platform (Windows, Linux and Mac OS X) FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.
 
 It includes a site manager to store all your connection details and logins, as well as an Explorer-style interface that shows the local and remote folders and can be customized independently.
 
@@ -28,11 +28,11 @@ With the launch of the native Storj DCS Integration into the FileZilla client, d
 
 ### Create an Access Grant
 
-Navigate to the **Access **page within your project and then click on **Continue**.&#x20;
+Navigate to the **Access** page within your project and then click on **Continue**.&#x20;
 
 ![](<../.gitbook/assets/Screen Shot 2021-04-19 at 9.36.53 AM.png>)
 
-Give your new** **Access Grant a **name.**
+Give your new **** Access Grant a **name.**
 
 ![](<../.gitbook/assets/Screen Shot 2021-04-19 at 9.36.56 AM.png>)
 
@@ -60,7 +60,7 @@ Please note that **Storj does not know or store your encryption passphrase**, so
 
 ![](<../.gitbook/assets/Screen Shot 2021-04-19 at 9.37.37 AM.png>)
 
-Access Grant is generated.** The Access Grant will only display once. **Save this information in a password manager or wherever you prefer to store sensitive information.&#x20;
+Access Grant is generated. **The Access Grant will only display once.** Save this information in a password manager or wherever you prefer to store sensitive information.&#x20;
 
 ![](<../.gitbook/assets/Screen Shot 2021-04-19 at 9.37.52 AM.png>)
 
@@ -84,11 +84,11 @@ Next, select Protocol:  "Storj - Decentralized Cloud Storage" from the Protocol 
 
 Now enter the **Satellite** and **Access Grant** as shown below (Entering the port is not required)
 
-1. Use the** Satellite** URL from which you created the Access Grant.
+1. Use the **Satellite** URL from which you created the Access Grant.
    * us-central-1.tardigrade.io (us1.storj.io)
    * asia-east-1.tardigrade.io (ap1.storj.io)
    * europe-west-1.tardigrade.io (eu1.storj.io)
-2. For** Access Grant** please enter the Access Grant you saved above.
+2. For **Access Grant** please enter the Access Grant you saved above.
 
 ![](<../.gitbook/assets/image (116).png>)
 

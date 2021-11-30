@@ -6,7 +6,7 @@ description: In order to interact with our data, we need to set up the Uplink CL
 
 1\. Check [Prerequisites](../prerequisites.md).
 
-2.** Save **[**Access Grant**](create-first-access-grant.md)** to a file.** The Access Grant that you created in the web interface (or [in uplink CLI](../generate-access-grants-and-tokens/generate-a-token.md)) needs to be saved to disk in a plain text file for simplicity (_for example - Mac terminal would not allow you to paste the whole access grant directly due terminal limitations_). Specify the path to the saved access grant in the following command (`~/Downloads/accessgrant.txt` _for example_).
+2\. **Save** [**Access Grant**](create-first-access-grant.md) **to a file.** The Access Grant that you created in the web interface (or [in uplink CLI](../generate-access-grants-and-tokens/generate-a-token.md)) needs to be saved to disk in a plain text file for simplicity (_for example - Mac terminal would not allow you to paste the whole access grant directly due terminal limitations_). Specify the path to the saved access grant in the following command (`~/Downloads/accessgrant.txt` _for example_).
 
 3\. **Import** Access Grant.
 

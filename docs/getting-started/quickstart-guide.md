@@ -6,13 +6,13 @@ description: Quickstart options for interacting with the Storj DCS Network.
 
 ## Suggested Options
 
-**Rclone via Gateway MT - **Interact with our S3 Hosted Gateway via Rclone. This is ideal for large files and industry compatibility.&#x20;
+**Rclone via Gateway MT -** Interact with our S3 Hosted Gateway via Rclone. This is ideal for large files and industry compatibility.&#x20;
 
 {% content-ref url="../how-tos/sync-files-with-rclone/rclone-with-hosted-gateway.md" %}
 [rclone-with-hosted-gateway.md](../how-tos/sync-files-with-rclone/rclone-with-hosted-gateway.md)
 {% endcontent-ref %}
 
-**AWS CLI via Gateway MT **- Interact with our S3 hosted gateway using the official AWS CLI. Ideal for high-performance uploads and large files.&#x20;
+**AWS CLI via Gateway MT** - Interact with our S3 hosted gateway using the official AWS CLI. Ideal for high-performance uploads and large files.&#x20;
 
 {% content-ref url="gateway-mt/" %}
 [gateway-mt](gateway-mt/)

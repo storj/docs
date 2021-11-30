@@ -20,7 +20,7 @@ These security and privacy principles are ultimately manifested in Storj DCS as 
 
 Access management on Storj DCS requires coordination of two parallel constructs:
 
-* **Authorization **- a determination of whether a particular request to perform an action on a resource is valid. Authorization management is implemented using hierarchically deterministic API Keys based on [macaroons](https://static.googleusercontent.com/media/research.google.com/en/pubs/archive/41892.pdf).\
+* **Authorization** - a determination of whether a particular request to perform an action on a resource is valid. Authorization management is implemented using hierarchically deterministic API Keys based on [macaroons](https://static.googleusercontent.com/media/research.google.com/en/pubs/archive/41892.pdf).\
 
 * **Encryption** - Data and metadata stored on Storj DCS are encrypted using hierarchically deterministic Encryption Keys. Objects are encrypted with a randomized encryption key that is salted with a predetermined salt. Paths and randomized encryption keys are encrypted with a passphrase using AES 256 GCM or Secretbox.
 

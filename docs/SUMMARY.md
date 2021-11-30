@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Node Docs](http://docs.storj.io/node/)
 
-## Decentralized Cloud Storage <a href="storage" id="storage"></a>
+## Decentralized Cloud Storage <a href="#storage" id="storage"></a>
 
 * [Product Overview](storage/considerations.md)
 
@@ -41,12 +41,17 @@
     * [Create Access Grant in CLI](getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md)
 * [Quickstart - Satellite Admin Console](getting-started/satellite-developer-account/README.md)
   * [Creating Your Account](getting-started/satellite-developer-account/creating-your-account.md)
-  * [Project Dashboard](getting-started/satellite-developer-account/dashboard.md)
+  * [Manage Projects](getting-started/satellite-developer-account/manage-projects.md)
+  * [Dashboard](getting-started/satellite-developer-account/dashboard.md)
   * [Objects](getting-started/satellite-developer-account/objects.md)
-  * [Access Grants](getting-started/satellite-developer-account/access-grants.md)
+  * [Access](getting-started/satellite-developer-account/access-grants.md)
   * [Users](getting-started/satellite-developer-account/users.md)
+  * [Billing](getting-started/satellite-developer-account/billing.md)
+  * [Resources](getting-started/satellite-developer-account/resources.md)
+  * [Quick Start](getting-started/satellite-developer-account/quick-start.md)
+  * [My Account](getting-started/satellite-developer-account/my-account.md)
 
-## SDK & Reference <a href="api-reference" id="api-reference"></a>
+## SDK & Reference <a href="#api-reference" id="api-reference"></a>
 
 * [Storj-hosted S3 Compatible Gateway](api-reference/s3-compatible-gateway/README.md)
   * [Multipart Upload](api-reference/s3-compatible-gateway/multipart-upload/README.md)
@@ -150,7 +155,7 @@
 * [Community Forum](https://forum.storj.io/c/engineer-amas/dev-category)
 * [Help Desk](https://support.tardigrade.io)
 
-## Billing, Payment & Accounts <a href="billing-payment-and-accounts-1" id="billing-payment-and-accounts-1"></a>
+## Billing, Payment & Accounts <a href="#billing-payment-and-accounts-1" id="billing-payment-and-accounts-1"></a>
 
 * [Billing, Payment and Accounts](billing-payment-and-accounts-1/pricing/README.md)
   * [How Billing is Calculated](billing-payment-and-accounts-1/pricing/billing-and-payment.md)

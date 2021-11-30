@@ -8,13 +8,13 @@ Containers are wonderful: Containers provide a powerful way to package and deplo
 
 Under the hood, the container registry serves simple REST requests. As Storj DCS also can serve files via HTTP, it can be used as a container registry if the pieces are uploaded in the right order and mode.
 
-### The structure of a container registry <a href="_394oki6cys24" id="_394oki6cys24"></a>
+### The structure of a container registry <a href="#_394oki6cys24" id="_394oki6cys24"></a>
 
 But what is the right order? The container registry API follows a simple structure:
 
 ![](../.gitbook/assets/0)
 
-Here we pull the **elek/herbsttag** image with the **latest **tag. The manifest can be found under _https://host/v2/elek/herbsttag/manifests/latest_.
+Here we pull the **elek/herbsttag** image with the **latest** tag. The manifest can be found under _https://host/v2/elek/herbsttag/manifests/latest_.
 
 The first item is a manifest JSON file that defines the required blobs and layer descriptors. For example:
 
@@ -38,18 +38,18 @@ The first item is a manifest JSON file that defines the required blobs and layer
 
 ```
 
-Both layers should be found under _https://host/v2/elek/herbsttag/blobs. _The layer in the manifest is a simple tar.gz file with the file system containing the first one, which is another JSON descriptor that includes all the container settings (labels), endpoints, environment variables, default volumes, etc.
+Both layers should be found under _https://host/v2/elek/herbsttag/blobs._ The layer in the manifest is a simple tar.gz file with the file system containing the first one, which is another JSON descriptor that includes all the container settings (labels), endpoints, environment variables, default volumes, etc.
 
 If we upload the layers and metadata files in the same structure, Docker pull will be able to download our Docker images directly from the Storj decentralized cloud. But there are some catches:
 
 ![](../.gitbook/assets/1)
 
-1. The_ /v2_ endpoint should return with 200 (Docker uses this to double-check if registry implements v2 container registry). We will solve this by uploading an empty HTML file to _/v2/index.html._
+1. The _/v2_ endpoint should return with 200 (Docker uses this to double-check if registry implements v2 container registry). We will solve this by uploading an empty HTML file to _/v2/index.html._
 2. A specific _Content-Type_ should be returned for each manifest. Fortunately, Storj linksharing service supports custom content-type. We will solve this with uploading the manifest file with custom metadata:\
    _uplink cp /tmp/1 sj://dockerrepo/v2/elek/herbsttag/latest --metadata '{"Content-Type":"application/vnd.docker.distribution.manifest.v2+json"}'_
 3. The container registry should be served under the root path of the domain (_https://host/v2_ is correct, while _https://host/some/dir/deeper/v2_ is incorrect). It can be resolved by assigning a custom domain name for the Storj bucket.
 
-### Publish the container <a href="_8ar1a9qed06y" id="_8ar1a9qed06y"></a>
+### Publish the container <a href="#_8ar1a9qed06y" id="_8ar1a9qed06y"></a>
 
 So let’s see an example. What is the publishing process, assuming we have a local docker container (elek/herbsttag in this example)?
 
@@ -125,6 +125,6 @@ And now we can test the pull command:
 
 ![](../.gitbook/assets/3)
 
-### Summary <a href="_hzafm3yc7150" id="_hzafm3yc7150"></a>
+### Summary <a href="#_hzafm3yc7150" id="_hzafm3yc7150"></a>
 
 Storj supports custom Content-Type for any key, so it can be used as a container registry to distribute container images. Currently, it has some limitations (no custom SSL, push is a manual process, no easy way to share layers), but distributing static container images for a large-scale audience can be done with all the advantages of a real Decentralized Cloud Storage.

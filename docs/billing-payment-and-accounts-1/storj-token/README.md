@@ -32,7 +32,7 @@ You’ll be prompted to add your card information. Using a credit card is somewh
 * Once all payment methods are removed from an account, usage limits will be reset to zero until a new payment method is added.
 * If a credit card expires, a user will receive a notification to the registered email on the account, however, if a new payment method is not added within a reasonable amount of time, we reserve the right to reclaim the available storage and bandwidth, reset usage limits to zero and delete any data stored on the account pursuant to our data retention policy.
 
-### **Using STORJ Token **
+### **Using STORJ Token**&#x20;
 
 In addition to credit cards, users may also pay for usage fees with STORJ token. Storj created the STORJ utility token as a medium of exchange on its decentralized cloud storage network. The STORJ utility token facilitates payments from people around the world for their use of the Storj DCS network to store their data, and Storj uses it to pay our community of Storage Node Operators that rent their unused hard drive capacity and bandwidth to the network.&#x20;
 

@@ -4,7 +4,7 @@ description: Substituting Payment Methods on your Storj DCS Account
 
 # Changing Payment Methods
 
-Users may change payment methods on accounts, but at least one valid payment method must be configured on an account at all times.** **
+Users may change payment methods on accounts, but at least one valid payment method must be configured on an account at all times. ****&#x20;
 
 ### **Changing Credit Cards**
 

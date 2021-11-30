@@ -27,7 +27,7 @@ By selecting this integration pattern you are opting in to server-side encryptio
 
 ![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 9.02.50 AM.png>)
 
-**Assign the permissions **you want this access grant to have, then click on **Continue in Browser**:
+**Assign the permissions** you want this access grant to have, then click on **Continue in Browser**:
 
 ![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.15 AM.png>)
 
@@ -35,7 +35,7 @@ By selecting this integration pattern you are opting in to server-side encryptio
 
 ![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.34 AM.png>)
 
-**Click on the Generate S3 Gateway Credentials** link** **and then click on the 'Generate Credentials' button.&#x20;
+**Click on the Generate S3 Gateway Credentials** link **** and then click on the 'Generate Credentials' button.&#x20;
 
 ![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.50 AM.png>)
 
@@ -82,7 +82,7 @@ A long list of supported storage backends will prompt. `Select` 4 (4 / Amazon S3
 4 / Amazon S3 Compliant Storage Provider
 ```
 
-A further list of S3 storage providers will prompt. `Select `13 (13 / Any other S3 compatible provider) and hit `Enter`.
+A further list of S3 storage providers will prompt. `Select` 13 (13 / Any other S3 compatible provider) and hit `Enter`.
 
 ```yaml
 13 (13 / Any other S3 compatible provider)

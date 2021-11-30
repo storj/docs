@@ -9,15 +9,15 @@ description: >-
 1. [You need to have a satellite account and installed Uplink CLI](../prerequisites.md).
 2. To start, proceed through the initial steps of creating a new Access Grant.&#x20;
 
-![](<../../../.gitbook/assets/Screen Shot 2021-04-19 at 10.19.38 AM.png>)
+![](<../../../.gitbook/assets/image (156).png>)
 
-3\. When given the options to either continue in the browser or in the CLI, select Continue in CLI.
+3\. When given the options to either continue in the browser or in the CLI, select **Continue in CLI**.
 
-![](<../../../.gitbook/assets/Screen Shot 2021-04-19 at 10.20.53 AM (1).png>)
+![](<../../../.gitbook/assets/image (181).png>)
 
 4\. Copy and save the **Satellite Address** and **API Key** as it will only appear once.
 
-![](<../../../.gitbook/assets/image (125) (1).png>)
+![](<../../../.gitbook/assets/image (174).png>)
 
 5\. Make sure you've already [downloaded the Uplink CLI](../../../downloads/download-uplink-cli.md) and run `uplink setup`.
 

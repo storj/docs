@@ -17,9 +17,9 @@ Specific Operations: Caveats can restrict whether an Access Grant can permit any
 * Delete
 * List
 
-**Bucket: **Caveats can restrict whether an Access Grant can permit operations on one or more Buckets.
+**Bucket:** Caveats can restrict whether an Access Grant can permit operations on one or more Buckets.
 
-**Path and path prefix: ** Caveats can restrict whether an Access Grant can permit operations on Objects within a specific path in the object hierarchy.
+**Path and path prefix:** Caveats can restrict whether an Access Grant can permit operations on Objects within a specific path in the object hierarchy.
 
 **Time Window:** Caveats can restrict when an Access Grant can permit operations on objects stored on the platform (before or after a date and time or a range of time between two dates/times.
 

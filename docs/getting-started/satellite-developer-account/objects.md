@@ -24,4 +24,4 @@ In the [Quickstart Guide for the Object Browser](../quickstart-objectbrowser.md)
 Do not lose your encryption passphrase. You are responsible for your encryption keys. Learn more about [our approach to encryption](../../concepts/encryption-key/) and [managing your encryption keys](../../concepts/access/encryption-and-keys/).
 {% endhint %}
 
-Next, we'll cover [Access Grants](access-grants.md).
+Next, we'll cover [Access](access-grants.md) section.

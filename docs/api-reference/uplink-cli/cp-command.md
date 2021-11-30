@@ -231,7 +231,7 @@ uplink cp sj://cakes/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
 
 Sample Output:
 
-![](<../../.gitbook/assets/image (124).png>)
+![](<../../.gitbook/assets/image (124) (1).png>)
 
 ### Copy a file to a bucket with metadata
 

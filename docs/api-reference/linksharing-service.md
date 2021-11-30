@@ -38,4 +38,4 @@ The [steps for sharing an object via the GUI](../getting-started/quickstart-obje
 
 ### **Linkshare via CLI (Advanced)**
 
-If you prefer a command line interface (CLI) or wish to programmatically integrate to Storj_ _DCS we have our [CLI documentation](uplink-cli/share-command.md) in addition to our [Client Libraries](storj-client-libraries/). You can also [host full static websites via the Linksharing service](../how-tos/host-a-static-website/).\
+If you prefer a command line interface (CLI) or wish to programmatically integrate to Storj __ DCS we have our [CLI documentation](uplink-cli/share-command.md) in addition to our [Client Libraries](storj-client-libraries/). You can also [host full static websites via the Linksharing service](../how-tos/host-a-static-website/).\

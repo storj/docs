@@ -18,7 +18,7 @@ You can learn more about our partner program [here](https://storj.io/partners/).
 
 Value attribution is done on a per bucket basis. To recognize which partner the shared revenue should go to, we use a user agent that identifies it. A bucket can only have one user agent value and it can be set only once, and only on an empty bucket. This has the following consequences:
 
-* Uploading an object to a bucket can only be done **after setting the user agent. **Otherwise, the bucket won't be empty and you will be unable to set the user agent.
+* Uploading an object to a bucket can only be done **after setting the user agent.** Otherwise, the bucket won't be empty and you will be unable to set the user agent.
 * If you upload an object to a bucket with a defined user agent, the shared revenue will go to the corresponding partner. If it is not your user agent, it won't be in your shared revenue.
 
 ## Setting the User Agent

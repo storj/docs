@@ -51,7 +51,7 @@ Using the software in the [teslausb](https://github.com/marcone/teslausb) projec
 If you have not yet signed up, please head here to[ sign up for the free tier.](https://www.storj.io/signup)&#x20;
 
 {% hint style="info" %}
-Please_** **_consult [Satellite Quickstart](../getting-started/satellite-developer-account/) for details on setting up an account and using the Satellite Admin Console.
+Please _****_ consult [Satellite Quickstart](../getting-started/satellite-developer-account/) for details on setting up an account and using the Satellite Admin Console.
 {% endhint %}
 
 ### Generate Credentials to the Gateway MT
@@ -62,7 +62,7 @@ Please_** **_consult [Satellite Quickstart](../getting-started/satellite-develop
 
 ![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.02.50 AM.png>)
 
-**Assign the permissions **you want this access grant to have, (in this case, just select the default permissions) then click on **Continue in Browser**:
+**Assign the permissions** you want this access grant to have, (in this case, just select the default permissions) then click on **Continue in Browser**:
 
 ![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.15 AM.png>)
 
@@ -75,28 +75,28 @@ Please note that Storj does not know or store your encryption passphrase, so if 
 {% endhint %}
 
 {% hint style="info" %}
-Please_** save **_this **Encryption Passphrase **in a safe place as it will be required to decrypt and view your sentry mode videos from the web.&#x20;
+Please _**save**_ this **Encryption Passphrase** in a safe place as it will be required to decrypt and view your sentry mode videos from the web.&#x20;
 {% endhint %}
 
 ![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.34 AM.png>)
 
-Click** **_**Next**_ to proceed to** Access Grant** generation. Please then **save** the **Access Grant** in a safe place. This is usable for other integration paths not covered in this guide.
+Click ** **_**Next**_ to proceed to **Access Grant** generation. Please then **save** the **Access Grant** in a safe place. This is usable for other integration paths not covered in this guide.
 
 ![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.50 AM.png>)
 
-**Click **on the _**Generate S3 Gateway Credentials**_ link** above **and then **click** on the _**Generate Credentials**_ button as seen below.&#x20;
+**Click** on the _**Generate S3 Gateway Credentials**_ link **above** and then **click** on the _**Generate Credentials**_ button as seen below.&#x20;
 
 ![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.54 AM.png>)
 
-**Copy **your **Access Key, Secret Key, **and** Endpoint** to a safe location. We will use this information later to configure Rclone with the hosted Gateway MT.&#x20;
+**Copy** your **Access Key, Secret Key,** and **Endpoint** to a safe location. We will use this information later to configure Rclone with the hosted Gateway MT.&#x20;
 
 ![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.04.08 AM.png>)
 
-Now we have our** credentials** and can move on to configuring teslausb.
+Now we have our **credentials** and can move on to configuring teslausb.
 
 #### Overview of credentials collected&#x20;
 
-* **Encryption Passphrase **
+* **Encryption Passphrase**&#x20;
   * We will need this to view and/or retrieve clips in the browser later
 * **Access Grant**
   * Not used for this lab but please record it anyway for your reference
@@ -150,13 +150,13 @@ export WIFIPASS='your_pass'
 
 #### Part 2 - Rclone Configuration
 
-Now that Raspbian is installed and configured, it's time to set up Rclone, the software that will actually transfer the files from the Raspberry Pi to Storj DCS. (If you're not familiar with [Rclone](https://github.com/rclone), it's Rsync for cloud storage.)** **Boot up that Pi and let' s keep it moving.
+Now that Raspbian is installed and configured, it's time to set up Rclone, the software that will actually transfer the files from the Raspberry Pi to Storj DCS. (If you're not familiar with [Rclone](https://github.com/rclone), it's Rsync for cloud storage.) **** Boot up that Pi and let' s keep it moving.
 
 The Rclone Setup Guide for teslausb is available at: [https://github.com/marcone/teslausb/blob/v2.5/doc/SetupRClone.md](https://github.com/marcone/teslausb/blob/v2.5/doc/SetupRClone.md)
 
 The steps you need to follow are also provided below:
 
-**SSH **into the Pi, become root and remount the file system's read-write:
+**SSH** into the Pi, become root and remount the file system's read-write:
 
 ```
 sudo -i

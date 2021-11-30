@@ -4,7 +4,7 @@ description: Understanding Your Storj DCS Billing and Usage for Your Satellite A
 
 # Billing, Payment and Accounts
 
-## **Understanding Your Storj DCS Billing and Usage for Your Satellite Account **
+## **Understanding Your Storj DCS Billing and Usage for Your Satellite Account**&#x20;
 
 This document explains how registered Storj DCS users are billed for the data they store and the bandwidth they use on Storj DCS. The information provided in the documentation below is not intended to modify or supersede the [Terms of Service](https://www.storj.io/terms-of-service). In the event of a conflict between this documentation and [Terms of Service](https://www.storj.io/terms-of-service), the [Terms of Service](https://www.storj.io/terms-of-service) shall govern.
 
@@ -14,11 +14,11 @@ All examples of price calculations provided in this Documentation are specific t
 
 The Storj DCS service provides secure, private and reliable cloud object storage at a much lower cost than the cost of the big cloud providers.  Billing is simple. We charge for we will call  “metered service types.” The metered service types are: static object storage, download bandwidth, and, under some circumstances, a [per-segment fee](usage-limit-increases.md#per-segment-fee).
 
-### **Static Object Storage **
+### **Static Object Storage**&#x20;
 
 Static object storage is charged at $4 per terabyte per month, or $0.004 per gigabyte. Static object storage is calculated in “terabyte months,” which is a prorated calculation of how much storage is used throughout the month, broken down by hour. Storing one terabyte of data for 30 days, two terabytes of data for 15 days, or three terabytes of data for 10 days, would each be the equivalent of one terabyte month.
 
-### **Download Bandwidth **
+### **Download Bandwidth**&#x20;
 
 Download bandwidth is charged at $7 per terabyte, or $0.007 per gigabyte of bandwidth consumed. There is no charge for ingress bandwidth, so uploading files to the network doesn’t incur any cost.&#x20;
 

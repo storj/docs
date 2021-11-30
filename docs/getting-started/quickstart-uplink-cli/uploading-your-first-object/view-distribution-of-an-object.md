@@ -52,9 +52,9 @@ Endpoint     : https://gateway.us1.storjshare.io
 Public Access:  true
 =========== BROWSER URL ==================================================================
 REMINDER  : Object key must end in '/' when trying to share recursively
-URL       : https://link.us1.storjshare.io/s/jvw3fmzqyg2cvxm27qishw6y4qka/cakes/cheesecake.jpg
+URL       : https://link.us1.storjshare.io/s/juexo54k2db7lt5fawuqkupqkcfa/cakes/cheesecake.jpg
 ```
 
 This is a real distribution of your files' pieces that you uploaded to the network. You can share this file with anyone you'd like.
 
-![](../../../.gitbook/assets/cheesecake-linkshare.png)
+![](<../../../.gitbook/assets/image (131).png>)

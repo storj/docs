@@ -69,7 +69,7 @@ You cannot use regular expressions to specify which files to copy (e.g. `uplink 
 
 Sample Output:
 
-![](<../../.gitbook/assets/image (127).png>)
+![](<../../.gitbook/assets/image (127) (1).png>)
 
 ### Move an object from a one bucket to another
 
@@ -129,7 +129,7 @@ uplink mv sj://cakes/New-York/cheesecake.jpg sj://new-recipes/cakes/cheesecake.j
 
 Sample Output:
 
-![](<../../.gitbook/assets/image (129).png>)
+![](<../../.gitbook/assets/image (129) (1).png>)
 
 ## Troubleshooting move errors
 

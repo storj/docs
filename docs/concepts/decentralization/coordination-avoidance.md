@@ -2,7 +2,7 @@
 
 ### **Coordination Avoidance**
 
-Rather than coming to a global consensus around the entire state of the network (as in blockchains like ethereum, etc.) The Storj Network is **Coordination Avoidant.  **The network does not need global consistency (as per CAP Theorem) as each uplink user only needs to be able to recover _their _files.
+Rather than coming to a global consensus around the entire state of the network (as in blockchains like ethereum, etc.) The Storj Network is **Coordination Avoidant.**  The network does not need global consistency (as per CAP Theorem) as each uplink user only needs to be able to recover _their_ files.
 
 ### **Advantages Over Coordination-dependant Systems**
 

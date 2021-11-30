@@ -18,7 +18,7 @@ When you upload your data to Storj DCS, your data is encrypted, erasure-coded, a
 
 The ways you can interact with Storj DCS include:
 
-* **Satellite Dashboard - **The Satellite Dashboard allows you to manage projects and access for your data.
+* **Satellite Dashboard -** The Satellite Dashboard allows you to manage projects and access for your data.
 * **Uplink CLI**: The command-line interface allows you to upload and download files from the network, manage permissions and sharing.
 * **Gateway**: A service that provides a compatibility layer between other object storage services such as Amazon S3.
 * **Client Libraries**: The Storj DCS [client libraries](../api-reference/storj-client-libraries/) allow you to manage your data using your preferred language, including Go, Android, Xamarin (.NET/C#), and C. More language bindings coming soon!

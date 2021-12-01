@@ -7,7 +7,7 @@ description: Hosted S3 Compatible Multitenant Gateway
 Storj now offers a hosted multitenant gateway (Gateway MT)  that is backward compatible with S3. This means you’ll be able to integrate with the Storj network via HTTP, and you won’t have to run anything extra on your end.
 
 {% hint style="info" %}
-By using hosted Gateway MT you are opting in to **server-side encryption**.&#x20;
+By using hosted Gateway MT you are opting in to **** [**server-side encryption**](../../concepts/encryption-key/design-decision-server-side-encryption.md).&#x20;
 {% endhint %}
 
 Using Gateway MT with AWS CLI is a 2-step process:

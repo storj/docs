@@ -23,27 +23,27 @@ By selecting this integration pattern you are opting in to [server-side encrypti
 
 **Navigate to the Access** page within your project and then click on **Create Access Grant +**. A modal window will pop up and you can enter a name for this access grant.
 
-![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 10.05.30 AM.png>)
+![](<../../.gitbook/assets/image (152).png>)
 
-![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 9.02.50 AM.png>)
+![](<../../.gitbook/assets/image (156).png>)
 
 **Assign the permissions** you want this access grant to have, then click on **Continue in Browser**:
 
-![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.15 AM.png>)
+![](<../../.gitbook/assets/image (181).png>)
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase. (The GUI automatically generates one on the client-side for you)
 
-![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.34 AM.png>)
+![](<../../.gitbook/assets/image (157).png>)
 
 **Click on the Generate S3 Gateway Credentials** link **** and then click on the 'Generate Credentials' button.&#x20;
 
-![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.50 AM.png>)
+![](<../../.gitbook/assets/image (164).png>)
 
-![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.54 AM.png>)
+![](<../../.gitbook/assets/image (137).png>)
 
 **Copy your Access Key, Secret Key, and Endpoint** to a safe location.&#x20;
 
-![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 9.04.08 AM.png>)
+![](<../../.gitbook/assets/image (160).png>)
 
 Now you are ready to **configure** Rclone
 

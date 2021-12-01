@@ -25,7 +25,7 @@ All of the Edge Services use [server-side encryption](../encryption-key/design-d
 
 ### **Secure Handling of Encryption Information**
 
-Where customers elect to utilize server-side encryption in conjunction with Storj Edge Services, Storj Edge Services only hold customer encryption information during the duration of an operation but not longer. Such customer encryption information is stored encrypted at rest. This data is encrypted with a key given to the user that Storj does not keep. Without an encryption key, no one, including Storj, can access customer encrypted information. The user must provide this key as part of their operation authentication.
+Where customers elect to utilize [server-side encryption](../encryption-key/design-decision-server-side-encryption.md) in conjunction with Storj Edge Services, Storj Edge Services only hold customer encryption information during the duration of an operation but not longer. Such customer encryption information is stored encrypted at rest. This data is encrypted with a key given to the user that Storj does not keep. Without an encryption key, no one, including Storj, can access customer encrypted information. The user must provide this key as part of their operation authentication.
 
 ### **Registering an Access Grant**
 

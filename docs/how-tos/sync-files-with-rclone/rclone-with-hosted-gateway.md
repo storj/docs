@@ -14,7 +14,7 @@ Use our S3 compatible Hosted Gateway integration pattern to increase upload perf
 * Reduction in network load
 
 {% hint style="info" %}
-By selecting this integration pattern you are opting in to server-side encryption
+By selecting this integration pattern you are opting in to [server-side encryption](../../concepts/encryption-key/design-decision-server-side-encryption.md)
 {% endhint %}
 
 ## Prerequisites

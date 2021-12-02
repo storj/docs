@@ -36,9 +36,10 @@ You are now ready to interact with your objects on the Storj DCS Network!
 The `uplink` command has a number of operations that can be performed, such as:
 
  * `cat` - output an object to standard out
- * `cp` - copy an object from outside of Storj DCS to inside or vice versa
+ * `cp` - copy an object from outside of Storj DCS to inside or vice versa or between Storj DCS buckets/prefixes
  * `ls` - list buckets or objects on your Storj DCS project
  * `mb` - make a new bucket
+ * `mv` - move an object from one Storj DCS bucket to other (or rename an object)
  * `put` - writes data from standard in to an object on your Storj DCS project
  * `rb` - remove a bucket
  * `rm` - remove an object

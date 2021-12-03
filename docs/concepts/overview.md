@@ -34,7 +34,7 @@ The Uplink Client then contacts the satellite to get a list of Storage Nodes on 
 
 The Uplink Client attempts a few more than 80 during the upload process to eliminate any long-tail effect and the related latency from the slowest Storage Nodes.&#x20;
 
-![](https://lh4.googleusercontent.com/W3jm3acj-izVzLSOWjU2mPpPGatUA07qciVo8vhe3B\_UgX\_CzuRS1SsNEWqC9LR03r58yglSuS72EYhRI\_YyrPAy7BiGb4\_3OIqPrnEd-BhBWmEtub6xmvzFGPEs5Kf7a3xaYTivppw)
+![](https://assets-global.website-files.com/602eda09fc78af5a419706be/6037d462443538c5f8ca2bb3\_6022e0693d144c0e7d9711a0\_audit-image-2.gif)
 
 ## What Happens When You Download
 

@@ -438,6 +438,20 @@ type GraphiteDest struct {
 }
 ```
 
+## Concurrency
+
+Avoid using `go func`, `make(chan X`, in business code. These should only be used in types/structs for concurrency handling.
+
+When using `go func` or `make(chan X` it's very easy to introduce a bug due to:
+
+* improper ctx handling,
+* improper closing of channel,
+* not waiting for goroutines to finish,
+* async closing of used resources,
+* changing business code, which breaks the concurrent handling.
+
+Prefer synchronization primitives in `golang.org/x/sync`, `storj.io/common/sync2` or write a custom one.
+
 ## Unused Code
 
 Avoid merging unused code into main unless there is a justifiable reason to do so. This includes methods, functions, constants, variables, and parameters. A reason one may leave unused code is if the method is necessary to implement an interface.

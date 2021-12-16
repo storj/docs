@@ -46,6 +46,18 @@ If you want to create a folder - you can do that with the **New Folder** button.
 When you drag and drop your file into the Satellite Admin Console Object Browser, the Storj DCS S3-compatible Gateway will encrypt the data using [server-side encryption](../concepts/encryption-key/design-decision-server-side-encryption.md), break large files into 64MB Segments (or for smaller files a single segment), then erasure code the segments, breaking each segment into 80 pieces, then distributing those pieces over our network of thousands of independently operated storage nodes.&#x20;
 {% endhint %}
 
+## Deleting files
+
+1\. Select the three vertical dots on the right side of the file, the popup menu will appear
+
+![](<../.gitbook/assets/image (125).png>)
+
+2\. Select **Delete** command
+
+![](<../.gitbook/assets/image (166).png>)
+
+3\. Confirm deletion with **Yes**.
+
 ## Creating buckets
 
 Buckets are your containers that store objects.&#x20;
@@ -59,6 +71,22 @@ To create a new bucket click the **New bucket** button in the **Objects** view. 
 ![](<../.gitbook/assets/image (172).png>)
 
 After creating your new bucket, you will be placed into the bucket where you can [make folders and/or upload files](quickstart-objectbrowser.md#upload-files-and-folders).
+
+## Deleting buckets
+
+1\. Click the three vertical dots on the right side of the bucket, the popup menu will appear
+
+![](<../.gitbook/assets/image (151).png>)
+
+2\. Click the **Delete** command
+
+![](<../.gitbook/assets/image (156).png>)
+
+3\. Type the _**Bucket Name**_ to **Confirm Delete Bucket**.
+
+{% hint style="warning" %}
+If you have objects in the bucket, they will be deleted too!
+{% endhint %}
 
 ## Share a file
 

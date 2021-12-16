@@ -28,7 +28,7 @@ You can expand any Project to see details of the charge. See [billing-and-paymen
 
 Select a **Billing History** in the drop down menu [**Current Billing Period** / **Previous Billing Period**](billing.md#view-a-previous-billing-period-and-invoices).
 
-![](<../../.gitbook/assets/image (125).png>)
+![](<../../.gitbook/assets/image (125) (1).png>)
 
 In the _**Billing History**_ screen you can see a list of paid invoices and can view/download a PDF file of the selected invoice.
 

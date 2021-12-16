@@ -166,9 +166,9 @@ The easiest way to delete your data is to use the CLI.  For detailed information
 
 ## How do I delete my account?
 
-We want all of our users to receive value when they choose the Storj DCS service for their storage needs, but it’s possible that a user may no longer need Storj DCS services. If a user wants to stop using an account and permanently delete the account, the user may do so only after following the steps outlined in the Billing Documentation to eliminate service usage.
+We want all of our users to receive value when they choose the Storj DCS service for their storage needs, but it’s possible that a user may no longer need Storj DCS services. If a user wants to stop using their account and permanently delete it, the user may do so only after following the steps outlined in the Billing Documentation to eliminate service usage.
 
-The process to eliminate service usage starts with deleting all data from the service, including all objects and buckets. Next, all Access Grants should be deleted. Once this is done, the user should submit a ticket to remove all payment methods and delete the account.
+The process to eliminate service usage starts with deleting all data from the service, including all objects and buckets. Next, all Access Grants should be deleted. Once this is done, the user should submit a support ticket to remove all payment methods and delete the account.&#x20;
 
 For detailed information on how to close your account on Storj DCS, please see the [Closing an Account](../billing-payment-and-accounts-1/closing-an-account.md) section of this documentation.
 

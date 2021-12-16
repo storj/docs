@@ -25,7 +25,7 @@ By selecting this integration pattern you are opting in to [server-side encrypti
 
 ![](<../../.gitbook/assets/image (152).png>)
 
-![](<../../.gitbook/assets/image (156).png>)
+![](<../../.gitbook/assets/image (156) (1).png>)
 
 **Assign the permissions** you want this access grant to have, then click on **Continue in Browser**:
 

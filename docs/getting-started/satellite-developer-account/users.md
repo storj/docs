@@ -18,6 +18,6 @@ Navigate to the **Users** screen.&#x20;
 
 Select the **Add** button
 
-![](<../../.gitbook/assets/image (151).png>)
+![](<../../.gitbook/assets/image (151) (1).png>)
 
 Type in the email addresses that the users have registered with their Satellite Accounts. The Users will be added to the Project Team and notified via email.

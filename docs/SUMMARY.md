@@ -95,7 +95,7 @@
 * [Host a Static Website](how-tos/host-a-static-website/README.md)
   * [Host a Static Website with the Uplink CLI and Linksharing Service](how-tos/host-a-static-website/host-a-static-website-with-the-cli-and-linksharing-service.md)
 * [Configure Tools for the Partner Program](how-tos/configure-tools-for-the-partner-program.md)
-* [Configure Storj DCS as Origin for Fastly Edge](https://docs.fastly.com/en/guides/tardigrade-decentralized-object-cloud-storage)
+* [Fastly Integration](how-tos/fastly-integration.md)
 * [Configure Filebase for easy upload](https://filebase.com)
 * [Backup With Duplicati](how-tos/backup-with-duplicati.md)
 * [NFT storage for OpenSea](how-tos/nft-storage.md)

@@ -19,7 +19,7 @@ Using Gateway MT with AWS CLI is a 2-step process:
 
 **Navigate to the Access** page within your project and then click on **Create Access Grant +**. A modal window will pop up where you should enter a name for this access grant.
 
-![](<../../.gitbook/assets/image (152).png>)
+![](<../../.gitbook/assets/image (127).png>)
 
 ![](<../../.gitbook/assets/Screen Shot 2021-04-16 at 9.02.50 AM.png>)
 

@@ -57,4 +57,4 @@ URL       : https://link.us1.storjshare.io/s/juexo54k2db7lt5fawuqkupqkcfa/cakes/
 
 This is a real distribution of your files' pieces that you uploaded to the network. You can share this file with anyone you'd like.
 
-![](<../../../.gitbook/assets/image (131).png>)
+![](<../../../.gitbook/assets/image (131) (1).png>)

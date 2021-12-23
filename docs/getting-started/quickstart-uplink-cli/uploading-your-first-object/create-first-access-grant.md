@@ -10,11 +10,11 @@ description: >-
 
 Navigate to the **Access** page within your project and then click on **Continue**.&#x20;
 
-![](<../../../.gitbook/assets/image (166) (1).png>)
+![](<../../../.gitbook/assets/image (166) (1) (1).png>)
 
 Give your new **** Access Grant a **name.**
 
-![](<../../../.gitbook/assets/image (144).png>)
+![](<../../../.gitbook/assets/image (144) (1).png>)
 
 **Assign** **permissions** to the Access Grant.
 
@@ -42,4 +42,4 @@ Please note that **Storj does not know or store your encryption passphrase**, so
 
 Access Grant is generated. **The Access Grant will only display once.** Save this information in a password manager or wherever you prefer to store sensitive information.&#x20;
 
-![](<../../../.gitbook/assets/image (164).png>)
+![](<../../../.gitbook/assets/image (164) (1).png>)

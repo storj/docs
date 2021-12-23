@@ -12,10 +12,8 @@ Learn more about [Projects](../../concepts/key-architecture-constructs.md#projec
 
 To select, create or **Manage Projects** you can click the name of your project on the left side toolbar above [**Dashboard**](dashboard.md).
 
-![](<../../.gitbook/assets/image (139).png>)\
+![](<../../.gitbook/assets/image (133).png>)\
 In the **Manage Project** screen you can create or rename or modify your limits (if you use a Pro account).
-
-![](<../../.gitbook/assets/image (178).png>)
 
 ## Create a new Project
 
@@ -25,7 +23,7 @@ On _**Projects**_ screen to create a new Project select the **Create Project**. 
 The availability of this function depends on your account tier. Please check [limits.md](../../concepts/limits.md "mention") for details.
 {% endhint %}
 
-![](<../../.gitbook/assets/image (140).png>)
+![](<../../.gitbook/assets/image (140) (1).png>)
 
 Specify the **Project Name**, optional **Description** and confirm the creating with the **Create Project** button.
 
@@ -33,13 +31,13 @@ Specify the **Project Name**, optional **Description** and confirm the creating 
 
 To modify the existing Project on the _**Projects**_ screen you can select a needed project and modify its name or description.
 
-![](<../../.gitbook/assets/image (153).png>)
+![](<../../.gitbook/assets/image (136).png>)
 
 ### Changing Project Limits
 
 If your account tier allows you to change [your Limits](../../concepts/limits.md), you will have more options than a [Free tier](../../billing-payment-and-accounts-1/pricing/free-tier.md).
 
-![](<../../.gitbook/assets/image (127).png>)
+![](<../../.gitbook/assets/image (179).png>)
 
 Select **Edit** to the right of the limit to change it. However, it will not allow to increase limits greater than your available maximum. To change the maximum you need to [file a support request to change your limits](../../billing-payment-and-accounts-1/pricing/usage-limit-increases.md).
 

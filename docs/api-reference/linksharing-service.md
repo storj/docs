@@ -22,7 +22,7 @@ The Linkshare service is part of [the Storj Edge Services](../concepts/edge-serv
 Note: All of the Edge Services, including the Linksharing service use [server-side encryption](../concepts/encryption-key/design-decision-server-side-encryption.md).&#x20;
 {% endhint %}
 
-### **Linkshare Examples**
+## **Linkshare Examples**
 
 The Storj Linkshare web page and Path-based Linkshare web page are shown below:
 
@@ -30,12 +30,20 @@ The Storj Linkshare web page and Path-based Linkshare web page are shown below:
 
 ![Storj Path-based Linkshare web page example](https://lh6.googleusercontent.com/eXoBLnasQcKSjqxtoaUDMzEBqjBZgFzY3ua9\_OLvkEZQb6Y-woLIaWGM\_wbsPWIeRgxmkRqYi-45L5cpAlhpxkOercyXeQ96KWAA\_fPqSDxm4jpAlneKKH4iTE4F4bNbURHjCIhq=s0)
 
-### Linkshare QuickStart&#x20;
+## Linkshare QuickStart&#x20;
 
 To accelerate your time to success we offer an Object Browser GUI that allows you to upload and share with no command line interface required. Check out [the tutorial for the Object Browser](../getting-started/quickstart-objectbrowser.md).&#x20;
 
 The [steps for sharing an object via the GUI](../getting-started/quickstart-objectbrowser.md#share-a-file) are included in that tutorial.&#x20;
 
-### **Linkshare via CLI (Advanced)**
+## **Linkshare via CLI (Advanced)**
 
-If you prefer a command line interface (CLI) or wish to programmatically integrate to Storj __ DCS we have our [CLI documentation](uplink-cli/share-command.md) in addition to our [Client Libraries](storj-client-libraries/). You can also [host full static websites via the Linksharing service](../how-tos/host-a-static-website/).\
+If you prefer a command line interface (CLI) or wish to programmatically integrate to Storj __ DCS we have our [CLI documentation](uplink-cli/share-command.md) in addition to our [Client Libraries](storj-client-libraries/). You can also [host full static websites via the Linksharing service](../how-tos/host-a-static-website/).
+
+## Regions of availability
+
+| Region | CNAME                  |
+| ------ | ---------------------- |
+| Asia   | link.ap1.storjshare.io |
+| EU     | link.eu1.storjshare.io |
+| US     | link.us1.storjshare.io |

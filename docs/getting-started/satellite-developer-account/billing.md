@@ -8,7 +8,7 @@ description: Manage your Billing, Invoices and Payment methods
 
 The [_**Billing**_](billing.md) screen allows you to see all your projects and their estimated charges for the **Current Billing Period**, the Invoices for a **Previous Billing Period** and **Billing History**. You can also see an **Available Balance**, **Balance History** and [**Free Credits**](../../billing-payment-and-accounts-1/storj-token/promotional-credits.md#credits). At the bottom you can see and add [**Coupons**](../../billing-payment-and-accounts-1/storj-token/promotional-credits.md#coupons).
 
-![](<../../.gitbook/assets/image (173).png>)
+![](<../../.gitbook/assets/image (151).png>)
 
 ## View a Previous Billing Period and Invoices
 
@@ -20,7 +20,7 @@ If you select the **Current Billing Period** on top right, you will see two addi
 
 After selecting a **Previous Billing Period** you can see how much you were billed in it.
 
-![](<../../.gitbook/assets/image (171).png>)
+![](<../../.gitbook/assets/image (130).png>)
 
 You can expand any Project to see details of the charge. See [billing-and-payment.md](../../billing-payment-and-accounts-1/pricing/billing-and-payment.md "mention") for details.
 
@@ -28,7 +28,7 @@ You can expand any Project to see details of the charge. See [billing-and-paymen
 
 Select a **Billing History** in the drop down menu [**Current Billing Period** / **Previous Billing Period**](billing.md#view-a-previous-billing-period-and-invoices).
 
-![](<../../.gitbook/assets/image (125) (1).png>)
+![](<../../.gitbook/assets/image (155).png>)
 
 In the _**Billing History**_ screen you can see a list of paid invoices and can view/download a PDF file of the selected invoice.
 
@@ -36,7 +36,7 @@ In the _**Billing History**_ screen you can see a list of paid invoices and can 
 
 To add a [**Payment Method**](../../billing-payment-and-accounts-1/storj-token/) you can select **Add STORJ** or **Add Card**.
 
-![](<../../.gitbook/assets/image (179).png>)
+![](<../../.gitbook/assets/image (138).png>)
 
 Please read the [pricing](../../billing-payment-and-accounts-1/pricing/ "mention") section for details.
 
@@ -44,7 +44,7 @@ Please read the [pricing](../../billing-payment-and-accounts-1/pricing/ "mention
 
 You can select to **Add STORJ** on the _**Billing**_ screen.
 
-![](<../../.gitbook/assets/image (132).png>)
+![](<../../.gitbook/assets/image (121).png>)
 
 You need to choose the USD value you are willing to pay in STORJ tokens. After amount is selected you may select to **Continue to Coin Payments**. It will open a new page to our current Payments processor.
 
@@ -62,23 +62,23 @@ Please note, the payment will be accounted only after some amount of confirmatio
 
 You can see a **Short Balance History** right in the _**Billing**_ screen below the **Payment Method** section.
 
-![](<../../.gitbook/assets/image (133).png>)
+![](<../../.gitbook/assets/image (165).png>)
 
 To see a full **Balance History** you can select it in the drop down list **Available Balance** on top of the _**Billing**_ screen.
 
-![](<../../.gitbook/assets/image (135).png>)
+![](<../../.gitbook/assets/image (135) (1).png>)
 
 It will show the **Balance History** page.
 
-![](<../../.gitbook/assets/image (150).png>)
+![](<../../.gitbook/assets/image (129).png>)
 
 You can view a **Checkout** for your STORJ deposits.
 
-### Adding Card
+### Adding a Card
 
 You can select to **Add Card** on the _**Billing**_ screen. You will be prompted to specify Card details.
 
-![](<../../.gitbook/assets/image (130).png>)
+![](<../../.gitbook/assets/image (128).png>)
 
 Please provide a valid Card number, expiration date and CVC, then confirm adding a Card with the **Add Card** button. We do not store your card details, they are used to register your Card on [Stripe](https://stripe.com).
 
@@ -86,6 +86,6 @@ Please provide a valid Card number, expiration date and CVC, then confirm adding
 
 You can **Add Coupon Code** or scan it:
 
-![](<../../.gitbook/assets/image (148).png>)
+![](<../../.gitbook/assets/image (145).png>)
 
 The added Coupon will be listed below.

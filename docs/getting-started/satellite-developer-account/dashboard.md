@@ -14,11 +14,11 @@ Learn more about [Projects](../../concepts/key-architecture-constructs.md#projec
 
 On the Project Dashboard, there are a number of navigational elements and information displays:
 
-![](<../../.gitbook/assets/image (176).png>)
+![](<../../.gitbook/assets/image (134).png>)
 
 1.  &#x20;**Projects management** - This element allows you to add Projects and switch between different Projects. There you also have a [**Manage Projects**](manage-projects.md) setting.
 
-    ![](<../../.gitbook/assets/image (139).png>)\
+    ![](<../../.gitbook/assets/image (133).png>)\
 
 2. **Project Navigation** - This element allows you to move between the different functions related to the project you have selected, to view the [**Dashboard**](dashboard.md), use the [**Objects**](objects.md) to interact with data stored on Storj DCS through a web browser interface, create [**Access**](access-grants.md) for native integrations and credentials for the [hosted S3-compatible gateway](../../api-reference/s3-compatible-gateway/), invite other developers to collaborate with you on [your Project](manage-projects.md) in [**Users**](users.md), see [**Billing**](billing.md), check [**Resources**](resources.md) and [**Quick Start**](quick-start.md), manage your Account in [**My Account**](my-account.md).\
 

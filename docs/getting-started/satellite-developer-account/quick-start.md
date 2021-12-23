@@ -6,4 +6,4 @@ description: Smart Quick Start Wizards are made to help you
 
 These Quick Start Wizards can help you to use the Satellite Admin Console.
 
-![](<../../.gitbook/assets/image (129).png>)
+![](<../../.gitbook/assets/image (129) (1).png>)

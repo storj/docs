@@ -43,7 +43,7 @@
   * [Creating Your Account](getting-started/satellite-developer-account/creating-your-account.md)
   * [Manage Projects](getting-started/satellite-developer-account/manage-projects.md)
   * [Dashboard](getting-started/satellite-developer-account/dashboard.md)
-  * [Objects](getting-started/satellite-developer-account/objects.md)
+  * [Buckets](getting-started/satellite-developer-account/objects.md)
   * [Access](getting-started/satellite-developer-account/access-grants.md)
   * [Users](getting-started/satellite-developer-account/users.md)
   * [Billing](getting-started/satellite-developer-account/billing.md)

@@ -9,7 +9,7 @@ description: >-
 1. [You need to have a satellite account and installed Uplink CLI](../prerequisites.md).
 2. To start, proceed through the initial steps of creating a new Access Grant.&#x20;
 
-![](<../../../.gitbook/assets/image (156) (1).png>)
+![](<../../../.gitbook/assets/image (156) (1) (1).png>)
 
 3\. When given the options to either continue in the browser or in the CLI, select **Continue in CLI**.
 

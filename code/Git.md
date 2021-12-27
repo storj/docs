@@ -1,6 +1,6 @@
 # Commit
 
-This gives a rough guide how to make good commits that are easy to review and understand.
+This gives a rough guide on how to make good commits that are easy to review and understand.
 
 Most of these shouldn't be a blocker for getting a commit merged, however it's good practice. If you have difficulty in any of these parts, then ask for help.
 
@@ -45,7 +45,7 @@ e8ef68992 satellite/metabase: add DeleteZombieObjects method
 bb343d902 satellite/satellitedb: don't remove offline nodes from containment
 ```
 
-These subject lines are also useful for creating change logs in https://github.com/storj/storj/releases and help undertand which commits can be omitted from the release.
+These subject lines are also useful for creating change logs in https://github.com/storj/storj/releases and help understand which commits can be omitted from the release.
 
 ## Body
 
@@ -53,7 +53,7 @@ Wrap the body at \~72 characters, to please git viewing tools, unless tables req
 
 The body should try to introduce the change assuming the other person has no clue about the change. Imagine writing an email to another developer. Try to answer three questions in the commit "why this commit exists", "how does it fix the issue", "how does it affect the system".
 
-If there are other approaches that were considered, then that information should be included int the body.
+If there are other approaches that were considered, then that information should be included in the body.
 
 When a change has been split into multiple commits to ensure backwards compatible database changes, then include that information in the body to reduce the likelihood of both of the changes being included in the release.
 
@@ -79,6 +79,6 @@ Changes should target less than 400 LOC. Research indicates that larger changes 
 
 For reviewers, if a commit is larger than 800 LOC and makes reviewing difficult, then asking the submitter to split into multiple changes is reasonable.
 
-_Note: the exception is "changes that could be done by an automated tool", e.g. renaming a method or variable. There are other exceptions, but these should be coordinate with reviewers._
+_Note: the exception is "changes that could be done by an automated tool", e.g. renaming a method or variable. There are other exceptions, but these should be coordinated with reviewers._
 
 If it's hard to figure out how to split a change into separate commits, then ask for help.

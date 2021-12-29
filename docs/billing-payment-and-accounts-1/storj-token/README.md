@@ -40,7 +40,7 @@ Making payments with STORJ token is a different process than using a credit card
 
 Please note that it is not necessary to open an account with CoinPayments in order to make a STORJ token deposit to your Storj DCS account. You can use the workflow below to receive the STORJ deposit address through CoinPayments, and then directly send the requested amount of STORJ token from your own wallet to that deposit address.
 
-Also note that if a user wants to pay solely using STORJ token, they must add a minimum of $10.00 USD worth of STORJ tokens to their Storj DCS account in a single transaction to activate the account and allow usage of the Storj DCS Platform services.
+Also note that if a user wants to pay solely using STORJ token, they must add a minimum of $25.00 USD worth of STORJ tokens to their Storj DCS account in a single transaction to activate the account and allow usage of the Storj DCS Platform services.
 
 Important: If a user does not want to add a credit card but wants to pay only via STORJ token, they should exclusively deposit STORJ token and should not add a credit card to their account because, once a credit card is added as a payment method, it can only be removed by closing the account or requesting removal of the credit card after adding STORJ token, using the support process defined in this documentation.
 
@@ -48,7 +48,7 @@ Depending on the amount of platform usage and the usage limits configured on you
 
 We realize the STORJ token price can fluctuate, so our billing system is designed to ensure any such fluctuation does not affect the amount deposited in terms of USD. The value attributed to your account will be based on the STORJ to USD exchange rate at the time of deposit, not at the time of usage or bill payment. In other words, the account balance will be incremented by the USD equivalent of any STORJ deposit as soon as the deposit gets registered from CoinPayments. This is intended to minimize the potential impact of fluctuations in the STORJ token price because the price is fixed in USD on an account until the deposit balance is exhausted.
 
-To deposit STORJ tokens in an account, navigate to the Payment Methods section and click on the **`Add STORJ`** button.   Next, select a prefilled USD amount to be deposited or enter any custom amount that is at least $10 and then select **`Continue to Coin Payments`**.
+To deposit STORJ tokens in an account, navigate to the Payment Methods section and click on the **`Add STORJ`** button.   Next, select a prefilled USD amount to be deposited or enter any custom amount that is at least $25 and then select **`Continue to Coin Payments`**.
 
 ![](<../../.gitbook/assets/Screen Shot 2020-08-19 at 4.48.51 PM.png>)
 

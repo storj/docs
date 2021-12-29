@@ -50,7 +50,7 @@ We realize the STORJ token price can fluctuate, so our billing system is designe
 
 To deposit STORJ tokens in an account, navigate to the Payment Methods section and click on the **`Add STORJ`** button.   Next, select a prefilled USD amount to be deposited or enter any custom amount that is at least $25 and then select **`Continue to Coin Payments`**.
 
-![](<../../.gitbook/assets/Screen Shot 2020-08-19 at 4.48.51 PM.png>)
+![](../../.gitbook/assets/STORJ\_deposit.png)
 
 {% hint style="info" %}
 Make sure that your browser is not blocking popups, as CoinPayments will open a popup window with the payment instructions, including the STORJ token deposit address and QR code.

@@ -24,9 +24,9 @@ If you haven't yet, create a Storj DCS account before following the rest of the 
 
 ## Procure a Kubernetes cluster
 
-Your first step is to procure a Kubernetes cluster. A couple of examples can be found in the [total-cluster/quickstarts](https://github.com/jasonmimick/total-cluster/tree/master/quickstarts) folder, but most any cluster should work. This full example will require 5 to 7 worker nodes with 2 nodes having at least 8 gb of ram.&#x20;
+Your first step is to procure a Kubernetes cluster. This full example will require 5 to 7 worker nodes with 2 nodes having at least 8 gb of ram.&#x20;
 
-Next, [set up your S3-compatible Gateway](../api-reference/s3-gateway/#set-up) (formerly known as Tardigrade gateway) for total-cluster. Check out the details for that over in the [gateway chart](https://github.com/jasonmimick/total-cluster/tree/master/addons/tardigade-gateway) in total-cluster.
+Next, set up your S3-compatible Gateway (formerly known as Tardigrade gateway) for total-cluster or you can use an our [s3-compatible-gateway](../api-reference/s3-compatible-gateway/ "mention"). Check out the details for that over in the [gateway chart](https://github.com/jasonmimick/total-cluster/tree/master/addons/tardigade-gateway) in total-cluster.
 
 Installing the chart (Note: requires Helm V3),
 

@@ -10,7 +10,7 @@ description: >-
 
 Navigate to the **Access** page within your project and then click on **Continue**.&#x20;
 
-![](<../../../.gitbook/assets/image (166) (1) (1).png>)
+![](<../../../.gitbook/assets/image (166) (2).png>)
 
 Give your new **** Access Grant a **name.**
 

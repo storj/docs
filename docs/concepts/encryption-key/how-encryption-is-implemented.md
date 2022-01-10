@@ -28,7 +28,7 @@ First, it’s critical to understand the definitions of a few key concepts used 
 * **AES-GCM**: An authenticated encryption algorithm that makes use of the Advanced Encryption Standard and uses the Galois/Counter mode for encrypting blocks.
 * **Secretbox**: An authenticated encryption algorithm from the NaCl library that combines the Salsa20 encryption cipher and Poly1305 message authentication code.
 
-#### Path Encryption <a href="path-encryption" id="path-encryption"></a>
+#### Path Encryption <a href="#path-encryption" id="path-encryption"></a>
 
 Paths are encrypted in a hierarchical and deterministic way using the root encryption key. Each path component is encrypted separately based on information derived from previous path components.
 
@@ -40,7 +40,7 @@ While there are many benefits to path encryption, one challenge exists around ef
 
 Users of the network are able to opt out of path encryption on a per-bucket basis because of this limitation. If a user opts out of encrypted paths, the paths will still only be visible to the Satellite. Storage nodes do not have information about paths or metadata associated with pieces they are storing.
 
-#### Content and Metadata Encryption <a href="content-and-metadata-encryption" id="content-and-metadata-encryption"></a>
+#### Content and Metadata Encryption <a href="#content-and-metadata-encryption" id="content-and-metadata-encryption"></a>
 
 When a user uploads a file, we read it one segment at a time on the client-side. Before each segment is split up, erasure encoded, and stored on remote storage nodes, we generate a random content encryption key. We also create a starting nonce equal to the segment number and use it along with the random key to encrypt the segment data.
 
@@ -54,4 +54,4 @@ In summary, encryption and security on decentralized cloud storage networks has 
 
 This description pulls heavily from Moby Von Briesen's blog post, located here: [https://storj.io/blog/2018/11/security-and-encryption-on-the-v3-network/](https://storj.io/blog/2018/11/security-and-encryption-on-the-v3-network/)
 
-You can read more about encryption on the V3 Storj network in sections 3.6 and 4.1 of [our whitepaper](https://storj.io/white-paper).
+You can read more about encryption on the V3 Storj network in sections 3.6 and 4.1 of [our whitepaper](https://www.storj.io/whitepaper).

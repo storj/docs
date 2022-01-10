@@ -24,7 +24,7 @@ The Storj DCS Velero plugin does not support volume snapshots for now.
 
 ## **Prerequisites**
 
-* [Complete Velero Prerequisites and install the CLI](https://velero.io/docs/master/basic-install/)
+* [Complete Velero Prerequisites and install the CLI](https://velero.io/docs/main/basic-install/)
 * [Create a Storj DCS account](https://storj.io/signup)
 * [Create an Access Grant for the project](../getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant.md) or create an access grant with the [Uplink CLI](../getting-started/quickstart-uplink-cli/)
 * [Create a Storj bucket where Velero will store the backups](../getting-started/quickstart-uplink-cli/uploading-your-first-object/create-a-bucket.md)
@@ -60,10 +60,10 @@ $ velero restore create $RESTORE_NAME --from-backup $BACKUP_NAME
 ```
 
 {% hint style="info" %}
-Note: it's possible to overwrite the backup location or access grant by editing the [backupstoragelocations.velero.io](http://backupstoragelocations.velero.io) CR and restarting the Velero Pod on the cluster in case of any mistake with the configuration.
+Note: it's possible to overwrite the backup location or access grant by editing the `backupstoragelocations.velero.io` CR and restarting the Velero Pod on the cluster in case of any mistake with the configuration.
 {% endhint %}
 
-The complete Velero documentation is [located here.](https://velero.io/docs/master/restore-reference/)
+The complete Velero documentation is [located here.](https://velero.io/docs/main/restore-reference/)
 
 ## Multicloud Architecture for Disaster Prevention and Migration
 
@@ -72,7 +72,7 @@ Because Storj DCS is a globally distributed hot object store, you can store and 
 In the example below, we can see a Disaster Recovery scenario where we might need to migrate into a new cluster:\
 ****
 
-![Storj DCS is a the ultimate tool for multicloud architectures](https://lh5.googleusercontent.com/r-\_2ecP1ap0f-jMeiI\_WGOu9oED11VPGMibekDEt6ia4nkelci8cuA3QrJK4wP1YQRrIVIcJopSyUnf5PjdobrmHbLALzSgJrmJmP7AsxRb9a1KJtrRJsxRTEoRGdJThw-blUgtt)
+![Storj DCS is a the ultimate tool for multicloud architectures](../.gitbook/assets/image.jpg)
 
 In this scenario, Cluster B is restored from the backup of A and reconstituting the Kubernetes volume in the cluster. &#x20;
 

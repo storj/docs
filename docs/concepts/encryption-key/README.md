@@ -11,5 +11,3 @@ Separate and distinct from the topic of access management, a number of different
 {% hint style="info" %}
 **Key Point:** Storj DCS provides several approaches to developing more secure and private applications and your choice of integration pattern will allow you to make an informed decision on the right type of encryption to provide the commensurate level of privacy and security for your application data.
 {% endhint %}
-
-##

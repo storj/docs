@@ -12,7 +12,7 @@ To learn how files are uploaded to Storj DCS see [how it works](https://storj.io
 
 When you upload your data to Storj DCS, your data is encrypted, erasure-coded, and spread across a network of statistically uncorrelated peers (Storage Nodes).
 
-![](https://lh5.googleusercontent.com/sxuf2JXDhe3NQEBgiqsetqp2au1KpV76JR5UjahECBwOQsUtaGFUS\_6KgKZGcRfgYuHA6Ropo3lOAZal04lKlYoXpCL63MssCZlzEzojCcUAE\_KYFLz97vLNMqJz-fjX2zNNFVfs12M)
+![](https://assets-global.website-files.com/602eda09fc78af5a419706be/6037d462443538c5f8ca2bb3\_6022e0693d144c0e7d9711a0\_audit-image-2.gif)
 
 ## Basic Tools for Storj Decentralized Cloud Storage
 

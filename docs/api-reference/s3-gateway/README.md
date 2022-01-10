@@ -281,6 +281,10 @@ $ aws configure set default.s3.multipart_threshold 64MB
 
 Then, test out some AWS S3 CLI commands!
 
+{% hint style="success" %}
+See also [aws-cli-advanced-options.md](../../getting-started/gateway-mt/aws-cli-advanced-options.md "mention")
+{% endhint %}
+
 ## Try it out!
 
 #### **Create a bucket**

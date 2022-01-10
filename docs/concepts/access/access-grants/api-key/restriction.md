@@ -23,7 +23,7 @@ Specific Operations: Caveats can restrict whether an Access Grant can permit any
 
 **Time Window:** Caveats can restrict when an Access Grant can permit operations on objects stored on the platform (before or after a date and time or a range of time between two dates/times.
 
-The [code related to the supported Caveats](https://github.com/storj/storj/blob/master/pkg/macaroon/alias.go) on the Satellite is available for review on GitHub.\
+The [code related to the supported Caveats](https://github.com/storj/common/blob/main/macaroon/apikey.go) on the Satellite is available for review on GitHub.\
 \
 When an Access Grant is created to share access to an object, it creates an Access Grant because the object will need to be retrieved using the API Key in the Access Grant and decrypted using the encryption key.
 

@@ -108,6 +108,7 @@
 * [MongoDB Ops Manager Backup](how-tos/mongodb-ops-manager-backup.md)
 * [Store Tesla Sentry Mode & Dashcam videos on Storj DCS](how-tos/tesla-sentry-mode-teslausb.md)
 * [How to connect s3fs to Storj DCS](how-tos/how-to-connect-s3fs-to-storj-dcs.md)
+* [How to set up video analytics and video management with Kerberos Vault](how-tos/how-to-set-up-video-analytics-and-video-management-with-kerberos-vault.md)
 
 ## Solution Architectures
 

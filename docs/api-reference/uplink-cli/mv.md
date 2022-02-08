@@ -64,7 +64,7 @@ uplink mv sj://cakes/cheesecake.jpg sj://cakes/New-York/cheesecake.jpg
 {% endtabs %}
 
 {% hint style="info" %}
-You cannot use regular expressions to specify which files to copy (e.g. `uplink mv sj://cakes/cheese* sj://cakes/New-York/` will not work). Also, you can only specify one source at a time (no ~~`uplink mv sj://cakes/cheesecake.jpg sj://cakes/cheesecake2.png sj://cakes`~~)
+You cannot use pattern expressions to specify which files to copy (e.g. `uplink mv sj://cakes/cheese* sj://cakes/New-York/` will not work). Also, you can only specify one source at a time.
 {% endhint %}
 
 Sample Output:

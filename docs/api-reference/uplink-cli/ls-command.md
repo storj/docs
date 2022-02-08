@@ -28,12 +28,14 @@ uplink ls [sj://BUCKET[/PREFIX]] [flags]
 
 ## Flags
 
-| Flag              | Description                                           |
-| ----------------- | ----------------------------------------------------- |
-| `--access string` | the serialized access, or name of the access to use   |
-| `--encrypted`     | if true, show paths as base64-encoded encrypted paths |
-| `--help`, `-h`    | help for ls                                           |
-| `--recursive`     | if true, list recursively                             |
+| Flag                | Description                                                                                        |
+| ------------------- | -------------------------------------------------------------------------------------------------- |
+| `--access string`   | the serialized access, or name of the access to use                                                |
+| `--encrypted`       | if true, show paths as base64-encoded encrypted paths                                              |
+| `--expanded`, `-x`  | Use expanded output, showing object expiration times and whether there is custom metadata attached |
+| `--help`, `-h`      | help for ls                                                                                        |
+| `--pending`         | if true, list incomplete objects instead                                                           |
+| `--recursive`, `-r` | if true, list recursively                                                                          |
 
 ## Examples
 
@@ -163,4 +165,4 @@ uplink ls sj://recipes --encrypted
 
 ![](../../.gitbook/assets/ls-encrypted.png)
 
-Notice that since `sj://recipes/cakes/very-secret-recipe.txt `was encrypted with a different key, we cannot view it using regular ls and the default access, but with `--encrypted` we can see that it is indeed stored in sj://recipes
+Notice that since `sj://recipes/cakes/very-secret-recipe.txt` was encrypted with a different key, we cannot view it using regular ls and the default access, but with `--encrypted` we can see that it is indeed stored in sj://recipes

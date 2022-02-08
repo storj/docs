@@ -235,19 +235,19 @@ While you may share individual objects with the above linksharing instructions, 
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe share --dns www sj://cakes/ --base-url https://link.us1.storjshare.io
+./uplink.exe share --dns www.mysite.com sj://cakes/ --base-url https://link.us1.storjshare.io
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink share --dns www sj://cakes/ --base-url https://link.us1.storjshare.io
+uplink share --dns www.mysite.com sj://cakes/ --base-url https://link.us1.storjshare.io
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink share --dns www sj://cakes/ --base-url https://link.us1.storjshare.io
+uplink share --dns www.mysite.com sj://cakes/ --base-url https://link.us1.storjshare.io
 ```
 {% endtab %}
 {% endtabs %}
@@ -272,11 +272,11 @@ Public Access:  true
 Remember to update the $ORIGIN with your domain name. You may also change the $TTL.
 $ORIGIN example.com.
 $TTL    3600
-www    	IN	CNAME	link.us1.storjshare.io.
-txt-www	IN	TXT  	storj-root:cakes
-txt-www	IN	TXT  	storj-access:ju3ga56lfk7x...
+www.mysite.com    	IN	CNAME	link.us1.storjshare.io.
+txt-www.mysite.com	IN	TXT  	storj-root:cakes
+txt-www.mysite.com	IN	TXT  	storj-access:ju3ga56lfk7x...
 ```
 
 Use the generated DNS info to connect your domain name to your shared objects.
 
-Note you can use any hostname in place of `www` in the example. The base-url is also optional.
+Note you can use any hostname in place of `www.mysite.com` in the example. The base-url is also optional.

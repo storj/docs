@@ -28,9 +28,9 @@ uplink meta [command]
 
 ## Child commands
 
-| Command | Description                   |
-| ------- | ----------------------------- |
-| `get`   | Get a Storj object's metadata |
+| Command                          | Description                   |
+| -------------------------------- | ----------------------------- |
+| ``[`get`](meta-get-command.md)`` | Get a Storj object's metadata |
 
 ## Flags
 

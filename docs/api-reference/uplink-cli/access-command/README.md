@@ -28,11 +28,17 @@ uplink access [command]
 
 ## Child commands
 
-| Command                                | Description                                                                 |
-| -------------------------------------- | --------------------------------------------------------------------------- |
-| [`inspect`](access-inspect-command.md) | Inspect allows you to expand a serialized access into its constituent parts |
-| [`list`](access-list-command.md)       | Prints name and associated satellite of all available accesses              |
-| [`register`](access-register.md)       | Register your access for use with a hosted gateway.                         |
+| Command                                | Description                                                                          |
+| -------------------------------------- | ------------------------------------------------------------------------------------ |
+| `create`                               | Create an access from a setup token. `uplink setup` is an alias for this.            |
+| `delete`                               | Delete an access from local store                                                    |
+| `import`                               | Save an existing access. `uplink import` is an alias for this.                       |
+| [`inspect`](access-inspect-command.md) | Inspect allows you to expand a serialized access into its constituent parts          |
+| [`list`](access-list-command.md)       | Prints name and associated satellite of all available accesses                       |
+| [`register`](access-register.md)       | Register an access grant for use with a hosted S3 compatible gateway and linksharing |
+| `restrict`                             | Restrict an access                                                                   |
+| `revoke`                               | Revoke an access                                                                     |
+| `use`                                  | Set default access to use                                                            |
 
 ## Flags
 

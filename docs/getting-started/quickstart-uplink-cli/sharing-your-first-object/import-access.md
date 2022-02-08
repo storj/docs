@@ -7,19 +7,19 @@ Importing an access is done using the `import` command.
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe import cheesecake cheesecake.access
+./uplink.exe access import cheesecake cheesecake.access
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink import cheesecake ~/cheesecake.access
+uplink access import cheesecake ~/cheesecake.access
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink import cheesecake ~/cheesecake.access
+uplink access import cheesecake ~/cheesecake.access
 ```
 {% endtab %}
 {% endtabs %}
@@ -33,41 +33,19 @@ This should give you the following output:
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe import cheesecake 14dfgh....qr
+./uplink.exe access import cheesecake 14dfgh....qr
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink import cheesecake 14dfgh....qr
+uplink access import cheesecake 14dfgh....qr
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink import cheesecake 14dfgh....qr
-```
-{% endtab %}
-{% endtabs %}
-
-### Import from the input to the default access
-
-{% tabs %}
-{% tab title="Windows" %}
-```
-./uplink.exe import 14dfgh....qr
-```
-{% endtab %}
-
-{% tab title="Linux" %}
-```
-uplink import 14dfgh....qr
-```
-{% endtab %}
-
-{% tab title="macOS" %}
-```
-uplink import 14dfgh....qr
+uplink access import cheesecake 14dfgh....qr
 ```
 {% endtab %}
 {% endtabs %}
@@ -97,10 +75,10 @@ uplink access list
 {% endtabs %}
 
 ```
-=========== ACCESSES LIST: name / satellite ================================
-cheesecake / 12EayRS2V1kEsWESU9QMRseFhdxYxKicsiFmxrsLZHeLUtdps3S@us1.storj.io:7777
-pumpkin-pie / 12L9ZFwhzVpuEKMUNUqkaTLGzwY9G24tbiigLiXpmZWKwmcNDDs@eu1.storj.io:7777
-tarte / 121RTSDpyNZVcEU84Ticf2L1ntiuUimbWgfATz21tuvgk3vzoA6@ap1.storj.io:7777
+CURRENT    NAME           SATELLITE
+*          cheesecake     us1.storj.io:7777
+           pumpkin-pie    us1.storj.io:7777
+           tarte          us1.storj.io:7777
 ```
 
 To get more information on an access use the `inspect` command:

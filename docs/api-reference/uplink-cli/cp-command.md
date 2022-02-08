@@ -11,7 +11,7 @@ description: >-
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe cp SOURCE DESTINATION [flags]
+./uplink.exe cp [flags] SOURCE DESTINATION
 ```
 {% endtab %}
 

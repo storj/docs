@@ -28,11 +28,15 @@ uplink rm sj://BUCKET/KEY [flags]
 
 ## Flags
 
-| Flag              | Description                                            |
-| ----------------- | ------------------------------------------------------ |
-| `--access string` | the serialized access, or name of the access to use    |
-| `--encrypted`     | if true, treat paths as base64-encoded encrypted paths |
-| `--help`, `-h`    | help for `rm`                                          |
+| Flag                        | Description                                                  |
+| --------------------------- | ------------------------------------------------------------ |
+| `--access string`           | the serialized access, or name of the access to use          |
+| `--encrypted`               | if true, treat paths as base64-encoded encrypted paths       |
+| `--help`, `-h`              | help for `rm`                                                |
+| `--parallelism`, `-p` `int` | Controls how many removes to perform in parallel (default 1) |
+| `--pending`                 | Remove pending object uploads instead                        |
+| `--recursive`, `-r`         | Remove recursively                                           |
+| `--help`, `-h`              | help for `rm`                                                |
 
 ## Examples
 

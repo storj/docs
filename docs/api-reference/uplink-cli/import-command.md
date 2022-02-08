@@ -9,29 +9,29 @@ description: Imports a serialized access grant into the configuration
 {% tabs %}
 {% tab title=" Windows" %}
 ```
-./uplink.exe import [flags] [NAME] (ACCESS | FILE)
+./uplink.exe import [flags] NAME (ACCESS | FILE)
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink import [flags] [NAME] (ACCESS | FILE)
+uplink import [flags] NAME (ACCESS | FILE)
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink import [flags] [NAME] (ACCESS | FILE)
+uplink import [flags] NAME (ACCESS | FILE)
 ```
 {% endtab %}
 {% endtabs %}
 
 ## Flags
 
-| Flag           | Description                         |
-| -------------- | ----------------------------------- |
-| `--help`, `-h` | help for import                     |
-| `--overwrite`  | overwrite the existing access grant |
+| Flag            | Description                         |
+| --------------- | ----------------------------------- |
+| `--help`, `-h`  | help for import                     |
+| `--force`, `-f` | overwrite the existing access grant |
 
 ## Examples
 
@@ -82,26 +82,4 @@ uplink import cheesecake 13df....qa
 These two commands will have the same output:
 
 ![](../../.gitbook/assets/access-imported.png)
-
-### Import access grant to the default access
-
-{% tabs %}
-{% tab title="Windows" %}
-```
-./uplink.exe import 13df....qa --overwrite
-```
-{% endtab %}
-
-{% tab title="Linux" %}
-```
-uplink import 13df....qa --overwrite
-```
-{% endtab %}
-
-{% tab title="macOS" %}
-```
-uplink import 13df....qa --overwrite
-```
-{% endtab %}
-{% endtabs %}
 

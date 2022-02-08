@@ -24,19 +24,19 @@ description: >-
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe setup
+./uplink.exe access create
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink setup
+uplink access create
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink setup
+uplink access create
 ```
 {% endtab %}
 {% endtabs %}

@@ -7,19 +7,19 @@ Let's delete our photo with the following command:
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe rm sj:/cakes/cheesecake.jpg
+./uplink.exe rm sj://cakes/cheesecake.jpg
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink rm sj:/cakes/cheesecake.jpg
+uplink rm sj://cakes/cheesecake.jpg
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink rm sj:/cakes/cheesecake.jpg
+uplink rm sj://cakes/cheesecake.jpg
 ```
 {% endtab %}
 {% endtabs %}

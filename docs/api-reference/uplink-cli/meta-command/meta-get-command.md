@@ -5,19 +5,19 @@
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe meta get [KEY] PATH [flags]
+./uplink.exe meta get PATH [KEY] [flags]
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink meta get [KEY] PATH [flags]
+uplink meta get PATH [KEY] [flags]
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink meta get [KEY] PATH [flags]
+uplink meta get PATH [KEY] [flags]
 ```
 {% endtab %}
 {% endtabs %}
@@ -87,19 +87,19 @@ You can retrieve the value of key `baker` for object `sj://cakes/cheesecake.jpg`
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe meta get baker sj://cakes/cheesecake.jpg
+./uplink.exe meta get sj://cakes/cheesecake.jpg baker
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink meta get baker sj://cakes/cheesecake.jpg
+uplink meta get sj://cakes/cheesecake.jpg baker
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink meta get baker sj://cakes/cheesecake.jpg
+uplink meta get sj://cakes/cheesecake.jpg baker
 ```
 {% endtab %}
 {% endtabs %}

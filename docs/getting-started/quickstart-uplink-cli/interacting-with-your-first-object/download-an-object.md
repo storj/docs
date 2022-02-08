@@ -7,19 +7,19 @@ To download our cheesecake photo, let's use the copy command:
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe cp sj:/cakes/cheesecake.jpg ~/Downloads/cheesecake.jpg
+./uplink.exe cp sj://cakes/cheesecake.jpg ~/Downloads/cheesecake.jpg
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink cp sj:/cakes/cheesecake.jpg ~/Downloads/cheesecake.jpg
+uplink cp sj://cakes/cheesecake.jpg ~/Downloads/cheesecake.jpg
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink cp sj:/cakes/cheesecake.jpg ~/Downloads/cheesecake.jpg
+uplink cp sj://cakes/cheesecake.jpg ~/Downloads/cheesecake.jpg
 ```
 {% endtab %}
 {% endtabs %}

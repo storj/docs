@@ -22,7 +22,7 @@ Before running your Storage Node for the first time, please note the Storage Nod
 | `ADDRESS`        | <p>External IP address or the DDNS you configured and the port you opened on your router <code>&#x3C;ip>:&#x3C;port></code></p><p></p><p>If you are using a custom port other than 28967, you have to change the <code>-p 28967:28967</code> to <code>-p &#x3C;port>:28967</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `STORAGE`        | <p>How much disk space you want to allocate to the Storj network </p><p></p><p>Be sure not to over-allocate space! <strong>Allow at least 10% extra for overhead.</strong> If you over-allocate space, <strong>you may corrupt your database</strong> when the system attempts to store pieces when no more physical space is actually available on your drive. The minimum storage shared requirement is <strong>500 GB</strong>, which means you need a disk of at least 550 GB total size to allow for the 10% overhead.</p><p><br>If you set up a brand new node, make sure the storage destination folder doesn't already have a<code>config.yaml</code> and/or <code>storage</code> folder inside, otherwise the <code>storagenode</code> container could fail to start.</p> |
 | `<identity-dir>` | Replace it to the location of your identity files. You can copy the absolute path from the output of the identity commands you ran earlier.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `<storage-dir>`  | <p>Replace it to the local directory where you want files to be stored on your hard drive for the network. </p><p>Please, consider to use a subfolder instead of the root of the disk, it could prevent starting from scratch if the disk is disappearing.</p><p>The network-attached location could work, but it is neither supported nor recommended!</p><p></p><p><strong>Note</strong>: the current database backend is <a href="https://github.com/boltdb/bolt">BoltDB</a>, which <a href="https://github.com/boltdb/bolt/issues/704">requires <em>mmap</em></a>, hence you have to use a file system which supports <em>mmap</em>.</p>                                                                                                                                       |
+| `<storage-dir>`  | <p>Replace it with the local directory where you want files to be stored on your hard drive for the network. </p><p>Please consider using a subfolder instead of the root of the disk, this could prevent starting from scratch if the disk were to disappear/accidentally disconnect.</p><p>The network-attached location could work, but it is neither supported nor recommended!</p><p></p><p><strong>Note</strong>: the current database backend is <a href="https://github.com/boltdb/bolt">BoltDB</a> which <a href="https://github.com/boltdb/bolt/issues/704">requires <em>mmap</em></a>, hence you have to use a file system which supports <em>mmap</em>.</p>                                                                                                            |
 
 ## Setting up the Storage Node
 
@@ -56,6 +56,7 @@ docker run --rm -e SETUP="true" --mount type=bind,source="<identity-dir>",destin
 
 ```
 docker run --rm -e SETUP="true" \
+    --user $(id -u):$(id -g) \
     --mount type=bind,source="<identity-dir>",destination=/app/identity \
     --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:latest
@@ -67,6 +68,7 @@ docker run --rm -e SETUP="true" \
 
 ```
 docker run --rm -e SETUP="true" \
+    --user $(id -u):$(id -g) \
     --mount type=bind,source="<identity-dir>",destination=/app/identity \
     --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:latest
@@ -105,6 +107,7 @@ docker run -d --restart unless-stopped --stop-timeout 300 \
     -e EMAIL="user@example.com" \
     -e ADDRESS="domain.ddns.net:28967" \
     -e STORAGE="2TB" \
+    --user $(id -u):$(id -g) \
     --mount type=bind,source="<identity-dir>",destination=/app/identity \
     --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:latest
@@ -123,6 +126,7 @@ docker run -d --restart unless-stopped --stop-timeout 300 \
     -e EMAIL="user@example.com" \
     -e ADDRESS="domain.ddns.net:28967" \
     -e STORAGE="2TB" \
+    --user $(id -u):$(id -g) \
     --mount type=bind,source="<identity-dir>",destination=/app/identity \
     --mount type=bind,source="<storage-dir>",destination=/app/config \
     --name storagenode storjlabs/storagenode:latest

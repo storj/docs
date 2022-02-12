@@ -115,7 +115,7 @@ Tap on plus sign and select **New Identity**.
 
 #### New Identity
 
-Specify a name of the Identity in the field **Name**, provide a username for your PC with storagenode in the **Username** filed, specify a password in the **Password** field, confirm creation.
+Specify a name of the Identity in the field **Name**, provide a username for your PC with storagenode in the **Username** fieled, specify a password in the **Password** field, confirm creation.
 
 Navigate to the **Hosts** in the hamburger menu.
 

@@ -115,7 +115,7 @@ Tap on plus sign and select **New Identity**.
 
 #### New Identity
 
-Specify a name of the Identity in the field **Name**, provide a username for your PC with storagenode in the **Username** filed, specify a password in the **Password** field, confirm creation with a confirmation $$\sqrt{}$$ button.
+Specify a name of the Identity in the field **Name**, provide a username for your PC with storagenode in the **Username** filed, specify a password in the **Password** field, confirm creation.
 
 Navigate to the **Hosts** in the hamburger menu.
 
@@ -129,7 +129,7 @@ Create a new host with the plus sign.
 
 #### New host
 
-Specify alias for the host, i.e. _MyHomePC_. Provide the local or public hostname or IP address in the **Hostname or IP Address** field. Tap on **Username** icon and select the Identity, created earlier. In our example - _user_. Confirm creation of the host with a confirmation $$\sqrt{}$$ button.
+Specify alias for the host, i.e. _MyHomePC_. Provide the local or public hostname or IP address in the **Hostname or IP Address** field. Tap on **Username** icon and select the Identity, created earlier. In our example - _user_. Confirm creation of the host.
 
 ![](../../.gitbook/assets/Screenshot\_2020-04-10-02-24-01-105\_com.server.auditor.ssh.client.png)
 
@@ -194,7 +194,7 @@ Select it and fill other parameters for the port forwarding rule:
 
 ![](../../.gitbook/assets/Screenshot\_2020-04-11-17-23-57-464\_com.server.auditor.ssh.client.png)
 
-Confirm creation with confirmation $$\sqrt{}$$ button.
+Confirm creation.
 
 Check that it's working - tap on your port forwarding rule, it should connect immediately.
 
@@ -248,9 +248,9 @@ Select existing key or tap on plus sign, select the option **Generate key** to g
 
 #### Generate Key
 
-Specify a name for the key in the field **Name**, provide a passphrase (optional) in the field **Passphrase**. Tap the confirmation $$\sqrt{}$$ button.
+Specify a name for the key in the field **Name**, provide a passphrase (optional) in the field **Passphrase** and confirm.
 
-Select the key to return to the edit of the Identity screen, confirm modification with the confirmation $$\sqrt{}$$ button.
+Select the key to return to the edit of the Identity screen, confirm modification.
 
 ![](../../.gitbook/assets/Screenshot\_2020-04-10-01-49-35-129\_com.server.auditor.ssh.client.png)
 {% endtab %}
@@ -300,7 +300,7 @@ Tap on **Select host** and select the needed host, _MyHomePC_ in our example
 
 ![](../../.gitbook/assets/Screenshot\_2020-04-11-19-06-09-738\_com.server.auditor.ssh.client.png)
 
-Confirm the export to the selected host with a confirmation $$\sqrt{}$$ button.
+Confirm the export to the selected host.
 {% endtab %}
 
 {% tab title="iOS" %}

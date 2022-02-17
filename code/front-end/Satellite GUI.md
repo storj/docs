@@ -9,7 +9,7 @@ There are two ways to start local development environment depending on what you 
 ### Prerequisites
 
 - Clone the [storj repo](https://github.com/storj/storj)
-- Make sure you have [Go](https://go.dev/doc/install) of [version](https://github.com/storj/storj/blob/main/Makefile#L1), [node.js](https://nodejs.org/en/) of [version](https://github.com/storj/storj/blob/main/Makefile#L5) and [npm](https://www.npmjs.com/get-npm) installed
+- Make sure you have [Go](https://go.dev/doc/install), [node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/get-npm) installed. Versions can be checked at the beginning of this file [Makefile](https://github.com/storj/storj/blob/main/Makefile)
 - From root folder run `go install ./...` to build back-end 
 - Go to `web/satellite` folder
 - run `npm install` or `npm ci`. It will install all dependencies for the codebase

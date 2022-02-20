@@ -14,27 +14,13 @@ Storj DCS currently has community contributed bindings for Python, Swift, .Net, 
 
 Below are Storj's provided bindings:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
+* [GO](https://github.com/storj/uplink)
+* [C](https://github.com/storj/uplink-c)
+* [Android](https://github.com/storj/uplink-android)
+* [Java](https://github.com/storj/uplink-java)
+* [NodeJS](https://www.npmjs.com/package/uplink-nodejs)
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-
+Please also take a look on third party libraries and tools: [https://github.com/storj-thirdparty](https://github.com/storj-thirdparty)
 
 
 

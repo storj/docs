@@ -105,6 +105,7 @@
 * [Store Tesla Sentry Mode & Dashcam videos on Storj DCS](how-tos/tesla-sentry-mode-teslausb.md)
 * [How to connect s3fs to Storj DCS](how-tos/how-to-connect-s3fs-to-storj-dcs.md)
 * [How to set up video analytics and video management with Kerberos Vault](how-tos/how-to-set-up-video-analytics-and-video-management-with-kerberos-vault.md)
+* [Backups with HashBackup](how-tos/backups-with-hashbackup.md)
 * [How to use Plex and Storj DCS as a private streaming service](how-tos/how-to-use-plex-and-storj-dcs-as-a-private-streaming-service.md)
 
 ## Solution Architectures

@@ -12,7 +12,7 @@ description: The native CLI tool for Storj DCS/OSP
 
 {% tabs %}
 {% tab title="Windows" %}
-#### Download the [Windows Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplinkng\_windows\_amd64.zip) zip file
+#### Download the [Windows Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink\_windows\_amd64.zip) zip file
 
 In the Downloads folder, right-click and select "Extract all"
 
@@ -33,42 +33,56 @@ Open **Windows PowerShell** and continue on to the next step.
 #### Curl Download
 
 ```
-curl -L https://github.com/storj/storj/releases/latest/download/uplinkng_linux_amd64.zip -o uplinkng_linux_amd64.zip
-unzip -o uplinkng_linux_amd64.zip
-sudo install uplinkng /usr/local/bin/uplink
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_amd64.zip -o uplink_linux_amd64.zip
+unzip -o uplink_linux_amd64.zip
+sudo install uplink /usr/local/bin/uplink
 ```
 
 #### Direct Download
 
-[Linux AMD64 Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplinkng\_linux\_amd64.zip)
+[Linux AMD64 Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink\_linux\_amd64.zip)
 
 ### ARM
 
 #### Curl Download
 
 ```
-curl -L https://github.com/storj/storj/releases/latest/download/uplinkng_linux_arm.zip -o uplinkng_linux_arm.zip
-unzip -o uplinkng_linux_arm.zip
-sudo install uplinkng /usr/local/bin/uplink
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm.zip -o uplinkng_linux_arm.zip
+unzip -o uplink_linux_arm.zip
+sudo install uplink /usr/local/bin/uplink
 ```
 
 #### Direct Download
 
-[Linux ARM Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplinkng\_linux\_arm.zip)
+[Linux ARM Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink\_linux\_arm.zip)
+
+### ARM64
+
+#### Curl Download
+
+```
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm64.zip -o uplinkng_linux_arm64.zip
+unzip -o uplink_linux_arm64.zip
+sudo install uplink /usr/local/bin/uplink
+```
+
+#### Direct Download
+
+[Linux ARM64 Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink\_linux\_arm64.zip)
 {% endtab %}
 
 {% tab title="macOS" %}
 #### Curl Download
 
 ```
-curl -L https://github.com/storj/storj/releases/latest/download/uplinkng_darwin_amd64.zip -o uplinkng_darwin_amd64.zip
-unzip -o uplinkng_darwin_amd64.zip
-sudo install uplinkng /usr/local/bin/uplink
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip -o uplinkng_darwin_amd64.zip
+unzip -o uplink_darwin_amd64.zip
+sudo install uplink /usr/local/bin/uplink
 ```
 
 #### Direct Download
 
-[macOS Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplinkng\_darwin\_amd64.zip)
+[macOS Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink\_darwin\_amd64.zip)
 {% endtab %}
 {% endtabs %}
 

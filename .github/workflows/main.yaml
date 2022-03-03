@@ -1,0 +1,5 @@
+name: Trigger Build
+on: push
+jobs:
+  pages:
+    uses: storj/docs/.github/workflows/main.yaml@convert

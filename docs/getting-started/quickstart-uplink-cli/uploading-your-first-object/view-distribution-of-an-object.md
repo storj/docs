@@ -15,19 +15,19 @@ See [here](../../../api-reference/uplink-cli/share-command.md#link-sharing) for 
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe share --url sj://cakes/cheesecake.jpg
+./uplink.exe share --url --not-after=+2h sj://cakes/cheesecake.jpg
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink share --url sj://cakes/cheesecake.jpg
+uplink share --url --not-after=+2h sj://cakes/cheesecake.jpg
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink share --url sj://cakes/cheesecake.jpg
+uplink share --url --not-after=+2h sj://cakes/cheesecake.jpg
 ```
 {% endtab %}
 {% endtabs %}
@@ -41,7 +41,7 @@ Upload    : Disallowed
 Lists     : Allowed
 Deletes   : Disallowed
 NotBefore : No restriction
-NotAfter  : No restriction
+NotAfter  : 2022-03-01 09:56:13
 Paths     : sj://cakes/cheesecake.jpg
 =========== SERIALIZED ACCESS WITH THE ABOVE RESTRICTIONS TO SHARE WITH OTHERS ===========
 Access    : 1Dv4...
@@ -55,6 +55,6 @@ REMINDER  : Object key must end in '/' when trying to share recursively
 URL       : https://link.us1.storjshare.io/s/juexo54k2db7lt5fawuqkupqkcfa/cakes/cheesecake.jpg
 ```
 
-This is a real distribution of your files' pieces that you uploaded to the network. You can share this file with anyone you'd like.
+This is a real distribution of your file's pieces that you uploaded to the network. You can share this file with anyone you'd like.
 
 ![](<../../../.gitbook/assets/image (131) (1).png>)

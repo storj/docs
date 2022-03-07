@@ -178,24 +178,28 @@ You can also generate a URL to share your projects/buckets/objects
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe share sj://cakes/ --url --base-url=https://link.us1.storjshare.io
+./uplink.exe share sj://cakes/ --url --not-after=none --base-url=https://link.us1.storjshare.io
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink share sj://cakes/ --url --base-url=https://link.us1.storjshare.io
+uplink share sj://cakes/ --url --not-after=none --base-url=https://link.us1.storjshare.io
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink share sj://cakes/ --url --base-url=https://link.us1.storjshare.io
+uplink share sj://cakes/ --url --not-after=none --base-url=https://link.us1.storjshare.io
 ```
 {% endtab %}
 {% endtabs %}
 
-Note that specifying `--base-url` is optional.
+{% hint style="info" %}
+Note that specifying `--base-url` is optional, but the `--not-after` is mandatory. If you do not want to specify date or offset - you can specify `--not-after=none`.
+
+See [flags of share command](share-command.md#flags) for details.
+{% endhint %}
 
 ```
 =========== ACCESS RESTRICTIONS ==========================================================

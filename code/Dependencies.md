@@ -3,7 +3,8 @@
 ## Adding new dependencies
 
 All new dependencies should be held to the same quality standards as our codebase.
-The following applies to direct and indirect dependencies.
+
+The following applies to all **direct** and **indirect** dependencies.
 
 To add a new dependency evaluate the following things:
 
@@ -38,3 +39,44 @@ To add a new dependency evaluate the following things:
 * Check how much it affects `storj/uplink` size.
 
 Note: many of these are fixable with communication or making our own PR-s.
+
+## Updating a dependency
+
+When updating a dependency it's usually sufficient to skim over the code and,
+if something looks weird then do a similar review as above.
+
+## Finding the changed code in dependencies
+
+When `go.mod` is using `go 1.17` then looking through the changed lines
+in `go.mod` gives the list of modules that need to be reviewed.
+Not every package will be used from the module, so sometimes it's possible
+to reduce the amount of code to review with the following:
+
+``` sh
+# create a temporary git branch
+git switch -c deps
+
+# vendor direct and indirect dependencies
+go mod vendor
+
+# commit the vendor directory
+git commit -a -m"before"`
+
+# add the new dependency
+go get example.test/new-dependency@latest
+modify-code to include the packages
+
+# update the vendor
+go mod vendor
+
+# commit the vendor directory
+git commit -a -m"after"`
+```
+
+The diff between these commits show the code that gets compiled into to the
+project.
+
+Note, linting and reviewing the whole module, instead of only the used
+packages, can help finding bugs in the used packages. For example the
+`_test.go` code isn't included in the vendor directory, however fixing
+bugs in testing code can uncover existing bugs.

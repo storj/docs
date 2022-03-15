@@ -42,8 +42,12 @@ Note: many of these are fixable with communication or making our own PR-s.
 
 ## Updating a dependency
 
-When updating a dependency it's usually sufficient to skim over the code and,
-if something looks weird then do a similar review as above.
+When updating a dependency it's usually sufficient to skim over the code.
+When something looks weird then it's suggested to do a similar review as above.
+
+When a large amount of code has changed then reading through the changelog
+before jumping into the code. Sometimes reviewing one commit at a time can
+be easier than the whole diff at once.
 
 ## Finding the changed code in dependencies
 

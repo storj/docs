@@ -8,7 +8,7 @@ The Storj DCS S3-compatible Gateway supports a RESTful API that is compatible wi
 
 The Storj DCS S3 Gateway is well-suited for many application architectures, but the S3 standard was designed for centralized storage and there are a few areas where a decentralized architecture requires a different approach.
 
-Storj DCS offers two options for S3 compatibility: GatewayMT, a hosted S3-compatible service and GatewayST, a self-hosted S3-compatible binary to run your own endpoint.
+Storj DCS offers two options for S3 compatibility: [GatewayMT, a hosted S3-compatible service](../api-reference/s3-compatible-gateway/) and [GatewayST, a self-hosted S3-compatible binary](../api-reference/s3-gateway/) to run your own endpoint (see [the compatibility table for GatewayST in our GitHub repo](https://github.com/storj/gateway-st/blob/main/docs/s3-compatibility.md)).
 
 ## When to use GatewayMT
 

@@ -25,39 +25,113 @@ rclone config
 
 A text-based menu will prompt. Type `n` and hit `Enter` to create a new remote configuration.
 
-![](../../.gitbook/assets/response1.png)
+```
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q> n
+```
 
 Enter a name for the new remote configuration, e.g. `waterbear`.
 
-![](../../.gitbook/assets/name.png)
+```
+name> waterbear
+Option Storage.
+Type of storage to configure.
+Choose a number from below, or type in your own value.
+```
 
-A long list of supported storage backends will prompt. Enter `tardigrade` and hit `Enter`.
+A long list of supported storage backends will prompt. Enter `storj` (Option 36) and hit `Enter`.
 
-![](../../.gitbook/assets/step3.png)
+```
+Option Storage.
+Type of storage to configure.
+Choose a number from below, or type in your own value.
+...
+36 / Storj Decentralized Cloud Storage
+   \ (storj)
+...
+Storage> storj
+```
 
 Choose your authentication method: existing access grant or new access grant from [API Key](../../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) ([Access token](../../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md)).
 
-![](../../.gitbook/assets/step4.png)
+```
+Storage> storj
+Option provider.
+Choose an authentication method.
+Choose a number from below, or type in your own string value.
+Press Enter for the default (existing).
+ 1 / Use an existing access grant.
+   \ (existing)
+ 2 / Create a new access grant from satellite address, API key, and passphrase.
+   \ (new)
+provider>
+```
 
 If you selected to authenticate with an existing access grant, enter the serialized access grant you have received by someone else.
 
-![](../../.gitbook/assets/step5.png)
+```
+provider> 1
+Option access_grant.
+Access grant.
+Enter a value. Press Enter to leave empty.
+access_grant> 1cC...
+--------------------
+[waterbear]
+type = storj
+access_grant = 1cC...
+--------------------
+y) Yes this is OK (default)
+e) Edit this remote
+d) Delete this remote
+y/e/d>
+```
 
 If you selected to authenticate with a new access grant, first enter the satellite address by selecting one from the list or enter the address of a 3rd-party satellite.
 
-![](../../.gitbook/assets/step6.png)
+```
+provider> 2
+Option satellite_address.
+Satellite address.
+Custom satellite address should match the format: `<nodeid>@<address>:<port>`.
+Choose a number from below, or type in your own string value.
+Press Enter for the default (us-central-1.storj.io).
+ 1 / US Central 1
+   \ (us-central-1.storj.io)
+ 2 / Europe West 1
+   \ (europe-west-1.storj.io)
+ 3 / Asia East 1
+   \ (asia-east-1.storj.io)
+satellite_address>
+```
 
 {% hint style="info" %}
 If you enter the a 3rd-party satellite, the address must include also the node ID of the satellite. This is required to establish a secure connection with the satellite.
 {% endhint %}
 
-The second step of creating a new access grant is to enter your [generated token](../../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md).
+The second step of creating a new access grant is to enter your [generated API key](../../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md).
 
-![](../../.gitbook/assets/step7.png)
+```
+Option api_key.
+API key.
+Enter a value. Press Enter to leave empty.
+api_key> 1Cjfjf...
+```
 
 The final step of creating a new access grant is to enter your encryption passphrase.
 
-![](../../.gitbook/assets/step8.png)
+```
+Option passphrase.
+Encryption passphrase.
+To access existing objects enter passphrase used for uploading.
+Enter a value. Press Enter to leave empty.
+passphrase> your-secret-encryption-phrase
+```
 
 {% hint style="info" %}
 The passphrase is used for encrypting and decrypting the data stored on Storj DCS (formerly known as Tardigrade). If you have any data previously uploaded to this project, you must enter the same passphrase in order to download it successfully.
@@ -65,16 +139,43 @@ The passphrase is used for encrypting and decrypting the data stored on Storj DC
 
 A summary of the remote configuration will prompt. Type `y`and hit `Enter` to confirm it.
 
-![](../../.gitbook/assets/step9.png)
+```
+[waterbear]
+type = storj
+satellite_address = 121RTSDpyNZVcEU84Ticf2L1ntiuUimbWgfATz21tuvgk3vzoA6@asia-east-1.tardigrade.io:7777
+api_key = 1Cjfjf...
+passphrase = your-secret-encryption-phrase
+access_grant = 1E1F...
+--------------------
+y) Yes this is OK (default)
+e) Edit this remote
+d) Delete this remote
+y/e/d> y
+```
 
 Now you should see one remote configuration available. Enter `q` and hit `Enter` to quit the configuration wizard.
 
-![](../../.gitbook/assets/step10.png)
+```
+Current remotes:
+
+Name                 Type
+====                 ====
+waterbear            storj
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q> q
+```
 
 {% hint style="info" %}
 For additional security, you should consider using the (s) option
 
-` Set configuration password` option. It will encrypt the `rclone.conf` configuration file. This way secrets like the [API Key](../../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) ([access token](../../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md)), the encryption passphrase, and the access grant won't be stolen if an attacker get access to your configuration file.
+&#x20;`Set configuration password` option. It will encrypt the `rclone.conf` configuration file. This way secrets like the [API Key](../../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) ([access token](../../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md)), the encryption passphrase, and the access grant won't be stolen if an attacker get access to your configuration file.
 {% endhint %}
 
 ## Create a Bucket

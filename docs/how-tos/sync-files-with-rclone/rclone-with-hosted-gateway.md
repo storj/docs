@@ -76,16 +76,18 @@ e/n/d/r/c/s/q>
 waterbear
 ```
 
-A long list of supported storage backends will prompt. `Select` 4 (4 / Amazon S3 Compliant Storage Provider)  and hit `Enter`.
+A long list of supported storage backends will prompt. `Select` 5 (5 / Amazon S3 Compliant Storage Provider)  and hit `Enter`.
 
 ```yaml
-4 / Amazon S3 Compliant Storage Provider
+ 5 / Amazon S3 Compliant Storage Providers including AWS, Alibaba, Ceph, Digital Ocean, Dreamhost, IBM COS, Lyve Cloud, Minio, RackCorp, SeaweedFS, and Tencent COS
+   \ (s3)
 ```
 
-A further list of S3 storage providers will prompt. `Select` 13 (13 / Any other S3 compatible provider) and hit `Enter`.
+A further list of S3 storage providers will prompt. `Select` 14 (14 / S3 Compatible Gateway) \ (Storj) and hit `Enter`.
 
 ```yaml
-13 (13 / Any other S3 compatible provider)
+14 / Storj (S3 Compatible Gateway)
+   \ (Storj)
 ```
 
 A choice will be given on how you will enter credentials. `Strike Enter` for the default choice of 1 (Enter AWS credentials in the next step).
@@ -117,7 +119,7 @@ Strike enter for default
 
 # Endpoint for S3 API
 # Enter the Storj DCS Gateway URL
-https://gateway.storj.io
+https://gateway.us1.storjshare.io
 Strike Enter
 
 # Location Constraint
@@ -186,7 +188,7 @@ provider = Other
 env_auth = false
 access_key_id = <AccessKey>
 secret_access_key = <SecretAccessKey>
-endpoint = https://gateway.storj.io
+endpoint = https://gateway.us1.storjshare.io
 chunk_size = 64M
 --------------------
 y) Yes this is OK (default)

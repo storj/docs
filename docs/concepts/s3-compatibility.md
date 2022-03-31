@@ -18,7 +18,7 @@ If you have an existing application that is using an S3-compatible object storag
 
 If you have an hybrid cloud architecture, are working with on-premise data, or have other needs to host your own S3-compatible object storage service you may want to use the self-hosted GatewayST. The two main design decisions you need to be aware of are that:
 
-1. &#x20;GatewayST uses [end-to-end encryption](encryption-key/design-decision-end-to-end-encryption.md).&#x20;
+1. GatewayST uses [end-to-end encryption](encryption-key/design-decision-end-to-end-encryption.md).&#x20;
 2. When you host your own Gateway, that gateway is handling the erasure coding and direct peer-to-peer transfer of data to storage nodes. You will need to account for the upstream bandwidth associated with the [expansion factor related to erasure coding](file-redundancy.md) the data and any associated overhead related to concurrent connections with storage nodes related to parallel transfers.
 
 You can learn about the supported commands and endpoints for S3 compatibility under the SDK & Reference section for the [S3 compatible gateway](../api-reference/s3-compatible-gateway/).&#x20;

@@ -43,4 +43,4 @@ The Satellite instance is made up of these components:
 
 
 
-![Satellite image used in Storj Branding](../.gitbook/assets/tar-ill-satellite.png)
+![Satellite image used in Storj Branding](<../.gitbook/assets/tar-ill-satellite (1).png>)

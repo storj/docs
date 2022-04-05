@@ -10,7 +10,7 @@ description: >-
 A download can become a chargeable event for 2 times the actual file size if the gateway is running on another cloud provider. We recommend interfacing with the network directly through the [Uplink Library](../uplink-cli/) or using our[ hosted Gateway MT](../../getting-started/gateway-mt/).
 {% endhint %}
 
-For a complete list of the supported architectures and API calls for the S3 Gateway, see [Concepts: S3 Compatibility](../../concepts/s3-compatibility.md).&#x20;
+For a complete list of the supported architectures and API calls for the S3 Gateway, see [Concepts: S3 Compatibility](../../concepts/s3-compatibility.md).
 
 ## Minimum Requirements
 
@@ -165,7 +165,7 @@ If you would like to choose your own access name, please be sure to only use low
 
 4\.  Enter the [API Key](../../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) you generated:
 
-![Didn't save your Access token? Simply create another one in the satellite web interface.](../../.gitbook/assets/enter\_APIkey.png)
+![Didn't save your Access token? Simply create another one in the satellite web interface.](<../../.gitbook/assets/image (1).png>)
 
 5\. Create and confirm an encryption passphrase, which is used to encrypt your files before they are uploaded:
 

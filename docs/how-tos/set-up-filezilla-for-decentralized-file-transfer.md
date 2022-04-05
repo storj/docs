@@ -76,7 +76,7 @@ Open the Site Manager by clicking on the leftmost icon.
 
 Select the 'New Site' option
 
-![](<../.gitbook/assets/image (115).png>)
+![](<../.gitbook/assets/image (116).png>)
 
 ### Configure the Satellite and Access Grant
 
@@ -90,7 +90,7 @@ Now enter the **Satellite** and **Access Grant** as shown below (Entering the po
    * europe-west-1.tardigrade.io (eu1.storj.io)
 2. For **Access Grant** please enter the Access Grant you saved above.
 
-![](<../.gitbook/assets/image (116).png>)
+![](<../.gitbook/assets/image (115).png>)
 
 After you enter the above information, hit the "Connect" button, and FileZilla will connect directly to the remote site.  You should see a screen showing your local site vs. Storj DCS, like so:
 
@@ -106,5 +106,5 @@ To upload a file to your local machine, simply drag it from the local to the rem
 
 To download a file to your local machine, simply drag it from the remote site to the local site, as shown below:
 
-![](<../.gitbook/assets/download (1).gif>)
+![](../.gitbook/assets/download.gif)
 

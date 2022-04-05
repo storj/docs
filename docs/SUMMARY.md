@@ -108,6 +108,7 @@
 * [How to Hod Rod File Transfer Performance on Storj DCS](how-tos/how-to-hod-rod-file-transfer-performance-on-storj-dcs.md)
 * [Backups with HashBackup](how-tos/backups-with-hashbackup.md)
 * [How to use Plex and Storj DCS as a private streaming service](how-tos/how-to-use-plex-and-storj-dcs-as-a-private-streaming-service.md)
+* [How to use Cyberduck and Storj DCS](how-tos/how-to-use-cyberduck-and-storj-dcs.md)
 
 ## Solution Architectures
 
@@ -173,7 +174,5 @@
 * [Data Retention Policy](billing-payment-and-accounts-1/data-retention-policy.md)
 
 ## Resources
-
-***
 
 * [Whitepaper](https://www.storj.io/storjv3.pdf)

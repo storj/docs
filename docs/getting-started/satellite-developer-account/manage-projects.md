@@ -37,7 +37,7 @@ To modify the existing Project on the _**Projects**_ screen you can select a nee
 
 If your account tier allows you to change [your Limits](../../concepts/limits.md), you will have more options than a [Free tier](../../billing-payment-and-accounts-1/pricing/free-tier.md).
 
-![](<../../.gitbook/assets/image (179).png>)
+![](<../../.gitbook/assets/image (179) (1).png>)
 
 Select **Edit** to the right of the limit to change it. However, it will not allow to increase limits greater than your available maximum. To change the maximum you need to [file a support request to change your limits](../../billing-payment-and-accounts-1/pricing/usage-limit-increases.md).
 

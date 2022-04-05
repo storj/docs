@@ -129,7 +129,7 @@ uplink mv sj://cakes/New-York/cheesecake.jpg sj://new-recipes/cakes/cheesecake.j
 
 Sample Output:
 
-![](<../../.gitbook/assets/image (129) (1) (1).png>)
+![](<../../.gitbook/assets/image (131) (1) (1).png>)
 
 ## Troubleshooting move errors
 

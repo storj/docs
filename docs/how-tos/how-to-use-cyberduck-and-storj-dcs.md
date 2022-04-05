@@ -6,7 +6,7 @@ description: For simple and open source file storage and management
 
 Cyberduck is a free open-source libre server - a small server system which enables you to run your own internet services independently - cloud storage browser for macOS, Windows and Linux that supports FTP and SFTP, WebDAV, and cloud storage such as **Storj DCS** and other cloud storage providers.
 
-Users can leverage the Cyberduck services via the user interface (GUI) or CLI, including file transfer by drag and drop and notifications via Growl. It is also able to open some files in external text editors.
+Users can leverage the Cyberduck services via the user interface (GUI) or CLI (for Linux), including file transfer by drag and drop and notifications via Growl. It is also able to open some files in external text editors.
 
 Users can choose **Storj DCS** to act as a decentralized cloud storage network target to send files to via the Cyberduck file manager interface, available via Storj's hosted multitenant gateway ([Gateway MT](https://docs.storj.io/dcs/getting-started/gateway-mt/)) that is backward compatible with S3. This means you’ll be able to integrate with the Storj network via HTTP, and you won’t have to run anything extra on your end.
 

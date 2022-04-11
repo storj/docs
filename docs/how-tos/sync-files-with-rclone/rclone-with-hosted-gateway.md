@@ -23,7 +23,7 @@ By selecting this integration pattern you are opting in to [server-side encrypti
 
 **Navigate to the Access** page within your project and then click on **Create Access Grant +**. A modal window will pop up and you can enter a name for this access grant.
 
-![](<../../.gitbook/assets/image (124).png>)
+![](<../../.gitbook/assets/image (124) (2).png>)
 
 ![](<../../.gitbook/assets/image (144) (1).png>)
 
@@ -39,7 +39,7 @@ By selecting this integration pattern you are opting in to [server-side encrypti
 
 ![](<../../.gitbook/assets/image (164) (1).png>)
 
-![](<../../.gitbook/assets/image (137) (1).png>)
+![](<../../.gitbook/assets/image (137) (1) (1).png>)
 
 **Copy your Access Key, Secret Key, and Endpoint** to a safe location.&#x20;
 

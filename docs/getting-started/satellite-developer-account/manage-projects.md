@@ -23,7 +23,7 @@ On _**Projects**_ screen to create a new Project select the **Create Project**. 
 The availability of this function depends on your account tier. Please check [limits.md](../../concepts/limits.md "mention") for details.
 {% endhint %}
 
-![](<../../.gitbook/assets/image (140) (1).png>)
+![](<../../.gitbook/assets/image (140) (1) (1).png>)
 
 Specify the **Project Name**, optional **Description** and confirm the creating with the **Create Project** button.
 

@@ -38,6 +38,6 @@ Provide an **Old Password**, your **New Password** and **Confirm Password**. Sel
 
 ### Two-Factor Authentication
 
-![](<../../.gitbook/assets/image (140).png>)
+![](<../../.gitbook/assets/image (140) (1).png>)
 
 After enabling of [_**Two-Factor Authentication**_](my-account.md#undefined) you will be asked for the one-time code from your favorite TOTP during the login next time.

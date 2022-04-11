@@ -100,6 +100,7 @@
   * [Rclone with Hosted Gateway](how-tos/sync-files-with-rclone/rclone-with-hosted-gateway.md)
 * [Backup With Restic](how-tos/backup-with-restic.md)
 * [FileZilla Native Integration](how-tos/set-up-filezilla-for-decentralized-file-transfer.md)
+* [Filezilla Pro Integration Guide](how-tos/filezilla-pro-integration-guide.md)
 * [Kubernetes Backup via Velero](how-tos/kubernetes-backup-via-velero.md)
 * [MongoDB Ops Manager Backup](how-tos/mongodb-ops-manager-backup.md)
 * [Store Tesla Sentry Mode & Dashcam videos on Storj DCS](how-tos/tesla-sentry-mode-teslausb.md)

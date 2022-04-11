@@ -77,7 +77,7 @@ Once the download is complete you'll be able to open the CyberDuck client. By se
 * **Access Key ID:**
 * **Secret Access Key:**
 
-![](<../.gitbook/assets/image (26).png>)
+![](<../.gitbook/assets/image (26) (1).png>)
 
 To configure **Storj DCS** as the decentralized cloud storage network target you’ll need to generate Storj credentials. [_Let’s take a look_](how-to-use-cyberduck-and-storj-dcs.md#generate-credentials-to-the-gateway-mt)_._
 
@@ -141,7 +141,7 @@ Whether using Windows or macOS, you’ll simply add the Storj Gateway S3 credent
 * Enter your S3 Gateway Credentials Access Key into the **Access Key ID** selection
 * Enter your S3 Gateway Credentials Secret Key into the **Secret Access Key** selection
 
-![](<../.gitbook/assets/image (26).png>)
+![](<../.gitbook/assets/image (26) (1).png>)
 
 **Click Connect**&#x20;
 

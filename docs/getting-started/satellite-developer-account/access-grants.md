@@ -10,7 +10,7 @@ The Access Grant screen allows you to create or delete Access Grants, and genera
 
 Let's start with creating an Access Grant. Click the **Create Access Grant** Button.
 
-![](<../../.gitbook/assets/image (137).png>)
+![](<../../.gitbook/assets/image (137) (1).png>)
 
 Give your Access Grant a name:
 
@@ -26,7 +26,7 @@ Next, enter an [Encryption Passphrase](../../concepts/access/encryption-and-keys
 Do not [lose your Encryption Passphrase](../../support/faqs.md#how-do-i-recover-from-having-lost-my-encryption-key-associated-with-an-access-grant). Storj DCS does not manage your encryption keys and if you lose your Encryption Passphrase and your Access Grant, you will not be able to decrypt your data.
 {% endhint %}
 
-![](<../../.gitbook/assets/image (143).png>)
+![](<../../.gitbook/assets/image (143) (1).png>)
 
 Copy or download your Access Grant. Do not lose it, you only have one opportunity to do so. If you did not save it, please delete this Access Grant and create a new one and save it on this time.
 

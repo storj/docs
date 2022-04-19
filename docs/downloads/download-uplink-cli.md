@@ -47,7 +47,7 @@ sudo install uplink /usr/local/bin/uplink
 #### Curl Download
 
 ```
-curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm.zip -o uplinkng_linux_arm.zip
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm.zip -o uplink_linux_arm.zip
 unzip -o uplink_linux_arm.zip
 sudo install uplink /usr/local/bin/uplink
 ```
@@ -61,7 +61,7 @@ sudo install uplink /usr/local/bin/uplink
 #### Curl Download
 
 ```
-curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm64.zip -o uplinkng_linux_arm64.zip
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm64.zip -o uplink_linux_arm64.zip
 unzip -o uplink_linux_arm64.zip
 sudo install uplink /usr/local/bin/uplink
 ```
@@ -75,7 +75,7 @@ sudo install uplink /usr/local/bin/uplink
 #### Curl Download
 
 ```
-curl -L https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip -o uplinkng_darwin_amd64.zip
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip -o uplink_darwin_amd64.zip
 unzip -o uplink_darwin_amd64.zip
 sudo install uplink /usr/local/bin/uplink
 ```

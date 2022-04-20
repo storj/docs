@@ -110,6 +110,7 @@
 * [Backups with HashBackup](how-tos/backups-with-hashbackup.md)
 * [How to use Plex and Storj DCS as a private streaming service](how-tos/how-to-use-plex-and-storj-dcs-as-a-private-streaming-service.md)
 * [How to use Cyberduck and Storj DCS](how-tos/how-to-use-cyberduck-and-storj-dcs.md)
+* [Storj IPFS Pinning Service (Beta)](how-tos/storj-ipfs-pinning-service-beta.md)
 
 ## Solution Architectures
 

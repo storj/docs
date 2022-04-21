@@ -1,8 +1,12 @@
 ---
-description: How to Integrate Filezilla Pro with Storj DCS
+description: >-
+  How to Integrate Filezilla Pro with Storj DCS to Easily Find, Transfer and
+  Download All Of Your Files
 ---
 
 # Filezilla Pro Integration Guide
+
+## How to Integrate Filezilla Pro with Storj DCS to Easily Find, Transfer and Download All Of Your Files
 
 At a quick glance, FileZilla provides a fast and reliable cross-platform (Windows, Linux and Mac OS X) FTP, FTPS and SFTP client that supports connections, file transfers and file structure browsing for many of today’s cloud data storage services, including Storj. This integration is beneficial for developers as it allows them to use the FileZilla Pro client to transfer files point-to-point using the decentralized cloud.
 

@@ -17,7 +17,7 @@ Conveniently, it is fairly simple to configure Storj DCS to work with Kerberos V
 Before starting the steps in this outline, ensure you have the following:
 
 * **A Storj account.** You can [create your Storj DCS account for free](../getting-started/satellite-developer-account/creating-your-account.md) at Storj.io/signup.\
-  ![](<../.gitbook/assets/Kerberos doc graphic 3.gif>)
+  <img src="../.gitbook/assets/Kerberos doc graphic 3.gif" alt="" data-size="original">
 * **A Kubernetes cluster.** Kerberos.io is best deployed as a container in Kubernetes. You can create a Kubernetes cluster locally or on any service provider that offers Kubernetes such as Google Cloud's GKE or Amazon EKS.
 * **Kerberos Vault installed in your Kubernetes cluster.** Kerberos.io provides documentation on [how to install Kerberos Vault in Kubernetes](https://doc.kerberos.io/vault/installation/), both for public and private cloud options.
 

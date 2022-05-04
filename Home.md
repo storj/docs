@@ -1,17 +1,18 @@
-# Using the Storj network
+# Storj Contribution Documentation
 
-> Tutorials and documentation for the Storj V3 Network
-
-![logo](assets/logo.png)
-
-This repository holds some basic tutorials for working with the Storj V3 architecture.  Check out:
-
-- [Use the Storj Uplink CLI tool to manipulate files from the command line](Uplink-CLI)
-- [Integrate the Gateway to mimic AWS S3 filestores](S3-Gateway)
-- [Learn the Libuplink Go library to programmatically interface with the network](Libuplink-Walkthrough)
+If you are looking how to use Storj network, then please see:
+- [Documentation on how to use Storj](https://docs.storj.io/dcs/)
 
 If you are interested in setting up your own Storage Node, and monetizing your underutilized resources, check out:
-- [Storage Node Setup Instructions](https://storj-labs.gitbook.io/docs/)
+- [Storage Node Operator documentation](https://docs.storj.io/node/)
+
+## Few general purpose walkthroughs
+
+This repository holds some basic tutorials for working with the Storj.
+
+- [Use the Storj Uplink CLI tool to manipulate files from the command line](Uplink-CLI)
+- [Learn storj.io/uplink Go library to programmatically interface with the network](Libuplink-Walkthrough)
+- [Integrate the Gateway to mimic AWS S3 filestores](S3-Gateway)
 
 Finally, if you'd like to spin up a local instance of the V3 Network components (Uplink, Satellite, Storage Nodes) for testing, see:
 - [Learn how to run the storj-sim test network](Test-network)
@@ -28,7 +29,3 @@ Please make sure to check out our information on:
 
 * [Code Style](code/Style.md)
 * [Testing](code/Testing.md)
-
-## License
-
-Apache 2.0 Copyright © 2018 Storj Labs, Inc.

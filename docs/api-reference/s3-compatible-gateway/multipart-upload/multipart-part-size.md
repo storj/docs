@@ -29,6 +29,6 @@ All of these parts are broken into one or more Segments by the Storj DCS Gateway
 If you are using the Amazon AWS CLI, you can configure it to use a larger part threshold as follows:
 
 ```
-aws configure set default.s3.multipart_threshold 64MB
+aws configure set default.s3.multipart_chunksize 64MB
 ```
 

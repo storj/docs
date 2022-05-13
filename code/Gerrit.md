@@ -132,7 +132,7 @@ Now, the commit history of the `main` branch looks like this:
 
 ## Advantages (and disadvantages) of Gerrit <a name="advantages"></a>
 
-Gerrit essentially requires that the commit you are submitting to the `main` branch is _exactly_ the commit being submitted to the `main` branch. Github only requires that the files changed are approved. This means that any change that is submitted to the `main` branch via Gerrit must have a commit history that looks exactly like:
+Gerrit essentially requires that the commit you are submitting for review is _exactly_ the commit being submitted to the `main` branch, including the commit message and parent commit. By contrast, Github only requires that the files changed are approved. This means that any change that is submitted to the `main` branch via Gerrit must have a commit history that looks exactly like:
 
 * The commit for the change
 * The latest commit in the `main` branch
@@ -166,7 +166,7 @@ In Gerrit, you can have one branch with two commits:
 
 Now, when you push to Gerrit, a separate review will be created for A and B, and each review only contains the changes for a single commit. However, the B commit will still not be submittable until the A commit is submittable (or has already been submitted).
 
-One of the most common issues people have with Gerrit is around getting used to an unfamiliar git workflow. Once you get some practice with it, you will be able to decide whether or not you prefer it. The advantage of the different git workflow is that it requires you to be very mindful of your git history, and organize your code into sensible commits. The disadvantage of the different git workflow is that it requires you to be very mindful of your git history, and organize your code into sensible commits. 
+One of the most common issues people have with Gerrit is getting used to an unfamiliar git workflow. Once you get some practice with it, you will be able to decide whether or not you prefer it. The advantage of the different git workflow is that it requires you to be very mindful of your git history, and organize your code into sensible commits. The disadvantage of the different git workflow is that it requires you to be very mindful of your git history, and organize your code into sensible commits. 
 
 ## Common git+gerrit issues and how to fix them <a name="common-issues"></a>
 
@@ -253,7 +253,8 @@ In this example, we are setting up Gerrit the main repository, https://github.co
 
 Before requesting Gerrit access in Slack, you will need to log in at https://review.dev.storj.io/ with your Github account. Once you have done this, share your Github email and username, and ask for review and submit permissions in the #gerrit Slack channel. When you have permissions, you can verify that you have submit access by going to any open changeset, and checking for a "CODE-REVIEW+2" button in the top right. If you don't see this, you still need to be added to the Reviewers group. 
 
-Next, set up your SSH key in Gerrit by going to your settings: https://review.dev.storj.io/settings/#SSHKeys. If you have already set up SSH with Github, this should be easy. Otherwise, see Github's docs for [][generating a new SSH key]()(https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+Next, set up your SSH key in Gerrit by going to your settings: https://review.dev.storj.io/settings/#SSHKeys. If you have already set up SSH with Github, this should be easy. Otherwise, see Github's docs for
+
 * [checking for existing ssh keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)
 * [generating a new ssh key (if no existing ones)](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 * [adding an ssh key to your account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) - the only difference here is that you are adding the ssh key in your Gerrit settings rather than your Github settings.

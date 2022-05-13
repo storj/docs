@@ -257,7 +257,19 @@ Next, set up your SSH key in Gerrit by going to your settings: https://review.de
 * [generating a new ssh key (if no existing ones)](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 * [adding an ssh key to your account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) - the only difference here is that you are adding the ssh key in your Gerrit settings rather than your Github settings.
 
-### Setting up your storj/storj clone to work with Gerrit
+### Setting up an existing storj/storj clone to work with Gerrit
+
+#### Automatic setup
+
+Run
+
+```
+curl -L [storj.io/clone](http://storj.io/clone) | sh
+```
+
+from inside your local storj/storj repository.
+
+#### Manual setup
 
 Run the following command in order to add a hook which executes whenever a commit message is written:
 
@@ -272,6 +284,8 @@ Now, add the `gerrit` remote path, allowing you to push to gerrit:
 ```
 git remote add gerrit ssh://<yourusername>@review.dev.storj.io:29418/storj/storj
 ```
+
+#### Next steps
 
 You should be all set now! When you have a commit to push for review, use one of the following commands (remember to `git pull --rebase origin main`, or the change may not be pushed successfully:
 

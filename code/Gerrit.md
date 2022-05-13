@@ -18,7 +18,7 @@ Many developers at the company use a tool called Gerrit (https://review.dev.stor
 
 The core difference between code reviews on Gerrit and Github is that Gerrit is "commit-based" while Github is "branch-based". Here is a short example of what that looks like in practice:
 
-### Github <a name="gh-example"></a>
+### Github workflow example <a name="gh-example"></a>
 
 You are making a bugfix. You checkout the `main` branch of `storj/storj` on your local machine. You run `git switch -c my-bug-fix` to switch to a new branch called `my-bug-fix`.
 
@@ -74,7 +74,7 @@ Now, the commit history of the `main` branch looks like this:
 * the previous commit on the `main` branch
 * ...
 
-### Gerrit <a name="gerrit-example"></a>
+### Gerrit workflow example <a name="gerrit-example"></a>
 
 You are making a bugfix. You checkout the `main` branch of `storj/storj` on your local machine. You run `git switch -c my-bug-fix` to switch to a new branch called `my-bug-fix`.
 
@@ -136,11 +136,11 @@ Gerrit essentially requires that the commit you are submitting to the `main` bra
 
 Which is conveniently exactly what the `main`branch will look like after the new change is submitted.
 
-One of the things this gives us is the ability to review commit messages in Gerrit, which is important since we have some [important things to keep in mind](./Git.md) regarding commit messages, and it is easy to make a mistake when merging a Github pull request.
+One of the things this gives us is the ability to review commit messages in Gerrit, which is important since we have some [things to keep in mind](./Git.md) regarding commit messages, and it is easy to make a mistake when merging a Github pull request.
 
 Another advantage of this is it means that you can track multiple reviews on the same branch using Gerrit, which is not possible in Github.
 
-In Github, if you want to make to get concurrent reviews on two changes, A and B, where B is dependent on A, then you will need to make two branches:
+In Github, if you want to get concurrent reviews on two changes, A and B, where B is dependent on A, then you will need to make two branches:
 
 `branch-a`
 
@@ -168,8 +168,6 @@ One of the most common issues people have with Gerrit is around getting used to 
 ## Common git+gerrit issues and how to fix them <a name="common-issues"></a>
 
 ### Errors trying to push to Gerrit <a name="error-pushing"></a>
-
-(TODO specific error messages)
 
 If you get an error submitting a change to Gerrit, the first thing you should check is that you have pulled the latest commits from the `main` branch:
 
@@ -271,7 +269,7 @@ from inside your local storj/storj repository.
 
 #### Manual setup
 
-Run the following command in order to add a hook which executes whenever a commit message is written:
+Run the following command from your local storj/storj repository in order to add a hook which executes whenever a commit message is written:
 
 ```
 scp -p -P 29418 <yourusername>@review.dev.storj.io:hooks/commit-msg ".git/hooks/"

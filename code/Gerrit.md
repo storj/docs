@@ -13,6 +13,9 @@ Many developers at the company use a tool called Gerrit (https://review.dev.stor
     2. [Dealing with merge conflicts](#merge-conflicts)
     3. [Updating a multi-commit change](#multi-commit)
 4. [Setting up Gerrit for the first time](#first-time)
+    1. [Automatic setup](#automatic-setup)
+    2. [Manual setup](#manual-setup)
+    3. [Next steps](#next-steps)
 
 ## Differences between Gerrit Changesets and Github PRs <a name="differences"></a>
 
@@ -257,7 +260,7 @@ Next, set up your SSH key in Gerrit by going to your settings: https://review.de
 
 ### Setting up an existing storj/storj clone to work with Gerrit
 
-#### Automatic setup
+#### Automatic setup <a name="automatic-setup"></a>
 
 Run
 
@@ -267,7 +270,7 @@ curl -L [storj.io/clone](http://storj.io/clone) | sh
 
 from inside your local storj/storj repository.
 
-#### Manual setup
+#### Manual setup <a name="manual-setup"></a>
 
 Run the following command from your local storj/storj repository in order to add a hook which executes whenever a commit message is written:
 
@@ -283,7 +286,7 @@ Now, add the `gerrit` remote path, allowing you to push to gerrit:
 git remote add gerrit ssh://<yourusername>@review.dev.storj.io:29418/storj/storj
 ```
 
-#### Next steps
+#### Next steps <a name="next-steps"></a>
 
 You should be all set now! When you have a commit to push for review, use one of the following commands (remember to `git pull --rebase origin main`, or the change may not be pushed successfully:
 

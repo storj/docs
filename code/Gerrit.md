@@ -2,26 +2,11 @@
 
 Many developers at the company use a tool called Gerrit (https://review.dev.storj.io/) to submit code and get reviews. There are some key differences between using Github PRs and Gerrit changesets. This document is intended to highlight some of these differences and debug common issues that may arise. It is also a quick source for getting set up with Gerrit for the first time.
 
-## Table of Contents
-
-1. [Differences between Gerrit Changesets and Github PRs](#differences)
-    1. [Github workflow example](#gh-example)
-    2. [Gerrit workflow example](#gerrit-example)
-2. [Advantages (and disadvantages) of Gerrit](#advantages)
-3. [Common git+gerrit issues and how to fix them](#common-issues)
-    1. [Errors trying to push to Gerrit](#error-pushing)
-    2. [Dealing with merge conflicts](#merge-conflicts)
-    3. [Updating a multi-commit change](#multi-commit)
-4. [Setting up Gerrit for the first time](#first-time)
-    1. [Automatic setup](#automatic-setup)
-    2. [Manual setup](#manual-setup)
-    3. [Next steps](#next-steps)
-
-## Differences between Gerrit Changesets and Github PRs <a name="differences"></a>
+## Differences between Gerrit Changesets and Github PRs
 
 The core difference between code reviews on Gerrit and Github is that Gerrit is "commit-based" while Github is "branch-based". Here is a short example of what that looks like in practice:
 
-### Github workflow example <a name="gh-example"></a>
+### Github workflow example
 
 You are making a bugfix. You checkout the `main` branch of `storj/storj` on your local machine. You run `git switch -c my-bug-fix` to switch to a new branch called `my-bug-fix`.
 
@@ -77,7 +62,7 @@ Now, the commit history of the `main` branch looks like this:
 * the previous commit on the `main` branch
 * ...
 
-### Gerrit workflow example <a name="gerrit-example"></a>
+### Gerrit workflow example
 
 You are making a bugfix. You checkout the `main` branch of `storj/storj` on your local machine. You run `git switch -c my-bug-fix` to switch to a new branch called `my-bug-fix`.
 
@@ -130,7 +115,7 @@ Now, the commit history of the `main` branch looks like this:
 * the previous commit on the `main` branch
 * ...
 
-## Advantages (and disadvantages) of Gerrit <a name="advantages"></a>
+## Advantages (and disadvantages) of Gerrit
 
 Gerrit essentially requires that the commit you are submitting for review is _exactly_ the commit being submitted to the `main` branch, including the commit message and parent commit. By contrast, Github only requires that the files changed are approved. This means that any change that is submitted to the `main` branch via Gerrit must have a commit history that looks exactly like:
 
@@ -168,9 +153,9 @@ Now, when you push to Gerrit, a separate review will be created for A and B, and
 
 One of the most common issues people have with Gerrit is getting used to an unfamiliar git workflow. Once you get some practice with it, you will be able to decide whether or not you prefer it. The advantage of the different git workflow is that it requires you to be very mindful of your git history, and organize your code into sensible commits. The disadvantage of the different git workflow is that it requires you to be very mindful of your git history, and organize your code into sensible commits. 
 
-## Common git+gerrit issues and how to fix them <a name="common-issues"></a>
+## Common git+gerrit issues and how to fix them
 
-### Errors trying to push to Gerrit <a name="error-pushing"></a>
+### Errors trying to push to Gerrit
 
 If you get an error submitting a change to Gerrit, the first thing you should check is that you have pulled the latest commits from the `main` branch:
 
@@ -186,7 +171,7 @@ git commit --amend --no-edit
 git push gerrit HEAD:refs/for/main
 ```
 
-### Dealing with merge conflicts <a name="merge-conflicts"></a>
+### Dealing with merge conflicts
 
 Sometimes, when you do `git pull --rebase origin main`, you will see a message about conflicting files that you will need to resolve. Getting specific about how to fix conflicts in git is out of the scope of this document, but one important thing to keep in mind is that pulling `main` with `--rebase` basically temporarily removes your commits, puts all the new commits from the `main` branch in your git history, then puts your commits back on top. This way, your commits _always_ remain as the latest commits in the git history. 
 
@@ -210,7 +195,7 @@ conflicting changes from main
 >>>>>>>
 ```
 
-### Updating a multi-commit change <a name="multi-commit"></a>
+### Updating a multi-commit change
 
 Let's say you are working on a big change that requires three separate commits: A, B, and C. Your local branch might look like this:
 
@@ -245,7 +230,7 @@ git rebase --continue
 
 Now, your commit history looks the same as before, and you can push to Gerrit, and the correct reviews will all be updated.
 
-## Setting up Gerrit for the first time <a name="first-time"></a>
+## Setting up Gerrit for the first time
 
 In this example, we are setting up Gerrit the main repository, https://github.com/storj/storj/. The steps should be almost identical for other repositories.
 
@@ -261,7 +246,7 @@ Next, set up your SSH key in Gerrit by going to your settings: https://review.de
 
 ### Setting up an existing storj/storj clone to work with Gerrit
 
-#### Automatic setup <a name="automatic-setup"></a>
+#### Automatic setup
 
 Run
 
@@ -271,7 +256,7 @@ curl -L [storj.io/clone](http://storj.io/clone) | sh
 
 from inside your local storj/storj repository.
 
-#### Manual setup <a name="manual-setup"></a>
+#### Manual setup
 
 Run the following command from your local storj/storj repository in order to add a hook which executes whenever a commit message is written:
 
@@ -287,7 +272,7 @@ Now, add the `gerrit` remote path, allowing you to push to gerrit:
 git remote add gerrit ssh://<yourusername>@review.dev.storj.io:29418/storj/storj
 ```
 
-#### Next steps <a name="next-steps"></a>
+#### Next steps
 
 You should be all set now! When you have a commit to push for review, use one of the following commands (remember to `git pull --rebase origin main`, or the change may not be pushed successfully:
 

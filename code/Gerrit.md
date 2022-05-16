@@ -151,7 +151,7 @@ In Gerrit, you can have one branch with two commits:
 
 Now, when you push to Gerrit, a separate review will be created for A and B, and each review only contains the changes for a single commit. However, the B commit will still not be submittable until the A commit is submittable (or has already been submitted).
 
-One of the most common issues people have with Gerrit is getting used to an unfamiliar git workflow. Once you get some practice with it, you will be able to decide whether or not you prefer it. The advantage of the different git workflow is that it requires you to be very mindful of your git history, and organize your code into sensible commits. The disadvantage of the different git workflow is that it requires you to be very mindful of your git history, and organize your code into sensible commits. 
+One of the most common issues people have with Gerrit is getting used to an unfamiliar git workflow. Once you get some practice with it, you will be able to decide whether or not you prefer it. This git workflow requires you to be very mindful of your git history and organize your code into sensible commits, which is at the same time its main advantage and disadvantage.
 
 ## Common git+gerrit issues and how to fix them
 

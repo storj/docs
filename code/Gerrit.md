@@ -279,7 +279,7 @@ You should be all set now! When you have a commit to push for review, use one of
 * `git push gerrit HEAD:refs/for/main`
 * `git push gerrit HEAD:refs/for/main%wip` - if you do this, the changeset will be created in gerrit, but it will not trigger a build until you take it out of "wip"
 * `git push gerrit HEAD:refs/for/main%ready` - this will unmark a change as "wip" and begin the build and review
-* `git push gerrit HEAD:refs/for/main%private` - this will mark the change as "private", and only the reviewers of the change can view it
+* `git push gerrit HEAD:refs/for/main%private` - this will mark the change as "private", and only the reviewers of the change can view it. ALWAYS use this to submit security patches of private security bugs
 * `git push gerrit HEAD:refs/for/main%remove-private` - this will unmark a change as "private"
 
 You can use the same command to update an existing changeset. As long as the `Change-Id` in the commit message is the same, the corresponding review in Gerrit will be updated.

@@ -54,7 +54,7 @@ Now your commit history looks like this:
 * the latest commit from your local `main` branch
 * ...
 
-Build passes, and with your two approvals, you are now able to "squash and merge" into `main`. You do so, and make sure to update the commit message before merging to "file.go: fixed a bug". See [code/Git.md](./Git.md) for information about how your commit messages should look.
+Build passes, and with your two approvals, you are now able to "squash and merge" into `main`. You do so, and make sure to update the commit message before merging to "file.go: fixed a bug". See the [Git page](./Git) for information about how your commit messages should look.
 
 Now, the commit history of the `main` branch looks like this:
 
@@ -124,7 +124,7 @@ Gerrit essentially requires that the commit you are submitting for review is _ex
 
 Which is conveniently exactly what the `main`branch will look like after the new change is submitted.
 
-One of the things this gives us is the ability to review commit messages in Gerrit, which is important since we have some [things to keep in mind](./Git.md) regarding commit messages, and it is easy to make a mistake when merging a Github pull request.
+One of the things this gives us is the ability to review commit messages in Gerrit, which is important since we have some [things to keep in mind](./Git) regarding commit messages, and it is easy to make a mistake when merging a Github pull request.
 
 Another advantage of this is it means that you can track multiple reviews on the same branch using Gerrit, which is not possible in Github.
 
@@ -151,7 +151,7 @@ In Gerrit, you can have one branch with two commits:
 
 Now, when you push to Gerrit, a separate review will be created for A and B, and each review only contains the changes for a single commit. However, the B commit will still not be submittable until the A commit is submittable (or has already been submitted).
 
-One of the most common issues people have with Gerrit is getting used to an unfamiliar git workflow. Once you get some practice with it, you will be able to decide whether or not you prefer it. The advantage of the different git workflow is that it requires you to be very mindful of your git history, and organize your code into sensible commits. The disadvantage of the different git workflow is that it requires you to be very mindful of your git history, and organize your code into sensible commits. 
+One of the most common issues people have with Gerrit is getting used to an unfamiliar git workflow. Once you get some practice with it, you will be able to decide whether or not you prefer it. This git workflow requires you to be very mindful of your git history and organize your code into sensible commits, which is at the same time its main advantage and disadvantage.
 
 ## Common git+gerrit issues and how to fix them
 
@@ -207,7 +207,7 @@ Let's say you are working on a big change that requires three separate commits: 
 
 Now, someone reviews your B change, and asks you to update it. How do you do this? `git commit --amend` will update the latest commit, "C commit", but you need to keep your changes for B and C separate.
 
-There are many ways to approach this problem, but one way is to do an interactive git rebase. This will look like:
+There are many ways to approach this problem, but one way is to do an [interactive git rebase](https://git-scm.com/docs/git-rebase#_interactive_mode). This will look like:
 
 ```
 git rebase -i HEAD~2
@@ -278,5 +278,8 @@ You should be all set now! When you have a commit to push for review, use one of
 
 * `git push gerrit HEAD:refs/for/main`
 * `git push gerrit HEAD:refs/for/main%wip` - if you do this, the changeset will be created in gerrit, but it will not trigger a build until you take it out of "wip"
+* `git push gerrit HEAD:refs/for/main%ready` - this will unmark a change as "wip" and begin the build and review
+* `git push gerrit HEAD:refs/for/main%private` - this will mark the change as "private", and only the reviewers of the change can view it. ALWAYS use this to submit security patches of private security bugs
+* `git push gerrit HEAD:refs/for/main%remove-private` - this will unmark a change as "private"
 
 You can use the same command to update an existing changeset. As long as the `Change-Id` in the commit message is the same, the corresponding review in Gerrit will be updated.

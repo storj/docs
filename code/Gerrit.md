@@ -251,7 +251,7 @@ Next, set up your SSH key in Gerrit by going to your settings: https://review.de
 Run
 
 ```
-curl -L [storj.io/clone](http://storj.io/clone) | sh
+curl -sSL storj.io/clone | sh
 ```
 
 from inside your local storj/storj repository.

@@ -19,7 +19,7 @@ Download the correct binary for your operating system:
 Setup your uplink by running the following command and following the wizard:
 
 ```bash
-./uplink_darwin_amd64 setup
+./uplink setup
 ```
 
 You will be prompted for:
@@ -35,15 +35,15 @@ You are now ready to interact with your objects on the Storj DCS Network!
 
 The `uplink` command has a number of operations that can be performed, such as:
 
- * `cat` - output an object to standard out
  * `cp` - copy an object from outside of Storj DCS to inside or vice versa or between Storj DCS buckets/prefixes
  * `ls` - list buckets or objects on your Storj DCS project
  * `mb` - make a new bucket
  * `mv` - move an object from one Storj DCS bucket to other (or rename an object)
- * `put` - writes data from standard in to an object on your Storj DCS project
  * `rb` - remove a bucket
  * `rm` - remove an object
- * `share` - share an object
+ * `meta`   - object metadata related commands
+ * `share`  - share an object
+ * `access` - access related commands
 
 More information for each command is provided in the command's `--help`
 documentation, but some example commands are listed below:
@@ -51,31 +51,31 @@ documentation, but some example commands are listed below:
 #### Make a bucket
 
 ```bash
-./uplink_darwin_amd64 mb sj://bucket-name
+./uplink mb sj://bucket-name
 ```
 
 #### Upload a file
 
 ```bash
-./uplink_darwin_amd64 cp ~/Desktop/your-large-file.mp4 sj://bucket-name
+./uplink cp ~/Desktop/your-large-file.mp4 sj://bucket-name
 ```
 
 #### List files in a bucket
 
 ```bash
-./uplink_darwin_amd64 ls sj://bucket-name/
+./uplink ls sj://bucket-name/
 ```
 
 #### Download a file
 
 ```bash
-./uplink_darwin_amd64 cp sj://bucket-name/your-large-file.mp4 ~/Desktop/your-large-file.mp4
+./uplink cp sj://bucket-name/your-large-file.mp4 ~/Desktop/your-large-file.mp4
 ```
 
 #### Delete a file
 
 ```bash
-./uplink_darwin_amd64 rm sj://bucket-name/your-large-file.mp4
+./uplink rm sj://bucket-name/your-large-file.mp4
 ```
 
 ## Conclusion

@@ -1,6 +1,6 @@
 # Uplink CLI tutorial
 
-**Please check out our most up-to-date Storj DCS Uplink CLI documentation [here](https://docs.storj.io/api-reference/uplink-cli).**
+**Please check out our most up-to-date Storj DCS Uplink CLI documentation [here](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/prerequisites).**
 
 The Uplink CLI is our client-side application that supports interacting with
 the Storj DCS network. This tutorial assumes you have an account on a running

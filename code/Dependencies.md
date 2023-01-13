@@ -10,7 +10,7 @@ To add a new dependency evaluate the following things:
 
 * Check whether licenses are compatible with our project. No GPL, LGPL. `storj/uplink` shouldn't have a dependency on Apache v2, because it should be GPL compatible. Try to stick to BSD/MIT.
     * libuplink, uplinkcli, gateway-st, or anything they use must be compatible with GPL2.0. This includes BSD/MIT/ISC, but _not_ Apache 2.0. For optional things, Apache 2.0 is okay, but we need a build step to remove the Apache 2.0 dependency for GPL2.0 compatible builds.
-    * satellite, gateway-mt, and authservice are licensed as AGPLv3, and their dependencies should be licensed as BSD/MIT/ISC/Apache2.0. Their dependencies should _not_ be licensed under GPL, because we may relicense satellite, gateway-mt, and authservice to customers (which our CLA for these service permits).
+    * satellite, gateway-mt, and authservice are licensed as AGPLv3, and their dependencies should be licensed as BSD/MIT/ISC/Apache2.0. Their dependencies should _not_ be licensed under GPL, because we may relicense satellite, gateway-mt, and authservice to customers (which our CLA for these services permits).
     * TLDR: BSD/MIT/ISC is always acceptable. Apache 2.0 is best for our AGPLv3-licensed services, but try to avoid it otherwise.
 
 * See whether it easily compiles on all platforms.

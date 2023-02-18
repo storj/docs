@@ -12,12 +12,12 @@ all of the components are run locally.
 
 You need to install:
 
-1. Go 1.16
+1. Go 1.18
 2. C tooling
 3. Postgres
 4. Redis
 
-Go 1.16 can be installed by following instructions at [golang.org](https://www.golang.org/).
+Go 1.18 can be installed by following instructions at [golang.org](https://www.golang.org/).
 
 Installing C tooling:
 

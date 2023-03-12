@@ -27,5 +27,5 @@ Want to talk about how to make these methods work further? Need more help, or wo
 
 Please make sure to check out our information on:
 
-* [Code Style](code/Style.md)
-* [Testing](code/Testing.md)
+* [Code Style](code/Style)
+* [Testing](code/Testing)

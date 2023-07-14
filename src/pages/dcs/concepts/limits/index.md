@@ -10,7 +10,7 @@ Usage Limits allow us to ensure a consistent level of service for all customers.
 
 ## PRO Account (Paid Tier)
 
-### Credit Card Payment method
+## Credit Card Payment method
 
 Adding a credit card as payment method will result in your per project limits being automatically raised to Pro Account limits:
 

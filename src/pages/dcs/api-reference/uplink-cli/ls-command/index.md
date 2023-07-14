@@ -43,7 +43,7 @@ uplink ls [sj://BUCKET[/PREFIX]] [flags]
 
 *We assume the  object has been uploaded using a different encryption key than the other objects in the project.*
 
-### List buckets
+## List buckets
 
 :::codeblocktabs
 ```windows

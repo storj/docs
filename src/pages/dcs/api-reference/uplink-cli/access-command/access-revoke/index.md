@@ -29,7 +29,7 @@ uplink access [flags] <revokee>
 | :---------- | :----------------------------- |
 | `<revokee>` | Access name or value to revoke |
 
-### Flags
+## Flags
 
 | Flag              | Description                                |
 | :---------------- | :----------------------------------------- |

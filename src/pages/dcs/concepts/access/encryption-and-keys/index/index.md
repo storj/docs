@@ -22,7 +22,7 @@ The primary difference is that while a Satellite could generate restricted Acces
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/eXpi7oY6H_4SzeyEgMx3T_image.png)
 
-### Supported Protocols
+## Supported Protocols
 
 Out-of-the-box, the Uplink Client supports the AES-256-GCM encryption standard.
 

@@ -8,7 +8,7 @@ docId: bjm8eBFwzz3EVxWG1Rk4i
 
 Users may change payment methods on accounts, but at least one valid payment method must be configured on an account at all times. &#x20;
 
-### Changing Credit Cards
+## Changing Credit Cards
 
 If you want to change the credit card on an account, follow the process outlined above to add a second card under Payment Methods, Add Card.
 

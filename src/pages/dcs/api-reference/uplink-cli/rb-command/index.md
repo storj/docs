@@ -34,7 +34,7 @@ uplink rb sj://BUCKET [flags]
 
 ## Examples
 
-### Delete empty bucket
+## Delete empty bucket
 
 :::codeblocktabs
 ```windows

@@ -10,7 +10,7 @@ docId: DLqUc01i7ME12RYPnpb6e
 
 Contact Hammerspace for a [demo](https://hammerspace.com/hammerspace-software/).
 
-### Advantages of Hammerspace with Storj 
+## Advantages of Hammerspace with Storj 
 
 *   **Universal data access layer**: read and write to data from anywhere in the world.&#x20;
 
@@ -24,7 +24,7 @@ Contact Hammerspace for a [demo](https://hammerspace.com/hammerspace-software/).
 
 To integrate Storj with Hammerspace, you will need to create S3 credentials in Storj and add them within Hammerspace. Veeam uses a wizard to guide users in adding S3-compatible cloud storage.
 
-### Requirements
+## Requirements
 
 *   An active Storj account
 

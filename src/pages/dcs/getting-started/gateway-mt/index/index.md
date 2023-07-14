@@ -20,7 +20,7 @@ Using Gateway MT with AWS CLI is a 2-step process:
 
 2.  [](docId\:AsyYcUJFbO1JI8-Tu8tW3)
 
-### Generate Credentials to the Gateway MT
+## Generate Credentials to the Gateway MT
 
 **Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 

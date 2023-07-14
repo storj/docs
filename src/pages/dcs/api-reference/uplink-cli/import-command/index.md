@@ -33,7 +33,7 @@ uplink import [flags] NAME (ACCESS | FILE)
 
 ## Examples
 
-### Import access grant from a file
+## Import access grant from a file
 
 :::codeblocktabs
 ```windows

@@ -18,7 +18,7 @@ See [https://github.com/s3fs-fuse/s3fs-fuse](https://github.com/s3fs-fuse/s3fs-f
 
 You can use either [](docId\:EGM8O-1xt2Az03eBWT8Rf) or [](docId\:yYCzPT8HHcbEZZMvfoCFa). You only need S3 compatible credentials and endpoint.
 
-### Create the credentials file
+## Create the credentials file
 
 Please substitute your own **Access Key ID** instead of `ACCESS_KEY_ID` and your own **Secret Access Key** instead of `SECRET_ACCESS_KEY` in the example below:
 

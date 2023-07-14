@@ -42,7 +42,7 @@ Read more about the [](docId\:nGzxQBhV8nx5Pukj6O0zT)
 
 A project is a basic unit for aggregating usage, calculating billing, invoicing fees,  collecting payment, and handling access management. Users can create multiple projects and projects are invoiced separately. Within a project, usage is tracked at the Bucket level and aggregated for invoicing to the Project. Project names are not client-side encrypted, so they may be rendered in the Satellite user interface. There are two main drivers for creating multiple Projects: access management and billing.
 
-### Access Management
+## Access Management
 
 For access management, Access Grants are instantiated at the project level. A primary Access Grant created in the Satellite admin console can perform any action on any bucket in a project, but Access Grants do not work across projects. If you are a managed service provider or have multiple applications where there must be no commonality between applications for access management (no single Access Grant can be used to manage data across applications) then you should create a separate project per application or customer.
 

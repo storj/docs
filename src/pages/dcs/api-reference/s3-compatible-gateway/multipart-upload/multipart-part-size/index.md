@@ -14,7 +14,7 @@ For best performance and cost with Storj DCS, you should plan to configure your 
 We recommend 64MB.
 :::
 
-### Background
+## Background
 
 When an object is uploaded using Multipart Upload, a file is first broken into parts, each part of a Multipart Upload is also stored as one or more Segments. With Multipart Upload, a single object is uploaded as a set of parts.&#x20;
 

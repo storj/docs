@@ -39,7 +39,7 @@ For more details see <https://www.acronis.com/en-us/products/>
 
 ***
 
-### Create a Storj Account
+## Create a Storj Account
 
 To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
 

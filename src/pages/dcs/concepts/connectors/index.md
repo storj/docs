@@ -12,7 +12,7 @@ An overview of Storj DCS Connectors
 
 Connectors bridge the gap between the applications we use every day and the underlying storage infrastructure on which application data is stored. Our team has worked with our partners to build a series of connectors between Storj DCS, our decentralized cloud storage service, and our partners’ applications.&#x20;
 
-### What is a Storj DCS Connector
+## What is a Storj DCS Connector
 
 A Storj DCS connector is an application-level integration that enables the use of decentralized cloud storage in consumer software. Storj DCS connectors enable Satellites to measure the volume of data associated with a bucket and give attribution to them.&#x20;
 

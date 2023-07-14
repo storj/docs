@@ -81,7 +81,7 @@ A user uploads 1,600,000 one MB files, a total of 1.6TB. Half way through the mo
 
 Note that the number of segments  for 100TB of 1GB files and 1.6TB of 1MB files is the same.&#x20;
 
-### Multipart Upload Impact on Segments
+## Multipart Upload Impact on Segments
 
 When an object is uploaded using Multipart Upload, a file is first broken into parts, each part of a Multipart Upload is also stored as one or more Segments. With Multipart Upload, a single object is uploaded as a set of parts. Each part is an integral portion of the data comprising the object. The object parts may be uploaded independently, in parallel, and in any order. Uploads may be paused and resumed by uploading an initial set of parts, then resuming and uploading the remaining parts. If the upload of any part fails, that part may be re-uploaded without impacting the upload of other parts. All of these parts are broken into one or more Segments by the Storj DCS Gateway based on whether the Part Size is smaller or larger than the default Segment size. While Multipart Upload is most appropriate for files larger than the 64MB default Segment size, the Part Size is configurable in applications that use Multipart Upload.&#x20;
 

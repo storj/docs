@@ -8,7 +8,7 @@ docId: R8OfnPylILOIrkpc187Xx
 
 Importing an access is done using the `import` command.
 
-### Import from the file
+## Import from the file
 
 :::codeblocktabs
 ```windows

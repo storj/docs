@@ -12,7 +12,7 @@ Advanced usage for the single-tenant Gateway
 
 1.  [](docId\:SLxI54SPLjGgjhRWkKJdb)&#x20;
 
-### Adding Access Grants
+## Adding Access Grants
 
 You can add several access grants to the `config.yaml`, using this format:
 

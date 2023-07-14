@@ -43,7 +43,7 @@ The `cp` command is used to upload and download objects. The `cp` command abstra
 
 ## Examples
 
-### Copy a local file into an existing bucket
+## Copy a local file into an existing bucket
 
 When the `cp` command is used to copy a file to Storj DCS (upload), the CLI first encrypts the file client-side, then splits it into a minimum of x erasure-coded pieces, and finally, the x pieces are uploaded in parallel to x different storage nodes. x currently equals 80 but is subject to change depending on continuous optimization.&#x20;
 

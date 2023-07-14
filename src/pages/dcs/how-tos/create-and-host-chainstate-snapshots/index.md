@@ -8,15 +8,15 @@ docId: 31PlH5QGjhv0HKIaLeU4t
 
 Host snapshots at reduced cost when spinning up new node.
 
-### Create Storj account
+## Create Storj account
 
 After [creating an account](https://www.storj.io/signup) on Storj DCS, you’ll need to setup the uplink cli.
 
-### Setup uplink CLI
+## Setup uplink CLI
 
 The uplink cli is a tool similar to aws cli that allows creation of buckets and uploading/downloading snapshots directly from the 15,000+ storage nodes. We also have an aws s3 compatible api as an alternative.
 
-### Install uplink
+## Install uplink
 
 Linux AMD64
 
@@ -28,7 +28,7 @@ sudo install uplink /usr/local/bin/uplink
 
 For different uplink binaries see [](docId\:hFL-goCWqrQMJPcTN82NB)
 
-### Create access grant and setup uplink
+## Create access grant and setup uplink
 
 ![Creating an access token in the Storj web console](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Eht5dlfTFplrWPyJxUHdi_screen-shot-2022-07-01-at-102352-am.png)
 
@@ -64,13 +64,13 @@ Remember your **Passphrase** you will need it for future access of the data
 
 ```Text
 $ uplink setup
-Enter name to import as [default: main]: 
+Enter name to import as [default: main]:
 Enter API key or Access grant: <access grant>
 Satellite address: <satellite address>
-Passphrase: 
+Passphrase:
 ```
 
-### Create bucket
+## Create bucket
 
 Create a bucket called `snapshots`
 
@@ -78,21 +78,21 @@ Create a bucket called `snapshots`
 uplink mb sj://snapshots
 ```
 
-### Upload snapshots
+## Upload snapshots
 
 Compress small files/directories to a single compressed file (e.g use `tar`).&#x20;
 
 ```Text
-tar cf snapshot.tar /path/to/snapshot 
+tar cf snapshot.tar /path/to/snapshot
 ```
 
 Use `uplink cp` to upload your snapshot to Storj DCS. Scale parallelism to at most 2x your thread count (16 threads = 32 parallelism)
 
 ```Text
-uplink cp --parallelism 8 snapshot.tar sj://snapshots/snapshot.tar 
+uplink cp --parallelism 8 snapshot.tar sj://snapshots/snapshot.tar
 ```
 
-### Create download access grant
+## Create download access grant
 
 For node operators in your community, you'll need to generate another access grant with limited permissions.
 

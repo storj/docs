@@ -16,7 +16,7 @@ These are some of the problems that [HashBackup](https://www.hashbackup.com/hash
 
 The benefits of HashBackup can be enhanced with the supplemental storage and accessibility offered by Storj DCS. This document will describe how to configure Storj as a backup destination for HashBackup.
 
-### Running HashBackup with Storj as a Destination
+## Running HashBackup with Storj as a Destination
 
 While HashBackup compresses backups to limit the storage requirements necessary for local storage, there are still use cases for backing up data externally to cloud services like Storj. For example, the decentralized network of Storj DCS nodes increases availability and security when accessing your backups.
 

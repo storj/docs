@@ -10,7 +10,7 @@ docId: lvqkxgrbdMrqc1XnnvDFj
 
 After [creating an account](https://storj.io/signup) on Storj DCS, you'll need to create an access grant in order to get S3 credentials.
 
-### Generate S3 credentials
+## Generate S3 credentials
 
 S3 credentials allow Dataverse to upload and download files from Storj as if it was using the S3 API. To create credentials:
 

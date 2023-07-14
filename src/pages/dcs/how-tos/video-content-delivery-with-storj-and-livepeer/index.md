@@ -13,7 +13,7 @@ First we'll set up a Storj and Livepeer account, then we'll transcode and view v
 
 ## Storj Account
 
-### Create a Storj Account
+## Create a Storj Account
 
 To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
 

@@ -10,7 +10,7 @@ docId: QlBLsOc7Q7MhxEDvM9cod
 
 Visit <https://www.splunk.com/> for more information.&#x20;
 
-### Advantages of Splunk with Storj
+## Advantages of Splunk with Storj
 
 1.  Adds powerful features to your data storage. Monitor, analyze, and visualize data.
 
@@ -34,7 +34,7 @@ To complete the integration, follow the steps below.
 
 ***
 
-### Create a Storj Account
+## Create a Storj Account
 
 To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
 

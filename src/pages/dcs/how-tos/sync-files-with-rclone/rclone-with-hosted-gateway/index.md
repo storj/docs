@@ -9,7 +9,7 @@ updatedAt: 2023-03-03T08:30:09.000Z
 
 Use our S3-compatible Hosted Gateway integration pattern to increase upload performance and reduce the load on your systems and network. Uploads will be encrypted and erasure-coded server-side, thus a 1GB upload will result in only 1GB of data being uploaded from the client to the hosted gateway.
 
-### Use this pattern for
+## Use this pattern for
 
 *   Reduced upload time
 

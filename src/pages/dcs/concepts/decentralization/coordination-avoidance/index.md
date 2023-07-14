@@ -8,7 +8,7 @@ docId: UxLZTYCEDciC5L0f3LRWd
 
 Rather than coming to a global consensus around the entire state of the network (as in blockchains like ethereum, etc.) The Storj Network is **Coordination Avoidant.**  The network does not need global consistency (as per CAP Theorem) as each uplink user only needs to be able to recover *their* files.
 
-### Advantages Over Coordination-dependant Systems
+## Advantages Over Coordination-dependant Systems
 
 By ensuring coordination avoidance within Storj DCS, we’re able to deliver better performance and scalability over other decentralized systems—two issues that are critical to achieving broad adoption with traditional storage users. Decentralized systems that are coordination dependent, like Bitcoin, require an increasing number of resources as they scale. To compete with centralized cloud storage platforms like Amazon S3, Microsoft Azure, and Google Cloud, Storj DCS must be able to scale into the exabyte range, and beyond—something we feel confident it will be able to achieve.
 

@@ -37,7 +37,7 @@ uplink access import [flags] <name> <access|filename>
 | `-f, --force` | Force overwrite an existing saved access           |
 | `--use`       | Switch the default access to the newly created one |
 
-### Global flags
+## Global flags
 
 | Global flags          | Description                                   |
 | :-------------------- | :---------------------------------------docId: 9MIN1usU8WPUY2212Y-_S

@@ -12,7 +12,7 @@ The [Kerberos.io](https://kerberos.io) project (not to be confused with the auth
 
 The modularity of Kerberos.io includes optional components that help integrate it into any cloud architecture. One of these components is [Kerberos Vault](https://kerberos.io/product/vault/), which provides a flexible and extensible storage solution for video files. Kerberos Vault is designed to work with several different cloud providers, including Storj DCS, to allow for customized storage options where users can bring their own providers.
 
-### Storj DCS and Kerberos
+## Storj DCS and Kerberos
 
 Storj's decentralized cloud storage platform offers a great video storage backend for integration with Kerberos.io and Kerberos Vault. This is because the distributed storage design that Storj DCS is built on offers both high availability access to video files (thanks to its network of nodes across multiple regions) and secure, reliable hosting with no single-point-of-failure.
 

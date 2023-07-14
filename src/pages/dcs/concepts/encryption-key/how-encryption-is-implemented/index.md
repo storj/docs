@@ -38,7 +38,7 @@ First, it’s critical to understand the definitions of a few key concepts used 
 
 *   **Secretbox**: An authenticated encryption algorithm from the NaCl library that combines the Salsa20 encryption cipher and Poly1305 message authentication code.
 
-### Path Encryption&#x20;
+## Path Encryption&#x20;
 
 Paths are encrypted in a hierarchical and deterministic way using the root encryption key. Each path component is encrypted separately based on information derived from previous path components.
 

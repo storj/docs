@@ -18,7 +18,7 @@ The data itself is client-side encrypted, however we are able to measure the agg
 
 You can learn more about our partner program [here](https://www.storj.io/partners/).
 
-### Value Attribution
+## Value Attribution
 
 Value attribution is done on a per bucket basis. To recognize which partner the shared revenue should go to, we use a user agent that identifies it. A bucket can only have one user agent value and it can be set only once, and only on an empty bucket. This has the following consequences:
 

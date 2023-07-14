@@ -24,7 +24,7 @@ The ability to store and retrieve your video files from anywhere using Storj's g
 
 For this guide, we are going to show how to set up Rclone to sync your local files with Storj DCS. This can then serve as your storage backend for a service like Plex.
 
-### Getting Started
+## Getting Started
 
 You should start by reading the [](docId\:LdrqSoECrAyE_LQMvj3aF). Follow the steps to configure your Storj access credentials using the `rclone config` command.
 

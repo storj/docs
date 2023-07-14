@@ -29,7 +29,7 @@ uplink meta get PATH [KEY] [flags]
 | `--access string` | the serialized access, or name of the access to use |
 | `--help`, `-h`    | help for get                                        |
 
-### Retrieve all metadata of an object
+## Retrieve all metadata of an object
 
 Suppose you have uploaded your object with metadata using this command:
 

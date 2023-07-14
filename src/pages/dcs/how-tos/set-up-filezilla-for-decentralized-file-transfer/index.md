@@ -28,7 +28,7 @@ With the launch of the native Storj DCS Integration into the FileZilla client, d
 
 ![Getting Started Guide to Configure Storj DCS with Filezilla](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/A3axDH9IIHl-G8gI--gjT_fz.png)
 
-### Create an Access Grant
+## Create an Access Grant
 
 Navigate to the [](docId\:b4-QgUOxVHDHSIWpAf3hG) page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 

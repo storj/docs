@@ -8,7 +8,7 @@ docId: cSsmRiNfJD_NK3ksKCPQ4
 
 The Auth Service is one of the Edge Services that enables the Storj  S3-compatible gateway and Linkshare service to interact with browser-based or  other cloud-native applications.
 
-### Overview
+## Overview
 
 When objects are shared via [](docId\:sN2GhYgGUtqBVF65GhKEa) or via the [](docId\:yYCzPT8HHcbEZZMvfoCFa), an [](docId\:XKib9SzjtEXTXWvdyYWX6) is automatically registered with the Auth Service. The Access Grant used in conjunction with the edge services does contain encryption information for the objects that are within the scope of the Access Grant. Access Grants registered with the Auth Service are encrypted with an encryption key that is not stored or persisted by any Storj Service. The encryption key used to encrypt the Access Grants are held by the user or the user's application.
 

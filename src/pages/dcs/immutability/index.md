@@ -44,7 +44,7 @@ Storj has implemented a range of security constructs to ensure that immutable da
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/sVh154FoZgMFDeTqDOjyY_image.png)
 
-### Privileged Account Management
+## Privileged Account Management
 
 Storj follows industry best practices to secure user accounts that have privileged levels of access to interact with immutable data. Storj offers multi factor authentication (MFA) that enables users to address the risks associated with unauthorized access to user accounts. 
 

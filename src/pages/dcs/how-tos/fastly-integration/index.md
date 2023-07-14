@@ -39,7 +39,7 @@ Additionally, if you have enabled TLS for your gateway and wish to configure tha
 
 Note that if you are going to use AWS S3 integration, you may want to leave the **Override host** field blank when creating your service. Otherwise, it will override important authentication headers read by AWS (more on that below).
 
-### Verifying the service is configured
+## Verifying the service is configured
 
 Fastly creates a DNS mapping from the domain you entered when creating your service to `<domain>.global.prod.fastly.net`. So following the above steps, this would be `cdn.example.com.global.prod.fastly.net`.
 

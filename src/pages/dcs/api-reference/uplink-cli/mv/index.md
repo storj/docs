@@ -35,7 +35,7 @@ The `mv` command is used to move or rename objects within the same Storj DCS pro
 
 ## Examples
 
-### Move an object within an existing bucket
+## Move an object within an existing bucket
 
 When the `mv` command is used to move a file within Storj DCS, the CLI will move (rename) the object using the server-side method to rename the object.
 

@@ -42,7 +42,7 @@ uplink access restrict [flags]
 | `--not-before relative_date` | Disallow access before this time (e.g. '+2h', 'now', '2020-01-02T15:04:05Z0700')                                                                              |
 | `--not-after relative_date`  | Disallow access after this time (e.g. '+2h', 'now', '2020-01-02T15:04:05Z0700')                                                                               |
 
-### Global flags
+## Global flags
 
 | Global flags          | Description                                   |
 | :-------------------- | :---------------------------------------docId: jWrIx32jqwp0r45vQcodH

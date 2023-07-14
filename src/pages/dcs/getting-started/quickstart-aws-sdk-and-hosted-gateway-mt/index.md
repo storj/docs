@@ -58,7 +58,7 @@ Now you are ready to configure AWS SDK
 
 ## Gateway MT with Amazon S3 SDK (Node.js)
 
-### 1. Install or include the Amazon S3 SDK
+## 1. Install or include the Amazon S3 SDK
 
 e.g. with npm
 

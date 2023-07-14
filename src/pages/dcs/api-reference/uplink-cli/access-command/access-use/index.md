@@ -29,7 +29,7 @@ uplink access use <access>
 | :--------- | :----------------- |
 | `<access>` | Access name to use |
 
-### Global flags
+## Global flags
 
 | Global flags          | Description                                   |
 | :-------------------- | :---------------------------------------docId: d-btqElDJY9m26QIKJYP-

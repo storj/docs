@@ -133,7 +133,7 @@ Take advantage of absolute transparency through our open source code. You are no
 
 Take advantage of familiar development tools and robust technical documentation, tutorials, and videos to help get you started and leverage all the benefits of decentralized cloud object storage.
 
-###
+##
 :::
 
 :::link-array-item{headerImage}

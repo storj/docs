@@ -47,7 +47,7 @@ Download, unzip, and install the binary for your OS:
 
 ::::tabs
 :::tab{label="Windows"}
-### Curl Download (PowerShell)
+## Curl Download (PowerShell)
 
 ```curl
 curl https://github.com/storj/gateway-st/releases/latest/download/gateway_windows_amd64.exe.zip -o gateway_windows_amd64.exe.zip; Expand-Archive gateway_windows_amd64.exe.zip -Destination . -Force

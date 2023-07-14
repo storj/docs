@@ -42,7 +42,7 @@ An NFT is just a registration of ownership - for digital objects, owners need a 
 
 *   Native support for media streaming
 
-### What is OpenSea?
+## What is OpenSea?
 
 OpenSea is an open marketplace and developer toolkit for NFTs. NFTs are blockchain tokens associated with a cryptographic keypair to represent ownership of unique items.
 

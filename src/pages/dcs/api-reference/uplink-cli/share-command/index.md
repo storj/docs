@@ -52,7 +52,7 @@ An access generated using `uplink share` with no arguments creates an access to 
 
 ## Examples
 
-### Share a single object
+## Share a single object
 
 :::codeblocktabs
 ```windows

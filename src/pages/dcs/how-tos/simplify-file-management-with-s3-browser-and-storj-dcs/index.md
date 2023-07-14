@@ -20,7 +20,7 @@ S3 Browser can be configured to download large files via multiple parallel threa
 One license allows you to install one instance of S3 Browser on a single computer. Your license can be transferred if you change your PC. The license is a lifetime license and includes one year of free upgrades and support. Users are also limited to two accounts added within the free version of S3 Browser.
 :::
 
-### Downloading S3 Browser
+## Downloading S3 Browser
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/imHgm4QwRRec0sKL2Z-yx_pasted-image-0.png)
 

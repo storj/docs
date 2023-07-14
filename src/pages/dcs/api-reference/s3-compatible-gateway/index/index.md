@@ -8,7 +8,7 @@ docId: yYCzPT8HHcbEZZMvfoCFa
 
 The Storj DCS globally distributed, multi-region cloud-hosted S3-compatible  gateway
 
-### S3 compatibility
+## S3 compatibility
 
 When Amazon launched its S3 service 15 years ago and created the cloud storage industry, it also unknowingly made object storage the standard for storing data in the cloud. Object storage organizes data into objects, which contain the data itself, its metadata, and a unique identifier. These objects are stored in buckets rather than a hierarchical system. Since then, the grand majority of cloud storage services have reinforced this interface, and the majority of people storing data in the cloud use similar architectures.
 

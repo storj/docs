@@ -8,7 +8,7 @@ docId: Lq9m1BFtBYYz1I-4RwEhp
 
 How data is logically segmented on the network
 
-### Hierarchy of Data Storage
+## Hierarchy of Data Storage
 
 **Projects**Projects allow you to invite team members, manage billing, and manage access for various apps or users.
 

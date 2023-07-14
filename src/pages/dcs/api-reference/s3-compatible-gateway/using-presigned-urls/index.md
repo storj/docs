@@ -12,7 +12,7 @@ Creating presigned URLs for Storj DCS - HTTP POST & GET to a URL
 
 All objects and paths are private and encrypted by default. However, it is possible to use a pre-signed URL via our S3-compatible gateway to enable unauthenticated customers/users to upload objects to buckets or access objects in buckets without providing an [](docId\:XKib9SzjtEXTXWvdyYWX6) or [](docId\:LueFgrbZ9rJbWtDMXhIWZ).&#x20;
 
-### HTTP GET vs Storj Linkshare Service
+## HTTP GET vs Storj Linkshare Service
 
 While we support this behavior via the S3-compatible pre-signed URL function, as an alternative to sharing with a customer/user via a GET, consider utilizing our [](docId\:sN2GhYgGUtqBVF65GhKEa). One advantage of this approach is the ability to easily create perpetual share links, valid until you remove them or until a configurable end date of any duration. You can even [](docId\:tbIk37ff8CeeSg-tz5KYy)  via Linkshare.
 

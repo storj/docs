@@ -34,7 +34,7 @@ Miria integrates with Storj cloud storage through the S3 protocol. The Miria ser
 
 To integrate Miria with Storj, you will need to create S3 credentials for Miria in Storj and pass them to the Miria server through the Miria web interface.
 
-### Requirements
+## Requirements
 
 *   An active Storj account
 

@@ -35,7 +35,7 @@ uplink access create [flags]
 | `-f, --force`                | Force overwrite an existing saved access                                           |
 | `--use`                      | Switch the default access to the newly created one                                 |
 
-### Global flags
+## Global flags
 
 | Global flags          | Description                                   |
 | :-------------------- | :---------------------------------------docId: x0Ej1E9_xq9xXFaSvyPTT

@@ -23,7 +23,7 @@ To add a [](docId:7U4_uu6Pzg6u2N6FpV9VE)** **you can switch to the **Payment Met
 
 Please read the [](docId\:xxo0jDSfb_UgbmQoUUbml) section for details.
 
-### Adding STORJ tokens
+## Adding STORJ tokens
 
 You can select to **Add STORJ Tokens** on the ***Billing - Payment Methods*** screen, the deposit address will be automatically generated for you.
 

@@ -14,7 +14,7 @@ docId: h3RyJymEIi4gf2S9wVJg8
 
 :::::tabs
 ::::tab{label="Windows"}
-### PowerShell
+## PowerShell
 
 :::hint{type="warning"}
 For security reasons it's better to use a casual user to work from the CLI, thus please run PowerShell as a casual user, not as an Administrator.

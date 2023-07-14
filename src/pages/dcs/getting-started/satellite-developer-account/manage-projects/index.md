@@ -34,7 +34,7 @@ To modify the existing Project on the ***Projects*** screen you can select a nee
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/beljzrUkwGGXkjOMW7LMy_manage03.png)
 
-### Changing Project Limits
+## Changing Project Limits
 
 If your account tier allows you to change [](docId\:A4kUGYhfgGbVhlQ2ZHXVS),  you will have more options than a [](docId:3QsPeVcuS4Buq5WWgFnRu).
 

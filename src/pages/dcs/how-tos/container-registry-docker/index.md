@@ -10,7 +10,7 @@ Containers are wonderful: Containers provide a powerful way to package and deplo
 
 Under the hood, the container registry serves simple REST requests. As Storj DCS also can serve files via HTTP, it can be used as a container registry if the pieces are uploaded in the right order and mode.
 
-### The structure of a container registry&#x20;
+## The structure of a container registry&#x20;
 
 But what is the right order? The container registry API follows a simple structure:
 
@@ -52,7 +52,7 @@ If we upload the layers and metadata files in the same structure, Docker pull wi
 
 3.  The container registry should be served under the root path of the domain ( is correct, while  is incorrect). It can be resolved by assigning a custom domain name for the Storj bucket.
 
-### Publish the container&#x20;
+## Publish the container&#x20;
 
 So let’s see an example. What is the publishing process, assuming we have a local docker container (elek/herbsttag in this example)?
 
@@ -111,7 +111,7 @@ uplink share --public sj://registry/ --base-url https://link.storjshare.io --dns
 The command returns all the important information to modify the DNS zones. The usage of this information depends on the DNS registrar.
 
 ```bash
-# DNS INFO 
+# DNS INFO
 # Remember to update the $ORIGIN with your domain name. You may also change the $TTL.
 $ORIGIN example.com.
 $TTL    3600

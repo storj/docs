@@ -10,7 +10,7 @@ MSP360 Managed Backup and from Cloudberry Labs is a cross-platform storage backu
 
 For more information, visit [msp360.com](), or sign up for a [free trial](https://www.msp360.com/managed-backup/).
 
-### Advantages of MSP360 with Storj 
+## Advantages of MSP360 with Storj 
 
 *   Outstanding security features, including immutability, or object lock, encryption, and 2-factor authentication.
 
@@ -24,7 +24,7 @@ MSP360  integrates with Storj cloud storage through the S3 protocol.&#x20;
 
 To integrate MSP360 with Storj, you will need to create S3 credentials for MSP360 in Storj and pass them to the MSP360 managed backup server through the MSP360 web interface or SaaS control.
 
-### Requirements
+## Requirements
 
 *   An active Storj account
 

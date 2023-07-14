@@ -16,7 +16,7 @@ At several points in the Documentation it’s important to point out three impor
 If you lose your encryption keys, you have lost the ability to decrypt your data rendering it useless.&#x20;
 :::
 
-### Thing 1: Your encryption keys are your data
+## Thing 1: Your encryption keys are your data
 
 Storj DCS does not have access to your encryption keys.  If you lose your encryption keys, they are gone. If you can’t decrypt your data, you’ve effectively lost it.  All of it.
 

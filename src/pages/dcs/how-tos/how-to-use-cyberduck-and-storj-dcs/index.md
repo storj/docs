@@ -16,7 +16,7 @@ Users can choose **Storj DCS** to act as a decentralized cloud storage network t
 
 In this brief tutorial, we'll go over downloading and setting up Cyberduck to integrate with Storj DCS, facilitating easy and intuitive drag-and-drop file transfer to Storj DCS.
 
-### Downloading Cyberduck
+## Downloading Cyberduck
 
 As a free solution, Cyberduck gives users the freedom to run, copy, distribute, study, change and improve the software. Those who wish to pay for Cyberduck will receive a registration key as a contributor. Becoming a contributor registers the installed application to your name, disabling donation prompts after downloading or updating.
 

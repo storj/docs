@@ -46,7 +46,7 @@ uplink setup [flags]
 
 ::::tabs
 :::tab{label="Windows"}
-### PowerShell
+## PowerShell
 
 [](docId:4qPQxa8HlvDIO1Kgqa2No).
 

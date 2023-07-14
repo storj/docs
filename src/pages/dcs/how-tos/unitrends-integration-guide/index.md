@@ -10,7 +10,7 @@ Unitrends provides backup appliances, backup software, and cloud data protection
 
 Find more information on the [Unitrends website](https://www.unitrends.com/products). Request a [free trial](https://www.unitrends.com/confirm/free-trial) of Unitrends, as well.
 
-### Advantages of Unitrends with Storj 
+## Advantages of Unitrends with Storj 
 
 *   Unitrends provides ultra-low-cost secondary cloud storage and aligns storage costs with data value.
 
@@ -24,7 +24,7 @@ Find more information on the [Unitrends website](https://www.unitrends.com/produ
 
 To integrate Storj with Unitrends, you will need to create S3 credentials in Storj to be used for Unitrends. Those credentials will need to be added within the Unitrends appliance through their web-based interfae.
 
-### Requirements
+## Requirements
 
 *   An active Storj account
 

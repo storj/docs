@@ -38,7 +38,7 @@ uplink rm sj://BUCKET/KEY [flags]
 
 ## Examples
 
-### Delete an object
+## Delete an object
 
 :::codeblocktabs
 ```windows

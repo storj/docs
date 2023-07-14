@@ -29,7 +29,7 @@ uplink access remove <name>
 | :------- | :-------------------- |
 | `<name>` | Access name to delete |
 
-### Global flags
+## Global flags
 
 | Global flags          | Description                                   |
 | :-------------------- | :---------------------------------------docId: gQIzU008qGSvybusLZ7ms

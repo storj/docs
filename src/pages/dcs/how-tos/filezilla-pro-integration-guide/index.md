@@ -24,7 +24,7 @@ You can use FileZilla Standard with the Storj DCS native connector—as long as 
 
 FileZilla Pro gives users the option to send files to a Storj DCS account in two ways, either via native uplink or via [](docId\:AsyYcUJFbO1JI8-Tu8tW3). Let’s take a look at some of the specs of both Native Uplink and Gateway MT, providing a clearer understanding of which integration method will work better for unique use cases.
 
-### Native Uplink specs regarding integration with Storj DCS:
+## Native Uplink specs regarding integration with Storj DCS:
 
 *   Native Integration (Fastest for downloading large files)
 

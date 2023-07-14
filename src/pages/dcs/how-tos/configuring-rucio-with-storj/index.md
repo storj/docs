@@ -12,7 +12,7 @@ Rucio is an open-source software framework that provides scientific collaboratio
 
 These configuration instructions were adapted from the draft instructions being developed in the Rucio GitHub project: [Create documentation page for S3-type storage](https://github.com/rucio/rucio/issues/5450)
 
-### Setup a demo environment
+## Setup a demo environment
 
 **Prerequisites:**
 

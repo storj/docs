@@ -31,7 +31,7 @@ As described below, mutlipart upload is a process consisting of: starting the up
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/9qF0Kk8WCViIQLFoL5pZD_storj.png)
 
-### Initiate Multipart upload
+## Initiate Multipart upload
 
 At the start of a multipart upload, Storj DCS will return an ID that you use to reference your multipart upload; you need to include this ID when working with the object.  Operations such as uploading parts, listing parts and canceling the multipart operation.
 

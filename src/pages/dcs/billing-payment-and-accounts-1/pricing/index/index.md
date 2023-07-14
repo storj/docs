@@ -16,7 +16,7 @@ All examples of price calculations provided in this Documentation are specific t
 
 The Storj DCS service provides secure, private and reliable cloud object storage at a much lower cost than the cost of the big cloud providers.  Billing is simple. We charge for we will call  “metered service types.” The metered service types are: static object storage, download bandwidth, and, under some circumstances, a  [](docId\:A4kUGYhfgGbVhlQ2ZHXVS).&#x20;
 
-### Static Object Storage&#x20;
+## Static Object Storage&#x20;
 
 Static object storage is charged at $4 per terabyte per month, or $0.004 per gigabyte. Static object storage is calculated in “terabyte months,” which is a prorated calculation of how much storage is used throughout the month, broken down by hour. Storing one terabyte of data for 30 days, two terabytes of data for 15 days, or three terabytes of data for 10 days, would each be the equivalent of one terabyte month.
 

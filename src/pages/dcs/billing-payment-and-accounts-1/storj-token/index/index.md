@@ -20,7 +20,7 @@ Once you have created a user account and a project, registered users are require
 
 Begin by selecting "Billiing" from the "My Account" dropdown menu at the left bottom corner of your dashboard.
 
-### Using a Credit Card
+## Using a Credit Card
 
 You can select to **Add New Payment Method** to add a Card to your account on the ***Billing - Payment Methods*** screen. You will be prompted to specify Card details.
 

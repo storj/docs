@@ -10,7 +10,7 @@ Iconik is a cloud media management and collaboration software that gathers and o
 
 Visit <https://www.iconik.io/> for more information.&#x20;
 
-### Advantages of Iconik with Storj 
+## Advantages of Iconik with Storj 
 
 Iconik is easy to use and intuitive with a clean and intuitive platform. It organizes your media by making it searchable.
 

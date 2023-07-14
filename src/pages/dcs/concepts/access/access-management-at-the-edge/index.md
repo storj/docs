@@ -12,7 +12,7 @@ One of the areas where we’re seeing the strongest interest from developers, cu
 
 Distributed and decentralized cloud storage is a fantastic way to take advantage of underutilized storage and bandwidth, but in order to provide highly available and durable cloud storage, we needed to build in some fairly sophisticated security and privacy controls. Because we had to build with the assumption that any Node could be run by an untrusted person, we had to implement a zero-knowledge security architecture. This turns out to not only make our system far more resistant to attacks than traditional architectures, but also brings significant benefits to developers building apps on the platform.&#x20;
 
-### Decentralized Architecture Requires Strong Privacy and Security
+## Decentralized Architecture Requires Strong Privacy and Security
 
 From the network perspective, we need to make sure the data stored on our platform remains private and secure. At the most basic level, we need to ensure that pieces of files stored on untrusted Nodes can’t be compromised, either by accessing that data or preventing access to that data. We combine several different technologies to achieve data privacy, security and availability.
 

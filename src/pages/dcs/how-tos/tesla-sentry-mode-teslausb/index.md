@@ -14,7 +14,7 @@ In this How To, we'll demonstrate how to automatically transfer Tesla Sentry Mod
 
 You'll need some hardware, some software and a Storj DCS account for this project.
 
-### Hardware required
+## Hardware required
 
 All in, you’re looking at right around $60 of hardware to get going (prices as of April 2021). Here’s the hardware you’ll need:
 

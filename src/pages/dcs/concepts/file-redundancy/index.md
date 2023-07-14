@@ -6,7 +6,7 @@ updatedAt: 2023-03-03T08:30:09.000Z
 docId: CBMEVO2vA2lDZ_BVuZ9aP
 ---
 
-### Durability and expansion factor&#x20;
+## Durability and expansion factor&#x20;
 
 In a decentralized storage network, any storage node could go offline permanently at any time. A storage network’s redundancy strategy must store data in a way that provides access with high probability, even though any given number of individual nodes may be in an offline state. To achieve a specific level of *durability* (defined as the probability that data remains available in the face of failures), many products in this space (Filecoin, MaidSafe, Siacoin, GFS, Ceph, IPFS, etc.) by default use replication, which means simply having multiple copies of the data stored on different nodes.
 

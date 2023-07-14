@@ -14,7 +14,7 @@ First, [](docId\:HeEf9wiMdlQx9ZdS_-oZS).&#x20;
 
 ::::tabs
 :::tab{label="Windows"}
-### Download the [Windows Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_windows_amd64.zip) zip file
+## Download the [Windows Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_windows_amd64.zip) zip file
 
 In the Downloads folder, right-click and select "Extract all"
 

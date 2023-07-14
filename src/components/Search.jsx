@@ -104,7 +104,7 @@ function SearchResult({ result, autocomplete, collection, query }) {
 
   return (
     <li
-      className="group block cursor-default rounded-lg px-3 py-2 aria-selected:bg-slate-100 dark:aria-selected:bg-slate-700/30"
+      className="block px-3 py-2 rounded-lg cursor-default group aria-selected:bg-slate-100 dark:aria-selected:bg-slate-700/30"
       aria-labelledby={`${id}-hierarchy ${id}-title`}
       {...autocomplete.getItemProps({
         item: result,
@@ -147,7 +147,7 @@ function SearchResult({ result, autocomplete, collection, query }) {
 function SearchResults({ autocomplete, query, collection }) {
   if (collection.items.length === 0) {
     return (
-      <p className="px-4 py-8 text-center text-sm text-slate-700 dark:text-slate-400">
+      <p className="px-4 py-8 text-sm text-center text-slate-700 dark:text-slate-400">
         No results for &ldquo;
         <span className="break-words text-slate-900 dark:text-white">
           {query}
@@ -179,8 +179,8 @@ const SearchInput = forwardRef(function SearchInput(
   let inputProps = autocomplete.getInputProps({})
 
   return (
-    <div className="group relative flex h-12">
-      <SearchIcon className="pointer-events-none absolute left-4 top-0 h-full w-5 fill-slate-400 dark:fill-slate-500" />
+    <div className="relative flex h-12 group">
+      <SearchIcon className="absolute top-0 w-5 h-full pointer-events-none left-4 fill-slate-400 dark:fill-slate-500" />
       <input
         ref={inputRef}
         className={clsx(
@@ -205,8 +205,8 @@ const SearchInput = forwardRef(function SearchInput(
         }}
       />
       {autocompleteState.status === 'stalled' && (
-        <div className="absolute inset-y-0 right-3 flex items-center">
-          <LoadingIcon className="h-6 w-6 animate-spin stroke-slate-200 text-slate-400 dark:stroke-slate-700 dark:text-slate-500" />
+        <div className="absolute inset-y-0 flex items-center right-3">
+          <LoadingIcon className="w-6 h-6 animate-spin stroke-slate-200 text-slate-400 dark:stroke-slate-700 dark:text-slate-500" />
         </div>
       )}
     </div>
@@ -269,7 +269,7 @@ function SearchDialog({ open, setOpen, className }) {
       <div className="fixed inset-0 bg-slate-900/50 backdrop-blur" />
 
       <div className="fixed inset-0 overflow-y-auto px-4 py-4 sm:px-6 sm:py-20 md:py-32 lg:px-8 lg:py-[15vh]">
-        <Dialog.Panel className="mx-auto overflow-hidden rounded-xl bg-white shadow-xl dark:bg-slate-800 dark:ring-1 dark:ring-slate-700 sm:max-w-xl">
+        <Dialog.Panel className="mx-auto overflow-hidden bg-white shadow-xl rounded-xl dark:bg-slate-800 dark:ring-1 dark:ring-slate-700 sm:max-w-xl">
           <div {...autocomplete.getRootProps({})}>
             <form
               ref={formRef}
@@ -285,7 +285,7 @@ function SearchDialog({ open, setOpen, className }) {
               />
               <div
                 ref={panelRef}
-                className="border-t border-slate-200 bg-white px-2 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800"
+                className="px-2 py-3 bg-white border-t border-slate-200 empty:hidden dark:border-slate-400/10 dark:bg-slate-800"
                 {...autocomplete.getPanelProps({})}
               >
                 {autocompleteState.isOpen && (
@@ -344,12 +344,12 @@ export function Search() {
         className="group flex h-6 w-6 items-center justify-center sm:justify-start md:h-auto md:w-80 md:flex-none md:rounded-lg md:py-2.5 md:pl-4 md:pr-3.5 md:text-sm md:ring-1 md:ring-slate-200 md:hover:ring-slate-300 dark:md:bg-slate-800/75 dark:md:ring-inset dark:md:ring-white/5 dark:md:hover:bg-slate-700/40 dark:md:hover:ring-slate-500 lg:w-96"
         {...buttonProps}
       >
-        <SearchIcon className="h-5 w-5 flex-none fill-slate-400 group-hover:fill-slate-500 dark:fill-slate-500 md:group-hover:fill-slate-400" />
+        <SearchIcon className="flex-none w-5 h-5 fill-slate-400 group-hover:fill-slate-500 dark:fill-slate-500 md:group-hover:fill-slate-400" />
         <span className="sr-only md:not-sr-only md:ml-2 md:text-slate-500 md:dark:text-slate-400">
           Search docs
         </span>
         {modifierKey && (
-          <kbd className="ml-auto hidden font-medium text-slate-400 dark:text-slate-500 md:block">
+          <kbd className="hidden ml-auto font-medium text-slate-400 dark:text-slate-500 md:block">
             <kbd className="font-sans">{modifierKey}</kbd>
             <kbd className="font-sans">K</kbd>
           </kbd>

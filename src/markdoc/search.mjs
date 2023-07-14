@@ -55,8 +55,7 @@ export default function (nextConfig = {}) {
 
             let files = glob.sync('**/*.md', { cwd: pagesDir })
             let data = files.map((file) => {
-              let url =
-                file === 'index.md' ? '/' : `/${file.replace(/\.md$/, '')}`
+              let url = `/${file.replace(/index\.md$/, '')}`.slice(0, -1) // remove trailing slash
               let md = fs.readFileSync(path.join(pagesDir, file), 'utf8')
 
               let sections

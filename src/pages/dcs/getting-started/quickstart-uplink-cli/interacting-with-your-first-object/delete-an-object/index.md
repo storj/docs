@@ -10,7 +10,7 @@ docId: Fr6x2DasCtv9DzvMQ8ugg
 
 Let's delete our photo with the following command:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe rm sj://cakes/cheesecake.jpg
 ```
@@ -22,7 +22,7 @@ uplink rm sj://cakes/cheesecake.jpg
 ```linux
 uplink rm sj://cakes/cheesecake.jpg
 ```
-:::
+{% /code-group %}
 
 Result
 

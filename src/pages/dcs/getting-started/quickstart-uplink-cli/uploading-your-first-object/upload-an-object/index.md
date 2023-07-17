@@ -18,7 +18,7 @@ Right-click and save as **cheesecake.jpg** to your **Desktop**:
 
 To upload our photo, let's use the copy command:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp ~/Desktop/cheesecake.jpg sj://cakes
 ```
@@ -30,7 +30,7 @@ uplink cp ~/Desktop/cheesecake.jpg sj://cakes
 ```linux
 uplink cp ~/Desktop/cheesecake.jpg sj://cakes
 ```
-:::
+{% /code-group %}
 
 Result
 

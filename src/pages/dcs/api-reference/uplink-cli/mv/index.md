@@ -9,7 +9,7 @@ Moves a Storj object to another location in Storj DCS
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe mv SOURCE DESTINATION [flags]
 ```
@@ -21,7 +21,7 @@ uplink mv SOURCE DESTINATION [flags]
 ```macos
 uplink mv SOURCE DESTINATION [flags]
 ```
-:::
+{% /code-group %}
 
 The `mv` command is used to move or rename objects within the same Storj DCS project. The `mv` command uses a server-side move (rename) method, it does not incur a fee for downloading and will be performed with no delay.
 
@@ -41,7 +41,7 @@ When the `mv` command is used to move a file within Storj DCS, the CLI will move
 
 To move `cheesecake.jpg` within the existing bucket `cakes`, use the following command:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe mv sj://cakes/cheesecake.jpg sj://cakes/New-York/cheesecake.jpg
 ```
@@ -53,7 +53,7 @@ uplink mv sj://cakes/cheesecake.jpg sj://cakes/New-York/cheesecake.jpg
 ```macos
 uplink mv sj://cakes/cheesecake.jpg sj://cakes/New-York/cheesecake.jpg
 ```
-:::
+{% /code-group %}
 
 {% callout type="info"  %} 
 You cannot use pattern expressions to specify which files to copy (e.g. `uplink mv sj://cakes/cheese* sj://cakes/New-York/` will not work). Also, you can only specify one source at a time.
@@ -69,7 +69,7 @@ When the `mv` command is used to move an object from one Storj DCS bucket to ano
 
 To create a new bucket, we will use the `mb` command, as a move is possible only to an existing bucket.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe mb sj://new-recipes
 ```
@@ -81,7 +81,7 @@ uplink mb sj://new-recipes
 ```macos
 uplink mb sj://new-recipes
 ```
-:::
+{% /code-group %}
 
 ```powershell
 Bucket new-recipes created
@@ -93,7 +93,7 @@ Nested buckets are not supported, but you can use prefixes, as they would act al
 
 To move an object from one bucket to another, use:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe mv sj://cakes/New-York/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
 ```
@@ -105,7 +105,7 @@ uplink mv sj://cakes/New-York/cheesecake.jpg sj://new-recipes/cakes/cheesecake.j
 ```macos
 uplink mv sj://cakes/New-York/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
 ```
-:::
+{% /code-group %}
 
 Sample Output:
 

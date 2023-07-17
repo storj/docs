@@ -7,7 +7,7 @@ updatedAt: 2023-06-11T10:57:01.000Z
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe meta get PATH [KEY] [flags]
 ```
@@ -19,7 +19,7 @@ uplink meta get PATH [KEY] [flags]
 ```macos
 uplink meta get PATH [KEY] [flags]
 ```
-:::
+{% /code-group %}
 
 ## Flags
 
@@ -33,7 +33,7 @@ uplink meta get PATH [KEY] [flags]
 
 Suppose you have uploaded your object with metadata using this command:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp cheesecake.jpg sj://cakes --metadata '{\"baker\":\"cheeseman\", "\picture-author\": "\picman\"}'
 ```
@@ -45,11 +45,11 @@ uplink cp cheesecake.jpg sj://cakes --metadata '{"baker":"cheeseman", "picture-a
 ```macos
 uplink cp cheesecake.jpg sj://cakes --metadata '{"baker":"cheeseman", "picture-author": "picman"}'
 ```
-:::
+{% /code-group %}
 
 Retrieving all metadata defined for object `sj://cakes/cheesecake.jpg`  is done with:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe meta get sj://cakes/cheesecake.jpg
 ```
@@ -61,7 +61,7 @@ uplink meta get sj://cakes/cheesecake.jpg
 ```macos
 uplink meta get sj://cakes/cheesecake.jpg
 ```
-:::
+{% /code-group %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/zxWOIDRiLXcedbjVc6OmG_meta-get.png)
 
@@ -69,7 +69,7 @@ uplink meta get sj://cakes/cheesecake.jpg
 
 You can retrieve the value of key `baker` for object `sj://cakes/cheesecake.jpg` using:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe meta get sj://cakes/cheesecake.jpg baker
 ```
@@ -81,7 +81,7 @@ uplink meta get sj://cakes/cheesecake.jpg baker
 ```macos
 uplink meta get sj://cakes/cheesecake.jpg baker
 ```
-:::
+{% /code-group %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/B2qjHGPbKsZHONu74SsL0_meta-get-key.png)
 

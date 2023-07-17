@@ -9,7 +9,7 @@ Metadata related command
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe meta [command]
 ```
@@ -21,7 +21,7 @@ uplink meta [command]
 ```macos
 uplink meta [command]
 ```
-:::
+{% /code-group %}
 
 ## Child commands
 

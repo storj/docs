@@ -9,7 +9,7 @@ Prints name and associated satellite of all available accesses.
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access list [flags]
 ```
@@ -21,7 +21,7 @@ uplink access list [flags]
 ```macos
 uplink access list [flags]
 ```
-:::
+{% /code-group %}
 
 ## Flags
 
@@ -33,7 +33,7 @@ uplink access list [flags]
 
 ## Examples
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access list
 ```
@@ -45,7 +45,7 @@ uplink access list
 ```macos
 uplink access list
 ```
-:::
+{% /code-group %}
 
 ```Text
 =========== ACCESSES LIST: name / satellite ================================

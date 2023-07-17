@@ -9,7 +9,7 @@ rb is the command to remove an empty bucket, or empty a bucket and then remove  
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe rb sj://BUCKET [flags]
 ```
@@ -21,7 +21,7 @@ uplink rb sj://BUCKET [flags]
 ```macos
 uplink rb sj://BUCKET [flags]
 ```
-:::
+{% /code-group %}
 
 ## Flags
 
@@ -36,7 +36,7 @@ uplink rb sj://BUCKET [flags]
 
 ## Delete empty bucket
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe rb sj://cakes
 ```
@@ -48,7 +48,7 @@ uplink rb sj://cakes
 ```macos
 uplink rb sj://cakes
 ```
-:::
+{% /code-group %}
 
 Output:
 
@@ -56,7 +56,7 @@ Output:
 
 ### Delete bucket and all the objects it contains
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe rb sj://cakes --force
 ```
@@ -68,7 +68,7 @@ uplink rb sj://cakes --force
 ```macos
 uplink rb sj://cakes --force
 ```
-:::
+{% /code-group %}
 
 Output:
 

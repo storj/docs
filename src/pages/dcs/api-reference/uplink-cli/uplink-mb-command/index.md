@@ -9,7 +9,7 @@ Create a new bucket
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe mb [flags] sj://<BUCKET>
 ```
@@ -21,7 +21,7 @@ uplink mb [flags] sj://<BUCKET>
 ```macos
 uplink mb [flags] sj://<BUCKET>
 ```
-:::
+{% /code-group %}
 
 ## Flags
 
@@ -35,7 +35,7 @@ uplink mb [flags] sj://<BUCKET>
 
 ## Create bucket
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe mb sj://cakes
 ```
@@ -47,7 +47,7 @@ uplink mb sj://cakes
 ```macos
 uplink mb sj://cakes
 ```
-:::
+{% /code-group %}
 
 {% callout type="info"  %} 
 Nested buckets are not supported.

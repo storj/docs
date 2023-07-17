@@ -10,7 +10,7 @@ docId: oqG_1YITa3eUuBYrbJMTw
 
 To view the cheesecake photo in our bucket, let's use the list command:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe ls sj://cakes
 ```
@@ -22,7 +22,7 @@ uplink ls sj://cakes
 ```linux
 uplink ls sj://cakes
 ```
-:::
+{% /code-group %}
 
 Result
 

@@ -9,7 +9,7 @@ Inspect allows you to explode a serialized access into its constituent parts.
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access inspect [ACCESS-GRANT] [flags]
 ```
@@ -21,7 +21,7 @@ uplink access inspect [ACCESS-GRANT] [flags]
 ```macos
 uplink access inspect [ACCESS-GRANT] [flags]
 ```
-:::
+{% /code-group %}
 
 ## Flags
 
@@ -33,7 +33,7 @@ uplink access inspect [ACCESS-GRANT] [flags]
 
 ## Examples
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access inspect cheesecake
 ```
@@ -45,11 +45,11 @@ uplink access inspect cheesecake
 ```macos
 uplink access inspect cheesecake
 ```
-:::
+{% /code-group %}
 
 is equivalent to:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access --access cheesecake inspect
 ```
@@ -61,7 +61,7 @@ uplink access --access cheesecake inspect
 ```macos
 uplink access --access cheesecake inspect
 ```
-:::
+{% /code-group %}
 
 and will output something like:
 

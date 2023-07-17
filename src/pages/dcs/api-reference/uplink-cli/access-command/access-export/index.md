@@ -10,7 +10,7 @@ This command allows you to export the Access Grant from Uplink.
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access export <name> <filename>
 ```
@@ -22,13 +22,13 @@ uplink access export <name> <filename>
 ```linux
 uplink access export <name> <filename>
 ```
-:::
+{% /code-group %}
 
 ## Example
 
 Once you created/imported access to the Uplink, you can export it using its name and specify a filename.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access export us1 us1.txt
 ```
@@ -40,7 +40,7 @@ uplink access export us1 us1.txt
 ```linux
 uplink access export us1 us1.txt
 ```
-:::
+{% /code-group %}
 
 ```Text
 Exported access to: us1.txt

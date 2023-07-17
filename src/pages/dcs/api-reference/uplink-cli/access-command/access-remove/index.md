@@ -9,7 +9,7 @@ This command allows you to remove the access from local store of Uplink.
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access remove <name>
 ```
@@ -21,7 +21,7 @@ uplink access remove <name>
 ```macos
 uplink access remove <name>
 ```
-:::
+{% /code-group %}
 
 ## Arguments
 
@@ -46,7 +46,7 @@ You need to have an access in the local store of Uplink before proceeding. See [
 If you want to remove the current access, you need to switch to another before proceeding, using the [](docId\:d-btqElDJY9m26QIKJYP-) command.
 {% /callout %}
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access remove us2
 ```
@@ -58,7 +58,7 @@ uplink access remove us2
 ```macos
 uplink access remove us2
 ```
-:::
+{% /code-group %}
 
 ```Text
 Removed access "us2" from "/home/user/.config/storj/uplink/access.json"

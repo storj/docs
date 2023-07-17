@@ -9,7 +9,7 @@ This command allow you to create and print the Access Grant to `stdout`, export 
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access create [flags]
 ```
@@ -21,7 +21,7 @@ uplink access create [flags]
 ```linux
 uplink access create [flags]
 ```
-:::
+{% /code-group %}
 
 ## Flags
 
@@ -50,7 +50,7 @@ uplink access create [flags]
 
 As result it will print the created access grant to `stdout`.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access create --export-to access.txt
 ```
@@ -62,7 +62,7 @@ uplink access create --export-to access.txt
 ```linux
 uplink access create --export-to access.txt
 ```
-:::
+{% /code-group %}
 
 ```Text
 18yMsZpg6ZQdz........
@@ -72,7 +72,7 @@ uplink access create --export-to access.txt
 
 You will export the created access grant to the file.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access create --export-to access.txt
 ```
@@ -84,7 +84,7 @@ uplink access create --export-to access.txt
 ```linux
 uplink access create --export-to access.txt
 ```
-:::
+{% /code-group %}
 
 ```Text
 Exported access to: /home/user/access.txt
@@ -94,7 +94,7 @@ Exported access to: /home/user/access.txt
 
 You will import the created access grant to Uplink as a named access.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access create --import-as us2
 ```
@@ -106,7 +106,7 @@ uplink access create --import-as us2
 ```linux
 uplink access create --import-as us2
 ```
-:::
+{% /code-group %}
 
 ```Text
 Imported access "us2" to "/home/user/.config/storj/uplink/access.json"
@@ -116,7 +116,7 @@ Imported access "us2" to "/home/user/.config/storj/uplink/access.json"
 
 You will import the created access grant to uplink as a named access and replace it if it exists.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access create --import-as us2 --force
 ```
@@ -128,7 +128,7 @@ uplink access create --import-as us2 --force
 ```linux
 uplink access create --import-as us2 --force
 ```
-:::
+{% /code-group %}
 
 ```Text
 Imported access "us2" to "/home/user/.config/storj/uplink/access.json"

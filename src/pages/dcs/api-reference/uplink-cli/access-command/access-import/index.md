@@ -9,7 +9,7 @@ This command allows you to import the Access Grant to Uplink.
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access import [flags] <name> <access|filename>
 ```
@@ -21,7 +21,7 @@ uplink access import [flags] <name> <access|filename>
 ```linux
 uplink access import [flags] <name> <access|filename>
 ```
-:::
+{% /code-group %}
 
 ## Arguments
 
@@ -54,7 +54,7 @@ Please [](docId\:b4-QgUOxVHDHSIWpAf3hG)  or [](docId\:OXSINcFRuVMBacPvswwNU) bef
 
 Save the created Access Grant to the file `access.txt`. As result, this command will import the Access Grant from the file to the access with the specified name into Uplink.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access import main access.txt
 ```
@@ -66,7 +66,7 @@ uplink access import main access.txt
 ```linux
 uplink access import main access.txt
 ```
-:::
+{% /code-group %}
 
 ```Text
 Imported access "main" to "/home/user/.config/storj/uplink/access.json"
@@ -76,7 +76,7 @@ Imported access "main" to "/home/user/.config/storj/uplink/access.json"
 
 As result, the Access Grant will be imported from the console to the access with the specified name.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access import main 18fglgkoitmfvkogmoitr....
 ```
@@ -88,7 +88,7 @@ uplink access import main 18fglgkoitmfvkogmoitr....
 ```macos
 uplink access import main 18fglgkoitmfvkogmoitr....
 ```
-:::
+{% /code-group %}
 
 ```Text
 Imported access "main" to "/home/user/.config/storj/uplink/access.json"
@@ -98,7 +98,7 @@ Imported access "main" to "/home/user/.config/storj/uplink/access.json"
 
 You will import the created access grant to uplink as a named access
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access import main access.txt --force
 ```
@@ -110,7 +110,7 @@ uplink access import main access.txt --force
 ```macos
 uplink access import main access.txt --force
 ```
-:::
+{% /code-group %}
 
 ```Text
 Imported access "main" to "/home/user/.config/storj/uplink/access.json

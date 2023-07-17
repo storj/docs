@@ -9,7 +9,7 @@ Imports a serialized access grant into the configuration.
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe import [flags] NAME (ACCESS | FILE)
 ```
@@ -21,7 +21,7 @@ uplink import [flags] NAME (ACCESS | FILE)
 ```macos
 uplink import [flags] NAME (ACCESS | FILE)
 ```
-:::
+{% /code-group %}
 
 ## Flags
 
@@ -35,7 +35,7 @@ uplink import [flags] NAME (ACCESS | FILE)
 
 ## Import access grant from a file
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe import cheesecake cheesecake.access
 ```
@@ -47,11 +47,11 @@ uplink import cheesecake cheesecake.access
 ```macos
 uplink import cheesecake cheesecake.access
 ```
-:::
+{% /code-group %}
 
 ### Import access grant with a key
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe import cheesecake 13df....qa
 ```
@@ -63,7 +63,7 @@ uplink import cheesecake 13df....qa
 ```macos
 uplink import cheesecake 13df....qa
 ```
-:::
+{% /code-group %}
 
 These two commands will have the same output:
 

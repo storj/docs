@@ -9,7 +9,7 @@ This command allows you to revoke the access.
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access [flags] <revokee>
 ```
@@ -21,7 +21,7 @@ uplink access [flags] <revokee>
 ```macos
 uplink access [flags] <revokee>
 ```
-:::
+{% /code-group %}
 
 ## Arguments
 
@@ -52,7 +52,7 @@ uplink access [flags] <revokee>
 If you want to revoke the current access, you need to switch to a different access with the [](docId\:d-btqElDJY9m26QIKJYP-) command before proceeding.
 {% /callout %}
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access revoke us1-ro
 ```
@@ -64,7 +64,7 @@ uplink access revoke us1-ro
 ```macos
 uplink access revoke us1-ro
 ```
-:::
+{% /code-group %}
 
 ```Text
 Revoked access "us1-ro"
@@ -72,7 +72,7 @@ Revoked access "us1-ro"
 
 ### Revoke an access grant
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access revoke 19hFrjmsi...
 ```
@@ -84,7 +84,7 @@ uplink access revoke 19hFrjmsi...
 ```macos
 uplink access revoke 19hFrjmsi...
 ```
-:::
+{% /code-group %}
 
 ```Text
 Revoked access "19hFrjmsi..."

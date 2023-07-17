@@ -9,7 +9,7 @@ This command allows you to create a restricted Access Grant and print it to `std
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access restrict [flags]
 ```
@@ -21,7 +21,7 @@ uplink access restrict [flags]
 ```macos
 uplink access restrict [flags]
 ```
-:::
+{% /code-group %}
 
 ## Flags
 
@@ -57,7 +57,7 @@ uplink access restrict [flags]
 
 As result, it will print the created access grant to `stdout`. Since we did not specify any restrictions, only the defaults will be applied. This command will print an Access Grant with read only access:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access restrict
 ```
@@ -69,7 +69,7 @@ uplink access restrict
 ```macos
 uplink access restrict
 ```
-:::
+{% /code-group %}
 
 ```Text
 18yMsZpg6ZQdz........
@@ -79,7 +79,7 @@ uplink access restrict
 
 This will export the restricted access grant to a file named "access.txt":
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access restrict --not-after +1h --export-to access.txt
 ```
@@ -91,7 +91,7 @@ uplink access restrict --not-after +1h --export-to access.txt
 ```macos
 uplink access restrict --not-after +1h --export-to access.txt
 ```
-:::
+{% /code-group %}
 
 ```Text
 Exported access to: /home/user/access.txt
@@ -101,7 +101,7 @@ Exported access to: /home/user/access.txt
 
 This will import the write only restricted access grant to Uplink as a named access:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access restrict --access us1 --writeonly --import-as us1-wo
 ```
@@ -113,7 +113,7 @@ uplink access restrict --access us1 --writeonly --import-as us1-wo
 ```macos
 uplink access restrict --access us1 --writeonly --import-as us1-wo
 ```
-:::
+{% /code-group %}
 
 ```Text
 Imported access "us1-wo" to "/home/user/.config/storj/uplink/access.json"
@@ -124,7 +124,7 @@ Imported access "us1-wo" to "/home/user/.config/storj/uplink/access.json"
 
 This will import the restricted access grant to Uplink as a named access and replace it if one existed already:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access restrict --import-as us1-ro --force
 ```
@@ -136,7 +136,7 @@ uplink access restrict --import-as us1-ro --force
 ```macos
 uplink access restrict --import-as us1-ro --force
 ```
-:::
+{% /code-group %}
 
 ```Text
 Imported access "us1-ro" to "/home/user/.config/storj/uplink/access.json"
@@ -147,7 +147,7 @@ Imported access "us1-ro" to "/home/user/.config/storj/uplink/access.json"
 
 This will create the restricted access grant for several prefixes:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access restrict --prefix sj://cakes/New-York --prefix sj://pies
 ```
@@ -159,7 +159,7 @@ uplink access restrict --prefix sj://cakes/New-York --prefix sj://pies
 ```macos
 uplink access restrict  --prefix sj://cakes/New-York --prefix sj://pies
 ```
-:::
+{% /code-group %}
 
 ```Text
 16Xng...

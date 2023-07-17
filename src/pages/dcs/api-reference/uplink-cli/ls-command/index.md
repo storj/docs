@@ -9,7 +9,7 @@ updatedAt: 2023-03-22T13:03:20.000Z
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe ls [sj://BUCKET[/PREFIX]] [flags]
 ```
@@ -21,7 +21,7 @@ uplink ls [sj://BUCKET[/PREFIX]] [flags]
 ```macos
 uplink ls [sj://BUCKET[/PREFIX]] [flags]
 ```
-:::
+{% /code-group %}
 
 ## Flags
 
@@ -45,7 +45,7 @@ uplink ls [sj://BUCKET[/PREFIX]] [flags]
 
 ## List buckets
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe ls
 ```
@@ -57,13 +57,13 @@ uplink ls
 ```macos
 uplink ls
 ```
-:::
+{% /code-group %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/37CrYbSUci3Pdlh1QcuwW_ls-project.png)
 
 ### List objects in a bucket
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe ls sj://images
 ```
@@ -75,13 +75,13 @@ uplink ls sj://images
 ```macos
 uplink ls sj://images
 ```
-:::
+{% /code-group %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/yqXPSB-VzWVfHnSdD0i3A_ls-bucket.png)
 
 ### List by prefix
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe ls sj://images/cakes
 ```
@@ -93,13 +93,13 @@ uplink ls sj://images/cakes
 ```macos
 uplink ls sj://images/cakes
 ```
-:::
+{% /code-group %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/jC9kW-YXQ7fi3xje1o5Vs_ls-prefix.png)
 
 ### List recursively
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe ls --recursive 
 ```
@@ -111,13 +111,13 @@ uplink ls --recursive
 ```macos
 uplink ls --recursive 
 ```
-:::
+{% /code-group %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/EbQXgIH4f3qxT1oP7K9kk_ls-example-hierarchy3.png)
 
 ### List encrypted paths of all objects in a bucket
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe ls sj://recipes --encrypted --recursive
 ```
@@ -129,7 +129,7 @@ uplink ls sj://recipes --encrypted
 ```macos
 uplink ls sj://recipes --encrypted
 ```
-:::
+{% /code-group %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/CBy2GPMCGBtZtHw7V7PVm_ls-encrypted.png)
 

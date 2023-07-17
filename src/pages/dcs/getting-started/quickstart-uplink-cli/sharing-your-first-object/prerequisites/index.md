@@ -14,7 +14,7 @@ Previous steps:
 
 If you have followed the previous tutorial, you already have a `cakes` bucket. If you don't, simply create it and re-upload using the following command:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp ~/Desktop/cheesecake.jpg sj://cakes
 ```
@@ -26,11 +26,11 @@ uplink cp ~/Desktop/cheesecake.jpg sj://cakes
 ```linux
 uplink cp ~/Desktop/cheesecake.jpg sj://cakes
 ```
-:::
+{% /code-group %}
 
 Let's (re)upload our cheesecake image:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp ~/Desktop/cheesecake.jpg sj://cakes
 ```
@@ -42,5 +42,5 @@ uplink cp ~/Desktop/cheesecake.jpg sj://cakes
 ```linux
 uplink cp ~/Desktop/cheesecake.jpg sj://cakes
 ```
-:::
+{% /code-group %}
 

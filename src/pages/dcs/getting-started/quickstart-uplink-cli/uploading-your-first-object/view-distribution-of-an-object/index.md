@@ -12,7 +12,7 @@ You can view the geographic distribution of your object and generate a shareable
 
 See [](docId\:tBnCSrmR1jbOewG38fIr4)for specifications on how to select an auth region and restrict the `uplink share --url` command.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe share --url --not-after=+2h sj://cakes/cheesecake.jpg
 ```
@@ -24,7 +24,7 @@ uplink share --url --not-after=+2h sj://cakes/cheesecake.jpg
 ```linux
 uplink share --url --not-after=+2h sj://cakes/cheesecake.jpg
 ```
-:::
+{% /code-group %}
 
 Copy the URL that is returned by the `uplink share --url` command and paste into your browser window.
 

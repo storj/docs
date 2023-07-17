@@ -10,6 +10,7 @@ markdown_files.each do |filename|
 
   content = File.read(filename)
   converted_content = content.gsub(/:::hint\{type=\"(.*?)\"\}(.*?):::/m, '{% callout type="\1"  %} \2{% /callout %}')
+  converted_content = converted_content.gsub(/:::codeblocktabs(.*?):::/m, '{% code-group %}\1{% /code-group %}')
 
 
   File.open(filename, 'w') do |file|

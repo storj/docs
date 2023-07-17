@@ -28,7 +28,7 @@ Create an Access Grant in the Uplink CLI with Satellite and API Key info from  t
 
 6\. Make sure you've already [](docId\:hFL-goCWqrQMJPcTN82NB)  and run `uplink setup`.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe setup
 ```
@@ -40,7 +40,7 @@ uplink setup
 ```linux
 uplink setup
 ```
-:::
+{% /code-group %}
 
 {% callout type="info"  %} 
 For anyone who has previously configured an Uplink, please use a named access. If you want to replace the default access, you need to either specify the `--force` flag to the `uplink setup` command or [](docId\:b4-QgUOxVHDHSIWpAf3hG) and use the `uplink access import` command with `--force` flag to import it, or use the `uplink access create --import-to <name>` command with `--force` flag to create an Access Grant in CLI and import it to the specified access in the local store of Uplink.
@@ -54,7 +54,7 @@ For anyone who has previously configured an Uplink, please use a named access. I
 &#x20;If you chose an access name, you'll need to specify it in the following command as `--access=name`
 {% /callout %}
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access restrictt --readonly=false
 ```
@@ -66,7 +66,7 @@ uplink access restrict --readonly=false
 ```linux
 uplink access restrict --readonly=false
 ```
-:::
+{% /code-group %}
 
 {% callout type="danger"  %} 
 Keep your full-rights Access Grant secret, it contains the encryption key and will enable uploading, downloading or deleting your data from the entire project!

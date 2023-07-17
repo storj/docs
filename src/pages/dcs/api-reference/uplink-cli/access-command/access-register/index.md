@@ -9,7 +9,7 @@ Register your access for use with a hosted gateway.
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access register <flags> <ACCESS-GRANT>
 ```
@@ -21,7 +21,7 @@ uplink access register <flags> <ACCESS-GRANT>
 ```macos
 uplink access register <flags> <ACCESS-GRANT>
 ```
-:::
+{% /code-group %}
 
 ## Flags
 
@@ -36,7 +36,7 @@ uplink access register <flags> <ACCESS-GRANT>
 
 Once you have an access grant from the [](docId\:OXSINcFRuVMBacPvswwNU) or `uplink share` you can register it with a GatewayMT auth service and designate the access to be public (no secret ket necessary to access) or private. If you want to use it to host a static site or share a URL, you must create a public access.&#x20;
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access register --public=true <ACCESS-GRANT>
 ```
@@ -48,7 +48,7 @@ uplink access register --public=true <ACCESS-GRANT>
 ```macos
 uplink access register --public=true <ACCESS-GRANT>
 ```
-:::
+{% /code-group %}
 
 ```Text
 ========== CREDENTIALS ===================================================================

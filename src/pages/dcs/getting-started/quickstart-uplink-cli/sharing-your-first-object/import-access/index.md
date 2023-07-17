@@ -10,7 +10,7 @@ Importing an access is done using the `import` command.
 
 ## Import from the file
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access import cheesecake cheesecake.access
 ```
@@ -22,7 +22,7 @@ uplink access import cheesecake ~/cheesecake.access
 ```linux
 uplink access import cheesecake ~/cheesecake.access
 ```
-:::
+{% /code-group %}
 
 This should give you the following output:
 
@@ -30,7 +30,7 @@ This should give you the following output:
 
 ### Import from the input
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access import cheesecake 14dfgh....qr
 ```
@@ -42,13 +42,13 @@ uplink access import cheesecake 14dfgh....qr
 ```linux
 uplink access import cheesecake 14dfgh....qr
 ```
-:::
+{% /code-group %}
 
 ### Check list of Access grants
 
 You can list your available accesses using:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access list
 ```
@@ -60,7 +60,7 @@ uplink access list
 ```linux
 uplink access list
 ```
-:::
+{% /code-group %}
 
 ```Text
 CURRENT    NAME           SATELLITE
@@ -71,7 +71,7 @@ CURRENT    NAME           SATELLITE
 
 To get more information on an access use the `inspect` command:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access inspect cheesecake
 ```
@@ -83,7 +83,7 @@ uplink access inspect cheesecake
 ```linux
 uplink access inspect cheesecake
 ```
-:::
+{% /code-group %}
 
 ```Text
 {
@@ -114,7 +114,7 @@ There is no command to delete an access. You can delete an access directly in yo
 
 You can now use this access setting the `--access` flag. For example, to copy the shared object to your current directory you would use:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp --access cheesecake sj://cakes/cheesecake.jpg .
 ```
@@ -126,5 +126,5 @@ uplink cp --access cheesecake sj://cakes/cheesecake.jpg .
 ```linux
 uplink cp --access cheesecake sj://cakes/cheesecake.jpg .
 ```
-:::
+{% /code-group %}
 

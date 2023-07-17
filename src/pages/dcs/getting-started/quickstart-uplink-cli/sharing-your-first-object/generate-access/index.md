@@ -18,7 +18,7 @@ There are several ways to share access to an object:
 
 You can create an access using the `uplink share` command using [](docId\:Ch4vLynsEqyT2-3qDEBiy).  For example:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe share sj://cakes/cheesecake.jpg --export-to cheesecake.access
 ```
@@ -30,7 +30,7 @@ uplink share sj://cakes/cheesecake.jpg --export-to cheesecake.access
 ```linux
 uplink share sj://cakes/cheesecake.jpg --export-to cheesecake.access
 ```
-:::
+{% /code-group %}
 
 The `--export-to` flag is used to export the access to a file. This gives the following output:
 
@@ -58,7 +58,7 @@ An access generated using `uplink access restrict` with no arguments creates an 
 
 Example:&#x20;
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access restrict --not-after=+10h --prefix sj://cakes/NewYork
 ```
@@ -70,7 +70,7 @@ uplink share --readonly=false --not-before=+2h --not-after=+10h sj://cakes/
 ```linux
 uplink share --readonly=false --not-before=+2h --not-after=+10h sj://cakes/
 ```
-:::
+{% /code-group %}
 
 ```Text
 17UjiCXa...
@@ -90,7 +90,7 @@ You may also indicate the duration of access by specifying a start and end time.
 
 The list of all restrictions can be found [](docId\:tBnCSrmR1jbOewG38fIr4). Example:&#x20;
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe share --readonly=false --not-before=+2h --not-after=+10h sj://cakes/
 ```
@@ -102,7 +102,7 @@ uplink share --readonly=false --not-before=+2h --not-after=+10h sj://cakes/
 ```linux
 uplink share --readonly=false --not-before=+2h --not-after=+10h sj://cakes/
 ```
-:::
+{% /code-group %}
 
 ```Text
 =========== ACCESS RESTRICTIONS ==========================================================

@@ -9,7 +9,7 @@ Shares restricted access to objects
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe share [ALLOWED_PATH_PREFIX]... [flags]
 ```
@@ -21,7 +21,7 @@ uplink share [ALLOWED_PATH_PREFIX]... [flags]
 ```macos
 uplink share [ALLOWED_PATH_PREFIX]... [flags]
 ```
-:::
+{% /code-group %}
 
 {% callout type="danger"  %} 
 An access generated using `uplink share` with no arguments creates an access to your **entire project** with read permissions.
@@ -54,7 +54,7 @@ An access generated using `uplink share` with no arguments creates an access to 
 
 ## Share a single object
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe share sj://cakes/cheesecake.jpg
 ```
@@ -66,7 +66,7 @@ uplink share sj://cakes/cheesecake.jpg
 ```macos
 uplink share sj://cakes/cheesecake.jpg
 ```
-:::
+{% /code-group %}
 
 Notice that by default, only download (read) and list operations are allowed.
 
@@ -85,7 +85,7 @@ Access    : 12yUGNqdsKX1Xky2qVoGwdpL...
 
 ### Share a bucket with all permissions
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe share sj://cakes/ --readonly=false
 ```
@@ -97,7 +97,7 @@ uplink share sj://cakes/ --readonly=false
 ```macos
 uplink share sj://cakes/ --readonly=false
 ```
-:::
+{% /code-group %}
 
 As the `--readonly` flag is set to false, *uploads* and *deletes* are allowed.
 
@@ -118,7 +118,7 @@ Access    : 12BncZWg9xc4GyXCgCi3YvBg...
 
 Generate credentials to use with our S3 multitenant gateway: [](docId\:AsyYcUJFbO1JI8-Tu8tW3)&#x20;
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe share sj://cakes/ --register
 ```
@@ -130,7 +130,7 @@ uplink share sj://cakes/ --register
 ```macos
 uplink share sj://cakes/ --register
 ```
-:::
+{% /code-group %}
 
 Notice the endpoint generated for Gateway MT: `https://gateway.storjshare.io`.
 
@@ -155,7 +155,7 @@ Endpoint     : https://gateway.storjshare.io
 
 You can also generate a URL to share your projects/buckets/objects
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe share sj://cakes/ --url --not-after=none --base-url=https://link.storjshare.io
 ```
@@ -167,7 +167,7 @@ uplink share sj://cakes/ --url --not-after=none --base-url=https://link.storjsha
 ```macos
 uplink share sj://cakes/ --url --not-after=none --base-url=https://link.storjshare.io
 ```
-:::
+{% /code-group %}
 
 {% callout type="info"  %} 
 Note that specifying `--base-url` is optional, but the `--not-after` is mandatory. If you do not want to specify date or offset - you can specify `--not-after=none`.
@@ -210,7 +210,7 @@ For more detail, visit the documentation on [](docId\:GkgE6Egi02wRZtyryFyPz).
 
 While you may share individual objects with the above linksharing instructions, you must share a bucket or object prefix for webhosting. Your web address will render the index.html file.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe share --dns www.mysite.com sj://cakes/ --base-url https://link.storjshare.io
 ```
@@ -222,7 +222,7 @@ uplink share --dns www.mysite.com sj://cakes/ --base-url https://link.storjshare
 ```macos
 uplink share --dns www.mysite.com sj://cakes/ --base-url https://link.storjshare.io
 ```
-:::
+{% /code-group %}
 
 ```Text
 =========== ACCESS RESTRICTIONS ==========================================================

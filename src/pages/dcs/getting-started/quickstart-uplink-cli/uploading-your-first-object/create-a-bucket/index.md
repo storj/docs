@@ -12,7 +12,7 @@ You need to have a satellite account and installed Uplink CLI as described in []
 
 Let's create a bucket to store photos of cake for our "food app" project:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe mb sj://cakes
 ```
@@ -24,7 +24,7 @@ uplink mb sj://cakes
 ```linux
 uplink mb sj://cakes
 ```
-:::
+{% /code-group %}
 
 Result
 

@@ -9,7 +9,7 @@ This command allows you to switch the current access for Uplink.
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access use <access>
 ```
@@ -21,7 +21,7 @@ uplink access use <access>
 ```macos
 uplink access use <access>
 ```
-:::
+{% /code-group %}
 
 ## Arguments
 
@@ -42,7 +42,7 @@ uplink access use <access>
 
 You need to have more than one accesses in the local store of Uplink before proceeding. See[](docId\:x0Ej1E9_xq9xXFaSvyPTT),[](docId:9MIN1usU8WPUY2212Y-_S), and [](docId\:OuoKJl9KqbJVQB9Xkdy3g) commands for information how to create/import/setup an access.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe access use us1
 ```
@@ -54,7 +54,7 @@ uplink access use us1
 ```macos
 uplink access use us1
 ```
-:::
+{% /code-group %}
 
 ```none
 Switched default access to "us1"

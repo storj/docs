@@ -189,7 +189,7 @@ You can use two methods to obtain an Access Grant:
 
 Now we got our access grant and can configure the gateway as follows:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./gateway setup --access 14aV.... --non-interactive
 ```
@@ -205,7 +205,7 @@ gateway setup --access 14aV.... --non-interactive
 ```dockerfile
 docker run -it --rm --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway setup --access 14aV.... --non-interactive
 ```
-:::
+{% /code-group %}
 
 This command will register the provided access as the default access in the gateway config file.
 

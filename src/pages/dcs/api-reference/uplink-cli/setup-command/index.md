@@ -9,7 +9,7 @@ Create an uplink config file
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe setup [flags]
 ```
@@ -21,7 +21,7 @@ uplink setup [flags]
 ```macos
 uplink setup [flags]
 ```
-:::
+{% /code-group %}
 
 ## Flags
 

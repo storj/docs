@@ -9,7 +9,7 @@ Copies a local file or Storj object to another location locally or in Storj  DCS
 
 ## Usage
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp [flags] SOURCE DESTINATION
 ```
@@ -21,7 +21,7 @@ uplink cp [flags] SOURCE DESTINATION
 ```macos
 uplink cp [flags] SOURCE DESTINATION
 ```
-:::
+{% /code-group %}
 
 The `cp` command is used to upload and download objects. The `cp` command abstracts the complexity of encryption, erasure coding, and distributing pieces of a file to storage nodes.
 
@@ -49,7 +49,7 @@ When the `cp` command is used to copy a file to Storj DCS (upload), the CLI firs
 
 To copy `cheesecake.jpg` into the existing bucket `cakes`, use the following command:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp cheesecake.jpg sj://cakes 
 ```
@@ -61,7 +61,7 @@ uplink cp cheesecake.jpg sj://cakes
 ```macos
 uplink cp cheesecake.jpg sj://cakes
 ```
-:::
+{% /code-group %}
 
 {% callout type="info"  %} 
 You cannot use regular expressions to specify which files to copy (e.g. `uplink cp cheese* sj://cakes` will not work). Also, you can only specify one source at a time (no )
@@ -77,7 +77,7 @@ When the `cp` command is used to copy a file from Storj DCS (download), the CLI 
 
 To copy a file from a project to a local drive, use:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp sj://cakes/cheesecake.jpg ~/Downloads/
 ```
@@ -89,7 +89,7 @@ uplink cp sj://cakes/cheesecake.jpg ~/Downloads/
 ```macos
 uplink cp sj://cakes/cheesecake.jpg ~/Downloads/
 ```
-:::
+{% /code-group %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/L3WG_T6fFd44KDKM0ySZU_cp02.png)
 
@@ -97,7 +97,7 @@ uplink cp sj://cakes/cheesecake.jpg ~/Downloads/
 
 The uploaded object can be set to expire at a certain time. After the expiration date, the file is no longer available and no longer will generate usage charges. To set an expiration date for a file when uploading it, you should use the `cp` command with the `--expires` flag:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp --expires 2021-12-31T13:00:00+02:00 cheesecake.jpg sj://cakes
 ```
@@ -109,7 +109,7 @@ uplink cp  --expires 2021-12-31T13:00:00+02:00 cheesecake.jpg sj://cakes
 ```macos
 uplink cp  --expires 2021-12-31T13:00:00+02:00 cheesecake.jpg sj://cakes
 ```
-:::
+{% /code-group %}
 
 The date is given in the `yyyy-mm-ddThh:mm:ssZhh:mm` format defined in ISO 8601.  `2021-12-31T13:00:00+02:00` reads "December, 31st at 1pm UTC+2". A date ending with "Z", such as `2021-12-31T13:00:00Z`, is in UTC.
 
@@ -123,7 +123,7 @@ If you have enough upstream bandwidth, you can use the multipart functionality t
 
 To increase upload speed, you can use the `cp` command with the `--parallelism 10`  flag (the number you can set according to your preferences and available upstream bandwidth):
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp --parallelism 10 cheesecake.jpg sj://cakes
 ```
@@ -135,7 +135,7 @@ uplink cp --parallelism 10 cheesecake.jpg sj://cakes
 ```macos
 uplink cp --parallelism 10 cheesecake.jpg sj://cakes
 ```
-:::
+{% /code-group %}
 
 Since our sample object is small, you likely will not notice a difference.
 
@@ -147,7 +147,7 @@ It would be significantly different with big objects like videos or OS images et
 
 You can recursively copy files:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp --recursive ~/receipts sj://cakes/
 ```
@@ -159,7 +159,7 @@ uplink cp --recursive ~/receipts sj://cakes/
 ```macos
 uplink cp --recursive ~/receipts sj://cakes/
 ```
-:::
+{% /code-group %}
 
 Sample output:
 
@@ -180,7 +180,7 @@ You need to have at least version 1.54.1 of Uplink installed to support server-s
 
 First, to create a new bucket, we will use the `mb` command, as copying is possible only to an existing bucket.
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe mb sj://new-recipes
 ```
@@ -192,7 +192,7 @@ uplink mb sj://new-recipes
 ```macos
 uplink mb sj://new-recipes
 ```
-:::
+{% /code-group %}
 
 ```powershell
 Bucket new-recipes created
@@ -204,7 +204,7 @@ Nested buckets are not supported, but you can use prefixes, as they would act al
 
 Now, to copy a file from a bucket within a project to another bucket in the same project with prefix `cakes`, use:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp sj://cakes/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
 ```
@@ -216,7 +216,7 @@ uplink cp sj://cakes/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
 ```macos
 uplink cp sj://cakes/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
 ```
-:::
+{% /code-group %}
 
 Sample Output:
 

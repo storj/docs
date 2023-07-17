@@ -10,7 +10,7 @@ docId: K7tsSNrIYYpelUFtVKe_F
 
 To download our cheesecake photo, let's use the copy command:
 
-:::codeblocktabs
+{% code-group %}
 ```windows
 ./uplink.exe cp sj://cakes/cheesecake.jpg ~/Downloads/cheesecake.jpg
 ```
@@ -22,7 +22,7 @@ uplink cp sj://cakes/cheesecake.jpg ~/Downloads/cheesecake.jpg
 ```linux
 uplink cp sj://cakes/cheesecake.jpg ~/Downloads/cheesecake.jpg
 ```
-:::
+{% /code-group %}
 
 Result
 

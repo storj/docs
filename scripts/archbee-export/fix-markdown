@@ -8,20 +8,12 @@ puts "Found #{markdown_files.size} markdown files"
 markdown_files.each do |filename|
   puts "Processing file #{filename}"
 
-  original_lines = File.readlines(filename)
-  replaced = false
+  content = File.read(filename)
+  converted_content = content.gsub(/:::hint{type=\"(.*?)\"}(.*?):::/m, '{% callout type="\1"  %} \2 {% /callout %}')
 
-  edited_lines = original_lines.map do |line|
-    if line.start_with?('###') && !replaced
-      replaced = true
-      line.gsub!('###', '##')
-    else
-      line
-    end
-  end
 
   File.open(filename, 'w') do |file|
-    file.puts edited_lines
+    file.puts converted_content
   end
 
   puts "Finished processing file #{filename}"

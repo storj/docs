@@ -55,7 +55,7 @@ export default function MyApp({ Component, pageProps, example }) {
 
   let pageTitle =
     pageProps.markdoc?.frontmatter.pageTitle ||
-    `${pageProps.markdoc?.frontmatter.title} - Docs`
+    `${pageProps.markdoc?.frontmatter.title} - Storj Docs`
 
   let description = pageProps.markdoc?.frontmatter.description
 

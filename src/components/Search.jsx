@@ -4,7 +4,7 @@ import { createAutocomplete } from '@algolia/autocomplete-core'
 import { Dialog } from '@headlessui/react'
 import clsx from 'clsx'
 import Highlighter from 'react-highlight-words'
-import { navigation } from '@/components/Layout'
+import navigation from '@/components/sideNavigation'
 
 function SearchIcon(props) {
   return (

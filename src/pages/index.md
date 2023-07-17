@@ -1,7 +1,7 @@
 ---
 title: Getting started
-pageTitle: CacheAdvance - Never miss the cache again.
-description: Cache every single thing your app could ever do ahead of time, so your code never even has to run at all.
+pageTitle: Storj Docs
+description: Make the world your datacenter
 ---
 
 Learn how to get CacheAdvance set up in your project in under thirty minutes or it's free. {% .lead %}
@@ -23,6 +23,30 @@ Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit per
 ---
 
 ## Quick start
+
+{% code-group %}
+
+```bash
+# cURL is most likely already installed on your machine
+curl --version
+```
+
+```jsx
+# Install the Protocol JavaScript SDK
+npm install @example/protocol-api --save
+```
+
+```python
+# Install the Protocol Python SDK
+pip install protocol_api
+```
+
+```php
+# Install the Protocol PHP SDK
+composer require protocol/sdk
+```
+
+{% /code-group %}
 
 Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
 

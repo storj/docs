@@ -3,9 +3,46 @@
 @import './prism.css';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+.dark {
+  color-scheme: dark;
+}
 
 @layer base {
-  [inert] ::-webkit-scrollbar {
-    display: none;
-  }
+
+	::-webkit-scrollbar {
+		width: .5rem;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #27272E;
+		border-radius: 1rem;
+	}
+	::-webkit-scrollbar-thumb:active {
+		background-color: #131314;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: #3B3B46;
+		box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+	}
+
+	/* Scroll track styles (Background) */
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	::-webkit-scrollbar-track:hover,
+	::-webkit-scrollbar-track:active {
+		background: transparent;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		::-webkit-scrollbar-thumb {
+			background: #888;
+		}
+		::-webkit-scrollbar-thumb:active {
+			background-color: #666;
+		}
+		::-webkit-scrollbar-thumb:hover {
+			background: #aaa;
+			box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+		}
+	}
 }

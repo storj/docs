@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+directory_path = ARGV[0]
+
+if directory_path.nil?
+  puts "Please provide a directory path"
+  exit 1
+end
+
+unless Dir.exist?(directory_path)
+  puts "The directory #{directory_path} does not exist"
+  exit 1
+end
+
+markdown_files = Dir.glob("#{directory_path}/**/*.md")
+
+if markdown_files.empty?
+  puts "No markdown files found in the directory #{directory_path}"
+  exit 1
+end
+
+puts "Found #{markdown_files.size} markdown files"
+
+markdown_files.each do |filename|
+  puts "Processing file #{filename}"
+
+  original_lines = File.readlines(filename)
+  replaced = false
+
+  edited_lines = original_lines.map do |line|
+    if line.start_with?('###') && !replaced
+      replaced = true
+      line.gsub!('###', '##')
+    else
+      line
+    end
+  end
+
+  File.open(filename, 'w') do |file|
+    file.puts edited_lines
+  end
+
+  puts "Finished processing file #{filename}"
+end
+

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "site": "storj-docs",
+    "source": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "frameworksBackend": {
+      "region": "us-central1"
+    }
+  }
+}

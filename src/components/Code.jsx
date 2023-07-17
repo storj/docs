@@ -127,8 +127,8 @@ function CodePanel({ tag, label, code, children }) {
         tag={child.props.tag ?? tag}
         label={child.props.label ?? label}
       />
-      <div className="relative">
-        <pre className="p-4 overflow-x-auto text-xs text-white ">{children}</pre>
+      <div className="relative p-4 overflow-x-auto text-sm ">
+        {children}
         <CopyButton code={child.props.code ?? code} />
       </div>
     </div>
@@ -143,21 +143,21 @@ function CodeGroupHeader({ title, children, selectedIndex }) {
   }
 
   return (
-    <div className="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+    <div className="flex text-xs text-slate-400 leading-6">
       {title && (
-        <h3 className="pt-3 mr-auto text-xs font-semibold text-white">
+        <h3 className="flex items-center flex-none px-4 py-1 border-t border-b text-sky-300 border-t-transparent border-b-sky-300">
           {title}
         </h3>
       )}
       {hasTabs && (
-        <Tab.List className="flex -mb-px text-xs font-medium gap-4">
+        <Tab.List className="flex -mb-px text-xs font-medium ">
           {Children.map(children, (child, childIndex) => (
             <Tab
               className={clsx(
-                'border-b py-3 transition focus:[&:not(:focus-visible)]:outline-none',
+                'flex-none text-sky-300 border-t border-b border-t-transparent  px-4 py-2 flex items-center pr-2',
                 childIndex === selectedIndex
-                  ? 'border-emerald-500 text-emerald-400'
-                  : 'border-transparent text-zinc-400 hover:text-zinc-300'
+                  ? 'bg-none shadow'
+                  : 'border-slate-500/30 rounded-t text-zinc-400 hover:text-zinc-300'
               )}
             >
               {getPanelTitle(child.props)}
@@ -165,6 +165,7 @@ function CodeGroupHeader({ title, children, selectedIndex }) {
           ))}
         </Tab.List>
       )}
+            <div className="flex items-center flex-auto border border-l-0 rounded-tl bg-slate-700/50 border-slate-500/30"></div>
     </div>
   )
 }
@@ -270,7 +271,7 @@ export function CodeGroup({ children, title, ...props }) {
     <CodeGroupContext.Provider value={true}>
       <Container
         {...containerProps}
-        className="my-6 overflow-hidden shadow-md not-prose rounded-2xl bg-zinc-900 dark:ring-1 dark:ring-white/10"
+        className="pt-1 pb-3 my-8 overflow-hidden shadow-lg rounded-xl bg-slate-900 dark:bg-slate-800/60 dark:ring-1 dark:ring-slate-300/10 not-prose dark:shadow-none"
       >
         <CodeGroupHeader title={title} {...headerProps}>
           {children}

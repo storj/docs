@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+require 'optparse'
+require 'yaml'
+
+# Set up an options hash to hold our command-line options
+options = {}
+
+# Set up the option parser
+OptionParser.new do |opts|
+  opts.banner = "Usage: rename.rb [options]"
+
+  opts.on('-d', '--directory DIRECTORY', 'Directory to rename files in') do |dir|
+    options[:directory] = dir
+  end
+end.parse!
+
+# Use the directory provided, or if none was provided, use the current directory
+directory = options[:directory] || '.'
+
+# Get all files in the specified directory
+Dir.glob(File.join(directory, "*.md")).each do |file|
+  # Skip if file is actually a directory
+  next if File.directory?(file)
+
+  # Read the file
+  contents = File.read(file)
+
+  # Extract the frontmatter
+  frontmatter, _ = contents.split("---\n", 3).slice(1,2)
+  # puts "frontmatter\n#{frontmatter}"
+
+  # Parse the frontmatter as YAML
+  # puts "reading #{file}"
+  metadata = YAML.safe_load(frontmatter)
+
+  # Extract the title and slug, or use the filename as the slug if not present
+  title = metadata['title']
+  slug = metadata['slug'] || File.basename(file, ".*")
+
+  # Create the output
+  output = "{ title: '#{title}', href: '/dcs/#{slug}' },"
+  puts output
+end
+

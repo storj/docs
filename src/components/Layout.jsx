@@ -47,7 +47,7 @@ function Header({ navigation }) {
   return (
     <header
       className={clsx(
-        'sticky top-0 z-50 bg-white px-4 pt-5 pb-5 shadow-md shadow-slate-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:pb-0 lg:px-8 lg:divide-y lg:divide-gray-200',
+        'sticky top-0 z-50 bg-white px-4 pt-5 pb-5 shadow-md shadow-slate-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:pb-0 lg:px-8 lg:divide-y lg:divide-gray-200 ',
         isScrolled
           ? 'dark:bg-slate-900/95 dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75'
           : 'dark:bg-transparent'
@@ -169,7 +169,7 @@ export function Layout({ children, title, tableOfContents }) {
           <div className="absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden" />
           <div className="absolute bottom-0 right-0 hidden w-px h-12 top-16 bg-gradient-to-t from-slate-800 dark:block" />
           <div className="absolute bottom-0 right-0 hidden w-px top-28 bg-slate-800 dark:block" />
-          <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 lg:py-8 pl-0.5 pr-8 xl:w-72 xl:pr-16">
+          <div className="content sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden py-16 lg:py-8 pl-0.5 pr-8 xl:w-72 xl:pr-16">
             <Navigation navigation={sideNavigation} />
           </div>
         </div>

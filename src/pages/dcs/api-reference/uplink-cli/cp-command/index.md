@@ -63,9 +63,9 @@ uplink cp cheesecake.jpg sj://cakes
 ```
 :::
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 You cannot use regular expressions to specify which files to copy (e.g. `uplink cp cheese* sj://cakes` will not work). Also, you can only specify one source at a time (no )
-:::
+{% /callout %}
 
 Output:
 
@@ -174,9 +174,9 @@ It is possible to copy a file from one Storj DCS location to another Storj DCS l
 
 When the `cp` command is used to copy a file from one Storj DCS location to another Storj DCS location, the object will be copied entirely on the "server" side - **this will not count against your egress limits, as the object is not being downloaded**.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 You need to have at least version 1.54.1 of Uplink installed to support server-side copy
-:::
+{% /callout %}
 
 First, to create a new bucket, we will use the `mb` command, as copying is possible only to an existing bucket.
 
@@ -198,9 +198,9 @@ uplink mb sj://new-recipes
 Bucket new-recipes created
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Nested buckets are not supported, but you can use prefixes, as they would act almost like subfolders.
-:::
+{% /callout %}
 
 Now, to copy a file from a bucket within a project to another bucket in the same project with prefix `cakes`, use:
 

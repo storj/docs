@@ -42,9 +42,9 @@ For more information about the iX Storj integration, see the [press release](htt
 
 Navigate to [https://ix.storj.io](https://ix.storj.io/) to sign up iX-Storj account. Enter your full name, email address, and a password, as shown below:
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 If you have an existing Storj account, you will need to contact support to have it linked to the iX Storj integration. See [here](https://forum.storj.io/t/truenas-backups-and-differences-between-storj-and-storj-ix/20044/7) for more information
-:::
+{% /callout %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/PnQ7D7Z6fU0RPKZpOCRXJ_image.png)
 
@@ -107,9 +107,9 @@ Create S3 credentials in the Storj web console:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Uxn8zBqXQVmQvsswV3pJ2_image.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
-:::
+{% /callout %}
 
 6\. Click **Create Access** to finish creation of your S3 credentials
 

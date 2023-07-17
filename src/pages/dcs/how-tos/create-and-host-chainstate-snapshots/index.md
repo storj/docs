@@ -34,9 +34,9 @@ For different uplink binaries see [](docId\:hFL-goCWqrQMJPcTN82NB)
 
 Click "Continue in CLI" after giving your access grant a name
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Keep the credential window open until you have completed the `uplink setup` command below
-:::
+{% /callout %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/faDJYPJEby6kdGKcDksq4_screen-shot-2022-07-01-at-103337-am.png)
 
@@ -58,9 +58,9 @@ Copy your "Satellite Address" from the web console to the uplink cli "Satellite 
 
 Enter a passphrase to complete the setup
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Remember your **Passphrase** you will need it for future access of the data
-:::
+{% /callout %}
 
 ```Text
 $ uplink setup
@@ -110,8 +110,8 @@ Copy the access grant in file. You'll use it later in the template below.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/A0R9dXbDt5ZZcl8kusZNe_screen-shot-2022-07-01-at-30619-pm.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 When populating the template, only publish the access grant that is limited to downloads. Do not use the access grant that was used to upload snapshots.
-:::
+{% /callout %}
 
 Adapt the [Download blockchain snapshots template](https://github.com/storj/chainstate-snapshots/blob/main/download-chainstate-template.md), changing `<your_access_grant>` fields to the Download-only access grant. The commands from the template can be published to your communities.

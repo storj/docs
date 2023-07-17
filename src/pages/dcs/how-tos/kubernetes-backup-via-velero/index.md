@@ -20,9 +20,9 @@ Velero lets you:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/jSTBcYDqE4MTLcq5GQr3o_kubernetes.jpeg)
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The Storj DCS Velero plugin does not support volume snapshots for now.
-:::
+{% /callout %}
 
 ## Prerequisites
 
@@ -46,9 +46,9 @@ $ velero install --provider tardigrade \
     --no-secret
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 To generate an access grant ($ACCESS) for the configuration, follow the guide here:  [](docId\:LsiWFnRXOkhMuKjQhKbh3).
-:::
+{% /callout %}
 
 **Backup/Restore**
 
@@ -64,9 +64,9 @@ Perform a restore:
 $ velero restore create $RESTORE_NAME --from-backup $BACKUP_NAME
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Note: it's possible to overwrite the backup location or access grant by editing the `backupstoragelocations.velero.io` CR and restarting the Velero Pod on the cluster in case of any mistake with the configuration.
-:::
+{% /callout %}
 
 The complete Velero documentation is [located here.](https://velero.io/docs/main/restore-reference/)
 

@@ -10,9 +10,9 @@ docId: jwCUqpDCk8CUuUqFuykFx
 
 Manage your projects and limits. When you log into the Satellite Admin Console, you start on the [](docId\:k6QwBZM3hnzxkCuQxLOal) for your default Project. A Project is the basic unit for aggregating usage, calculating billing, invoicing fees,  collecting payment, and handling access management. Users can create multiple Projects and projects are invoiced separately. Within a Project, usage is tracked at the Bucket level and aggregated for invoicing to the Project. Project names are not client-side encrypted so that they may be rendered in the Satellite user interface. There are two main drivers for creating multiple Projects: access management and billing.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Learn more about Projects in [](docId\:M-5oxBinC6J1D-qSNjKYS) under Concepts.
-:::
+{% /callout %}
 
 To select, create or **Manage Projects** you can click the name of your project on the left side toolbar above Dashboard.
 
@@ -22,9 +22,9 @@ To select, create or **Manage Projects** you can click the name of your project 
 
 On ***Projects*** screen to create a new Project select the **Create Project**. On Project **Dashboard** you can click the name of the current project and select **Create Project**.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The availability of this function depends on your account tier. Please check [](docId\:Zrbz4XYhIOm99hhRShWHg) for details.
-:::
+{% /callout %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/_75DWodmOKqwaDRytJXvN_projects2.png)
 
@@ -48,13 +48,13 @@ Select **Edit** to the right of the limit to change it. However, it will not all
 
 At the moment the Satellite Admin Console will not allow you to delete a Project.&#x20;
 
-:::hint{type="success"}
+{% callout type="success"  %} 
 But you can delete all buckets and Access Grants from it and rename it to something like "not used". The empty project costs nothing.
-:::
+{% /callout %}
 
 If you believe that you need to remove it anyway, then please remove all data and Access Grants from it before [file a support request](https://supportdcs.storj.io/hc/en-us).
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 We do not have an access to your data and Access Grants, because they are encrypted, and cannot remove your data on your behalf. So, please, remove them yourself before file a support request. We will ask you to do so anyway.
-:::
+{% /callout %}
 

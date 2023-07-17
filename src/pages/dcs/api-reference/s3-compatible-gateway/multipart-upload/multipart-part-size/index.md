@@ -8,11 +8,11 @@ docId: rkPrCIwpTjmMKiZajeaxp
 
 The site of the Multipart Parts your application uploads can impact the  performance and potentially the cost of your storage on Storj DCS.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 For best performance and cost with Storj DCS, you should plan to configure your AWS S3 client library to use a larger part size than standard. Not doing so could result in much higher fees.&#x20;
 
 We recommend 64MB.
-:::
+{% /callout %}
 
 ## Background
 

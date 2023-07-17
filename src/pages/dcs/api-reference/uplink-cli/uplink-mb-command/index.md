@@ -49,9 +49,9 @@ uplink mb sj://cakes
 ```
 :::
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Nested buckets are not supported.
-:::
+{% /callout %}
 
 Output:
 

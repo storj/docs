@@ -18,17 +18,17 @@ These configuration instructions were adapted from the draft instructions being 
 
 *   Docker is installed and running: <https://docs.docker.com/get-docker/>
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Already have a Rucio environment?
 
 Skip ahead to [](docId\:LUZSWyVR7NPwpyzgBD7S6)&#x20;
-:::
+{% /callout %}
 
 ### Clone Rucio and jump into the docker container
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Note that if you get an error like `No such container: dev_rucio_1` run `docker ps`  to identify the name of your rucio container (it may be something like "dev-rucio-1)
-:::
+{% /callout %}
 
 ```console
 git clone https://github.com/rucio/rucio
@@ -49,7 +49,7 @@ tools/run_tests_docker.sh -i
 
 ### Update the ca-certificates package
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The image has python3 linked in `/usr/bin/python`  but yum requires python2
 
 
@@ -63,7 +63,7 @@ One workaround is to change the first line of `/usr/bin/yum`  and `/usr/libexec/
 sdf
 
 `vi /usr/libexec/urlgrabber-ext-down` < now change "python" to "python2" in the first line
-:::
+{% /callout %}
 
 ```console
 yum update ca-certificates

@@ -32,9 +32,9 @@ Both of these constructs work together to provide an access management framework
 
 To make the implementation of these constructs as easy as possible for developers to use, the Storj DCS developer tools abstract the complexity of encoding objects for access management and encryption/decryption.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Understanding how **Authorization** and **Encryption** work together is critical to designing an appropriate access management flow for an application
-:::
+{% /callout %}
 
 ## Combining Authorization and encryption Management: Access Grants
 

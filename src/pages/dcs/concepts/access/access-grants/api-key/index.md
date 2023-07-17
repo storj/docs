@@ -10,9 +10,9 @@ API Keys are based on Macaroons and include the capability to encode  programmat
 
 The API Key encoded into an Access Grants is based on a type of token called a Macaroon.  A Macaroon is essentially a cookie with an internal structure for encoding logic, in this case, access restrictions. A Macaroon embeds the logic for the access it allows and can be restricted, simply by embedding the path restrictions and any additional restrictions within the string that represents the Macaroon. Unlike a typical cookie, a Macaroon is not a random string of bytes, but rather is an envelope with access logic encoded in it.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Storj DCS make it easy to share access to objects securely and privately. You don't need to know how to construct an API Key, but understanding how they work and what the capabilities are provide you with a better understanding of the tools Storj DCS provides you to build more private and secure applications.
-:::
+{% /callout %}
 
 ## About API Keys
 
@@ -34,9 +34,9 @@ When an Uplink Client (LibUplink, Uplink CLI, or Uplink S3 Gateway) is configure
 
 When the Access Grant is created by the Uplink Client, that Access Grant can be passed to a peer (another Uplink Client).  When that peer Uplink Client uses that Access Grant to access an object,  it passes only the API Key to the appropriate Satellite to request access to the object (never the encryption key). The Satellite can determine the validity of the API Key passed to it (along with any Caveats as described below) without needing access to the actual metadata. Since the metadata is also encrypted client-side, this is extremely important.&#x20;
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Effectively, the Satellite does not need to know which user or application is attempting an object or what the object is; The Uplink Client provides only the minimum information that allows the Satellite to determine the validity of the request without knowing anything about the requestor or the object being requested.&#x20;
-:::
+{% /callout %}
 
 ## Encoding Restrictions in an Access Grant
 

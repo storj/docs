@@ -10,9 +10,9 @@ docId: 4oDAezF-FcfPr0WPl7knd
 
 The Storj DCS Satellite Admin Console supports uploading and managing objects directly through the browser with no command-line tool required. This component uses our [](docId\:yYCzPT8HHcbEZZMvfoCFa) service.
 
-:::hint{type="info"}
+{% callout type="info"  %}
 By using hosted Gateway MT you are opting into **server-side encryption**. See [](docId\:hf2uumViqYvS1oq8TYbeW)&#x20;
-:::
+{% /callout %}
 
 ## Configure Object Browser Access
 
@@ -20,9 +20,9 @@ By using hosted Gateway MT you are opting into **server-side encryption**. See [
 
 When you click on the bucket, you will be prompted to read carefully - The object browser uses [](docId\:hf2uumViqYvS1oq8TYbeW).
 
-:::hint{type="info"}
+{% callout type="info"  %}
 Don't forget to save your **Encryption Passphrase** generated below, you will need it for future access.
-:::
+{% /callout %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/PgEXOy3cK2ue1zGwGqxdh_qsobject01.png)
 
@@ -42,13 +42,13 @@ When you click the **Continue** button, you will be placed into the **Objects** 
 
 ## Upload files and folders
 
-:::hint{type="warning"}
-**The web browser is best for uploads up to 1GB. **
+{% callout type="warning"  %}
+**The web browser is best for uploads up to 1GB.**
 
 
 
 To upload larger files, please utilize the [](docId\:TbMdOGCAXNWyPpQmH6EOq).
-:::
+{% /callout %}
 
 If you have not yet created a bucket, the bucket ***demo-bucket*** will be created automatically to allow you to upload objects right away.
 
@@ -60,9 +60,9 @@ You can upload not only files but also folders, just **drag them into the browse
 
 If you want to create a folder, you can do that with the **New Folder** button.
 
-:::hint{type="success"}
+{% callout type="success"  %}
 When you drag and drop your file into the Satellite Admin Console Object Browser, the Storj DCS S3-compatible Gateway will encrypt the data using [](docId\:hf2uumViqYvS1oq8TYbeW), break large files into 64MB Segments (or for smaller files a single segment), then erasure code the segments, breaking each segment into 80 pieces, then distributing those pieces over our network of thousands of independently operated storage nodes.&#x20;
-:::
+{% /callout %}
 
 ## Deleting files
 
@@ -84,9 +84,9 @@ You can create your buckets in the **Objects** view or if you click on the **<-B
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/oJ74hmgmN9h5iDemALwMk_qsobject07.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %}
 The bucket name can only contain lowercase letters, numbers, and hyphens.
-:::
+{% /callout %}
 
 To create a new bucket, click the **New bucket** button in the **Buckets** view. A new module window will pop up called **Create Bucket**. Please provide a name using only lower case alphanumeric characters and dashes (this is a limitation for compatibility with existing object storages).
 
@@ -106,9 +106,9 @@ After creating your new bucket, you will be placed into the bucket where you can
 
 3\. Type the ***Bucket Name*** and **Confirm Delete Bucket**.
 
-:::hint{type="warning"}
+{% callout type="warning"  %}
 Be careful when deleting buckets - If you still have objects in the bucket being deleted, they will be deleted too!
-:::
+{% /callout %}
 
 ## Share a file
 

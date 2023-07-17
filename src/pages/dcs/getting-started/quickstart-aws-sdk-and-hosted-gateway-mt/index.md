@@ -10,9 +10,9 @@ Hosted S3 Compatible Multitenant Gateway - AWS SDK
 
 Storj now offers a hosted multitenant gateway (Gateway MT)  that is backward compatible with S3. This means you’ll be able to integrate with the Storj network via HTTP, and you won’t have to run anything extra on your end.
 
-:::hint{type="info"}
+{% callout type="info"  %}
 By using hosted Gateway MT you are opting into [](docId\:hf2uumViqYvS1oq8TYbeW) &#x20;
-:::
+{% /callout %}
 
 Using Gateway MT with AWS CLI is a 2-step process:
 
@@ -36,13 +36,13 @@ Using Gateway MT with AWS CLI is a 2-step process:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/7-zh2FMM3ASPI4oV2THEn_create-s3-credentials-encrypt.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
 
 Importantly, if you want two access grants to have access to the same data, **they must use the same passphrase**. You won't be able to access your data if the passphrase in your access grant is different than the passphrase you uploaded the data with.
 
 Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
-:::
+{% /callout %}
 
 Click either on the **Copy to clipboard** link or **Download .txt** and confirm that you copied your Encryption Phrase to a safe place.
 
@@ -62,19 +62,19 @@ Now you are ready to configure AWS SDK
 
 e.g. with npm
 
-```none
+```shell
 npm install --save aws-sdk
 ```
 
 ### 2. Import the S3 client
 
-```none
+```js
 import S3 from "aws-sdk/clients/s3";
 ```
 
 ### 3. Create client object with MT credentials
 
-```none
+```js
 const accessKeyId = "access key here";
 const secretAccessKey = "secret access key here";
 const endpoint = "https://gateway.storjshare.io";
@@ -96,7 +96,7 @@ const s3 = new S3({
 (async () => {
 
   const { Buckets } = await s3.listBuckets({}).promise();
-  
+
   console.log(Buckets);
 
 })();
@@ -118,7 +118,7 @@ const s3 = new S3({
   await s3.upload(params, {
     partSize: 64 * 1024 * 1024
   }).promise();
-  
+
 })();
 ```
 

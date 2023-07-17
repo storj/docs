@@ -16,9 +16,9 @@ docId: h3RyJymEIi4gf2S9wVJg8
 ::::tab{label="Windows"}
 ## PowerShell
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 For security reasons it's better to use a casual user to work from the CLI, thus please run PowerShell as a casual user, not as an Administrator.
-:::
+{% /callout %}
 
 Navigate to the directory your **uplink.exe** file is located (Check the FAQ: [](docId:4qPQxa8HlvDIO1Kgqa2No) for instructions):&#x20;
 
@@ -41,8 +41,8 @@ uplink access import main accessgrant.txt
 :::
 :::::
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 Please note that **Storj Labs does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
-:::
+{% /callout %}
 
 Your Uplink is configured and ready to use!

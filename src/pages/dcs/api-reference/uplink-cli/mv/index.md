@@ -55,9 +55,9 @@ uplink mv sj://cakes/cheesecake.jpg sj://cakes/New-York/cheesecake.jpg
 ```
 :::
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 You cannot use pattern expressions to specify which files to copy (e.g. `uplink mv sj://cakes/cheese* sj://cakes/New-York/` will not work). Also, you can only specify one source at a time.
-:::
+{% /callout %}
 
 Sample Output:
 
@@ -87,9 +87,9 @@ uplink mb sj://new-recipes
 Bucket new-recipes created
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Nested buckets are not supported, but you can use prefixes, as they would act almost like subfolders.
-:::
+{% /callout %}
 
 To move an object from one bucket to another, use:
 
@@ -125,7 +125,7 @@ Error: uplink: metaclient: metabase: unable to update object: ERROR: duplicate k
 
 This error means that the destination object already exists. You should either use a different destination name/prefix or remove the existing object from the destination.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 To remove an object, use the [](docId\:eavv_906IH-39ylIXq30d)  command.
-:::
+{% /callout %}
 

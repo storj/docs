@@ -48,15 +48,15 @@ In addition to credit cards, users may also pay for usage fees with STORJ token.
 
 Making payments with STORJ token is a different process than using a credit card. When using STORJ as your payment method, you commit to using a pre-payment model, which means you must first deposit X amount of STORJ tokens, which will be automatically converted to Y amount of $USD based on the spot price of the token at the time of the payment transaction.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Please note that at the moment your deposit address in your account can accept only L1 (Ethereum) transactions.
-:::
+{% /callout %}
 
 Also note that if a user wants to pay solely using STORJ token, they must deposit a sufficient amount of tokens to their account to cover potential usage up to the [](docId\:A4kUGYhfgGbVhlQ2ZHXVS) for at least for the next 3 months.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Important: If a user does not want to add a credit card but wants to pay only via STORJ token, they should exclusively deposit STORJ token and should not add a credit card to their account because, once a credit card is added as a payment method, it can only be removed by closing the account or requesting removal of the credit card after adding STORJ token, using the support process defined in this documentation.
-:::
+{% /callout %}
 
 Depending on the amount of platform usage and the usage limits configured on your account, you may be required to keep a minimum deposit of STORJ token on your account to ensure monthly usage fees are paid in full each billing cycle.
 
@@ -64,9 +64,9 @@ We realize the STORJ token price can fluctuate, so our billing system is designe
 
 To deposit STORJ tokens in an account, open a ***Payment Methods*** tab on the **Billing** page and click **Add STORJ tokens**, then use provided deposit address to deposit STORJ tokens via L1 (Ethereum).
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Important: The deposit address generated for your account is a deposit-only address to prepay for usage on the Storj DCS Platform. Users are not able to remove or otherwise withdraw tokens from this address. Any request for a refund or return of an unused prepaid deposit must follow the support process [](docId\:LX9pqXsAduR8LEaEiX_It).
-:::
+{% /callout %}
 
 If the STORJ token balance runs out, a user will receive a notification to the registered email on the account. However, if a new payment is not added within a reasonable amount of time, Storj reserves the right to reduce account usage limits to zero and/or reclaim the available storage and bandwidth resources and delete your data stored on the network pursuant to our data retention policy.
 

@@ -9,9 +9,9 @@ updatedAt: 2023-03-22T13:19:00.000Z
 
 An application that allows you to access Object Storage from the command line.  Use this tool to upload and manage objects and buckets.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 To setup `uplink` see [](docId\:TbMdOGCAXNWyPpQmH6EOq).
-:::
+{% /callout %}
 
 The `uplink` command can take the following child commands:
 

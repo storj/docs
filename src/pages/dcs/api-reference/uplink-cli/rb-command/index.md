@@ -74,9 +74,9 @@ Output:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/WA_RPCu8OqqEAswu5yBJL_rb-force.png)
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Deleting large buckets is a time-consuming process. It would roughly take 1 hour per 10,000 objects. We are working on adding progress reporting.
 
 If you need to delete very large buckets and the waiting time is unacceptable, please [file a support request](https://supportdcs.storj.io/hc/en-us).
-:::
+{% /callout %}
 

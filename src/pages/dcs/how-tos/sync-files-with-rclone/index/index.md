@@ -12,9 +12,9 @@ These 'Getting Starting' tutorials will showcase the process for configuring [Rc
 
 &#x20;For making the most of Rclone, take a look at the complete Rclone [command reference](https://rclone.org/commands/)
 
-:::hint{type="danger"}
+{% callout type="danger"  %} 
 These guides are experimental. The main functionality appears to work, but there are expected to be undiscovered issues (including issues around connection timeouts). Please report any issues you may run into on this [forum thread](https://forum.storj.io/t/two-more-tech-previews-rclone-and-restic/6072).
-:::
+{% /callout %}
 
 You will need one of the following:
 
@@ -50,9 +50,9 @@ Use our S3 compatible Hosted Gateway integration pattern to increase upload perf
 
 *   Reduction in network load
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 By selecting this integration pattern you are opting in to server-side encryption.
-:::
+{% /callout %}
 
 ::::link-array
 :::link-array-item{headerImage}

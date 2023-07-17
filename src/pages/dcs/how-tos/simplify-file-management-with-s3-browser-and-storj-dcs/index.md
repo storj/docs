@@ -16,9 +16,9 @@ Keep in mind that to get the best performance in using S3 Browser to manage your
 
 S3 Browser can be configured to download large files via multiple parallel threads. By default, S3 Browsers will download everything using 5MB chunks, whereas, you have the configuration option to increase that download size to 64MB, the segment size for Storj. We suggest configuring your S3 Bucket instance to ***Enable Multipart downloads with part size (in megabytes)*** of 64. You can find more on configuring this option [here](https://s3browser.com/multipart-downloads.aspx).
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 One license allows you to install one instance of S3 Browser on a single computer. Your license can be transferred if you change your PC. The license is a lifetime license and includes one year of free upgrades and support. Users are also limited to two accounts added within the free version of S3 Browser.
-:::
+{% /callout %}
 
 ## Downloading S3 Browser
 
@@ -38,9 +38,9 @@ Some stats for the S3 Browser Download:&#x20;
 
 **Operating System**: Windows XP/Vista/7/8/10/11 and Windows Server 2003/2008/2012/2016/2019/2022
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 There is no option to download S3 Browser via CLI
-:::
+{% /callout %}
 
 ### Generate Credentials to the Gateway MT
 
@@ -78,9 +78,9 @@ Click the **Create my Access** link to finish generating of S3 credentials.
 
 Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them. We’ll be using this shortly!
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, that’s completely understandable, and you should select **Continue in CLI** and follow [](docId\:TbMdOGCAXNWyPpQmH6EOq)
-:::
+{% /callout %}
 
 ### Configuring Storj + S3 Browser
 

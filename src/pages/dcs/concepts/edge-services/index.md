@@ -10,9 +10,9 @@ docId: 21Y2RfU-4h21vZycBqizJ
 
 Storj Edge Services are hosted components that provide S3 compatibility and publicly-available data sharing services and are composed of the Storj Gateway MT, the auth service and the link sharing service. Storj Edge Services use server-side encryption.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 **Note:** All of the Edge Services use [](docId\:hf2uumViqYvS1oq8TYbeW).&#x20;
-:::
+{% /callout %}
 
 ### Edge Services
 

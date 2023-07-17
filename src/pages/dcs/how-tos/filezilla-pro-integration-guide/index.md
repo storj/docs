@@ -54,7 +54,7 @@ Navigate to the **Access** page within your project and then click on **Create S
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/58pDc4nVqGckzeHJp1uGc_fz2.png)
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 If you click Encrypt My Access, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with [](docId\:LueFgrbZ9rJbWtDMXhIWZ) for S3 compatibility. Only then will your access grant be shared with our servers. Storj does not know or store your encryption passphrase.
 
 
@@ -64,7 +64,7 @@ However, if you are still reluctant to enter your passphrase into our web applic
 
 
 \*\*The instructions below assume you selected\*\*** *****Encrypt My Access.***
-:::
+{% /callout %}
 
 **Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
@@ -77,7 +77,7 @@ Select a **Passphrase** type: Either **Enter** your own ***Encryption Passp
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/9XsE-Njm_W1CjtzunDnJB_fz4.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
 
 
@@ -87,7 +87,7 @@ Importantly, if you want two access grants to have access to the same data, **t
 
 
 Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
-:::
+{% /callout %}
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
@@ -97,9 +97,9 @@ Click the **Create my Access** link to finish generating of Access Grant.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/TDbMDxsgttUe5wUWbTv_c_fz6.png)
 
-:::hint{type="danger"}
+{% callout type="danger"  %} 
 Please note that Storj does not know or store your encryption passphrase, so if you lose it, you will not be able to recover your files. Please store it in a safe place.
-:::
+{% /callout %}
 
 Now that the Access Grant has been generated, this will allow for integration with FileZilla Pro via native uplink. Let's take a look.
 
@@ -131,7 +131,7 @@ Navigate to the **Access** page within your project and then click on **Create S
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/OACjd1DDC8MvslQqQQ15o_fz12.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
 
 
@@ -141,7 +141,7 @@ Importantly, if you want two access grants to have access to the same data, **t
 
 
 Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
-:::
+{% /callout %}
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
@@ -181,9 +181,9 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. s
 
 11\. Click on **OK.**
 
-:::hint{type="success"}
+{% callout type="success"  %} 
 Instead of using regional endpoints, you can also use the common gateway.storjshare.io to route access automatically to the closest location.
-:::
+{% /callout %}
 
 ### Adding a new site to FileZillaPro
 
@@ -201,11 +201,11 @@ Instead of using regional endpoints, you can also use the common gateway.storjs
 
 6\. Click **Connect** to connect to Storj via Gateway MT.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 If this is the first time you connect, you may see a message like the below and&#x20;
 
 you will need to confirm it by clicking the **OK** button:
-:::
+{% /callout %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/-43vjB1rbhQUL4iz8Shq7_fz17.png)
 

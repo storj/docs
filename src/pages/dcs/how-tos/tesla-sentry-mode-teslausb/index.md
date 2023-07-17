@@ -58,9 +58,9 @@ Using the software in the [teslausb](https://github.com/marcone/teslausb) projec
 
 If you have not yet signed up, please head here to[ sign up for the free tier.](https://www.storj.io/signup)&#x20;
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Please consult [](docId\:nGzxQBhV8nx5Pukj6O0zT) for details on setting up an account and using the Satellite Admin Console.
-:::
+{% /callout %}
 
 ### Generate Credentials to the Gateway MT
 
@@ -80,9 +80,9 @@ Please consult [](docId\:nGzxQBhV8nx5Pukj6O0zT) for details on setting up an acc
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Please ***save*** this **Encryption Passphrase** in a safe place as it will be required to decrypt and view your sentry mode videos from the web.&#x20;
-:::
+{% /callout %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/ElpzbwDB96FCM8TqKXQte_tesla7.png)
 
@@ -110,9 +110,9 @@ Now we have our **credentials** and can move on to configuring teslausb.
 
         *   **Endpoint**
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Learn more about [](docId\:bNywu7-9KLjYfk5LBQABx) on Storj DCS and using [](docId\:XKib9SzjtEXTXWvdyYWX6).&#x20;
-:::
+{% /callout %}
 
 ### Configure teslausb
 

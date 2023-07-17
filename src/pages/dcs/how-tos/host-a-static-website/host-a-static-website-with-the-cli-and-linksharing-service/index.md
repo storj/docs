@@ -8,11 +8,11 @@ docId: GkgE6Egi02wRZtyryFyPz
 
 You can use your own domain name and host your own static website on Storj DCS with the following setup.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 **Static websites** serve files, including HTML, CSS, and Javascript files, exactly as they are stored on the server. All visitors will be served the same files.
 
 **Dynamic websites** use server-side processing to generate the underlying code behind each page. They support Create, Read, Update, Delete operations against a database. Web views can be custom rendered to each user.
-:::
+{% /callout %}
 
 ## Part 1: Uplink CLI
 
@@ -74,9 +74,9 @@ txt-www.example.com	IN	TXT  	storj-access:jqaz8xihdea93jfbaks8324jrhq1
 
 1\. In your DNS provider, create a CNAME record on your hostname using the CNAME from your generated zone file as the target name.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Ensure you include the trailing `.` at the end of your CNAME if your DNS providers allows.
-:::
+{% /callout %}
 
 2\. Create 2 TXT records, prepending `txt-` to your hostname.
 
@@ -94,11 +94,11 @@ Ensure you include the trailing `.` at the end of your CNAME if your DNS provide
 
 5\. That's it! You should be all set to access your website! e.g.`http://www.example.test`
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 **Why is my browser telling me that my connection is not secure?**
 
 While Linksharing links are secure, when you use a custom domain the browser is expecting a TLS certificate for your domain to be present on the Storj servers hosting the link. We do not generate this certificate by default, so you will need to upgrade to a Pro Account and follow the relevant steps for enabling TLS (HTTPS) for custom domains here: [](docId\:RI4zz1sLvVEZ4ZcZbuT7l)&#x20;
-:::
+{% /callout %}
 
 
 

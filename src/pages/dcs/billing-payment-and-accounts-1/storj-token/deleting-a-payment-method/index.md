@@ -39,7 +39,7 @@ The process to end your platform usage starts with deleting all data from the pl
 
 Once the ticket is received, and we have confirmed there is no outstanding balance owed, the payment method(s) will be removed before the end of the next billing cycle. Once all payment methods are removed from the account, either the account limits will be set to zero or the account will be deleted per the request.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 **Note: The user will be required to verify the request via the registered email address on the account.**
-:::
+{% /callout %}
 

@@ -42,17 +42,17 @@ uplink setup
 ```
 :::
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 For anyone who has previously configured an Uplink, please use a named access. If you want to replace the default access, you need to either specify the `--force` flag to the `uplink setup` command or [](docId\:b4-QgUOxVHDHSIWpAf3hG) and use the `uplink access import` command with `--force` flag to import it, or use the `uplink access create --import-to <name>` command with `--force` flag to create an Access Grant in CLI and import it to the specified access in the local store of Uplink.
-:::
+{% /callout %}
 
 7\. Follow the prompts. When asked for your API Key, enter it (you should have saved it in step 4 above).
 
 8\. Generate the Access Grant by running `uplink access restrict` with no restrictions.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 &#x20;If you chose an access name, you'll need to specify it in the following command as `--access=name`
-:::
+{% /callout %}
 
 :::codeblocktabs
 ```windows
@@ -68,13 +68,13 @@ uplink access restrict --readonly=false
 ```
 :::
 
-:::hint{type="danger"}
+{% callout type="danger"  %} 
 Keep your full-rights Access Grant secret, it contains the encryption key and will enable uploading, downloading or deleting your data from the entire project!
-:::
+{% /callout %}
 
 9\. Your Access Grant should have been output.&#x20;
 
-:::hint{type="success"}
+{% callout type="success"  %} 
 The alternative for using the `uplink setup` command and then `uplink access restrict` is to use the `uplink access create` command instead, it will print the Access Grant right away.
-:::
+{% /callout %}
 

@@ -28,9 +28,9 @@ Overall, our S3 compatibility project has been a huge effort to address the need
 
 ### Usage
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 To save on costs and improve performance, please see [](docId\:rkPrCIwpTjmMKiZajeaxp).
-:::
+{% /callout %}
 
 There are two primary ways to get started using our hosted S3 gateway and get issued an S3 compatible access key, secret key, and endpoint.
 

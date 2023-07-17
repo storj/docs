@@ -112,9 +112,9 @@ Press Enter for the default (us-central-1.storj.io).
 satellite_address>
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 If you enter the a 3rd-party satellite, the address must include also the node ID of the satellite. This is required to establish a secure connection with the satellite.
-:::
+{% /callout %}
 
 The second step of creating a new access grant is to enter your generated [](docId\:OXSINcFRuVMBacPvswwNU).
 
@@ -135,9 +135,9 @@ Enter a value. Press Enter to leave empty.
 passphrase> your-secret-encryption-phrase
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The passphrase is used for encrypting and decrypting the data stored on Storj DCS (formerly known as Tardigrade). If you have any data previously uploaded to this project, you must enter the same passphrase in order to download it successfully.
-:::
+{% /callout %}
 
 A summary of the remote configuration will prompt. Type `y`and hit `Enter` to confirm it.
 
@@ -175,11 +175,11 @@ q) Quit config
 e/n/d/r/c/s/q> q
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 For additional security, you should consider using the (s) option
 
 &#x20;`Set configuration password` option. It will encrypt the `rclone.conf` configuration file. This way secrets like the [](docId\:OXSINcFRuVMBacPvswwNU) (access token), the encryption passphrase, and the access grant won't be stolen if an attacker get access to your configuration file.
-:::
+{% /callout %}
 
 ## Create a Bucket
 
@@ -197,9 +197,9 @@ Use the `lsf` command to list all buckets.
 rclone lsf waterbear:
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Note the colon (`:`) character at the end of the command line.&#x20;
-:::
+{% /callout %}
 
 ## Delete a Bucket
 
@@ -223,9 +223,9 @@ Use the `copy` command to upload an object.
 rclone copy --progress ~/Videos/myvideo.mp4 waterbear:mybucket/videos/
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The `--progress` flag is for displaying progress information. Remove it if you don't need this information.
-:::
+{% /callout %}
 
 Use a folder in the local path to upload all its objects.
 
@@ -233,9 +233,9 @@ Use a folder in the local path to upload all its objects.
 rclone copy --progress ~/Videos/ waterbear:mybucket/videos/
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Only modified files will be copied.
-:::
+{% /callout %}
 
 ## List Objects
 
@@ -265,9 +265,9 @@ Use the `copy` command to download an object.
 rclone copy --progress waterbear:mybucket/videos/myvideo.mp4 ~/Downloads/
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The `--progress` flag is for displaying progress information. Remove it if you don't need this information.
-:::
+{% /callout %}
 
 Use a folder in the remote path to download all its objects.
 
@@ -305,13 +305,13 @@ Use the `sync` command to sync the source to the destination, changing the desti
 rclone sync --progress ~/Videos/ waterbear:mybucket/videos/
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The `--progress` flag is for displaying progress information. Remove it if you don't need this information.
-:::
+{% /callout %}
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Since this can cause data loss, test first with the `--dry-run` flag to see exactly what would be copied and deleted.
-:::
+{% /callout %}
 
 The sync can be done also from Storj DCS to the local file system.
 

@@ -5,9 +5,9 @@ createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-07-01T01:10:15.941Z
 ---
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 A download can become a chargeable event for 2 times the actual file size if the gateway is running on another cloud provider. We recommend interfacing with the network directly through the [](docId\:TC-N6QQVQg8w2cRqvEqEf) or using our [](docId\:AsyYcUJFbO1JI8-Tu8tW3).
-:::
+{% /callout %}
 
 For a complete list of the supported architectures and API calls for the S3 Gateway, see [](docId\:eEZ6hkJK6U7J7SyVwV5Th).
 
@@ -19,9 +19,9 @@ For a complete list of the supported architectures and API calls for the S3 Gate
 
 Depending on the load and throughput, more resources may be required.
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 To save on costs and improve performance, please see [](docId\:rkPrCIwpTjmMKiZajeaxp).
-:::
+{% /callout %}
 
 ## Dependencies
 
@@ -159,9 +159,9 @@ The satellite address should be entered as \<nodeid>@\<address>:\<port> for exam
 
 3\. Choose an access name (this step may not yet be implemented in the version of S3 Gateway you are using - if you don't see this prompt, skip to step 5 below).
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 If you would like to choose your own access name, please be sure to only use lowercase letters. Including any uppercase letters will result in your access name not getting recognized when creating buckets.
-:::
+{% /callout %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/6vsa92CZ3AjvuQ0Hfc79__self-s3-02.png)
 
@@ -173,9 +173,9 @@ If you would like to choose your own access name, please be sure to only use low
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/r0PGzFlbeZmrAUhoUXuYJ_self-s3-04.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 Please note that **Storj Labs does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.&#x20;
-:::
+{% /callout %}
 
 6\.  Your S3 gateway is configured and ready to use!
 
@@ -239,9 +239,9 @@ gateway run
 docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 If you want to connect to your S3 Gateway via the network, then you should replace the `-p 127.0.0.1:7777:7777` port mapping with `-p 7777:7777`
-:::
+{% /callout %}
 ::::
 :::::
 
@@ -259,9 +259,9 @@ If you are interested in more running options, checkout the Gateway ST Advanced 
 
 ## Configure AWS CLI to use Gateway ST
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Please make sure you have [AWS S3 CLI installed](https://docs.aws.amazon.com/cli/latest/userguide/installing.html).
-:::
+{% /callout %}
 
 Once you do, in a new terminal session, configure it with your Gateway's credentials:
 
@@ -279,9 +279,9 @@ $ aws configure set default.s3.multipart_threshold 64MB
 
 Then, test out some AWS S3 CLI commands!
 
-:::hint{type="success"}
+{% callout type="success"  %} 
 See also [](docId:20zlQyfMD9gmHJOUPx3jh)
-:::
+{% /callout %}
 
 ## Try it out!
 

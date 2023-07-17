@@ -122,9 +122,9 @@ Assign the permissions you want this access grant to have, then click on **Conti
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Ny23pe6zPwc2Y_wRzt3YM_screen-shot-2021-04-16-at-90315-am.png)
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 *If you do not feel comfortable entering this sensitive information into your browser, we understand. Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, please select “Continue in CLI” and follow *[](docId\:AsyYcUJFbO1JI8-Tu8tW3) *instead.*
-:::
+{% /callout %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Q_OxNbVD1vGCmLacrNcTT_screen-shot-2021-04-16-at-90334-am.png)
 
@@ -158,7 +158,7 @@ Whether using Windows or macOS, you’ll simply add the Storj Gateway S3 credent
 
 **Click Connect**&#x20;
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 *Use endpoint without , i.e. ****gateway.us1.storjshare.io**** in the Cyberduck ****Server**** entry above, otherwise Cyberduck will revert to WEBDAV (HTTPS) causing a connection error.*
 
 As seen here:
@@ -168,7 +168,7 @@ As seen here:
 ****
 
 ****
-:::
+{% /callout %}
 
 ### **For Mac OS**
 

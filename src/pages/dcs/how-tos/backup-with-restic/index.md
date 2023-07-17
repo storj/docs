@@ -14,9 +14,9 @@ This is a quick-start tutorial that covers [Restic](https://restic.net) usage wi
 
 In this guide, we will cover only some of the basic features of the tool.  The complete documentation for Restic is located here, at their [complete command reference](https://restic.readthedocs.io/en/latest/manual_rest.html).
 
-:::hint{type="danger"}
+{% callout type="danger"  %} 
 This guide is experimental. The main functionality appears to work, but there are expected to be undiscovered issues. Please report any issues you may run into on this [forum thread](https://forum.storj.io/t/two-more-tech-previews-rclone-and-restic/6072).
-:::
+{% /callout %}
 
 ## Before you begin
 
@@ -39,9 +39,9 @@ The general backend specification format is `rclone:<remote>:<path>`, the `<remo
 $ restic -r rclone:foo:bar init
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Restic will take care of starting and stopping Rclone for your backup
-:::
+{% /callout %}
 
 ## Setup
 
@@ -59,9 +59,9 @@ Now, enter a password for your repository.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/9Pwnr8Xm5xOZElCIB8OzE_restic.png)
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Remembering your password is important! If you lose it, you won’t be able to access data stored in the repository.
-:::
+{% /callout %}
 
 Repository data will be created directly at the specified bucket prefix e.g. `bucket/my-backup`.
 
@@ -77,17 +77,17 @@ restic --repo rclone:storj:bucket/my-backup backup ~/directory-to-backup --pack-
 
 You will be able to see the progress of the backup and a summary at the end of the process.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Passing `--pack-size=60` sets the Restic pack size to 60 MiB, which is the optimal value for Storj. Restic is not very precise, and the actual pack files may be a little larger.
-:::
+{% /callout %}
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 When backing up the root directory on Unix systems it is important to pass `--one-file-system` to prevent accidentally backing up virtual filesystems like`/proc`.
-:::
+{% /callout %}
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 Passing `-o rclone.connections=1` reduces the Rclone parallelism to a single upload. The Storj backend will still open multiple connections to storage nodes. Use this option to reduce the stress on your router in case of failing uploads with the default parallelism.
-:::
+{% /callout %}
 
 ## Cleanup
 

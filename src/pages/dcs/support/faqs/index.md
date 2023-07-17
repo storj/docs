@@ -9,7 +9,7 @@ Frequently asked questions about Storj DCS.
 
 ## How do I navigate to the binary location?
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 How to navigate to the *Desktop* folder? Execute the command:
 
 ```shell
@@ -27,7 +27,7 @@ If you followed [](docId\:hFL-goCWqrQMJPcTN82NB) or [](docId\:OBgx_1X2IO-MKBpmP7
 ```shell
 cd ~
 ```
-:::
+{% /callout %}
 
 ##
 
@@ -39,13 +39,13 @@ You can upload your first object by following our documentation [](docId\:R8xZNl
 
 All you need to create a shareable URL is the linksharing base URL for your region, a public, read-only [](docId:6hH_ygAn1FJdrIZQ0CGsJ) from the Gateway MT of the same region, and the path to your object or bucket. For a shortcut, [](docId\:tBnCSrmR1jbOewG38fIr4) will generate the shareable URL for you.&#x20;
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 **Please, do not use the possibility to manually build the URL with your access grant described below!**
 
 The access grant contains your derived encryption key, it's especially dangerous if you would use your root access grant with full access - it will give a full access to your project to everyone!
 
 Use the safe `--url` option instead!
-:::
+{% /callout %}
 
 You can build a not safe link like so: `<base url>/s/<access key>/<path sans sj://>`
 
@@ -58,9 +58,9 @@ You can build a not safe link like so: `<base url>/s/<access key>/<path sans sj:
 
 e.g. `https://link.ap1.storjshare.io/s/<access key>/my/path`
 
-:::hint{type="danger"}
+{% callout type="danger"  %} 
 Please, think twice before using the described method above - it exposes your access grant. If you would like to use this method anyway, then make sure to limit the access as much as possible. Ideally - read-only with time duration and only to one or two objects/paths, not to the whole bucket!
-:::
+{% /callout %}
 
 ## /
 
@@ -72,11 +72,11 @@ Since your webpages and assets are simply objects stored on the network and ther
 
 There are a few ways you can host your static site on Storj DCS. We recommend using the [](docId\:GkgE6Egi02wRZtyryFyPz) but you may also use the [](docId\:EGM8O-1xt2Az03eBWT8Rf) to host your site.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 **Static websites** serve files, including HTML, CSS, and Javascript files, exactly as they are stored on the server. All visitors will be served the same files.
 
 **Dynamic websites** use server-side processing to generate the underlying code behind each page. They support Create, Read, Update, Delete operations against a database. Web views can be custom rendered to each user.
-:::
+{% /callout %}
 
 ##
 
@@ -104,9 +104,9 @@ If you want to learn more, check out the [](docId\:M-5oxBinC6J1D-qSNjKYS) sectio
 
 Access Grants created using the Satellite user interface my be deleted using the Remove button on the Access page. Check the box next to the Access Grant(s) you want to delete, then click the Remove Selected button and follow the prompts. &#x20;
 
-:::hint{type="success"}
+{% callout type="success"  %} 
 **Important:** If you delete an Access Grant from the Satellite user interface, that Access Grant will immediately cease to function, and all hierarchically derived child Access Grants will also cease to function.  Any data uploaded with that Access Grant will persist on Storj DCS. If you didn't back up the encryption passphrase used with the Access Grant you are deleting, you will not be able to decrypt that data without that encryption passphrase, and it will be effectively unrecoverable.
-:::
+{% /callout %}
 
 If you created a child Access Grant client-side, using the CLI, the client Go library, or any other client-side tool or implementation, you can't "delete" the access because, by design and for enhanced privacy and security, the Satellite is not aware of Access Grants created in a client. When presented with any Access Grant, the Satellite can only verify whether the Access Grant is valid for the resource being requested.  For this reason, Access Grants that have been created client-side cannot be deleted, but must be revoked instead.
 

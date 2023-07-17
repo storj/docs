@@ -22,9 +22,9 @@ It's important to understand the constructs of Storj DCS so that an application 
 
 The Satellite is a set of hosted services that is responsible for a range of functions on the network, including the node discovery system, node address information caching,  per-object metadata storage, storage node reputation management, billing data aggregation, storage node payment, data audit, and repair, as well as user account and authorization management.&#x20;
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 **Key Point:** You'll create an account on a Satellite. We have them all over the world. You choose a Satellite based on where your data will be most frequently accessed, as Satellites are where metadata is stored and node selection takes place.
-:::
+{% /callout %}
 
 Read more about [](docId\:v0b3GtAU4dDT_1qibwCxc)
 
@@ -32,9 +32,9 @@ Read more about [](docId\:v0b3GtAU4dDT_1qibwCxc)
 
 When you create an account on a Satellite, you add some basic contact information, including a payment method if you want to use the Paid Tier Service. You can create Projects and Access Grants/Gateway Credentials, view invoices, and track usage.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 **Key Point:** You can invite other developers with accounts on your Satellite to join one or more of your Projects, or be added to other Developers' Projects.
-:::
+{% /callout %}
 
 Read more about the [](docId\:nGzxQBhV8nx5Pukj6O0zT)
 
@@ -48,9 +48,9 @@ For access management, Access Grants are instantiated at the project level. A pr
 
 Projects are also useful for managing phases of software development across environments. You may want to use a separate project for development, staging, and production environments.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 **Key Point:** The key distinction is that you can create granular Access Grants within a Project with restricted access to only a single object or path, it's also possible to create an Access Grant with all access to all buckets, paths, and objects within a Project. It is not possible to create an Access Grant with access to buckets, paths, and objects within more than one Project.
-:::
+{% /callout %}
 
 ### Billing
 
@@ -60,9 +60,9 @@ From a billing perspective, if you only have one application, or you’re an ind
 
 A bucket is an unbounded but named collection of objects identified by paths. Every object has a unique path within a bucket.&#x20;
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 **Key Point:** Bucket names are not client-side encrypted so that they may be rendered in the Satellite user interface.&#x20;
-:::
+{% /callout %}
 
 Bucket names are not client-side encrypted so that they may be rendered in the Satellite user interface.&#x20;
 
@@ -78,9 +78,9 @@ With this structure, your application can manage the data for all of the tenants
 
 An object key (or path) is a unique identifier for an object within a bucket. An object key is an arbitrary string of bytes. Object keys resemble file system paths by containing forward slashes at access control boundaries. Forward slashes (referred to as the path separator) separate path components. An example path might be `videos/carlsagan/gloriousdawn.mp4`, where the path components are `videos`, `carlsagan`, and `gloriousdawn.mp4`. It is possible to share just the encryption keys for objects that have a common object key path component prefix.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 While many object storage platforms provide access management restrictions only at the bucket level, Storj DCS provides the tools to manage granular access at the path level.
-:::
+{% /callout %}
 
 ## Object (encrypted metadata)
 

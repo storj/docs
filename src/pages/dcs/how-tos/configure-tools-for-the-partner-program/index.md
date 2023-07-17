@@ -28,9 +28,9 @@ Value attribution is done on a per bucket basis. To recognize which partner the 
 
 ## Setting the User Agent
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 Before continuing, beware that partner value attribution is only possible if you are registered as such by Storj. You can access an up to date list of recognized user agents [here](https://github.com/storj/storj/blob/master/satellite/rewards/partners.go#L28).
-:::
+{% /callout %}
 
 ### Uplink CLI
 

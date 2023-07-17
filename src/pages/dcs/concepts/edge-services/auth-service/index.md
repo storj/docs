@@ -20,9 +20,9 @@ In all cases, the encryption key used to encrypt the Access Grants registered wi
 
 *   **Linkshare Service** - the encryption key used to encrypt the Access Grant is embedded in the URL. Note that in the case of Access Keys specifically registered for the linksharing service, the Access Key does not require a Secret Key for authorization and use.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 **Note:** The encryption information generated for use in conjunction with the Linksharing Service or S3-compatible gateway credentials follows the same hierarchically deterministic derived method as all [](docId\:XKib9SzjtEXTXWvdyYWX6) and the [](docId\:yI4q9JDB3w01xEkFWA4_z) is limited in scope to the level of access provided at the path-key or object-key as defined in the access Grant.All of the Edge Services use [](docId\:hf2uumViqYvS1oq8TYbeW).
-:::
+{% /callout %}
 
 ### Secure Handling of Encryption Information
 

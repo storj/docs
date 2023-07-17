@@ -73,9 +73,9 @@ kubectl port-forward mongodb-ops-manager-0 8080:8080
 
 Connect your browser to [localhost:8080](http://localhost:8080) and use <admin@mongodb.com> and MongoDB12345% to login.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Note: These credentials are stored in a secret, called mongodb-ops-manager-secret. You can update this in the chart. Also note the “mongodb” in the secret name comes directly from the Helm release name
-:::
+{% /callout %}
 
 You should see your MongoDB cluster once connected:
 

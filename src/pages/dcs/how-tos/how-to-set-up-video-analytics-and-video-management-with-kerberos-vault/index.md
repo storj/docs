@@ -48,9 +48,9 @@ For this, do the following steps:
 
 4\) Click **Continue**. You will be prompted to select your Encryption - either **Generate passphrase** or **Enter passphrase**.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 If this is your first time using the object browser, you **must create an encryption passphrase.** We strongly encourage you to use a mnemonic phrase. The GUI automatically generates one on the client side for you with the **Generate passphrase** option. You can also download it as a text file.
-:::
+{% /callout %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/b8f25t3ezfVSntymkkreo_kerberos2.png)
 
@@ -58,7 +58,7 @@ If this is your first time using the object browser, you **must create an encry
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/xM1VMoKpLAO2l8MUtdwUj_kerberos3.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
 
 
@@ -68,7 +68,7 @@ Importantly, if you want two access grants to have access to the same data, **t
 
 
 Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
-:::
+{% /callout %}
 
 6\) Navigate to the **Access** page, then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 

@@ -70,9 +70,9 @@ uplink setup
 
 2\. Choose an access name, by default this should be left blank, so hit 'enter'
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 If you would like to choose your own access name, please be sure to only use lowercase letters. Including any uppercase letters will result in your access name not getting recognized when creating buckets.
-:::
+{% /callout %}
 
 ```Text
 Enter name to import as [default: main]:
@@ -109,8 +109,8 @@ Would you like to disable encryption for object keys (allows lexicographical sor
 Would you like S3 backwards-compatible Gateway credentials? (y/N):
 ```
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
-:::
+{% /callout %}
 
 6\.  Your Uplink is configured and ready to use!

@@ -12,9 +12,9 @@ Understanding how to use the Satellite interface and your developer account.
 
 The Storj DCS Satellite Admin Console is the web interface for developers to interact with Storj DCS.&#x20;
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 If you want to learn more about Developer Accounts, Projects, Access Grants, Buckets and how these architectural constructs relate and how they are used, check out the [](docId\:M-5oxBinC6J1D-qSNjKYS)  under Concepts.&#x20;
-:::
+{% /callout %}
 
 The Storj DCS Satellite Admin Console is where you:
 

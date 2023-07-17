@@ -22,9 +22,9 @@ S3 credentials allow Dataverse to upload and download files from Storj as if it 
 
 Give your access grant a name such as 'My S3 Creds' and generate a passphrase. Your credentials will be created. These will be used to configure your Dataverse server.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Credentials will only appear once. Be sure to store them, including the Access Key and Secret Key, securely to prevent unwanted access to your files as well as allow you to configure your AWS credentials profile and to decrypt your files later.
-:::
+{% /callout %}
 
 ## Dataverse Setup
 
@@ -55,9 +55,9 @@ If you have existing S3 credentials, create an [alternative profile](https://gui
 
 ### Create Bucket
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 If you choose a different bucket name, be sure to change it in the  jvm-options below as well.
-:::
+{% /callout %}
 
 Create a bucket called `dataverse` to store your files.
 

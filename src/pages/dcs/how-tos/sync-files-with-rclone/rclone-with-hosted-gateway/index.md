@@ -15,9 +15,9 @@ Use our S3-compatible Hosted Gateway integration pattern to increase upload perf
 
 *   Reduction in network load
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 By selecting this integration pattern you are opting in to [Server-side Encryption](https://docs.storj.io/dcs/concepts/encryption-key/design-decision-server-side-encryption).
-:::
+{% /callout %}
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ By selecting this integration pattern you are opting in to [Server-side Encrypti
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/JrZT5rCAHWkwTWMy-iJzE_rclone4.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
 
 
@@ -47,7 +47,7 @@ Importantly, if you want two access grants to have access to the same data, **t
 
 
 Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
-:::
+{% /callout %}
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
@@ -141,9 +141,9 @@ secret_access_key> your-secret-access-key
 
 You will be asked what Endpoint to connect to. Enter `1` to select the Global Hosted Gateway and hit `Enter`.
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 If you use an older Rclone release, you will see a list of regional gateway endpoints to select from. Ignore them and enter the global `gateway.storjshare.io` endpoint. Using the regional endpoints may cause performance issues.
-:::
+{% /callout %}
 
 ```dockerfile
 Option endpoint.
@@ -212,9 +212,9 @@ Name                 Type
 waterbear            s3
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 For additional security, you should consider using the `s) Set configuration password` option. It will encrypt the `rclone.conf` configuration file. This way secrets like the [](docId\:OXSINcFRuVMBacPvswwNU),  the encryption passphrase, and the access grant can't be stolen if an attacker gains access to your configuration file.
-:::
+{% /callout %}
 
 ## Create a Bucket
 
@@ -232,9 +232,9 @@ Use the `lsf` command to list all buckets.
 rclone lsf waterbear:
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Note the colon (`:`) character at the end of the command line.
-:::
+{% /callout %}
 
 ## Delete a Bucket
 
@@ -258,9 +258,9 @@ Use the `copy` command to upload an object.
 rclone copy --progress ~/Videos/myvideo.mp4 waterbear:mybucket/videos/
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The `--progress` flag is for displaying progress information. Remove it if you don't need this information.
-:::
+{% /callout %}
 
 Use a folder in the local path to upload all its objects.
 
@@ -268,9 +268,9 @@ Use a folder in the local path to upload all its objects.
 rclone copy --progress ~/Videos/ waterbear:mybucket/videos/
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Only modified files will be copied.
-:::
+{% /callout %}
 
 ## List Objects
 
@@ -300,9 +300,9 @@ Use the `copy` command to download an object.
 rclone copy --progress waterbear:mybucket/videos/myvideo.mp4 ~/Downloads/
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The `--progress` flag is for displaying progress information. Remove it if you don't need this information.
-:::
+{% /callout %}
 
 Use a folder in the remote path to download all its objects.
 
@@ -340,13 +340,13 @@ Use the `sync` command to sync the source to the destination, changing the desti
 rclone sync --progress ~/Videos/ waterbear:mybucket/videos/
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The `--progress` flag is for displaying progress information. Remove it if you don't need this information.
-:::
+{% /callout %}
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Since this can cause data loss, test first with the `--dry-run` flag to see exactly what would be copied and deleted.
-:::
+{% /callout %}
 
 The sync can be done also from Storj DCS to the local file system.
 

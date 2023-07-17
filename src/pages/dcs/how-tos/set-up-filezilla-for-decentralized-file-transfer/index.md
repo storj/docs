@@ -10,13 +10,13 @@ docId: OkJongWeLGhPy4KKz34W4
 
 This guide walks users through the process around setting up FileZilla to transfer files over Storj DCS.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The native integration uses [](docId\:Pksf8d0TCLY2tBgXeT18d) for your object data, including metadata and path data.
-:::
+{% /callout %}
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 This is the only integration available for the **free version of Filezilla**. If you wish to use the Hosted Gateway MT you will need the [](docId\:APk9353kCNcg5PKRPQ06u)
-:::
+{% /callout %}
 
 The*** FileZilla*** Client is a fast and reliable cross-platform (Windows, Linux and Mac OS X) FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.
 
@@ -36,13 +36,13 @@ Navigate to the [](docId\:b4-QgUOxVHDHSIWpAf3hG) page within your project and th
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/_98VnssVr5Qa2Qa_fQ0t__s3-credentials-2.png)
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 If you click **Encrypt My Access**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with[](docId\:AsyYcUJFbO1JI8-Tu8tW3) for S3 compatibility. Only then will your access grant be shared with our servers. Storj does not know or store your encryption passphrase.
 
 However, if you are still reluctant to enter your passphrase into our web application, that's completely understandable, and you should cancel creation of Access Grant in Web UI, select **Create Keys for CLI** and follow these [](docId\:OXSINcFRuVMBacPvswwNU).
 
 **The instructions below assume you selected *****Encrypt My Access.***
-:::
+{% /callout %}
 
 **Assign the permissions **you want this access grant to have, then click on **Encrypt My Access**:
 
@@ -54,13 +54,13 @@ Select a **Passphrase** type: Either **Enter** your own ***Encryption Passphrase
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/cjkC2NEfDvsUmM-CjmmWp_s3-credentials-4.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
 
 Importantly, if you want two access grants to have access to the same data, **they must use the same passphrase**. You won't be able to access your data if the passphrase in your access grant is different than the passphrase you uploaded the data with.
 
 Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
-:::
+{% /callout %}
 
 Click either on the** Copy to clipboard** link or **Download .txt **and then confirm that you copied your Encryption Phrase to a safe place.
 
@@ -70,9 +70,9 @@ Click the **Create my Access** link to finish generating of Access Grant.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/dqRiMbrR6WZPxAD8SQehA_s3-credentials-6.png)
 
-:::hint{type="danger"}
+{% callout type="danger"  %} 
 Please note that Storj does not know or store your encryption passphrase, so if you lose it, you will not be able to recover your files. Please store it in a safe place.
-:::
+{% /callout %}
 
 
 

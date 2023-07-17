@@ -159,11 +159,11 @@ docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gat
 
 Now you can navigate to <http://localhost:7777/site/> to see the bucket `site` as XML or to <http://localhost:7777/site/index.html> to see a static page, uploaded to the bucket `site`.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 You can publish this page to the internet, but in this case, you should run your gateway with the option `--server.address local_IP:local_Port` (replace`local_IP`with the local IP of your PC and`local_Port` with the port you want to expose).&#x20;
 
 If you use`localhost` or `127.0.0.1` as your `local_IP,` you will not be able to publish it directly (via port forwarding for example), instead, you will have to use a reverse proxy here.
-:::
+{% /callout %}
 
 ### Running Gateway ST to host a static website with cache
 
@@ -234,7 +234,7 @@ docker run -it --rm -p 127.0.0.1:7777:7777 --env-file ./minio_vars --mount type=
 :::
 ::::
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Setting `MINIO_BROWSER=off` env variable would disable the Minio browser. This would make sense if running the gateway as a static website in production.
-:::
+{% /callout %}
 

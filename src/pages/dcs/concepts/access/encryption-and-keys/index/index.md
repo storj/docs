@@ -48,15 +48,15 @@ Each Access Grant has an Encryption Passphrase that is configured when the Acces
 
 If the child Restricted Access Grant includes an object key path component prefix based restriction, not only will the API Key be restricted to just objects with that path prefix, but the hierarchically deterministic derived encryption key store contained in that child Restricted Access Grant can only be used to decrypt or encrypt objects with that same path prefix. Just as the child API Key cannot access objects beyond the restrictions contained in it's caveat, that child Encryption Key cannot be used to decrypt objects above the path restriction to which it is limited.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 By creating a restricted Access Grant, whether through the Satellite Admin Console or using an Uplink client, creating the Access Grant automatically creates an API Key and Encryption Key with the appropriate scope of restriction.&#x20;
-:::
+{% /callout %}
 
 At each level of the hierarchy of buckets, object key prefixes, and objects, a child HD Encryption Key is derived, and the hierarchy is encoded in the object and object metadata. Based on where an object falls in the hierarchy, if the parent encryption key is known, an encryption key can be derived for any level of the hierarchy that is valid from that point in the hierarchy and below to any child objects below it in the hierarchy.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Similar to the hierarchically derived structure of Access Grants, developers or applications don’t need to worry about the complexity of maintaining a set of keys. Since the hierarchy is encoded into the encryption mechanism, a shareable key can be derived on demand. The shareable HD Encryption Key set is described as an EncryptionAccess in the Uplink Client.
-:::
+{% /callout %}
 
 ## Important Design Point
 

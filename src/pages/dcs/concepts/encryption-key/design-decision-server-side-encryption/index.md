@@ -12,9 +12,9 @@ Strong encryption is critical to decentralized projects especially where a signi
 
 It's also important to enable the broadest range of use cases for object storage, and some of those use cases rely on server-side encryption for privacy and security.&#x20;
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 The Storj DCS hosted S3-compatible gateway service uses server-side encryption, following the industry standard practices for managing access credentials.&#x20;
-:::
+{% /callout %}
 
 When you generate a set of S3-compatible Gateway credentials from an Access Grant, your Access Grant is encrypted using your Access Key. That means that you are passing your decryption information to the Storj-hosted authservice running within GatewayMT. All data and metadata are still encrypted, and that encryption is compatible with the rest of the Storj encryption ecosystem.
 

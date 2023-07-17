@@ -42,9 +42,9 @@ uplink access remove <name>
 
 You need to have an access in the local store of Uplink before proceeding. See [](docId\:x0Ej1E9_xq9xXFaSvyPTT),[](docId:9MIN1usU8WPUY2212Y-_S), and [](docId\:OuoKJl9KqbJVQB9Xkdy3g)  commands for information how to create/import/setup an access.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 If you want to remove the current access, you need to switch to another before proceeding, using the [](docId\:d-btqElDJY9m26QIKJYP-) command.
-:::
+{% /callout %}
 
 :::codeblocktabs
 ```windows

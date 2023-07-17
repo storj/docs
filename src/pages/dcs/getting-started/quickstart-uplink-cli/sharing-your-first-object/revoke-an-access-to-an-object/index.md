@@ -22,11 +22,11 @@ uplink access revoke asdfRF...
 ```
 :::
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 The access will be revoked permanently for this parent access grant.&#x20;
 
 If you want to share this content again you should create a new access grant through the web interface.
-:::
+{% /callout %}
 
 ## Revoke a named access grant
 

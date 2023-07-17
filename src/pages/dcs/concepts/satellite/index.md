@@ -26,9 +26,9 @@ Users of the network will have accounts on a specific Satellite instance, which 
 
 While Storj DCS doesn't have "regions" like other cloud storage providers who operate data centers in one or more geographic location, the closest thing to a "region" is a satellite. While your data is stored across a globally distributed network of storage nodes, the encrypted metadata is stored across multiple satellites in a region.&#x20;
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 When selecting the Satellite for your project, you'll want to choose the geographic region where the majority of the end users of your service who will be interacting with the objects on Storj DCS will be located.
-:::
+{% /callout %}
 
 Importantly, a specific Satellite instance does not necessarily constitute one server. A Satellite may be run as a collection of servers and be backed by a horizontally scalable trusted database for higher uptime. Storj operates clusters of Satellites in regions, with all Satellites in a region sharing a multi-region, distributed back end. This configuration provides a highly resilient and available architecture in which the loss of any Satellite service, an entire Satellite or the unavailability of a facility hosting a Satellite has no impact on the availability of data stored on the network.
 

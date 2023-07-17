@@ -11,9 +11,9 @@ The landing page for the Storj DCS Satellite Admin Console is the Project  Dashb
 
 When you log into the Satellite Admin Console, you start on the Project Dashboard for your default Project. A Project is the basic unit for aggregating usage, calculating billing, invoicing fees,  collecting payment, and handling access management. Users can create multiple Projects and projects are invoiced separately. Within a Project, usage is tracked at the Bucket level and aggregated for invoicing to the Project. Project names are not client-side encrypted so that they may be rendered in the Satellite user interface. There are two main drivers for creating multiple Projects: access management and billing.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Learn more about Projects in [](docId\:M-5oxBinC6J1D-qSNjKYS) under Concepts.
-:::
+{% /callout %}
 
 On the Project Dashboard, there are a number of navigational elements and information displays:
 
@@ -33,7 +33,7 @@ On the Project Dashboard, there are a number of navigational elements and inform
 
 Here are some links to help you get a better understanding of your Satellite Admin Console and Storj DCS constructs:
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Learn more about [](docId\:M-5oxBinC6J1D-qSNjKYS)  under Concepts.
 
 Learn more about Project [](docId\:Zrbz4XYhIOm99hhRShWHg)  under Concepts.
@@ -41,7 +41,7 @@ Learn more about Project [](docId\:Zrbz4XYhIOm99hhRShWHg)  under Concepts.
 Learn more about adding a [](docId:7U4_uu6Pzg6u2N6FpV9VE) under Billing, Payment & Accounts.
 
 Learn [](docId:59T_2l7c1rvZVhI8p91VX)  under Billing, Payment & Accounts.
-:::
+{% /callout %}
 
 Next we'll learn about creating/deleting buckets, uploading, downloading, viewing the object map, and sharing access to objects through the [](docId:4oDAezF-FcfPr0WPl7knd)  in the Satellite Admin Console.
 

@@ -34,9 +34,9 @@ Adding a credit card as payment method will result in your per project limits be
 
 However, if your only payment method on file is STORJ token, you can submit a [](docId\:A4kUGYhfgGbVhlQ2ZHXVS).
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Note that you could avoid having to wait for a manual project limit increase to be applied by adding a credit card as backup payment method. In this case, your usage would still get paid from your STORJ balance if it is sufficient to cover your outstanding charges. Only usage that exceeds what can be covered by your STORJ balance at time of invoicing would get charged to the credit card.
-:::
+{% /callout %}
 
 ## Free Tier
 

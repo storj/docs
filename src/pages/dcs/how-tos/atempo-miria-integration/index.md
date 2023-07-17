@@ -115,9 +115,9 @@ Create S3 credentials in the Storj web console:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Uxn8zBqXQVmQvsswV3pJ2_image.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
-:::
+{% /callout %}
 
 6\. Click **Create Access** to finish creation of your S3 credentials
 

@@ -106,9 +106,9 @@ uplink access inspect cheesecake
 }
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 There is no command to delete an access. You can delete an access directly in your configuration file.
-:::
+{% /callout %}
 
 ### How to use an Access grant with commands
 

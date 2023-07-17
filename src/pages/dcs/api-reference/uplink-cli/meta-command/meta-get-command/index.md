@@ -85,7 +85,7 @@ uplink meta get sj://cakes/cheesecake.jpg baker
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/B2qjHGPbKsZHONu74SsL0_meta-get-key.png)
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Querying for a non-existent key will raise an error.
-:::
+{% /callout %}
 

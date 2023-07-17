@@ -48,9 +48,9 @@ uplink access [flags] <revokee>
 
 ### Revoke a stored access
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 If you want to revoke the current access, you need to switch to a different access with the [](docId\:d-btqElDJY9m26QIKJYP-) command before proceeding.
-:::
+{% /callout %}
 
 :::codeblocktabs
 ```windows

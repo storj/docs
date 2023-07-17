@@ -52,9 +52,9 @@ Exported to: cheesecake.access
 
 The command `uplink access restrict` allows you to create a restricted access grant using [](docId\:Ch4vLynsEqyT2-3qDEBiy).
 
-:::hint{type="danger"}
+{% callout type="danger"  %} 
 An access generated using `uplink access restrict` with no arguments creates an access to your **entire project** with read permissions!
-:::
+{% /callout %}
 
 Example:&#x20;
 
@@ -76,9 +76,9 @@ uplink share --readonly=false --not-before=+2h --not-after=+10h sj://cakes/
 17UjiCXa...
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 See the [](docId\:jWrIx32jqwp0r45vQcodH) command reference for more actions.
-:::
+{% /callout %}
 
 ## Restrictions
 
@@ -117,7 +117,7 @@ Paths     : sj://cakes/ (entire bucket)
 Access    : 123qSBBgSUSqwUdbJ6n4bxLM...
 ```
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 See the [](docId\:jWrIx32jqwp0r45vQcodH) and [](docId\:tBnCSrmR1jbOewG38fIr4) commands reference for more actions.
-:::
+{% /callout %}
 

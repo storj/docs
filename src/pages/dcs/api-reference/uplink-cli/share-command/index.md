@@ -23,9 +23,9 @@ uplink share [ALLOWED_PATH_PREFIX]... [flags]
 ```
 :::
 
-:::hint{type="danger"}
+{% callout type="danger"  %} 
 An access generated using `uplink share` with no arguments creates an access to your **entire project** with read permissions.
-:::
+{% /callout %}
 
 ## Flags
 
@@ -169,11 +169,11 @@ uplink share sj://cakes/ --url --not-after=none --base-url=https://link.storjsha
 ```
 :::
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Note that specifying `--base-url` is optional, but the `--not-after` is mandatory. If you do not want to specify date or offset - you can specify `--not-after=none`.
 
 See [](docId\:tBnCSrmR1jbOewG38fIr4)  for details.
-:::
+{% /callout %}
 
 ```Text
 =========== ACCESS RESTRICTIONS ==========================================================

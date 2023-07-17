@@ -30,9 +30,9 @@ docId: rnZKB53zoxOVjYLcnHngs
 
 7.  **Leave the resulting web page open** in your browser while you configure Arq.
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 New Users should be presented with the option to ***Create a backup plan***.  Existing users may need to create a backup plan from a menu.
-:::
+{% /callout %}
 
 Pick **New Backup Plan** from Arq’s File menu. Click **Add Storage Location**, choose ***Storj***, and click **Continue**:
 
@@ -52,17 +52,17 @@ Click **Continue** to use the storage location you just added:
 
 Choose an encryption password for Arq to encrypt your data **before** transmitting it (this password will never leave your computer):
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 Files are stored encrypted within the Storj network.  Using Arq's encryption would add a second layer of encryption.  Users may want to uncheck `Encrypt with password` when given the option.  This is optional.&#x20;
-:::
+{% /callout %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/j-ej_S6qiBjUl-c_-ggZb_screen-shot-2022-05-27-at-94638-am-1024x814.png)
 
 Choose which files you’d like to back up, and click **Create Backup Plan**:
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 &#x20;To change the schedule, the files being backed up, and many other options, click on your backup plan on the left and click “Edit…”.
-:::
+{% /callout %}
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/snmPnsOGwsJ2aQ7Ub_wiy_screen-shot-2022-05-27-at-94712-am-1024x814.png)
 

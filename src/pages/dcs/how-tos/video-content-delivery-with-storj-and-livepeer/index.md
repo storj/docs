@@ -65,9 +65,9 @@ Create an Access Grant in the Storj web console:
 
 5\. Set an encryption passphrase and agree to the prompt&#x20;
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Use the same encryption passphrase for the access grant as the one you used for the web console in order to view your files in both places
-:::
+{% /callout %}
 
 6\. Run the setup command
 

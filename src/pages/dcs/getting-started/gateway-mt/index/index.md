@@ -10,9 +10,9 @@ docId: AsyYcUJFbO1JI8-Tu8tW3
 
 Storj now offers a hosted multitenant gateway (Gateway MT)  that is backward compatible with S3. This means you’ll be able to integrate with the Storj network via HTTP, and you won’t have to run anything extra on your end.
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 By using hosted Gateway MT you are opting into [](docId\:hf2uumViqYvS1oq8TYbeW) &#x20;
-:::
+{% /callout %}
 
 Using Gateway MT with AWS CLI is a 2-step process:
 
@@ -36,13 +36,13 @@ Using Gateway MT with AWS CLI is a 2-step process:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Ix5CB6wG-XseeBfJIXy4H_qscredmt04.png)
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
 
 Importantly, if you want two access grants to have access to the same data, **they must use the same passphrase**. You won't be able to access your data if the passphrase in your access grant is different than the passphrase you uploaded the data with.
 
 Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
-:::
+{% /callout %}
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
@@ -58,9 +58,9 @@ Now you are ready to configure AWS CLI.
 
 ### Configure AWS CLI with your credentials
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 To continue make sure you have the AWS CLI installed on your machine.&#x20;
-:::
+{% /callout %}
 
 Verify your AWS CLI version by running `aws --version`in your terminal. AWS CLI current version is version 2. If you are using AWS CLI v1, you will need to install a plugin to be able to define the endpoint. See how on [](docId:20zlQyfMD9gmHJOUPx3jh).
 

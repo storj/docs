@@ -35,13 +35,13 @@ If you click **Add funds** button, you will see a screen with QR code and your d
 
 When you will pay the needed amount of STORJ, they will be added automatically to your **Available Balance** in USD value.
 
-:::hint{type="warning"}
+{% callout type="warning"  %} 
 This deposit address supports only L1 transactions, zkSync is not supported yet.
-:::
+{% /callout %}
 
-:::hint{type="info"}
+{% callout type="info"  %} 
 Please note, the payment will be accounted only after some amount of confirmations on the Ethereum network and then StorjScan will send them to your balance. This could take from minutes and up to 4 hours. If it took longer, please [contact support](https://supportdcs.storj.io).
-:::
+{% /callout %}
 
 ### Viewing transactions
 

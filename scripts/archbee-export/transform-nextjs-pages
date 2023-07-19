@@ -13,9 +13,11 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-directory = options[:directory] || '.'
+$directory = options[:directory] || '.'
 
 
+$new_dir = "#{$directory}_t"
+FileUtils.mkdir_p($new_dir)
 # Recursive function to navigate the directory tree
 def process_directory(directory)
   # Get the absolute path of the directory
@@ -34,18 +36,18 @@ def process_directory(directory)
       process_directory(absolute_filename)
     elsif filename.end_with?('.md')
       # Get the new directory name (without the .md extension)
-      new_dir = File.join(absolute_directory, filename[0...-3])
+      new_dir = File.join(absolute_directory.sub($directory, $new_dir), filename[0...-3])
 
       # Create the new directory
       FileUtils.mkdir_p(new_dir)
 
       # Move the .md file into the new directory and rename it to page.md
-      FileUtils.mv(absolute_filename, File.join(new_dir, 'index.md'))
+      FileUtils.cp(absolute_filename, File.join(new_dir, 'index.md'))
     end
   end
 end
 
 # Start processing from the root directory
-process_directory(directory)
+process_directory($directory)
 
 

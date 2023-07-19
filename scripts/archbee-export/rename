@@ -20,13 +20,15 @@ directory = options[:directory] || '.'
 
 FileUtils.mkdir_p(directory.gsub(/\s/, '_').downcase)
 
+new_dir = "#{directory}_r"
+FileUtils.mkdir_p(new_dir)
 # Get all files in the specified directory
 Dir.glob(File.join(directory, "*")).each do |file|
   # Skip if file is actually a directory
   next if File.directory?(file)
 
   # Transform the file name: replace spaces with underscores and convert to lowercase
-  new_name = file.gsub(/\s/, '_').downcase
+  new_name = File.join(new_dir, file.gsub(/\s/, '_').downcase.sub(directory, ""))
 
   # Only rename the file if the name has changed
   if file != new_name

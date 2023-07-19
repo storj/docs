@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+# ./get-sitemaps
+./rename -d my_downloads
+./organize -d my_downloads_r -s sitemap-dcs.xml
+./transform-nextjs-pages -d my_downloads_r_o
+./fix-headers my_downloads_r_o_t
+./fix-markdown my_downloads_r_o_t

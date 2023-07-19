@@ -15,12 +15,17 @@ OptionParser.new do |opts|
   opts.on('-d', '--directory DIRECTORY', 'Directory to rename files in') do |dir|
     options[:directory] = dir
   end
+  opts.on('-s', '--sitemap FILE', 'sitemap') do |dir|
+    options[:sitemap] = dir
+  end
 end.parse!
 
 directory = options[:directory] || '.'
+raise "--sitemap flag required" unless options[:sitemap]
+sitemap = options[:sitemap]
 
 # 1. Parse sitemap.xml to get all the URLs
-sitemap = File.open("./sitemap.xml") { |f| Nokogiri::XML(f) }
+sitemap = File.open(sitemap) { |f| Nokogiri::XML(f) }
 urls = sitemap.xpath('//xmlns:loc').map(&:text)
 
 # Create a map of paths to URLs for easy lookup
@@ -33,6 +38,8 @@ def read_frontmatter(content)
 end
 
 WEBSITE="https://docs.storj.io/dcs/"
+new_dir = "#{directory}_o"
+FileUtils.mkdir_p(new_dir)
 # 2. Parse the frontmatter from each markdown file to get the slug
 Dir.glob("#{directory}/*.md").each do |markdown_file|
   puts "markdown_file #{markdown_file}"
@@ -51,13 +58,13 @@ Dir.glob("#{directory}/*.md").each do |markdown_file|
   puts "url_paths #{url_paths[frontmatter['slug']]}"
   slug = File.basename(frontmatter['slug'] || "") || markdown_file
   if frontmatter['slug'] && url_paths[slug]
-    new_path = "new_docs_next/" +  url_paths[slug].gsub(WEBSITE, '') + '.md'
+    new_path = "#{new_dir}/" +  url_paths[slug].gsub(WEBSITE, '') + '.md'
     puts "new_path #{new_path}"
     FileUtils.mkdir_p("#{File.dirname(new_path)}")
     FileUtils.cp(markdown_file, new_path)
   # If the filename (without extension) is in the URL list, move the file
   elsif url_paths[File.basename(markdown_file, '.*')]
-    new_path = "new_docs_next/" + url_paths[File.basename(markdown_file, '.*')].gsub(WEBSITE, '') + '.md'
+    new_path = "#{new_dir}/" + url_paths[File.basename(markdown_file, '.*')].gsub(WEBSITE, '') + '.md'
     puts "elsif new_path #{new_path}"
     FileUtils.mkdir_p(File.dirname(new_path))
     FileUtils.cp(markdown_file, new_path)

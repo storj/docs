@@ -18,7 +18,7 @@ const code = `export default {
 }`
 
 const tabs = [
-  { name: 'cache-advance.config.js', isActive: true },
+  { name: '~/.aws/credentials', isActive: true },
   { name: 'package.json', isActive: false },
 ]
 
@@ -52,8 +52,7 @@ export function Hero() {
                 Make the world your datacenter
               </p>
               <p className="mt-3 text-2xl tracking-tight text-slate-400">
-                Cache every single thing your app could ever do ahead of time,
-                so your code never even has to run at all.
+                Store every byte with Storj&apos;s decentralized nodes, ensuring your data is everywhere, even before you need it.
               </p>
               <div className="flex mt-8 gap-4 md:justify-center lg:justify-start">
                 <Button href="/">Get started</Button>
@@ -64,8 +63,8 @@ export function Hero() {
             </div>
           </div>
           <div className="relative lg:static xl:pl-10">
-            <div className="absolute inset-x-[-50vw] -bottom-48 -top-32 [mask-image:linear-gradient(transparent,white,white)] dark:[mask-image:linear-gradient(transparent,white,transparent)] lg:-bottom-32 lg:-top-32 lg:left-[calc(50%+14rem)] lg:right-0 lg:[mask-image:none] lg:dark:[mask-image:linear-gradient(white,white,transparent)]">
-              <HeroBackground className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-0 lg:translate-x-0 lg:translate-y-[-60%]" />
+            <div className="absolute inset-x-[-50vw] -bottom-48 -top-32 [mask-image:linear-gradient(white,transparent)] md:[mask-image:linear-gradient(white,white,transparent)] lg:[mask-image:linear-gradient(white,transparent,white)]">
+              <HeroBackground className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-[-60%]" />
             </div>
             <div className="relative">
               <Image

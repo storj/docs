@@ -1,54 +1,47 @@
 import fs from 'fs'
 import path from 'path'
 import Markdoc from '@markdoc/markdoc'
-import glob from 'fast-glob'
-let cache = new Map()
-function titleCase(str) {
-  return str
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(' ')
+
+function getTitleFromMdFile(filepath) {
+  const md = fs.readFileSync(filepath, 'utf8')
+  const ast = Markdoc.parse(md)
+  return ast.attributes?.frontmatter?.match(/^title:\s*(.*?)\s*$/m)?.[1] || '' // Default to empty string if title isn't found
 }
 
-function constructOutputStructure(basePath) {
-  let files = glob.sync('**/index.md', { cwd: basePath })
-  let data = []
+function walkDir(dir, currentPath = '') {
+  let results = []
+  const list = fs.readdirSync(dir)
 
-  files.forEach((file) => {
-    //let url = file === 'index.md' ? '/' : `/${file.replace(/page\.md$/, '')}`
-    let url = `${file.replace(/index\.md$/, '')}`.slice(0, -1) // remove trailing slash
-    //url = removeNumericPrefixes(url)
-    let md = fs.readFileSync(path.join(basePath, file), 'utf8')
+  list.forEach((file) => {
+    const filepath = path.join(dir, file)
+    const stat = fs.statSync(filepath)
+    const relativePath = path.join(currentPath, file)
 
-    let sections
-
-    if (cache.get(file)?.[0] === md) {
-      sections = cache.get(file)[1]
-    } else {
-      let ast = Markdoc.parse(md)
-      let title =
-        ast.attributes?.frontmatter?.match(/^title:\s*(.*?)\s*$/m)?.[1]
-      sections = [[title, null, []]]
-      //extractSections(ast, sections)
-      cache.set(file, [md, sections])
+    if (stat && stat.isDirectory()) {
+      let indexFilepath = filepath + '/index.md'
+      let title = fs.existsSync(indexFilepath)
+        ? getTitleFromMdFile(indexFilepath)
+        : file.charAt(0).toUpperCase() + file.slice(1)
+      let entry = {
+        title: title,
+        type: file,
+        links: walkDir(filepath, relativePath),
+      }
+      if (fs.existsSync(indexFilepath)) {
+        entry.href = `/dcs/${relativePath}`
+      }
+      results.push(entry)
+    } else if (path.extname(file) === '.md' && file !== 'index.md') {
+      let url = `${relativePath.replace(/\.md$/, '')}` // Remove .md extension
+      results.push({
+        title: getTitleFromMdFile(filepath),
+        href: `/dcs/${url}`,
+      })
     }
-
-    // Extract the guide type from href
-    let guideType = url.split('/')[0]
-
-    // Try to find an existing guide group for this type
-    let guideGroup = data.find((group) => group.type === guideType)
-    if (!guideGroup) {
-      guideGroup = { title: titleCase(guideType), type: guideType, links: [] }
-      data.push(guideGroup)
-    }
-    // Add the current guide to the group
-    //
-    guideGroup.links.push({ title: sections[0][0], href: `/dcs/${url}` })
   })
 
-  console.log('data', JSON.stringify(data, null, 2))
-  return data
+  return results
 }
 
-constructOutputStructure('/Users/dan/test/storj-docs-poc/src/pages/dcs')
+const result = walkDir('/Users/dan/test/storj-docs-poc/src/pages/dcs') // Replace with your starting directory path
+console.log(JSON.stringify(result, null, 2))

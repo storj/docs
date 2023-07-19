@@ -1,7 +1,6 @@
 import { Callout } from '@/components/Callout'
 import { CodeGroup } from '@/components/Code'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
-export { CodeGroup, Code as code, Pre as pre } from '@/components/Code'
 
 const tags = {
   callout: {

@@ -2,7 +2,7 @@
 title: Plex and Storj DCS as a private streaming service
 slug: how-tos/how-to-use-plex-and-storj-dcs-as-a-private-streaming-service
 createdAt: 2022-05-19T18:15:05.000Z
-updatedAt: 2023-03-03T08:30:09.000Z
+updatedAt: 2023-07-19T20:58:48.315Z
 docId: Ywf4qZUmhJXxbFy55G8Mj
 ---
 

@@ -3,6 +3,7 @@ title: access list
 slug: api-reference/uplink-cli/access-command/access-list-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:01:44.000Z
+docId: 8ROAZiLnev7X-CP9A_DQF
 ---
 
 Prints name and associated satellite of all available accesses.
@@ -26,8 +27,7 @@ uplink access list [flags]
 ## Flags
 
 | Flag              | Description                                         |
-| :---------------- | :---------------------------------------------docId: 8ROAZiLnev7X-CP9A_DQF
------ |
+| :---------------- | :-------------------------------------------------- |
 | `--access string` | the serialized access, or name of the access to use |
 | `--help`,` -h`    | help for list                                       |
 

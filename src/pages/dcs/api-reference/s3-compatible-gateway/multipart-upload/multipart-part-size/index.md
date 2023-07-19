@@ -2,7 +2,7 @@
 title: Multipart Part Size
 slug: api-reference/s3-compatible-gateway/multipart-upload/multipart-part-size
 createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-03-03T08:36:17.000Z
+updatedAt: 2023-07-19T21:00:34.498Z
 docId: rkPrCIwpTjmMKiZajeaxp
 ---
 

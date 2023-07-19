@@ -3,6 +3,7 @@ title: cp
 slug: api-reference/uplink-cli/cp-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:04.000Z
+docId: yk6xM8Jj_C-blgyjh4K61
 ---
 
 Copies a local file or Storj object to another location locally or in Storj  DCS
@@ -28,8 +29,7 @@ The `cp` command is used to upload and download objects. The `cp` command abstra
 ## Flags
 
 | Flag                            | Description                                                                                                   |
-| :------------------------------ | :---------------------------------------------------------------------------------------------------------docId: yk6xM8Jj_C-blgyjh4K61
---- |
+| :------------------------------ | :------------------------------------------------------------------------------------------------------------ |
 | `--access string`               | the serialized access, or name of the access to use                                                           |
 | `-r, --recursive`               | Perform a recursive copy                                                                                      |
 | `-t, --transfers int`           | Controls how many uploads/downloads to perform in parallel (default 1)                                        |

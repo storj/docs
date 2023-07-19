@@ -4,6 +4,7 @@ slug: how-tos/how-to-connect-s3fs-to-storj-dcs
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-09T18:46:57.000Z
 docId: cJm_o93WkIvh0qm40oBlV
+pageTitle: How to connect s3fs to Storj DCS
 ---
 
 ## Prerequisites

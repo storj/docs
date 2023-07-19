@@ -2,13 +2,13 @@
 title: FileZilla Native Integration
 slug: how-tos/set-up-filezilla-for-decentralized-file-transfer
 createdAt: 2022-05-19T18:15:05.000Z
-updatedAt: 2023-03-03T08:30:09.000Z
+updatedAt: 2023-07-18T17:29:23.212Z
 docId: OkJongWeLGhPy4KKz34W4
 ---
 
 ## Introduction
 
-This guide walks users through the process around setting up FileZilla to transfer files over Storj DCS.
+This guide walks users through the process of setting up FileZilla to transfer files over Storj DCS.
 
 {% callout type="info"  %} 
 The native integration uses [](docId\:Pksf8d0TCLY2tBgXeT18d) for your object data, including metadata and path data.
@@ -18,11 +18,11 @@ The native integration uses [](docId\:Pksf8d0TCLY2tBgXeT18d) for your object dat
 This is the only integration available for the **free version of Filezilla**. If you wish to use the Hosted Gateway MT you will need the [](docId\:APk9353kCNcg5PKRPQ06u)
 {% /callout %}
 
-The*** FileZilla*** Client is a fast and reliable cross-platform (Windows, Linux and Mac OS X) FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.
+The*** FileZilla*** Client is a fast and reliable cross-platform (Windows, Linux, and Mac OS X) FTP, FTPS, and SFTP client with many useful features and an intuitive graphical user interface.
 
 It includes a site manager to store all your connection details and logins, as well as an Explorer-style interface that shows the local and remote folders and can be customized independently.
 
-With the launch of the native Storj DCS Integration into the FileZilla client, developers can use the client configured to transfer files, point-to-point using the decentralized cloud.
+With the launch of the native Storj DCS Integration into the FileZilla client, developers can use the client configured to transfer files point-to-point using the decentralized cloud.
 
 ## Getting Started
 
@@ -37,7 +37,7 @@ Navigate to the [](docId\:b4-QgUOxVHDHSIWpAf3hG) page within your project and th
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/_98VnssVr5Qa2Qa_fQ0t__s3-credentials-2.png)
 
 {% callout type="info"  %} 
-If you click **Encrypt My Access**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with[](docId\:AsyYcUJFbO1JI8-Tu8tW3) for S3 compatibility. Only then will your access grant be shared with our servers. Storj does not know or store your encryption passphrase.
+If you click **Encrypt My Access**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with [](docId\:AsyYcUJFbO1JI8-Tu8tW3) for S3 compatibility. Only then will your access grant be shared with our servers. Storj does not know or store your encryption passphrase.
 
 However, if you are still reluctant to enter your passphrase into our web application, that's completely understandable, and you should cancel creation of Access Grant in Web UI, select **Create Keys for CLI** and follow these [](docId\:OXSINcFRuVMBacPvswwNU).
 
@@ -97,11 +97,8 @@ Next, select Protocol:  "Storj - Decentralized Cloud Storage" from the Protocol 
 Now enter the **Satellite** and **Access Grant** as shown below (Entering the port is not required)
 
 1.  Use the **Satellite** URL from which you created the Access Grant.
-    *
 
-    *
 
-    *
 
 2.  For **Access Grant** please enter the Access Grant you saved above.
 

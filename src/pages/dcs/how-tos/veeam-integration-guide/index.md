@@ -2,11 +2,12 @@
 title: Veeam
 slug: how-tos/veeam-integration-guide
 createdAt: 2023-01-04T14:49:43.000Z
-updatedAt: 2023-03-09T18:53:07.000Z
+updatedAt: 2023-07-19T18:19:30.188Z
 docId: Cr9Ak4IM8F9uuHVlVtbpj
+pageTitle: Veeam Integration Guide
 ---
 
-**Veeam Backup & Replication** is an all-in-one backup, recovery, and data security solution that serves both on-premises and cloud storage. It is the foundation of the Veeam Platform and delivers simple, flexible, reliable and powerful data protection.
+**Veeam Backup & Replication** is an all-in-one backup, recovery, and data security solution that serves both on-premises and cloud storage. It is the foundation of the Veeam Platform and delivers simple, flexible, reliable, and powerful data protection.
 
 For more information, visit [veeam.com](). You can also [download a free trial](https://www.veeam.com/vm-backup-recovery-replication-software.html) for 30 days.
 
@@ -14,9 +15,9 @@ For more information, visit [veeam.com](). You can also [download a free trial](
 
 *   **Eliminate downtime**: instant recovery and protection from cyber threats.
 
-*   **Fast and secure backup for your data: **automate workload backup and discovery across cloud, virtual, physical and NAS. Fast image-based backups take advantage of VMs, hardware and OS snapshots.&#x20;
+*   **Fast and secure backup for your data: **automate workload backup and discovery across cloud, virtual, physical, and NAS. Fast image-based backups take advantage of VMs, hardware, and OS snapshots.&#x20;
 
-*   **Lightning-fast data recovery for any scenario**: instant recovery of OSes, applications, databases, VMs, files, folders, objects and shares. Recovery works across multiple clouds and platforms.
+*   **Lightning-fast data recovery for any scenario**: instant recovery of OSes, applications, databases, VMs, files, folders, objects, and shares. Recovery works across multiple clouds and platforms.
 
 *   **Flexibility**: a software-defined and hardware–agnostic solution for ultimate flexibility.&#x20;
 
@@ -24,13 +25,13 @@ For more information, visit [veeam.com](). You can also [download a free trial](
 
 To integrate Storj with Veeam, you will need to create S3 credentials in Storj and add them within Veeam. Veeam uses a wizard to guide users in adding S3-compatible cloud storage.
 
-## Requirements
+### Requirements
 
-*   An active Storj account
+*   An active Storj account: navigate to <https://us1.storj.io/signup?partner=veeam> to sign up, or log in <https://storj.io/login> if you already have an account.
 
-*   A bucket for Veeam in your Storj instance
+*   A bucket for Veeam in your Storj instance.
 
-*   An installation of Veeam
+*   An installation of Veeam.
 
 Download a [free trial](https://www.veeam.com/vm-backup-recovery-replication-software.html) of Veeam or [create a Veeam account](https://www.veeam.com/signin.html?client_id=my-veeam-com).
 

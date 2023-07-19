@@ -2,11 +2,12 @@
 title: Atempo (Miria)
 slug: how-tos/atempo-miria-integration
 createdAt: 2022-11-22T20:53:53.000Z
-updatedAt: 2023-03-09T18:50:41.000Z
+updatedAt: 2023-07-13T16:03:28.901Z
 docId: Sg-4A2Td09A3OeSu6H5ag
+pageTitle: Atempo (Miria) Integration Guide
 ---
 
-Atempo is a leading software vendor providing data management solutions to companies worldwide. Miria is an open solution from Atempo that provides high performance backup, movement, synchronization, and archiving for large data sets from heterogeneous sources. It delivers vendor-agnostic solutions for petascale NAS and cloud environments, and has five pillars:
+[Atempo](https://www.atempo.com/) is a leading software vendor providing data management solutions to companies worldwide. Miria is an open solution from Atempo that provides high-performance backup, movement, synchronization, and archiving for large data sets from heterogeneous sources. It delivers vendor-agnostic solutions for petascale NAS and cloud environments and has five pillars:
 
 *   Analytics
 
@@ -30,13 +31,13 @@ Security integrations in Miria ensure that data on Storj is kept safe, while met
 
 ## Integration
 
-Miria integrates with Storj cloud storage through the S3 protocol. The Miria server orchestrates the Miria data movers, which integrate with Storj through the S3 protocol. On the other end, any other storage platform also integrates with the data movers, thus integrating data movement and management from heterogenous sources. The Miria solution is fully scalable - simply add another Miria Data mover as needed.
+Miria integrates with Storj cloud storage through the S3 protocol. The Miria server orchestrates the Miria data movers, which integrates with Storj through the S3 protocol. Conversely, any other storage platform also integrates with the data movers, thus integrating data movement and management from heterogeneous sources. The Miria solution is fully scalable - simply add another Miria Data mover as needed.
 
-To integrate Miria with Storj, you will need to create S3 credentials for Miria in Storj and pass them to the Miria server through the Miria web interface.
+To integrate Miria with Storj, you must create S3 credentials for Miria in Storj and pass them to the Miria server through the Miria web interface.
 
-## Requirements
+### Requirements
 
-*   An active Storj account
+*   An active Storj account, or you can sign up here <https://us1.storj.io/signup?partner=atempo>
 
 *   A bucket for Miria in your Storj instance
 
@@ -147,13 +148,13 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/zM2lJCGBJZOFUWbZW7fPc_0.png)
 
-7\. Now you will need the S3 credentials generated earlier. Enter the **access key** in the **Access Key ID** field,** **and the **secret key** in the **Secret Access Key** field.
+7\. Now, you will need the S3 credentials generated earlier. Enter the **access key** in the **Access Key ID** field** **and the **secret key** in the **Secret Access Key** field.
 
 8\. If desired, enable the** Data compression** checkbox to optimize the size of data stored in the Object Storage.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/KApbFdOcEAxy0sPeG-Xyr_2.png)
 
-9\. The new **Storage Manager Container **is ready to be used for data storage. You can store backups, archives, tiered data, or synchronized files from primary storage.&#x20;
+9\. The new **Storage Manager Container **is ready for data storage. You can store backups, archives, tiered data, or synchronized files from primary storage.&#x20;
 
 ## Success!
 

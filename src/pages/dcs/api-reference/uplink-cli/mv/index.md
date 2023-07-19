@@ -3,6 +3,7 @@ title: mv
 slug: api-reference/uplink-cli/mv
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:47.000Z
+docId: PIfV271UghKvJecT-zQ4d
 ---
 
 Moves a Storj object to another location in Storj DCS
@@ -28,8 +29,7 @@ The `mv` command is used to move or rename objects within the same Storj DCS pro
 ## Flags
 
 | Flag              | Description                                         |
-| :---------------- | :---------------------------------------------docId: PIfV271UghKvJecT-zQ4d
------ |
+| :---------------- | :-------------------------------------------------- |
 | `--access string` | the serialized access, or name of the access to use |
 | `--help`, `-h`    | help for mv                                         |
 

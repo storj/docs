@@ -2,7 +2,7 @@
 title: Rclone 
 slug: how-tos/sync-files-with-rclone
 createdAt: 2022-05-19T18:28:40.000Z
-updatedAt: 2023-03-03T08:30:09.000Z
+updatedAt: 2023-07-19T18:20:36.644Z
 docId: LdrqSoECrAyE_LQMvj3aF
 ---
 
@@ -10,7 +10,7 @@ docId: LdrqSoECrAyE_LQMvj3aF
 
 These 'Getting Starting' tutorials will showcase the process for configuring [Rclone](https://rclone.org) with Storj DCS. We will cover only some of the basic features in this guide.
 
-&#x20;For making the most of Rclone, take a look at the complete Rclone [command reference](https://rclone.org/commands/)
+&#x20;To make the most of Rclone, look at the complete Rclone [command reference](https://rclone.org/commands/).
 
 {% callout type="danger"  %} 
 These guides are experimental. The main functionality appears to work, but there are expected to be undiscovered issues (including issues around connection timeouts). Please report any issues you may run into on this [forum thread](https://forum.storj.io/t/two-more-tech-previews-rclone-and-restic/6072).
@@ -42,7 +42,7 @@ Use our native integration pattern to take advantage of client-side encryption a
 
 ### Hosted Gateway
 
-Use our S3 compatible Hosted Gateway integration pattern to increase upload performance and reduce the load on your systems and network. Uploads will be encrypted and erasure-coded [](docId\:hf2uumViqYvS1oq8TYbeW), thus a 1GB upload will result in only in 1GB of data being uploaded to the Hosted Gateway.
+Use our S3 compatible Hosted Gateway integration pattern to increase upload performance and reduce the load on your systems and network. Uploads will be encrypted and erasure-coded [](docId\:hf2uumViqYvS1oq8TYbeW), thus, a 1GB upload will result in only 1GB of data being uploaded to the Hosted Gateway.
 
 ### Use this pattern for
 
@@ -51,7 +51,7 @@ Use our S3 compatible Hosted Gateway integration pattern to increase upload perf
 *   Reduction in network load
 
 {% callout type="info"  %} 
-By selecting this integration pattern you are opting in to server-side encryption.
+By selecting this integration pattern, you are opting in to server-side encryption.
 {% /callout %}
 
 ::::link-array

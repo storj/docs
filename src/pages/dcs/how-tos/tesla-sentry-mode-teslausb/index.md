@@ -4,6 +4,7 @@ slug: how-tos/tesla-sentry-mode-teslausb
 createdAt: 2022-05-19T18:15:05.000Z
 updatedAt: 2023-04-03T18:49:54.000Z
 docId: XjYoGwaE6ncc3xTICXOOu
+pageTitle: Tesla Sentry Mode & Dashcam videos
 ---
 
 ## Introduction

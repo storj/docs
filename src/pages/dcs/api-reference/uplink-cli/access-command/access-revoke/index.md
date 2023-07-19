@@ -3,6 +3,7 @@ title: access revoke
 slug: api-reference/uplink-cli/access-command/access-revoke
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:02:41.000Z
+docId: FOOspY9cvBKTA7OsETEz4
 ---
 
 This command allows you to revoke the access.
@@ -38,8 +39,7 @@ uplink access [flags] <revokee>
 ### Global flags
 
 | Global flags          | Description                                   |
-| :-------------------- | :---------------------------------------docId: FOOspY9cvBKTA7OsETEz4
------ |
+| :-------------------- | :-------------------------------------------- |
 | `--config-dir string` | Directory that stores the configuration       |
 | `--help`, `-h`        | prints help for the command                   |
 | `--advanced`          | when used with -h, prints advanced flags help |

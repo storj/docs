@@ -3,6 +3,7 @@ title: import
 slug: api-reference/uplink-cli/import-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:09.000Z
+docId: N20xcpVOuPQIEcaA44wZu
 ---
 
 Imports a serialized access grant into the configuration.
@@ -26,8 +27,7 @@ uplink import [flags] NAME (ACCESS | FILE)
 ## Flags
 
 | Flag            | Description                         |
-| :-------------- | :------------------------------docId: N20xcpVOuPQIEcaA44wZu
----- |
+| :-------------- | :---------------------------------- |
 | `--help`, `-h`  | help for import                     |
 | `--force`, `-f` | overwrite the existing access grant |
 

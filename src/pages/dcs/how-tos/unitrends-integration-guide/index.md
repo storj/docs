@@ -4,6 +4,7 @@ slug: how-tos/unitrends-integration-guide
 createdAt: 2023-01-04T14:50:10.000Z
 updatedAt: 2023-03-09T18:52:50.000Z
 docId: hUGykcHCQO4pRDRHaIxQX
+pageTitle: Unitrends Integration Guide
 ---
 
 Unitrends provides backup appliances, backup software, and cloud data protection that leverage cutting edge technology to automate manual tasks, eliminate management complexity, and deliver tested hardware and software resilience. The Unitrends backup software identifies and resolves software issues that threaten backup and recovery before they happen. Unitrends backup appliances help IT administrators save more time on data backups. Its** **intuitive management console lets you quickly and easily search, filter, manage and recover thousands of backups.
@@ -24,7 +25,7 @@ Find more information on the [Unitrends website](https://www.unitrends.com/produ
 
 To integrate Storj with Unitrends, you will need to create S3 credentials in Storj to be used for Unitrends. Those credentials will need to be added within the Unitrends appliance through their web-based interfae.
 
-## Requirements
+### Requirements
 
 *   An active Storj account
 

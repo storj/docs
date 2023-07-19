@@ -2,8 +2,9 @@
 title: Photos+
 slug: how-tos/photos-plus-integration-guide
 createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-03-09T18:42:39.000Z
+updatedAt: 2023-07-19T18:15:39.875Z
 docId: e8RYUgo0V1EGA6wbuvb2x
+pageTitle: Photos+ Integration Guide
 ---
 
 ## Introduction
@@ -14,9 +15,9 @@ docId: e8RYUgo0V1EGA6wbuvb2x
 
 Mobile app download links:
 
-**Apple App Store**: <https://apps.apple.com/us/app/photos-cloud-library/id1310744251>
+*   Apple App Store: <https://apps.apple.com/us/app/photos-cloud-library/id1310744251>
 
-**Google Play Store**: <https://play.google.com/store/apps/details?id=com.pixegram.photosplus>
+*   Google Play Store: <https://play.google.com/store/apps/details?id=com.pixegram.photosplus>
 
 ## Configure Photos+ to use Storj DCS
 
@@ -39,7 +40,7 @@ Mobile app download links:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/yXxrIf3BXor9m9KsqPY6W_imgf65448a9a594-1.jpeg)
 
-5\. Select **S3 Storage** and enter “gateway.storjshare.io” as the URL, along with your corresponding access key and secret key. See[](docId\:AsyYcUJFbO1JI8-Tu8tW3)for details on creating these access credentials.
+5\. Select **S3 Storage** and enter “gateway.storjshare.io” as the URL, along with your corresponding access key and secret key. See [](docId\:AsyYcUJFbO1JI8-Tu8tW3) for details on creating these access credentials.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/zIpOoL3wJvmashUj-iHjB_img419569e7945f-1.jpeg)
 
@@ -59,11 +60,11 @@ Mobile app download links:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/fKryepsJ2ygBUCb7NplLE_img2863.png)
 
-10\. At this point you should see an album in your Library. You’re ready to synchronize your media to Storj. Click the circular arrow icon at the bottom center of the screen.
+10\. At this point, you should see an album in your Library. You’re ready to synchronize your media to Storj. Click the circular arrow icon at the bottom center of the screen.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/TMipi78UFMC_XlLSWX_W1_img2806.png)
 
-11\. Click **Start** to begin synchronizing your library. You may check via the Storj DCS dashboard or use any of our command line tools to see your library has been backed up to Storj.
+11\. Click **Start** to begin synchronizing your library. You may check via the Storj DCS dashboard or use any of our command line tools to see if your library has been backed up to Storj.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/tEymuK4I_atEURjaPffbs_img2866.png)
 

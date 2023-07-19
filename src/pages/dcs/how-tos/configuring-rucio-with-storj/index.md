@@ -4,6 +4,7 @@ slug: how-tos/configuring-rucio-with-storj
 createdAt: 2022-08-15T22:47:14.000Z
 updatedAt: 2023-03-09T18:47:00.000Z
 docId: LUZSWyVR7NPwpyzgBD7S6
+pageTitle: Configuring Rucio with Storj
 ---
 
 ## Overview
@@ -12,7 +13,7 @@ Rucio is an open-source software framework that provides scientific collaboratio
 
 These configuration instructions were adapted from the draft instructions being developed in the Rucio GitHub project: [Create documentation page for S3-type storage](https://github.com/rucio/rucio/issues/5450)
 
-## Setup a demo environment
+### Setup a demo environment
 
 **Prerequisites:**
 
@@ -113,7 +114,7 @@ rucio download archive:test.file.1000
 
 **Explore the Rucio Documentation**
 
-[https://rucio.cern.ch/documentation](https://rucio.cern.ch/documentation/)
+[<https://rucio.cern.ch/documentation/>](https://rucio.cern.ch/documentation/)
 
 **Set up a Rucio Client**
 

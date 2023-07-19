@@ -3,6 +3,7 @@ title: Common Use Cases
 slug: solution-architectures/common-use-cases
 createdAt: 2022-05-17T01:15:39.000Z
 updatedAt: 2023-03-03T08:30:01.000Z
+docId: zFCXk7pvmYvyefN2SZhHj
 ---
 
 ## Introduction
@@ -14,8 +15,7 @@ Object storage, in general, has a wide range of use cases. The use cases that ar
 ## Common Use Cases
 
 | Platform/Service               | Description                                                                                                                                                                              | **Decentralized Advantage**                                                                                                                                                                                       |
-| :----------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------docId: zFCXk7pvmYvyefN2SZhHj
----- |
+| :----------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **General Backup**             | Long term storage of large files required for business continuity or disaster recovery needs                                                                                             | Low cost and always available high-throughput bandwidth means storage is economical and recovery is rapid                                                                                                         |
 | **Database Backup**            | Regular snapshot backups of databases for backup or testing are an entrenched part of infrastructure management                                                                          | Streaming backup eliminates the need to write large database snapshots to local disk before backup or for recovery                                                                                                |
 | **Private Data**               | Data that is highly sensitive and an attractive target for ransomware attacks or other attempts to compromise or censor the data                                                         | Client side encryption and industry-leading access management controls and highly distributed network of storage nodes reduce attack surface and risk                                                             |

@@ -3,6 +3,7 @@ title: access use
 slug: api-reference/uplink-cli/access-command/access-use
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:02:51.000Z
+docId: d-btqElDJY9m26QIKJYP-
 ---
 
 This command allows you to switch the current access for Uplink.
@@ -32,8 +33,7 @@ uplink access use <access>
 ## Global flags
 
 | Global flags          | Description                                   |
-| :-------------------- | :---------------------------------------docId: d-btqElDJY9m26QIKJYP-
------ |
+| :-------------------- | :-------------------------------------------- |
 | `--config-dir string` | Directory that stores the configuration       |
 | `--help`, `-h`        | prints help for the command                   |
 | `--advanced`          | when used with -h, prints advanced flags help |

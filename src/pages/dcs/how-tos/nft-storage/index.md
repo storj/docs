@@ -2,7 +2,7 @@
 title: NFT storage for OpenSea
 slug: how-tos/nft-storage
 createdAt: 2022-05-19T18:15:05.000Z
-updatedAt: 2023-03-03T08:30:09.000Z
+updatedAt: 2023-07-19T21:00:15.285Z
 docId: mSHcwI19g4F9qo0XBpiOh
 ---
 

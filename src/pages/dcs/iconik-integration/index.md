@@ -2,23 +2,23 @@
 title: Iconik
 slug: iconik-integration
 createdAt: 2022-11-11T18:48:17.000Z
-updatedAt: 2023-03-09T18:51:19.000Z
+updatedAt: 2023-07-19T18:10:44.227Z
 docId: DOrHKPnU0WwmIG7LX4Pfg
+slugAlias: dcs/how-tos/iconik-integration-guide
+pageTitle: Iconik Integration Guide
 ---
 
-Iconik is a cloud media management and collaboration software that gathers and organizes media from multiple storage locations. Iconik is equipped with powerful features that allow users to find, share, and collaborate on media from anywhere in the world. Iconik is web-based and runs in the cloud, using its Iconik Storage Gateway (ISG) to manage and track files while allowing users to bring their own storage.&#x20;
-
-Visit <https://www.iconik.io/> for more information.&#x20;
+[Iconik](https://www.iconik.io/) is a cloud media management and collaboration software that gathers and organizes media from multiple storage locations. Iconik has powerful features that allow users to find, share, and collaborate on media from anywhere in the world. Iconik is web-based and runs in the cloud, using its Iconik Storage Gateway (ISG) to manage and track files while allowing users to bring their own storage.&#x20;
 
 ## Advantages of Iconik with Storj 
 
 Iconik is easy to use and intuitive with a clean and intuitive platform. It organizes your media by making it searchable.
 
-1.  **Edit, manage, and collaborate on files in a feature rich environment. **Storj integration with Iconik allows multiple users from different locations to view and edit your files on Storj at the same time.  Even parties who do not use Iconik can be invited to collaborate on documents in Iconik. Iconik also provides fine control of data sharing, allowing you to remove shares and add a time limit on shares.
+1.  **Edit, manage, and collaborate on files in a feature-rich environment. **Storj integration with Iconik allows multiple users from different locations to view and edit your files on Storj simultaneously.  Even parties who do not use Iconik can be invited to collaborate on documents in Iconik. Iconik also provides fine control of data sharing, allowing you to remove shares and add a time limit on shares.
 
 2.  **Aggregates files from multiple cloud storages.** If Storj is only one part of your storage solution, Iconik makes it easy to aggregate your files from multiple storage providers.
 
-3.  **Cost Savings. **Adds editing and sharing features to your Storj data, creating feature rich storage and while maintaining low costs for the storage itself.&#x20;
+3.  **Cost Savings. **Adds editing and sharing features to your Storj data, creating feature-rich storage and while maintaining low costs for the storage itself.&#x20;
 
 ## Integration
 
@@ -28,9 +28,9 @@ Iconik integrates with any S3-compatible cloud storage platform.&#x20;
 
 To complete the integration, you will need:
 
-*   A Storj account&#x20;
+*   A Storj account - sign up here <https://us1.storj.io/signup?partner=iconik> or go to <https://storj.io/login> if you already have an account.
 
-*   An Iconik account
+*   An Iconik account.
 
 Iconik is compatible with Windows, Mac, and Linux OS. To request a trial, visit <https://www.iconik.io/trial>.
 

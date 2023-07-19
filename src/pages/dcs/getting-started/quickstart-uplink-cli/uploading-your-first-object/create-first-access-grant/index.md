@@ -4,6 +4,7 @@ slug: getting-started/quickstart-uplink-cli/uploading-your-first-object/create-f
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-07-11T20:26:53.681Z
 docId: b4-QgUOxVHDHSIWpAf3hG
+slugAlias: getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant
 ---
 
 You need to have a satellite account and installed Uplink CLI as described in [](docId\:TbMdOGCAXNWyPpQmH6EOq)

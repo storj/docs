@@ -3,6 +3,7 @@ title: access remove
 slug: api-reference/uplink-cli/access-command/access-remove
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:01:49.000Z
+docId: gQIzU008qGSvybusLZ7ms
 ---
 
 This command allows you to remove the access from local store of Uplink.
@@ -32,8 +33,7 @@ uplink access remove <name>
 ## Global flags
 
 | Global flags          | Description                                   |
-| :-------------------- | :---------------------------------------docId: gQIzU008qGSvybusLZ7ms
------ |
+| :-------------------- | :-------------------------------------------- |
 | `--config-dir string` | Directory that stores the configuration       |
 | `--help`, `-h`        | prints help for the command                   |
 | `--advanced`          | when used with -h, prints advanced flags help |

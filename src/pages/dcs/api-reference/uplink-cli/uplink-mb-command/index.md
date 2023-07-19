@@ -3,6 +3,7 @@ title: mb
 slug: api-reference/uplink-cli/uplink-mb-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:23.000Z
+docId: F77kaGpjXx7w-JYv2rkhf
 ---
 
 Create a new bucket
@@ -26,8 +27,7 @@ uplink mb [flags] sj://<BUCKET>
 ## Flags
 
 | Flag              | Description                                         |
-| :---------------- | :---------------------------------------------docId: F77kaGpjXx7w-JYv2rkhf
------ |
+| :---------------- | :-------------------------------------------------- |
 | `--access string` | the serialized access, or name of the access to use |
 | `--help`, `-h`    | help for `mb`                                       |
 

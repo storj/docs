@@ -2,7 +2,7 @@
 title: Key Architecture Constructs
 slug: concepts/key-architecture-constructs
 createdAt: 2022-05-19T22:24:55.000Z
-updatedAt: 2023-03-03T08:30:09.000Z
+updatedAt: 2023-07-19T20:57:27.198Z
 docId: M-5oxBinC6J1D-qSNjKYS
 ---
 

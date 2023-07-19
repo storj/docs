@@ -3,6 +3,7 @@ title: rb
 slug: api-reference/uplink-cli/rb-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:50.000Z
+docId: Wo5-shT0hZDNMeyM1kA12
 ---
 
 rb is the command to remove an empty bucket, or empty a bucket and then remove  it.
@@ -26,8 +27,7 @@ uplink rb sj://BUCKET [flags]
 ## Flags
 
 | Flag              | Description                                         |
-| :---------------- | :---------------------------------------------docId: Wo5-shT0hZDNMeyM1kA12
------ |
+| :---------------- | :-------------------------------------------------- |
 | `--access string` | the serialized access, or name of the access to use |
 | `--force`         | if true, empties the bucket of objects first        |
 | `--help`, `-h`    | help for rb                                         |

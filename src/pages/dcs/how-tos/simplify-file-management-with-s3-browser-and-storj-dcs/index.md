@@ -2,7 +2,7 @@
 title: S3 Browser
 slug: how-tos/simplify-file-management-with-s3-browser-and-storj-dcs
 createdAt: 2022-05-19T18:15:05.000Z
-updatedAt: 2023-03-03T08:30:09.000Z
+updatedAt: 2023-07-19T20:57:16.407Z
 docId: LcjEYyxUmyViTjNYy6hDd
 ---
 

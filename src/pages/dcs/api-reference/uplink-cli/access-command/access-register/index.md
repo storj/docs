@@ -3,6 +3,7 @@ title: access register
 slug: api-reference/uplink-cli/access-command/access-register
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-05-09T15:36:32.000Z
+docId: 6hH_ygAn1FJdrIZQ0CGsJ
 ---
 
 Register your access for use with a hosted gateway.
@@ -26,8 +27,7 @@ uplink access register <flags> <ACCESS-GRANT>
 ## Flags
 
 | Flag                    | Description                                                      |
-| :---------------------- | :------------------------------------------------------------docId: 6hH_ygAn1FJdrIZQ0CGsJ
---- |
+| :---------------------- | :--------------------------------------------------------------- |
 | `--access string`       | the serialized access, or name of the access to use              |
 | `--auth-service string` | the address to the service you wish to register your access with |
 | `--public`              | if the access should be public. Default false                    |

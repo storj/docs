@@ -3,6 +3,7 @@ title: meta get
 slug: api-reference/uplink-cli/meta-command/meta-get-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-06-11T10:57:01.000Z
+docId: 0u8rcWLCr1hwNmWRnyvgn
 ---
 
 ## Usage
@@ -24,8 +25,7 @@ uplink meta get PATH [KEY] [flags]
 ## Flags
 
 | Flag              | Description                                         |
-| :---------------- | :---------------------------------------------docId: 0u8rcWLCr1hwNmWRnyvgn
------ |
+| :---------------- | :-------------------------------------------------- |
 | `--access string` | the serialized access, or name of the access to use |
 | `--help`, `-h`    | help for get                                        |
 

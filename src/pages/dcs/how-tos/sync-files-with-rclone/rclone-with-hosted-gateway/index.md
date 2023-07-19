@@ -2,12 +2,13 @@
 title: Rclone Hosted Gateway
 slug: how-tos/sync-files-with-rclone/rclone-with-hosted-gateway
 createdAt: 2022-05-19T18:28:40.000Z
-updatedAt: 2023-03-03T08:30:09.000Z
+updatedAt: 2023-07-19T18:22:51.553Z
+docId: WayQo-4CZXkITaHiGeQF_
 ---
 
 ## Selecting an Integration Pattern
 
-Use our S3-compatible Hosted Gateway integration pattern to increase upload performance and reduce the load on your systems and network. Uploads will be encrypted and erasure-coded server-side, thus a 1GB upload will result in only 1GB of data being uploaded from the client to the hosted gateway.
+Use our S3-compatible Hosted Gateway integration pattern to increase upload performance and reduce the load on your systems and network. Uploads will be encrypted and erasure-coded server-side; thus, a 1GB upload will result in only 1GB of data being uploaded from the client to the hosted gateway.
 
 ## Use this pattern for
 
@@ -16,7 +17,7 @@ Use our S3-compatible Hosted Gateway integration pattern to increase upload perf
 *   Reduction in network load
 
 {% callout type="info"  %} 
-By selecting this integration pattern you are opting in to [Server-side Encryption](https://docs.storj.io/dcs/concepts/encryption-key/design-decision-server-side-encryption).
+By selecting this integration pattern, you are opting into [Server-side Encryption](https://docs.storj.io/dcs/concepts/encryption-key/design-decision-server-side-encryption).
 {% /callout %}
 
 ## Prerequisites
@@ -84,7 +85,7 @@ q) Quit config
 e/n/d/r/c/s/q> n
 ```
 
-Enter a name for the new remote configuration, e.g. `waterbear`.
+Enter a name for the new remote configuration, e.g., `waterbear`.
 
 ```none
 name> waterbear
@@ -194,8 +195,7 @@ secret_access_key = <SecretAccessKey>
 endpoint = gateway.storjshare.io
 chunk_size = 64Mi
 disable_checksum: true
----------------docId: WayQo-4CZXkITaHiGeQF_
------
+--------------------
 y) Yes this is OK (default)
 e) Edit this remote
 d) Delete this remote
@@ -218,7 +218,7 @@ For additional security, you should consider using the `s) Set configuration pas
 
 ## Create a Bucket
 
-Use the `mkdir` command to create new bucket, e.g. `mybucket`.
+Use the `mkdir` command to create new bucket, e.g., `mybucket`.
 
 ```yaml
 rclone mkdir waterbear:mybucket
@@ -348,7 +348,7 @@ The `--progress` flag is for displaying progress information. Remove it if you d
 Since this can cause data loss, test first with the `--dry-run` flag to see exactly what would be copied and deleted.
 {% /callout %}
 
-The sync can be done also from Storj DCS to the local file system.
+The sync can also be done from Storj DCS to the local file system.
 
 ```yaml
 rclone sync --progress waterbear:mybucket/videos/ ~/Videos/

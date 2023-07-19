@@ -3,11 +3,13 @@ title: Elements
 slug: how-tos/elements-integration-guide
 description: Looking to integrate Elements.tv with Storj for secure and scalable content distribution? This step-by-step guide will walk you through the process of configuring your Elements.tv account to use Storj as the storage destination for your media content. By 
 createdAt: 2023-03-09T17:08:11.000Z
-updatedAt: 2023-03-13T19:55:10.000Z
+updatedAt: 2023-07-18T17:27:38.199Z
 docId: Wxxt9kSk6B4afO-vgDcQ8
+pageTitle: Elements Integration Guide
+description: Looking to integrate Elements.tv with Storj for secure and scalable content distribution? This step-by-step guide will walk you through the process of configuring your Elements.tv account to use Storj as the storage destination for your media content. By 
 ---
 
-ELEMENTS provides a powerful hardware and software platform that supports every step of the post-production and broadcasting workflow – from sophisticated on-premise technologies with unique features to future-proof cloud solutions. For more information, visit [﻿https://elements.tv/](http://www.acronis.com/).
+[ELEMENTS](https://elements.tv/) provides a powerful hardware and software platform that supports every post-production and broadcasting workflow step – from sophisticated on-premise technologies with unique features to future-proof cloud solutions.&#x20;
 
 ## **Advantages of ELEMENTS with Storj**
 
@@ -19,7 +21,7 @@ ELEMENTS provides a powerful hardware and software platform that supports every 
 
 To integrate ELEMENTS with Storj, you will need:
 
-*   An active Storj account
+*   To begin, you need to create a Storj account. Navigate to <https://us1.storj.io/signup?partner=elements> to sign up, or log in <https://storj.io/login> if you already have an account.
 
 *   A bucket for ELEMENTS in your Storj account
 

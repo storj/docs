@@ -3,6 +3,7 @@ title: setup
 slug: api-reference/uplink-cli/setup-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-29T19:11:37.000Z
+docId: OuoKJl9KqbJVQB9Xkdy3g
 ---
 
 Create an uplink config file
@@ -34,8 +35,7 @@ uplink setup [flags]
 ## Global flags
 
 | Flag                  | Description                                   |
-| :-------------------- | :---------------------------------------docId: OuoKJl9KqbJVQB9Xkdy3g
------ |
+| :-------------------- | :-------------------------------------------- |
 | `--config-dir string` | Directory that stores the configuration       |
 | `--help`, `-h`        | help for setup                                |
 | `--advanced`          | when used with -h, prints advanced flags help |

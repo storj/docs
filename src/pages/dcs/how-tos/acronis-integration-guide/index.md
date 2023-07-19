@@ -3,21 +3,21 @@ title: Acronis
 slug: how-tos/acronis-integration-guide
 description: Get started integrating Acronis with Storj for cost effective cloud backup and storage. Our guide provides step-by-step instructions to connect your Acronis Cyber Infrastructure to Storj. Read now!
 createdAt: 2023-03-08T19:02:05.000Z
-updatedAt: 2023-07-04T11:02:39.481Z
+updatedAt: 2023-07-18T12:51:17.003Z
 docId: GhGW4KaBkd428zJ51EIdp
+pageTitle: Integration guide for connecting Storj to Acronis
+description: Get started integrating Acronis with Storj for cost effective cloud backup and storage. Our guide provides step-by-step instructions to connect your Acronis Cyber Infrastructure to Storj. Read now!
 ---
 
 ## Integration guide for connecting Storj to Acronis
 
-Acronis is a leading provider of cyber protection solutions that deliver innovative backup, disaster recovery, and secure file sync and share services. With a wide range of products and services for businesses and individuals, Acronis ensures data safety, accessibility, privacy, authenticity, and security.
-
-For more information, visit [www.acronis.com](http://www.acronis.com/)
+[Acronis](https://www.acronis.com/) is a leading cyber protection solution provider that delivers innovative backup, disaster recovery, and secure file sync and share services. With a wide range of products and services for businesses and individuals, Acronis ensures data safety, accessibility, privacy, authenticity, and security.
 
 ## Advantages of Acronis with Storj 
 
 The combination of Acronis and Storj provides comprehensive cloud management capabilities at a competitive cost. Acronis offers reliable backup and disaster recovery solutions for data archiving and organization, seamlessly integrating with Storj's S3 infrastructure for cost-effective storage and retrieval of large datasets.
 
-With Storj's advanced security integrations, users can be confident that their data managed on Acronis is safe and secure. Acronis also provides metadata archives that make it easy to manage and access large datasets, while manual and automatic archiving capabilities help optimize storage costs.
+With Storj's advanced security integrations, users can be confident that their data managed on Acronis is safe and secure. Acronis also provides metadata archives that make managing and accessing large datasets easy, while manual and automatic archiving capabilities help optimize storage costs.
 
 ## Integration
 
@@ -35,15 +35,15 @@ To integrate Acronis with Storj, you will need:
 
 *   [Partner Account Access](https://www.acronis.com/en-us/partners/registration/) to the Acronis web interface for configuration and management
 
-For more details see <https://www.acronis.com/en-us/products/>
+For more details, see <https://www.acronis.com/en-us/products/>
 
 ***
 
 ## Create a Storj Account
 
-To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
+To begin, you will need to create a Storj account.&#x20;
 
-Navigate to <https://us1.storj.io/signup?partner=acronis> to sign up. Enter your full name, email address, and a password.
+Navigate to <https://us1.storj.io/signup?partner=acronis> to sign up, or log in <https://storj.io/login> if you already have an account.
 
 ### Create a Bucket 
 
@@ -120,7 +120,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 ## Connecting to Storj via Backup Gateway
 
-Before you proceed, make sure that the destination storage has enough space for backups.
+Before proceeding, ensure the destination storage has enough space for backups.
 
 To set up Backup Gateway, do the following:
 
@@ -134,18 +134,18 @@ To set up Backup Gateway, do the following:
 
 3\. Click **Create backup storage**.
 
-4\. Select **Public cloud** and click **next**
+4\. Select **Public cloud** and click **next.**
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/5xj9hChjVLwVJs5QpOL-U_screenshot-2023-03-08-at-15443-pm.png)
 
-5\. Select the node(s) to run the gateway services on and click **Next
+5\. Select the node(s) to run the gateway services on and click **Next.
 **
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/hnehZ46GqDA6tjCM2A0YU_screenshot-2023-03-08-at-15521-pm.png)
 
-6\. Configure Public cloud with the following in their respective fields
+6\. Configure Public cloud with the following in their respective fields:
 
-*   **Object Storage type**: Select AuthV2 compatible (S3)
+*   **Object Storage type**: Select AuthV2 compatible (S3).
 
 *   **Endpoint URL**: <https://gateway.storjshare.io>
 
@@ -155,15 +155,15 @@ To set up Backup Gateway, do the following:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/nrSFaE1HABH7hiU1PYavW_screenshot-2023-06-20-at-24524-pm.png)
 
-7\. Click **Next** on Storage policy
+7\. Click **Next** on the Storage policy.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/ysUUNOfYk4qJY7M-1Yw5H_screenshot-2023-03-08-at-20100-pm.png)
 
-8\. Sign in to acronis account and click **Next**.&#x20;
+8\. Sign in to your Acronis account and click **Next**.&#x20;
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/SMydqxrJiWu53hMoIbliJ_screenshot-2023-03-08-at-20344-pm.png)
 
-9\. Click **Create**
+9\. Click **Create.**
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/4vrgngJbaH5JLjl4HyFql_screenshot-2023-03-08-at-24028-pm.png)
 

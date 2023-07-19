@@ -3,6 +3,8 @@ title: Self-hosted S3 Compatible Gateway
 slug: api-reference/s3-gateway
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-07-01T01:10:15.941Z
+docId: EGM8O-1xt2Az03eBWT8Rf
+slugAlias: api-reference/s3-gateway
 ---
 
 {% callout type="info"  %} 
@@ -267,7 +269,6 @@ Once you do, in a new terminal session, configure it with your Gateway's credent
 
 ```Text
 $ aws configure
-docId: EGM8O-1xt2Az03eBWT8Rf
 ---
 AWS Access Key ID: [Enter your Gateway's Access Key]
 AWS Secret Access Key: [Enter your Gateway's Secret Key]

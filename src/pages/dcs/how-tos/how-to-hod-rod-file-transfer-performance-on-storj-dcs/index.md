@@ -2,13 +2,14 @@
 title: How to Fine-tune File Transfer Performance on Storj DCS
 slug: how-tos/how-to-hod-rod-file-transfer-performance-on-storj-dcs
 createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-02-19T18:49:31.000Z
+updatedAt: 2023-07-19T18:24:20.466Z
 docId: cQZlhPpzn3nD3Az3QTcm1
+pageTitle: How to Hod Rod File Transfer Performance on Storj DCS
 ---
 
-Many of the performance benefits of decentralized storage are achieved through distributed, redundant segmentation of files on the network. This redundancy and segmentation allows platforms like Storj to implement parallelism in the network for an even greater performance boost. In the context of file transfers, parallelism is the concept of uploading or downloading different pieces of a file simultaneously (in parallel). As a user, there are ways to optimize these parallel transfers in order to achieve more efficient throughput.
+Many of the performance benefits of decentralized storage are achieved through distributed, redundant segmentation of files on the network. This redundancy and segmentation allow platforms like Storj to implement parallelism in the network for a greater performance boost. In the context of file transfers, parallelism is the concept of uploading or downloading different pieces of a file simultaneously (in parallel). As a user, there are ways to optimize these parallel transfers to achieve more efficient throughput.
 
-The exact optimal settings for parallel file transfers vary based on your own compute resources and network bandwidth. The size of the files being transferred also influences the optimal configuration, as this can affect which tools are capable of providing improved performance at that size. To provide an example walkthrough for a single approach, this section will demonstrate how to achieve better performance for the transfer of many small- to medium-sized files using Rclone.
+The exact optimal settings for parallel file transfers vary based on your own compute resources and network bandwidth. The size of the files being transferred also influences the optimal configuration, as this can affect which tools are capable of providing improved performance at that size. To give an example walkthrough for a single approach, this section will demonstrate how to achieve better performance for transferring many small- to medium-sized files using Rclone.
 
 ## Parallelism on Storj
 
@@ -32,13 +33,13 @@ So, for the purposes of demonstrating uploads and downloads for many smaller fil
 
 ## Uploading files with Rclone
 
-When working with small and medium-sized files, the optimal parallelism is limited by the segment, or "chunk", size. With [](docId\:WayQo-4CZXkITaHiGeQF_), this segmentation is referred to as "concurrency." So for example, a 1GB file would be optimally uploaded to Storj with the following command:
+When working with small and medium-sized files, the optimal parallelism is limited by the segment, or "chunk", size. With [](docId\:WayQo-4CZXkITaHiGeQF_), this segmentation is referred to as "concurrency." So, for example, a 1GB file would be optimally uploaded to Storj with the following command:
 
 ```Text
 rclone copy --progress --s3-upload-concurrency 16 --s3-chunk-size 64M 1gb.zip remote:bucket
 ```
 
-In this example, there are a couple additional flags. Here's what those do:
+In this example, there are a couple of additional flags. Here's what those do:
 
 *   `--progress` shows the current progress of the transfer
 
@@ -48,7 +49,7 @@ In this example, there are a couple additional flags. Here's what those do:
 
 With larger files, your local hardware starts to become the limiting factor for transfer speed. Multiple concurrent segment transfers each require their own chunk of memory to complete, so determining peak performance relies on calculating the amount of memory that can be dedicated to the transfer. Since the segment size is a constant 64MB, the rest of the math is simple.
 
-For example, a 10GB file could theoretically be transferred with 160 concurrency segments, since 64MB \* 160 equals 10GB. However, this optimal parallelism requires enough memory that matches the size of the file (10GB). So it may not actually be the best option on every system.
+For example, a 10GB file could theoretically be transferred with 160 concurrency segments since 64MB \* 160 equals 10GB. However, this optimal parallelism requires enough memory that matches the file size (10GB). So it may not be the best option on every system.
 
 Rclone also offers the advantage of being able to transfer multiple files in parallel with the `--transfers` flag. For example, multiple 1GB files could be transferred simultaneously with this command, modified from the single file example above:
 

@@ -2,7 +2,7 @@
 title: Payment Methods
 slug: billing-payment-and-accounts-1/storj-token
 createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-03-03T08:36:11.000Z
+updatedAt: 2023-07-19T20:56:18.216Z
 docId: 7U4_uu6Pzg6u2N6FpV9VE
 ---
 

@@ -2,7 +2,7 @@
 title: Manage Projects
 slug: getting-started/satellite-developer-account/manage-projects
 createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-03-03T08:36:17.000Z
+updatedAt: 2023-07-19T21:00:36.482Z
 docId: s9MmhnH5OaJrTszOozt3k
 ---
 

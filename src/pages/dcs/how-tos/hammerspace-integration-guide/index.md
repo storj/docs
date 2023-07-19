@@ -2,21 +2,22 @@
 title: Hammerspace
 slug: how-tos/hammerspace-integration-guide
 createdAt: 2023-01-04T14:50:00.000Z
-updatedAt: 2023-03-09T18:51:00.000Z
+updatedAt: 2023-07-19T18:09:19.166Z
 docId: DLqUc01i7ME12RYPnpb6e
+pageTitle: Hammerspace Integration Guide
 ---
 
-**Hammerspace** is a software solution that creates a global data environment  mimicking the experience of local access to globally distributed data. Data connected under Hammerspace can include both different, typically incompatible storage types such as datacenters and cloud storage, as well as locations. Hammerspace provides a unified view and control over all connected data as a single, easily accessible dataset.
+[**Hammerspace**](https://hammerspace.com/) is a software solution that creates a global data environment mimicking the experience of local access to globally distributed data. Data connected under Hammerspace can include different, typically incompatible storage types, such as data centers and cloud storage, as well as locations. Hammerspace provides a unified view and control over all connected data as a single, easily accessible dataset.
 
 Contact Hammerspace for a [demo](https://hammerspace.com/hammerspace-software/).
 
 ## Advantages of Hammerspace with Storj 
 
-*   **Universal data access layer**: read and write to data from anywhere in the world.&#x20;
+*   **Universal data access layer**: read and write to data from anywhere worldwide.&#x20;
 
 *   **Unify your Storj data **with data residing in legacy DAS, NAS, SAN, object storage, and other cloud storage environments.&#x20;
 
-*   **Multiple mechanisms to protect data from disasters and attacks**: snapshots, undelete, WORM (write once read many), file versioning.
+*   **Multiple mechanisms to protect data from disasters and attacks**: snapshots, undelete, WORM (write once read many), and file versioning.
 
 *   **Unified view of files with a rich metadata layer**: only necessary data is replicated when a file is accessed and worked on.
 
@@ -24,13 +25,15 @@ Contact Hammerspace for a [demo](https://hammerspace.com/hammerspace-software/).
 
 To integrate Storj with Hammerspace, you will need to create S3 credentials in Storj and add them within Hammerspace. Veeam uses a wizard to guide users in adding S3-compatible cloud storage.
 
-## Requirements
+### Requirements
 
-*   An active Storj account
+*   To begin, you will need to create a Storj account.&#x20;
 
-*   A bucket for Hammerspace in your Storj instance
+*   Navigate to <https://us1.storj.io/signup?partner=hammerspace> to sign up, or log in <https://storj.io/login> if you already have an account.
 
-*   An working Hammerspace environment
+*   A bucket for Hammerspace in your Storj instance.
+
+*   A working Hammerspace environment.
 
 Schedule a Hammerspace [demo](https://hammerspace.com/hammerspace-software/), or [contact](https://hammerspace.com/contact-us/) the Hammerspace team.
 
@@ -171,7 +174,7 @@ This integration guide assumes that you have access to an active Hammerspace env
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/cTa1aLoz5dPw2eZvpL2J6_image.png)
 
-9\. Review your bucket's information in the **Review & Add** page. Then select **Add Volumes**
+9\. Review your bucket's information on the **Review & Add** page. Then select **Add Volumes**
 
 10\. The bucket will now appear under the **Volumes** tab in the **Infrastructure** section of your Hammerspace environment. This signifies that Storj has been successfully added to Hammerspace.
 

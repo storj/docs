@@ -2,7 +2,7 @@
 title: Set Up Uplink CLI with Access Grant
 slug: getting-started/quickstart-uplink-cli/uploading-your-first-object/set-up-uplink-cli
 createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-03-03T08:36:11.000Z
+updatedAt: 2023-07-19T20:59:40.762Z
 docId: h3RyJymEIi4gf2S9wVJg8
 ---
 

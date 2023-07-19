@@ -4,6 +4,7 @@ slug: getting-started/gateway-mt
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-17T16:17:12.000Z
 docId: AsyYcUJFbO1JI8-Tu8tW3
+pageTitle: Quickstart - AWS CLI and Hosted Gateway MT
 ---
 
 ## Introduction

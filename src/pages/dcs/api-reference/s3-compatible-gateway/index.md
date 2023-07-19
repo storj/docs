@@ -4,6 +4,7 @@ slug: api-reference/s3-compatible-gateway
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-04-18T11:24:36.000Z
 docId: yYCzPT8HHcbEZZMvfoCFa
+slugAlias: getting-started/beta-gateway-mt
 ---
 
 The Storj DCS globally distributed, multi-region cloud-hosted S3-compatible  gateway

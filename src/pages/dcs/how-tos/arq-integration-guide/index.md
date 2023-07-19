@@ -2,27 +2,28 @@
 title: Arq
 slug: how-tos/arq-integration-guide
 createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-03-09T18:38:22.000Z
+updatedAt: 2023-07-18T17:24:44.923Z
 docId: rnZKB53zoxOVjYLcnHngs
+pageTitle: Arq Integration Guide
 ---
 
 ## Introduction
 
-**Arq** is a backup software that allows you to use your own cloud storage account on a Mac or Windows based system. You can use **Arq** with **Storj DCS** S3-compatible storage.
+**Arq** is a backup software that allows you to use your own cloud storage account on a Mac or Windows-based system. You can use **Arq** with **Storj DCS** S3-compatible storage.
 
-**Main site**: [Arqbackup](https://www.arqbackup.com/) - you can download and follow instructions to install Arq [here](https://www.arqbackup.com/download/).
+**Main site**: [Arqbackup](https://www.arqbackup.com/) - you can download and follow the instructions to install Arq [here](https://www.arqbackup.com/download/).
 
 ## Configure Arq to use Storj DCS
 
 **Your Storj Account**
 
-1.  You’ll need a Storj account. Sign up [here](), or log into your existing account [here]().
+1.  To begin, you need to create a Storj account. Navigate to <https://us1.storj.io/signup?partner=arq> to sign up, or log in <https://storj.io/login> if you already have an account.
 
 2.  Click on “Buckets” in the Storj DCS console and create a bucket for your Arq backups.
 
 3.  Click on “Access” in the Storj DCS console and click "[](docId\:ObsfiEHKpVU7JTdGtW-3t)“
 
-4.  Give it a name, select ***All*** permissions and click **Encrypt My Access**.
+4.  Give it a name, select ***All*** permissions, and click **Encrypt My Access**.
 
 5.  Enter the encryption passphrase and click either on the **Copy to clipboard** link or **Download .txt** to copy or download your encryption phrase.
 

@@ -4,6 +4,8 @@ slug: how-tos/ix-systems-truenas-integration
 createdAt: 2022-11-03T17:24:48.000Z
 updatedAt: 2023-06-04T05:00:21.000Z
 docId: ygezxeTPxu9ysDNPxY-WM
+slugAlias: dcs/ix-systems-truenas-integration
+pageTitle: iX Systems TrueNAS Integration
 ---
 
 TrueNAS is a network attached storage (NAS) solution that allows for an off-site backup with cloud storage, such as Storj, to provide simplicity, speed, and durability in data storage.
@@ -22,7 +24,7 @@ Using Storj with TrueNAS provides resilient cloud object storage with blazing pe
 
 This integration uses S3 credentials passed from Storj to TrueNAS. You will need to set up a Storj account, create a Storj bucket for TrueNAS, and generate S3 credentials for TrueNAS. Then, you will need to create a Cloud Credential on TrueNAS that will grant it access to the bucket in Storj.&#x20;
 
-## Software Requirements 
+### Software Requirements 
 
 Storj if fully integrated with TrueNAS.
 

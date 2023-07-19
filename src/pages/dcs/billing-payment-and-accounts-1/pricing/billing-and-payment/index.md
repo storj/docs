@@ -3,6 +3,7 @@ title: How Billing is Calculated
 slug: billing-payment-and-accounts-1/pricing/billing-and-payment
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-04-21T02:54:57.000Z
+docId: 59T_2l7c1rvZVhI8p91VX
 ---
 
 Billing is aggregated at the project level.  A project is the Storj DCS service construct used for aggregating usage, calculating billing, invoicing fees, and collecting payment. Projects are created by a single user, then multiple users may be added to a project team, and one user may be on more than one project. Within a project, usage is tracked at the bucket level and aggregated for invoicing to the project. Project names are not client-side encrypted so that they may be rendered in the satellite user interface. For more information about Developer Accounts, Projects, Buckets, etc., please read the [](docId\:M-5oxBinC6J1D-qSNjKYS) under the Concepts section of this Documentation.
@@ -96,8 +97,7 @@ The default Part Size for Multipart Upload for some applications is 5MB. The dif
 Assuming a 1TB data set comprised of 1,000 1GB files is stored for an entire month, the difference between using 64MB Part Size vs. 5MB Part Size is described below:
 
 | Part Size | Files | Parts/ S | Segment Hours | Chargeable Segment Hours | Monthly Cost of Per Segment Fee | Monthly cost of storage |
-| :-------- | :---- | :------- | :------------ | :----------------------- | :------------------------------ | :------------------docId: 59T_2l7c1rvZVhI8p91VX
----- |
+| :-------- | :---- | :------- | :------------ | :----------------------- | :------------------------------ | :---------------------- |
 | 64MB      | 1,000 | 15,625   | 11.25M        | 0M                       | $0.00                           | $4.00                   |
 | 5MB       | 1,000 | 200,000  | 144.0M        | 108.0M                   | $1.32                           | $5.32                   |
 

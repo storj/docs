@@ -3,6 +3,7 @@ title: FAQ
 slug: support/faqs
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-03T08:36:11.000Z
+docId: 4qPQxa8HlvDIO1Kgqa2No
 ---
 
 Frequently asked questions about Storj DCS.
@@ -50,8 +51,7 @@ Use the safe `--url` option instead!
 You can build a not safe link like so: `<base url>/s/<access key>/<path sans sj://>`
 
 | Satellite Region | Base URL |
-| :--------------- | :---docId: 4qPQxa8HlvDIO1Kgqa2No
----- |
+| :--------------- | :------- |
 | Asia             |          |
 | EU               |          |
 | US               |          |

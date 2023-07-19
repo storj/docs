@@ -2,7 +2,7 @@
 title: MongoDB Ops Manager
 slug: how-tos/mongodb-ops-manager-backup
 createdAt: 2022-05-19T18:15:05.000Z
-updatedAt: 2023-03-03T08:30:09.000Z
+updatedAt: 2023-07-19T20:59:31.167Z
 docId: fFkBYzSTI_0eLD8aohftm
 ---
 
@@ -24,7 +24,7 @@ If you haven't yet, create a [Storj DCS account](https://www.storj.io/signup) be
 
 Your first step is to procure a Kubernetes cluster. This full example will require 5 to 7 worker nodes with 2 nodes having at least 8 gb of ram.&#x20;
 
-Next, set up your S3-compatible Gateway (formerly known as Tardigrade gateway) for total-cluster or you can use an our [](docId\:yYCzPT8HHcbEZZMvfoCFa).  Check out the details for that over in the [gateway chart](https://github.com/jasonmimick/total-cluster/tree/master/addons/tardigade-gateway) in total-cluster.
+Next, set up your S3-compatible Gateway (formerly known as Tardigrade gateway) for total-cluster, or you can use our [](docId\:yYCzPT8HHcbEZZMvfoCFa).  Check out the details for that over in the [gateway chart](https://github.com/jasonmimick/total-cluster/tree/master/addons/tardigade-gateway) in total-cluster.
 
 Installing the chart (Note: requires Helm V3),
 

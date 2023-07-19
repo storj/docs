@@ -4,6 +4,7 @@ slug: concepts/encryption-key/design-decision-server-side-encryption
 createdAt: 2022-05-19T22:27:23.000Z
 updatedAt: 2023-03-03T08:30:09.000Z
 docId: hf2uumViqYvS1oq8TYbeW
+slugAlias: concepts/encryption-key/design-decision-server-side-encryption
 ---
 
 When it's important that your data and metadata are encrypted, but you require  a simple and more compatible development approach, Storj DCS provides a  best-in-class integration.

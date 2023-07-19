@@ -1,46 +1,112 @@
 ---
-title: Prerequisites
-slug: getting-started/quickstart-uplink-cli/sharing-your-first-object/prerequisites
-createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-03-03T08:36:11.000Z
-docId: 1IGea-b63x-CCtRsLj9WX
+title: Uplink CLI
+slug: getting-started/quickstart-uplink-cli/prerequisites
+createdAt: 2022-04-25T20:05:51.000Z
+updatedAt: 2023-03-03T08:28:40.000Z
+docId: TbMdOGCAXNWyPpQmH6EOq
+slugAlias: dcs/getting-started/quickstart-uplink-cli
+pageTitle: Quickstart Uplink CLI
 ---
 
-Previous steps:
+## Introduction
 
-*   [](docId:3glkuvH4M7AGIawj-qbTR)
+Set up your Uplink CLI in a 2-step process.
 
-*   Install [](docId\:TC-N6QQVQg8w2cRqvEqEf)&#x20;
+## Step 1. Create an Account
 
-If you have followed the previous tutorial, you already have a `cakes` bucket. If you don't, simply create it and re-upload using the following command:
+Go to storj.io, and [start for free](https://storj.io/signup).
 
-{% code-group %}
-```windows
-./uplink.exe cp ~/Desktop/cheesecake.jpg sj://cakes
+
+
+## Step 2. Download and Install the binary for your OS
+
+::::tabs
+:::tab{label="Windows"}
+## Download the [Windows Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_windows_amd64.zip) zip file&#xA;
+
+In the Downloads folder, right-click and select "Extract all"
+
+![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/oKwJdejxfzapgH0sJBSaO_qsuplinkwindows01.png)
+
+Extract to your user's folder ("**Alexey"** in this example):
+
+![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/okywjcPwdjfWjcUMWGKla_qsuplinkwindows02.png)
+
+
+
+Once extracted, do not try to open the file, as it can only be accessed via the command line.
+
+
+
+Open **Windows PowerShell** and continue on to the next step.
+:::
+
+:::tab{label="Linux"}
+### AMD64
+
+**Curl Download**
+
+```shell
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_amd64.zip -o uplink_linux_amd64.zip
+unzip -o uplink_linux_amd64.zip
+sudo install uplink /usr/local/bin/uplink
 ```
 
-```macos
-uplink cp ~/Desktop/cheesecake.jpg sj://cakes
+**Direct Download**
+
+[Linux AMD64 Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_linux_amd64.zip)
+
+
+
+
+
+### ARM
+
+**Curl Download**
+
+```shell
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm.zip -o uplink_linux_arm.zip
+unzip -o uplink_linux_arm.zip
+sudo install uplink /usr/local/bin/uplink
 ```
 
-```linux
-uplink cp ~/Desktop/cheesecake.jpg sj://cakes
-```
-{% /code-group %}
+**Direct Download**
 
-Let's (re)upload our cheesecake image:
+[Linux ARM Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_linux_arm.zip)
 
-{% code-group %}
-```windows
-./uplink.exe cp ~/Desktop/cheesecake.jpg sj://cakes
+
+
+
+
+### ARM64
+
+**Curl Download**
+
+```shell
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm64.zip -o uplink_linux_arm64.zip
+unzip -o uplink_linux_arm64.zip
+sudo install uplink /usr/local/bin/uplink
 ```
 
-```macos
-uplink cp ~/Desktop/cheesecake.jpg sj://cakes
+**Direct Download**
+
+[Linux ARM64 Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_linux_arm64.zip)
+
+
+:::
+
+:::tab{label="macOS"}
+**Curl Download**
+
+```shell
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip -o uplink_darwin_amd64.zip
+unzip -o uplink_darwin_amd64.zip
+sudo install uplink /usr/local/bin/uplink
 ```
 
-```linux
-uplink cp ~/Desktop/cheesecake.jpg sj://cakes
-```
-{% /code-group %}
+**Direct Download**
+
+****[macOS Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip)
+:::
+::::
 

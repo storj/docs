@@ -3,6 +3,7 @@ title: Common Architectural Pattern
 slug: solution-architectures/common-architectural-patterns
 createdAt: 2022-05-17T01:15:39.000Z
 updatedAt: 2023-03-03T08:30:01.000Z
+docId: wpnNd2zF3PXpmlv5haLnO
 ---
 
 ## Introduction
@@ -14,8 +15,7 @@ There are a standard set of integration patterns in which the Storj Uplink is im
 There are a standard set of integration patterns in which the Storj Uplink is implemented.  This section provides a solution architecture overview of the following integration patterns.
 
 | Platform/Service                    | Description                                                                                                      | **Decentralized Advantage**                                                                                                                                                        |
-| :---------------------------------- | :--------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------docId: wpnNd2zF3PXpmlv5haLnO
---- |
+| :---------------------------------- | :--------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Cloud-hosted Gateway**            | S3-compatible cloud hosted gateway providing elastic object storage capacity                                     | Easy implementation and broad compatibility. Note: uses server-side encryption                                                                                                     |
 | **Hybrid Cloud On Premise Gateway** | On-premis to cloud elastic storage capacity                                                                      | Enhanced privacy via end-to-end encryption                                                                                                                                         |
 | **Cloud Native Applications**       | Web-based applications interact with  S3-compatible cloud hosted gateway                                         | Server-side encryption and industry-leading access management controls with highly distributed network of storage nodes make it easy to build more secure and private applications |

@@ -2,8 +2,9 @@
 title: Splunk
 slug: how-tos/splunk-integration-guide
 createdAt: 2022-11-11T18:48:26.000Z
-updatedAt: 2023-03-09T18:52:14.000Z
+updatedAt: 2023-07-18T18:44:46.028Z
 docId: QlBLsOc7Q7MhxEDvM9cod
+pageTitle: Splunk Integration Guide
 ---
 
 [Splunk](https://www.splunk.com/) is a data analytics platform that provides data-driven insights across all aspects of a company.
@@ -34,7 +35,7 @@ To complete the integration, follow the steps below.
 
 ***
 
-## Create a Storj Account
+### Create a Storj Account
 
 To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
 

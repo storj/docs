@@ -10,15 +10,9 @@ const sideNavigation = [
         href: '/dcs/api-reference/linksharing-service',
       },
       {
-        title: 'S3-compatible-gateway',
+        title: 'Storj-hosted S3 Compatible Gateway',
         type: 's3-compatible-gateway',
         links: [
-          {
-            title: 'Storj-hosted S3 Compatible Gateway',
-            type: 'index',
-            links: [],
-            href: '/dcs/api-reference/s3-compatible-gateway/index',
-          },
           {
             title: 'Multipart Upload',
             type: 'multipart-upload',
@@ -45,6 +39,7 @@ const sideNavigation = [
             href: '/dcs/api-reference/s3-compatible-gateway/using-presigned-urls',
           },
         ],
+        href: '/dcs/api-reference/s3-compatible-gateway',
       },
       {
         title: 'Self-hosted S3 Compatible Gateway',
@@ -66,7 +61,7 @@ const sideNavigation = [
         href: '/dcs/api-reference/storj-client-libraries',
       },
       {
-        title: 'Uplink CLI',
+        title: 'Uplink-cli',
         type: 'uplink-cli',
         links: [
           {
@@ -154,15 +149,9 @@ const sideNavigation = [
             href: '/dcs/api-reference/uplink-cli/ls-command',
           },
           {
-            title: 'Meta-command',
+            title: 'meta',
             type: 'meta-command',
             links: [
-              {
-                title: 'meta',
-                type: 'index',
-                links: [],
-                href: '/dcs/api-reference/uplink-cli/meta-command/index',
-              },
               {
                 title: 'meta get',
                 type: 'meta-get-command',
@@ -170,6 +159,7 @@ const sideNavigation = [
                 href: '/dcs/api-reference/uplink-cli/meta-command/meta-get-command',
               },
             ],
+            href: '/dcs/api-reference/uplink-cli/meta-command',
           },
           {
             title: 'mv',
@@ -208,7 +198,6 @@ const sideNavigation = [
             href: '/dcs/api-reference/uplink-cli/uplink-mb-command',
           },
         ],
-        href: '/dcs/api-reference/uplink-cli',
       },
     ],
   },
@@ -241,7 +230,7 @@ const sideNavigation = [
         href: '/dcs/billing-payment-and-accounts-1/data-retention-policy',
       },
       {
-        title: 'Pricing',
+        title: 'Billing, Payment and Accounts',
         type: 'pricing',
         links: [
           {
@@ -257,18 +246,13 @@ const sideNavigation = [
             href: '/dcs/billing-payment-and-accounts-1/pricing/free-tier',
           },
           {
-            title: 'Billing, Payment and Accounts',
-            type: 'index',
-            links: [],
-            href: '/dcs/billing-payment-and-accounts-1/pricing/index',
-          },
-          {
             title: 'Usage Limit Increases',
             type: 'usage-limit-increases',
             links: [],
             href: '/dcs/billing-payment-and-accounts-1/pricing/usage-limit-increases',
           },
         ],
+        href: '/dcs/billing-payment-and-accounts-1/pricing',
       },
       {
         title: 'Requesting a Refund',
@@ -277,7 +261,7 @@ const sideNavigation = [
         href: '/dcs/billing-payment-and-accounts-1/requesting-a-refund',
       },
       {
-        title: 'Storj-token',
+        title: 'Payment Methods',
         type: 'storj-token',
         links: [
           {
@@ -305,12 +289,6 @@ const sideNavigation = [
             href: '/dcs/billing-payment-and-accounts-1/storj-token/expired-credit-card',
           },
           {
-            title: 'Payment Methods',
-            type: 'index',
-            links: [],
-            href: '/dcs/billing-payment-and-accounts-1/storj-token/index',
-          },
-          {
             title: 'Promotional Credits',
             type: 'promotional-credits',
             links: [],
@@ -323,14 +301,9 @@ const sideNavigation = [
             href: '/dcs/billing-payment-and-accounts-1/storj-token/reporting-a-payment-problem',
           },
         ],
+        href: '/dcs/billing-payment-and-accounts-1/storj-token',
       },
     ],
-  },
-  {
-    title: 'Buckets',
-    type: 'buckets',
-    links: [],
-    href: '/dcs/buckets',
   },
   {
     title: 'Concepts',
@@ -341,7 +314,7 @@ const sideNavigation = [
         type: 'access',
         links: [
           {
-            title: 'Access-grants',
+            title: 'Access Grants',
             type: 'access-grants',
             links: [
               {
@@ -358,12 +331,6 @@ const sideNavigation = [
                 href: '/dcs/concepts/access/access-grants/api-key',
               },
               {
-                title: 'Access Grants',
-                type: 'index',
-                links: [],
-                href: '/dcs/concepts/access/access-grants/index',
-              },
-              {
                 title:
                   'When to use the Satellite Web Interface and When to use the CLI',
                 type: 'when-to-use-the-satellite-web-interface-and-when-to-use-the-cli',
@@ -371,6 +338,7 @@ const sideNavigation = [
                 href: '/dcs/concepts/access/access-grants/when-to-use-the-satellite-web-interface-and-when-to-use-the-cli',
               },
             ],
+            href: '/dcs/concepts/access/access-grants',
           },
           {
             title: 'Access Management at the Edge',
@@ -391,15 +359,9 @@ const sideNavigation = [
             href: '/dcs/concepts/access/capability-based-access-control',
           },
           {
-            title: 'Encryption-and-keys',
+            title: 'Encryption Keys',
             type: 'encryption-and-keys',
             links: [
-              {
-                title: 'Encryption Keys',
-                type: 'index',
-                links: [],
-                href: '/dcs/concepts/access/encryption-and-keys/index',
-              },
               {
                 title: 'Key Management',
                 type: 'key-management',
@@ -413,6 +375,7 @@ const sideNavigation = [
                 href: '/dcs/concepts/access/encryption-and-keys/when-to-use-different-encryption-keys',
               },
             ],
+            href: '/dcs/concepts/access/encryption-and-keys',
           },
         ],
         href: '/dcs/concepts/access',
@@ -462,7 +425,7 @@ const sideNavigation = [
         href: '/dcs/concepts/edge-services',
       },
       {
-        title: 'Encryption-key',
+        title: 'Encryption',
         type: 'encryption-key',
         links: [
           {
@@ -483,13 +446,8 @@ const sideNavigation = [
             links: [],
             href: '/dcs/concepts/encryption-key/how-encryption-is-implemented',
           },
-          {
-            title: 'Encryption',
-            type: 'index',
-            links: [],
-            href: '/dcs/concepts/encryption-key/index',
-          },
         ],
+        href: '/dcs/concepts/encryption-key',
       },
       {
         title: 'File Redundancy',
@@ -578,11 +536,11 @@ const sideNavigation = [
     href: '/dcs/filezilla',
   },
   {
-    title: 'Getting-started',
+    title: 'Getting Started',
     type: 'getting-started',
     links: [
       {
-        title: 'Gateway-mt',
+        title: 'AWS CLI and Hosted Gateway MT',
         type: 'gateway-mt',
         links: [
           {
@@ -591,19 +549,8 @@ const sideNavigation = [
             links: [],
             href: '/dcs/getting-started/gateway-mt/aws-cli-advanced-options',
           },
-          {
-            title: 'AWS CLI and Hosted Gateway MT',
-            type: 'index',
-            links: [],
-            href: '/dcs/getting-started/gateway-mt/index',
-          },
         ],
-      },
-      {
-        title: 'Getting Started',
-        type: 'index',
-        links: [],
-        href: '/dcs/getting-started/index',
+        href: '/dcs/getting-started/gateway-mt',
       },
       {
         title: 'AWS SDK and Hosted Gateway MT',
@@ -622,7 +569,7 @@ const sideNavigation = [
         type: 'quickstart-uplink-cli',
         links: [
           {
-            title: 'Generate-access-grants-and-tokens',
+            title: 'Advanced Usage',
             type: 'generate-access-grants-and-tokens',
             links: [
               {
@@ -631,13 +578,8 @@ const sideNavigation = [
                 links: [],
                 href: '/dcs/getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token',
               },
-              {
-                title: 'Advanced Usage',
-                type: 'index',
-                links: [],
-                href: '/dcs/getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/index',
-              },
             ],
+            href: '/dcs/getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens',
           },
           {
             title: 'Interacting With Your First Object CLI',
@@ -665,7 +607,7 @@ const sideNavigation = [
             href: '/dcs/getting-started/quickstart-uplink-cli/interacting-with-your-first-object',
           },
           {
-            title: 'Sharing-your-first-object',
+            title: 'Sharing Your First Object',
             type: 'sharing-your-first-object',
             links: [
               {
@@ -681,13 +623,7 @@ const sideNavigation = [
                 href: '/dcs/getting-started/quickstart-uplink-cli/sharing-your-first-object/import-access',
               },
               {
-                title: 'Sharing Your First Object',
-                type: 'index',
-                links: [],
-                href: '/dcs/getting-started/quickstart-uplink-cli/sharing-your-first-object/index',
-              },
-              {
-                title: 'Prerequisites',
+                title: 'Uplink CLI',
                 type: 'prerequisites',
                 links: [],
                 href: '/dcs/getting-started/quickstart-uplink-cli/sharing-your-first-object/prerequisites',
@@ -699,6 +635,7 @@ const sideNavigation = [
                 href: '/dcs/getting-started/quickstart-uplink-cli/sharing-your-first-object/revoke-an-access-to-an-object',
               },
             ],
+            href: '/dcs/getting-started/quickstart-uplink-cli/sharing-your-first-object',
           },
           {
             title: 'Uploading Your First Object CLI',
@@ -762,6 +699,12 @@ const sideNavigation = [
             href: '/dcs/getting-started/satellite-developer-account/my-account',
           },
           {
+            title: 'Buckets',
+            type: 'objects',
+            links: [],
+            href: '/dcs/getting-started/satellite-developer-account/objects',
+          },
+          {
             title: 'Quick Start',
             type: 'quick-start',
             links: [],
@@ -777,6 +720,7 @@ const sideNavigation = [
         href: '/dcs/getting-started/satellite-developer-account',
       },
     ],
+    href: '/dcs/getting-started',
   },
   {
     title: 'Overview',
@@ -867,6 +811,12 @@ const sideNavigation = [
         href: '/dcs/how-tos/filezilla-pro-integration-guide',
       },
       {
+        title: 'Globus',
+        type: 'globus-integration-guide',
+        links: [],
+        href: '/dcs/how-tos/globus-integration-guide',
+      },
+      {
         title: 'Hammerspace',
         type: 'hammerspace-integration-guide',
         links: [],
@@ -947,6 +897,12 @@ const sideNavigation = [
         href: '/dcs/how-tos/lucidlink-filespace-integration',
       },
       {
+        title: 'Migrate from Wasabi to Storj',
+        type: 'migrate-from-wasabi-to-storj',
+        links: [],
+        href: '/dcs/how-tos/migrate-from-wasabi-to-storj',
+      },
+      {
         title: 'MongoDB Ops Manager',
         type: 'mongodb-ops-manager-backup',
         links: [],
@@ -963,6 +919,12 @@ const sideNavigation = [
         type: 'nft-storage',
         links: [],
         href: '/dcs/how-tos/nft-storage',
+      },
+      {
+        title: 'oCIS',
+        type: 'ocis-integration-guide',
+        links: [],
+        href: '/dcs/how-tos/ocis-integration-guide',
       },
       {
         title: 'Photos+',
@@ -1001,15 +963,9 @@ const sideNavigation = [
         href: '/dcs/how-tos/splunk-integration-guide',
       },
       {
-        title: 'Sync-files-with-rclone',
+        title: 'Rclone',
         type: 'sync-files-with-rclone',
         links: [
-          {
-            title: 'Rclone',
-            type: 'index',
-            links: [],
-            href: '/dcs/how-tos/sync-files-with-rclone/index',
-          },
           {
             title: 'Rclone Hosted Gateway',
             type: 'rclone-with-hosted-gateway',
@@ -1023,6 +979,7 @@ const sideNavigation = [
             href: '/dcs/how-tos/sync-files-with-rclone/rclone-with-native-integration',
           },
         ],
+        href: '/dcs/how-tos/sync-files-with-rclone',
       },
       {
         title: 'Store Tesla Sentry Mode & Dashcam videos on Storj DCS',

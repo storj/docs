@@ -2,19 +2,20 @@
 title: Duplicati
 slug: how-tos/backup-with-duplicati
 createdAt: 2022-05-19T18:15:05.000Z
-updatedAt: 2023-03-03T08:30:09.000Z
+updatedAt: 2023-07-19T18:29:00.143Z
+docId: 3gNhGvPOi3DFDya6NyVb0
 ---
 
 ## Introduction
 
 Duplicati is a backup tool. It can group, dedupe, and compress small files into bigger blocks. It is a great tool for reducing the costs of cold storage. It also supports versioning.
 
-To restore a small file, Duplicati has to download the entire block it is contained in. Therefore, the best fit for Duplicati are the following two backup use cases: 1. when none of the files contained in the same block need to be ever restored again in the future. 2. when all files in a block need to be restored at the same time.
+To restore a small file, Duplicati has to download the entire block it is contained in. Therefore, the best fit for Duplicati are the following two backup use cases: 1. when none of the files contained in the same block need to be ever restored again in the future. 2. when all files in a block need to be restored simultaneously.
 
 ## Install
 
 {% callout type="info"  %} 
-**Please note that the version used for writing this documentation is currently not yet released on the Duplicati homepage. Please download the canary version from**  [**Duplicati Releases**](https://github.com/duplicati/duplicati/releases) **or use the canary** [docker container](https://hub.docker.com/r/duplicati/duplicati).
+**Please note that the version used for writing this documentation is not yet released on the Duplicati homepage. Please download the canary version from**  [**Duplicati Releases**](https://github.com/duplicati/duplicati/releases) **or use the canary** [docker container](https://hub.docker.com/r/duplicati/duplicati).
 {% /callout %}
 
 1.  [Download](https://github.com/duplicati/duplicati/releases) and install the Duplicati installer file for your OS or run the [docker container](https://hub.docker.com/r/duplicati/duplicati). Note **warning** above!
@@ -31,37 +32,36 @@ To restore a small file, Duplicati has to download the entire block it is contai
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/ferela1Npve8771EbpzNc_duplicatinoencryption-1.png)
 
-3\. Click the storage type dropdown and select "Tardigrade Decentralized Cloud Storage." Select a satellite, then enter an API Key (Access token) see [](docId\:OXSINcFRuVMBacPvswwNU),  encryption passphrase, bucket and optionally, a folder. You can generate a new API Key at any time but please don't lose the encryption key - keep a backup in a safe place.
+3\. Click the storage type dropdown and select "Storj DCS (Decentralized Cloud Storage)." The authentication method should be Access Grant (Access Grant). Enter an Access Grant, see [](docId\:OXSINcFRuVMBacPvswwNU), bucket, and, optionally, a folder.&#x20;
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/zuXsL5W1uYoiExKDQE1O3_duplicatibackupdestination.png)
+![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/iya_7I3bOi2_y092qX4oy_screenshot-2023-07-17-at-74955-am.png)
 
-4\. Next, press "Test Connection"
+4\. Next, press "Test Connection."
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/4i_ebldc7aonFmT4UCaew_duplicaticonnectiontest-1.png)
 
-5\. On the next page, we will select the folder we want to backup. For this example, we will use "My Drive"
+5\. On the next page, we will select the folder we want to backup. For this example, we will use "My Drive."
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/yv6TEEqQIBleZJcpDXlq-_duplicatisourcedata.png)
 
-6\. Now we will create a schedule. In this example, we will run the backup once every day at 1:00 PM.
+6\. Now, we will create a schedule. In this example, we will run the backup once every day at 1:00 PM.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/vT1FdQHEBkdjUdIF8FFqn_duplicatischedule.png)
 
-7\. On the next page, select the appropriate options for you.
+7\. On the next page, select the appropriate options for you. Please set the remote volume size to 60MB.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/4NMI9xDa00--bZvrd18u6_duplicatioptions.png)
+![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/h4dydfhaEFCzRA-0_OKPU_image.png)
 
 ## Recommended Options
 
 | Option                                 | Description                                                                                                                                                                                                                                                                                                                         |
-| :------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------docId: 3gNhGvPOi3DFDya6NyVb0
----- |
+| :------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | asynchronous-concurrent-upload-limit=1 | By default, Duplicati will transfer 4 files in parallel in order to speed up the transfer. The Storj protocol splits every file upload into many small pieces and uploads them in parallel. Even with only 1 concurrent upload it should max out most consumer connections.                                                         |
 | backup-test-samples=0                  | The Storj protocol checks the hash at the end of every file upload. An additional test sample is not needed. Use list-verify-uploads instead.                                                                                                                                                                                       |
-| list-verify-uploads=true               | If a file upload fails for any reason, a final listing would catch it.                                                                                                                                                                                                                                                              |
+| list-verify-uploads=true               | If a file upload fails for any reason, a final listing will catch it.                                                                                                                                                                                                                                                               |
 | no-auto-compact=true                   | If a large number of small files are detected during a backup, or wasted space is found after deleting backups, the remote data will be compacted. This will cause a lot of unnecessary and expensive download traffic.                                                                                                             |
 | threshold                              | As files are changed, some data stored at the remote destination may not be required. This option controls how much wasted space the destination can contain before being reclaimed. Depending on the use case, the threshold can be reduced to 0. Storj DCS doesn't charge you for the additional delete and re-upload operations. |
-| zip-compression-method                 | This option can be used to set an alternative compression method, such as LZMA.                                                                                                                                                                                                                                                     |
+| zip-compression-method                 | This option can be used to set up an alternative compression method, such as LZMA.                                                                                                                                                                                                                                                  |
 
 8\. Click "Save", and you should see the "My Backup Job" we created on the Duplicati homepage.
 

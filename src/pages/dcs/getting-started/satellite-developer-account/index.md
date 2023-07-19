@@ -4,6 +4,7 @@ slug: getting-started/satellite-developer-account
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-03T08:36:11.000Z
 docId: nGzxQBhV8nx5Pukj6O0zT
+pageTitle: Quickstart - Satellite Admin Console
 ---
 
 ## Introduction

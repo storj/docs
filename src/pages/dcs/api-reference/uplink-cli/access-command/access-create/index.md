@@ -3,6 +3,7 @@ title: access create
 slug: api-reference/uplink-cli/access-command/access-create
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:01:10.000Z
+docId: x0Ej1E9_xq9xXFaSvyPTT
 ---
 
 This command allow you to create and print the Access Grant to `stdout`, export it to a file or import it as an access to Uplink.
@@ -38,8 +39,7 @@ uplink access create [flags]
 ## Global flags
 
 | Global flags          | Description                                   |
-| :-------------------- | :---------------------------------------docId: x0Ej1E9_xq9xXFaSvyPTT
------ |
+| :-------------------- | :-------------------------------------------- |
 | `--config-dir string` | Directory that stores the configuration       |
 | `--help`, `-h`        | prints help for the command                   |
 | `--advanced`          | when used with -h, prints advanced flags help |

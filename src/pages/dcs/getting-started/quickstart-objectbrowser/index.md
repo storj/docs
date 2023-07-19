@@ -4,13 +4,14 @@ slug: getting-started/quickstart-objectbrowser
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-02T22:11:58.000Z
 docId: 4oDAezF-FcfPr0WPl7knd
+pageTitle: Quickstart - Object Browser
 ---
 
 ## Introduction
 
 The Storj DCS Satellite Admin Console supports uploading and managing objects directly through the browser with no command-line tool required. This component uses our [](docId\:yYCzPT8HHcbEZZMvfoCFa) service.
 
-{% callout type="info"  %}
+{% callout type="info"  %} 
 By using hosted Gateway MT you are opting into **server-side encryption**. See [](docId\:hf2uumViqYvS1oq8TYbeW)&#x20;
 {% /callout %}
 
@@ -20,7 +21,7 @@ By using hosted Gateway MT you are opting into **server-side encryption**. See [
 
 When you click on the bucket, you will be prompted to read carefully - The object browser uses [](docId\:hf2uumViqYvS1oq8TYbeW).
 
-{% callout type="info"  %}
+{% callout type="info"  %} 
 Don't forget to save your **Encryption Passphrase** generated below, you will need it for future access.
 {% /callout %}
 
@@ -42,8 +43,8 @@ When you click the **Continue** button, you will be placed into the **Objects** 
 
 ## Upload files and folders
 
-{% callout type="warning"  %}
-**The web browser is best for uploads up to 1GB.**
+{% callout type="warning"  %} 
+**The web browser is best for uploads up to 1GB. **
 
 
 
@@ -60,7 +61,7 @@ You can upload not only files but also folders, just **drag them into the browse
 
 If you want to create a folder, you can do that with the **New Folder** button.
 
-{% callout type="success"  %}
+{% callout type="success"  %} 
 When you drag and drop your file into the Satellite Admin Console Object Browser, the Storj DCS S3-compatible Gateway will encrypt the data using [](docId\:hf2uumViqYvS1oq8TYbeW), break large files into 64MB Segments (or for smaller files a single segment), then erasure code the segments, breaking each segment into 80 pieces, then distributing those pieces over our network of thousands of independently operated storage nodes.&#x20;
 {% /callout %}
 
@@ -84,7 +85,7 @@ You can create your buckets in the **Objects** view or if you click on the **<-B
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/oJ74hmgmN9h5iDemALwMk_qsobject07.png)
 
-{% callout type="warning"  %}
+{% callout type="warning"  %} 
 The bucket name can only contain lowercase letters, numbers, and hyphens.
 {% /callout %}
 
@@ -106,7 +107,7 @@ After creating your new bucket, you will be placed into the bucket where you can
 
 3\. Type the ***Bucket Name*** and **Confirm Delete Bucket**.
 
-{% callout type="warning"  %}
+{% callout type="warning"  %} 
 Be careful when deleting buckets - If you still have objects in the bucket being deleted, they will be deleted too!
 {% /callout %}
 

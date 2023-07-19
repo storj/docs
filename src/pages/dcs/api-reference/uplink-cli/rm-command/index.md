@@ -3,6 +3,7 @@ title: rm
 slug: api-reference/uplink-cli/rm-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:54.000Z
+docId: eavv_906IH-39ylIXq30d
 ---
 
 Delete an object.
@@ -26,8 +27,7 @@ uplink rm sj://BUCKET/KEY [flags]
 ## Flags
 
 | Flag                        | Description                                                  |
-| :-------------------------- | :------------------------------------------------------docId: eavv_906IH-39ylIXq30d
------ |
+| :-------------------------- | :----------------------------------------------------------- |
 | `--access string`           | the serialized access, or name of the access to use          |
 | `--encrypted`               | if true, treat paths as base64-encoded encrypted paths       |
 | `--help`, `-h`              | help for `rm`                                                |

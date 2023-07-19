@@ -2,7 +2,7 @@
 title: Auth Service
 slug: concepts/edge-services/auth-service
 createdAt: 2022-05-19T22:26:50.000Z
-updatedAt: 2023-03-03T08:30:09.000Z
+updatedAt: 2023-07-19T20:59:13.962Z
 docId: cSsmRiNfJD_NK3ksKCPQ4
 ---
 

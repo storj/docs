@@ -2,13 +2,12 @@
 title: LucidLink Filespace
 slug: how-tos/lucidlink-filespace-integration
 createdAt: 2022-10-28T16:17:33.000Z
-updatedAt: 2023-03-09T18:51:39.000Z
+updatedAt: 2023-07-14T16:26:25.063Z
 docId: N-d1y_hTKGgjDM0Z6Bjx5
+pageTitle: LucidLink Filespace Integration Guide
 ---
 
-LucidLink Filespaces is a distributed global file system for object storage that performs like a local disk and provides seamless access to data stored in distant locations. LucidLink's cloud-native distributed file system allows many users to access it concurrently via a folder placed on the local client. The LucidLink cloud NAS provides access to large datasets through direct streaming, eliminating the need for downloading and synchronizing.&#x20;
-
-Visit <https://www.lucidlink.com/> for more information.&#x20;
+[LucidLink](https://www.lucidlink.com/) Filespaces is a distributed global file system for object storage that performs like a local disk and provides seamless access to data stored in distant locations. LucidLink's cloud-native distributed file system allows many users to access it concurrently via a folder placed on the local client. The LucidLink cloud NAS provides access to large datasets through direct streaming, eliminating the need for downloading and synchronizing.&#x20;
 
 ## Advantages of Storj with Lucidlink 
 
@@ -24,13 +23,14 @@ Using Storj with LucidLink provides resilient cloud object storage with blazing 
 
 This integration uses S3 credentials passed from Storj to LucidLink. You will need to set up a Storj account, create a Storj bucket for LucidLink, and generate S3 credentials for LucidLink. Then, you will need to create a Filespace on LucidLink using and initialize it with credentials created in Storj.
 
-## Software Requirements 
+### Software Requirements 
 
 LucidLink integrates with any S3-compatible cloud storage platform, including Storj.&#x20;
 
 To integrate LucidLink with Storj, you will need:
 
-*   A Storj account&#x20;
+*   A Storj account.&#x20;
+    *   [Login](https://storj.io/login), if you already have an account, or sign up here <https://us1.storj.io/signup?partner=lucidlink> &#x20;
 
 *   A LucidLink account
 

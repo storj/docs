@@ -2,8 +2,9 @@
 title: Docker Container Registry
 slug: how-tos/container-registry-docker
 createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-04-07T11:26:21.000Z
+updatedAt: 2023-07-18T17:26:43.865Z
 docId: pRj_WJuVm3TDmaSG6zM55
+pageTitle: Container Registry - Docker
 ---
 
 Containers are wonderful: Containers provide a powerful way to package and deploy an application and make the runtime environment immutable and reproducible. But using containers also requires more infrastructure - distributing containers requires a docker registry, either a public one (like Dockerhub) or a private instance.
@@ -52,7 +53,7 @@ If we upload the layers and metadata files in the same structure, Docker pull wi
 
 3.  The container registry should be served under the root path of the domain ( is correct, while  is incorrect). It can be resolved by assigning a custom domain name for the Storj bucket.
 
-## Publish the container&#x20;
+### Publish the container&#x20;
 
 So let’s see an example. What is the publishing process, assuming we have a local docker container (elek/herbsttag in this example)?
 
@@ -111,7 +112,7 @@ uplink share --public sj://registry/ --base-url https://link.storjshare.io --dns
 The command returns all the important information to modify the DNS zones. The usage of this information depends on the DNS registrar.
 
 ```bash
-# DNS INFO
+# DNS INFO 
 # Remember to update the $ORIGIN with your domain name. You may also change the $TTL.
 $ORIGIN example.com.
 $TTL    3600

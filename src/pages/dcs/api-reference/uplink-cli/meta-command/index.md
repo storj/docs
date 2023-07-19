@@ -3,6 +3,7 @@ title: meta
 slug: api-reference/uplink-cli/meta-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:18:12.000Z
+docId: kyMG3B16kKc3gpCxRNe1K
 ---
 
 Metadata related command
@@ -32,7 +33,6 @@ uplink meta [command]
 ## Flags
 
 | Flag           | Description   |
-| :------------- | :---------docId: kyMG3B16kKc3gpCxRNe1K
---- |
+| :------------- | :------------ |
 | `--help`, `-h` | help for meta |
 

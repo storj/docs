@@ -2,7 +2,7 @@
 title: PixelFed
 slug: SboA-pixelfed
 createdAt: 2022-12-01T18:13:09.000Z
-updatedAt: 2023-03-03T08:49:03.000Z
+updatedAt: 2023-07-18T17:26:36.998Z
 docId: SboATM5Y5-lWay0Zg-k4T
 ---
 

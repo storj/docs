@@ -2,7 +2,7 @@
 title: Using presigned URLs
 slug: api-reference/s3-compatible-gateway/using-presigned-urls
 createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-03-03T08:36:11.000Z
+updatedAt: 2023-07-19T20:58:57.877Z
 docId: _pCGnHv0_XwR0-mX0rIkJ
 ---
 

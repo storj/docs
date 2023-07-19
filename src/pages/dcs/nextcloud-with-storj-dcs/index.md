@@ -4,6 +4,7 @@ slug: nextcloud-with-storj-dcs
 createdAt: 2022-10-26T17:19:47.000Z
 updatedAt: 2023-03-03T08:43:36.000Z
 docId: cp1ItDPvF1Up6dce41nNZ
+pageTitle: Nextcloud with Storj
 ---
 
 ## Walk-through video guide

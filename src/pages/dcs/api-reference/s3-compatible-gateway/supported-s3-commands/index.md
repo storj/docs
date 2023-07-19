@@ -3,6 +3,7 @@ title: Supported S3 Commands
 slug: api-reference/s3-compatible-gateway/supported-s3-commands
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-29T19:36:53.000Z
+docId: AIaAeYPXzFN4bOKtNRdkm
 ---
 
 Supported functions for the Storj DCS globally distributed, multi-region  cloud-hosted S3-compatible gateway.
@@ -10,8 +11,7 @@ Supported functions for the Storj DCS globally distributed, multi-region  cloud-
 The Storj DCS S3-compatible Gateway supports a RESTful API that is compatible with the basic data access model of the [Amazon S3 API](http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html).‌ The Storj DCS S3 Gateway is well suited for many application architectures, but since the S3 standard was designed for centralized storage, there are a few areas where a decentralized architecture requires a different approach:
 
 | API Features              | **Status (support/not supported)** | **Remarks**                                                                                                                                                                                                                                          |
-| :------------------------ | :--------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------docId: AIaAeYPXzFN4bOKtNRdkm
---- |
+| :------------------------ | :--------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | List Buckets              | Supported                          |                                                                                                                                                                                                                                                      |
 | ListObjects               | Supported                          | Object listing does not return a traditionally sorted list because keys are stored encrypted. However, the list order is deterministic. Object key encryption can be disabled to achieve compatibility if required: [](docId\:sSBwV86liLJ--jeWCN1DB) |
 | ListObjectsV2             | Supported                          | Object listing does not return a traditionally sorted list because keys are stored encrypted. However, the list order is deterministic. Object key encryption can be disabled to achieve compatibility if required: [](docId\:sSBwV86liLJ--jeWCN1DB) |

@@ -3,6 +3,7 @@ title: access restrict
 slug: api-reference/uplink-cli/access-command/access-restrict
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:02:19.000Z
+docId: jWrIx32jqwp0r45vQcodH
 ---
 
 This command allows you to create a restricted Access Grant and print it to `stdout`, export it to a file or import it as an access to the local store of Uplink.
@@ -45,8 +46,7 @@ uplink access restrict [flags]
 ## Global flags
 
 | Global flags          | Description                                   |
-| :-------------------- | :---------------------------------------docId: jWrIx32jqwp0r45vQcodH
------ |
+| :-------------------- | :-------------------------------------------- |
 | `--config-dir string` | Directory that stores the configuration       |
 | `--help`, `-h`        | prints help for the command                   |
 | `--advanced`          | when used with -h, prints advanced flags help |

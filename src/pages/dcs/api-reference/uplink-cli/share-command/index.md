@@ -3,6 +3,7 @@ title: share
 slug: api-reference/uplink-cli/share-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-05-09T15:34:27.000Z
+docId: tBnCSrmR1jbOewG38fIr4
 ---
 
 Shares restricted access to objects
@@ -30,8 +31,7 @@ An access generated using `uplink share` with no arguments creates an access to 
 ## Flags
 
 | Flag                    | Description                                                                                                     |
-| :---------------------- | :---------------------------------------------------------------------------------------------------------docId: tBnCSrmR1jbOewG38fIr4
------ |
+| :---------------------- | :-------------------------------------------------------------------------------------------------------------- |
 | `--access string`       | the serialized access, or name of the access to use                                                             |
 | `--auth-service string` | url for shared auth service,  by default                                                                        |
 | `--base-url string`     | the base url for link sharing,   by default                                                                     |

@@ -3,6 +3,7 @@ title: access import
 slug: api-reference/uplink-cli/access-command/access-import
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:01:37.000Z
+docId: 9MIN1usU8WPUY2212Y-_S
 ---
 
 This command allows you to import the Access Grant to Uplink.
@@ -40,8 +41,7 @@ uplink access import [flags] <name> <access|filename>
 ## Global flags
 
 | Global flags          | Description                                   |
-| :-------------------- | :---------------------------------------docId: 9MIN1usU8WPUY2212Y-_S
------ |
+| :-------------------- | :-------------------------------------------- |
 | `--config-dir string` | Directory that stores the configuration       |
 | `--help`, `-h`        | prints help for the command                   |
 | `--advanced`          | when used with -h, prints advanced flags help |

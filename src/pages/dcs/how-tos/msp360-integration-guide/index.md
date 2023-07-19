@@ -2,8 +2,9 @@
 title: MSP360
 slug: how-tos/msp360-integration-guide
 createdAt: 2023-01-04T15:56:19.000Z
-updatedAt: 2023-03-09T18:51:57.000Z
+updatedAt: 2023-07-19T18:13:06.641Z
 docId: z4dmU9Ixxd2X3UyOpWb5C
+pageTitle: MSP360 Integration Guide
 ---
 
 MSP360 Managed Backup and from Cloudberry Labs is a cross-platform storage backup and disaster recovery solution designed for internal IT departments and managed service providers. It integrates with any S3-compatible cloud storage.
@@ -24,15 +25,16 @@ MSP360  integrates with Storj cloud storage through the S3 protocol.&#x20;
 
 To integrate MSP360 with Storj, you will need to create S3 credentials for MSP360 in Storj and pass them to the MSP360 managed backup server through the MSP360 web interface or SaaS control.
 
-## Requirements
+### Requirements
 
 *   An active Storj account
+    *   Navigate to <https://us1.storj.io/signup?partner=MSP360> to sign up, or log in <https://storj.io/login> if you already have an account.
 
-*   A bucket for MSP360 in your Storj instance
+*   A bucket for MSP360 in your Storj instance.
 
-*   An MSP360 Managed Backup account
+*   An MSP360 Managed Backup account.
 
-*   Access to the MSP360 Web UI
+*   Access to the MSP360 Web UI.
 
 If you do not have an MSP360 account already, you can request a demo from their [website](https://www.msp360.com/managed-backup/).
 

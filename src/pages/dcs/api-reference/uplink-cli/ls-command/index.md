@@ -3,6 +3,7 @@ title: ls
 slug: api-reference/uplink-cli/ls-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:20.000Z
+docId: Df-CVmCCHmt6r3_c1PLn4
 ---
 
 &#x20;List objects and prefixes or all buckets
@@ -26,8 +27,7 @@ uplink ls [sj://BUCKET[/PREFIX]] [flags]
 ## Flags
 
 | Flag                | Description                                                                                        |
-| :------------------ | :---------------------------------------------------------------------------------------------docId: Df-CVmCCHmt6r3_c1PLn4
----- |
+| :------------------ | :------------------------------------------------------------------------------------------------- |
 | `--access string`   | the serialized access, or name of the access to use                                                |
 | `--encrypted`       | if true, show paths as base64-encoded encrypted paths                                              |
 | `--expanded`, `-x`  | Use expanded output, showing object expiration times and whether there is custom metadata attached |

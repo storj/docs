@@ -2,7 +2,8 @@
 title: Rclone Native Integration
 slug: how-tos/sync-files-with-rclone/rclone-with-native-integration
 createdAt: 2022-05-19T18:28:40.000Z
-updatedAt: 2023-06-30T18:09:47.662Z
+updatedAt: 2023-07-19T18:21:35.755Z
+docId: Mk51zylAE6xmqP7jUYAuX
 ---
 
 ## Selecting an Integration Pattern
@@ -38,7 +39,7 @@ q) Quit config
 e/n/d/r/c/s/q> n
 ```
 
-Enter a name for the new remote configuration, e.g. `waterbear`.
+Enter a name for the new remote configuration, e.g., `waterbear`.
 
 ```Text
 name> waterbear
@@ -113,7 +114,7 @@ satellite_address>
 ```
 
 {% callout type="info"  %} 
-If you enter the a 3rd-party satellite, the address must include also the node ID of the satellite. This is required to establish a secure connection with the satellite.
+If you enter a 3rd-party satellite, the address must also include the node ID of the satellite. This is required to establish a secure connection with the satellite.
 {% /callout %}
 
 The second step of creating a new access grant is to enter your generated [](docId\:OXSINcFRuVMBacPvswwNU).
@@ -148,8 +149,7 @@ satellite_address = 121RTSDpyNZVcEU84Ticf2L1ntiuUimbWgfATz21tuvgk3vzoA6@asia-eas
 api_key = 1Cjfjf...
 passphrase = your-secret-encryption-phrase
 access_grant = 1E1F...
----------------docId: Mk51zylAE6xmqP7jUYAuX
------
+--------------------
 y) Yes this is OK (default)
 e) Edit this remote
 d) Delete this remote

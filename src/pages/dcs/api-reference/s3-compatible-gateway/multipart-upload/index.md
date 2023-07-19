@@ -3,6 +3,7 @@ title: Multipart Upload
 slug: api-reference/s3-compatible-gateway/multipart-upload
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-03T08:36:11.000Z
+docId: _49AHstKRWMEMsbx_SQ8P
 ---
 
 Understanding how to use Multipart Upload with the Storj DCS globally  distributed, multi-region cloud-hosted S3-compatible gateway
@@ -64,8 +65,7 @@ When a multipart upload is initiated, storage DCS processes and makes available 
 ## Multipart upload limits
 
 | **Item**                                                                         | **Limit**           |
-| :------------------------------------------------------------------------------- | :---------------docId: _49AHstKRWMEMsbx_SQ8P
---- |
+| :------------------------------------------------------------------------------- | :------------------ |
 | Maximum object size                                                              | No practical limit. |
 | Maximum number of parts per upload                                               | 2^31                |
 | Part numbers                                                                     | 0 to 2^31           |

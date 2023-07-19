@@ -15,7 +15,7 @@ import sideNavigation  from './sideNavigation'
 
 
 const spaces = [
-    { name: 'DCS', href: '#', current: true },
+    { name: 'Home', href: '/', current: true },
     { name: 'Node', href: '#', current: false },
     { name: 'Resources', href: '#', current: false },
     { name: 'Help Center', href: '#', current: false },

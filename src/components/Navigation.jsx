@@ -10,10 +10,10 @@ function NavLink({title, href, current, root }) {
     <Link
       href={href}
       className={clsx(
-        `block w-full ${ root ? 'pl-5' : 'pl-8'} truncate before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
+        `block w-full ${ root ? 'pl-5' : 'pl-8'} truncate py-0.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
         current
           ? `font-semibold text-storj-blue-700 ${ root ? '' : 'before:bg-storj-blue-700'}`
-          : `text-slate-500 ${ !root ? 'before:hidden before:bg-slate-500 hover:text-slate-700 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300' : '' }`
+          : `text-slate-600 dark:text-slate-400 ${ !root ? 'before:hidden before:bg-slate-500 hover:text-slate-700 hover:before:block dark:before:bg-slate-700 dark:hover:text-slate-300' : '' }`
       )}
       title={title}
     >
@@ -38,7 +38,7 @@ function NavItem({ item, root }) {
           <Disclosure.Button className={clsx('flex items-center w-full text-left rounded-md pr-2 gap-x-1 py-0.5 text-sm leading-none text-gray-700')}>
             <ChevronRightIcon
               className={clsx(
-                open ? `rotate-90 ${router.pathname.includes(item.type) && "text-storj-blue-700"}` : 'text-gray-400',
+                open ? `rotate-90 ${router.pathname.includes(item.type) && "text-storj-blue-700"}` : 'text-gray-500',
                 'h-4 w-4 shrink-0'
               )}
               aria-hidden="true"
@@ -47,13 +47,13 @@ function NavItem({ item, root }) {
               <NavLink title={item.title} root={root} href={item.href} current={ item.href === router.pathname} />
             ) : (
               root ? (
-                <h2 title={item.title} className="truncate font-semiboldfont-display text-slate-900 dark:text-white hover:text-slate-700">
+                <h2 title={item.title} className="truncate py-0.5 font-semiboldfont-display text-slate-900 dark:text-white hover:text-slate-700">
                   {item.title}
                 </h2>
               ) : (
-                <p className='block w-full truncate text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'>
+                <h2 title={item.title} className='block w-full truncate py-0.5 text-slate-600 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'>
                   {item.title}
-                </p>
+                </h2>
               )
             )}
           </Disclosure.Button>

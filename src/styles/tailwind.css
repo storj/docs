@@ -13,11 +13,11 @@
 /* https://css-tricks.com/scrollbars-on-hover/ */
 .content {
   mask-image: linear-gradient(to top, transparent, black),
-    linear-gradient(to left, transparent 6px, black 6px);
+    linear-gradient(to left, transparent 12px, black 12px);
   mask-size: 100% 20000px;
   mask-position: left bottom;
   -webkit-mask-image: linear-gradient(to top, transparent, black),
-    linear-gradient(to left, transparent 6px, black 6px);
+    linear-gradient(to left, transparent 12px, black 12px);
   -webkit-mask-size: 100% 20000px;
   -webkit-mask-position: left bottom;
   transition: mask-position 0.3s, -webkit-mask-position 0.3s;

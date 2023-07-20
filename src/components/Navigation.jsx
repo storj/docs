@@ -5,15 +5,26 @@ import clsx from 'clsx';
 import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 
-function NavLink({title, href, current, root }) {
+function NavLink({title, href, current, root, disclosure }) {
+  let padding = 'pl-9'
+  if (root) {
+    padding = 'pl-5'
+  }
+  if (root && disclosure) {
+    padding = 'pl-0'
+  }
+  if (disclosure) {
+    padding = 'pl-1'
+  }
+
   return (
     <Link
       href={href}
       className={clsx(
-        `block w-full ${ root ? 'pl-5' : 'pl-8'} truncate py-0.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
+        `block w-full ${padding} truncate py-0.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
         current
-          ? `font-semibold text-storj-blue-700 ${ root ? '' : 'before:bg-storj-blue-700'}`
-          : `text-slate-600 dark:text-slate-400 ${ !root ? 'before:hidden before:bg-slate-500 hover:text-slate-700 hover:before:block dark:before:bg-slate-700 dark:hover:text-slate-300' : '' }`
+          ? `font-semibold text-storj-blue-700 ${ root || disclosure ? '' : 'before:bg-storj-blue-700'}`
+          : `text-slate-600 dark:text-slate-400 ${ root || disclosure ? '' : 'before:hidden before:bg-slate-500 hover:text-slate-700 hover:before:block dark:before:bg-slate-700 dark:hover:text-slate-300'}`
       )}
       title={title}
     >
@@ -30,6 +41,7 @@ function NavItem({ item, root }) {
       <NavLink title={item.title} href={item.href} current={ item.href === router.pathname} root={root} />
     );
   }
+  console.log("pathname", router.pathname, item.type)
 
   return (
     <Disclosure defaultOpen={router.pathname.includes(item.type)} as="div" className={root ? '' : 'ml-3'}>
@@ -44,17 +56,11 @@ function NavItem({ item, root }) {
               aria-hidden="true"
             />
             {item.href ? (
-              <NavLink title={item.title} root={root} href={item.href} current={ item.href === router.pathname} />
+              <NavLink title={item.title} root={root} disclosure href={item.href} current={ item.href === router.pathname} />
             ) : (
-              root ? (
-                <h2 title={item.title} className="truncate py-0.5 font-semiboldfont-display text-slate-900 dark:text-white hover:text-slate-700">
-                  {item.title}
-                </h2>
-              ) : (
-                <h2 title={item.title} className='block w-full truncate py-0.5 text-slate-600 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'>
-                  {item.title}
-                </h2>
-              )
+              <h2 title={item.title} className={`truncate py-0.5 ${root ? 'font-semiboldfont-display' : 'block'} text-slate-900 dark:text-white hover:text-slate-700`}>
+                {item.title}
+              </h2>
             )}
           </Disclosure.Button>
           <Transition
@@ -68,11 +74,7 @@ function NavItem({ item, root }) {
             <Disclosure.Panel as="ul" className="mt-2 ml-2 border-l-2 space-y-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
               {item.links.map((subItem) => (
                 <li key={subItem.type + subItem.title} className="relative">
-                  {subItem.href ? (
-                    <NavLink title={subItem.title} href={subItem.href} current={ subItem.href === router.pathname} />
-                  ) : (
-                    <NavItem item={subItem} />
-                  )}
+                  <NavItem item={subItem} />
                 </li>
               ))}
             </Disclosure.Panel>

@@ -10,13 +10,15 @@ import { Navigation } from '@/components/Navigation'
 import { Prose } from '@/components/Prose'
 import { Search } from '@/components/Search'
 import { ThemeSelector } from '@/components/ThemeSelector'
-import sideNavigation  from './sideNavigation'
+
+// TODO lazily import node when it's used
+import { dcsNavigation, dcsBottomNav, nodeNavigation, nodeBottomNav} from '@/markdoc/navigation.mjs'
 
 
 
 const spaces = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Node', href: '#', current: false },
+    { name: 'Node', href: '/node', current: false },
     { name: 'Resources', href: '#', current: false },
     { name: 'Help Center', href: '#', current: false },
 ]
@@ -31,6 +33,7 @@ function GitHubIcon(props) {
 }
 
 function Header({ navigation }) {
+  let router = useRouter()
   let [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -75,19 +78,22 @@ function Header({ navigation }) {
       </div>
       </div>
       <nav className="hidden mt-4 lg:flex lg:space-x-8 lg:py-2" aria-label="Global">
-        {spaces.map((item) => (
+        {spaces.map((item) => {
+          let current = item.href == router.pathname
+          return (
           <Link
             key={item.name}
             href={item.href}
             className={clsx(
-              item.current ? 'bg-gray-200 dark:bg-gray-50 text-gray-900' : 'text-gray-900 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white',
+              current ? 'bg-gray-200 dark:bg-gray-50 text-gray-900' : 'text-gray-900 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white',
               'inline-flex items-center rounded-md py-2 px-3 text-sm font-medium'
             )}
-            aria-current={item.current ? 'page' : undefined}
+            aria-current={current ? 'page' : undefined}
           >
             {item.name}
           </Link>
-        ))}
+          )
+        })}
       </nav>
     </header>
   )
@@ -139,7 +145,13 @@ function useTableOfContents(tableOfContents) {
 export function Layout({ children, title, tableOfContents }) {
   let router = useRouter()
   let isHomePage = router.pathname === '/'
-  let allLinks = sideNavigation.flatMap((section) => section.links)
+  let sideNavigation = dcsNavigation
+  let allLinks = dcsBottomNav
+  if (router.pathname.startsWith('/node')) {
+    sideNavigation = nodeNavigation
+    allLinks = nodeBottomNav
+  }
+
   let linkIndex = allLinks.findIndex((link) => link.href === router.pathname)
   let previousPage = allLinks[linkIndex - 1]
   let nextPage = allLinks[linkIndex + 1]
@@ -191,9 +203,8 @@ export function Layout({ children, title, tableOfContents }) {
             )}
             <Prose>{children}</Prose>
           </article>
-    {/*
           <dl className="flex pt-6 mt-12 border-t border-slate-200 dark:border-slate-800">
-            {previousPage && (
+            {previousPage && previousPage.href && (
               <div>
                 <dt className="text-sm font-medium font-display text-slate-900 dark:text-white">
                   Previous
@@ -208,7 +219,7 @@ export function Layout({ children, title, tableOfContents }) {
                 </dd>
               </div>
             )}
-            {nextPage && (
+            {nextPage && nextPage.href && (
               <div className="ml-auto text-right">
                 <dt className="text-sm font-medium font-display text-slate-900 dark:text-white">
                   Next
@@ -224,7 +235,6 @@ export function Layout({ children, title, tableOfContents }) {
               </div>
             )}
           </dl>
-          */}
         </div>
         <div className="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
           <nav aria-labelledby="on-this-page-title" className="w-56">

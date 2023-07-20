@@ -43,5 +43,32 @@ function walkDir(dir, currentPath = '') {
   return results
 }
 
+function extractHrefObjects(data) {
+  let hrefObjects = []
+
+  // If data itself is an array, recursively extract from each item
+  if (Array.isArray(data)) {
+    for (let item of data) {
+      hrefObjects = hrefObjects.concat(extractHrefObjects(item))
+    }
+    return hrefObjects
+  }
+
+  // Base case: If it's an object and has href, push it to results
+  if (data && typeof data === 'object' && data.href) {
+    delete data.links
+    hrefObjects.push(data)
+  }
+
+  // If the object has a 'links' property and it's an array, iterate over it
+  if (data.links && Array.isArray(data.links)) {
+    for (let item of data.links) {
+      hrefObjects = hrefObjects.concat(extractHrefObjects(item))
+    }
+  }
+
+  return hrefObjects
+}
+
 const result = walkDir('/Users/dan/test/storj-docs-poc/src/pages/dcs') // Replace with your starting directory path
 console.log(JSON.stringify(result, null, 2))

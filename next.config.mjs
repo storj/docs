@@ -1,5 +1,6 @@
 import withMarkdoc from '@markdoc/next.js'
 import withSearch from './src/markdoc/search.mjs'
+import withNavigation from './src/markdoc/navigation.mjs'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -13,6 +14,6 @@ const nextConfig = {
   },
 }
 
-export default withSearch(
-  withMarkdoc({ schemaPath: './src/markdoc' })(nextConfig)
+export default withNavigation(
+  withSearch(withMarkdoc({ schemaPath: './src/markdoc' })(nextConfig))
 )

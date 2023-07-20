@@ -7,6 +7,7 @@ import { slugifyWithCounter } from '@sindresorhus/slugify'
 import Markdoc from '@markdoc/markdoc'
 
 const __filename = url.fileURLToPath(import.meta.url)
+console.log('****************************', __filename)
 const slugify = slugifyWithCounter()
 
 function toString(node) {

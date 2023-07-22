@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect  } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import clsx from 'clsx'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 
@@ -35,10 +35,10 @@ function CopyButton({ code }) {
     <button
       type="button"
       className={clsx(
-        'group/button absolute right-4 top-1.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100',
+        'group/button text-2xs absolute right-4 top-1.5 overflow-hidden rounded-full py-1 pl-2 pr-3 font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100',
         copied
           ? 'bg-emerald-400/10 ring-1 ring-inset ring-emerald-400/20'
-          : 'bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5'
+          : 'hover:bg-white/7.5 dark:bg-white/2.5 bg-white/5 dark:hover:bg-white/5'
       )}
       onClick={() => {
         window.navigator.clipboard.writeText(code).then(() => {
@@ -53,7 +53,7 @@ function CopyButton({ code }) {
           copied && '-translate-y-1.5 opacity-0'
         )}
       >
-        <ClipboardIcon className="w-5 h-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400" />
+        <ClipboardIcon className="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400" />
         Copy
       </span>
       <span
@@ -71,7 +71,7 @@ function CopyButton({ code }) {
 
 export function Fence({ children, language, code }) {
   return (
-    <div className="group dark:bg-white/2.5">
+    <div className="dark:bg-white/2.5 group">
       <div className="relative ">
         <Highlight
           {...defaultProps}
@@ -85,10 +85,10 @@ export function Fence({ children, language, code }) {
                 {tokens.map((line, lineIndex) => (
                   <Fragment key={lineIndex}>
                     {line
-                        .filter((token) => !token.empty)
-                        .map((token, tokenIndex) => (
-                          <span key={tokenIndex} {...getTokenProps({ token })} />
-                        ))}
+                      .filter((token) => !token.empty)
+                      .map((token, tokenIndex) => (
+                        <span key={tokenIndex} {...getTokenProps({ token })} />
+                      ))}
                     {'\n'}
                   </Fragment>
                 ))}

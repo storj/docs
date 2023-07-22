@@ -36,10 +36,10 @@ export function Hero() {
   return (
     <div className="overflow-hidden bg-slate-900 dark:-mb-32 dark:mt-[-4.5rem] dark:pb-32 dark:pt-[4.5rem] dark:lg:mt-[-4.75rem] dark:lg:pt-[4.75rem]">
       <div className="py-16 sm:px-2 lg:relative lg:px-0 lg:py-20">
-        <div className="items-center max-w-2xl px-4 mx-auto grid grid-cols-1 gap-x-8 gap-y-16 lg:max-w-8xl lg:grid-cols-2 lg:px-8 xl:gap-x-16 xl:px-12">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 lg:max-w-8xl lg:grid-cols-2 lg:px-8 xl:gap-x-16 xl:px-12">
           <div className="relative z-10 md:text-center lg:text-left">
             <Image
-              className="absolute -mb-56 opacity-50 bottom-full right-full -mr-72"
+              className="absolute bottom-full right-full -mb-56 -mr-72 opacity-50"
               src={blurCyanImage}
               alt=""
               width={530}
@@ -48,13 +48,14 @@ export function Hero() {
               priority
             />
             <div className="relative">
-              <p className="inline text-5xl tracking-tight text-transparent bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display">
+              <p className="inline bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
                 Make the world your datacenter
               </p>
               <p className="mt-3 text-2xl tracking-tight text-slate-400">
-                Store every byte with Storj&apos;s decentralized nodes, ensuring your data is everywhere, even before you need it.
+                Store every byte with Storj&apos;s decentralized nodes, ensuring
+                your data is everywhere, even before you need it.
               </p>
-              <div className="flex mt-8 gap-4 md:justify-center lg:justify-start">
+              <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
                 <Button href="/">Get started</Button>
                 <Button href="/" variant="secondary">
                   View on GitHub
@@ -88,11 +89,11 @@ export function Hero() {
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10 blur-lg" />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10" />
               <div className="relative rounded-2xl bg-[#0A101F]/80 ring-1 ring-white/10 backdrop-blur">
-                <div className="absolute h-px -top-px left-20 right-11 bg-gradient-to-r from-sky-300/0 via-sky-300/70 to-sky-300/0" />
-                <div className="absolute h-px -bottom-px left-11 right-20 bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
-                <div className="pt-4 pl-4">
+                <div className="absolute -top-px left-20 right-11 h-px bg-gradient-to-r from-sky-300/0 via-sky-300/70 to-sky-300/0" />
+                <div className="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
+                <div className="pl-4 pt-4">
                   <TrafficLightsIcon className="h-2.5 w-auto stroke-slate-500/30" />
-                  <div className="flex mt-4 text-xs space-x-2">
+                  <div className="mt-4 flex space-x-2 text-xs">
                     {tabs.map((tab) => (
                       <div
                         key={tab.name}
@@ -114,10 +115,10 @@ export function Hero() {
                       </div>
                     ))}
                   </div>
-                  <div className="flex items-start px-1 mt-6 text-sm">
+                  <div className="mt-6 flex items-start px-1 text-sm">
                     <div
                       aria-hidden="true"
-                      className="pr-4 font-mono border-r select-none border-slate-300/5 text-slate-600"
+                      className="select-none border-r border-slate-300/5 pr-4 font-mono text-slate-600"
                     >
                       {Array.from({
                         length: code.split('\n').length,

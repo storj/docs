@@ -73,7 +73,7 @@ export const Header = forwardRef(function Header({ className }, ref) {
             <TopLevelNavItem href="#">Support</TopLevelNavItem>
           </ul>
         </nav>
-        <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" />
+        <div className="md:dark:bg-white/15 hidden md:block md:h-5 md:w-px md:bg-zinc-900/10" />
         <div className="flex gap-4">
           <MobileSearch />
           <ModeToggle />

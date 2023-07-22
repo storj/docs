@@ -37,9 +37,9 @@ function CodePanelHeader({ tag, label }) {
   }
 
   return (
-    <div className="flex h-9 items-center gap-2 border-y border-b-white/7.5 border-t-transparent bg-white/2.5 bg-zinc-900 px-4 dark:border-b-white/5 dark:bg-white/1">
+    <div className="border-b-white/7.5 bg-white/2.5 dark:bg-white/1 flex h-9 items-center gap-2 border-y border-t-transparent bg-zinc-900 px-4 dark:border-b-white/5">
       {tag && (
-        <div className="flex dark">
+        <div className="dark flex">
           <Tag variant="small">{tag}</Tag>
         </div>
       )}
@@ -62,9 +62,7 @@ function CodePanel({ tag, label, code, language, children }) {
         tag={child.props.tag ?? tag}
         label={child.props.label ?? label}
       />
-      <div className='p-4 text-sm'>
-        {children}
-      </div>
+      <div className="p-4 text-sm">{children}</div>
     </>
   )
 }
@@ -77,21 +75,21 @@ function CodeGroupHeader({ title, children, selectedIndex }) {
   }
 
   return (
-    <div className="flex text-xs text-slate-400 leading-6">
+    <div className="flex text-xs leading-6 text-slate-400">
       {title && (
-        <h3 className="flex items-center flex-none px-4 py-1 border-t border-b text-sky-300 border-t-transparent border-b-sky-300">
+        <h3 className="flex flex-none items-center border-b border-t border-b-sky-300 border-t-transparent px-4 py-1 text-sky-300">
           {title}
         </h3>
       )}
       {hasTabs && (
-        <Tab.List className="flex -mb-px text-xs font-medium ">
+        <Tab.List className="-mb-px flex text-xs font-medium ">
           {Children.map(children, (child, childIndex) => (
             <Tab
               className={clsx(
-                'flex-none text-sky-300 border-t border-b border-t-transparent  px-4 py-2 flex items-center pr-2',
+                'flex flex-none items-center border-b border-t  border-t-transparent px-4 py-2 pr-2 text-sky-300',
                 childIndex === selectedIndex
                   ? 'bg-none shadow'
-                  : 'border-slate-500/30 rounded-t text-zinc-400 hover:text-zinc-300'
+                  : 'rounded-t border-slate-500/30 text-zinc-400 hover:text-zinc-300'
               )}
             >
               {getPanelTitle(child.props)}
@@ -99,7 +97,7 @@ function CodeGroupHeader({ title, children, selectedIndex }) {
           ))}
         </Tab.List>
       )}
-            <div className="flex items-center flex-auto border border-l-0 rounded-tl bg-slate-700/50 border-slate-500/30"></div>
+      <div className="flex flex-auto items-center rounded-tl border border-l-0 border-slate-500/30 bg-slate-700/50"></div>
     </div>
   )
 }
@@ -204,7 +202,7 @@ export function CodeGroup({ children, title, ...props }) {
     <CodeGroupContext.Provider value={true}>
       <Container
         {...containerProps}
-        className="pt-1 pb-3 my-8 overflow-hidden shadow-lg rounded-xl bg-slate-900 dark:bg-slate-800/60 dark:ring-1 dark:ring-slate-300/10 not-prose dark:shadow-none"
+        className="not-prose my-8 overflow-hidden rounded-xl bg-slate-900 pb-3 pt-1 shadow-lg dark:bg-slate-800/60 dark:shadow-none dark:ring-1 dark:ring-slate-300/10"
       >
         <CodeGroupHeader title={title} {...headerProps}>
           {children}
@@ -214,4 +212,3 @@ export function CodeGroup({ children, title, ...props }) {
     </CodeGroupContext.Provider>
   )
 }
-

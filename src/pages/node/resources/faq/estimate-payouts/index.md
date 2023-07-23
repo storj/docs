@@ -3,6 +3,7 @@ title: How do I estimate my payouts per Satellite?
 slug: resources/faq/estimate-payouts
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: 2tLLmAjix5YnHHa1oflQp
 ---
 
 If you would like to estimate how much you can expect to get paid for running your Node during a given month, please follow the instructions [here](https://support.storj.io/hc/en-us/articles/360029053531-Calculate-the-current-earnings-for-v3).
@@ -16,4 +17,3 @@ Please note that this script won't give you values as exact as what is shown on 
 Please see more details about held amounts in this blog post: [Sharing Storage Space for Fun and Profit](https://storj.io/blog/2019/01/sharing-storage-space-for-fun-and-profit/).
 
 See also [](docId\:DVKqtMtnBdZ99gFRWCojP)  regarding the [](docId\:DVKqtMtnBdZ99gFRWCojP) and  [](docId\:DVKqtMtnBdZ99gFRWCojP)
----undefineddocId: 2tLLmAjix5YnHHa1oflQp

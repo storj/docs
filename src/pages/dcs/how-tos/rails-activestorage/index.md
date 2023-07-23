@@ -6,7 +6,6 @@ createdAt: 2023-01-13T22:20:58.000Z
 updatedAt: 2023-02-28T16:16:41.000Z
 docId: NhH8YVF9d8liRd7BRu9jT
 pageTitle: Rails 7 ActiveStorage Connected to Storj
-description: How to connect ActiveStorage in Rails 7 to Storj
 ---
 
 This guide will show you how to connect ActiveStorage in Rails 7 to Storj (an AWS S3 compatible object storage). You can also look at the [source code of this example](https://github.com/amozoss/active-storj).

@@ -3,6 +3,7 @@ title: Migrating from Docker CLI to a GUI Install on Windows
 slug: resources/faq/migrate-my-node/migrating-from-docker-cli-to-a-gui-install-on-windows
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-05-04T03:01:55.000Z
+docId: PsB_5Yp43KeN0DszuE2DN
 ---
 
 ## Migrating from Docker CLI to a GUI Install on Windows
@@ -36,4 +37,3 @@ It is better to specify the path to the **storage** subfolder with the **Browse.
 First you need to transfer both the identity and the data from the Linux installation to the new Windows device: [](docId\:jEntWNvi2M6Eo74NICIJg)&#x20;
 
 Then you can follow the instructions in this guide.
----undefineddocId: PsB_5Yp43KeN0DszuE2DN

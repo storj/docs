@@ -3,6 +3,7 @@ title: Software Updates
 slug: setup/cli/software-updates
 createdAt: 2022-08-30T18:25:24.000Z
 updatedAt: 2023-04-17T05:13:22.000Z
+docId: ojIatmeXyCN4rc-GPx8yW
 ---
 
 ## Automatic Updates
@@ -62,4 +63,3 @@ docker pull storjlabs/storagenode:latest
 **Previous versions of the command  **`docker run storagenode`**  that used the**`-v`** rather than the **`--mount`** option will not work properly. Copy the updated command from the **[](docId\:HaDkV_0aWg9OJoBe53o-J)** article.**
 {% /callout %}
 
----undefineddocId: ojIatmeXyCN4rc-GPx8yW

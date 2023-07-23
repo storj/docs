@@ -6,7 +6,6 @@ createdAt: 2023-03-08T19:02:05.000Z
 updatedAt: 2023-07-18T12:51:17.003Z
 docId: GhGW4KaBkd428zJ51EIdp
 pageTitle: Integration guide for connecting Storj to Acronis
-description: Get started integrating Acronis with Storj for cost effective cloud backup and storage. Our guide provides step-by-step instructions to connect your Acronis Cyber Infrastructure to Storj. Read now!
 ---
 
 ## Integration guide for connecting Storj to Acronis

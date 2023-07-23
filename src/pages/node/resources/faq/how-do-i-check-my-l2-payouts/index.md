@@ -4,6 +4,7 @@ slug: resources/faq/how-do-i-check-my-l2-payouts
 description: You opted-in for L2 (zkSync)
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: 3bVxz-N4BRC_YuNBRCUJK
 ---
 
 If you opted-in [](docId:6TX_ve1PyUrXuwax-mWWw), you can check your payout in three ways:
@@ -31,5 +32,3 @@ If you do not see the *Transaction* link, then your node has not received payout
 ## Check your wallet on zkscan.io
 
 And finally, you can open [zkSscan](https://zkscan.io), put your wallet address in the search field and click the **Search** button.
----undefineddocId: 3bVxz-N4BRC_YuNBRCUJK
-description: You opted-in for L2 (zkSync)

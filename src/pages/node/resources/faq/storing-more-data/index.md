@@ -3,6 +3,7 @@ title: Why am I not storing more data?
 slug: resources/faq/storing-more-data
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: nANEIimWey3FXPFuGrJdN
 ---
 
 The most important aspect to increase the amount of data stored on your Node (and thus maximizing payout) is to build reputation of your Node’s ID over an extended period of time**.**
@@ -15,4 +16,3 @@ After disqualified Storage Nodes have been filtered out, remaining statistics co
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/6kyTxJSBnAQUkuk50IIWq_image.png)
 
----undefineddocId: nANEIimWey3FXPFuGrJdN

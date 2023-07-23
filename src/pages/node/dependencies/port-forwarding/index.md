@@ -3,6 +3,7 @@ title: Step 3. Setup Port Forwarding
 slug: dependencies/port-forwarding
 createdAt: 2022-05-24T21:20:52.000Z
 updatedAt: 2023-03-03T08:30:27.000Z
+docId: y0jltT-HzKPmDefi532sd
 ---
 
 ## Before starting
@@ -299,4 +300,3 @@ Be sure to repeat the above steps to also create a new firewall rule for UDP. Se
 
 Search for port forwarding instructions for your exact router model.
 
----undefineddocId: y0jltT-HzKPmDefi532sd

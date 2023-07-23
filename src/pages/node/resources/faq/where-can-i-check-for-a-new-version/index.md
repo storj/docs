@@ -4,6 +4,7 @@ slug: resources/faq/where-can-i-check-for-a-new-version
 description: You want to have the latest version to be a Cloud!
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: CfmXIRjM5X5Sh8KDGC1qF
 ---
 
 We have a proposal for the Storage Nodes Operators - let's work together and keep our network up to date to offer a great service to our Customers!
@@ -25,5 +26,3 @@ You can subscribe to the changelog thead on the forum to be updated!
 ### Other ways to check the version
 
 You can also track our GitHub repo: [Latest Releases](https://github.com/storj/storj/releases/latest) and [Docker Storage Node](https://hub.docker.com/r/storjlabs/storagenode).
----undefineddocId: CfmXIRjM5X5Sh8KDGC1qF
-description: You want to have the latest version to be a Cloud!

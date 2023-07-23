@@ -3,6 +3,7 @@ title: How do I redirect my logs to a file?
 slug: resources/faq/redirect-logs
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: EeyBBKEeuNK5oqkB4EyU0
 ---
 
 1\. To redirect the logs to a file, stop your Node:&#x20;
@@ -65,4 +66,3 @@ Or click the “Start” button in the Windows Services applet on “Storj V3 St
 :::
 ::::
 
----undefineddocId: EeyBBKEeuNK5oqkB4EyU0

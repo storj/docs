@@ -1,12 +1,12 @@
 ---
 title: Globus
-slug: how-to/globus-integration-guide
+slug: how-tos/globus-integration-guide
 description: Efficiently integrate Globus with Storj's S3 compatible storage via the Globus S3 Storage Gateway for seamless data transfer, large dataset management, and secure data sharing.
 createdAt: 2023-07-12T16:11:09.910Z
-updatedAt: 2023-07-18T18:05:21.648Z
+updatedAt: 2023-07-19T22:07:47.394Z
 docId: NHV1H2XZHxPHc8xeHiI8t
+slugAlias: dcs/how-to/globus-integration-guide
 pageTitle: Globus Integration Guide
-description: Efficiently integrate Globus with Storj's S3 compatible storage via the Globus S3 Storage Gateway for seamless data transfer, large dataset management, and secure data sharing.
 ---
 
 ## Integration guide for connecting Storj to Globus

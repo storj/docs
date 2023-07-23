@@ -3,6 +3,7 @@ title: Storage Node
 slug: setup/gui-windows/storage-node
 createdAt: 2022-08-31T23:11:26.000Z
 updatedAt: 2023-04-20T04:08:55.000Z
+docId: LAtWfg_LTgbI5yJ8PILUI
 ---
 
 ## Installing a Storage Node with the Windows Installer
@@ -71,4 +72,3 @@ The network-attached storage location could work, but it is neither supported no
 Note: The Storage node and auto updater are installed as a Windows service. If you want to stop or restart the storage node you have to open the windows service page to do so.&#x20;
 {% /callout %}
 
----undefineddocId: LAtWfg_LTgbI5yJ8PILUI

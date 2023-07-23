@@ -3,6 +3,7 @@ title: Step 5. Create an Identity
 slug: dependencies/identity
 createdAt: 2022-05-24T21:20:52.000Z
 updatedAt: 2023-06-30T04:44:54.157Z
+docId: aT6VAB297OWLd4vqeXxf5
 ---
 
 ## Before starting
@@ -15,7 +16,7 @@ updatedAt: 2023-06-30T04:44:54.157Z
 
 [](docId\:owZeAc56KSDnUzDhsBfB8)&#x20;
 
-{% callout type="warning"  %}
+{% callout type="warning"  %} 
 **Failure to complete these steps will prevent your storage node from working.**
 {% /callout %}
 
@@ -40,7 +41,7 @@ sudo mv identity /usr/local/bin/identity
 
 Raspberry PI:
 
-```shell
+```Text
 curl -L https://github.com/storj/storj/releases/latest/download/identity_linux_arm.zip -o identity_linux_arm.zip
 unzip -o identity_linux_arm.zip
 chmod +x identity
@@ -49,7 +50,7 @@ sudo mv identity /usr/local/bin/identity
 
 Devices Capable of the AARCH64 Instruction Set:
 
-```shell
+```Text
 curl -L https://github.com/storj/storj/releases/latest/download/identity_linux_arm64.zip -o identity_linux_arm64.zip
 unzip -o identity_linux_arm64.zip
 chmod +x identity
@@ -84,7 +85,7 @@ sudo mv identity /usr/local/bin/identity
 :::
 ::::
 
-{% callout type="info"  %}
+{% callout type="info"  %} 
 **This can take several hours or days, depending on your machines processing power and luck.**&#x20;
 
 Plan to run your Node on a NAS, Raspberry Pi or similar? Create your identity on a more powerful machine and transfer it over.
@@ -94,7 +95,7 @@ Plan to run your Node on a NAS, Raspberry Pi or similar? Create your identity on
 
 ::::tabs
 :::tab{label="Linux"}
-```shell
+```Text
 identity create storagenode
 ```
 
@@ -110,8 +111,7 @@ PowerShell:
 
 Command Prompt:
 
-```shell
-identity.exe authorize storagenode <email:characterstring>
+```text
 ```
 :::
 
@@ -174,8 +174,7 @@ Run the following command to confirm you have the required identity files:
 grep -c BEGIN ~/.local/share/storj/identity/storagenode/ca.cert
 ```
 
-```shell
-grep -c BEGIN ~/.local/share/storj/identity/storagenode/identity.cert
+```text
 ```
 :::
 
@@ -221,7 +220,7 @@ Might move your storage node to another machine in the future? Back up your iden
 
 ### 4. Backup the identity
 
-{% callout type="danger"  %}
+{% callout type="danger"  %} 
 **Backup before you continue, it should be quick! 🙏**
 
 This allows you to restore your Node in case of an unfortunate hardware or OS incident.
@@ -257,4 +256,3 @@ Unfortunately this trick will not help, if the disk would disappear while the st
 
 ###
 
----undefineddocId: aT6VAB297OWLd4vqeXxf5

@@ -2,7 +2,9 @@
 title: CLI Install
 slug: setup/cli
 createdAt: 2022-08-30T18:19:46.000Z
-updatedAt: 2023-03-03T08:39:20.000Z
+updatedAt: 2023-07-22T21:32:53.047Z
+docId: rz3s9lC3qAQHYSl37ngBN
+pageTitle: Docker
 ---
 
 ## Before starting
@@ -24,5 +26,3 @@ Failure to complete these steps will prevent your storage node from working.
 
 
 Now, Install [](docId\:EW9B_0fJujL3Z5aTLUW7d)&#x20;
----undefineddocId: rz3s9lC3qAQHYSl37ngBN
-pageTitle: Docker

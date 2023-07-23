@@ -4,6 +4,7 @@ slug: resources/faq/how-to-add-an-additional-drive
 description: Run multiple nodes
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: NX30Zzpr870-px_UDpHvu
 ---
 
 We recommend to run a new node, if you want to add an additional hard drive.
@@ -143,5 +144,3 @@ console.address: 127.0.0.1:14003
 ```
 
 3\. Save the `config.yaml` and restart the `storagenode` service (see [](docId\:Zh_lD6UPciHT53wOWuAoD)).
----undefineddocId: NX30Zzpr870-px_UDpHvu
-description: Run multiple nodes

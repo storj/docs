@@ -3,6 +3,7 @@ title: Where can I find the config.yaml?
 slug: resources/faq/where-can-i-find-a-config-yaml
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: gDXZgLlP_rcSW8SuflgqS
 ---
 
 :::::tabs
@@ -23,4 +24,3 @@ By default, the `config.yaml` will be created in the `"C:\Program Files\Storj
 :::
 :::::
 
----undefineddocId: gDXZgLlP_rcSW8SuflgqS

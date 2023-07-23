@@ -3,6 +3,7 @@ title: What if my machine restarts or shuts down?
 slug: resources/faq/machine-restart-shutdown
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: M-Yv2DFc-OFZ4r9Q8b8HY
 ---
 
 If you have properly mounted your hard drive (if on Linux, [](docId\:nZeFxmawYPdgkwUPy6f9s)), then your Node should start up again automatically after your machine has rebooted.&#x20;
@@ -20,4 +21,3 @@ Such failures should be attended to immediately as they can lead to the node get
 [Here are instructions on how to fix a malformed database disk image](https://support.storj.io/hc/en-us/articles/360029309111-How-to-fix-a-database-disk-image-is-malformed-). If the database is not recognized ("file is not a database"), recovery of this database will be impossible, and you will need to [recreate it](https://support.storj.io/hc/en-us/articles/4403032417044-How-to-fix-database-file-is-not-a-database-error).
 
 If you need assistance, please ask on our [forum](https://forum.storj.io/c/sno-category).
----undefineddocId: M-Yv2DFc-OFZ4r9Q8b8HY

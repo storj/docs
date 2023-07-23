@@ -3,6 +3,7 @@ title: How do I migrate my node to a new device?
 slug: resources/faq/migrate-my-node
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-05-04T03:01:13.000Z
+docId: jEntWNvi2M6Eo74NICIJg
 ---
 
 To migrate your Node to a new drive or computer, you first need to copy both the contents of your storage folder, as well as your identity folder to the new location.
@@ -139,4 +140,3 @@ The network-attached storage location could work, but it is neither supported no
 Please, note - we intentionally specified`/mnt/storj2/storagenode-new` as the data source in the `--mount` parameter and not `/mnt/storj2/storagenode-new/storage` because the `storagenode` docker container will add a subfolder called`storage` to the path automatically. So please, make sure that your data folder contains a `storage` subfolder with all the data inside (`blobs` folder, database files, etc.), otherwise the node will start from scratch since it can't find the data in the right subfolder and will be disqualified in a few hours.
 {% /callout %}
 
----undefineddocId: jEntWNvi2M6Eo74NICIJg

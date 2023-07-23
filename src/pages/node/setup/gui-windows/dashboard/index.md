@@ -3,6 +3,8 @@ title: Dashboard Windows
 slug: setup/gui-windows/dashboard
 createdAt: 2022-05-24T21:18:52.000Z
 updatedAt: 2023-03-03T08:30:27.000Z
+docId: 3k4V1HFunDWHVso9b1Xt9
+pageTitle: Dashboard
 ---
 
 ## Introduction
@@ -31,5 +33,3 @@ http://<your-nodes-local-ip>:14002/
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/bzDqQXIjDew3HgO7XD1ly_image.png)
 
----undefineddocId: 3k4V1HFunDWHVso9b1Xt9
-pageTitle: Dashboard

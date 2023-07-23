@@ -2,7 +2,8 @@
 title: Docker
 slug: setup/cli/docker
 createdAt: 2022-09-02T19:02:32.000Z
-updatedAt: 2023-03-03T08:39:39.000Z
+updatedAt: 2023-07-22T21:33:09.664Z
+docId: EW9B_0fJujL3Z5aTLUW7d
 ---
 
 ## Install Docker
@@ -54,4 +55,3 @@ All newer versions for Hyper-V have various issues, such as losing network conne
 
 Now, set up the [](docId\:HaDkV_0aWg9OJoBe53o-J).
 
----undefineddocId: EW9B_0fJujL3Z5aTLUW7d

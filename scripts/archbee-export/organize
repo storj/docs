@@ -15,17 +15,17 @@ OptionParser.new do |opts|
   opts.on('-d', '--directory DIRECTORY', 'Directory to rename files in') do |dir|
     options[:directory] = dir
   end
-  opts.on('-s', '--sitemap FILE', 'sitemap') do |dir|
-    options[:sitemap] = dir
+  opts.on('-s', '--space SPACE', 'space ') do |dir|
+    options[:space] = dir
   end
 end.parse!
 
 directory = options[:directory] || '.'
-raise "--sitemap flag required" unless options[:sitemap]
-sitemap = options[:sitemap]
+raise "--space flag required" unless options[:space]
+space = options[:space]
 
 # 1. Parse sitemap.xml to get all the URLs
-sitemap = File.open(sitemap) { |f| Nokogiri::XML(f) }
+sitemap = File.open("sitemap-#{space}.xml") { |f| Nokogiri::XML(f) }
 urls = sitemap.xpath('//xmlns:loc').map(&:text)
 
 # Create a map of paths to URLs for easy lookup
@@ -37,7 +37,7 @@ def read_frontmatter(content)
   "---\n#{frontmatter_match[1]}" if frontmatter_match
 end
 
-WEBSITE="https://docs.storj.io/dcs/"
+WEBSITE="https://docs.storj.io/#{space}/"
 new_dir = "#{directory}_o"
 FileUtils.mkdir_p(new_dir)
 # 2. Parse the frontmatter from each markdown file to get the slug

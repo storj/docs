@@ -3,6 +3,7 @@ title: Step 1. Understand Prerequisites
 slug: before-you-begin/prerequisites
 createdAt: 2022-05-24T20:53:36.000Z
 updatedAt: 2023-03-03T08:30:27.000Z
+docId: hbCGTv1ZLLR2-kpSaGEXw
 ---
 
 ## Hardware Requirements (Recommended)
@@ -99,4 +100,3 @@ Sign up <https://www.storj.io/node>
 Our software serves requests from the Internet, but not all software you may have installed is designed to be exposed to the Internet directly. This is especially true for users on Windows with applications responding to requests on all IPs.
 {% /callout %}
 
----undefineddocId: hbCGTv1ZLLR2-kpSaGEXw

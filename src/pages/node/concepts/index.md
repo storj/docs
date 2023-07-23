@@ -3,6 +3,7 @@ title: Concepts
 slug: KJzD-concepts
 createdAt: 2022-06-08T18:39:13.000Z
 updatedAt: 2023-04-03T19:13:49.000Z
+docId: KJzDdewgBVcK6rnp0Qho2
 ---
 
 ## Storage Node Concepts
@@ -32,4 +33,3 @@ Before running your Storage Node for the first time, please note the Storage Nod
 | **Uptime Checks**              | Uptime checks occur to make sure a Storage Node is still online. This is the percentage of uptime checks a Storage Node has passed.                                                                                                                                                                                                                                                                                                                                                                           |
 | **Audit Checks**               | Audit checks occur to make sure the data sent to a Storage Node is still held on the node and intact. This is the audit score, represented as a percentage. With a score, less than 60% node will be disqualified.                                                                                                                                                                                                                                                                                            |
 
----undefineddocId: KJzDdewgBVcK6rnp0Qho2

@@ -3,6 +3,7 @@ title: How to migrate the Windows GUI node from one physical location to another
 slug: resources/faq/migrate-my-node/how-to-migrate-the-windows-gui-node-from-a-one-physical-location-to-other
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-05-04T03:11:48.000Z
+docId: NGHe10jmn-kdgzTf3FUz0
 ---
 
 To be able to move an existing node to a different physical location (different PC) we should transfer both the node's identity and the data. It is neither sufficient to only migrate the identity nor to only move the data to the new location, we need to do both.
@@ -80,4 +81,3 @@ Depending on what type of data transfer you have selected, you can transfer the 
 Unfortunately, most of these services will require you to first stop the source node while you transfer the data, in which case you should not run it again.
 
 If your node would be offline to much (more than 288 hours) it can be suspended and if it would be offline more than 30 days it can be disqualified. So, you should try to bring your node online again as soon as possible.
----undefineddocId: NGHe10jmn-kdgzTf3FUz0

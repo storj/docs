@@ -3,6 +3,7 @@ title: How do I check my node when I'm away from my machine?
 slug: resources/faq/check-my-node
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: pueo_P_wgMERT0DdEn2pr
 ---
 
 In a future update, we'll have e-mail notifications for when your Node goes down. Until then, a great way to stay updated with your Node's status is to use [UptimeRobot](https://uptimerobot.com).&#x20;
@@ -25,4 +26,3 @@ You will now receive e-mail alerts when the port closes or opens. You can view m
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/GEXUX8KNxPBnex51dtO2n_image.png)
 
----undefineddocId: pueo_P_wgMERT0DdEn2pr

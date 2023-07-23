@@ -3,6 +3,7 @@ title: Payout
 slug: dependencies/storage-node-operator-payout-information
 createdAt: 2022-05-24T21:21:40.000Z
 updatedAt: 2023-04-03T19:13:52.000Z
+docId: DVKqtMtnBdZ99gFRWCojP
 ---
 
 ## Introduction
@@ -80,4 +81,3 @@ Always control your private keys to your wallet.
 {% /callout %}
 
 While it may be convenient to use an exchange address for your storage node payout, it's always safest to use an address for which you control the private keys.  If you opt to use zkSync, you definitely want to use an address for which you control the private keys. Withdrawing your funds from zkSync is designed for use with wallets for which you control the private keys. If you use an address from an exchange or for which you otherwise don't have the private keys, you will be required to trigger an emergency withdrawal process, and this will be significantly more costly for you.
----undefineddocId: DVKqtMtnBdZ99gFRWCojP

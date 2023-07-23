@@ -6,7 +6,6 @@ createdAt: 2023-01-24T16:33:16.000Z
 updatedAt: 2023-07-19T18:26:43.929Z
 docId: _TbcS1aJ44twHRve9UDPy
 pageTitle: How to use Storj with Hugging Face
-description: A walk-through of how to use Storj with Hugging Face cloud storage APIs. Examples of how to transfer, save, and load datasets. 
 ---
 
 [Hugging Face](https://huggingface.co/) (🤗 ) is a platform that allows developers to train and deploy open-source AI models. It's similar to GitHub in providing a space for developers to code and deploy AI applications, including language models, transformers, text2image, and more. &#x20;

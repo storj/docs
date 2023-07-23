@@ -3,6 +3,7 @@ title: Linux Configuration for UDP
 slug: dependencies/quic-requirements/linux-configuration-for-udp
 createdAt: 2022-09-14T23:08:36.000Z
 updatedAt: 2023-03-25T04:16:57.000Z
+docId: uIbtSLgN6Ug86rBvFZQOB
 ---
 
 If you are running your node on Linux, you might see warnings about the receive buffer size.
@@ -27,4 +28,3 @@ sysctl -w net.core.rmem_max=2500000
 
 Reference: [udp receive buffer size in quic-go](https://github.com/lucas-clemente/quic-go/wiki/UDP-Receive-Buffer-Size)
 
----undefineddocId: uIbtSLgN6Ug86rBvFZQOB

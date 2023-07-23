@@ -3,21 +3,21 @@ title: Migrate from Wasabi to Storj
 slug: how-tos/migrate-from-wasabi-to-storj
 description: Learn how to smoothly migrate from Wasabi to Storj using the rclone tool. Our comprehensive guide offers step-by-step instructions to securely transfer your data between these cloud storage providers, ensuring data integrity and cost-efficiency.
 createdAt: 2023-06-30T18:08:04.938Z
-updatedAt: 2023-07-05T21:42:02.125Z
+updatedAt: 2023-07-20T21:29:46.774Z
 docId: FQTEKVgNNJBpZwe2hT7LH
 pageTitle: How to migrate from Wasabi to Storj
-description: Learn how to smoothly migrate from Wasabi to Storj using the rclone tool. Our comprehensive guide offers step-by-step instructions to securely transfer your data between these cloud storage providers, ensuring data integrity and cost-efficiency.
 ---
 
 This article will discuss the migration process from Wasabi to Storj using the rclone tool, a command-line program to manage files on cloud storage.
 
-For a cost comparision between Wasabi and Storj see <https://www.storj.io/landing/wasabi-comparison>.
+For a cost comparison between Wasabi and Storj, see <https://www.storj.io/landing/wasabi-comparison>.
 
 ## Prerequisites
 
 Before starting the migration process, you'll need to have the following:
 
-1.  Access to both your Wasabi and Storj accounts.
+1.  Access to both your Wasabi and Storj accounts.&#x20;
+    *   Navigate to <https://us1.storj.io/signup?partner=rclone> to sign up or log in to an existing Storj account.
 
 2.  Installed and configured rclone on your machine.
 
@@ -27,11 +27,11 @@ Rclone is a command-line program written in Go language, which is designed to sy
 
 ## Install rclone
 
-Visit <https://rclone.org/install/> for instructions on how to install rclone
+Visit <https://rclone.org/install/> for instructions on how to install rclone.
 
 ## Create Access Credentials
 
-Before we can use rclone, we'll need to create access and secret key for Wasabi and an access grant for Storj.
+Before using rclone, we'll need to create access and a secret key for Wasabi and an access grant for Storj.
 
 ### Wasabi Access and Secret Key
 
@@ -126,7 +126,7 @@ Edit `~/.config/rclone/rclone.conf` with the access keys created above and the v
 
 **Wasabi:**
 
-*   **\[wasabi]**: This is the section name for the configuation.
+*   **\[wasabi]**: This is the section name for the configuration.
 
 *   **type = s3**: This refers to the type of storage you are interacting with, in this case 's3' for Simple Storage Service, a type of cloud storage.
 
@@ -142,7 +142,7 @@ Edit `~/.config/rclone/rclone.conf` with the access keys created above and the v
 
 **Storj:**
 
-*   **\[storj]**: This is the section name for the configuation.
+*   **\[storj]**: This is the section name for the configuration.
 
 *   **type = storj**: This indicates that the type of storage is Storj.
 
@@ -186,7 +186,7 @@ After migration, validate the data integrity in your Storj bucket by running `rc
 rclone check wasabi:my-wasabi-bucket storj:my-wasabi-bucket
 ```
 
-This command will compare source (Wasabi) and destination (Storj) and report any discrepancies.
+This command will compare the source (Wasabi) and destination (Storj) and report any discrepancies.
 
 
 You can also see the contents of your Wasabi bucket in the Storj Web Console.

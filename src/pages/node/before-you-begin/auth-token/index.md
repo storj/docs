@@ -3,6 +3,7 @@ title: Step 2. Get an Authorization Token
 slug: before-you-begin/auth-token
 createdAt: 2022-05-24T20:53:36.000Z
 updatedAt: 2023-03-03T08:30:27.000Z
+docId: v-fUvPqySvUwTMF-od6hD
 ---
 
 ## Before starting
@@ -24,4 +25,3 @@ If you do not have an authorization token yet,  [**sign up to Hosting a node.**]
 {% /callout %}
 
 By using your authorization token, you agree to the [Storage Node Operator Terms and Conditions](https://storj.io/storj-operator-terms).
----undefineddocId: v-fUvPqySvUwTMF-od6hD

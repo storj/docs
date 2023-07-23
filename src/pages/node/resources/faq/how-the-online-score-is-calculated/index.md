@@ -3,6 +3,7 @@ title: How is the online score calculated?
 slug: resources/faq/how-the-online-score-is-calculated
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: p7qPegEKWZtjlC0fKCRB7
 ---
 
 The implementation matches the design doc here: [Storage Node Downtime Tracking with Audits](https://github.com/storj/storj/blob/c2a97aeb143791dd7edd8bea5bb43558a95b57de/docs/blueprints/storage-node-downtime-tracking-with-audits.md).
@@ -16,4 +17,3 @@ So in one 12-hour window, if a storage node gets 1 offline audit and 10 total au
 The `online_score` is reported back to nodes not immediately but with some delay (up to 12 hours), so it may not drop until long after the downtime happened.
 
 For a more detailed description of the downtime tracking calculations, please refer to this [blueprint](https://github.com/storj/storj/blob/c2a97aeb143791dd7edd8bea5bb43558a95b57de/docs/blueprints/storage-node-downtime-tracking-with-audits.md).
----undefineddocId: p7qPegEKWZtjlC0fKCRB7

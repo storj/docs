@@ -2,12 +2,12 @@
 title: Unitrends
 slug: how-tos/unitrends-integration-guide
 createdAt: 2023-01-04T14:50:10.000Z
-updatedAt: 2023-03-09T18:52:50.000Z
+updatedAt: 2023-07-20T21:37:20.088Z
 docId: hUGykcHCQO4pRDRHaIxQX
 pageTitle: Unitrends Integration Guide
 ---
 
-Unitrends provides backup appliances, backup software, and cloud data protection that leverage cutting edge technology to automate manual tasks, eliminate management complexity, and deliver tested hardware and software resilience. The Unitrends backup software identifies and resolves software issues that threaten backup and recovery before they happen. Unitrends backup appliances help IT administrators save more time on data backups. Its** **intuitive management console lets you quickly and easily search, filter, manage and recover thousands of backups.
+Unitrends provides backup appliances, backup software, and cloud data protection that leverage cutting-edge technology to automate manual tasks, eliminate management complexity, and deliver tested hardware and software resilience. The Unitrends backup software identifies and resolves software issues that threaten backup and recovery before they happen. Unitrends backup appliances help IT administrators save more time on data backups. Its** **intuitive management console lets you quickly and easily search, filter, manage, and recover thousands of backups.
 
 Find more information on the [Unitrends website](https://www.unitrends.com/products). Request a [free trial](https://www.unitrends.com/confirm/free-trial) of Unitrends, as well.
 
@@ -15,21 +15,21 @@ Find more information on the [Unitrends website](https://www.unitrends.com/produ
 
 *   Unitrends provides ultra-low-cost secondary cloud storage and aligns storage costs with data value.
 
-*   Unitrends backup provides a simple, centralized management hub that acts as a command center  for data storage and recovery.
+*   Unitrends backup provides a simple, centralized management hub that acts as a command center for data storage and recovery.
 
-*   Unitrends utilizes AI-based ransomware detection and predictive analytics to monitor data characteristics and alert administrators of ransomware attacks in real time.
+*   Unitrends utilizes AI-based ransomware detection and predictive analytics to monitor data characteristics and alert administrators of ransomware attacks in real-time.
 
 *   Security features in Unitrends allow users to meet compliance requirements.
 
 ## Integration
 
-To integrate Storj with Unitrends, you will need to create S3 credentials in Storj to be used for Unitrends. Those credentials will need to be added within the Unitrends appliance through their web-based interfae.
+To integrate Storj with Unitrends, you will need to create S3 credentials in Storj to be used for Unitrends. Those credentials will need to be added within the Unitrends appliance through their web-based interface.
 
 ### Requirements
 
-*   An active Storj account
+*   An active Storj account. Navigate to <https://us1.storj.io/signup?partner=unitrends> to sign up, or log in to <https://storj.io/login> if you already have an account.
 
-*   A bucket for Unitrends in your Storj instance
+*   A bucket for Unitrends in your Storj instance.
 
 *   A Unitrends appliance
 

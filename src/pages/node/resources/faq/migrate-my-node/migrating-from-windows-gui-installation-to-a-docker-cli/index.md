@@ -3,6 +3,7 @@ title: Migrating from Windows GUI installation to Docker CLI
 slug: resources/faq/migrate-my-node/migrating-from-windows-gui-installation-to-a-docker-cli
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-05-04T03:07:22.000Z
+docId: 0hRbBFe-ESCkfSeIEQwCW
 ---
 
 ## Preparing the destination system
@@ -244,4 +245,3 @@ If you did not remove the Windows GUI storagenode instance, it could be automati
 
 Now you can run the storagenode container following this guide: [](docId\:HaDkV_0aWg9OJoBe53o-J).
 
----undefineddocId: 0hRbBFe-ESCkfSeIEQwCW

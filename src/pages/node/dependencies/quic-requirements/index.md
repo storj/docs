@@ -3,6 +3,7 @@ title: Step 4. Configure QUIC
 slug: dependencies/quic-requirements
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: owZeAc56KSDnUzDhsBfB8
 ---
 
 ## Before starting
@@ -58,4 +59,3 @@ Restart-Service storagenode
 
 
 
----undefineddocId: owZeAc56KSDnUzDhsBfB8

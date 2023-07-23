@@ -3,6 +3,7 @@ title: ZkSync Payments
 slug: dependencies/storage-node-operator-payout-information/zk-sync-opt-in-for-snos
 createdAt: 2022-05-24T21:21:40.000Z
 updatedAt: 2023-03-25T04:00:44.000Z
+docId: 6TX_ve1PyUrXuwax-mWWw
 ---
 
 ## Introduction
@@ -210,4 +211,3 @@ Currently, zkSync requires users to pay a one-time activation fee for registerin
 5\. Confirm sending by pressing the **Send to Ethereum** button. You should be able to verify the withdrawal transaction was successful in **History**.
 
 See also [Send Funds to Ethereum](https://zksync.io/faq/tutorials.html#send-funds-to-ethereum) for details.
----undefineddocId: 6TX_ve1PyUrXuwax-mWWw

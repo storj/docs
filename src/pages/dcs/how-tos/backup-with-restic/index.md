@@ -2,7 +2,7 @@
 title: Restic
 slug: how-tos/backup-with-restic
 createdAt: 2022-05-19T18:15:05.000Z
-updatedAt: 2023-03-03T08:30:09.000Z
+updatedAt: 2023-07-20T21:31:49.561Z
 docId: 5_zxVAqCUku5pVX0OTwSW
 ---
 
@@ -20,7 +20,7 @@ This guide is experimental. The main functionality appears to work, but there ar
 
 ## Before you begin
 
-If you haven't yet, [create a Storj DCS account](https://www.storj.io/signup) before following the rest of the tutorial.
+If you haven't yet, [create a Storj DCS account](https://us1.storj.io/signup?partner=restic) before following the rest of the tutorial.
 
 You will need the following:
 
@@ -63,7 +63,7 @@ Now, enter a password for your repository.
 Remembering your password is important! If you lose it, you won’t be able to access data stored in the repository.
 {% /callout %}
 
-Repository data will be created directly at the specified bucket prefix e.g. `bucket/my-backup`.
+Repository data will be created directly at the specified bucket prefix e.g., `bucket/my-backup`.
 
 Now you are ready to do your first backup!
 

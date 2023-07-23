@@ -3,6 +3,7 @@ title: GUI Install - Windows
 slug: setup/gui-windows
 createdAt: 2022-05-24T21:18:52.000Z
 updatedAt: 2023-04-20T04:08:44.000Z
+docId: 5shJebpS3baWj6LDV5ANQ
 ---
 
 ## Before starting
@@ -24,4 +25,3 @@ Failure to complete these steps will prevent your storage node from working.
 
 
 Now, [](docId\:LAtWfg_LTgbI5yJ8PILUI).
----undefineddocId: 5shJebpS3baWj6LDV5ANQ

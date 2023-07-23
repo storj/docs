@@ -3,6 +3,7 @@ title: How does held back amount work?
 slug: resources/faq/held-back-amount
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: TPy59W2Kvxsj50ERIZ1hU
 ---
 
 The **held back amount (staked)** component provides a preferred way for Node Operators to exit the network.  This model optimizes liveliness by deterring Nodes to exit the network without transferring their pieces (thus limiting repair costs). Importantly, this strikes an equilibrium between a very low cost of entry for Nodes while also way to insulate against the cost of data repair.
@@ -25,4 +26,3 @@ The withholding function is structured with a tiered reduction in withholdings a
 
 The withholding model is designed to incentivize and reward both-long term reliable Storage Nodes as well as Nodes that, when they do choose to leave the network, exit in a way that is least damaging to the network.
 
----undefineddocId: TPy59W2Kvxsj50ERIZ1hU

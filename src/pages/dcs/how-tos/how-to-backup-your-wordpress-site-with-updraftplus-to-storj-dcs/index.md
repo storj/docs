@@ -2,7 +2,7 @@
 title: How to backup your WordPress site with UpdraftPlus to Storj DCS
 slug: how-tos/how-to-backup-your-wordpress-site-with-updraftplus-to-storj-dcs
 createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-03-03T08:36:11.000Z
+updatedAt: 2023-07-20T21:25:19.503Z
 docId: VzNAjuGSXXvsIh-mfhKVr
 ---
 
@@ -14,11 +14,11 @@ To download, install and activate the UpdraftPlus plugin, please follow their gu
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/W1rX6ZdrsYO76Yy5AuhIm_wordpress.png)
 
-We will continue with configuring the UpdraftPlus plugin after we have created the Gateway MT credentials.
+We will continue configuring the UpdraftPlus plugin after we have created the Gateway MT credentials.
 
 ## Generate Gateway MT credentials
 
-Please sign in to your Storj DCS account and **Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
+Please sign in to your Storj DCS account **Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/BC_m93u0hx0LSTkrIlvAi_wordpress2.png)
 

@@ -2,7 +2,7 @@
 title: TrueNAS - iX Systems
 slug: how-tos/ix-systems-truenas-integration
 createdAt: 2022-11-03T17:24:48.000Z
-updatedAt: 2023-06-04T05:00:21.000Z
+updatedAt: 2023-07-20T21:34:27.102Z
 docId: ygezxeTPxu9ysDNPxY-WM
 slugAlias: dcs/ix-systems-truenas-integration
 pageTitle: iX Systems TrueNAS Integration
@@ -18,7 +18,7 @@ Using Storj with TrueNAS provides resilient cloud object storage with blazing pe
 
 2.  **Speed and simplicity **of on-site storage with the added protection of a back-up in the cloud.&#x20;
 
-3.  &#x20;it is also configurable in a variety of ways.
+3.  &#x20;It is also configurable in a variety of ways.
 
 ## Integration
 
@@ -26,7 +26,7 @@ This integration uses S3 credentials passed from Storj to TrueNAS. You will need
 
 ### Software Requirements 
 
-Storj if fully integrated with TrueNAS.
+Storj is fully integrated with TrueNAS.
 
 To integrate TrueNAS with Storj, you will need:
 
@@ -42,7 +42,7 @@ For more information about the iX Storj integration, see the [press release](htt
 
 ### Sign up for an account&#x20;
 
-Navigate to [https://ix.storj.io](https://ix.storj.io/) to sign up iX-Storj account. Enter your full name, email address, and a password, as shown below:
+Navigate to [<https://us1.storj.io/signup?partner=ixsystems>](https://ix.storj.io/) to sign up iX-Storj account. Enter your full name, email address, and a password, as shown below:
 
 {% callout type="warning"  %} 
 If you have an existing Storj account, you will need to contact support to have it linked to the iX Storj integration. See [here](https://forum.storj.io/t/truenas-backups-and-differences-between-storj-and-storj-ix/20044/7) for more information
@@ -169,7 +169,7 @@ To complete the integration, you will need the S3 credentials created in the pre
 
 2\. In the ***Add Cloud Sync Task*** window, fill out the fields as follows:
 
-*   **Description**: your preferred description, e.g. "**Daily**".
+*   **Description**: your preferred description, e.g., "**Daily**".
 
 *   **Direction**: PUSH. This transfers data from TrueNAS to the cloud.
 
@@ -195,7 +195,7 @@ To complete the integration, you will need the S3 credentials created in the pre
 
 ## Success!
 
-While the tasks is running, an orange "RUNNING" label will appear in the task entry. Once the task completes, it will return to a green "SUCCESS" tag.
+While the tasks are running, an orange "RUNNING" label will appear in the task entry. Once the task completes, it will return to a green "SUCCESS" tag.
 
 You can now check on the file sync. The TrueNAS bucket in Storj should contain the contents of the folder you had uploaded.
 

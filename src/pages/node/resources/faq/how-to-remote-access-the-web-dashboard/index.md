@@ -3,6 +3,7 @@ title: How to remote access the web dashboard
 slug: resources/faq/how-to-remote-access-the-web-dashboard
 createdAt: 2022-07-29T20:16:45.000Z
 updatedAt: 2023-03-03T08:35:46.000Z
+docId: mZulkrp1H1Igv1BBTPsTC
 ---
 
 ## Enable the web dashboard for your setup
@@ -435,4 +436,3 @@ Now check your connection: try to connect from your ssh client again, it should 
 To add more security you can install applications such as `fail2ban` to your Linux or macOS server.
 
 Now, you can make a port forwarding rule on your router for the `22` TCP port (default ssh port) to your ssh server. For more security we recommend to forward an unusual port to the 22 port of the PC with ssh.
----undefineddocId: mZulkrp1H1Igv1BBTPsTC

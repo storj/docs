@@ -5,7 +5,6 @@ description: Learn to build a completely decentralized, fast video content deliv
 createdAt: 2023-02-28T20:39:08.000Z
 updatedAt: 2023-02-28T22:58:50.000Z
 docId: S-xrhs_X1YHLh4CmwOt2T
-description: Learn to build a completely decentralized, fast video content delivery service. With over tens of thousands of Storj nodes around the world, see how simple it can be to remove your reliance on centralized providers.
 ---
 
 Learn to build a completely decentralized, **fast** video content delivery service. With over tens of thousands of Storj nodes around the world, see how simple it can be to remove your reliance on centralized providers. Gain a solid understanding of the steps required to host video files from Storj (an object storage provider) and transcode them with the Livepeer API.

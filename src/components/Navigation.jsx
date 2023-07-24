@@ -5,14 +5,14 @@ import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 
 function NavLink({ title, href, current, root, disclosure }) {
-  let padding = 'pl-9'
+  let padding = 'pl-6'
   if (root) {
-    padding = 'pl-5'
+    padding = 'pl-4'
   }
   if (root && disclosure) {
     padding = 'pl-0'
   } else if (disclosure) {
-    padding = 'pl-1'
+    padding = 'pl-0'
   }
 
   return (
@@ -21,7 +21,7 @@ function NavLink({ title, href, current, root, disclosure }) {
       className={clsx(
         `${
           root && disclosure ? 'font-semibold ' : 'block'
-        } w-full ${padding} truncate py-0.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
+        } w-full ${padding} truncate py-0.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:z-10 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
         current
           ? `font-semibold text-storj-blue-700 ${
               root || disclosure ? '' : 'before:bg-storj-blue-700'
@@ -57,13 +57,13 @@ function NavItem({ item, root }) {
     <Disclosure
       defaultOpen={router.pathname.includes(item.type)}
       as="div"
-      className={root ? '' : 'ml-3'}
+      className={`${root ? '' : 'ml-2'}`}
     >
       {({ open }) => (
         <>
           <Disclosure.Button
             className={clsx(
-              'flex w-full items-center gap-x-1 rounded-md py-0.5 pr-2 text-left text-sm leading-none text-gray-700'
+              'flex w-full items-center gap-x-1 rounded-md py-0.5 text-left text-sm leading-none text-gray-700'
             )}
           >
             <ChevronRightIcon
@@ -74,7 +74,7 @@ function NavItem({ item, root }) {
                       'text-storj-blue-700'
                     }`
                   : 'text-gray-500',
-                'h-4 w-4 shrink-0'
+                'z-30 -ml-1.5 h-4 w-4 shrink-0'
               )}
               aria-hidden="true"
             />
@@ -107,7 +107,7 @@ function NavItem({ item, root }) {
           >
             <Disclosure.Panel
               as="ul"
-              className="ml-2 mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200"
+              className=" mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200"
             >
               {item.links.map((subItem) => (
                 <li key={subItem.type + subItem.title} className="relative">

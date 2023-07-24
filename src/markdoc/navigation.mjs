@@ -90,6 +90,7 @@ export default function (nextConfig = {}) {
 
             let dcs = walkDir(`${pagesDir}/dcs`, 'dcs')
             let node = walkDir(`${pagesDir}/node`, 'node')
+            // TODO just calculate the next and prev when making the page
             let dcsBottomNav = extractHrefObjects(structuredClone(dcs))
             let nodeBottomNav = extractHrefObjects(structuredClone(node))
 

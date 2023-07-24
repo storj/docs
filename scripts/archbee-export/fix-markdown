@@ -12,6 +12,17 @@ markdown_files.each do |filename|
   converted_content = content.gsub(/:::hint\{type=\"(.*?)\"\}(.*?):::/m, '{% callout type="\1"  %} \2{% /callout %}')
   converted_content = converted_content.gsub(/:::codeblocktabs(.*?):::/m, '{% code-group %}\1{% /code-group %}')
 
+  while tabs_prefix = converted_content.match(/(:+)tabs/)&.[](1)
+    if tabs_prefix
+      converted_content = converted_content.gsub(/^#{tabs_prefix}tabs(.*?)^#{tabs_prefix}$/m, '{% tabs %}\1{% /tabs %}')
+    end
+    tab_prefix = converted_content.match(/(:+)tab/)&.[](1)
+    puts "tab_prefix #{tab_prefix}"
+    if tab_prefix
+      converted_content = converted_content.gsub(/^#{tab_prefix}tab\{label=\"(.*?)\"\}(.*?)^#{tab_prefix}$/m, '{% tab label="\1" %}\2{% /tab %}')
+    end
+  end
+
 
   File.open(filename, 'w') do |file|
     file.puts converted_content

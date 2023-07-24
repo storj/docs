@@ -98,6 +98,7 @@ function useTableOfContents(tableOfContents) {
         let top = window.scrollY + el.getBoundingClientRect().top - scrollMt
         return { id, top }
       })
+      .filter((value) => value !== undefined)
   }, [])
 
   useEffect(() => {

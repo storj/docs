@@ -31,7 +31,7 @@ function collectHeadings(nodes, slugify = slugifyWithCounter()) {
         if (node.name === 'h3') {
           if (!sections[sections.length - 1]) {
             throw new Error(
-              'Cannot add `h3` to table of contents without a preceding `h2`'
+              `Cannot add \`h3\` to table of contents without a preceding \`h2\`\n ${title}`
             )
           }
           sections[sections.length - 1].children.push({

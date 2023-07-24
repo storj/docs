@@ -1,5 +1,8 @@
+import { Tag } from '@markdoc/markdoc'
+
 import { Callout } from '@/components/Callout'
 import { CodeGroup } from '@/components/Code'
+import { Tabs, Tab } from '@/components/Tabs'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
 
 const tags = {
@@ -29,6 +32,26 @@ const tags = {
         <figcaption>{caption}</figcaption>
       </figure>
     ),
+  },
+  tabs: {
+    render: Tabs,
+    attributes: {},
+    transform(node, config) {
+      const labels = node
+        .transformChildren(config)
+        .filter((child) => child && child.name === 'Tab')
+        .map((tab) => (typeof tab === 'object' ? tab.attributes.label : null))
+
+      return new Tag(this.render, { labels }, node.transformChildren(config))
+    },
+  },
+  tab: {
+    render: Tab,
+    attributes: {
+      label: {
+        type: String,
+      },
+    },
   },
   'code-group': {
     render: CodeGroup,

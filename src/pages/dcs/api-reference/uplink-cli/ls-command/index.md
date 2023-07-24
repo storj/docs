@@ -61,7 +61,7 @@ uplink ls
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/37CrYbSUci3Pdlh1QcuwW_ls-project.png)
 
-### List objects in a bucket
+## List objects in a bucket
 
 {% code-group %}
 ```windows

@@ -21,7 +21,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Install uplink
+## Install uplink
 
 Storj has an [](docId\:LueFgrbZ9rJbWtDMXhIWZ) that can be used familiar tools such aws-cli, but it has some limitations such that it uses a gateway to communicate to the global network. In order to communicate directly with Storage Nodes we'll be using Storj's `uplink` tool.
 

@@ -8,8 +8,8 @@ docId: O68S24Iww4ZEnVk8yO7Mv
 
 You can look at your logs to see if you have some errors indicating that something is not functioning properly:
 
-::::tabs
-:::tab{label="CLI Install"}
+{% tabs %}
+{% tab label="CLI Install" %}
 ```linux
 docker logs storagenode
 ```
@@ -30,9 +30,9 @@ Get-Content "pathtologfile" -Tail 20 -Wait
 
 For CLI Linux and MacOS install, if you have redirected your logs to a file, please use your preferred editor to view the contents of the log file.
 
-:::
+{% /tab %}
 
-:::tab{label="GUI Windows Install"}
+{% tab label="GUI Windows Install" %}
 From PowerShell, to see the last 20 lines of the log:
 
 ```powershell
@@ -48,6 +48,6 @@ Get-Content "pathtologfile" -Tail 20 -Wait
 ```
 
 
-:::
-::::
+{% /tab %}
+{% /tabs %}
 

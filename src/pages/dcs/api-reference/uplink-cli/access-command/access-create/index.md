@@ -46,7 +46,7 @@ uplink access create [flags]
 
 ## Examples
 
-### Create an Access Grant without prompts
+## Create an Access Grant without prompts
 
 As result it will print the created access grant to `stdout`.
 

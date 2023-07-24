@@ -60,7 +60,7 @@ Date: Wed, 20 Oct 2020 05:56:29 GMT
 
 Since there are no `Cache-Control` headers in this example, the default cache of 1 hour will be applied.
 
-### Advanced Cache Control
+## Advanced Cache Control
 
 Fastly also has documentation on how different objects are cached. You can find more information in their [cache freshness docs](https://developer.fastly.com/learning/concepts/cache-freshness/).
 

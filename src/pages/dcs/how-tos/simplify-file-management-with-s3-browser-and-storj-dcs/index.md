@@ -42,7 +42,7 @@ Some stats for the S3 Browser Download:&#x20;
 There is no option to download S3 Browser via CLI
 {% /callout %}
 
-### Generate Credentials to the Gateway MT
+## Generate Credentials to the Gateway MT
 
 Users interested in accessing their Storj DCS bucket(s) via S3 Browser can do so via the hosted AWS multitenant gateway known as Gateway MT. This backward-compatible hosted gateway is one of the most versatile ways to get up and running with Storj DCS when using platforms such as S3 Browser or other file manager platforms that support Storj DCS.
 

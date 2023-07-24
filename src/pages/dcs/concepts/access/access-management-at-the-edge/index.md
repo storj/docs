@@ -24,7 +24,7 @@ If a hacker wants to obtain a complete object, they need to find at least 29 Nod
 
 Just storing data on Storj DCS provides significant improvements over centralized data storage in terms of reducing threat surfaces and exposure to a variety of common attack vectors. But when it comes to sharing access to data—especially highly sensitive data—developers really experience the advantages of our platform. Where we’re already seeing the most interest from partners on the combination of end-to-end encryption and the access management capabilities of our API Keys.
 
-### Separating Access and Encryption
+## Separating Access and Encryption
 
 One of the great things about Storj DCS is that it separates the encryption function from the access management capabilities of the API Keys, allowing both to be managed 100% client-side. From a developer perspective, managing those two constructs is easy because all of the complexity is abstracted down to a few simple commands. What this enables developers to do is move access management from a centralized server to the edge.
 

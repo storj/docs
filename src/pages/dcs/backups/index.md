@@ -10,37 +10,37 @@ Developers have a wide variety of toolchains, from operating systems to code qua
 
 # Main Guides&#x20;
 
-::::link-array
-:::link-array-item{headerType="COLOR" headerColor="#dbeeff"}
+{% quick-links %}
+{% quick-link %}
 [](docId:3gNhGvPOi3DFDya6NyVb0)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerType="COLOR" headerColor="#dbeeff"}
+{% quick-link %}
 [](docId\:y-G_lQNpFO15OPh_cevQM)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerType="COLOR" headerColor="#dbeeff"}
+{% quick-link %}
 [](docId:-qeCzVrbZxM-Wz6P5SQbZ)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerType="COLOR" headerColor="#dbeeff"}
+{% quick-link %}
 [](docId\:fFkBYzSTI_0eLD8aohftm)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerType="COLOR" headerColor="#dbeeff"}
+{% quick-link %}
 &#x20;[](docId:5_zxVAqCUku5pVX0OTwSW)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerType="COLOR" headerColor="#dbeeff"}
+{% quick-link %}
 [](docId\:VzNAjuGSXXvsIh-mfhKVr)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerType="COLOR" headerColor="#dbeeff"}
+{% quick-link %}
 [](docId\:VzNAjuGSXXvsIh-mfhKVr)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerType="COLOR" headerColor="#dbeeff"}
+{% quick-link %}
 [](docId\:ayERoOc0hFWpUG-cCjq1f)&#x20;
-:::
-::::
+{% /quick-link %}
+{% /quick-links %}
 

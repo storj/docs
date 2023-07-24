@@ -54,7 +54,7 @@ Output:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/zb6IxHgf6VxL2NIRb4J9F_rb-empty-bucket.png)
 
-### Delete bucket and all the objects it contains
+## Delete bucket and all the objects it contains
 
 {% code-group %}
 ```windows

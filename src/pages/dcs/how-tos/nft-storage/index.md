@@ -46,7 +46,7 @@ An NFT is just a registration of ownership - for digital objects, owners need a 
 
 OpenSea is an open marketplace and developer toolkit for NFTs. NFTs are blockchain tokens associated with a cryptographic keypair to represent ownership of unique items.
 
-### What are NFTs?
+## What are NFTs?
 
 NFT contracts such as ERC721 and ERC1155, let us tokenize things like art, collectibles, and even real estate. They can only have one official owner at a time and, in case of ERC721 and ERC1155, are secured by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
 

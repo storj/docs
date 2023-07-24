@@ -12,7 +12,7 @@ Host snapshots at reduced cost when spinning up new node.
 
 After [creating an account](https://www.storj.io/signup) on Storj DCS, you’ll need to setup the uplink cli.
 
-### Setup uplink CLI
+## Setup uplink CLI
 
 The uplink cli is a tool similar to aws cli that allows creation of buckets and uploading/downloading snapshots directly from the 15,000+ storage nodes. We also have an aws s3 compatible api as an alternative.
 

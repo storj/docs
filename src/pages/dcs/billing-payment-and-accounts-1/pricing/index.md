@@ -20,7 +20,7 @@ The Storj DCS service provides secure, private and reliable cloud object storage
 
 Static object storage is charged at $4 per terabyte per month, or $0.004 per gigabyte. Static object storage is calculated in “terabyte months,” which is a prorated calculation of how much storage is used throughout the month, broken down by hour. Storing one terabyte of data for 30 days, two terabytes of data for 15 days, or three terabytes of data for 10 days, would each be the equivalent of one terabyte month.
 
-### Download Bandwidth&#x20;
+## Download Bandwidth&#x20;
 
 Download bandwidth is charged at $7 per terabyte, or $0.007 per gigabyte of bandwidth consumed. There is no charge for ingress bandwidth, so uploading files to the network doesn’t incur any cost.&#x20;
 
@@ -50,17 +50,17 @@ Read more about [](docId\:Zrbz4XYhIOm99hhRShWHg) under Concepts.
 
 Understand more about our billing.
 
-::::link-array
-:::link-array-item{headerColor headerImage}
+{% quick-links %}
+{% quick-link %}
 📊
 
 [](docId:59T_2l7c1rvZVhI8p91VX)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerColor headerImage}
+{% quick-link %}
 💳
 
 [](docId:7U4_uu6Pzg6u2N6FpV9VE)&#x20;
-:::
-::::
+{% /quick-link %}
+{% /quick-links %}
 

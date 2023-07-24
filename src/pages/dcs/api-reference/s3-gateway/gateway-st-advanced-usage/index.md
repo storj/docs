@@ -23,25 +23,25 @@ accesses.site: 26NBm..... # the Access with name "site"
 
 You can see the path to the default config file `config.yaml` with this command:
 
-::::tabs
-:::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 ```Text
 ./gateway help
 ```
-:::
+{% /tab %}
 
-:::tab{label="Linux"}
+{% tab label="Linux" %}
 ```Text
 gateway help
 ```
-:::
+{% /tab %}
 
-:::tab{label="macOS"}
+{% tab label="macOS" %}
 ```Text
 gateway help
 ```
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
 ## Running options
 
@@ -53,8 +53,8 @@ gateway help
 
 You can run a gateway with specifying the access grant (or its name) with the option `--access`, for example:
 
-::::tabs
-:::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 ```Text
 ./gateway run --access 14aV....
 ```
@@ -64,9 +64,9 @@ or with the name of the access grant from your config (see [](docId\:SLxI54SPLjG
 ```Text
 ./gateway run --access site
 ```
-:::
+{% /tab %}
 
-:::tab{label="Linux"}
+{% tab label="Linux" %}
 ```Text
 gateway run --access 14aV....
 ```
@@ -76,9 +76,9 @@ or with name of the access grant from your config (see [](docId\:SLxI54SPLjGgjhR
 ```Text
 gateway run --access site
 ```
-:::
+{% /tab %}
 
-:::tab{label="macOS"}
+{% tab label="macOS" %}
 ```Text
 gateway run --access 14aV....
 ```
@@ -88,9 +88,9 @@ or with name of the access grant from your config (see [](docId\:SLxI54SPLjGgjhR
 ```Text
 gateway run --access site
 ```
-:::
+{% /tab %}
 
-:::tab{label="Docker"}
+{% tab label="Docker" %}
 ```Text
 docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access 14aV....
 ```
@@ -100,15 +100,15 @@ or with name of the access grant from your config (see [](docId\:SLxI54SPLjGgjhR
 ```Text
 docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access site
 ```
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
-### Running Gateway ST to host a static website
+## Running Gateway ST to host a static website
 
 You can also run a gateway to handle a bucket as a static website. Make sure to set [](docId\:SLxI54SPLjGgjhRWkKJdb).
 
-::::tabs
-:::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 ```Text
 ./gateway run --access 14aV.... --website
 ```
@@ -118,9 +118,9 @@ or with the name of the access grant from your config (see [](docId\:SLxI54SPLjG
 ```Text
 ./gateway run --access site --website
 ```
-:::
+{% /tab %}
 
-:::tab{label="Linux"}
+{% tab label="Linux" %}
 ```Text
 gateway run --access 14aV.... --website
 ```
@@ -130,9 +130,9 @@ or with name of the access grant from your config (see [](docId\:SLxI54SPLjGgjhR
 ```Text
 gateway run --access site --website
 ```
-:::
+{% /tab %}
 
-:::tab{label="macOS"}
+{% tab label="macOS" %}
 ```Text
 gateway run --access 14aV.... --website
 ```
@@ -142,9 +142,9 @@ or with name of the access grant from your config (see [](docId\:SLxI54SPLjGgjhR
 ```Text
 gateway run --access site --website
 ```
-:::
+{% /tab %}
 
-:::tab{label="Docker"}
+{% tab label="Docker" %}
 ```Text
 docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access 14aV.... --website
 ```
@@ -154,8 +154,8 @@ or with name of the access grant from your config (see [](docId\:SLxI54SPLjGgjhR
 ```Text
 docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access site --website
 ```
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
 Now you can navigate to <http://localhost:7777/site/> to see the bucket `site` as XML or to <http://localhost:7777/site/index.html> to see a static page, uploaded to the bucket `site`.
 
@@ -173,8 +173,8 @@ You can use the [Minio caching technology](https://docs.min.io/docs/minio-disk-c
 
 Export the environment variables before running the Gateway:
 
-::::tabs
-:::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 Cache disks are not supported, because caching requires the [`atime`](http://kerolasa.github.io/filetimes.html) function to be enabled.
 
 ```Text
@@ -185,9 +185,9 @@ $env:MINIO_CACHE_AFTER=3
 $env:MINIO_CACHE_WATERMARK_LOW=70
 $env:MINIO_CACHE_WATERMARK_HIGH=90
 ```
-:::
+{% /tab %}
 
-:::tab{label="Linux"}
+{% tab label="Linux" %}
 ```Text
 export MINIO_CACHE="on"
 export MINIO_CACHE_DRIVES="/mnt/drive1,/mnt/drive2,/mnt/cache{1...3}"
@@ -197,9 +197,9 @@ export MINIO_CACHE_AFTER=3
 export MINIO_CACHE_WATERMARK_LOW=70
 export MINIO_CACHE_WATERMARK_HIGH=90
 ```
-:::
+{% /tab %}
 
-:::tab{label="macOS"}
+{% tab label="macOS" %}
 ```Text
 export MINIO_CACHE="on"
 export MINIO_CACHE_DRIVES="/mnt/drive1,/mnt/drive2,/mnt/cache{1...3}"
@@ -209,9 +209,9 @@ export MINIO_CACHE_AFTER=3
 export MINIO_CACHE_WATERMARK_LOW=70
 export MINIO_CACHE_WATERMARK_HIGH=90
 ```
-:::
+{% /tab %}
 
-:::tab{label="Docker"}
+{% tab label="Docker" %}
 You can create a file with environment variables, for example - `minio_vars` with such content:
 
 ```Text
@@ -231,8 +231,8 @@ Then add parameters `--env-file ./minio_vars --mount type=bind,src=/mnt/drive1,d
 ```Text
 docker run -it --rm -p 127.0.0.1:7777:7777 --env-file ./minio_vars --mount type=bind,src=/mnt/drive1,dst=/mnt/drive1 --mount type=bind,src=/mnt/drive2,dst=/mnt/drive2 --mount type=bind,src=/mnt/cache1,dst=/mnt/cache1 --mount type=bind,src=/mnt/cache2,dst=/mnt/cache2 --mount type=bind,src=/mnt/cache3,dst=/mnt/cache3 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access site --website
 ```
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
 {% callout type="info"  %} 
 Setting `MINIO_BROWSER=off` env variable would disable the Minio browser. This would make sense if running the gateway as a static website in production.

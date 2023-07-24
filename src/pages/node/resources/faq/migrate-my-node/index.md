@@ -8,8 +8,8 @@ docId: jEntWNvi2M6Eo74NICIJg
 
 To migrate your Node to a new drive or computer, you first need to copy both the contents of your storage folder, as well as your identity folder to the new location.
 
-::::::tabs
-:::::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 Your default identity folder is located in: `%APPDATA%\Storj\Identity\storagenode`
 
 Your default orders folder is located in `"%ProgramFiles%\Storj\Storage Node\orders"`
@@ -24,39 +24,39 @@ Also, you can [enable WSL, install Ubuntu from the Microsoft store](https://docs
 
 
 
-::::link-array
-:::link-array-item{headerImage}
+{% quick-links %}
+{% quick-link %}
 💻
 
 [](docId\:PsB_5Yp43KeN0DszuE2DN)
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 ✍🏼
 
 [](docId\:aKZt7A92CnGjPy1JY1YpF)&#x20;
-:::
-::::
+{% /quick-link %}
+{% /quick-links %}
 
 
-:::::
+{% /tab %}
 
-:::tab{label="Linux"}
+{% tab label="Linux" %}
 Your default identity folder is located in: `~/.local/share/storj/identity/storagenode`
 
 Your default orders folder is located in the data location.
 
 &#x20;[](docId\:jEntWNvi2M6Eo74NICIJg)
-:::
+{% /tab %}
 
-:::tab{label="macOS"}
+{% tab label="macOS" %}
 Your default identity folder is located in: `"/Users/USER/Library/Application Support/Storj/identity/storagenode"`
 
 Your default orders folder is located in the data location.
 
 [](docId\:jEntWNvi2M6Eo74NICIJg)
-:::
-::::::
+{% /tab %}
+{% /tabs %}
 
 ## Migrating with rsync
 

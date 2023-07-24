@@ -24,21 +24,21 @@ As noted, Cyberduck supports Windows, macOS as well as Linux. Users can download
 
 For those who wish to download via CLI:
 
-### Windows
+## Windows
 
-::::tabs
-:::tab{label="GUI"}
+{% tabs %}
+{% tab label="GUI" %}
 ```Text
 choco install cyberduck
 ```
-:::
+{% /tab %}
 
-:::tab{label="CLI"}
+{% tab label="CLI" %}
 ```Text
 choco install duck
 ```
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
 *Requires Chocolatey. See other installation options to download the* *MSI installer for Windows.*
 

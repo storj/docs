@@ -25,7 +25,7 @@ Find more information on the [Unitrends website](https://www.unitrends.com/produ
 
 To integrate Storj with Unitrends, you will need to create S3 credentials in Storj to be used for Unitrends. Those credentials will need to be added within the Unitrends appliance through their web-based interface.
 
-### Requirements
+## Requirements
 
 *   An active Storj account. Navigate to <https://us1.storj.io/signup?partner=unitrends> to sign up, or log in to <https://storj.io/login> if you already have an account.
 

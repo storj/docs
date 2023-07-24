@@ -80,7 +80,7 @@ Please note that Storj does not know or store your encryption passphrase, so if 
 
 To download the latest release of FileZilla, navigate to <https://filezilla-project.org/download.php?show_all=1> and select the version appropriate for your operating system, then install FileZilla.
 
-### Creating a new Site
+## Creating a new Site
 
 Open the Site Manager by clicking on the leftmost icon.
 

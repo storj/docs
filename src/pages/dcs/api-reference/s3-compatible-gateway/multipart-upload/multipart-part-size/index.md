@@ -26,7 +26,7 @@ Each part is an integral portion of the data comprising the object. The object p
 
 All of these parts are broken into one or more Segments by the Storj DCS Gateway based on whether the Part Size is smaller or larger than the default Segment size. While Multipart Upload is most appropriate for files larger than the 64MB default Segment size, the Part Size is configurable in applications that use Multipart Upload.&#x20;
 
-### Configuration for the AWS CLI
+## Configuration for the AWS CLI
 
 If you are using the Amazon AWS CLI, you can configure it to use a larger part threshold as follows:
 

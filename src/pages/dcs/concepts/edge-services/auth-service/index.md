@@ -24,7 +24,7 @@ In all cases, the encryption key used to encrypt the Access Grants registered wi
 **Note:** The encryption information generated for use in conjunction with the Linksharing Service or S3-compatible gateway credentials follows the same hierarchically deterministic derived method as all [](docId\:XKib9SzjtEXTXWvdyYWX6) and the [](docId\:yI4q9JDB3w01xEkFWA4_z) is limited in scope to the level of access provided at the path-key or object-key as defined in the access Grant.All of the Edge Services use [](docId\:hf2uumViqYvS1oq8TYbeW).
 {% /callout %}
 
-### Secure Handling of Encryption Information
+## Secure Handling of Encryption Information
 
 Where customers elect to utilize [](docId\:hf2uumViqYvS1oq8TYbeW) in conjunction with Storj Edge Services, Storj Edge Services only hold customer encryption information during the duration of an operation but not longer. Such customer encryption information is stored encrypted at rest. This data is encrypted with a key given to the user that Storj does not keep. Without an encryption key, no one, including Storj, can access customer encrypted information. The user must provide this key as part of their operation authentication.
 

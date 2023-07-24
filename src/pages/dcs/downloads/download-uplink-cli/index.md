@@ -8,12 +8,13 @@ docId: hFL-goCWqrQMJPcTN82NB
 
 The native CLI tool for Storj DCS/OSP
 
-First, [](docId\:HeEf9wiMdlQx9ZdS_-oZS).&#x20;
+First, [](docId:HeEf9wiMdlQx9ZdS_-oZS).&#x20;
 
 **Install** the binary for your OS:
 
-::::tabs
-:::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
+
 ## Download the [Windows Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_windows_amd64.zip) zip file
 
 In the Downloads folder, right-click and select "Extract all"
@@ -24,17 +25,14 @@ Extract to your user's folder ("**Alexey"** in this example):
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/5VOWlcnwm4uurnq7IqooH_win-02.png)
 
-
-
 Once extracted, do not try to open the file, as it can only be accessed via command line.
 
-
-
 Open **Windows PowerShell** and continue on to the next step.
-:::
+{% /tab %}
 
-:::tab{label="Linux"}
-### AMD64
+{% tab label="Linux" %}
+
+## AMD64
 
 ### Curl Download
 
@@ -75,10 +73,11 @@ sudo install uplink /usr/local/bin/uplink
 ### Direct Download
 
 [Linux ARM64 Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_linux_arm64.zip)
-:::
+{% /tab %}
 
-:::tab{label="macOS"}
-### Curl Download
+{% tab label="macOS" %}
+
+## Curl Download
 
 ```Text
 curl -L https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip -o uplink_darwin_amd64.zip
@@ -90,10 +89,7 @@ sudo install uplink /usr/local/bin/uplink
 
 [macOS Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip)
 
+{% /tab %}
+{% /tabs %}
 
-:::
-::::
-
-
-
-Then, check [](docId\:TbMdOGCAXNWyPpQmH6EOq)&#x20;
+Then, check [](docId:TbMdOGCAXNWyPpQmH6EOq)&#x20;

@@ -36,25 +36,25 @@ This can take several hours or days, depending on your machine's processing powe
 
 Install the software that works best for you.
 
-::::link-array
-:::link-array-item{headerImage}
+{% quick-links %}
+{% quick-link %}
 ⌨️
 
 [](docId\:rz3s9lC3qAQHYSl37ngBN)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 🖥
 
 [](docId:5shJebpS3baWj6LDV5ANQ)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 🖥
 
 [](docId\:N-dnnf7HhHcOaavvXjplw)&#x20;
-:::
-::::
+{% /quick-link %}
+{% /quick-links %}
 
 
 

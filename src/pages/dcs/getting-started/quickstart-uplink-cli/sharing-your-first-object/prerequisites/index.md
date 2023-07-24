@@ -20,8 +20,8 @@ Go to storj.io, and [start for free](https://storj.io/signup).
 
 ## Step 2. Download and Install the binary for your OS
 
-::::tabs
-:::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 ## Download the [Windows Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_windows_amd64.zip) zip file&#xA;
 
 In the Downloads folder, right-click and select "Extract all"
@@ -39,10 +39,10 @@ Once extracted, do not try to open the file, as it can only be accessed via the 
 
 
 Open **Windows PowerShell** and continue on to the next step.
-:::
+{% /tab %}
 
-:::tab{label="Linux"}
-### AMD64
+{% tab label="Linux" %}
+## AMD64
 
 **Curl Download**
 
@@ -93,9 +93,9 @@ sudo install uplink /usr/local/bin/uplink
 [Linux ARM64 Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_linux_arm64.zip)
 
 
-:::
+{% /tab %}
 
-:::tab{label="macOS"}
+{% tab label="macOS" %}
 **Curl Download**
 
 ```shell
@@ -107,6 +107,6 @@ sudo install uplink /usr/local/bin/uplink
 **Direct Download**
 
 ****[macOS Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip)
-:::
-::::
+{% /tab %}
+{% /tabs %}
 

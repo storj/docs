@@ -57,7 +57,7 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or
 
 Now you are ready to configure AWS CLI.
 
-### Configure AWS CLI with your credentials
+## Configure AWS CLI with your credentials
 
 {% callout type="info"  %} 
 To continue make sure you have the AWS CLI installed on your machine.&#x20;

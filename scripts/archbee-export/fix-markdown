@@ -27,6 +27,7 @@ markdown_files.each do |filename|
     if tabs_prefix
       converted_content = converted_content.gsub(/^#{tabs_prefix}tabs(.*?)^#{tabs_prefix}$/m, '{% tabs %}\1{% /tabs %}')
     end
+    # have to loop here because the number of :'s is not consistent even when it's within a tabs...
     while tab_prefix = converted_content.match(/(:+)tab\{/)&.[](1)
       puts "tab_prefix #{tab_prefix}"
       if tab_prefix

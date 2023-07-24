@@ -72,63 +72,63 @@ What's more, developers can use the Satellite Admin Console web interface or the
 
 Developers have a wide range of choices for S3-compatible object storage, but Storj DCS provides a number of key advantages to help developers build more secure and private applications:
 
-::::link-array
-:::link-array-item{headerImage}
+{% quick-links %}
+{% quick-link %}
 **🛡&#x20;
 Security**
 
 Confidently store your data with files split, distributed, and stored multi-regionally across the globe providing no single point of failure, resistance to hacking, tampering, and bitrot, and an edge-based security model.
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 🔓
 
 **Privacy**
 
 Own your data with default encryption and user-assigned access grants so no one can view or compromise your data without permission.
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 🔌
 
 **Plug-in S3 Compatibility**
 
 Swap out a few lines of code, and you’ll be up and running in minutes.
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 ☁️
 
 **Availability**
 
 Download your data anytime you need it with multi-region architecture, no single point of failure, and satellite-automated data orchestration. No downtime, no bitrot, and no lost files.
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 🛠
 
 **Durability**
 
 Automate file repair and know that Reed-Solomon erasure coding enables the highest levels of durability for all files uploaded to Storj DCS.
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 💰
 
 **Cost Efficiency**
 
 Get high availability multi-region cloud object storage for a fraction of the price of a single availability zone from centralized providers like AWS.&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 📂
 
 **Open Source Freedom and Flexibility**
 
 Take advantage of absolute transparency through our open source code. You are not locked-in to our technology or cost structure - giving you the freedom of choice.
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 👨🏽‍💻
 
 **Developer Friendly**
@@ -136,14 +136,14 @@ Take advantage of absolute transparency through our open source code. You are no
 Take advantage of familiar development tools and robust technical documentation, tutorials, and videos to help get you started and leverage all the benefits of decentralized cloud object storage.
 
 ##
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 💬
 
 **Community Driven**
 
 Share, discuss and collaborate with other open source developers in the Storj DCS community and find answers to questions in our very active forum.
-:::
-::::
+{% /quick-link %}
+{% /quick-links %}
 

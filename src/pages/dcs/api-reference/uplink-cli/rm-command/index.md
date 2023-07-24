@@ -54,7 +54,7 @@ uplink rm sj://cakes/cheesecake.jpg
 ```
 {% /code-group %}
 
-### Delete an encrypted object
+## Delete an encrypted object
 
 If an object has been created with another encryption key, you won't be able to read it, but you can delete it. In order to delete an encrypted object, you have to know its encrypted path. To retrieve it, you can use the list command [](docId\:Df-CVmCCHmt6r3_c1PLn4)  with the encrypted file. For instance, to list the encrypted path of the objects in a bucket `sj://cakes` you could use:
 

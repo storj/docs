@@ -44,7 +44,7 @@ To begin, you will need to create a Storj account.&#x20;
 
 Navigate to <https://us1.storj.io/signup?partner=acronis> to sign up, or log in <https://storj.io/login> if you already have an account.
 
-### Create a Bucket 
+## Create a Bucket 
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

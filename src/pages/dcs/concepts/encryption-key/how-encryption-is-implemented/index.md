@@ -50,7 +50,7 @@ While there are many benefits to path encryption, one challenge exists around ef
 
 Users of the network are able to opt out of path encryption on a per-bucket basis because of this limitation. If a user opts out of encrypted paths, the paths will still only be visible to the Satellite. Storage nodes do not have information about paths or metadata associated with pieces they are storing.
 
-### Content and Metadata Encryption&#x20;
+## Content and Metadata Encryption&#x20;
 
 When a user uploads a file, we read it one segment at a time on the client-side. Before each segment is split up, erasure encoded, and stored on remote storage nodes, we generate a random content encryption key. We also create a starting nonce equal to the segment number and use it along with the random key to encrypt the segment data.
 

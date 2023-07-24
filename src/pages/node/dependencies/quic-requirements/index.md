@@ -40,21 +40,21 @@ Windows users, please take a look at the Firewall configuration instructions in 
 
 If you configured QUIC while your node was running, you need to restart it to apply the changes (the QUIC connectivity is checked only on startup).
 
-::::tabs
-:::tab{label="Docker"}
+{% tabs %}
+{% tab label="Docker" %}
 ```none
 docker restart -t 300 storagenode
 ```
-:::
+{% /tab %}
 
-:::tab{label="Windows"}
+{% tab label="Windows" %}
 To restart the `storagenode` service you can use either Services applet or elevated PowerShell:
 
 ```powershell
 Restart-Service storagenode
 ```
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
 
 

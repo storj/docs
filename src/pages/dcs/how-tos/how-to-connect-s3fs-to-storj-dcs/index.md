@@ -28,7 +28,7 @@ echo ACCESS_KEY_ID:SECRET_ACCESS_KEY > ${HOME}/.passwd-s3fs
 chmod 600 ${HOME}/.passwd-s3fs
 ```
 
-### Create a bucket
+## Create a bucket
 
 You can [](docId\:OJPnxiexQIXHmzGBkvzHc) with uplink, with [](docId\:AsyYcUJFbO1JI8-Tu8tW3) , or with[](docId:4oDAezF-FcfPr0WPl7knd).
 

@@ -49,7 +49,7 @@ uplink import cheesecake cheesecake.access
 ```
 {% /code-group %}
 
-### Import access grant with a key
+## Import access grant with a key
 
 {% code-group %}
 ```windows

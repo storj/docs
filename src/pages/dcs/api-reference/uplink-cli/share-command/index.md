@@ -83,7 +83,7 @@ Paths     : sj://cakes/cheesecake.jpg
 Access    : 12yUGNqdsKX1Xky2qVoGwdpL...
 ```
 
-### Share a bucket with all permissions
+## Share a bucket with all permissions
 
 {% code-group %}
 ```windows

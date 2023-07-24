@@ -25,7 +25,7 @@ Contact Hammerspace for a [demo](https://hammerspace.com/hammerspace-software/).
 
 To integrate Storj with Hammerspace, you will need to create S3 credentials in Storj and add them within Hammerspace. Veeam uses a wizard to guide users in adding S3-compatible cloud storage.
 
-### Requirements
+## Requirements
 
 *   To begin, you will need to create a Storj account.&#x20;
 

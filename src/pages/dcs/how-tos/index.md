@@ -54,31 +54,31 @@ Practical step-by-step guides to help you achieve a specific goal. Most useful w
 
 ## Multimedia Storage & Streaming
 
-::::link-array
-:::link-array-item{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/t_6tZV_yBJwl2-uxyCetU_screen-shot-2022-08-18-at-120749-pm.png"}
+{% quick-links %}
+{% quick-link headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/t_6tZV_yBJwl2-uxyCetU_screen-shot-2022-08-18-at-120749-pm.png" %}
 [](docId\:XjYoGwaE6ncc3xTICXOOu)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/BO5_U4hvQYqFWF7uV94AN_screen-shot-2022-08-18-at-120827-pm.png"}
+{% quick-link headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/BO5_U4hvQYqFWF7uV94AN_screen-shot-2022-08-18-at-120827-pm.png" %}
 [](docId\:c0Ay0w8gxfln0EJxle0bz)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/G9P7Z-WCQHDlo2W1FBlif_screen-shot-2022-08-18-at-120908-pm.png"}
+{% quick-link headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/G9P7Z-WCQHDlo2W1FBlif_screen-shot-2022-08-18-at-120908-pm.png" %}
 [](docId\:Ywf4qZUmhJXxbFy55G8Mj)&#x20;
-:::
-::::
+{% /quick-link %}
+{% /quick-links %}
 
 ## Digital Assets
 
-::::link-array
-:::link-array-item{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/s517bqgn26_PW3FjMID7V_screen-shot-2022-08-18-at-120536-pm.png"}
+{% quick-links %}
+{% quick-link headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/s517bqgn26_PW3FjMID7V_screen-shot-2022-08-18-at-120536-pm.png" %}
 [](docId\:mSHcwI19g4F9qo0XBpiOh)&#x20;
-:::
+{% /quick-link %}
 
-:::link-array-item{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/WomCE6VyHkGE2Q-VvZZxD_screen-shot-2022-08-18-at-120619-pm.png"}
+{% quick-link headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/WomCE6VyHkGE2Q-VvZZxD_screen-shot-2022-08-18-at-120619-pm.png" %}
 [](docId\:KvwtaDpf_VH01I8oMwGKY)&#x20;
-:::
-::::
+{% /quick-link %}
+{% /quick-links %}
 
 ## Web Hosting
 

@@ -67,7 +67,7 @@ e.g. with npm
 npm install --save aws-sdk
 ```
 
-### 2. Import the S3 client
+## 2. Import the S3 client
 
 ```none
 import S3 from "aws-sdk/clients/s3";

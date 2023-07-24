@@ -2,7 +2,7 @@
 title: Step 3. Setup Port Forwarding
 slug: dependencies/port-forwarding
 createdAt: 2022-05-24T21:20:52.000Z
-updatedAt: 2023-03-03T08:30:27.000Z
+updatedAt: 2023-07-24T18:25:19.209Z
 docId: y0jltT-HzKPmDefi532sd
 ---
 
@@ -62,8 +62,8 @@ Please keep your hostname at hand as we will need it later.
 If your router supports NoIP's Dynamic DNS, we highly recommend configuring your router. [Here's how to do that](https://www.noip.com/support/knowledgebase/how-to-configure-ddns-in-router/).
 {% /callout %}
 
-:::::tabs
-::::tab{label="Linux"}
+{% tabs %}
+{% tab label="Linux" %}
 ## Dynamic Update Client for Linux
 
 First, open a new terminal window so you can type commands into Linux.  Once you’ve opened your terminal window, log in as “root” user. You can become the root user from the command line by entering `sudo -s` followed by the root password on your machine.
@@ -131,9 +131,9 @@ By default, the DUC software will not start when you reboot your system.
 {% /callout %}
 
 Check the README file in the `no-ip-2.1.9` folder for instructions on how to make the client run at startup. This varies depending on what Linux distribution you are running.
-::::
+{% /tab %}
 
-:::tab{label="MacOS"}
+{% tab label="MacOS" %}
 ## [Dynamic Update Client for Mac](https://www.noip.com/download?page=mac)
 
 1.Download the most recent version above.
@@ -143,46 +143,46 @@ Check the README file in the `no-ip-2.1.9` folder for instructions on how to mak
 5\. Select the hostnames you would like updated.
 
 Once complete, you can close the Select a Hostname window.
-:::
+{% /tab %}
 
-:::tab{label="Windows"}
+{% tab label="Windows" %}
 ## [Dynamic Update Client for Windows](https://www.noip.com/download?page=win)
 
 1\. Download and install with link above.
 2\. Enter your NoIP credentials.
 3\. Select the hostname you created earlier and click "save".
-:::
-:::::
+{% /tab %}
+{% /tabs %}
 
 ## Setup Port Forwarding: Router Port Forwarding Configuration
 
 To set up port forwarding (TCP/UDP) on a router, we must first get the gateway IP address so we can access the router:
 
-::::tabs
-:::tab{label="Linux"}
+{% tabs %}
+{% tab label="Linux" %}
 Open the terminal app and run the following command
 
 ```Text
 ip route | grep default
 ```
-:::
+{% /tab %}
 
-:::tab{label="MacOS"}
+{% tab label="MacOS" %}
 Open the terminal app and run the following command
 
 ```Text
  netstat -nr | grep default
 ```
-:::
+{% /tab %}
 
-:::tab{label="Windows"}
+{% tab label="Windows" %}
 Open command prompt and run the following command
 
 ```none
 ipconfig | findstr /i "Gateway"
 ```
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
 Once you have your gateway IP, open a browser and type it in.
 
@@ -194,8 +194,8 @@ Once you are logged in to your router, find the port forwarding tab *(for some r
 
 Now, you will need to get the local IP of your machine the node is running on:
 
-::::tabs
-:::tab{label="Linux"}
+{% tabs %}
+{% tab label="Linux" %}
 Open the terminal app and run the following command:
 
 ```Text
@@ -203,9 +203,9 @@ hostname -I
 ```
 
 The local IP will be the first set of numbers.
-:::
+{% /tab %}
 
-:::tab{label="MacOS"}
+{% tab label="MacOS" %}
 Open the terminal app and run the following command:
 
 If you are connected to a wireless network:
@@ -219,32 +219,32 @@ If you are connected via Ethernet:
 ```Text
 ipconfig getifaddr en1
 ```
-:::
+{% /tab %}
 
-:::tab{label="Windows"}
+{% tab label="Windows" %}
 Open a command prompt and run the following command:
 
 
 ```none
 ipconfig | findstr /i "IPv4"
 ```
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
 Next, go back to your router's port forward page and **add a new rule for port 28967** with the IPv4 address you just retrieved.
 
 ## Make Sure to Add a Firewall Rule
 
-::::tabs
-:::tab{label="Linux"}
-### Congratulations, you've setup port forwarding!
-:::
+{% tabs %}
+{% tab label="Linux" %}
+Congratulations, you've setup port forwarding!
+{% /tab %}
 
-:::tab{label="MacOS"}
-### Congratulations, you've set up port forwarding!
-:::
+{% tab label="MacOS" %}
+Congratulations, you've set up port forwarding!
+{% /tab %}
 
-:::tab{label="Windows"}
+{% tab label="Windows" %}
 Your Node will most likely read offline if there is not a firewall rule set in place. To do that, run a Powershell as Administrator and execute:
 
 ```powershell
@@ -292,9 +292,9 @@ Enter a name for the new rule, and description if you'd like, then click "Finish
 
 Be sure to repeat the above steps to also create a new firewall rule for UDP. See[](docId\:owZeAc56KSDnUzDhsBfB8)
 
-### Congratulations, you've set up port forwarding!
-:::
-::::
+Congratulations, you've set up port forwarding!
+{% /tab %}
+{% /tabs %}
 
 ### Have any difficulties? &#x20;
 

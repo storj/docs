@@ -12,8 +12,8 @@ docId: h3RyJymEIi4gf2S9wVJg8
 
 3\. **Import** Access Grant.
 
-:::::tabs
-::::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 ## PowerShell
 
 {% callout type="warning"  %} 
@@ -26,20 +26,20 @@ Navigate to the directory your **uplink.exe** file is located (Check the FAQ: []
 ```Text
 ./uplink.exe access import main accessgrant.txt
 ```
-::::
+{% /tab %}
 
-:::tab{label="Linux"}
+{% tab label="Linux" %}
 ```Text
 uplink access import main accessgrant.txt
 ```
-:::
+{% /tab %}
 
-:::tab{label="macOS"}
+{% tab label="macOS" %}
 ```Text
 uplink access import main accessgrant.txt
 ```
-:::
-:::::
+{% /tab %}
+{% /tabs %}
 
 {% callout type="warning"  %} 
 Please note that **Storj Labs does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.

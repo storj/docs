@@ -29,7 +29,7 @@ Credentials will only appear once. Be sure to store them, including the Access K
 
 ## Dataverse Setup
 
-### Configure AWS credentials profile
+## Configure AWS credentials profile
 
 Dataverse will use the "AWS credentials profile file" that is configured for the user you run the Payara service with (e.g. `/home/dataverse/.aws/config`).
 

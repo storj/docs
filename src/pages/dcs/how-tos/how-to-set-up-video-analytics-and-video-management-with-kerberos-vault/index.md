@@ -18,7 +18,7 @@ Storj's decentralized cloud storage platform offers a great video storage backen
 
 Conveniently, it is fairly simple to configure Storj DCS to work with Kerberos Vault. This doc will show the steps necessary to do so.
 
-### Prerequisites
+## Prerequisites
 
 Before starting the steps in this outline, ensure you have the following:
 

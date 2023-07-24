@@ -27,8 +27,8 @@ Minimum uptime (online and operational) of 99.3% per month, max total downtime o
 
 ## System Requirements
 
-::::tabs
-:::tab{label="Linux (Preferred)"}
+{% tabs %}
+{% tab label="Linux (Preferred)" %}
 CentOS - A maintained version of CentOS 7
 
 Debian - 64-bit version of one of these Debian or Raspbian versions:
@@ -60,9 +60,9 @@ Ubuntu - 64-bit version of one of these Ubuntu versions:
 
 
 
-:::
+{% /tab %}
 
-:::tab{label="MacOs"}
+{% tab label="MacOs" %}
 macOS Sierra 10.12 and newer macOS releases are supported
 
 Mac hardware must be a 2010 or newer model
@@ -70,15 +70,15 @@ Mac hardware must be a 2010 or newer model
 VirtualBox prior to version 4.3.30 cannot be installed. If you have a newer version of VirtualBox installed, it’s fine.
 
 **Running a node on macOS will require good monitoring. Due to issues with Docker, your node may go offline randomly and require restarting your node.**
-:::
+{% /tab %}
 
-:::tab{label="Windows"}
+{% tab label="Windows" %}
 Windows 8, Windows Server 2012 or later.
 
 **If you are currently running a storage node on Windows using the Docker desktop, it will require good monitoring. If you are still running a node with Docker, your node may go offline randomly and require restarting your node, so it is recommended you switch to the **[](docId:5shJebpS3baWj6LDV5ANQ).&#x20;
 [](docId\:jA6Jl8XzCR1nc4_WyJj1a)
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
 ## Internet Connection
 

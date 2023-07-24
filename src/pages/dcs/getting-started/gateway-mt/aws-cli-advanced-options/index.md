@@ -8,8 +8,8 @@ docId: 20zlQyfMD9gmHJOUPx3jh
 
 ## Install `awscli-plugin-endpoint` plugin
 
-::::tabs
-:::tab{label="aws CLI v1.x"}
+{% tabs %}
+{% tab label="aws CLI v1.x" %}
 ```shell
 pip3 install awscli-plugin-endpoint
 ```
@@ -19,9 +19,9 @@ Configure plugin in your `~/.aws/config` file:
 ```shell
 aws configure set plugins.endpoint awscli_plugin_endpoint
 ```
-:::
+{% /tab %}
 
-:::tab{label="aws CLI v2.x"}
+{% tab label="aws CLI v2.x" %}
 
 
 1.  [Install the AWS CLI v2.x](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
@@ -43,8 +43,8 @@ aws configure set plugins.cli_legacy_plugin_path site-packages-path
 ```shell
 aws configure set plugins.endpoint awscli_plugin_endpoint
 ```
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
 ## Define an endpoint with AWS CLI
 

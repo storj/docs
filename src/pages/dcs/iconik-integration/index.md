@@ -36,7 +36,7 @@ Iconik is compatible with Windows, Mac, and Linux OS. To request a trial, visit 
 
 ***
 
-### Create a Storj Account
+## Create a Storj Account
 
 To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
 

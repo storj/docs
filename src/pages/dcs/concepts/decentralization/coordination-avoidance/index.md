@@ -14,7 +14,7 @@ By ensuring coordination avoidance within Storj DCS, we’re able to deliver bet
 
 We believe our approach of decentralizing both storage and metadata tiers in the network allows greater scalability, performance, and reliability than systems that rely on seeking consensus.
 
-### Comparison to Blockchain Networks
+## Comparison to Blockchain Networks
 
 Blockchain consensus offers very strong guarantees, but this comes at a heavy cost in coordination overhead. Coordination is not always necessary for correctness and minimizing coordination is key to maximizing scalability, availability, and high performance in database systems. One fundamental design decision of the Storj network was not to utilize blockchain consensus for file transfers to increase those properties of the Storj network. Storj takes a pragmatic approach to avoiding blockchain consensus while still maintaining correctness for file transfers. But, at the same time by default, Storj uses blockchain consensus with the Ethereum-based STORJ token for payment processing to storage node operators.
 

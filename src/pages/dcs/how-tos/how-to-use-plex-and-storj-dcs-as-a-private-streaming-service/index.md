@@ -30,7 +30,7 @@ You should start by reading the [](docId\:LdrqSoECrAyE_LQMvj3aF). Follow the ste
 
 These docs show how to run basic commands to sync files from your local system to Storj buckets, but we would like to go a step further and mount a Storj bucket as its own filesystem. This will provide persistent storage for our video streaming service.
 
-### Mounting the Filesystem
+## Mounting the Filesystem
 
 The `rclone mount` command can be used to mount a cloud storage service as a local filesystem. With this enabled, Rclone can bidirectionally copy new files to Storj and read them from your buckets for playback in the Plex client.
 

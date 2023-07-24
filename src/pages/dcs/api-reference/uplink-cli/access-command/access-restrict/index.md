@@ -53,7 +53,7 @@ uplink access restrict [flags]
 
 ## Examples
 
-### Create a restricted Access Grant
+## Create a restricted Access Grant
 
 As result, it will print the created access grant to `stdout`. Since we did not specify any restrictions, only the defaults will be applied. This command will print an Access Grant with read only access:
 

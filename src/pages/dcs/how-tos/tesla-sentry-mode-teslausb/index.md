@@ -33,7 +33,7 @@ Optional hardware for easier setup:
 
 *   [Mini HDMI to HDMI Cable - 5 feet : ID 2775: $5.95](https://www.adafruit.com/product/2775) Makes it easier to set everything up by connecting the Pi to a monitor
 
-### Software required
+## Software required
 
 The code used in this tutorial is open source and uses, among other things, [Rlcone](https://github.com/rclone/rclone) which includes native support for Storj DCS. The GitHub Repository for the code is available at: <https://github.com/marcone/teslausb> and the project was originally described on the [/r/teslamotors](https://www.reddit.com/r/teslamotors/comments/9m9gyk/build_a_smart_usb_drive_for_your_tesla_dash_cam/) subreddit.&#x20;
 

@@ -24,7 +24,7 @@ Our lab example took place on MacOSX and used BREW as a package manager. Dependi
 
 Our implementation of the S3 standard allows additional configuration options. Please reference the official [AWS S3 User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html) for additional details.&#x20;
 
-### Prerequisites
+## Prerequisites
 
 ```bash
 # Install python

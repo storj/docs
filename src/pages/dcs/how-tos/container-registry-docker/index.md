@@ -53,7 +53,7 @@ If we upload the layers and metadata files in the same structure, Docker pull wi
 
 3.  The container registry should be served under the root path of the domain ( is correct, while  is incorrect). It can be resolved by assigning a custom domain name for the Storj bucket.
 
-### Publish the container&#x20;
+## Publish the container&#x20;
 
 So let’s see an example. What is the publishing process, assuming we have a local docker container (elek/herbsttag in this example)?
 

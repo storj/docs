@@ -22,7 +22,7 @@ By selecting this integration pattern, you are opting into [Server-side Encrypti
 
 ## Prerequisites
 
-### Generate Credentials to the Gateway MT
+## Generate Credentials to the Gateway MT
 
 **Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 

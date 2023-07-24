@@ -36,7 +36,7 @@ As described below, mutlipart upload is a process consisting of: starting the up
 
 At the start of a multipart upload, Storj DCS will return an ID that you use to reference your multipart upload; you need to include this ID when working with the object.  Operations such as uploading parts, listing parts and canceling the multipart operation.
 
-### Upload Part
+## Upload Part
 
 While uploading an object part you need to specify the ID received when you created the multipart upload along with a unique part number that your specific call will be sending to the platform.  Because of the capability of multipart upload to work non sequentially, you can upload any part at any time before the multipart upload is completed. Additionally, you can over right existing parts numbers you've previously transferred as long as the multipart upload has not been completed.  Part numbers are chosen by the client and are between 1 and 2^31.  When a part is uploaded, the Storj DCS platform will return several items, one of which is an ETag.  To complete the multipart upload process you will need to provide a list of part IDs and their corresponding ETags.
 

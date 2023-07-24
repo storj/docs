@@ -44,8 +44,8 @@ uplink setup [flags]
 
 1\. Start the CLI wizard.
 
-::::tabs
-:::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 ## PowerShell
 
 [](docId:4qPQxa8HlvDIO1Kgqa2No).
@@ -53,20 +53,20 @@ uplink setup [flags]
 ```Text
 ./uplink.exe setup
 ```
-:::
+{% /tab %}
 
-:::tab{label="Linux"}
+{% tab label="Linux" %}
 ```Text
 uplink setup
 ```
-:::
+{% /tab %}
 
-:::tab{label="macOS"}
+{% tab label="macOS" %}
 ```Text
 uplink setup
 ```
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
 2\. Choose an access name, by default this should be left blank, so hit 'enter'
 

@@ -10,15 +10,15 @@ docId: EW9B_0fJujL3Z5aTLUW7d
 
 What we use to package the Storage Node software and push new updates. To set up a Storage Node, you first must have Docker installed. Install Docker by following the appropriate installation guide for your OS.
 
-:::::tabs
-:::tab{label="Linux"}
+{% tabs %}
+{% tab label="Linux" %}
 [**Ubuntu Docker Installation**](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 [**CentOS Docker Installation**](https://docs.docker.com/install/linux/docker-ce/centos/)
 [**Debian Docker Installation**](https://docs.docker.com/install/linux/docker-ce/debian/)
 [**Fedora Docker Installation**](https://docs.docker.com/install/linux/docker-ce/fedora/)
-:::
+{% /tab %}
 
-::::tab{label="macOS"}
+{% tab label="macOS" %}
 [**MacOS Docker Installation**](https://docs.docker.com/docker-for-mac/install/)
 
 
@@ -32,9 +32,9 @@ All newer versions have various issues, such as losing network connection, have 
 {% callout type="warning"  %} 
 **Docker Toolbox is not supported.**
 {% /callout %}
-::::
+{% /tab %}
 
-::::tab{label="Windows"}
+{% tab label="Windows" %}
 ****[Windows Docker **Installation**](https://docs.docker.com/docker-for-windows/install/#install-docker-desktop-for-windows-desktop-app)
 
 
@@ -48,8 +48,8 @@ All newer versions for Hyper-V have various issues, such as losing network conne
 {% callout type="warning"  %} 
 **Docker Toolbox is not supported**
 {% /callout %}
-::::
-:::::
+{% /tab %}
+{% /tabs %}
 
 
 

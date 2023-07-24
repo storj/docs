@@ -14,7 +14,7 @@ If you want to change the credit card on an account, follow the process outlined
 
 Once a second card has been added, you may select the new card as the Default card.  It will now be possible to remove the other card.
 
-### Changing from Credit Card to STORJ Token
+## Changing from Credit Card to STORJ Token
 
 If you want to pay only in STORJ token, you must not add a credit card and should only have a STORJ token balance on the account. If you previously added a credit card and want to pay using STORJ token instead, follow the instructions above to deposit funds to the account using STORJ token.
 

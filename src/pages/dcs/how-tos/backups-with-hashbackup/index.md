@@ -85,6 +85,6 @@ hb backup -c backup data
 
 If the local backup is lost, damaged, or pruned but later needed, the remote backup can be recovered from Storj following the standard [destination recovery steps documented on HashBackup's website](https://www.hashbackup.com/hashbackup/quickstart.html#_recover).
 
-### Conclusion
+## Conclusion
 
 Storj DCS offers an excellent option for decentralized, distributed, cloud-based file storage. With a global distribution of network nodes and inherently secure decentralized access, Storj is a great platform for hosting files and data. These same benefits extend to backups of data, which is where an automated tool like HashBackup can combine with Storj to ensure that your files are always accessible locally. In this article, we showed how to do just that by installing HashBackup and configuring it to use Storj as a remote destination. Now, the power of encrypted and compressed backups are able to be hosted on the distributed Storj platform, with all of the benefits that brings.

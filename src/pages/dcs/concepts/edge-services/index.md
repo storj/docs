@@ -14,7 +14,7 @@ Storj Edge Services are hosted components that provide S3 compatibility and publ
 **Note:** All of the Edge Services use [](docId\:hf2uumViqYvS1oq8TYbeW).&#x20;
 {% /callout %}
 
-### Edge Services
+## Edge Services
 
 The three components comprising the edge services are:
 

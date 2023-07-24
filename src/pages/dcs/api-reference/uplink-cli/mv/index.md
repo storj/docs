@@ -63,7 +63,7 @@ Sample Output:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/fn1JZRT4fFBmNXrzIoBNU_output.png)
 
-### Move an object from a one bucket to another
+## Move an object from a one bucket to another
 
 When the `mv` command is used to move an object from one Storj DCS bucket to another Storj DCS bucket, the CLI will use a server-side move method.
 

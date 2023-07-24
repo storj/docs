@@ -25,7 +25,7 @@ MSP360  integrates with Storj cloud storage through the S3 protocol.&#x20;
 
 To integrate MSP360 with Storj, you will need to create S3 credentials for MSP360 in Storj and pass them to the MSP360 managed backup server through the MSP360 web interface or SaaS control.
 
-### Requirements
+## Requirements
 
 *   An active Storj account
     *   Navigate to <https://us1.storj.io/signup?partner=MSP360> to sign up, or log in <https://storj.io/login> if you already have an account.

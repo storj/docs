@@ -32,7 +32,7 @@ Value attribution is done on a per bucket basis. To recognize which partner the 
 Before continuing, beware that partner value attribution is only possible if you are registered as such by Storj. You can access an up to date list of recognized user agents [here](https://github.com/storj/storj/blob/master/satellite/rewards/partners.go#L28).
 {% /callout %}
 
-### Uplink CLI
+## Uplink CLI
 
 UserAgent can only be configured by adding or updating the following lines of the legacy uplink configuration yaml file (the default path for the `config.yaml` can be checked with `uplink setup --help --advanced` command, see the default value for `--legacy-config-dir` option in the output):
 

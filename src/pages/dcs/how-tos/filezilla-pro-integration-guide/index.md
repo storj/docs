@@ -34,7 +34,7 @@ FileZilla Pro gives users the option to send files to a Storj DCS account in two
 
 *   Has a 2.68x upload multiplier for uploads and does not support segment parallelism
 
-### GatewayMT specs regarding integration with Storj DCS:
+## GatewayMT specs regarding integration with Storj DCS:
 
 *   Gateway MT (Fastest for uploading large files)
 

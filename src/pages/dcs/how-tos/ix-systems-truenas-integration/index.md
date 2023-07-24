@@ -24,7 +24,7 @@ Using Storj with TrueNAS provides resilient cloud object storage with blazing pe
 
 This integration uses S3 credentials passed from Storj to TrueNAS. You will need to set up a Storj account, create a Storj bucket for TrueNAS, and generate S3 credentials for TrueNAS. Then, you will need to create a Cloud Credential on TrueNAS that will grant it access to the bucket in Storj.&#x20;
 
-### Software Requirements 
+## Software Requirements 
 
 Storj is fully integrated with TrueNAS.
 

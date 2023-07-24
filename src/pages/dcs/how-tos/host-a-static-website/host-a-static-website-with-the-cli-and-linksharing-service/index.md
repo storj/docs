@@ -20,25 +20,25 @@ You can use your own domain name and host your own static website on Storj DCS w
 
 2.  Share the bucket or object prefix (not individual objects) that will be the root of your website/subdomain. At the root, name your home page`index.html`. The website will serve the index.html file automatically  e.g.`http://www.example.test` and `http://www.example.test/index.html`will serve the same content. Anything shared with `--dns` will be *readonly* and available *publicly* (no secret key needed). You can optionally specify your preferred linkshare endpoint with `--base-url`
 
-::::tabs
-:::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 ```Text
 ./uplink.exe share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url>
 ```
-:::
+{% /tab %}
 
-:::tab{label="Linux"}
+{% tab label="Linux" %}
 ```Text
 uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url>
 ```
-:::
+{% /tab %}
 
-:::tab{label="macOS"}
+{% tab label="macOS" %}
 ```Text
 uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url>
 ```
-:::
-::::
+{% /tab %}
+{% /tabs %}
 
 Notably, this mechanism allows you to host multiple websites from the same bucket by using different prefixes. You may also create multiple subdomains by using different hostnames (however, the Uplink CLI only generates info for one at a time).
 

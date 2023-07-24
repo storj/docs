@@ -36,7 +36,7 @@ uplink access [flags] <revokee>
 | :---------------- | :----------------------------------------- |
 | `--access string` | Access name or value performing the revoke |
 
-### Global flags
+## Global flags
 
 | Global flags          | Description                                   |
 | :-------------------- | :-------------------------------------------- |

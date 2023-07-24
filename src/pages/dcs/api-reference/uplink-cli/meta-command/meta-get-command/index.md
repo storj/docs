@@ -65,7 +65,7 @@ uplink meta get sj://cakes/cheesecake.jpg
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/zxWOIDRiLXcedbjVc6OmG_meta-get.png)
 
-### Query for a specific key in metadata
+## Query for a specific key in metadata
 
 You can retrieve the value of key `baker` for object `sj://cakes/cheesecake.jpg` using:
 

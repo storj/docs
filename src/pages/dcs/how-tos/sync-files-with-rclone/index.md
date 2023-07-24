@@ -28,17 +28,17 @@ You will need one of the following:
 
 Use our native integration pattern to take advantage of client-side encryption as well as to achieve the best possible download performance. Uploads will be erasure-coded [](docId\:Pksf8d0TCLY2tBgXeT18d), thus a 1GB upload will result in 2.68GB of data being uploaded to storage nodes across the network.&#x20;
 
-### Use this pattern for
+## Use this pattern for
 
 *   The strongest security
 
 *   The best download speed
 
-::::link-array
-:::link-array-item{headerImage}
+{% quick-links %}
+{% quick-link %}
 [](docId\:Mk51zylAE6xmqP7jUYAuX)&#x20;
-:::
-::::
+{% /quick-link %}
+{% /quick-links %}
 
 ### Hosted Gateway
 
@@ -54,9 +54,9 @@ Use our S3 compatible Hosted Gateway integration pattern to increase upload perf
 By selecting this integration pattern, you are opting in to server-side encryption.
 {% /callout %}
 
-::::link-array
-:::link-array-item{headerImage}
+{% quick-links %}
+{% quick-link %}
 [](docId\:WayQo-4CZXkITaHiGeQF_)&#x20;
-:::
-::::
+{% /quick-link %}
+{% /quick-links %}
 

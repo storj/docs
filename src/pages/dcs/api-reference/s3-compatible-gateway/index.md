@@ -17,7 +17,7 @@ Amazon S3 is accessed via APIs, most of which rely on the HTTP protocol and XML 
 
 See [the compatibility table for GatewayST](https://github.com/storj/gateway-st/blob/main/docs/s3-compatibility.md) and [S3-compatibility list of GatewayMT](https://github.com/storj/gateway-mt/blob/main/docs/gateway-mt.md#s3-api-compatibility).
 
-### Security and encryption
+## Security and encryption
 
 Where the Storj network really excels compared to centralized providers is in its privacy and security, so we’d be remiss in not addressing these topics specifically as they pertain to S3.&#x20;
 

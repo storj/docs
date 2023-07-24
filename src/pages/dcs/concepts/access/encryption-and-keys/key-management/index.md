@@ -20,7 +20,7 @@ If you lose your encryption keys, you have lost the ability to decrypt your data
 
 Storj DCS does not have access to your encryption keys.  If you lose your encryption keys, they are gone. If you can’t decrypt your data, you’ve effectively lost it.  All of it.
 
-### Thing 2: Make sure you backup your encryption keys
+## Thing 2: Make sure you backup your encryption keys
 
 It is very important you make sure to backup your encryption keys in a safe place. Storj DCS does not have any features or functions to back up encryption keys.  We have a reference implementation of a user interface to ensure a user has backed up their encryption keys, but all of that happens client-side.
 

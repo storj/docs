@@ -30,8 +30,8 @@ The same applies for Linux/MacOS systems. How do we accomplish that?
 We will use the `D:\STORJ` path of the source Windows system as an example. The destination path depends on OS:
 {% /callout %}
 
-:::::tabs
-::::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 {% callout type="info"  %} 
 In Windows, we will use the same folder`D:\STORJ` and PowerShell as a terminal.
 
@@ -39,9 +39,9 @@ We will assume that your Windows user is called `user` and it has full access to
 
 If you are moving the identity and data to the new Windows CLI host, you need to share the destination folder on that host and follow the guide [](docId\:NGHe10jmn-kdgzTf3FUz0)&#x20;
 {% /callout %}
-::::
+{% /tab %}
 
-::::tab{label="Linux"}
+{% tab label="Linux" %}
 {% callout type="info"  %} 
 In Linux, we will use the `/mnt/storj/storagenode`folder, where`/mnt/storj` is the [](docId\:nZeFxmawYPdgkwUPy6f9s).
 
@@ -59,9 +59,9 @@ To be able to copy the identity and data from Windows to Linux, we need to have 
 ```Text
 sudo apt update && sudo apt install ssh -y
 ```
-::::
+{% /tab %}
 
-::::tab{label="MacOS"}
+{% tab label="MacOS" %}
 {% callout type="info"  %} 
 In MacOS, we will use the`/Volumes/Storj/storagenode`folder, where `/Volumes/Storj` is the path where the disk is mounted.
 
@@ -75,8 +75,8 @@ mkdir -p /Volumes/Storj/storagenode/storage
 {% /callout %}
 
 To be able to copy files from the Windows OS, we will use a SSH session to your MacOS. To accomplish this, you need to [configure the remote access to your MacOS](https://osxdaily.com/2016/08/16/enable-ssh-mac-command-line/)
-::::
-:::::
+{% /tab %}
+{% /tabs %}
 
 
 
@@ -88,8 +88,8 @@ Then, [](docId\:y0jltT-HzKPmDefi532sd)&#x20;
 
 The configuration steps are different depending on the destination OS.
 
-:::::tabs
-::::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 {% callout type="info"  %} 
 If your source and destination OSes are both Windows, you can use the integrated `robocopy` command-line utility to copy your files across the network or local system: [](docId\:NGHe10jmn-kdgzTf3FUz0)
 
@@ -110,20 +110,20 @@ mkdir D:\STORJ
 mv D:\storage D:\STORJ\storage
 ```
 {% /callout %}
-::::
+{% /tab %}
 
-:::tab{label="Linux"}
+{% tab label="Linux" %}
 Since your source OS is Windows, and the destination OS is Linux, you need to have some Linux-compatible utilities to migrate the identity and data.
 
 We will use WSL and [Ubuntu package](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-:::
+{% /tab %}
 
-:::tab{label="MacOS"}
+{% tab label="MacOS" %}
 Since your source OS is Windows, and the destination OS is MacOS, you need to have some MacOS-compatible utilities to migrate the identity and data.
 
 We will use WSL and [Ubuntu package](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-:::
-:::::
+{% /tab %}
+{% /tabs %}
 
 
 
@@ -131,8 +131,8 @@ We will use WSL and [Ubuntu package](https://docs.microsoft.com/en-us/windows/ws
 
 You can use this guide to migrate the identity, orders and data to a different device: [](docId\:jEntWNvi2M6Eo74NICIJg)
 
-:::::tabs
-::::tab{label="Windows"}
+{% tabs %}
+{% tab label="Windows" %}
 {% callout type="info"  %} 
 We will assume that your identity is placed in the default location, i.e. `%APPDATA%\Storj\Identity\storagenode`and you used the default setup location, i.e. orders are located there: `"C:\Program Files\Storj\Storage Node\orders"`
 {% /callout %}
@@ -150,9 +150,9 @@ Now move orders to the data location:
 ```powershell
 robocopy /MIR /MOVE "$env:ProgramFiles\Storj\Storage Node\orders" D:\STORJ\orders
 ```
-::::
+{% /tab %}
 
-::::tab{label="Linux"}
+{% tab label="Linux" %}
 {% callout type="info"  %} 
 We will assume that your identity is placed in the default location, i.e. `%APPDATA%\Storj\Identity\storagenode`and you used the default setup location, i.e. orders are located there: `"C:\Program Files\Storj\Storage Node\orders"`
 {% /callout %}
@@ -191,9 +191,9 @@ and for orders:
 ```shell
 rsync -aP --delete "/mnt/c/Program Files/Storj/Storage Node/orders" user@192.168.1.68:/mnt/storj/storagenode/orders/
 ```
-::::
+{% /tab %}
 
-::::tab{label="MacOS"}
+{% tab label="MacOS" %}
 {% callout type="info"  %} 
 We will assume that your identity is placed in the default location, i.e. `%APPDATA%\Storj\Identity\storagenode`and you used the default setup location, i.e. orders are located there: `"C:\Program Files\Storj\Storage Node\orders"`
 {% /callout %}
@@ -232,8 +232,8 @@ and for orders:
 ```shell
 rsync -aP --delete "/mnt/c/Program Files/Storj/Storage Node/orders" macuser@192.168.1.69:/Volumes/Storj/storagenode/orders/
 ```
-::::
-:::::
+{% /tab %}
+{% /tabs %}
 
 When the data migration is completed, you should remove the storagenode Windows GUI version from the source Windows.
 

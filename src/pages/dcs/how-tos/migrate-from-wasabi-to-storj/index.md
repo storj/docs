@@ -33,7 +33,7 @@ Visit <https://rclone.org/install/> for instructions on how to install rclone.
 
 Before using rclone, we'll need to create access and a secret key for Wasabi and an access grant for Storj.
 
-### Wasabi Access and Secret Key
+## Wasabi Access and Secret Key
 
 Use your Wasabi account credentials to log in to the Wasabi Management Console.
 

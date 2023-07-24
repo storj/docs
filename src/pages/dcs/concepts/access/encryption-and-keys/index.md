@@ -34,7 +34,7 @@ In addition to not wanting to expose your data to the risk of compromise by byza
 
 During ordinary Satellite file repair operation, file segments are downloaded by Satellites, re-encoded, and redistributed across storage nodes. As long as all data is encrypted client-side, the repair function does not expose the privacy or security of the data.
 
-### Allowing Decryption for Shared Access to Objects
+## Allowing Decryption for Shared Access to Objects
 
 The first part of this documentation explains how Access Grants work  when access to objects stored on the Storj DCS Platform is to be shared between applications.  Encryption keys work in a very similar way.
 

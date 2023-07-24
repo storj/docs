@@ -28,7 +28,7 @@ This should give you the following output:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/LnvFyNM5SGNgYhluYziqI_access-import.png)
 
-### Import from the input
+## Import from the input
 
 {% code-group %}
 ```windows

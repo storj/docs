@@ -22,7 +22,7 @@ Storj DCS connectors are different from standard libuplink integrations, as they
 
 So, using Storj DCS with your favorite open source project can help you lower your cloud storage costs, while also financially supporting the project itself.&#x20;
 
-### How to build Connectors&#x20;
+## How to build Connectors&#x20;
 
 The Storj Connector Framework is a basic set of utility methods and operations to provide a consistent approach to integrating and orchestrating among data sources, endpoints, and the Storj DCS network. Some of the aspects addressed in the framework are:
 

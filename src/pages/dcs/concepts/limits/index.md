@@ -30,7 +30,7 @@ Adding a credit card as payment method will result in your per project limits be
 
 *   Secure Custom Domains (HTTPS) for Linksharing
 
-### STORJ token Payment method
+## STORJ token Payment method
 
 However, if your only payment method on file is STORJ token, you can submit a [](docId\:A4kUGYhfgGbVhlQ2ZHXVS).
 

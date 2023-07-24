@@ -50,7 +50,7 @@ uplink access import [flags] <name> <access|filename>
 
 Please [](docId\:b4-QgUOxVHDHSIWpAf3hG)  or [](docId\:OXSINcFRuVMBacPvswwNU) before proceeding.
 
-### Import Access Grant from the file
+## Import Access Grant from the file
 
 Save the created Access Grant to the file `access.txt`. As result, this command will import the Access Grant from the file to the access with the specified name into Uplink.
 

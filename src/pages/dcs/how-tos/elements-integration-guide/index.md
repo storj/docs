@@ -38,7 +38,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+## Create a Bucket 
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

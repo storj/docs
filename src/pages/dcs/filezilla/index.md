@@ -6,17 +6,17 @@ updatedAt: 2023-03-03T08:30:34.000Z
 docId: 3Vj_5zZ99c4mTMRhQjGFM
 ---
 
-::::link-array
-:::link-array-item{headerColor headerImage}
+{% quick-links %}
+{% quick-link %}
 ## [](docId\:OkJongWeLGhPy4KKz34W4)&#x20;
 
 How to set up FileZilla to  transfer files over Storj DCS
-:::
+{% /quick-link %}
 
-:::link-array-item{headerImage}
+{% quick-link %}
 ## [](docId\:APk9353kCNcg5PKRPQ06u)&#x20;
 
 How to Integrate Filezilla Pro with Storj DCS to Easily Find, Transfer and  Download All Of Your Files
-:::
-::::
+{% /quick-link %}
+{% /quick-links %}
 

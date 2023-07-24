@@ -12,14 +12,26 @@ markdown_files.each do |filename|
   converted_content = content.gsub(/:::hint\{type=\"(.*?)\"\}(.*?):::/m, '{% callout type="\1"  %} \2{% /callout %}')
   converted_content = converted_content.gsub(/:::codeblocktabs(.*?):::/m, '{% code-group %}\1{% /code-group %}')
 
+  while prefix = converted_content.match(/(:+)link-array/)&.[](1)
+    if prefix
+      converted_content = converted_content.gsub(/^#{prefix}link-array(.*?)^#{prefix}$/m, '{% quick-links %}\1{% /quick-links %}')
+    end
+    prefix = converted_content.match(/(:+)link-array-item/)&.[](1)
+    if prefix
+      converted_content = converted_content.gsub(/^#{prefix}link-array-item\{headerType="IMAGE"\s+headerImage=\"(.*?)\"\}(.*?)^#{prefix}$/m, '{% quick-link headerImage="\1" %}\2{% /quick-link %}')
+      converted_content = converted_content.gsub(/^#{prefix}link-array-item\{.*?\}(.*?)^#{prefix}$/m, '{% quick-link %}\1{% /quick-link %}')
+    end
+  end
+
   while tabs_prefix = converted_content.match(/(:+)tabs/)&.[](1)
     if tabs_prefix
       converted_content = converted_content.gsub(/^#{tabs_prefix}tabs(.*?)^#{tabs_prefix}$/m, '{% tabs %}\1{% /tabs %}')
     end
-    tab_prefix = converted_content.match(/(:+)tab/)&.[](1)
-    puts "tab_prefix #{tab_prefix}"
-    if tab_prefix
-      converted_content = converted_content.gsub(/^#{tab_prefix}tab\{label=\"(.*?)\"\}(.*?)^#{tab_prefix}$/m, '{% tab label="\1" %}\2{% /tab %}')
+    while tab_prefix = converted_content.match(/(:+)tab\{/)&.[](1)
+      puts "tab_prefix #{tab_prefix}"
+      if tab_prefix
+        converted_content = converted_content.gsub(/^#{tab_prefix}tab\{label=\"(.*?)\"\}(.*?)^#{tab_prefix}$/m, '{% tab label="\1" %}\2{% /tab %}')
+      end
     end
   end
 

@@ -95,7 +95,6 @@ function extractRedirects(data) {
 
   // Base case: If it's an object and has href, push it to results
   if (data && typeof data === 'object' && data.redirects) {
-    delete data.links
     redirects.push(data)
   }
 

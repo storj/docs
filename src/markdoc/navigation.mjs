@@ -63,7 +63,6 @@ function extractRedirects(data) {
 }
 
 function convertToNextRedirects(data) {
-  console.log('data', data)
   return data.flatMap((item) =>
     item.redirects
       .filter((redirect) => redirect !== item.href)
@@ -75,13 +74,17 @@ function convertToNextRedirects(data) {
   )
 }
 
-function getFrontmatterTitleAndRedirects(filepath) {
+function getFrontmatterTitleRedirectsDocId(filepath) {
   const md = fs.readFileSync(filepath, 'utf8')
   const ast = Markdoc.parse(md)
   const frontmatter = ast.attributes.frontmatter
     ? yaml.load(ast.attributes.frontmatter)
     : {}
-  return { title: frontmatter.title, redirects: frontmatter.redirects }
+  return {
+    title: frontmatter.title,
+    redirects: frontmatter.redirects,
+    docId: frontmatter.docId,
+  }
 }
 
 function walkDir(dir, space, currentPath = '', includeRedirects = false) {
@@ -97,13 +100,20 @@ function walkDir(dir, space, currentPath = '', includeRedirects = false) {
       let indexFilepath = filepath + '/index.md'
       let title = file.charAt(0).toUpperCase() + file.slice(1)
       let redirects = null
+      let docId = null
       if (fs.existsSync(indexFilepath)) {
-        let { title: newTitle, redirects: newRedirects } =
-          getFrontmatterTitleAndRedirects(indexFilepath)
+        let {
+          title: newTitle,
+          redirects: newRedirects,
+          docId: newDocId,
+        } = getFrontmatterTitleRedirectsDocId(indexFilepath)
         title = newTitle
+        redirects = newRedirects
+        docId = newDocId
       }
       let entry = {
         title,
+        docId,
         type: file,
         links: walkDir(filepath, space, relativePath, includeRedirects),
       }
@@ -116,9 +126,11 @@ function walkDir(dir, space, currentPath = '', includeRedirects = false) {
       results.push(entry)
     } else if (path.extname(file) === '.md' && file !== 'index.md') {
       let url = `${relativePath.replace(/\.md$/, '')}` // Remove .md extension
-      let { title, redirects } = getFrontmatterTitleAndRedirects(filepath)
+      let { title, redirects, docId } =
+        getFrontmatterTitleRedirectsDocId(filepath)
       let entry = {
         title,
+        docId,
         links: [],
         href: `/${space}/${url}`,
       }
@@ -171,13 +183,11 @@ export default function (nextConfig = {}) {
     async redirects() {
       let pagesDir = path.resolve('./src/pages')
       let re = extractRedirects(walkDir(`${pagesDir}/dcs`, 'dcs', '', true))
-      console.log('re', re)
       let dcs = convertToNextRedirects(re)
       let node = convertToNextRedirects(
         extractRedirects(walkDir(`${pagesDir}/node`, 'node', '', true))
       )
       let redirs = [...dcs, ...node]
-      console.log('redirects', redirs)
 
       return redirs
       // TODO don't overwrite existing redirects

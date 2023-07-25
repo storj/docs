@@ -1,8 +1,16 @@
 #!/bin/bash
 set -e
-# ./get-sitemaps
-./rename -d my_downloads
-./organize -d my_downloads_r -s dcs
-./transform-nextjs-pages -d my_downloads_r_o
-./fix-headers my_downloads_r_o_t
-./fix-markdown my_downloads_r_o_t
+function process_files() {
+    local dir_name="$1"
+    local space_name="$2"
+    ./rename -d "${dir_name}"
+    ./organize -d "${dir_name}_r" -s "${space_name}"
+    ./transform-nextjs-pages -d "${dir_name}_r_o"
+    ./fix-headers "${dir_name}_r_o_t"
+    ./fix-markdown "${dir_name}_r_o_t"
+}
+
+# To use the function:
+process_files my_downloads/dcs dcs
+process_files my_downloads/node node
+

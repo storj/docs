@@ -24,6 +24,7 @@
     "fast-glob": "^3.2.12",
     "flexsearch": "^0.7.31",
     "focus-visible": "^5.2.0",
+    "js-yaml": "^4.1.0",
     "next": "13.4.2",
     "postcss-focus-visible": "^6.0.4",
     "postcss-import": "^14.1.0",

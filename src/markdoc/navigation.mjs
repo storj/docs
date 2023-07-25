@@ -4,6 +4,7 @@ import * as url from 'url'
 import * as path from 'path'
 import * as fs from 'fs'
 import Markdoc from '@markdoc/markdoc'
+import yaml from 'js-yaml'
 
 const __filename = url.fileURLToPath(import.meta.url)
 
@@ -35,13 +36,55 @@ function extractHrefObjects(data) {
   return hrefObjects
 }
 
-function getTitleFromMdFile(filepath) {
-  const md = fs.readFileSync(filepath, 'utf8')
-  const ast = Markdoc.parse(md)
-  return ast.attributes?.frontmatter?.match(/^title:\s*(.*?)\s*$/m)?.[1] || '' // Default to empty string if title isn't found
+function extractRedirects(data) {
+  let redirects = []
+
+  // If data itself is an array, recursively extract from each item
+  if (Array.isArray(data)) {
+    for (let item of data) {
+      redirects = redirects.concat(extractRedirects(item))
+    }
+    return redirects
+  }
+
+  // Base case: If it's an object and has href, push it to results
+  if (data && typeof data === 'object' && data.redirects) {
+    redirects.push(data)
+  }
+
+  // If the object has a 'links' property and it's an array, iterate over it
+  if (data.links && Array.isArray(data.links)) {
+    for (let item of data.links) {
+      redirects = redirects.concat(extractRedirects(item))
+    }
+  }
+
+  return redirects
 }
 
-function walkDir(dir, space, currentPath = '') {
+function convertToNextRedirects(data) {
+  console.log('data', data)
+  return data.flatMap((item) =>
+    item.redirects
+      .filter((redirect) => redirect !== item.href)
+      .map((redirect) => ({
+        source: redirect,
+        destination: item.href,
+        permanent: false,
+      }))
+  )
+}
+
+function getFrontmatterTitleAndRedirects(filepath) {
+  const md = fs.readFileSync(filepath, 'utf8')
+  const ast = Markdoc.parse(md)
+  const frontmatter = ast.attributes.frontmatter
+    ? yaml.load(ast.attributes.frontmatter)
+    : {}
+  return { title: frontmatter.title, redirects: frontmatter.redirects }
+}
+
+function walkDir(dir, space, currentPath = '', includeRedirects = false) {
   let results = []
   const list = fs.readdirSync(dir)
 
@@ -52,13 +95,20 @@ function walkDir(dir, space, currentPath = '') {
 
     if (stat && stat.isDirectory()) {
       let indexFilepath = filepath + '/index.md'
-      let title = fs.existsSync(indexFilepath)
-        ? getTitleFromMdFile(indexFilepath)
-        : file.charAt(0).toUpperCase() + file.slice(1)
+      let title = file.charAt(0).toUpperCase() + file.slice(1)
+      let redirects = null
+      if (fs.existsSync(indexFilepath)) {
+        let { title: newTitle, redirects: newRedirects } =
+          getFrontmatterTitleAndRedirects(indexFilepath)
+        title = newTitle
+      }
       let entry = {
-        title: title,
+        title,
         type: file,
-        links: walkDir(filepath, space, relativePath),
+        links: walkDir(filepath, space, relativePath, includeRedirects),
+      }
+      if (includeRedirects) {
+        entry.redirects = redirects
       }
       if (fs.existsSync(indexFilepath)) {
         entry.href = `/${space}/${relativePath}`
@@ -66,10 +116,16 @@ function walkDir(dir, space, currentPath = '') {
       results.push(entry)
     } else if (path.extname(file) === '.md' && file !== 'index.md') {
       let url = `${relativePath.replace(/\.md$/, '')}` // Remove .md extension
-      results.push({
-        title: getTitleFromMdFile(filepath),
+      let { title, redirects } = getFrontmatterTitleAndRedirects(filepath)
+      let entry = {
+        title,
+        links: [],
         href: `/${space}/${url}`,
-      })
+      }
+      if (includeRedirects) {
+        entry.redirects = redirects
+      }
+      results.push(entry)
     }
   })
 
@@ -111,6 +167,20 @@ export default function (nextConfig = {}) {
       }
 
       return config
+    },
+    async redirects() {
+      let pagesDir = path.resolve('./src/pages')
+      let re = extractRedirects(walkDir(`${pagesDir}/dcs`, 'dcs', '', true))
+      console.log('re', re)
+      let dcs = convertToNextRedirects(re)
+      let node = convertToNextRedirects(
+        extractRedirects(walkDir(`${pagesDir}/node`, 'node', '', true))
+      )
+      let redirs = [...dcs, ...node]
+      console.log('redirects', redirs)
+
+      return redirs
+      // TODO don't overwrite existing redirects
     },
   })
 }

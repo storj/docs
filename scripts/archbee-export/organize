@@ -53,11 +53,12 @@ Dir.glob("#{directory}/*.md").each do |markdown_file|
   frontmatter = YAML.load(file, permitted_classes: [Time])
 
   # If there's a slug in the frontmatter and it's in the URL list, move the file
-  puts "frontmatter #{frontmatter['slug']} "
-  puts "frontmatter #{File.basename frontmatter['slug'] || markdown_file} "
-  puts "url_paths #{url_paths[frontmatter['slug']]}"
-  slug = File.basename(frontmatter['slug'] || "") || markdown_file
-  if frontmatter['slug'] && url_paths[slug]
+  f_slug = frontmatter['redirects'].first
+  puts "frontmatter slug #{f_slug} "
+  puts "frontmatter #{File.basename f_slug || markdown_file} "
+  puts "url_paths #{url_paths[f_slug]}"
+  slug = File.basename(f_slug || "") || markdown_file
+  if f_slug && url_paths[slug]
     new_path = "#{new_dir}/" +  url_paths[slug].gsub(WEBSITE, '') + '.md'
     puts "new_path #{new_path}"
     FileUtils.mkdir_p("#{File.dirname(new_path)}")

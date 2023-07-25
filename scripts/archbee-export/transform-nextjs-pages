@@ -35,14 +35,20 @@ def process_directory(directory)
     if File.directory?(absolute_filename)
       process_directory(absolute_filename)
     elsif filename.end_with?('.md')
-      # Get the new directory name (without the .md extension)
-      new_dir = File.join(absolute_directory.sub($directory, $new_dir), filename[0...-3])
 
-      # Create the new directory
-      FileUtils.mkdir_p(new_dir)
+      contents = File.read(absolute_filename)
+      if contents.include?('archbee-image-uploads')
+        # Get the new directory name (without the .md extension)
+        new_dir = File.join(absolute_directory.sub($directory, $new_dir), filename[0...-3])
+        FileUtils.mkdir_p(new_dir)
 
-      # Move the .md file into the new directory and rename it to page.md
-      FileUtils.cp(absolute_filename, File.join(new_dir, 'index.md'))
+        # Move the .md file into the new directory and rename it to index.md
+        FileUtils.cp(absolute_filename, File.join(new_dir, 'index.md'))
+      else
+        new_dir = absolute_directory.sub($directory, $new_dir)
+        FileUtils.mkdir_p(new_dir)
+        FileUtils.cp(absolute_filename, absolute_directory.sub($directory, $new_dir))
+      end
     end
   end
 end

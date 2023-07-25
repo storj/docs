@@ -1,9 +1,10 @@
 ---
 title: Cyberduck
-slug: how-tos/how-to-use-cyberduck-and-storj-dcs
 createdAt: 2022-05-19T18:15:05.000Z
 updatedAt: 2023-07-13T16:07:01.941Z
 docId: QQGzEDU8o-IodQWmr7xP3
+redirects:
+  - /dcs/how-tos/how-to-use-cyberduck-and-storj-dcs
 ---
 
 ## Introduction
@@ -24,7 +25,7 @@ As noted, Cyberduck supports Windows, macOS as well as Linux. Users can download
 
 For those who wish to download via CLI:
 
-## Windows
+### Windows
 
 {% tabs %}
 {% tab label="GUI" %}

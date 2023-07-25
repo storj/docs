@@ -1,9 +1,10 @@
 ---
 title: Decentralization
-slug: concepts/decentralization
 createdAt: 2022-05-19T22:26:30.000Z
 updatedAt: 2023-04-18T12:16:58.000Z
 docId: 2FjPu5jsYrOUNfU1DVH9F
+redirects:
+  - /dcs/concepts/decentralization
 ---
 
 Decentralized data storage means more security and privacy. Decentralized cloud storage is more difficult to attack than traditional centralized data. On a decentralized network, files are broken apart and spread across multiple nodes. Storj DCS uses Erasure Coding to distribute file pieces over many nodes located in different physical locations around the world.‌

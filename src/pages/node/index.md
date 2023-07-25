@@ -1,5 +1,1 @@
----
-title: hello node
----
-
-Hello node
+hi

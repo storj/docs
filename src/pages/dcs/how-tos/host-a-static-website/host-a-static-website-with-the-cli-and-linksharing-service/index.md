@@ -1,9 +1,11 @@
 ---
 title: Host a Static Website with the Uplink CLI and Linksharing Service
-slug: how-tos/host-a-static-website/host-a-static-website-with-the-cli-and-linksharing-service
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-06T16:38:05.000Z
 docId: GkgE6Egi02wRZtyryFyPz
+redirects:
+  - >-
+    /dcs/how-tos/host-a-static-website/host-a-static-website-with-the-cli-and-linksharing-service
 ---
 
 You can use your own domain name and host your own static website on Storj DCS with the following setup.

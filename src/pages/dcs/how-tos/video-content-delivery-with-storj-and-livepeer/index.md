@@ -1,10 +1,14 @@
 ---
 title: Workshop - Global Video Content Delivery with Storj and Livepeer
-slug: how-tos/video-content-delivery-with-storj-and-livepeer
-description: Learn to build a completely decentralized, fast video content delivery service. With over tens of thousands of Storj nodes around the world, see how simple it can be to remove your reliance on centralized providers.
+description: >-
+  Learn to build a completely decentralized, fast video content delivery
+  service. With over tens of thousands of Storj nodes around the world, see how
+  simple it can be to remove your reliance on centralized providers.
 createdAt: 2023-02-28T20:39:08.000Z
 updatedAt: 2023-02-28T22:58:50.000Z
 docId: S-xrhs_X1YHLh4CmwOt2T
+redirects:
+  - /dcs/how-tos/video-content-delivery-with-storj-and-livepeer
 ---
 
 Learn to build a completely decentralized, **fast** video content delivery service. With over tens of thousands of Storj nodes around the world, see how simple it can be to remove your reliance on centralized providers. Gain a solid understanding of the steps required to host video files from Storj (an object storage provider) and transcode them with the Livepeer API.
@@ -21,7 +25,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-## Install uplink
+### Install uplink
 
 Storj has an [](docId\:LueFgrbZ9rJbWtDMXhIWZ) that can be used familiar tools such aws-cli, but it has some limitations such that it uses a gateway to communicate to the global network. In order to communicate directly with Storage Nodes we'll be using Storj's `uplink` tool.
 

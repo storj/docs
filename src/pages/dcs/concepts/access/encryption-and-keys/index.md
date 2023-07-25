@@ -1,9 +1,10 @@
 ---
 title: Encryption Keys
-slug: concepts/access/encryption-and-keys
 createdAt: 2022-05-19T22:23:19.000Z
 updatedAt: 2023-03-03T08:30:09.000Z
 docId: yI4q9JDB3w01xEkFWA4_z
+redirects:
+  - /dcs/concepts/access/encryption-and-keys
 ---
 
 How encryption and encryption keys work on Storj DCS
@@ -34,7 +35,7 @@ In addition to not wanting to expose your data to the risk of compromise by byza
 
 During ordinary Satellite file repair operation, file segments are downloaded by Satellites, re-encoded, and redistributed across storage nodes. As long as all data is encrypted client-side, the repair function does not expose the privacy or security of the data.
 
-## Allowing Decryption for Shared Access to Objects
+### Allowing Decryption for Shared Access to Objects
 
 The first part of this documentation explains how Access Grants work  when access to objects stored on the Storj DCS Platform is to be shared between applications.  Encryption keys work in a very similar way.
 

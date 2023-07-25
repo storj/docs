@@ -1,9 +1,10 @@
 ---
 title: Splunk
-slug: how-tos/splunk-integration-guide
 createdAt: 2022-11-11T18:48:26.000Z
 updatedAt: 2023-07-18T18:44:46.028Z
 docId: QlBLsOc7Q7MhxEDvM9cod
+redirects:
+  - /dcs/how-tos/splunk-integration-guide
 pageTitle: Splunk Integration Guide
 ---
 
@@ -35,7 +36,7 @@ To complete the integration, follow the steps below.
 
 ***
 
-## Create a Storj Account
+### Create a Storj Account
 
 To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
 

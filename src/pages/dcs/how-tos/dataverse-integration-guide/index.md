@@ -1,9 +1,10 @@
 ---
 title: Dataverse
-slug: how-tos/dataverse-integration-guide
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-07-13T16:08:46.587Z
 docId: lvqkxgrbdMrqc1XnnvDFj
+redirects:
+  - /dcs/how-tos/dataverse-integration-guide
 pageTitle: Dataverse Integration Guide
 ---
 
@@ -29,7 +30,7 @@ Credentials will only appear once. Be sure to store them, including the Access K
 
 ## Dataverse Setup
 
-## Configure AWS credentials profile
+### Configure AWS credentials profile
 
 Dataverse will use the "AWS credentials profile file" that is configured for the user you run the Payara service with (e.g. `/home/dataverse/.aws/config`).
 

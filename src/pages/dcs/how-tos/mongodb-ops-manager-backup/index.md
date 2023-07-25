@@ -1,9 +1,10 @@
 ---
 title: MongoDB Ops Manager
-slug: how-tos/mongodb-ops-manager-backup
 createdAt: 2022-05-19T18:15:05.000Z
 updatedAt: 2023-07-19T20:59:31.167Z
 docId: fFkBYzSTI_0eLD8aohftm
+redirects:
+  - /dcs/how-tos/mongodb-ops-manager-backup
 ---
 
 ## Introduction

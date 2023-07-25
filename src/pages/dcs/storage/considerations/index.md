@@ -1,10 +1,11 @@
 ---
 title: Product Overview
-slug: storage/considerations
 createdAt: 2022-05-17T01:15:39.000Z
 updatedAt: 2023-04-03T19:03:42.000Z
 docId: 2npG1YD8Y7JH9UiENkMqR
-slugAlias: dcs/storage
+redirects:
+  - /dcs/storage/considerations
+  - /dcs/storage
 pageTitle: Product overview
 ---
 

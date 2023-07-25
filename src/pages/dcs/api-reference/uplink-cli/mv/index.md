@@ -1,9 +1,10 @@
 ---
 title: mv
-slug: api-reference/uplink-cli/mv
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:47.000Z
 docId: PIfV271UghKvJecT-zQ4d
+redirects:
+  - /dcs/api-reference/uplink-cli/mv
 ---
 
 Moves a Storj object to another location in Storj DCS
@@ -63,7 +64,7 @@ Sample Output:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/fn1JZRT4fFBmNXrzIoBNU_output.png)
 
-## Move an object from a one bucket to another
+### Move an object from a one bucket to another
 
 When the `mv` command is used to move an object from one Storj DCS bucket to another Storj DCS bucket, the CLI will use a server-side move method.
 

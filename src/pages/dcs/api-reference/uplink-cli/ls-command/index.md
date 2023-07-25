@@ -1,9 +1,10 @@
 ---
 title: ls
-slug: api-reference/uplink-cli/ls-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:20.000Z
 docId: Df-CVmCCHmt6r3_c1PLn4
+redirects:
+  - /dcs/api-reference/uplink-cli/ls-command
 ---
 
 &#x20;List objects and prefixes or all buckets
@@ -61,7 +62,7 @@ uplink ls
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/37CrYbSUci3Pdlh1QcuwW_ls-project.png)
 
-## List objects in a bucket
+### List objects in a bucket
 
 {% code-group %}
 ```windows

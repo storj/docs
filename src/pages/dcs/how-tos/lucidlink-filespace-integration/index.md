@@ -1,9 +1,10 @@
 ---
 title: LucidLink Filespace
-slug: how-tos/lucidlink-filespace-integration
 createdAt: 2022-10-28T16:17:33.000Z
 updatedAt: 2023-07-14T16:26:25.063Z
 docId: N-d1y_hTKGgjDM0Z6Bjx5
+redirects:
+  - /dcs/how-tos/lucidlink-filespace-integration
 pageTitle: LucidLink Filespace Integration Guide
 ---
 
@@ -23,7 +24,7 @@ Using Storj with LucidLink provides resilient cloud object storage with blazing 
 
 This integration uses S3 credentials passed from Storj to LucidLink. You will need to set up a Storj account, create a Storj bucket for LucidLink, and generate S3 credentials for LucidLink. Then, you will need to create a Filespace on LucidLink using and initialize it with credentials created in Storj.
 
-## Software Requirements 
+### Software Requirements 
 
 LucidLink integrates with any S3-compatible cloud storage platform, including Storj.&#x20;
 

@@ -1,9 +1,10 @@
 ---
 title: Satellite (Metadata Region)
-slug: concepts/satellite
 createdAt: 2022-05-19T22:24:55.000Z
 updatedAt: 2023-03-03T08:30:09.000Z
 docId: v0b3GtAU4dDT_1qibwCxc
+redirects:
+  - /dcs/concepts/satellite
 ---
 
 The **Satellite** is a set of hosted services that is responsible for a range of functions on the network, including the node discovery system, node address information caching,  per-object metadata storage, storage node reputation management, billing data aggregation, storage node payment, data audit and repair, as well as user account and authorization management.&#x20;

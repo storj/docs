@@ -1,9 +1,10 @@
 ---
 title: rm
-slug: api-reference/uplink-cli/rm-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:54.000Z
 docId: eavv_906IH-39ylIXq30d
+redirects:
+  - /dcs/api-reference/uplink-cli/rm-command
 ---
 
 Delete an object.
@@ -54,7 +55,7 @@ uplink rm sj://cakes/cheesecake.jpg
 ```
 {% /code-group %}
 
-## Delete an encrypted object
+### Delete an encrypted object
 
 If an object has been created with another encryption key, you won't be able to read it, but you can delete it. In order to delete an encrypted object, you have to know its encrypted path. To retrieve it, you can use the list command [](docId\:Df-CVmCCHmt6r3_c1PLn4)  with the encrypted file. For instance, to list the encrypted path of the objects in a bucket `sj://cakes` you could use:
 

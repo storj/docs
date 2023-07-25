@@ -1,9 +1,10 @@
 ---
 title: Support Overview
-slug: support/support-process-overview
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-07-19T21:49:01.904Z
 docId: xe__i9r3jY1QWUR6RYgzd
+redirects:
+  - /dcs/support/support-process-overview
 ---
 
 We want all of the users of Storj DCS to be successful and take advantage of the benefits decentralized cloud storage offers. We understand that we'll have a users with a range of different levels of experience, different use cases and different technologies being integrated. If you're having an issue or wondering where to get started, we've got a couple of ways we can help.

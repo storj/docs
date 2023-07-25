@@ -1,9 +1,10 @@
 ---
 title: rb
-slug: api-reference/uplink-cli/rb-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:50.000Z
 docId: Wo5-shT0hZDNMeyM1kA12
+redirects:
+  - /dcs/api-reference/uplink-cli/rb-command
 ---
 
 rb is the command to remove an empty bucket, or empty a bucket and then remove  it.
@@ -54,7 +55,7 @@ Output:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/zb6IxHgf6VxL2NIRb4J9F_rb-empty-bucket.png)
 
-## Delete bucket and all the objects it contains
+### Delete bucket and all the objects it contains
 
 {% code-group %}
 ```windows

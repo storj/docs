@@ -1,9 +1,10 @@
 ---
 title: Storage Node
-slug: setup/gui-windows/storage-node
 createdAt: 2022-08-31T23:11:26.000Z
 updatedAt: 2023-04-20T04:08:55.000Z
 docId: LAtWfg_LTgbI5yJ8PILUI
+redirects:
+  - /node/setup/gui-windows/storage-node
 ---
 
 ## Installing a Storage Node with the Windows Installer

@@ -1,9 +1,10 @@
 ---
 title: Projects
-slug: jwCU-projects
 createdAt: 2022-05-19T21:49:06.000Z
 updatedAt: 2023-06-03T03:07:47.000Z
 docId: jwCUqpDCk8CUuUqFuykFx
+redirects:
+  - /dcs/jwCU-projects
 ---
 
 ## Introduction

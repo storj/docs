@@ -1,9 +1,10 @@
 ---
 title: Key Architecture Constructs
-slug: concepts/key-architecture-constructs
 createdAt: 2022-05-19T22:24:55.000Z
 updatedAt: 2023-07-19T20:57:27.198Z
 docId: M-5oxBinC6J1D-qSNjKYS
+redirects:
+  - /dcs/concepts/key-architecture-constructs
 ---
 
 Developing applications on Storj DCS require a basic familiarity with the  basic constructs of the service.
@@ -52,7 +53,7 @@ Projects are also useful for managing phases of software development across envi
 **Key Point:** The key distinction is that you can create granular Access Grants within a Project with restricted access to only a single object or path, it's also possible to create an Access Grant with all access to all buckets, paths, and objects within a Project. It is not possible to create an Access Grant with access to buckets, paths, and objects within more than one Project.
 {% /callout %}
 
-## Billing
+### Billing
 
 From a billing perspective, if you only have one application, or you’re an individual using an app like [FileZilla](https://www.storj.io/integrations/filezilla) or [Duplicati](https://www.storj.io/integrations/backup-with-duplicati), you probably only need one project. If you are a managed service provider or systems integrator, and you have multiple applications or want separate invoices for each of the applications, customers, or environments you have, depending on what is relevant to your business, you’ll want to create multiple projects. Usage is itemized within projects at the bucket level, but projects have separate invoices.
 

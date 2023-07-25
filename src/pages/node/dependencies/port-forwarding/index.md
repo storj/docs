@@ -1,9 +1,10 @@
 ---
 title: Step 3. Setup Port Forwarding
-slug: dependencies/port-forwarding
 createdAt: 2022-05-24T21:20:52.000Z
-updatedAt: 2023-07-24T18:25:19.209Z
+updatedAt: 2023-07-24T22:21:58.255Z
 docId: y0jltT-HzKPmDefi532sd
+redirects:
+  - /node/dependencies/port-forwarding
 ---
 
 ## Before starting

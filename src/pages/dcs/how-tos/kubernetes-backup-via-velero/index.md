@@ -1,9 +1,10 @@
 ---
 title: Kubernetes Backup via Velero
-slug: how-tos/kubernetes-backup-via-velero
 createdAt: 2022-05-19T18:15:05.000Z
 updatedAt: 2023-03-03T08:30:09.000Z
-docId: -qeCzVrbZxM-Wz6P5SQbZ
+docId: '-qeCzVrbZxM-Wz6P5SQbZ'
+redirects:
+  - /dcs/how-tos/kubernetes-backup-via-velero
 ---
 
 ## Introduction

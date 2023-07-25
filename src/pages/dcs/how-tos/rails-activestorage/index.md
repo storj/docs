@@ -1,10 +1,11 @@
 ---
 title: Rails Active Storage
-slug: how-tos/rails-activestorage
 description: How to connect ActiveStorage in Rails 7 to Storj
 createdAt: 2023-01-13T22:20:58.000Z
 updatedAt: 2023-02-28T16:16:41.000Z
 docId: NhH8YVF9d8liRd7BRu9jT
+redirects:
+  - /dcs/how-tos/rails-activestorage
 pageTitle: Rails 7 ActiveStorage Connected to Storj
 ---
 

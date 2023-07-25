@@ -1,9 +1,10 @@
 ---
 title: Manage Projects
-slug: getting-started/satellite-developer-account/manage-projects
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-07-19T21:00:36.482Z
 docId: s9MmhnH5OaJrTszOozt3k
+redirects:
+  - /dcs/getting-started/satellite-developer-account/manage-projects
 ---
 
 When you log into the Satellite Admin Console, you start on the [](docId\:k6QwBZM3hnzxkCuQxLOal) for your default Project. A Project is the basic unit for aggregating usage, calculating billing, invoicing fees,  collecting payment, and handling access management. Users can create multiple Projects and projects are invoiced separately. Within a Project, usage is tracked at the Bucket level and aggregated for invoicing to the Project. Project names are not client-side encrypted so that they may be rendered in the Satellite user interface. There are two main drivers for creating multiple Projects: access management and billing.

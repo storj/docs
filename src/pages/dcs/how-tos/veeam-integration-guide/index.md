@@ -1,9 +1,10 @@
 ---
 title: Veeam
-slug: how-tos/veeam-integration-guide
 createdAt: 2023-01-04T14:49:43.000Z
 updatedAt: 2023-07-19T18:19:30.188Z
 docId: Cr9Ak4IM8F9uuHVlVtbpj
+redirects:
+  - /dcs/how-tos/veeam-integration-guide
 pageTitle: Veeam Integration Guide
 ---
 
@@ -25,7 +26,7 @@ For more information, visit [veeam.com](). You can also [download a free trial](
 
 To integrate Storj with Veeam, you will need to create S3 credentials in Storj and add them within Veeam. Veeam uses a wizard to guide users in adding S3-compatible cloud storage.
 
-## Requirements
+### Requirements
 
 *   An active Storj account: navigate to <https://us1.storj.io/signup?partner=veeam> to sign up, or log in <https://storj.io/login> if you already have an account.
 

@@ -1,9 +1,10 @@
 ---
 title: Coordination Avoidance
-slug: concepts/decentralization/coordination-avoidance
 createdAt: 2022-05-19T22:26:30.000Z
 updatedAt: 2023-03-03T08:30:09.000Z
 docId: UxLZTYCEDciC5L0f3LRWd
+redirects:
+  - /dcs/concepts/decentralization/coordination-avoidance
 ---
 
 Rather than coming to a global consensus around the entire state of the network (as in blockchains like ethereum, etc.) The Storj Network is **Coordination Avoidant.**  The network does not need global consistency (as per CAP Theorem) as each uplink user only needs to be able to recover *their* files.
@@ -14,7 +15,7 @@ By ensuring coordination avoidance within Storj DCS, we’re able to deliver bet
 
 We believe our approach of decentralizing both storage and metadata tiers in the network allows greater scalability, performance, and reliability than systems that rely on seeking consensus.
 
-## Comparison to Blockchain Networks
+### Comparison to Blockchain Networks
 
 Blockchain consensus offers very strong guarantees, but this comes at a heavy cost in coordination overhead. Coordination is not always necessary for correctness and minimizing coordination is key to maximizing scalability, availability, and high performance in database systems. One fundamental design decision of the Storj network was not to utilize blockchain consensus for file transfers to increase those properties of the Storj network. Storj takes a pragmatic approach to avoiding blockchain consensus while still maintaining correctness for file transfers. But, at the same time by default, Storj uses blockchain consensus with the Ethereum-based STORJ token for payment processing to storage node operators.
 

@@ -1,9 +1,10 @@
 ---
 title: AWS SDK and Hosted Gateway MT
-slug: getting-started/quickstart-aws-sdk-and-hosted-gateway-mt
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-17T16:18:39.000Z
 docId: LueFgrbZ9rJbWtDMXhIWZ
+redirects:
+  - /dcs/getting-started/quickstart-aws-sdk-and-hosted-gateway-mt
 pageTitle: Quickstart - AWS SDK and Hosted Gateway MT
 ---
 
@@ -67,7 +68,7 @@ e.g. with npm
 npm install --save aws-sdk
 ```
 
-## 2. Import the S3 client
+### 2. Import the S3 client
 
 ```none
 import S3 from "aws-sdk/clients/s3";

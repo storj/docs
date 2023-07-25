@@ -1,9 +1,10 @@
 ---
 title: FileZilla Native Integration
-slug: how-tos/set-up-filezilla-for-decentralized-file-transfer
 createdAt: 2022-05-19T18:15:05.000Z
 updatedAt: 2023-07-18T17:29:23.212Z
 docId: OkJongWeLGhPy4KKz34W4
+redirects:
+  - /dcs/how-tos/set-up-filezilla-for-decentralized-file-transfer
 ---
 
 ## Introduction
@@ -80,7 +81,7 @@ Please note that Storj does not know or store your encryption passphrase, so if 
 
 To download the latest release of FileZilla, navigate to <https://filezilla-project.org/download.php?show_all=1> and select the version appropriate for your operating system, then install FileZilla.
 
-## Creating a new Site
+### Creating a new Site
 
 Open the Site Manager by clicking on the leftmost icon.
 

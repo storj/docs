@@ -1,9 +1,11 @@
 ---
 title: View Distribution of an Object
-slug: getting-started/quickstart-uplink-cli/uploading-your-first-object/view-distribution-of-an-object
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-03T08:36:11.000Z
-docId: -v_wZieO-SN4FiEn3mmFU
+docId: '-v_wZieO-SN4FiEn3mmFU'
+redirects:
+  - >-
+    /dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/view-distribution-of-an-object
 ---
 
 You need to have a satellite account and installed Uplink CLI as described in [](docId\:TbMdOGCAXNWyPpQmH6EOq)

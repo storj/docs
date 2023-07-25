@@ -1,9 +1,10 @@
 ---
 title: Immutability
-slug: lTRh-immutability
 createdAt: 2023-05-10T20:08:27.000Z
 updatedAt: 2023-05-10T20:14:31.000Z
 docId: lTRh1sv6vWZv_KFyFOtfK
+redirects:
+  - /dcs/lTRh-immutability
 ---
 
 # Immutability
@@ -50,7 +51,7 @@ Storj follows industry best practices to secure user accounts that have privileg
 
 While enabling MFA on privileged accounts is the industry norm and best practice for restricting access management for authorized users, Storj adds an additional layer of protection for immutable data. Since all data and metadata is encrypted with encryption keys that are managed by the user and that are not stored on the Storj service, even if a privileged user account is compromised, unless the encryption passphrase associated with the data is also compromised, access to the actual data is not possible. 
 
-## Credential Authorization Management
+### Credential Authorization Management
 
 While it is important to secure privileged user accounts, by far the most common attack vector on cloud storage repositories are credential-based attacks. Credentials created for applications to interact with cloud storage are frequently embedded in application configurations in SaaS applications or installed applications on servers. If those Saas applications or hardware devices are compromised and a bad actor is able to access a credential, that bad actor may do whatever the credential is authorized to do. In all cases, the bad actor will attempt to escalate the privileges associated with the credential, either by bypassing additional environmental restrictions such as security policies on a specific environment or using the credential in a different application, environment or security context. Moreover, where the implementation of security controls requires a high level of complexity, users frequently choose not to implement the full spectrum of security options due to the high level of friction introduced into development lifecycles.
 

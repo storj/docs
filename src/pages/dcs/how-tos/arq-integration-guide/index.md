@@ -1,9 +1,10 @@
 ---
 title: Arq
-slug: how-tos/arq-integration-guide
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-07-18T17:24:44.923Z
 docId: rnZKB53zoxOVjYLcnHngs
+redirects:
+  - /dcs/how-tos/arq-integration-guide
 pageTitle: Arq Integration Guide
 ---
 

@@ -1,9 +1,11 @@
 ---
 title: ZkSync Payments
-slug: dependencies/storage-node-operator-payout-information/zk-sync-opt-in-for-snos
 createdAt: 2022-05-24T21:21:40.000Z
 updatedAt: 2023-03-25T04:00:44.000Z
 docId: 6TX_ve1PyUrXuwax-mWWw
+redirects:
+  - >-
+    /node/dependencies/storage-node-operator-payout-information/zk-sync-opt-in-for-snos
 ---
 
 ## Introduction

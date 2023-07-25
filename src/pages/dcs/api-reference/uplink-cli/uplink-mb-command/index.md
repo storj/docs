@@ -1,9 +1,10 @@
 ---
 title: mb
-slug: api-reference/uplink-cli/uplink-mb-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:23.000Z
 docId: F77kaGpjXx7w-JYv2rkhf
+redirects:
+  - /dcs/api-reference/uplink-cli/uplink-mb-command
 ---
 
 Create a new bucket

@@ -1,9 +1,11 @@
 ---
 title: Import an Access to an Object
-slug: getting-started/quickstart-uplink-cli/sharing-your-first-object/import-access
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-03T08:36:11.000Z
 docId: R8OfnPylILOIrkpc187Xx
+redirects:
+  - >-
+    /dcs/getting-started/quickstart-uplink-cli/sharing-your-first-object/import-access
 ---
 
 Importing an access is done using the `import` command.
@@ -28,7 +30,7 @@ This should give you the following output:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/LnvFyNM5SGNgYhluYziqI_access-import.png)
 
-## Import from the input
+### Import from the input
 
 {% code-group %}
 ```windows

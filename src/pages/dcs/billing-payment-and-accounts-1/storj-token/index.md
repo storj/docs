@@ -1,9 +1,10 @@
 ---
 title: Payment Methods
-slug: billing-payment-and-accounts-1/storj-token
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-07-19T20:56:18.216Z
 docId: 7U4_uu6Pzg6u2N6FpV9VE
+redirects:
+  - /dcs/billing-payment-and-accounts-1/storj-token
 ---
 
 Storj DCS accepts the following two payment methods:
@@ -42,7 +43,7 @@ You’ll be prompted to add your card information. Using a credit card is somewh
 
 *   If a credit card expires, a user will receive a notification to the registered email on the account, however, if a new payment method is not added within a reasonable amount of time, we reserve the right to reclaim the available storage and bandwidth, reset usage limits to zero and delete any data stored on the account pursuant to our data retention policy.
 
-## Using STORJ Token&#x20;
+### Using STORJ Token&#x20;
 
 In addition to credit cards, users may also pay for usage fees with STORJ token. Storj created the STORJ utility token as a medium of exchange on its decentralized cloud storage network. The STORJ utility token facilitates payments from people around the world for their use of the Storj DCS network to store their data, and Storj uses it to pay our community of Storage Node Operators that rent their unused hard drive capacity and bandwidth to the network.&#x20;
 

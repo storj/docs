@@ -1,9 +1,10 @@
 ---
 title: Zerto
-slug: how-tos/zerto-integration-guide
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-07-19T18:17:48.173Z
 docId: 3fdjlw0QhKg2w6FU4ZdbX
+redirects:
+  - /dcs/how-tos/zerto-integration-guide
 pageTitle: Zerto Integration Guide
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: API Key
-slug: concepts/access/access-grants/api-key
 createdAt: 2022-05-19T22:20:54.000Z
 updatedAt: 2023-03-03T08:30:09.000Z
 docId: XOtletuYWGeA2Om86yvwA
+redirects:
+  - /dcs/concepts/access/access-grants/api-key
 ---
 
 API Keys are based on Macaroons and include the capability to encode  programmatic access restrictions into the API Key.

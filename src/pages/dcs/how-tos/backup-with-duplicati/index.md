@@ -1,9 +1,10 @@
 ---
 title: Duplicati
-slug: how-tos/backup-with-duplicati
 createdAt: 2022-05-19T18:15:05.000Z
 updatedAt: 2023-07-19T18:29:00.143Z
 docId: 3gNhGvPOi3DFDya6NyVb0
+redirects:
+  - /dcs/how-tos/backup-with-duplicati
 ---
 
 ## Introduction

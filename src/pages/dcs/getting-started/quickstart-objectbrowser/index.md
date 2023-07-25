@@ -1,9 +1,10 @@
 ---
 title: Object Browser
-slug: getting-started/quickstart-objectbrowser
 createdAt: 2022-08-02T16:14:49.000Z
-updatedAt: 2023-03-02T22:11:58.000Z
+updatedAt: 2023-07-24T21:52:46.854Z
 docId: 4oDAezF-FcfPr0WPl7knd
+redirects:
+  - /dcs/getting-started/quickstart-objectbrowser
 pageTitle: Quickstart - Object Browser
 ---
 

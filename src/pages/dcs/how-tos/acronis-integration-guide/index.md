@@ -1,10 +1,14 @@
 ---
 title: Acronis
-slug: how-tos/acronis-integration-guide
-description: Get started integrating Acronis with Storj for cost effective cloud backup and storage. Our guide provides step-by-step instructions to connect your Acronis Cyber Infrastructure to Storj. Read now!
+description: >-
+  Get started integrating Acronis with Storj for cost effective cloud backup and
+  storage. Our guide provides step-by-step instructions to connect your Acronis
+  Cyber Infrastructure to Storj. Read now!
 createdAt: 2023-03-08T19:02:05.000Z
 updatedAt: 2023-07-18T12:51:17.003Z
 docId: GhGW4KaBkd428zJ51EIdp
+redirects:
+  - /dcs/how-tos/acronis-integration-guide
 pageTitle: Integration guide for connecting Storj to Acronis
 ---
 
@@ -44,7 +48,7 @@ To begin, you will need to create a Storj account.&#x20;
 
 Navigate to <https://us1.storj.io/signup?partner=acronis> to sign up, or log in <https://storj.io/login> if you already have an account.
 
-## Create a Bucket 
+### Create a Bucket 
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

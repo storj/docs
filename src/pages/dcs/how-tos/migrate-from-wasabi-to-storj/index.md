@@ -1,10 +1,15 @@
 ---
 title: Migrate from Wasabi to Storj
-slug: how-tos/migrate-from-wasabi-to-storj
-description: Learn how to smoothly migrate from Wasabi to Storj using the rclone tool. Our comprehensive guide offers step-by-step instructions to securely transfer your data between these cloud storage providers, ensuring data integrity and cost-efficiency.
+description: >-
+  Learn how to smoothly migrate from Wasabi to Storj using the rclone tool. Our
+  comprehensive guide offers step-by-step instructions to securely transfer your
+  data between these cloud storage providers, ensuring data integrity and
+  cost-efficiency.
 createdAt: 2023-06-30T18:08:04.938Z
 updatedAt: 2023-07-20T21:29:46.774Z
 docId: FQTEKVgNNJBpZwe2hT7LH
+redirects:
+  - /dcs/how-tos/migrate-from-wasabi-to-storj
 pageTitle: How to migrate from Wasabi to Storj
 ---
 
@@ -33,7 +38,7 @@ Visit <https://rclone.org/install/> for instructions on how to install rclone.
 
 Before using rclone, we'll need to create access and a secret key for Wasabi and an access grant for Storj.
 
-## Wasabi Access and Secret Key
+### Wasabi Access and Secret Key
 
 Use your Wasabi account credentials to log in to the Wasabi Management Console.
 

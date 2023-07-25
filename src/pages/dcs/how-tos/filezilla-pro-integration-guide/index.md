@@ -1,9 +1,10 @@
 ---
-title: FileZilla Pro Integration 
-slug: how-tos/filezilla-pro-integration-guide
+title: FileZilla Pro Integration
 createdAt: 2022-05-19T18:15:05.000Z
 updatedAt: 2023-07-18T17:30:58.376Z
 docId: APk9353kCNcg5PKRPQ06u
+redirects:
+  - /dcs/how-tos/filezilla-pro-integration-guide
 ---
 
 ## How to Integrate Filezilla Pro with Storj DCS to Easily Find, Transfer and  Download All Of Your Files
@@ -34,7 +35,7 @@ FileZilla Pro gives users the option to send files to a Storj DCS account in two
 
 *   Has a 2.68x upload multiplier for uploads and does not support segment parallelism
 
-## GatewayMT specs regarding integration with Storj DCS:
+### GatewayMT specs regarding integration with Storj DCS:
 
 *   Gateway MT (Fastest for uploading large files)
 

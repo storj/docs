@@ -1,9 +1,10 @@
 ---
 title: Restic
-slug: how-tos/backup-with-restic
 createdAt: 2022-05-19T18:15:05.000Z
 updatedAt: 2023-07-20T21:31:49.561Z
 docId: 5_zxVAqCUku5pVX0OTwSW
+redirects:
+  - /dcs/how-tos/backup-with-restic
 ---
 
 ## Introduction

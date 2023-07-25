@@ -1,9 +1,10 @@
 ---
 title: Atempo (Miria)
-slug: how-tos/atempo-miria-integration
 createdAt: 2022-11-22T20:53:53.000Z
 updatedAt: 2023-07-13T16:03:28.901Z
 docId: Sg-4A2Td09A3OeSu6H5ag
+redirects:
+  - /dcs/how-tos/atempo-miria-integration
 pageTitle: Atempo (Miria) Integration Guide
 ---
 
@@ -35,7 +36,7 @@ Miria integrates with Storj cloud storage through the S3 protocol. The Miria ser
 
 To integrate Miria with Storj, you must create S3 credentials for Miria in Storj and pass them to the Miria server through the Miria web interface.
 
-## Requirements
+### Requirements
 
 *   An active Storj account, or you can sign up here <https://us1.storj.io/signup?partner=atempo>
 

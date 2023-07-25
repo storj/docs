@@ -1,9 +1,11 @@
 ---
 title: Create Access Grant in CLI
-slug: getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-07-11T03:10:07.193Z
 docId: OXSINcFRuVMBacPvswwNU
+redirects:
+  - >-
+    /dcs/getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token
 ---
 
 ## Introduction

@@ -1,9 +1,10 @@
 ---
 title: Photos+
-slug: how-tos/photos-plus-integration-guide
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-07-19T18:15:39.875Z
 docId: e8RYUgo0V1EGA6wbuvb2x
+redirects:
+  - /dcs/how-tos/photos-plus-integration-guide
 pageTitle: Photos+ Integration Guide
 ---
 

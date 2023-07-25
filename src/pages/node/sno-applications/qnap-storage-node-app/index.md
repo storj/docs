@@ -1,9 +1,10 @@
 ---
 title: QNAP Storage Node App
-slug: sno-applications/qnap-storage-node-app
 createdAt: 2022-05-24T21:18:27.000Z
 updatedAt: 2023-03-03T08:30:27.000Z
 docId: N-dnnf7HhHcOaavvXjplw
+redirects:
+  - /node/sno-applications/qnap-storage-node-app
 ---
 
 ## Introduction

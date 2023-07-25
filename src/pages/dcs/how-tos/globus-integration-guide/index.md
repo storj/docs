@@ -1,11 +1,15 @@
 ---
 title: Globus
-slug: how-tos/globus-integration-guide
-description: Efficiently integrate Globus with Storj's S3 compatible storage via the Globus S3 Storage Gateway for seamless data transfer, large dataset management, and secure data sharing.
+description: >-
+  Efficiently integrate Globus with Storj's S3 compatible storage via the Globus
+  S3 Storage Gateway for seamless data transfer, large dataset management, and
+  secure data sharing.
 createdAt: 2023-07-12T16:11:09.910Z
 updatedAt: 2023-07-19T22:07:47.394Z
 docId: NHV1H2XZHxPHc8xeHiI8t
-slugAlias: dcs/how-to/globus-integration-guide
+redirects:
+  - /dcs/how-tos/globus-integration-guide
+  - /dcs/how-to/globus-integration-guide
 pageTitle: Globus Integration Guide
 ---
 
@@ -45,7 +49,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-## Create a Bucket 
+### Create a Bucket 
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

@@ -1,9 +1,10 @@
 ---
 title: Data Structure
-slug: concepts/data-structure
 createdAt: 2022-05-19T22:24:55.000Z
 updatedAt: 2023-03-03T08:30:09.000Z
 docId: Lq9m1BFtBYYz1I-4RwEhp
+redirects:
+  - /dcs/concepts/data-structure
 ---
 
 How data is logically segmented on the network
@@ -16,7 +17,7 @@ How data is logically segmented on the network
 
 **Objects**Each object typically includes the data itself, a variable amount of [metadata](https://en.wikipedia.org/wiki/Metadata), and a [globally unique identifier](https://en.wikipedia.org/wiki/Globally_unique_identifier) (Object key) which  uniquely identifies the object in a bucket. Objects within buckets are represented by keys, where keys can optionally be listed using the "/" delimiter. Objects are always end-to-end encrypted.
 
-## Advanced Concepts
+### Advanced Concepts
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/F1tpWMp1WeBWlJyUfdem3_image.png)
 

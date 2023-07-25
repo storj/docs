@@ -1,10 +1,14 @@
 ---
 title: oCIS
-slug: how-tos/ocis-integration-guide
-description: Boost your data storage and security with our guide on integrating Storj with oCIS. Explore the benefits of combining Storj's economical S3-compatible storage with oCIS's powerful file sync and share platform. 
+description: >-
+  Boost your data storage and security with our guide on integrating Storj with
+  oCIS. Explore the benefits of combining Storj's economical S3-compatible
+  storage with oCIS's powerful file sync and share platform.
 createdAt: 2023-03-08T19:02:05.000Z
 updatedAt: 2023-07-19T18:14:15.936Z
 docId: 6yT9Yqca64ZFFUEELoZGx
+redirects:
+  - /dcs/how-tos/ocis-integration-guide
 pageTitle: Integration guide for connecting Storj to oCIS
 ---
 
@@ -46,7 +50,7 @@ To begin, you will need to create a Storj account [https://storj.io/signup?partn
 
 
 
-## Create a Bucket 
+### Create a Bucket 
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

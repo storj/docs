@@ -1,9 +1,10 @@
 ---
 title: File Redundancy
-slug: concepts/file-redundancy
 createdAt: 2022-05-19T22:24:55.000Z
 updatedAt: 2023-03-03T08:30:09.000Z
 docId: CBMEVO2vA2lDZ_BVuZ9aP
+redirects:
+  - /dcs/concepts/file-redundancy
 ---
 
 ## Durability and expansion factor&#x20;
@@ -16,7 +17,7 @@ For example, suppose your desired durability level requires a replication strate
 
 On the one hand, replication does make network maintenance simpler. If a node goes offline, only one of the other storage nodes is needed to bring a new replacement node into the fold. On the other hand, for every node that is added to the redundancy pool, 100% of the replicated data must be transferred.
 
-## Erasure Code&#x20;
+### Erasure Code&#x20;
 
 Erasure codes are another redundancy approach, and importantly, they do not tie durability to the expansion factor. You can tune your durability without increasing the overall network traffic!
 

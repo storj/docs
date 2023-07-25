@@ -1,9 +1,10 @@
 ---
 title: Rclone Hosted Gateway
-slug: how-tos/sync-files-with-rclone/rclone-with-hosted-gateway
 createdAt: 2022-05-19T18:28:40.000Z
 updatedAt: 2023-07-19T18:22:51.553Z
 docId: WayQo-4CZXkITaHiGeQF_
+redirects:
+  - /dcs/how-tos/sync-files-with-rclone/rclone-with-hosted-gateway
 ---
 
 ## Selecting an Integration Pattern
@@ -22,7 +23,7 @@ By selecting this integration pattern, you are opting into [Server-side Encrypti
 
 ## Prerequisites
 
-## Generate Credentials to the Gateway MT
+### Generate Credentials to the Gateway MT
 
 **Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 

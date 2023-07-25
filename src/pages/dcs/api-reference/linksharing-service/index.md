@@ -1,9 +1,10 @@
 ---
 title: Linksharing Service
-slug: api-reference/linksharing-service
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-02-28T18:55:26.000Z
 docId: sN2GhYgGUtqBVF65GhKEa
+redirects:
+  - /dcs/api-reference/linksharing-service
 ---
 
 ## Overview

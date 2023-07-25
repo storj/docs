@@ -1,10 +1,11 @@
 ---
 title: Iconik
-slug: iconik-integration
 createdAt: 2022-11-11T18:48:17.000Z
 updatedAt: 2023-07-19T18:10:44.227Z
 docId: DOrHKPnU0WwmIG7LX4Pfg
-slugAlias: dcs/how-tos/iconik-integration-guide
+redirects:
+  - /dcs/iconik-integration
+  - /dcs/how-tos/iconik-integration-guide
 pageTitle: Iconik Integration Guide
 ---
 
@@ -36,7 +37,7 @@ Iconik is compatible with Windows, Mac, and Linux OS. To request a trial, visit 
 
 ***
 
-## Create a Storj Account
+### Create a Storj Account
 
 To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
 

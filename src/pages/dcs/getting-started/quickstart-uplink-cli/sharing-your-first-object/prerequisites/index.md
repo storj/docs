@@ -1,10 +1,11 @@
 ---
 title: Uplink CLI
-slug: getting-started/quickstart-uplink-cli/prerequisites
 createdAt: 2022-04-25T20:05:51.000Z
-updatedAt: 2023-03-03T08:28:40.000Z
+updatedAt: 2023-07-24T22:18:50.956Z
 docId: TbMdOGCAXNWyPpQmH6EOq
-slugAlias: dcs/getting-started/quickstart-uplink-cli
+redirects:
+  - /dcs/getting-started/quickstart-uplink-cli/prerequisites
+  - /dcs/getting-started/quickstart-uplink-cli
 pageTitle: Quickstart Uplink CLI
 ---
 
@@ -22,7 +23,8 @@ Go to storj.io, and [start for free](https://storj.io/signup).
 
 {% tabs %}
 {% tab label="Windows" %}
-## Download the [Windows Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_windows_amd64.zip) zip file&#xA;
+Download the [Windows Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_windows_amd64.zip) zip file
+
 
 In the Downloads folder, right-click and select "Extract all"
 
@@ -42,7 +44,7 @@ Open **Windows PowerShell** and continue on to the next step.
 {% /tab %}
 
 {% tab label="Linux" %}
-## AMD64
+AMD64
 
 **Curl Download**
 
@@ -60,9 +62,9 @@ sudo install uplink /usr/local/bin/uplink
 
 
 
-### ARM
+**ARM**
 
-**Curl Download**
+Curl Download
 
 ```shell
 curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm.zip -o uplink_linux_arm.zip
@@ -70,7 +72,7 @@ unzip -o uplink_linux_arm.zip
 sudo install uplink /usr/local/bin/uplink
 ```
 
-**Direct Download**
+Direct Download
 
 [Linux ARM Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_linux_arm.zip)
 
@@ -78,9 +80,9 @@ sudo install uplink /usr/local/bin/uplink
 
 
 
-### ARM64
+**ARM64**
 
-**Curl Download**
+Curl Download
 
 ```shell
 curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm64.zip -o uplink_linux_arm64.zip
@@ -88,7 +90,7 @@ unzip -o uplink_linux_arm64.zip
 sudo install uplink /usr/local/bin/uplink
 ```
 
-**Direct Download**
+Direct Download
 
 [Linux ARM64 Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_linux_arm64.zip)
 

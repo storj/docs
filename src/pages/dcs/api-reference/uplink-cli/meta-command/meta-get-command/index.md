@@ -1,9 +1,10 @@
 ---
 title: meta get
-slug: api-reference/uplink-cli/meta-command/meta-get-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-06-11T10:57:01.000Z
 docId: 0u8rcWLCr1hwNmWRnyvgn
+redirects:
+  - /dcs/api-reference/uplink-cli/meta-command/meta-get-command
 ---
 
 ## Usage
@@ -65,7 +66,7 @@ uplink meta get sj://cakes/cheesecake.jpg
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/zxWOIDRiLXcedbjVc6OmG_meta-get.png)
 
-## Query for a specific key in metadata
+### Query for a specific key in metadata
 
 You can retrieve the value of key `baker` for object `sj://cakes/cheesecake.jpg` using:
 

@@ -1,9 +1,10 @@
 ---
 title: Understanding Storj DCS
-slug: concepts/overview
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-03T08:36:17.000Z
 docId: wEGJDbEQojQd9A6w4A19I
+redirects:
+  - /dcs/concepts/overview
 ---
 
 ## Overview

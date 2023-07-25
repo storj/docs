@@ -3,6 +3,8 @@ title: Billing
 createdAt: 2022-05-19T21:49:06.000Z
 updatedAt: 2023-04-21T02:54:19.000Z
 docId: tljdK4mFWcVk0Nei6Zlj-
+redirects:
+  - /dcs/undefined
 ---
 
 ## Introduction
@@ -43,7 +45,7 @@ This deposit address supports only L1 transactions, zkSync is not supported yet.
 Please note, the payment will be accounted only after some amount of confirmations on the Ethereum network and then StorjScan will send them to your balance. This could take from minutes and up to 4 hours. If it took longer, please [contact support](https://supportdcs.storj.io).
 {% /callout %}
 
-## Viewing transactions
+### Viewing transactions
 
 You can click the **See transactions** button in the ***Billing -**** ****Payment Methods*** section to see your transactions:
 

@@ -1,9 +1,10 @@
 ---
 title: cp
-slug: api-reference/uplink-cli/cp-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:04.000Z
 docId: yk6xM8Jj_C-blgyjh4K61
+redirects:
+  - /dcs/api-reference/uplink-cli/cp-command
 ---
 
 Copies a local file or Storj object to another location locally or in Storj  DCS
@@ -71,7 +72,7 @@ Output:
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/-hjCrs6csxIQRGlUsN-_h_cp01.png)
 
-## Copy a file from a bucket to a local drive
+### Copy a file from a bucket to a local drive
 
 When the `cp` command is used to copy a file from Storj DCS (download), the CLI first downloads the minimum number of pieces to reconstitute a file (typically 29 pieces), then re-encodes the pieces into a single file, and finally decrypts the file client-side.&#x20;
 

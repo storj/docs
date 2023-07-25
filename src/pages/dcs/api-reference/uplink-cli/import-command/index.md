@@ -1,9 +1,10 @@
 ---
 title: import
-slug: api-reference/uplink-cli/import-command
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-22T13:03:09.000Z
 docId: N20xcpVOuPQIEcaA44wZu
+redirects:
+  - /dcs/api-reference/uplink-cli/import-command
 ---
 
 Imports a serialized access grant into the configuration.
@@ -49,7 +50,7 @@ uplink import cheesecake cheesecake.access
 ```
 {% /code-group %}
 
-## Import access grant with a key
+### Import access grant with a key
 
 {% code-group %}
 ```windows

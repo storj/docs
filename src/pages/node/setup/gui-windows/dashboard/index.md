@@ -1,9 +1,10 @@
 ---
 title: Dashboard Windows
-slug: setup/gui-windows/dashboard
 createdAt: 2022-05-24T21:18:52.000Z
 updatedAt: 2023-03-03T08:30:27.000Z
 docId: 3k4V1HFunDWHVso9b1Xt9
+redirects:
+  - /node/setup/gui-windows/dashboard
 pageTitle: Dashboard
 ---
 

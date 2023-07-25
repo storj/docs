@@ -1,9 +1,10 @@
 ---
 title: AWS CLI and Hosted Gateway MT
-slug: getting-started/gateway-mt
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-03-17T16:17:12.000Z
 docId: AsyYcUJFbO1JI8-Tu8tW3
+redirects:
+  - /dcs/getting-started/gateway-mt
 pageTitle: Quickstart - AWS CLI and Hosted Gateway MT
 ---
 
@@ -57,7 +58,7 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or
 
 Now you are ready to configure AWS CLI.
 
-## Configure AWS CLI with your credentials
+### Configure AWS CLI with your credentials
 
 {% callout type="info"  %} 
 To continue make sure you have the AWS CLI installed on your machine.&#x20;

@@ -1,9 +1,11 @@
 ---
 title: Video analytics and management with Kerberos Vault
-slug: how-tos/how-to-set-up-video-analytics-and-video-management-with-kerberos-vault
 createdAt: 2022-05-19T18:15:05.000Z
 updatedAt: 2023-03-03T08:30:09.000Z
 docId: c0Ay0w8gxfln0EJxle0bz
+redirects:
+  - >-
+    /dcs/how-tos/how-to-set-up-video-analytics-and-video-management-with-kerberos-vault
 ---
 
 ## Introduction
@@ -18,7 +20,7 @@ Storj's decentralized cloud storage platform offers a great video storage backen
 
 Conveniently, it is fairly simple to configure Storj DCS to work with Kerberos Vault. This doc will show the steps necessary to do so.
 
-## Prerequisites
+### Prerequisites
 
 Before starting the steps in this outline, ensure you have the following:
 

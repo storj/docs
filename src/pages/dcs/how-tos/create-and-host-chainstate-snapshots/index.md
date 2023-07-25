@@ -1,9 +1,10 @@
 ---
 title: Create and host Chainstate Snapshots
-slug: how-tos/create-and-host-chainstate-snapshots
 createdAt: 2022-08-02T16:14:49.000Z
 updatedAt: 2023-02-28T20:59:44.000Z
 docId: 31PlH5QGjhv0HKIaLeU4t
+redirects:
+  - /dcs/how-tos/create-and-host-chainstate-snapshots
 ---
 
 Host snapshots at reduced cost when spinning up new node.
@@ -12,7 +13,7 @@ Host snapshots at reduced cost when spinning up new node.
 
 After [creating an account](https://www.storj.io/signup) on Storj DCS, you’ll need to setup the uplink cli.
 
-## Setup uplink CLI
+### Setup uplink CLI
 
 The uplink cli is a tool similar to aws cli that allows creation of buckets and uploading/downloading snapshots directly from the 15,000+ storage nodes. We also have an aws s3 compatible api as an alternative.
 

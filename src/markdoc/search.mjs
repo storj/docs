@@ -7,7 +7,6 @@ import { slugifyWithCounter } from '@sindresorhus/slugify'
 import Markdoc from '@markdoc/markdoc'
 
 const __filename = url.fileURLToPath(import.meta.url)
-console.log('****************************', __filename)
 const slugify = slugifyWithCounter()
 
 function toString(node) {
@@ -51,7 +50,7 @@ export default function (nextConfig = {}) {
         test: __filename,
         use: [
           createLoader(function () {
-            let pagesDir = path.resolve('./src/pages')
+            let pagesDir = path.resolve('./pages')
             this.addContextDependency(pagesDir)
 
             let files = glob.sync('**/*.md', { cwd: pagesDir })

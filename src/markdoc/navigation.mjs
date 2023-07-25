@@ -153,7 +153,7 @@ export default function (nextConfig = {}) {
         test: __filename,
         use: [
           createLoader(function () {
-            let pagesDir = path.resolve('./src/pages')
+            let pagesDir = path.resolve('./pages')
             this.addContextDependency(pagesDir)
 
             let dcs = walkDir(`${pagesDir}/dcs`, 'dcs')
@@ -181,7 +181,7 @@ export default function (nextConfig = {}) {
       return config
     },
     async redirects() {
-      let pagesDir = path.resolve('./src/pages')
+      let pagesDir = path.resolve('./pages')
       let re = extractRedirects(walkDir(`${pagesDir}/dcs`, 'dcs', '', true))
       let dcs = convertToNextRedirects(re)
       let node = convertToNextRedirects(

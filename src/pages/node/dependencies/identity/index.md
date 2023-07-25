@@ -9,15 +9,15 @@ redirects:
 
 ## Before starting
 
-[](docId\:hbCGTv1ZLLR2-kpSaGEXw)&#x20;
+[](docId:hbCGTv1ZLLR2-kpSaGEXw)&#x20;
 
-[](docId\:v-fUvPqySvUwTMF-od6hD)&#x20;
+[](docId:v-fUvPqySvUwTMF-od6hD)&#x20;
 
-[](docId\:y0jltT-HzKPmDefi532sd)&#x20;
+[](docId:y0jltT-HzKPmDefi532sd)&#x20;
 
-[](docId\:owZeAc56KSDnUzDhsBfB8)&#x20;
+[](docId:owZeAc56KSDnUzDhsBfB8)&#x20;
 
-{% callout type="warning"  %} 
+{% callout type="warning"  %}
 **Failure to complete these steps will prevent your storage node from working.**
 {% /callout %}
 
@@ -31,6 +31,7 @@ Open a terminal window as a usual user (not administrator or root) and paste the
 
 {% tabs %}
 {% tab label="Linux" %}
+
 ```Text
 curl -L https://github.com/storj/storj/releases/latest/download/identity_linux_amd64.zip -o identity_linux_amd64.zip
 unzip -o identity_linux_amd64.zip
@@ -57,6 +58,7 @@ unzip -o identity_linux_arm64.zip
 chmod +x identity
 sudo mv identity /usr/local/bin/identity
 ```
+
 {% /tab %}
 
 {% tab label="Windows" %}
@@ -65,9 +67,11 @@ PowerShell:
 ```Text
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; curl https://github.com/storj/storj/releases/latest/download/identity_windows_amd64.zip -o identity_windows_amd64.zip; Expand-Archive ./identity_windows_amd64.zip . -Force
 ```
+
 {% /tab %}
 
 {% tab label="macOS" %}
+
 ```shell
 curl -L https://github.com/storj/storj/releases/latest/download/identity_darwin_amd64.zip -o identity_darwin_amd64.zip
 unzip -o identity_darwin_amd64.zip
@@ -83,10 +87,11 @@ unzip -o identity_darwin_arm64.zip
 chmod +x identity
 sudo mv identity /usr/local/bin/identity
 ```
+
 {% /tab %}
 {% /tabs %}
 
-{% callout type="info"  %} 
+{% callout type="info"  %}
 **This can take several hours or days, depending on your machines processing power and luck.**&#x20;
 
 Plan to run your Node on a NAS, Raspberry Pi or similar? Create your identity on a more powerful machine and transfer it over.
@@ -96,6 +101,7 @@ Plan to run your Node on a NAS, Raspberry Pi or similar? Create your identity on
 
 {% tabs %}
 {% tab label="Linux" %}
+
 ```Text
 identity create storagenode
 ```
@@ -113,13 +119,17 @@ PowerShell:
 Command Prompt:
 
 ```text
+
 ```
+
 {% /tab %}
 
 {% tab label="all macOS" %}
+
 ```shell
 identity create storagenode
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -133,35 +143,35 @@ Authorize your Storage Node identity using your single-use authorization token (
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Yi1FdCqXE0mIbsiwMDtDr_image.png)
 
-Authorize your Storage Node identity using your [](docId\:v-fUvPqySvUwTMF-od6hD) (*please, replace the placeholder to your actual authorization token*):
+Authorize your Storage Node identity using your [](docId:v-fUvPqySvUwTMF-od6hD) (_please, replace the placeholder to your actual authorization token_):
 
 {% tabs %}
 {% tab label="Linux" %}
+
 ```Text
 identity authorize storagenode <email:characterstring>
 ```
+
 {% /tab %}
 
 {% tab label="Windows" %}
-
 
 ```powershell
 ./identity.exe authorize storagenode <email:characterstring>
 ```
 
-
-
 ```Text
 identity.exe authorize storagenode <email:characterstring>
 ```
+
 {% /tab %}
 
 {% tab label="all macOS" %}
 
-
 ```macos
 identity authorize storagenode <email:characterstring>
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -171,16 +181,18 @@ Run the following command to confirm you have the required identity files:
 
 {% tabs %}
 {% tab label="Linux" %}
+
 ```shell
 grep -c BEGIN ~/.local/share/storj/identity/storagenode/ca.cert
 ```
 
 ```text
+
 ```
+
 {% /tab %}
 
 {% tab label="Windows" %}
-
 
 ```powershell
 (sls BEGIN "$env:AppData\Storj\Identity\storagenode\ca.cert").count
@@ -190,8 +202,6 @@ grep -c BEGIN ~/.local/share/storj/identity/storagenode/ca.cert
 (sls BEGIN "$env:AppData\Storj\Identity\storagenode\identity.cert").count
 ```
 
-
-
 ```Text
 findstr "BEGIN" "%APPDATA%\Storj\Identity\storagenode\ca.cert" | find /c /v ""
 ```
@@ -199,15 +209,16 @@ findstr "BEGIN" "%APPDATA%\Storj\Identity\storagenode\ca.cert" | find /c /v ""
 ```Text
 findstr "BEGIN" "%APPDATA%\Storj\Identity\storagenode\identity.cert" | find /c /v ""
 ```
+
 {% /tab %}
 
 {% tab label="all macOS" %}
-
 
 ```macos
 grep -c BEGIN ~/Library/Application\ Support/Storj/identity/storagenode/ca.cert
 grep -c BEGIN ~/Library/Application\ Support/Storj/identity/storagenode/identity.cert
 ```
+
 {% /tab %}
 {% /tabs %}
 
@@ -215,13 +226,13 @@ The first command should return **2**, and the second command should return **3*
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/GlTZ8mJI50FN4_AMDPri-_image.png)
 
-If your numbers are different, then [](docId\:aT6VAB297OWLd4vqeXxf5) was not successful. Please try again.
+If your numbers are different, then [](docId:aT6VAB297OWLd4vqeXxf5) was not successful. Please try again.
 
 Might move your storage node to another machine in the future? Back up your identity folder.
 
 ## 4. Backup the identity
 
-{% callout type="danger"  %} 
+{% callout type="danger"  %}
 **Backup before you continue, it should be quick! 🙏**
 
 This allows you to restore your Node in case of an unfortunate hardware or OS incident.
@@ -253,7 +264,4 @@ It's not required, but could prevent the storagenode from start, if the mounted 
 
 Unfortunately this trick will not help, if the disk would disappear while the storagenode running.
 
-
-
 ##
-

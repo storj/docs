@@ -1,0 +1,5 @@
+#!/bin/bash
+mv src/pages/node/resources/faq src/pages/node/faq
+mv src/pages/node/bXhP-resources/faq/low-payouts.md src/pages/node/faq
+rm -r src/pages/node/bXhP-resources
+mv src/pages/node/resources/faq.md src/pages/node/faq/index.md

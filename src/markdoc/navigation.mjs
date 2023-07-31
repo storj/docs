@@ -74,7 +74,7 @@ function convertToNextRedirects(data) {
   )
 }
 
-function getFrontmatterTitleRedirectsDocId(filepath) {
+function getFrontmatter(filepath) {
   const md = fs.readFileSync(filepath, 'utf8')
   const ast = Markdoc.parse(md)
   const frontmatter = ast.attributes.frontmatter
@@ -84,6 +84,7 @@ function getFrontmatterTitleRedirectsDocId(filepath) {
     title: frontmatter.title,
     redirects: frontmatter.redirects,
     docId: frontmatter.docId,
+    weight: frontmatter.weight,
   }
 }
 
@@ -98,27 +99,28 @@ function walkDir(dir, space, currentPath = '', includeRedirects = false) {
 
     if (stat && stat.isDirectory()) {
       let indexFilepath = filepath + '/index.md'
+      // For directories that don't have an index.md
+      let metaFilepath = filepath + '/_meta.json'
       let title = file.charAt(0).toUpperCase() + file.slice(1)
-      let redirects = null
-      let docId = null
+      let fm = null
       if (fs.existsSync(indexFilepath)) {
-        let {
-          title: newTitle,
-          redirects: newRedirects,
-          docId: newDocId,
-        } = getFrontmatterTitleRedirectsDocId(indexFilepath)
-        title = newTitle
-        redirects = newRedirects
-        docId = newDocId
+        fm = getFrontmatter(indexFilepath)
+      } else if (fs.existsSync(metaFilepath)) {
+        const meta = fs.readFileSync(metaFilepath, 'utf8')
+        fm = JSON.parse(meta)
       }
       let entry = {
-        title,
-        docId,
         type: file,
+        title,
         links: walkDir(filepath, space, relativePath, includeRedirects),
       }
-      if (includeRedirects) {
-        entry.redirects = redirects
+      if (fm) {
+        let { redirects, ...rest } = fm
+        entry = Object.assign(entry, rest)
+
+        if (includeRedirects) {
+          entry.redirects = redirects
+        }
       }
       if (fs.existsSync(indexFilepath)) {
         entry.href = `/${space}/${relativePath}`
@@ -126,11 +128,9 @@ function walkDir(dir, space, currentPath = '', includeRedirects = false) {
       results.push(entry)
     } else if (path.extname(file) === '.md' && file !== 'index.md') {
       let url = `${relativePath.replace(/\.md$/, '')}` // Remove .md extension
-      let { title, redirects, docId } =
-        getFrontmatterTitleRedirectsDocId(filepath)
+      let { redirects, ...fm } = getFrontmatter(filepath)
       let entry = {
-        title,
-        docId,
+        ...fm,
         links: [],
         href: `/${space}/${url}`,
       }
@@ -142,6 +142,25 @@ function walkDir(dir, space, currentPath = '', includeRedirects = false) {
   })
 
   return results
+}
+
+function sortByWeightThenTitle(arr) {
+  arr.sort((a, b) => {
+    // If weight is undefined, set it to -Infinity (or any large negative number)
+    const weightA = a.weight !== undefined ? a.weight : -Infinity
+    const weightB = b.weight !== undefined ? b.weight : -Infinity
+    if (weightA !== weightB) {
+      return weightB - weightA
+    } else {
+      return a.title.localeCompare(b.title)
+    }
+  })
+
+  arr.forEach((item) => {
+    if (item.links && Array.isArray(item.links)) {
+      sortByWeightThenTitle(item.links)
+    }
+  })
 }
 
 export default function (nextConfig = {}) {
@@ -157,7 +176,9 @@ export default function (nextConfig = {}) {
             this.addContextDependency(pagesDir)
 
             let dcs = walkDir(`${pagesDir}/dcs`, 'dcs')
+            sortByWeightThenTitle(dcs)
             let node = walkDir(`${pagesDir}/node`, 'node')
+            sortByWeightThenTitle(node)
             // TODO just calculate the next and prev when making the page
             let dcsBottomNav = extractHrefObjects(structuredClone(dcs))
             let nodeBottomNav = extractHrefObjects(structuredClone(node))

@@ -87,7 +87,7 @@ export function MobileNavigation({ navigation }) {
             </Link>
           </div>
           <nav className="lg:hidden" aria-label="Global">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+            <div className="flex flex-col space-y-1 px-2 pb-3 pt-2">
               <Spaces />
             </div>
           </nav>

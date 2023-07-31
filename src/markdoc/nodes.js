@@ -1,9 +1,19 @@
 import { nodes as defaultNodes } from '@markdoc/markdoc'
 import { Tag } from '@markdoc/markdoc'
 import { Link } from 'next/link'
-import { transformer } from '@markdoc/markdoc'
 import { Fence } from '@/components/Fence'
 import { nodeBottomNav, dcsBottomNav } from '@/markdoc/navigation.mjs'
+
+const ImageWrap = (props) => {
+  // TODO size the image better, i.e. when it's height is small, let the width take the full screen
+  return (
+    <img
+      className="object-fit xs:max-w-full sm:max-w-sm"
+      src={props.src}
+      alt={props.alt}
+    />
+  )
+}
 
 const nodes = {
   link: {
@@ -35,6 +45,20 @@ const nodes = {
   },
   document: {
     render: undefined,
+  },
+  image: {
+    render: ImageWrap,
+    attributes: {
+      ...defaultNodes.image.attributes,
+    },
+    children: defaultNodes.children,
+    transform(node, config) {
+      const attributes = node.transformAttributes(config)
+      const children = node.transformChildren(config)
+      console.log('attributes', attributes)
+      console.log('children', children)
+      return new Tag(this.render, attributes, children)
+    },
   },
   th: {
     ...defaultNodes.th,

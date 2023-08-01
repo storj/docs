@@ -63,13 +63,19 @@ export default function MyApp({ Component, pageProps, example }) {
     ? collectHeadings(pageProps.markdoc.content)
     : []
 
+  let filepath = pageProps.markdoc?.file?.path
+
   return (
     <>
       <Head>
         <title>{pageTitle}</title>
         {description && <meta name="description" content={description} />}
       </Head>
-      <Layout title={title} tableOfContents={tableOfContents}>
+      <Layout
+        title={title}
+        tableOfContents={tableOfContents}
+        filepath={filepath}
+      >
         <Component {...pageProps} />
       </Layout>
     </>

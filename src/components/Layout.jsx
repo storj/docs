@@ -20,6 +20,8 @@ import {
   nodeBottomNav,
 } from '@/markdoc/navigation.mjs'
 
+const GITHUB_EDIT_URL = 'https://github.com/storj/docs/tree/main/pages'
+
 function GitHubIcon(props) {
   return (
     <svg aria-hidden="true" viewBox="0 0 16 16" {...props}>
@@ -126,7 +128,7 @@ function useTableOfContents(tableOfContents) {
   return currentSection
 }
 
-export function Layout({ children, title, tableOfContents }) {
+export function Layout({ children, title, tableOfContents, filepath }) {
   let router = useRouter()
   let isHomePage = router.pathname === '/'
   let sideNavigation = dcsNavigation
@@ -271,6 +273,15 @@ export function Layout({ children, title, tableOfContents }) {
                 </ol>
               </>
             )}
+            <div className="mt-3 space-y-2 border-t border-gray-200 pt-5 text-sm text-gray-900 dark:border-gray-300" />
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+              href={`${GITHUB_EDIT_URL}${filepath}`}
+            >
+              Edit this page on GitHub →
+            </a>
           </nav>
         </div>
       </div>

@@ -76,6 +76,15 @@ const nodes = {
       )
     },
   },
+  table: {
+    render: ({ children }) => {
+      return (
+        <div className="overflow-x-auto">
+          <table>{children}</table>
+        </div>
+      )
+    },
+  },
   th: {
     ...defaultNodes.th,
     attributes: {

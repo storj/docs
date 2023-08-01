@@ -56,10 +56,7 @@ export function Hero() {
                 your data is everywhere, even before you need it.
               </p>
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                <Button href="/">Get started</Button>
-                <Button href="/" variant="secondary">
-                  View on GitHub
-                </Button>
+                <Button href="/dcs/quick-start">Quick Start</Button>
               </div>
             </div>
           </div>

@@ -81,7 +81,7 @@ function getFrontmatter(filepath) {
     ? yaml.load(ast.attributes.frontmatter)
     : {}
   return {
-    title: frontmatter.title,
+    title: frontmatter.title || path.basename(filepath),
     redirects: frontmatter.redirects,
     docId: frontmatter.docId,
     weight: frontmatter.weight,
@@ -146,11 +146,11 @@ function walkDir(dir, space, currentPath = '', includeRedirects = false) {
 
 function sortByWeightThenTitle(arr) {
   arr.sort((a, b) => {
-    // If weight is undefined, set it to -Infinity (or any large negative number)
-    const weightA = a.weight !== undefined ? a.weight : -Infinity
-    const weightB = b.weight !== undefined ? b.weight : -Infinity
+    // If weight is undefined, set it to Infinity (or any large number)
+    const weightA = a.weight !== undefined ? a.weight : Infinity
+    const weightB = b.weight !== undefined ? b.weight : Infinity
     if (weightA !== weightB) {
-      return weightB - weightA
+      return weightA - weightB
     } else {
       return a.title.localeCompare(b.title)
     }
@@ -177,6 +177,13 @@ export default function (nextConfig = {}) {
 
             let dcs = walkDir(`${pagesDir}/dcs`, 'dcs')
             sortByWeightThenTitle(dcs)
+            let home = {
+              type: '',
+              title: 'Overview',
+              links: [],
+              href: '/',
+            }
+            dcs.unshift(home)
             let node = walkDir(`${pagesDir}/node`, 'node')
             sortByWeightThenTitle(node)
             // TODO just calculate the next and prev when making the page

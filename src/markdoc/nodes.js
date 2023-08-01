@@ -3,15 +3,21 @@ import { Tag } from '@markdoc/markdoc'
 import { Link } from 'next/link'
 import { Fence } from '@/components/Fence'
 import { nodeBottomNav, dcsBottomNav } from '@/markdoc/navigation.mjs'
+import probe from 'probe-image-size'
 
-const ImageWrap = (props) => {
-  // TODO size the image better, i.e. when it's height is small, let the width take the full screen
+const ImageWrap = ({ src, alt, width, height }) => {
+  // TODO size the image at build, but this works well enough in the meantime
+  let imgStyle = 'xs:max-w-full sm:max-w-sm'
+  if (width > height) {
+    imgStyle = 'max-w-full'
+    if (height >= 400) {
+      imgStyle = 'w-auto max-h-96'
+    }
+  }
   return (
-    <img
-      className="object-fit xs:max-w-full sm:max-w-sm"
-      src={props.src}
-      alt={props.alt}
-    />
+    <a target="_blank" rel="noreferrer" href={src}>
+      <img className={`object-fit ${imgStyle} `} src={src} alt={alt} />
+    </a>
   )
 }
 
@@ -52,12 +58,16 @@ const nodes = {
       ...defaultNodes.image.attributes,
     },
     children: defaultNodes.children,
-    transform(node, config) {
+    async transform(node, config) {
       const attributes = node.transformAttributes(config)
       const children = node.transformChildren(config)
-      console.log('attributes', attributes)
-      console.log('children', children)
-      return new Tag(this.render, attributes, children)
+      let result = await probe(attributes.src)
+
+      return new Tag(
+        this.render,
+        { ...attributes, width: result.width, height: result.height },
+        children
+      )
     },
   },
   th: {

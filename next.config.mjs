@@ -12,6 +12,17 @@ const nextConfig = {
   images: {
     unoptimized: true, // Firebase is really slow at deploying when image optimization is enabled..
   },
+  webpack(config) {
+    // Needed to use node APIs such as `fs` in markdoc transformer,
+    // works because we're the default static (getStaticProps) in @markdoc/next.js
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+
+      fs: false,
+    }
+
+    return config
+  },
 }
 
 export default withNavigation(

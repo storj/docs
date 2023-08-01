@@ -36,13 +36,14 @@ const tags = {
   tabs: {
     render: Tabs,
     attributes: {},
-    transform(node, config) {
-      const labels = node
-        .transformChildren(config)
+    async transform(node, config) {
+      const children = await node.transformChildren(config)
+
+      const labels = children
         .filter((child) => child && child.name === 'Tab')
         .map((tab) => (typeof tab === 'object' ? tab.attributes.label : null))
 
-      return new Tag(this.render, { labels }, node.transformChildren(config))
+      return new Tag(this.render, { labels }, children)
     },
   },
   tab: {

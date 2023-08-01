@@ -7,6 +7,7 @@
     "dev": "next dev",
     "prebuild": "node scripts/fetch-image-sizes.mjs",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,css,html}' --ignore-path .gitignore"
@@ -45,6 +46,7 @@
   "devDependencies": {
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.2",
+    "next-sitemap": "^4.1.8",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.6",
     "sharp": "^0.32.0"

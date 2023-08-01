@@ -30,6 +30,11 @@ yarn-error.log*
 
 # vercel
 .vercel
+
 .firebase
 firebase-debug.log
 .image-size-cache.json
+
+# next-sitemap
+sitemap*.xml
+robots.txt

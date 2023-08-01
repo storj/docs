@@ -4,6 +4,7 @@ import { Callout } from '@/components/Callout'
 import { CodeGroup } from '@/components/Code'
 import { Tabs, Tab } from '@/components/Tabs'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
+import PartnerIntegration from '@/components/PartnerIntegration'
 
 const tags = {
   callout: {
@@ -53,6 +54,9 @@ const tags = {
         type: String,
       },
     },
+  },
+  'partner-integration': {
+    render: PartnerIntegration,
   },
   'code-group': {
     render: CodeGroup,

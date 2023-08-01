@@ -32,3 +32,4 @@ yarn-error.log*
 .vercel
 .firebase
 firebase-debug.log
+.image-size-cache.json

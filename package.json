@@ -1,15 +1,20 @@
 {
-  "name": "tailwindui-syntax",
+  "name": "storj-docs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/fetch-image-sizes.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/fetch-image-sizes.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write '**/*.{ts,tsx,js,jsx,css,html}' --ignore-path .gitignore"
   },
   "browserslist": "defaults, not ie <= 11",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.9.2",
     "@headlessui/react": "^1.7.13",

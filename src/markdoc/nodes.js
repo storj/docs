@@ -4,10 +4,12 @@ import { Link } from 'next/link'
 import { Fence } from '@/components/Fence'
 import { nodeBottomNav, dcsBottomNav } from '@/markdoc/navigation.mjs'
 import probe from 'probe-image-size'
+import crypto from 'crypto'
+import imageSizeCache from '../../.image-size-cache.json'
 
 const ImageWrap = ({ src, alt, width, height }) => {
   // TODO size the image at build, but this works well enough in the meantime
-  let imgStyle = 'xs:max-w-full sm:max-w-sm'
+  let imgStyle = 'xs:max-w-full sm:max-w-sm max-h-96'
   if (width > height) {
     imgStyle = 'max-w-full'
     if (height >= 400) {
@@ -61,7 +63,11 @@ const nodes = {
     async transform(node, config) {
       const attributes = node.transformAttributes(config)
       const children = node.transformChildren(config)
-      let result = await probe(attributes.src)
+      const hash = crypto.createHash('md5').update(attributes.src).digest('hex')
+      let result = imageSizeCache[hash]
+      if (!result) {
+        result = await probe(attributes.src)
+      }
 
       return new Tag(
         this.render,

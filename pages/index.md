@@ -1,26 +1,27 @@
 ---
-title: Getting started
+title: Overview
 pageTitle: Storj Docs
 description: Make the world your datacenter
 ---
 
-Learn how to get CacheAdvance set up in your project in under thirty minutes or it's free. {% .lead %}
-
-{% quick-links %}
-
-{% quick-link title="Installation" icon="installation" href="/" description="Step-by-step guides to setting up your system and installing the library." /%}
-
-{% quick-link title="Architecture guide" icon="presets" href="/" description="Learn how the internals work and contribute." /%}
-
-{% quick-link title="Plugins" icon="plugins" href="/" description="Extend the library with third-party plugins or write your own." /%}
-
-{% quick-link title="API reference" icon="theming" href="/" description="Learn to easily customize and modify your app's visual design to fit your brand." /%}
-
-{% /quick-links %}
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste.
+Welcome to the Storj Documentation!
 
 ---
+
+## What is Storj?
+
+---
+
+## Main features
+
+Some of the main Storj features include:
+
+| Feature               | Description                                                                                                                                 |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| S3 Compatibility      | Change the endpoint and credentials with an S3-compatible tool of your choice and you’ll be up and running in minutes.                      |
+| End-to-End Encryption | Own your data with default encryption and user-assigned access grants so no one can view or compromise your data without permission.        |
+| Cost Efficiency       | Multi-region cloud object storage for $4.00 per TB per month. A fraction of the price of a single availability zone from providers like AWS |
+| Open Source           | Take advantage of absolute transparency through our open source code. You are not locked-in to our technology or cost structure.            |
 
 ## Quick start
 

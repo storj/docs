@@ -5,7 +5,7 @@ function process_files() {
     local space_name="$2"
     ./rename -d "${dir_name}"
     ./organize -d "${dir_name}_r" -s "${space_name}"
-    ./transform-nextjs-pages -d "${dir_name}_r_o"
+    ./transform-nextjs -d "${dir_name}_r_o"
     ./fix-headers "${dir_name}_r_o_t"
     ./fix-markdown "${dir_name}_r_o_t"
 }

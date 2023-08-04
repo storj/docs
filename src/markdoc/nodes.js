@@ -2,7 +2,12 @@ import { nodes as defaultNodes } from '@markdoc/markdoc'
 import { Tag } from '@markdoc/markdoc'
 import { Link } from 'next/link'
 import Fence from '@/components/Fence'
-import { nodeBottomNav, dcsBottomNav } from '@/markdoc/navigation.mjs'
+import {
+  nodeBottomNav,
+  dcsBottomNav,
+  learnBottomNav,
+  supportBottomNav,
+} from '@/markdoc/navigation.mjs'
 import probe from 'probe-image-size'
 import crypto from 'crypto'
 import imageSizeCache from '../../.image-size-cache.json'
@@ -39,6 +44,12 @@ const nodes = {
         let entry = nodeBottomNav.find((o) => o.docId === docId)
         if (!entry) {
           entry = dcsBottomNav.find((o) => o.docId === docId)
+        }
+        if (!entry) {
+          entry = supportBottomNav.find((o) => o.docId === docId)
+        }
+        if (!entry) {
+          entry = learnBottomNav.find((o) => o.docId === docId)
         }
 
         let tag = new Tag(

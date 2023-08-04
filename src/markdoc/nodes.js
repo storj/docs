@@ -63,6 +63,9 @@ const nodes = {
     async transform(node, config) {
       const attributes = node.transformAttributes(config)
       const children = node.transformChildren(config)
+      if (!attributes.src.includes('http')) {
+        return new Tag('img', attributes, children)
+      }
       const hash = crypto.createHash('md5').update(attributes.src).digest('hex')
       let result = imageSizeCache[hash]
       if (!result) {

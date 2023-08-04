@@ -3,6 +3,7 @@ title: Concepts
 docId: KJzDdewgBVcK6rnp0Qho2
 redirects:
   - /node/KJzD-concepts
+weight: 5
 ---
 
 ## Storage Node Concepts

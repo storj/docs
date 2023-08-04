@@ -1,5 +1,6 @@
 ---
-title: How to backup your WordPress site with UpdraftPlus to Storj DCS
+title: WordPress backup with UpdraftPlus
+pageTitle: How to backup your WordPress site with UpdraftPlus to Storj DCS
 docId: VzNAjuGSXXvsIh-mfhKVr
 redirects:
   - /dcs/how-tos/how-to-backup-your-wordpress-site-with-updraftplus-to-storj-dcs

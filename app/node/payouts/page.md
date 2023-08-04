@@ -3,6 +3,7 @@ title: Payout
 docId: DVKqtMtnBdZ99gFRWCojP
 redirects:
   - /node/dependencies/storage-node-operator-payout-information
+weight: 10
 ---
 
 ## Introduction

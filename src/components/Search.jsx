@@ -5,7 +5,6 @@ import { createAutocomplete } from '@algolia/autocomplete-core'
 import { Dialog } from '@headlessui/react'
 import clsx from 'clsx'
 import Highlighter from 'react-highlight-words'
-import navigation from '@/components/sideNavigation'
 
 function SearchIcon(props) {
   return (
@@ -99,6 +98,7 @@ function HighlightQuery({ text, query }) {
 
 function SearchResult({ result, autocomplete, collection, query }) {
   let id = useId()
+  let navigation = []
 
   let sectionTitle = navigation.find((section) =>
     section.links.find((link) => link.href === result.url.split('#')[0])

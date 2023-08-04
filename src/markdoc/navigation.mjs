@@ -186,17 +186,29 @@ export default function (nextConfig = {}) {
             dcs.unshift(home)
             let node = walkDir(`${dir}/node`, 'node')
             sortByWeightThenTitle(node)
+            let learn = walkDir(`${dir}/learn`, 'learn')
+            sortByWeightThenTitle(learn)
+            let support = walkDir(`${dir}/support`, 'support')
+            sortByWeightThenTitle(support)
             // TODO just calculate the next and prev when making the page
             let dcsBottomNav = extractHrefObjects(structuredClone(dcs))
             let nodeBottomNav = extractHrefObjects(structuredClone(node))
+            let learnBottomNav = extractHrefObjects(structuredClone(learn))
+            let supportBottomNav = extractHrefObjects(structuredClone(support))
 
             // When this file is imported within the application
             // the following module is loaded:
             return `
               export const dcsNavigation = ${JSON.stringify(dcs)}
               export const nodeNavigation = ${JSON.stringify(node)}
+              export const learnNavigation = ${JSON.stringify(learn)}
+              export const supportNavigation = ${JSON.stringify(support)}
               export const dcsBottomNav = ${JSON.stringify(dcsBottomNav)}
               export const nodeBottomNav = ${JSON.stringify(nodeBottomNav)}
+              export const learnBottomNav = ${JSON.stringify(learnBottomNav)}
+              export const supportBottomNav = ${JSON.stringify(
+                supportBottomNav
+              )}
             `
           }),
         ],
@@ -209,13 +221,18 @@ export default function (nextConfig = {}) {
       return config
     },
     async redirects() {
-      let dir = path.resolve('./app')
-      let re = extractRedirects(walkDir(`${dir}/dcs`, 'dcs', '', true))
-      let dcs = convertToNextRedirects(re)
-      let node = convertToNextRedirects(
-        extractRedirects(walkDir(`${dir}/node`, 'node', '', true))
-      )
-      let redirs = [...dcs, ...node]
+      let getRedirects = (space) => {
+        let dir = path.resolve('./app')
+        let re = extractRedirects(walkDir(`${dir}/${space}`, space, '', true))
+        let cov = convertToNextRedirects(re)
+        return cov
+      }
+      let redirs = [
+        ...getRedirects('dcs'),
+        ...getRedirects('node'),
+        ...getRedirects('learn'),
+        ...getRedirects('support'),
+      ]
 
       return redirs
       // TODO don't overwrite existing redirects

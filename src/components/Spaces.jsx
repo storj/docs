@@ -6,8 +6,8 @@ import clsx from 'clsx'
 const spaces = [
   { name: 'Home', path: '/', href: '/dcs' },
   { name: 'Node', href: '/node' },
-  { name: 'Resources', href: '#' },
-  { name: 'Help Center', href: '#' },
+  { name: 'Learn', href: '/learn' },
+  { name: 'Help Center', href: '/support' },
 ]
 
 export default function Spaces() {

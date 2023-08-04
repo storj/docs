@@ -68,9 +68,7 @@ async function load(source) {
   // This array access @ index 1 is safe since Next.js guarantees that
   // all pages will be located under either pages/ or src/pages/
   // https://nextjs.org/docs/advanced-features/src-directory
-  console.log('this.resourcePath', this.resourcePath)
   const filepath = this.resourcePath.split('app')[1]
-  console.log('filepath', filepath)
 
   const partials = await gatherPartials.call(
     this,
@@ -124,10 +122,10 @@ import Markdoc, {renderers} from '@markdoc/markdoc'
 import MarkdownLayout from '@/components/MarkdownLayout'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
 import {
-  dcsNavigation,
   dcsBottomNav,
-  nodeNavigation,
   nodeBottomNav,
+  learnBottomNav,
+  supportBottomNav,
 } from '@/markdoc/navigation.mjs'
 
 import {getSchema, defaultObject} from '${normalize(
@@ -213,6 +211,10 @@ export default async function MarkdocComponent(props) {
   let allLinks = dcsBottomNav
   if (filepath.startsWith('/node')) {
     allLinks = nodeBottomNav
+  } else if (filepath.startsWith('/learn')) {
+    allLinks = learnBottomNav
+  } else if (filepath.startsWith('/support')) {
+    allLinks = supportBottomNav
   }
 
   let linkIndex = allLinks.findIndex((link) => link.href === filepath.replace('/page.md', ''))
@@ -254,7 +256,9 @@ export default async function MarkdocComponent(props) {
       tableOfContents={tableOfContents}
       filepath={filepath}
       nextPage={nextPage}
-      previousPage={previousPage}>
+      previousPage={previousPage}
+      title={frontmatter?.title}
+      >
       <>
         <div className="hidden" data-filename="${
           filepath == '/page.md' ? 'home' : ''

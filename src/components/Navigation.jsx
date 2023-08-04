@@ -4,7 +4,12 @@ import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
-import { dcsNavigation, nodeNavigation } from '@/markdoc/navigation.mjs'
+import {
+  dcsNavigation,
+  nodeNavigation,
+  learnNavigation,
+  supportNavigation,
+} from '@/markdoc/navigation.mjs'
 
 function NavLink({ title, href, current, root, disclosure }) {
   let padding = 'pl-6'
@@ -130,10 +135,14 @@ export function Navigation({ className }) {
   let sideNavigation = dcsNavigation
   if (pathname.startsWith('/node')) {
     sideNavigation = nodeNavigation
+  } else if (pathname.startsWith('/learn')) {
+    sideNavigation = learnNavigation
+  } else if (pathname.startsWith('/support')) {
+    sideNavigation = supportNavigation
   }
   return (
-    <nav className={clsx('text-base lg:text-sm', className)}>
-      <ul role="list" className="side-menu space-y-3 md:py-0 lg:py-14">
+    <nav role="navigation" className={clsx('text-base lg:text-sm', className)}>
+      <ul className="space-y-3 md:py-0 lg:py-14">
         {sideNavigation.map((item, index) => (
           <li key={item.title + index}>
             <NavItem item={item} root />

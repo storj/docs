@@ -62,7 +62,7 @@ export default function TableOfContents({ tableOfContents, filepath }) {
   }
 
   return (
-    <nav aria-labelledby="on-this-page-title" className="w-56">
+    <nav aria-labelledby="on-this-page-title" className="pl-4">
       {tableOfContents?.length > 0 && (
         <>
           <h2

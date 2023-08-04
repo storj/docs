@@ -32,6 +32,11 @@ module.exports = {
       maxWidth: {
         '8xl': '88rem',
       },
+      gridTemplateColumns: {
+        'only-content': 'auto',
+        'sidebar-content': '20rem auto',
+        'sidebar-content-toc': '20rem auto 20rem',
+      },
       colors: {
         'storj-blue': {
           50: '#e8f7ff',

@@ -1,6 +1,7 @@
+'use client'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { Dialog } from '@headlessui/react'
 import Spaces from '@/components/Spaces'
 
@@ -38,9 +39,10 @@ function CloseIcon(props) {
 }
 
 export function MobileNavigation({ navigation }) {
-  let router = useRouter()
+  //let router = useRouter()
   let [isOpen, setIsOpen] = useState(false)
 
+  /*
   useEffect(() => {
     if (!isOpen) return
 
@@ -56,6 +58,7 @@ export function MobileNavigation({ navigation }) {
       router.events.off('routeChangeError', onRouteChange)
     }
   }, [router, isOpen])
+  */
 
   return (
     <>

@@ -1,4 +1,5 @@
-import { useRouter } from 'next/router'
+'use client'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import clsx from 'clsx'
 
@@ -10,12 +11,12 @@ const spaces = [
 ]
 
 export default function Spaces() {
-  let router = useRouter()
+  const pathname = usePathname()
   return (
     <>
       {spaces.map((item) => {
-        let current = router.pathname.startsWith(item.href)
-        if (router.pathname == '/' && item.href == '/dcs') {
+        let current = pathname.startsWith(item.href)
+        if (pathname == '/' && item.href == '/dcs') {
           current = true
         }
         return (

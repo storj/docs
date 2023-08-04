@@ -1,7 +1,7 @@
 import { nodes as defaultNodes } from '@markdoc/markdoc'
 import { Tag } from '@markdoc/markdoc'
 import { Link } from 'next/link'
-import { Fence } from '@/components/Fence'
+import Fence from '@/components/Fence'
 import { nodeBottomNav, dcsBottomNav } from '@/markdoc/navigation.mjs'
 import probe from 'probe-image-size'
 import crypto from 'crypto'

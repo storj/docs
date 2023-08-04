@@ -1,5 +1,6 @@
+'use client'
 import { useEffect, useId, useState, forwardRef, useRef, Fragment } from 'react'
-import { useRouter } from 'next/router'
+import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 import { createAutocomplete } from '@algolia/autocomplete-core'
 import { Dialog } from '@headlessui/react'
 import clsx from 'clsx'
@@ -14,7 +15,7 @@ function SearchIcon(props) {
   )
 }
 
-function useAutocomplete() {
+function useAutocomplete(setOpen) {
   let id = useId()
   let router = useRouter()
   let [autocompleteState, setAutocompleteState] = useState({})
@@ -42,6 +43,8 @@ function useAutocomplete() {
                 return item.url
               },
               onSelect({ itemUrl }) {
+                console.log('onSelect', itemUrl)
+                setOpen(false)
                 router.push(itemUrl)
               },
             },
@@ -196,7 +199,7 @@ const SearchInput = forwardRef(function SearchInput(
           ) {
             // In Safari, closing the dialog with the escape key can sometimes cause the scroll position to jump to the
             // bottom of the page. This is a workaround for that until we can figure out a proper fix in Headless UI.
-            document.activeElement?.blur()
+            //document.activeElement?.blur()
 
             onClose()
           } else {
@@ -214,12 +217,22 @@ const SearchInput = forwardRef(function SearchInput(
 })
 
 function SearchDialog({ open, setOpen, className }) {
-  let router = useRouter()
   let formRef = useRef()
   let panelRef = useRef()
   let inputRef = useRef()
-  let { autocomplete, autocompleteState } = useAutocomplete()
+  let { autocomplete, autocompleteState } = useAutocomplete(setOpen)
 
+  /* TODO
+  useEffect(() => {
+    if (!open) {
+      return
+    }
+    const url = `${pathname}?${searchParams}`
+    console.log(url)
+    setOpen(false)
+    // You can now use the current URL
+    // ...
+  }, [setOpen, pathname, searchParams])
   useEffect(() => {
     if (!open) {
       return
@@ -237,6 +250,7 @@ function SearchDialog({ open, setOpen, className }) {
       router.events.off('hashChangeStart', onRouteChange)
     }
   }, [open, setOpen, router])
+  */
 
   useEffect(() => {
     if (open) {

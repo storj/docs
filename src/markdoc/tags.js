@@ -60,6 +60,18 @@ const tags = {
   },
   'code-group': {
     render: CodeGroup,
+    transform(node, config) {
+      const languages = node
+        .transformChildren(config)
+        .filter((child) => {
+          return child && child.name === 'Fence'
+        })
+        .map((tab) =>
+          typeof tab === 'object' ? tab.attributes.language : null
+        )
+
+      return new Tag(this.render, { languages }, node.transformChildren(config))
+    },
   },
   'quick-links': {
     render: QuickLinks,

@@ -1,29 +1,29 @@
 #!/bin/bash
 
-mv pages/node/resources/faq pages/node/faq
-mv pages/node/bXhP-resources/faq/low-payouts pages/node/faq
+mv app/node/resources/faq app/node/faq
+mv app/node/bXhP-resources/faq/low-payouts app/node/faq
 sed -i '' -E '/- \/dcs\/resources\/faq/a\
   - /dcs/resources\
-' pages/node/faq/index.md
-rm -r pages/node/bXhP-resources
-mkdir -p pages/node/get-started
-mv pages/node/setup pages/node/get-started/setup
-mv pages/node/before-you-begin/prerequisites pages/node/get-started/prerequisites
+' app/node/faq/page.md
+rm -r app/node/bXhP-resources
+mkdir -p app/node/get-started
+mv app/node/setup app/node/get-started/setup
+mv app/node/before-you-begin/prerequisites app/node/get-started/prerequisites
 sed -i '' -E '/- \/dcs\/before-you-begin\/prerequisites/a\
   - /dcs/before-you-begin/important-security-consideration\
-' pages/node/get-started/prerequisites/index.md
-mv pages/node/before-you-begin/auth-token pages/node/get-started/auth-token
-rm -r pages/node/before-you-begin
-mv pages/node/dependencies/port-forwarding pages/node/get-started/port-forwarding
-mv pages/node/dependencies/quic-requirements pages/node/get-started/quic-requirements
-mv pages/node/macosfreebsd-configuration-for-udp pages/node/get-started/quic-requirements/
-mv pages/node/dependencies/identity pages/node/get-started/identity
-mv pages/node/step-6-install-node-software pages/node/get-started/install-node-software
-mv pages/node/get-started/setup/cli pages/node/get-started/install-node-software/
-mv pages/node/get-started/setup/gui-windows pages/node/get-started/install-node-software/
-mv pages/node/sno-applications/qnap-storage-node-app pages/node/get-started/install-node-software
+' app/node/get-started/prerequisites/page.md
+mv app/node/before-you-begin/auth-token app/node/get-started/auth-token
+rm -r app/node/before-you-begin
+mv app/node/dependencies/port-forwarding app/node/get-started/port-forwarding
+mv app/node/dependencies/quic-requirements app/node/get-started/quic-requirements
+mv app/node/macosfreebsd-configuration-for-udp app/node/get-started/quic-requirements/
+mv app/node/dependencies/identity app/node/get-started/identity
+mv app/node/step-6-install-node-software app/node/get-started/install-node-software
+mv app/node/get-started/setup/cli app/node/get-started/install-node-software/
+mv app/node/get-started/setup/gui-windows app/node/get-started/install-node-software/
+mv app/node/sno-applications/qnap-storage-node-app app/node/get-started/install-node-software
 sed -i '' -E '/- \/dcs\/sno-applications\/qnap-storage-node-app/a\
   - /dcs/sno-applications\
-' pages/node/get-started/install-node-software/qnap-storage-node-app/index.md
-rm -r pages/node/sno-applications
-echo '{"title": "Get Started","weight": 1}' > pages/node/get-started/_meta.json
+' app/node/get-started/install-node-software/qnap-storage-node-app/page.md
+rm -r app/node/sno-applications
+echo '{"title": "Get Started","weight": 1}' > app/node/get-started/_meta.json

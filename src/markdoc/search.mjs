@@ -50,18 +50,18 @@ export default function (nextConfig = {}) {
         test: __filename,
         use: [
           createLoader(function () {
-            let pagesDir = path.resolve('./pages')
-            this.addContextDependency(pagesDir)
+            let dir = path.resolve('./app')
+            this.addContextDependency(dir)
 
-            let files = glob.sync('**/*.md', { cwd: pagesDir })
+            let files = glob.sync('**/*.md', { cwd: dir })
             let data = files.map((file) => {
               let url = null
-              if (file.endsWith('index.md')) {
-                url = `/${file.replace(/index\.md$/, '')}`.slice(0, -1) // remove trailing slash
+              if (file.endsWith('page.md')) {
+                url = `/${file.replace(/page\.md$/, '')}`.slice(0, -1) // remove trailing slash
               } else {
                 url = `/${file.replace(/\.md$/, '')}`
               }
-              let md = fs.readFileSync(path.join(pagesDir, file), 'utf8')
+              let md = fs.readFileSync(path.join(dir, file), 'utf8')
 
               let sections
 

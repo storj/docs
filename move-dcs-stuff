@@ -1,63 +1,64 @@
 #!/bin/bash
-mkdir -p pages/dcs/api
-echo '{"title": "API" }' > pages/dcs/api/_meta.json
-mkdir -p pages/dcs/api/s3/credentials/
-cat > pages/dcs/api/s3/credentials/index.md << 'EOF'
+mkdir -p app/dcs/api
+echo '{"title": "API" }' > app/dcs/api/_meta.json
+mkdir -p app/dcs/api/s3/credentials/
+cat > app/dcs/api/s3/credentials/page.md << 'EOF'
 ---
 title: S3 Credentials
 ---
 EOF
-mkdir -p pages/dcs/api/s3/presigned-urls
-cat > pages/dcs/api/s3/presigned-urls/index.md << 'EOF'
+mkdir -p app/dcs/api/s3/presigned-urls
+cat > app/dcs/api/s3/presigned-urls/page.md << 'EOF'
 ---
 title: Presigned URLs
 ---
 EOF
-mkdir -p pages/dcs/api/s3/s3-compatility
-cat > pages/dcs/api/s3/s3-compatility/index.md << 'EOF'
+mkdir -p app/dcs/api/s3/s3-compatility
+cat > app/dcs/api/s3/s3-compatility/page.md << 'EOF'
 ---
 title: S3 Compatibility
 weight: 1
 ---
 EOF
-wget https://raw.githubusercontent.com/storj/gateway-st/58cbeebf1222b69517327bccccaa23d0e546e8be/docs/s3-compatibility.md -O - >> pages/dcs/api/s3/s3-compatility/index.md
-mv pages/dcs/api-reference/uplink-cli pages/dcs/api
-mv pages/dcs/immutability pages/dcs/concepts/immutability
-	#modified:   pages/dcs/getting-started/index.md
-mv pages/dcs/storage/considerations/index.md pages/dcs/getting-started/index.md
-rm -r pages/dcs/storage
-mkdir -p pages/dcs/misc
-mv pages/dcs/backups pages/dcs/misc
-mv pages/dcs/getting-started/gateway-mt pages/dcs/misc
-mv pages/dcs/api-reference/linksharing-service pages/dcs/misc
-mv pages/dcs/getting-started/quickstart-aws-sdk-and-hosted-gateway-mt pages/dcs/misc
-mv pages/dcs/getting-started/quickstart-uplink-cli pages/dcs/misc
-mv pages/dcs/api-reference/s3-compatible-gateway pages/dcs/misc
-mv pages/dcs/api-reference/s3-gateway pages/dcs/misc
-mv pages/dcs/solution-architectures pages/dcs/misc
-mv pages/dcs/api-reference/storj-client-libraries pages/dcs/misc
-rm -r pages/dcs/api-reference
-mv pages/dcs/support pages/dcs/misc
-mkdir -p pages/dcs/installation
-cat > pages/dcs/installation/index.md << 'EOF'
+wget https://raw.githubusercontent.com/storj/gateway-st/58cbeebf1222b69517327bccccaa23d0e546e8be/docs/s3-compatibility.md -O - >> app/dcs/api/s3/s3-compatility/page.md
+mv app/dcs/api-reference/uplink-cli app/dcs/api
+mv app/dcs/immutability app/dcs/concepts/immutability
+	#modified:   app/dcs/getting-started/page.md
+mkdir -p app/dcs/getting-started
+mv app/dcs/storage/considerations/page.md app/dcs/getting-started/page.md
+rm -r app/dcs/storage
+mkdir -p app/dcs/misc
+mv app/dcs/backups app/dcs/misc
+mv app/dcs/getting-started/gateway-mt app/dcs/misc
+mv app/dcs/api-reference/linksharing-service app/dcs/misc
+mv app/dcs/getting-started/quickstart-aws-sdk-and-hosted-gateway-mt app/dcs/misc
+mv app/dcs/getting-started/quickstart-uplink-cli app/dcs/misc
+mv app/dcs/api-reference/s3-compatible-gateway app/dcs/misc
+mv app/dcs/api-reference/s3-gateway app/dcs/misc
+mv app/dcs/solution-architectures app/dcs/misc
+mv app/dcs/api-reference/storj-client-libraries app/dcs/misc
+rm -r app/dcs/api-reference
+mv app/dcs/support app/dcs/misc
+mkdir -p app/dcs/installation
+cat > app/dcs/installation/page.md << 'EOF'
 ---
 title: Installation
 weight: 1
 ---
 How to install Storj
 EOF
-mv pages/dcs/how-tos pages/dcs/third-party-tools
-mv pages/dcs/filezilla pages/dcs/third-party-tools
-mv pages/dcs/iconik-integration pages/dcs/third-party-tools
-mv pages/dcs/mastodon pages/dcs/third-party-tools
-mv pages/dcs/nextcloud-with-storj-dcs pages/dcs/third-party-tools
-mv pages/dcs/pixelfed pages/dcs/third-party-tools
-mkdir -p pages/dcs/web-console
-echo '{"title": "Web Console" }' > pages/dcs/web-console/_meta.json
-mv pages/dcs/billing-payment-and-accounts-1 pages/dcs/web-console
-mv pages/dcs/billing pages/dcs/web-console
-mv pages/dcs/dashboard pages/dcs/web-console
-mv pages/dcs/projects pages/dcs/web-console
-mv pages/dcs/getting-started/quickstart-objectbrowser pages/dcs/web-console
-mv pages/dcs/getting-started/satellite-developer-account pages/dcs/web-console
-mv pages/dcs/users pages/dcs/web-console
+mv app/dcs/how-tos app/dcs/third-party-tools
+mv app/dcs/filezilla app/dcs/third-party-tools
+mv app/dcs/iconik-integration app/dcs/third-party-tools
+mv app/dcs/mastodon app/dcs/third-party-tools
+mv app/dcs/nextcloud-with-storj-dcs app/dcs/third-party-tools
+mv app/dcs/pixelfed app/dcs/third-party-tools
+mkdir -p app/dcs/web-console
+echo '{"title": "Web Console" }' > app/dcs/web-console/_meta.json
+mv app/dcs/billing-payment-and-accounts-1 app/dcs/web-console
+mv app/dcs/billing app/dcs/web-console
+mv app/dcs/dashboard app/dcs/web-console
+mv app/dcs/projects app/dcs/web-console
+mv app/dcs/getting-started/quickstart-objectbrowser app/dcs/web-console
+mv app/dcs/getting-started/satellite-developer-account app/dcs/web-console
+mv app/dcs/users app/dcs/web-console

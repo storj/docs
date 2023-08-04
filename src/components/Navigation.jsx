@@ -1,8 +1,10 @@
+'use client'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import { dcsNavigation, nodeNavigation } from '@/markdoc/navigation.mjs'
 
 function NavLink({ title, href, current, root, disclosure }) {
   let padding = 'pl-6'
@@ -40,14 +42,14 @@ function NavLink({ title, href, current, root, disclosure }) {
 }
 
 function NavItem({ item, root }) {
-  const router = useRouter()
+  const pathname = usePathname()
 
   if (item.href && item.links.length === 0) {
     return (
       <NavLink
         title={item.title}
         href={item.href}
-        current={item.href === router.pathname}
+        current={item.href === pathname}
         root={root}
       />
     )
@@ -55,13 +57,14 @@ function NavItem({ item, root }) {
 
   return (
     <Disclosure
-      defaultOpen={router.pathname.includes(item.type)}
+      defaultOpen={pathname.includes(item.type)}
       as="div"
       className={`${root ? '' : 'ml-2'}`}
     >
       {({ open }) => (
         <>
           <Disclosure.Button
+            id={item.title}
             className={clsx(
               'flex w-full items-center gap-x-1 rounded-md py-0.5 text-left text-sm leading-none text-gray-700'
             )}
@@ -70,8 +73,7 @@ function NavItem({ item, root }) {
               className={clsx(
                 open
                   ? `rotate-90 ${
-                      router.pathname.includes(item.type) &&
-                      'text-storj-blue-700'
+                      pathname.includes(item.type) && 'text-storj-blue-700'
                     }`
                   : 'text-gray-500',
                 'z-30 -ml-1.5 h-4 w-4 shrink-0'
@@ -84,7 +86,7 @@ function NavItem({ item, root }) {
                 root={root}
                 disclosure
                 href={item.href}
-                current={item.href === router.pathname}
+                current={item.href === pathname}
               />
             ) : (
               <h2
@@ -106,6 +108,7 @@ function NavItem({ item, root }) {
             leaveTo="opacity-0 -translate-y-6"
           >
             <Disclosure.Panel
+              id={item.title}
               as="ul"
               className="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200"
             >
@@ -122,11 +125,16 @@ function NavItem({ item, root }) {
   )
 }
 
-export function Navigation({ navigation, className }) {
+export function Navigation({ className }) {
+  const pathname = usePathname()
+  let sideNavigation = dcsNavigation
+  if (pathname.startsWith('/node')) {
+    sideNavigation = nodeNavigation
+  }
   return (
     <nav className={clsx('text-base lg:text-sm', className)}>
       <ul role="list" className="side-menu space-y-3 md:py-0 lg:py-14">
-        {navigation.map((item, index) => (
+        {sideNavigation.map((item, index) => (
           <li key={item.title + index}>
             <NavItem item={item} root />
           </li>

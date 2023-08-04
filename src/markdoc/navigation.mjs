@@ -98,8 +98,8 @@ function walkDir(dir, space, currentPath = '', includeRedirects = false) {
     const relativePath = path.join(currentPath, file)
 
     if (stat && stat.isDirectory()) {
-      let indexFilepath = filepath + '/index.md'
-      // For directories that don't have an index.md
+      let indexFilepath = filepath + '/page.md'
+      // For directories that don't have an page.md
       let metaFilepath = filepath + '/_meta.json'
       let title = file.charAt(0).toUpperCase() + file.slice(1)
       let fm = null
@@ -126,7 +126,7 @@ function walkDir(dir, space, currentPath = '', includeRedirects = false) {
         entry.href = `/${space}/${relativePath}`
       }
       results.push(entry)
-    } else if (path.extname(file) === '.md' && file !== 'index.md') {
+    } else if (path.extname(file) === '.md' && file !== 'page.md') {
       let url = `${relativePath.replace(/\.md$/, '')}` // Remove .md extension
       let { redirects, ...fm } = getFrontmatter(filepath)
       let entry = {
@@ -172,10 +172,10 @@ export default function (nextConfig = {}) {
         test: __filename,
         use: [
           createLoader(function () {
-            let pagesDir = path.resolve('./pages')
-            this.addContextDependency(pagesDir)
+            let dir = path.resolve('./app')
+            this.addContextDependency(dir)
 
-            let dcs = walkDir(`${pagesDir}/dcs`, 'dcs')
+            let dcs = walkDir(`${dir}/dcs`, 'dcs')
             sortByWeightThenTitle(dcs)
             let home = {
               type: '',
@@ -184,7 +184,7 @@ export default function (nextConfig = {}) {
               href: '/',
             }
             dcs.unshift(home)
-            let node = walkDir(`${pagesDir}/node`, 'node')
+            let node = walkDir(`${dir}/node`, 'node')
             sortByWeightThenTitle(node)
             // TODO just calculate the next and prev when making the page
             let dcsBottomNav = extractHrefObjects(structuredClone(dcs))
@@ -209,11 +209,11 @@ export default function (nextConfig = {}) {
       return config
     },
     async redirects() {
-      let pagesDir = path.resolve('./pages')
-      let re = extractRedirects(walkDir(`${pagesDir}/dcs`, 'dcs', '', true))
+      let dir = path.resolve('./app')
+      let re = extractRedirects(walkDir(`${dir}/dcs`, 'dcs', '', true))
       let dcs = convertToNextRedirects(re)
       let node = convertToNextRedirects(
-        extractRedirects(walkDir(`${pagesDir}/node`, 'node', '', true))
+        extractRedirects(walkDir(`${dir}/node`, 'node', '', true))
       )
       let redirs = [...dcs, ...node]
 

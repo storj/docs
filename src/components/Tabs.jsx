@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef, useEffect } from 'react'
 import { Tab as HeadlessTab } from '@headlessui/react'
 import clsx from 'clsx'
@@ -53,6 +54,7 @@ export function Tabs({ labels, children }) {
         <HeadlessTab.List className="flex max-w-md space-x-1 rounded-xl bg-blue-900/20 p-1">
           {labels.map((label) => (
             <HeadlessTab
+              id={label}
               key={label}
               className={({ selected }) =>
                 clsx(
@@ -78,6 +80,7 @@ export function Tabs({ labels, children }) {
 export function Tab({ label, children }) {
   return (
     <HeadlessTab.Panel
+      id={label}
       className={clsx(
         'rounded-xl p-3',
         'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2'

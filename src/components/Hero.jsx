@@ -1,12 +1,12 @@
 import { Fragment } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
-import Highlight, { defaultProps } from 'prism-react-renderer'
 
 import { Button } from '@/components/Button'
 import { HeroBackground } from '@/components/HeroBackground'
 import blurCyanImage from '@/images/blur-cyan.png'
 import blurIndigoImage from '@/images/blur-indigo.png'
+import Fence from './Fence'
 
 const codeLanguage = 'javascript'
 const code = `export default {
@@ -32,9 +32,14 @@ function TrafficLightsIcon(props) {
   )
 }
 
-export function Hero() {
+export function Hero({ className }) {
   return (
-    <div className="overflow-hidden bg-slate-900 dark:-mb-32 dark:mt-[-4.5rem] dark:pb-32 dark:pt-[4.5rem] dark:lg:mt-[-4.75rem] dark:lg:pt-[4.75rem]">
+    <div
+      className={clsx(
+        'overflow-hidden bg-slate-900 dark:-mb-32 dark:mt-[-4.5rem] dark:pb-32 dark:pt-[4.5rem] dark:lg:mt-[-8rem] dark:lg:pt-[4.5rem]',
+        className
+      )}
+    >
       <div className="py-16 sm:px-2 lg:relative lg:px-0 lg:py-20">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 lg:max-w-8xl lg:grid-cols-2 lg:px-8 xl:gap-x-16 xl:px-12">
           <div className="relative z-10 md:text-center lg:text-left">
@@ -126,41 +131,9 @@ export function Hero() {
                         </Fragment>
                       ))}
                     </div>
-                    <Highlight
-                      {...defaultProps}
-                      code={code}
-                      language={codeLanguage}
-                      theme={undefined}
-                    >
-                      {({
-                        className,
-                        style,
-                        tokens,
-                        getLineProps,
-                        getTokenProps,
-                      }) => (
-                        <pre
-                          className={clsx(
-                            className,
-                            'flex overflow-x-auto pb-6'
-                          )}
-                          style={style}
-                        >
-                          <code className="px-4">
-                            {tokens.map((line, lineIndex) => (
-                              <div key={lineIndex} {...getLineProps({ line })}>
-                                {line.map((token, tokenIndex) => (
-                                  <span
-                                    key={tokenIndex}
-                                    {...getTokenProps({ token })}
-                                  />
-                                ))}
-                              </div>
-                            ))}
-                          </code>
-                        </pre>
-                      )}
-                    </Highlight>
+                    <Fence language={codeLanguage} copy={false}>
+                      {code}
+                    </Fence>
                   </div>
                 </div>
               </div>

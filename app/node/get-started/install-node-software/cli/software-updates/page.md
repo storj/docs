@@ -2,7 +2,7 @@
 title: Software Updates
 docId: ojIatmeXyCN4rc-GPx8yW
 redirects:
-  - /dcs/setup/cli/software-updates
+  - /node/setup/cli/software-updates
 ---
 
 ## Automatic Updates

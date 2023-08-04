@@ -2,7 +2,7 @@
 title: What other commands can I run?
 docId: F2toWlqC-Xf3tEtzt29B6
 redirects:
-  - /dcs/resources/faq/other-commands
+  - /node/resources/faq/other-commands
 ---
 
 Run `help` to see other commands:

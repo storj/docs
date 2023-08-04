@@ -2,7 +2,7 @@
 title: How do I migrate my node to a new device?
 docId: jEntWNvi2M6Eo74NICIJg
 redirects:
-  - /dcs/resources/faq/migrate-my-node
+  - /node/resources/faq/migrate-my-node
 ---
 
 To migrate your Node to a new drive or computer, you first need to copy both the contents of your storage folder, as well as your identity folder to the new location.

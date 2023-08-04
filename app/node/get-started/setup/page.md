@@ -2,7 +2,7 @@
 title: Quickstart Node Setup
 docId: kjMiGo7HTr4v_qwD5Iqc7
 redirects:
-  - /dcs/setup
+  - /node/setup
 ---
 
 ## Introduction

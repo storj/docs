@@ -2,7 +2,7 @@
 title: How do I shut down my node for system maintenance?
 docId: Zh_lD6UPciHT53wOWuAoD
 redirects:
-  - /dcs/resources/faq/system-maintenance
+  - /node/resources/faq/system-maintenance
 pageTitle: How do I shutdown my node for system maintenance?
 ---
 

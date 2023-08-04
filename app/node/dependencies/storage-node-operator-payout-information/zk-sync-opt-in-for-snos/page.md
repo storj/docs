@@ -3,7 +3,7 @@ title: ZkSync Payments
 docId: 6TX_ve1PyUrXuwax-mWWw
 redirects:
   - >-
-    /dcs/dependencies/storage-node-operator-payout-information/zk-sync-opt-in-for-snos
+    /node/dependencies/storage-node-operator-payout-information/zk-sync-opt-in-for-snos
 ---
 
 # Introduction

@@ -2,7 +2,7 @@
 title: Concepts
 docId: KJzDdewgBVcK6rnp0Qho2
 redirects:
-  - /dcs/KJzD-concepts
+  - /node/KJzD-concepts
 ---
 
 ## Storage Node Concepts

@@ -2,7 +2,7 @@
 title: Step 3. Setup Port Forwarding
 docId: y0jltT-HzKPmDefi532sd
 redirects:
-  - /dcs/dependencies/port-forwarding
+  - /node/dependencies/port-forwarding
 ---
 
 ## Before starting

@@ -2,7 +2,7 @@
 title: macOS/FreeBSD Configuration for UDP
 docId: rw8hWAanflwtUVsu1jC5y
 redirects:
-  - /dcs/macosfreebsd-configuration-for-udp
+  - /node/macosfreebsd-configuration-for-udp
 ---
 
 If you are running your node on macOS/FreeBSD (Darwin/BSD), you might see warnings about the receive buffer size.

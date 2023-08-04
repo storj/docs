@@ -2,7 +2,7 @@
 title: Step 2. Get an Authorization Token
 docId: v-fUvPqySvUwTMF-od6hD
 redirects:
-  - /dcs/before-you-begin/auth-token
+  - /node/before-you-begin/auth-token
 ---
 
 ## Before starting

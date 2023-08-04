@@ -2,7 +2,7 @@
 title: Dashboard Windows
 docId: 3k4V1HFunDWHVso9b1Xt9
 redirects:
-  - /dcs/setup/gui-windows/dashboard
+  - /node/setup/gui-windows/dashboard
 pageTitle: Dashboard
 ---
 

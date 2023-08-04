@@ -3,7 +3,7 @@ title: Where can I check for a new version?
 description: You want to have the latest version to be a Cloud!
 docId: CfmXIRjM5X5Sh8KDGC1qF
 redirects:
-  - /dcs/resources/faq/where-can-i-check-for-a-new-version
+  - /node/resources/faq/where-can-i-check-for-a-new-version
 ---
 
 We have a proposal for the Storage Nodes Operators - let's work together and keep our network up to date to offer a great service to our Customers!

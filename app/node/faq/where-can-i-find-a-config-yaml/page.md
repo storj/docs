@@ -2,7 +2,7 @@
 title: Where can I find the config.yaml?
 docId: gDXZgLlP_rcSW8SuflgqS
 redirects:
-  - /dcs/resources/faq/where-can-i-find-a-config-yaml
+  - /node/resources/faq/where-can-i-find-a-config-yaml
 ---
 
 {% tabs %}

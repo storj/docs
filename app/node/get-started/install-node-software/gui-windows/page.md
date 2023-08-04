@@ -2,7 +2,7 @@
 title: GUI Install - Windows
 docId: 5shJebpS3baWj6LDV5ANQ
 redirects:
-  - /dcs/setup/gui-windows
+  - /node/setup/gui-windows
 ---
 
 ## Before starting

@@ -2,7 +2,7 @@
 title: Step 4. Configure QUIC
 docId: owZeAc56KSDnUzDhsBfB8
 redirects:
-  - /dcs/dependencies/quic-requirements
+  - /node/dependencies/quic-requirements
 ---
 
 ## Before starting

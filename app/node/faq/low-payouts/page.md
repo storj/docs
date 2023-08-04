@@ -2,7 +2,7 @@
 title: Why are my payouts so low?
 docId: bXhPVB591zKroFzTF_YOK
 redirects:
-  - /dcs/resources/faq/low-payouts
+  - /node/resources/faq/low-payouts
 ---
 
 If you believe you should have gotten higher payouts, please run [the earnings estimator](https://support.storj.io/hc/en-us/articles/360029053531-Calculate-the-current-earnings-for-v3) and then compare each Satellite’s payouts to the amount you received in the transactions sent to your payout address for the month in question. Please wait to submit any support ticket until we have announced that all payouts have been completed for the month. Payouts are sent monthly, in the first two weeks after the month being paid is done. Please also consider that part of your payouts will be held back during the first nine months of operation, as explained here: [](docId:TPy59W2Kvxsj50ERIZ1hU)

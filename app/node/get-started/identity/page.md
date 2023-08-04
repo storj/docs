@@ -2,7 +2,7 @@
 title: Step 5. Create an Identity
 docId: aT6VAB297OWLd4vqeXxf5
 redirects:
-  - /dcs/dependencies/identity
+  - /node/dependencies/identity
 ---
 
 ## Before starting

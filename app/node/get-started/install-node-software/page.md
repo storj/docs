@@ -2,7 +2,7 @@
 title: Step 6. Install Node Software
 docId: XC--4Jtp1o309gbWFOHPn
 redirects:
-  - /dcs/step-6-install-node-software
+  - /node/step-6-install-node-software
 ---
 
 ## Now, select what works best for you:

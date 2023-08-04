@@ -1,5 +1,0 @@
----
-title: node
----
-
-Hello world!

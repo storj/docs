@@ -2,7 +2,7 @@
 title: Storage Node
 docId: LAtWfg_LTgbI5yJ8PILUI
 redirects:
-  - /dcs/setup/gui-windows/storage-node
+  - /node/setup/gui-windows/storage-node
 ---
 
 ## Installing a Storage Node with the Windows Installer

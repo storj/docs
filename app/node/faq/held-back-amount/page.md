@@ -2,7 +2,7 @@
 title: How does held back amount work?
 docId: TPy59W2Kvxsj50ERIZ1hU
 redirects:
-  - /dcs/resources/faq/held-back-amount
+  - /node/resources/faq/held-back-amount
 ---
 
 The **held back amount (staked)** component provides a preferred way for Node Operators to exit the network. This model optimizes liveliness by deterring Nodes to exit the network without transferring their pieces (thus limiting repair costs). Importantly, this strikes an equilibrium between a very low cost of entry for Nodes while also way to insulate against the cost of data repair.

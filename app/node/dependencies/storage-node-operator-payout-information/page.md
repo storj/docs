@@ -2,7 +2,7 @@
 title: Payout
 docId: DVKqtMtnBdZ99gFRWCojP
 redirects:
-  - /dcs/dependencies/storage-node-operator-payout-information
+  - /node/dependencies/storage-node-operator-payout-information
 ---
 
 ## Introduction

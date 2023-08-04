@@ -2,7 +2,7 @@
 title: What if my machine restarts or shuts down?
 docId: M-Yv2DFc-OFZ4r9Q8b8HY
 redirects:
-  - /dcs/resources/faq/machine-restart-shutdown
+  - /node/resources/faq/machine-restart-shutdown
 ---
 
 If you have properly mounted your hard drive (if on Linux, [](docId:nZeFxmawYPdgkwUPy6f9s)), then your Node should start up again automatically after your machine has rebooted.&#x20;

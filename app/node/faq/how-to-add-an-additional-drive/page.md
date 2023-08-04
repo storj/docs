@@ -3,7 +3,7 @@ title: How to add an additional drive?
 description: Run multiple nodes
 docId: NX30Zzpr870-px_UDpHvu
 redirects:
-  - /dcs/resources/faq/how-to-add-an-additional-drive
+  - /node/resources/faq/how-to-add-an-additional-drive
 ---
 
 We recommend to run a new node, if you want to add an additional hard drive.

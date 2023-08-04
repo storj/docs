@@ -3,7 +3,7 @@ title: How to migrate the Windows GUI node from one physical location to another
 docId: NGHe10jmn-kdgzTf3FUz0
 redirects:
   - >-
-    /dcs/resources/faq/migrate-my-node/how-to-migrate-the-windows-gui-node-from-a-one-physical-location-to-other
+    /node/resources/faq/migrate-my-node/how-to-migrate-the-windows-gui-node-from-a-one-physical-location-to-other
 ---
 
 To be able to move an existing node to a different physical location (different PC) we should transfer both the node's identity and the data. It is neither sufficient to only migrate the identity nor to only move the data to the new location, we need to do both.

@@ -2,7 +2,7 @@
 title: How do I redirect my logs to a file?
 docId: EeyBBKEeuNK5oqkB4EyU0
 redirects:
-  - /dcs/resources/faq/redirect-logs
+  - /node/resources/faq/redirect-logs
 ---
 
 1\. To redirect the logs to a file, stop your Node:&#x20;

@@ -2,7 +2,7 @@
 title: How do I check my node when I'm away from my machine?
 docId: pueo_P_wgMERT0DdEn2pr
 redirects:
-  - /dcs/resources/faq/check-my-node
+  - /node/resources/faq/check-my-node
 ---
 
 In a future update, we'll have e-mail notifications for when your Node goes down. Until then, a great way to stay updated with your Node's status is to use [UptimeRobot](https://uptimerobot.com).&#x20;

@@ -3,7 +3,7 @@ title: How do I change values like wallet address or storage capacity?
 docId: bMlttgapdFJxCNAULJDIv
 redirects:
   - >-
-    /dcs/resources/faq/how-do-i-change-my-parameters-such-as-payout-address-allotted-storage-space-and-bandwidth
+    /node/resources/faq/how-do-i-change-my-parameters-such-as-payout-address-allotted-storage-space-and-bandwidth
 ---
 
 1\. Stop and remove the running Storage Node Docker container (CLI) or stop the service (GUI Windows):

@@ -2,7 +2,7 @@
 title: CLI Install
 docId: rz3s9lC3qAQHYSl37ngBN
 redirects:
-  - /dcs/setup/cli
+  - /node/setup/cli
 pageTitle: Docker
 ---
 

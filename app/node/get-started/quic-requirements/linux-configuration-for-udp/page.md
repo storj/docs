@@ -2,7 +2,7 @@
 title: Linux Configuration for UDP
 docId: uIbtSLgN6Ug86rBvFZQOB
 redirects:
-  - /dcs/dependencies/quic-requirements/linux-configuration-for-udp
+  - /node/dependencies/quic-requirements/linux-configuration-for-udp
 ---
 
 If you are running your node on Linux, you might see warnings about the receive buffer size.

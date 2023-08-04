@@ -2,7 +2,7 @@
 title: How do I check my logs?
 docId: O68S24Iww4ZEnVk8yO7Mv
 redirects:
-  - /dcs/resources/faq/check-logs
+  - /node/resources/faq/check-logs
 ---
 
 You can look at your logs to see if you have some errors indicating that something is not functioning properly:

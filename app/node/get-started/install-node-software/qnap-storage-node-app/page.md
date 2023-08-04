@@ -2,8 +2,7 @@
 title: QNAP Storage Node App
 docId: N-dnnf7HhHcOaavvXjplw
 redirects:
-  - /dcs/sno-applications/qnap-storage-node-app
-  - /dcs/sno-applications
+  - /node/sno-applications/qnap-storage-node-app
 ---
 
 ## Introduction

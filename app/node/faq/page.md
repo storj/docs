@@ -2,8 +2,8 @@
 title: FAQs
 docId: IsOkCjvE5sqGHcaamSB7X
 redirects:
-  - /dcs/resources/faq
-  - /dcs/resources
+  - /node/resources/faq
+  - /node/resources
 ---
 
 ## Maintenance

@@ -2,7 +2,7 @@
 title: How is the online score calculated?
 docId: p7qPegEKWZtjlC0fKCRB7
 redirects:
-  - /dcs/resources/faq/how-the-online-score-is-calculated
+  - /node/resources/faq/how-the-online-score-is-calculated
 ---
 
 The implementation matches the design doc here: [Storage Node Downtime Tracking with Audits](https://github.com/storj/storj/blob/c2a97aeb143791dd7edd8bea5bb43558a95b57de/docs/blueprints/storage-node-downtime-tracking-with-audits.md).

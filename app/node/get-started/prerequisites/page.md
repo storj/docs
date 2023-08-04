@@ -2,8 +2,7 @@
 title: Step 1. Understand Prerequisites
 docId: hbCGTv1ZLLR2-kpSaGEXw
 redirects:
-  - /dcs/before-you-begin/prerequisites
-  - /dcs/before-you-begin/important-security-consideration
+  - /node/before-you-begin/prerequisites
 ---
 
 ## Hardware Requirements (Recommended)

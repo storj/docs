@@ -6,7 +6,7 @@ description: How to estimate your potential earnings before running the storage 
 docId: bG8Q88XbTvEPkzsuc02T8
 redirects:
   - >-
-    /dcs/resources/faq/how-do-i-estimate-my-potential-earnings-for-given-amount-of-space-and-bandwidth
+    /node/resources/faq/how-do-i-estimate-my-potential-earnings-for-given-amount-of-space-and-bandwidth
 ---
 
 We have a great [Community Earnings Estimator](https://forum.storj.io/t/realistic-earnings-estimator/6693) to give you an idea how much time it may take to fill your provided free disk space and how much you may earn.

@@ -2,7 +2,7 @@
 title: How to remote access the web dashboard
 docId: mZulkrp1H1Igv1BBTPsTC
 redirects:
-  - /dcs/resources/faq/how-to-remote-access-the-web-dashboard
+  - /node/resources/faq/how-to-remote-access-the-web-dashboard
 ---
 
 ## Enable the web dashboard for your setup

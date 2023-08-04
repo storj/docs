@@ -2,7 +2,7 @@
 title: Why am I not storing more data?
 docId: nANEIimWey3FXPFuGrJdN
 redirects:
-  - /dcs/resources/faq/storing-more-data
+  - /node/resources/faq/storing-more-data
 ---
 
 The most important aspect to increase the amount of data stored on your Node (and thus maximizing payout) is to build reputation of your Node’s ID over an extended period of time**.**

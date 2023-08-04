@@ -2,7 +2,7 @@
 title: How do I setup static mount via /etc/fstab for Linux?
 docId: nZeFxmawYPdgkwUPy6f9s
 redirects:
-  - /dcs/resources/faq/linux-static-mount
+  - /node/resources/faq/linux-static-mount
 ---
 
 First, run the following command and find the name of the hard drive you wish to use (for example sda2)

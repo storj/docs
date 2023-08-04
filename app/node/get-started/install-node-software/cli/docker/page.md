@@ -2,7 +2,7 @@
 title: Docker
 docId: EW9B_0fJujL3Z5aTLUW7d
 redirects:
-  - /dcs/setup/cli/docker
+  - /node/setup/cli/docker
 ---
 
 ## Install Docker

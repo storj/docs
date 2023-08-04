@@ -3,7 +3,7 @@ title: Migrating from Docker CLI to a GUI Install on Windows
 docId: PsB_5Yp43KeN0DszuE2DN
 redirects:
   - >-
-    /dcs/resources/faq/migrate-my-node/migrating-from-docker-cli-to-a-gui-install-on-windows
+    /node/resources/faq/migrate-my-node/migrating-from-docker-cli-to-a-gui-install-on-windows
 ---
 
 ## Migrating from Docker CLI to a GUI Install on Windows

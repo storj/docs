@@ -2,7 +2,7 @@
 title: Why is the network not using all of my storage and bandwidth?
 docId: nIbn-DMd7221Ozj7MJhV-
 redirects:
-  - /dcs/resources/faq/storage-bandwidth-usage
+  - /node/resources/faq/storage-bandwidth-usage
 ---
 
 The quick answer is that your Node's reputation is still growing. The Node isn't yet storing stripes of frequently accessed pieces. Luckily for Storage Node Operators, we’ve optimized the network to provide the maximum amount of bandwidth allocation based on the operation of a single node in a bandwidth-constrained environment.&#x20;

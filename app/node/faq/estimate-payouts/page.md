@@ -2,7 +2,7 @@
 title: How do I estimate my payouts per Satellite?
 docId: 2tLLmAjix5YnHHa1oflQp
 redirects:
-  - /dcs/resources/faq/estimate-payouts
+  - /node/resources/faq/estimate-payouts
 ---
 
 If you would like to estimate how much you can expect to get paid for running your Node during a given month, please follow the instructions [here](https://support.storj.io/hc/en-us/articles/360029053531-Calculate-the-current-earnings-for-v3).

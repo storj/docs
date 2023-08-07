@@ -110,7 +110,7 @@ rucio download archive:test.file.1000
 
 **Explore the Rucio Documentation**
 
-[<https://rucio.cern.ch/documentation/>](https://rucio.cern.ch/documentation/)
+<https://rucio.cern.ch/documentation/>
 
 **Set up a Rucio Client**
 

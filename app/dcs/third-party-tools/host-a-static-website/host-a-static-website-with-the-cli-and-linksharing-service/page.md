@@ -88,11 +88,11 @@ Ensure you include the trailing `.` at the end of your CNAME if your DNS provide
 
 **Root Path:** the bucket or object prefix key that you want your root domain to resolve to (and that contains your index.html file).
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/6lBTvetkB98edSAjvyB_q_root.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/6lBTvetkB98edSAjvyB_q_root.png)
 
 &#x20;**Access Key:** the readonly and public access key to your root path.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/jYrqviRrJEWf_dUioa0TE_access.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jYrqviRrJEWf_dUioa0TE_access.png)
 
 3\. You can check to make sure your DNS records are ready with `dig @1.1.1.1 txt-<hostname>.<domain> TXT`
 

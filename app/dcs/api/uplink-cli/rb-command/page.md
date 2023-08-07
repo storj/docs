@@ -55,7 +55,7 @@ uplink rb sj://cakes
 
 Output:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/zb6IxHgf6VxL2NIRb4J9F_rb-empty-bucket.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zb6IxHgf6VxL2NIRb4J9F_rb-empty-bucket.png)
 
 ### Delete bucket and all the objects it contains
 
@@ -77,7 +77,7 @@ uplink rb sj://cakes --force
 
 Output:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/WA_RPCu8OqqEAswu5yBJL_rb-force.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/WA_RPCu8OqqEAswu5yBJL_rb-force.png)
 
 {% callout type="info"  %}
 Deleting large buckets is a time-consuming process. It would roughly take 1 hour per 10,000 objects. We are working on adding progress reporting.

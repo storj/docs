@@ -31,9 +31,9 @@ Note: All of the Edge Services, including the Linksharing service use [](docId:h
 
 The Storj Linkshare web page and Path-based Linkshare web page are shown below:
 
-![Storj Linkshare web page example](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/95gBoFCZFkLVk-pvoxNAA_screen-shot-2021-09-03-at-92832-am.png)
+![Storj Linkshare web page example](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/95gBoFCZFkLVk-pvoxNAA_screen-shot-2021-09-03-at-92832-am.png)
 
-![Storj Path-based Linkshare web page example](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/_imI9aKD9jERtnE3ffL5Q_screen-shot-2021-09-03-at-92131-am.png)
+![Storj Path-based Linkshare web page example](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_imI9aKD9jERtnE3ffL5Q_screen-shot-2021-09-03-at-92131-am.png)
 
 ## Linkshare QuickStart&#x20;
 

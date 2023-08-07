@@ -24,17 +24,17 @@ Using Gateway MT with AWS CLI is a 2-step process:
 
 **Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/5RKA8emw0p4_ATa5USbzJ_qscredmt01.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5RKA8emw0p4_ATa5USbzJ_qscredmt01.png)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/JTMChfUIPD6gQmGc2e7uR_qscredmt02.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JTMChfUIPD6gQmGc2e7uR_qscredmt02.png)
 
 **Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/HLTlQ4TBPQLLpr7ZJxetz_qscredmt03.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/HLTlQ4TBPQLLpr7ZJxetz_qscredmt03.png)
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Ix5CB6wG-XseeBfJIXy4H_qscredmt04.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Ix5CB6wG-XseeBfJIXy4H_qscredmt04.png)
 
 {% callout type="warning"  %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
@@ -46,11 +46,11 @@ Please note that **Storj does not know or store your encryption passphrase**, so
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/HfTli7NU_1A--3mlLWq3M_qscredmt05.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/HfTli7NU_1A--3mlLWq3M_qscredmt05.png)
 
 Click the **Create my Access** link to finish generating of S3 credentials.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/OUR0GHdpgzJjuZeepEQGX_qscredmt06.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/OUR0GHdpgzJjuZeepEQGX_qscredmt06.png)
 
 Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them.
 

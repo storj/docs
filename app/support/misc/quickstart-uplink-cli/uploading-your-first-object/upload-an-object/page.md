@@ -12,7 +12,7 @@ You need to have a satellite account and installed Uplink CLI as described in []
 
 Right-click and save as **cheesecake.jpg** to your **Desktop**:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Agk7hc0TSkbDdOVi_kAmL_cheesecake.jpeg)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Agk7hc0TSkbDdOVi_kAmL_cheesecake.jpeg)
 
 ## Upload our object
 
@@ -36,4 +36,4 @@ uplink cp ~/Desktop/cheesecake.jpg sj://cakes
 
 Result
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/-kJd4nJmCle8qwhaY5-bW_uploadfile.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/-kJd4nJmCle8qwhaY5-bW_uploadfile.png)

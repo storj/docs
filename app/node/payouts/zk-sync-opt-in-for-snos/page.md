@@ -75,11 +75,11 @@ If you decided to specify the `zksync` wallet feature as an option, you need to 
 
 Navigate to your personal web-dashboard, you should see an indication of zkSync enabled:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/1dzgaZpKadOoLc2krD5Y1_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1dzgaZpKadOoLc2krD5Y1_image.png)
 
 After opting-in for zkSync payouts for STORJ payments, gather your ETH address and private key, navigate to the [zkSync Lite Wallet](https://wallet.zksync.io) (for zkSync Era you would use a [Bridge](https://bridge.zksync.io/)), and connect your L1 Ethereum wallet. If you have problems accessing your wallet, you might want to change your payout address to an address that you can access (for which you control the private keys).
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/RjsNN11_jBcPfwXP7FLsU_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/RjsNN11_jBcPfwXP7FLsU_image.png)
 
 **Supported Wallets:** zkSync supports WalletConnect, an open source protocol for connecting decentralized applications to mobile wallets. The protocol also supports hardware wallets like Trezor/Ledger and software wallets like Metamask, MEW, Fortmatic, Portis, Oper, Dapper, Lattice, Torus and many other.
 
@@ -186,15 +186,15 @@ You can learn more in the [zkSync Documentation](https://zksync.io/api/).
 
 If you want to withdraw your tokens from your zkSync Lite L2 wallet address to any L1 address, you need to reconnect your L1 Ethereum wallet to zkSync Lite with [zkSync Wallet](https://wallet.zksync.io/) - once connected, it will show your L2 token balance as shown below.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/2_jVvd_HGOYw0x4JavGDn_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/2_jVvd_HGOYw0x4JavGDn_image.png)
 
 Now click the **Transfer** button, and in the next window, you can choose to **Transfer to Ethereum** (L1).
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/BBPNzXbqu-2fF9DvQTSCT_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/BBPNzXbqu-2fF9DvQTSCT_image.png)
 
 After that you can provide or select the destination ETH address
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/6aqbNnhVksqSVuoVVlAhT_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/6aqbNnhVksqSVuoVVlAhT_image.png)
 
 In the **_Send to Ethereum_** window you can select or specify the L1 address that should receive the tokens you are sending in the **_Address_** field. This field will display your own L1 wallet address by default (which is the same as on L2), but you can change it to any other L1 address. For example, if you plan to immediately sell the tokens, you could choose an exchange's STORJ deposit address. This will allow you to directly transfer STORJ from your L2 zkSync wallet address to an exchange L1 deposit address in one single transaction.
 
@@ -212,15 +212,15 @@ Currently, zkSync requires users to pay a one-time activation fee for registerin
 
 2.  Click the **Select token** button and select STORJ
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/fD8Y4jyeOdz8aul3hdrKi_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/fD8Y4jyeOdz8aul3hdrKi_image.png)
 
 3\. Enter the amount you want to send into the **Amount** field. You will see a transaction fee, [one-time activation fee](https://zksync.io/faq/tutorials.html#account-activation) (only the first time you make a send to Ethereum), and the estimated fee values expressed in the token you selected (STORJ) and its equivalent value in USD.&#x20;
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/_kgYHzc8ry0gtPmSQJJSA_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_kgYHzc8ry0gtPmSQJJSA_image.png)
 
 4\. Authorize the **_Send to Ethereum_** by pressing the **Authorize to Send to Ethereum** button. You will be asked for confirmation in your Wallet.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/DDdoHwRMilkIwTdbOUytP_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DDdoHwRMilkIwTdbOUytP_image.png)
 
 5\. Confirm sending by pressing the **Send to Ethereum** button. You should be able to verify the withdrawal transaction was successful in **History**.
 
@@ -232,13 +232,13 @@ See also [Transfer Funds to Ethereum](https://docs.zksync.io/userdocs/tutorials/
 
 2.  Connect your Etherum Wallet
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/tTs9X2ONmxR_AUec8K14B_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/tTs9X2ONmxR_AUec8K14B_image.png)
 
 3\. Configure your Wallet to use the zkSync Era Mainnet, following wizard for chosen Wallet, if you did not already.
 
 4\. Select the token, specify an amount and provide a destination Ethereum address&#x20;
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/8dL38QFUAEVItTHMoABaE_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8dL38QFUAEVItTHMoABaE_image.png)
 
 5\. Confirm your selection by button **Continue**.
 

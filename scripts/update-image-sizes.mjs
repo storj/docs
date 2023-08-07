@@ -38,14 +38,17 @@ function extractImageUrlsFromMarkdown(filePath) {
   const urls = []
 
   while ((match = imageRegex.exec(content)) !== null) {
-    urls.push(match[1])
+    let url = match[1]
+    if (url.startsWith('http')) {
+      urls.push(url)
+    }
   }
 
   return urls
 }
 
 function updateAllImageUrls() {
-  const filePaths = fg.sync('pages/**/*.md') // This will search in all directories and subdirectories
+  const filePaths = fg.sync('app/**/*.md') // This will search in all directories and subdirectories
 
   const allUrls = []
 

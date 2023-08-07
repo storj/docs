@@ -28,4 +28,4 @@ uplink ls sj://cakes
 
 Result
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Oi5zbmxWWcTU4hvoxhk_L_listobjects.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Oi5zbmxWWcTU4hvoxhk_L_listobjects.png)

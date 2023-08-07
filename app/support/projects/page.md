@@ -3,6 +3,8 @@ title: Projects
 docId: jwCUqpDCk8CUuUqFuykFx
 redirects:
   - /dcs/jwCU-projects
+  - /dcs/projects
+weight: 1
 ---
 
 ## Introduction
@@ -15,7 +17,7 @@ Learn more about Projects in [](docId:M-5oxBinC6J1D-qSNjKYS) under Concepts.
 
 To select, create or **Manage Projects** you can click the name of your project on the left side toolbar above Dashboard.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/5jcrdDKiEwLzjuqCYqOPB_projects1.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5jcrdDKiEwLzjuqCYqOPB_projects1.png)
 
 ## Create a new Project
 
@@ -25,7 +27,7 @@ On **_Projects_** screen to create a new Project select the **Create Project**. 
 The availability of this function depends on your account tier. Please check [](docId:Zrbz4XYhIOm99hhRShWHg) for details.
 {% /callout %}
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/_75DWodmOKqwaDRytJXvN_projects2.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_75DWodmOKqwaDRytJXvN_projects2.png)
 
 Specify the **Project Name**, optional **Description** and confirm the creating with the **Create Project** button.
 
@@ -33,7 +35,7 @@ Specify the **Project Name**, optional **Description** and confirm the creating 
 
 To modify the existing Project on the **_Projects_** screen you can select a needed project and modify its name or description.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/5GPeq8Gd2lQ6eE28f3f8X_projects3.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5GPeq8Gd2lQ6eE28f3f8X_projects3.png)
 
 ## Changing Project Limits
 
@@ -41,7 +43,7 @@ If your account tier allows you to change your [](docId:Zrbz4XYhIOm99hhRShWHg), 
 
 Select **Edit** to the right of the limit to change it. However, it will not allow to increase limits greater than your available maximum. To change the maximum you need to file a support request to change your limits, see [](docId:A4kUGYhfgGbVhlQ2ZHXVS).
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Uw86kTuJHbXNQCOZ1lGba_projects5.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uw86kTuJHbXNQCOZ1lGba_projects5.png)
 
 ## Delete the existing Project
 

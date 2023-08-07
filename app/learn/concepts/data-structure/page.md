@@ -17,7 +17,7 @@ How data is logically segmented on the network
 
 ### Advanced Concepts
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/F1tpWMp1WeBWlJyUfdem3_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/F1tpWMp1WeBWlJyUfdem3_image.png)
 
 **Bucket:** represent a collection of objects. You can upload, download, list, and delete objects of any size or shape.
 

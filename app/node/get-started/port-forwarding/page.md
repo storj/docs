@@ -39,17 +39,17 @@ Add a free hostname using [NoIP](http://noip.com) which needs to be renewed ever
 
 - Click “_Sign Up"._
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/dbmW2zZComZnvZfiTlmTZ_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/dbmW2zZComZnvZfiTlmTZ_image.png)
 
 On the sign-up page, enter your email, username, and password. Make sure to write these details down, as you will need them later.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Xzp-7nDgdp0H2r60KmFvq_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Xzp-7nDgdp0H2r60KmFvq_image.png)
 
 Once you have created an account and clicked the confirmation link in the e-mail, scroll down to where it says _“How to remote access your device”_ and click _“Get started with Dynamic DNS.”_&#x20;
 
 This will take you to the NoIP dashboard.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Od2QBn9eLu5_O8RpNC1GR_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Od2QBn9eLu5_O8RpNC1GR_image.png)
 
 ## Setup Dynamic DNS Service: Dynamic Update Client Tool
 
@@ -258,35 +258,35 @@ As an alternative, you can manually access it through Windows Firewall:
 
 Search for "**firewall**" in your start bar on the lower left of your screen and click on "Windows Firewall with Advanced Security"
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/tK5oEbPCAmX7vI2qNh63T_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/tK5oEbPCAmX7vI2qNh63T_image.png)
 
 A new window will appear. On the left of the screen, select "Inbound Rules"
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/EHuGTy4YmZ8wbS5-c-pIk_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EHuGTy4YmZ8wbS5-c-pIk_image.png)
 
 Once selected, on the right side of the screen click on "New Rule"
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/cwlvUSO7s8_QmR0lbmrts_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/cwlvUSO7s8_QmR0lbmrts_image.png)
 
 A new window will open. Under Rule Type select "Port" and click "Next"
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/lvCLPmXyF9-_DmaNMJ1Nl_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/lvCLPmXyF9-_DmaNMJ1Nl_image.png)
 
 Select **TCP** and specify the port you wish to use (default is **28967**), then click "Next"
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/KxSWYj2UTUIW8H_0N1KRq_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/KxSWYj2UTUIW8H_0N1KRq_image.png)
 
 Select "Allow the connection" then click "Next"
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/DkhYa8Qzs-yWd-p2oN-a1_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DkhYa8Qzs-yWd-p2oN-a1_image.png)
 
 Leave all checkmarks checked, then click "Next"
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Nz0CZiyWkKnevlIqR7Op4_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Nz0CZiyWkKnevlIqR7Op4_image.png)
 
 Enter a name for the new rule, and description if you'd like, then click "Finish"
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/bzMP5TkA7B_AQ51IXp6EG_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bzMP5TkA7B_AQ51IXp6EG_image.png)
 
 Be sure to repeat the above steps to also create a new firewall rule for UDP. See[](docId:owZeAc56KSDnUzDhsBfB8)
 

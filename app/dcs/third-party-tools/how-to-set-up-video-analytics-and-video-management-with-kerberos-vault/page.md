@@ -44,7 +44,7 @@ For this, do the following steps:
 
 3\) Give your bucket a descriptive name in the text box, for example "**kerberos-vault**"&#x20;
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/37JTYTC20PveNiS6h-Kj2_kerberos1.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/37JTYTC20PveNiS6h-Kj2_kerberos1.png)
 
 4\) Click **Continue**. You will be prompted to select your Encryption - either **Generate passphrase** or **Enter passphrase**.
 
@@ -52,11 +52,11 @@ For this, do the following steps:
 If this is your first time using the object browser, you **must create an encryption passphrase.** We strongly encourage you to use a mnemonic phrase. The GUI automatically generates one on the client side for you with the **Generate passphrase** option. You can also download it as a text file.
 {% /callout %}
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/b8f25t3ezfVSntymkkreo_kerberos2.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b8f25t3ezfVSntymkkreo_kerberos2.png)
 
 5\) To continue, you need to mark the checkbox **_\[v] I understand, and I have saved the passphrase._** This will enable the **Continue** button. When you click it - the bucket “**_kerberos-vault_**” will be created.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/xM1VMoKpLAO2l8MUtdwUj_kerberos3.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xM1VMoKpLAO2l8MUtdwUj_kerberos3.png)
 
 {% callout type="warning"  %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
@@ -68,9 +68,9 @@ Please note that **Storj does not know or store your encryption passphrase**, s
 
 6\) Navigate to the **Access** page, then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/BDTw8G2G_UrYLCqigpIbD_kerberos4.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/BDTw8G2G_UrYLCqigpIbD_kerberos4.png)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/MBJgkjvxjquWt0BfC4i3D_kerberos5.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MBJgkjvxjquWt0BfC4i3D_kerberos5.png)
 
 7\) In the new window, give your access grant a descriptive name, for example “**kerberosvault**”
 
@@ -84,19 +84,19 @@ Please note that **Storj does not know or store your encryption passphrase**, s
 
 9\) Click **Encrypt My Access**
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/44wvYuZEoZ-bffautbCxG_kerberos6.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/44wvYuZEoZ-bffautbCxG_kerberos6.png)
 
 10\) Select **Create My Own Passphrase** and provide your Encryption Phrase used during creation of “**_kerberos-vault_**” bucket earlier. To continue click either **Copy to clipboard** or **Download .txt**.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/XK4E4GALm02OiwRFTaaai_kerberos7.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/XK4E4GALm02OiwRFTaaai_kerberos7.png)
 
 11\) To confirm creation mark the checkbox **\[v] I understand that Storj does not know or store my encryption passphrase. If I lose it, I won’t be able to recover files.**, this will enable **Create my Access** button.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/P9pu642N2YNRLl1wn945a_kerberos8.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/P9pu642N2YNRLl1wn945a_kerberos8.png)
 
 12\) When you click on **Create my Access** the window with S3 Credentials will be opened.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/UBU80LbzKUOFcn6WCMt8S_kerberos9.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/UBU80LbzKUOFcn6WCMt8S_kerberos9.png)
 
 13\) Copy S3 Keys and S3 Endpoint or click **Download .txt** to use with Kerberos Vault in a safe place.
 
@@ -106,7 +106,7 @@ After completing these steps, you are ready to configure Kerberos Vault with you
 
 Now it is time to tell Kerberos where to store videos (your Storj bucket) and how to access that location (with the access grant created above). These steps can be completed from the Kerberos Vault web panel within your running instance of Kerberos inside a Kubernetes cluster.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/1_U_rGF5rIVbd_OuNKwrW_kerberos-doc-graphic-6.gif)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1_U_rGF5rIVbd_OuNKwrW_kerberos-doc-graphic-6.gif)
 
 1.  From the main Kerberos Vault dashboard, select **Storage Providers** (on the left menu)
 

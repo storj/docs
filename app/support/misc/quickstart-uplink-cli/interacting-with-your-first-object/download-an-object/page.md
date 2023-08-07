@@ -28,4 +28,4 @@ uplink cp sj://cakes/cheesecake.jpg ~/Downloads/cheesecake.jpg
 
 Result
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/w2PAkMtn5GYCDJAt30cmP_downloadobject.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/w2PAkMtn5GYCDJAt30cmP_downloadobject.png)

@@ -25,7 +25,7 @@ This tutorial covers a couple of approaches for developers and creators minting 
 
 Right now, any OpenSea developer can use the coupon code **OPENSEA100** for $100 in STORJ Credit. This would be useful to any developer who signs up to use Storj DCS with the OpenSea SDK and wants to grow beyond our free 50GB tier. This promotion is available to the first 100 developers to register the coupon code on any Storj DCS Satellite account, and is good for two billing cycles. The coupon code is redeemable until December 31st, 2021.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Atka2Z1N3Y1sHsSK3i1A3_screen-shot-2021-09-02-at-30557-pm.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Atka2Z1N3Y1sHsSK3i1A3_screen-shot-2021-09-02-at-30557-pm.png)
 
 NFTs enable developers and creators to register ownership of a unique digital asset on the blockchain. NFTs are best understood as providing digitally native ownership of images, videos, or PFPs (Profile Pictures), or can be digital representations of asset ownership for real estate etc.
 

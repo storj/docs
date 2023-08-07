@@ -58,4 +58,4 @@ Nested buckets are not supported.
 
 Output:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/tu46BijIJlozZB2Rhhjd5_bucketcakescreated.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/tu46BijIJlozZB2Rhhjd5_bucketcakescreated.png)

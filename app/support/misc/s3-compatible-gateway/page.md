@@ -40,11 +40,11 @@ The first main way is to use the web wizard in the Satellite web interface. The 
 
 After logging in, create a new access grant and select "continue in browser."&#x20;
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/DIo-yHe7nogLu4JXyGztm_s3-01.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DIo-yHe7nogLu4JXyGztm_s3-01.png)
 
 Once you have created an access grant, make sure to select the "Generate S3 credentials" option, at the bottom.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/ct4hQn5xGFKmWdBTSgPtV_s3-02.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ct4hQn5xGFKmWdBTSgPtV_s3-02.png)
 
 You can now use the generated access key, secret key, and endpoint in your AWS S3-supporting application.
 

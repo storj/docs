@@ -69,17 +69,17 @@ Please consult [](docId:nGzxQBhV8nx5Pukj6O0zT) for details on setting up an acco
 
 **Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/02Sc23bYY6ck4tjYrzlIV_tesla.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/02Sc23bYY6ck4tjYrzlIV_tesla.png)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/LpyTBi_2N18mWja2fJ5m9_tesla2.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LpyTBi_2N18mWja2fJ5m9_tesla2.png)
 
 **Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/66eO3SJy71s90en2nLrxC_tesla5.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/66eO3SJy71s90en2nLrxC_tesla5.png)
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/HXh6bgiEar2FhwMCuVMg8_tesla6.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/HXh6bgiEar2FhwMCuVMg8_tesla6.png)
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
@@ -87,11 +87,11 @@ Click either on the **Copy to clipboard** link or **Download .txt** and then
 Please **_save_** this **Encryption Passphrase** in a safe place as it will be required to decrypt and view your sentry mode videos from the web.&#x20;
 {% /callout %}
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/ElpzbwDB96FCM8TqKXQte_tesla7.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ElpzbwDB96FCM8TqKXQte_tesla7.png)
 
 Click the **Create my Access** link to finish generating of S3 credentials.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Cpk1IzKHX4r9A7Kh0Jw8C_tesla8.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cpk1IzKHX4r9A7Kh0Jw8C_tesla8.png)
 
 **Copy** your **Access Key, Secret Key,** and **Endpoint** to a safe location. We will use this information later to configure Rclone with the hosted Gateway MT.&#x20;
 

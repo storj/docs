@@ -12,7 +12,7 @@ If you opted-in [](docId:6TX_ve1PyUrXuwax-mWWw), you can check your payout in th
 
 You can click the **View on zkScan** button on the main page of your web-dashboard (see [](docId:gH4m4hVZ0BkMVAoW_jA2t) and [](docId:3k4V1HFunDWHVso9b1Xt9)), as shown in the screenshot of the dashboard _Payout section_ below. This will send you to your zkSync wallet page where you can review the latest L2 payout transactions received.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/A9Wtk342aTte-ic4IKik6_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/A9Wtk342aTte-ic4IKik6_image.png)
 
 {% callout type="info"  %}
 If you do not see the notification "zkSync is opted-in", then you did not enable zkSync in the configuration of the node. See [](docId:6TX_ve1PyUrXuwax-mWWw) how to opt in.
@@ -26,7 +26,7 @@ Open your web-dashboard (see [](docId:gH4m4hVZ0BkMVAoW_jA2t) and [](docId:3k4V1H
 If you do not see the _Transaction_ link, then your node has not received payout receipts from the satellites yet. You need to wait at least 24 hours after the payout for the previous month has been completed to see it.
 {% /callout %}
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/fFTMlWDQj-XdaeKqH0lmk_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/fFTMlWDQj-XdaeKqH0lmk_image.png)
 
 ## Check your wallet on zkscan.io
 

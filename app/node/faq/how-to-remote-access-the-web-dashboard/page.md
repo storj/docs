@@ -111,19 +111,19 @@ ssh user@server
 {% tab label="Android" %}
 Launch the **Termius** application
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/1WDSMEBw1RX2L-nMMxwsS_screenshot2020-04-10-01-35-23-452comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1WDSMEBw1RX2L-nMMxwsS_screenshot2020-04-10-01-35-23-452comserverauditorsshclient.png)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/CyargBsklkwjygra8sIWG_screenshot2020-04-10-01-35-32-750comserverauditorsshclient-1.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/CyargBsklkwjygra8sIWG_screenshot2020-04-10-01-35-32-750comserverauditorsshclient-1.png)
 
 Navigate to the **Keychain** via menu in the top left
 
 **Keychain**
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/kSSZM2TtTrUv0LnI_6gRW_screenshot2020-04-10-01-36-41-348comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/kSSZM2TtTrUv0LnI_6gRW_screenshot2020-04-10-01-36-41-348comserverauditorsshclient.png)
 
 Tap on plus sign and select **New Identity.**
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/61_qLtgFBqtwN2mjqNnKR_screenshot2020-04-10-01-36-53-829comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/61_qLtgFBqtwN2mjqNnKR_screenshot2020-04-10-01-36-53-829comserverauditorsshclient.png)
 
 ---
 
@@ -141,7 +141,7 @@ Navigate to the **Hosts** in the hamburger menu.
 
 Create a new host with the plus sign.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/eT1xBP6coksxRjOPeHQrO_screenshot2020-04-10-02-15-11-130comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/eT1xBP6coksxRjOPeHQrO_screenshot2020-04-10-02-15-11-130comserverauditorsshclient.png)
 
 ---
 
@@ -149,15 +149,15 @@ Create a new host with the plus sign.
 
 Specify alias for the host, i.e. *MyHomePC*. Provide the local or public hostname or IP address in the **Hostname or IP Address** field. Tap on **Username** icon and select the Identity, created earlier. In our example - *user*. Confirm creation of the host
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/bnu6Fux3BMxY0weUr9SJC_screenshot2020-04-10-02-24-01-105comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bnu6Fux3BMxY0weUr9SJC_screenshot2020-04-10-02-24-01-105comserverauditorsshclient.png)
 
 Tap on your host, the *MyHomePC* in our example, it should request a confirmation to add the fingerprint of the host to the list of known host on your smartphone.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/8wpjlE8KZhLDBuWqtEaGY_screenshot2020-04-11-19-51-53-851comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8wpjlE8KZhLDBuWqtEaGY_screenshot2020-04-11-19-51-53-851comserverauditorsshclient.png)
 
 Confirm the connection with a tap on **Connect** button, the Terminal to your host should appear.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/2Z_8PC7IFvnnW9IVa8Ehj_screenshot2020-04-11-19-54-49-429comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/2Z_8PC7IFvnnW9IVa8Ehj_screenshot2020-04-11-19-54-49-429comserverauditorsshclient.png)
 
 ---
 
@@ -204,19 +204,19 @@ ssh -L 14002:localhost:14002 user@server
 {% tab label="Android" %}
 Navigate to the **Port forwarding** screen in the hamburger menu.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/CNwrfB-kBPuwJOSsETfTb_screenshot2020-04-10-02-24-32-574comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/CNwrfB-kBPuwJOSsETfTb_screenshot2020-04-10-02-24-32-574comserverauditorsshclient.png)
 
 Port forwarding
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/u1Bqqejp1xXQaIapnLrMi_screenshot2020-04-11-17-22-25-683comserverauditorsshclient-1.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/u1Bqqejp1xXQaIapnLrMi_screenshot2020-04-11-17-22-25-683comserverauditorsshclient-1.png)
 
 Tap on plus sign to create a new port forwarding rule.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Ob94a-BLL3MYMV2jJwPSC_screenshot2020-04-11-17-22-50-525comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Ob94a-BLL3MYMV2jJwPSC_screenshot2020-04-11-17-22-50-525comserverauditorsshclient.png)
 
 Tap on **Select host** and select the host created earlier, in our case *MyHomePC*.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/lje50iRLNyo9CXAa-8dUH_screenshot2020-04-11-17-22-56-255comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/lje50iRLNyo9CXAa-8dUH_screenshot2020-04-11-17-22-56-255comserverauditorsshclient.png)
 
 Select it and fill other parameters for the port forwarding rule:
 
@@ -228,7 +228,7 @@ Select it and fill other parameters for the port forwarding rule:
 
 - *Address* with **127.0.0.1**
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/bSM1dqhcfVRFvz3pYMx7f_screenshot2020-04-11-17-23-57-464comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bSM1dqhcfVRFvz3pYMx7f_screenshot2020-04-11-17-23-57-464comserverauditorsshclient.png)
 
 Confirm creation.
 
@@ -236,11 +236,11 @@ Check that it’s working - tap on your port forwarding rule, it should connect 
 
 You should see that connection is established and the button **Close** is appear.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/SCQG9DGFn61KvlTeRJFcz_screenshot2020-04-11-19-21-46-575comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/SCQG9DGFn61KvlTeRJFcz_screenshot2020-04-11-19-21-46-575comserverauditorsshclient.png)
 
 Now, open a web dashboard in your mobile browser: [http://localhost:14002](http://localhost:14002/)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/IBDxUGuEagsFPsvB1S_ku_screenshot2020-04-11-19-24-18-951comandroidbrowser.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/IBDxUGuEagsFPsvB1S_ku_screenshot2020-04-11-19-24-18-951comandroidbrowser.png)
 
 Congratulations!
 
@@ -295,7 +295,7 @@ Specify a name for the key in the field **Name**, provide a passphrase (optiona
 
 Select the key to return to the edit of the Identity screen, confirm modification.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Sq8VU_0y2HbAx_B-4mBwq_screenshot2020-04-10-01-49-35-129comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Sq8VU_0y2HbAx_B-4mBwq_screenshot2020-04-10-01-49-35-129comserverauditorsshclient.png)
 
 {% /tab %}
 
@@ -335,19 +335,19 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 {% tab label="Android" %}
 Select **Keychain** from the hamburger menu
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/gGsesUDyNfxMb51n92mvO_screenshot2020-04-10-01-36-41-348comserverauditorsshclient-2.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gGsesUDyNfxMb51n92mvO_screenshot2020-04-10-01-36-41-348comserverauditorsshclient-2.png)
 
 Select the key by tap on key icon, tap on three vertical dots and select **Export to host**.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/49seOAvmH0qxOll1W3UrO_screenshot2020-04-11-19-01-30-561comserverauditorsshclient-1.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/49seOAvmH0qxOll1W3UrO_screenshot2020-04-11-19-01-30-561comserverauditorsshclient-1.png)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/9jLtDrJSWYlZLRNsfNzO-_screenshot2020-04-11-19-02-47-152comserverauditorsshclient-1.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9jLtDrJSWYlZLRNsfNzO-_screenshot2020-04-11-19-02-47-152comserverauditorsshclient-1.png)
 
 Tap on **Select host** and select the needed host, *MyHomePC* in our example
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/95AevSp1sAx2gLaX63lR3_screenshot2020-04-11-19-06-00-312comserverauditorsshclient-1.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/95AevSp1sAx2gLaX63lR3_screenshot2020-04-11-19-06-00-312comserverauditorsshclient-1.png)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/RTg4f_bxcoYxlhQkmS87T_screenshot2020-04-11-19-06-09-738comserverauditorsshclient-1.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/RTg4f_bxcoYxlhQkmS87T_screenshot2020-04-11-19-06-09-738comserverauditorsshclient-1.png)
 
 Confirm the export to the selected host.
 
@@ -360,15 +360,15 @@ Select **Keychain** from the hamburger menu.
 
 Select the key by tap on key icon, tap on three vertical dots and select **Export to host**.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/paSbf4qhCpltTZgsgdV4V_screenshot2020-04-11-19-01-30-561comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/paSbf4qhCpltTZgsgdV4V_screenshot2020-04-11-19-01-30-561comserverauditorsshclient.png)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/khKiRRWD8IQGeqPBG09PD_screenshot2020-04-11-19-02-47-152comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/khKiRRWD8IQGeqPBG09PD_screenshot2020-04-11-19-02-47-152comserverauditorsshclient.png)
 
 Tap on **Select host** and select the needed host, *MyHomePC* in our example
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/4x9jBCu_kNDGbJpETZ8xT_screenshot2020-04-11-19-06-00-312comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4x9jBCu_kNDGbJpETZ8xT_screenshot2020-04-11-19-06-00-312comserverauditorsshclient.png)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/x--vRfC1CX1Gj2mYMZcnK_screenshot2020-04-11-19-06-09-738comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x--vRfC1CX1Gj2mYMZcnK_screenshot2020-04-11-19-06-09-738comserverauditorsshclient.png)
 
 Confirm the export to the selected host.
 

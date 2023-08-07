@@ -1,6 +1,6 @@
 # Storj Docs
 
-Source code for <docs.storj.io>
+Source code for <https://docs.storj.io>
 
 The docs are built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 

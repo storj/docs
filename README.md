@@ -1,10 +1,16 @@
-# Syntax
+# Storj Docs
 
-Syntax is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+Source code for <docs.storj.io>
 
-## Getting started
+The docs are built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
-To get started with this template, first install the npm dependencies:
+## Contributing
+
+If you're interested in contributing to Storj docs, please start by reading our CONTRIBUTING.md guide.
+
+## Running locally
+
+To get started, first install the npm dependencies:
 
 ```bash
 npm install
@@ -16,26 +22,23 @@ Next, run the development server:
 npm run dev
 ```
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+Finally, open <http://localhost:3000> in your browser to view the website.
 
 ## Customizing
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+You can start editing by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
 
 ## Global search
 
-This template includes a global search that's powered by the [FlexSearch](https://github.com/nextapps-de/flexsearch) library. It's available by clicking the search input or by using the `⌘K` shortcut.
+The docs include a global search that's powered by the [FlexSearch](https://github.com/nextapps-de/flexsearch) library. It's available by clicking the search input or by using the `⌘K` shortcut.
 
 This feature requires no configuration, and works out of the box by automatically scanning your documentation pages to build its index. You can adjust the search parameters by editing the `/src/markdoc/search.mjs` file.
-
-## License
-
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
 
 ## Learn more
 
 To learn more about the technologies used in this site template, see the following resources:
 
+- [Tailwind UI](https://tailwindui.com) base site template
 - [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
 - [Next.js](https://nextjs.org/docs) - the official Next.js documentation
 - [Headless UI](https://headlessui.dev) - the official Headless UI documentation

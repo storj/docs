@@ -45,11 +45,11 @@ Use your Wasabi account credentials to log in to the Wasabi Management Console.
 
 2.  Click `CREATE ACCESS KEY` button under the Access Keys heading
 
-![create a wasabi access key](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/bDKe-207rFZXgsmC3e9Mn_screenshot-2023-07-05-at-22731-pm.png)
+![create a wasabi access key](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bDKe-207rFZXgsmC3e9Mn_screenshot-2023-07-05-at-22731-pm.png)
 
 Once the key is created, you can view and copy the Access Key and Secret Key. Make sure to store these securely as the Secret Key cannot be retrieved again and will be needed later on.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/1rp53j9mBwkYEoYKOzUqK_screenshot-2023-07-05-at-21415-pm.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1rp53j9mBwkYEoYKOzUqK_screenshot-2023-07-05-at-21415-pm.png)
 
 ### Create Storj Access Grant
 
@@ -61,7 +61,7 @@ Create Access Grant in the Storj web console:
 
 2\. Click **Create Access Grant** under the Access Grant block
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/I0a-_XJBVJRkWobIDMI6P_screenshot-2023-07-05-at-22016-pm.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/I0a-_XJBVJRkWobIDMI6P_screenshot-2023-07-05-at-22016-pm.png)
 
 3\. When the Create Access screen comes up, set specifications according to the following guidelines:
 
@@ -69,7 +69,7 @@ Create Access Grant in the Storj web console:
 
 - **Name:** The name of the credentials (e.g. my-access-grant)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/ezY2HJuPFEsgyH4p13ebP_screenshot-2023-07-05-at-22057-pm.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ezY2HJuPFEsgyH4p13ebP_screenshot-2023-07-05-at-22057-pm.png)
 
 4\. Click **Continue** to provide permissions
 
@@ -79,7 +79,7 @@ Create Access Grant in the Storj web console:
 
 - **End date**: provide an expiration date for these credentials (optional)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/gQ8jBHtvd5sFZFuAqth_h_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
 
 5\. Click **Continue** to provide Access encryption Information
 
@@ -91,7 +91,7 @@ Create Access Grant in the Storj web console:
 
   - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Uxn8zBqXQVmQvsswV3pJ2_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
 
 {% callout type="warning"  %}
 In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
@@ -101,11 +101,11 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 7\. Click **Confirm** the Confirm details pop-up message
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/WAgyNSbTLK8aR3W8btpMg_screenshot-2023-07-05-at-22143-pm.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/WAgyNSbTLK8aR3W8btpMg_screenshot-2023-07-05-at-22143-pm.png)
 
 8\. Your Access Grant is created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/5c73MkTyjkYBJkkQ42yUF_screenshot-2023-07-05-at-22152-pm.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5c73MkTyjkYBJkkQ42yUF_screenshot-2023-07-05-at-22152-pm.png)
 
 ## Update Rclone config
 
@@ -194,4 +194,4 @@ This command will compare the source (Wasabi) and destination (Storj) and report
 
 You can also see the contents of your Wasabi bucket in the Storj Web Console.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/k_hZRrlzb3x4CqXweWmoD_screenshot-2023-07-05-at-30729-pm.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/k_hZRrlzb3x4CqXweWmoD_screenshot-2023-07-05-at-30729-pm.png)

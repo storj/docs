@@ -17,7 +17,7 @@ Velero lets you:
 
 - Replicate your production cluster to development and testing clusters.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/jSTBcYDqE4MTLcq5GQr3o_kubernetes.jpeg)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jSTBcYDqE4MTLcq5GQr3o_kubernetes.jpeg)
 
 {% callout type="info"  %}
 The Storj DCS Velero plugin does not support volume snapshots for now.
@@ -75,7 +75,7 @@ Because Storj DCS is a globally distributed hot object store, you can store and 
 
 In the example below, we can see a Disaster Recovery scenario where we might need to migrate into a new cluster:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/jSTBcYDqE4MTLcq5GQr3o_kubernetes.jpeg)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jSTBcYDqE4MTLcq5GQr3o_kubernetes.jpeg)
 
 ---
 

@@ -49,9 +49,9 @@ There are benefits to each method of integration. To provide users with the best
 
 Navigate to the **Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Eu0cGhNhS3neRNgOvcRkj_fz1.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Eu0cGhNhS3neRNgOvcRkj_fz1.png)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/58pDc4nVqGckzeHJp1uGc_fz2.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/58pDc4nVqGckzeHJp1uGc_fz2.png)
 
 {% callout type="info"  %}
 If you click Encrypt My Access, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with [](docId:LueFgrbZ9rJbWtDMXhIWZ) for S3 compatibility. Only then will your access grant be shared with our servers. Storj does not know or store your encryption passphrase.
@@ -63,13 +63,13 @@ However, if you are still reluctant to enter your passphrase into our web applic
 
 **Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/7gyqUNAif2Q83l4g6Tg7z_fz3.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/7gyqUNAif2Q83l4g6Tg7z_fz3.png)
 
 Select a **Passphrase** type: Either **Enter** your own **_Encryption Passphrase_** or **Generate** a 12-Word **_Mnemonic Passphrase_**. Make sure you **save your encryption passphrase** as you’ll not be able to reset this after it’s created.
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/9XsE-Njm_W1CjtzunDnJB_fz4.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9XsE-Njm_W1CjtzunDnJB_fz4.png)
 
 {% callout type="warning"  %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
@@ -81,11 +81,11 @@ Please note that **Storj does not know or store your encryption passphrase**, s
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/yDOtoJfTH-szZ1adcbs8P_fz5.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/yDOtoJfTH-szZ1adcbs8P_fz5.png)
 
 Click the **Create my Access** link to finish generating of Access Grant.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/TDbMDxsgttUe5wUWbTv_c_fz6.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/TDbMDxsgttUe5wUWbTv_c_fz6.png)
 
 {% callout type="danger"  %}
 Please note that Storj does not know or store your encryption passphrase, so if you lose it, you will not be able to recover your files. Please store it in a safe place.
@@ -95,11 +95,11 @@ Now that the Access Grant has been generated, this will allow for integration wi
 
 Once the FileZilla Pro client is open, select the **Open the Site Manager** icon at the top left of the FileZilla Pro client. Once open, start by selecting the **New Site** button and **_Storj - Decentralized Cloud Storage_** as the protocol.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/TC3atYXb6YhXDZnjVm3Yy_fz7.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/TC3atYXb6YhXDZnjVm3Yy_fz7.png)
 
 Now, add the appropriate **Satellite** url (without adding `htpps://`) and simply copy your Access Grant that was previously generated within your Storj DCS account to the **Access Grant** field:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/5QStRWOti_3ADaWpg58Wp_fz8.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5QStRWOti_3ADaWpg58Wp_fz8.png)
 
 Hit **Connect**, and access to your Storj DCS account should be established.
 
@@ -109,17 +109,17 @@ In this section, we’ll go through the Storj FileZilla Pro integration leveragi
 
 Navigate to the **Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Vj2eTgkjuNZsl1xsNmhKe_fz9.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Vj2eTgkjuNZsl1xsNmhKe_fz9.png)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/sfXmwoD4AVLQuYvEbD6Y2_fz10.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/sfXmwoD4AVLQuYvEbD6Y2_fz10.png)
 
 **Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/FcRV_rXRVjlHValIKvx5D_fz11.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/FcRV_rXRVjlHValIKvx5D_fz11.png)
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/OACjd1DDC8MvslQqQQ15o_fz12.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/OACjd1DDC8MvslQqQQ15o_fz12.png)
 
 {% callout type="warning"  %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
@@ -131,11 +131,11 @@ Please note that **Storj does not know or store your encryption passphrase**, s
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/JRZBeg0TEWNmVOUSk23y4_fz13.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JRZBeg0TEWNmVOUSk23y4_fz13.png)
 
 Click the **Create my Access** link to finish generating of S3 credentials.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/GYcaWjj6mjXJjfkCoTgda_fz14.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/GYcaWjj6mjXJjfkCoTgda_fz14.png)
 
 Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. safe location or download them.
 
@@ -145,7 +145,7 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. s
 
 2.  Select **_Transfers_** > **_S3: Providers_** from the menu on the left.\\
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/lnwKn_nak0PvDy9f_hDUn_fz14-5.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/lnwKn_nak0PvDy9f_hDUn_fz14-5.png)
 
 3\. Click on the **Add** button under the **Providers** list.
 
@@ -163,7 +163,7 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. s
 
 10\. Click on the **Endpoints** column of the new region row and enter the **_Endpoint address_** for Storj DCS, generated earlier during the creation of the Storj Gateway MT credentials (without adding `https://`).
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/xRQdlQ_6MrJmurhX_OuXF_fz15.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xRQdlQ_6MrJmurhX_OuXF_fz15.png)
 
 11\. Click on **OK.**
 
@@ -181,7 +181,7 @@ Instead of using regional endpoints, you can also use the common gateway.storjs
 
 4.  In the protocol section, select **S3 - Amazon Simple Storage Service** from the **Protocol** drop-down list.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/6d2JjeBf5GT7nlt5Au4nx_fz16.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/6d2JjeBf5GT7nlt5Au4nx_fz16.png)
 
 5\. Provide the **Access key ID** and **Secret Access Key** in the parameters for the new Site.
 
@@ -193,8 +193,8 @@ If this is the first time you connect, you may see a message like the below and&
 you will need to confirm it by clicking the **OK** button:
 {% /callout %}
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/-43vjB1rbhQUL4iz8Shq7_fz17.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/-43vjB1rbhQUL4iz8Shq7_fz17.png)
 
 You should be able to see your buckets now:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/0TqAUhSoPKbMlIS1Rz8pw_fz18.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/0TqAUhSoPKbMlIS1Rz8pw_fz18.png)

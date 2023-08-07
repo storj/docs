@@ -14,7 +14,7 @@ Under the hood, the container registry serves simple REST requests. As Storj DCS
 
 But what is the right order? The container registry API follows a simple structure:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/U8gz4cywJwlI-BhRAr61d_0-fix.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/U8gz4cywJwlI-BhRAr61d_0-fix.png)
 
 Here we pull the **elek/herbsttag** image with the **latest** tag. The manifest can be found under .
 
@@ -44,7 +44,7 @@ Both layers should be found under*.* The layer in the manifest is a simple tar.g
 
 If we upload the layers and metadata files in the same structure, Docker pull will be able to download our Docker images directly from the Storj decentralized cloud. But there are some catches:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/uBZ-3tmXTVgvuSBCFTnpd_1-fix.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/uBZ-3tmXTVgvuSBCFTnpd_1-fix.png)
 
 1.  The _/v2_ endpoint should return with 200 (Docker uses this to double-check if registry implements v2 container registry). We will solve this by uploading an empty HTML file to _/v2/index.html._
 
@@ -72,7 +72,7 @@ The first step can be done with [skopeo](https://github.com/containers/skopeo), 
 
 _skopeo copy docker-daemon/herbsttag dir:/tmp/container_
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/uVyodpXYaEhsJxQ6tTuXJ_2-fix.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/uVyodpXYaEhsJxQ6tTuXJ_2-fix.png)
 
 The result is very close to what we really need:
 
@@ -132,7 +132,7 @@ Modify `/etc/docker/daemon/json` and add the following section:
 
 And now we can test the pull command:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/lKLwfi3Eg3yQue73SIWqF_3-fix.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/lKLwfi3Eg3yQue73SIWqF_3-fix.png)
 
 ### Summary&#x20;
 

@@ -64,7 +64,7 @@ You cannot use pattern expressions to specify which files to copy (e.g. `uplink 
 
 Sample Output:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/fn1JZRT4fFBmNXrzIoBNU_output.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/fn1JZRT4fFBmNXrzIoBNU_output.png)
 
 ### Move an object from a one bucket to another
 
@@ -116,7 +116,7 @@ uplink mv sj://cakes/New-York/cheesecake.jpg sj://new-recipes/cakes/cheesecake.j
 
 Sample Output:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/20_CzBv8l7lU3s83u0GVS_output2.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/20_CzBv8l7lU3s83u0GVS_output2.png)
 
 ## Troubleshooting move errors
 

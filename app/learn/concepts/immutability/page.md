@@ -39,7 +39,7 @@ These factors provide layers of security for data storage. Achieving data immuta
 
 Storj has implemented a range of security constructs to ensure that immutable data storage may be achieved on the storage service. Where appropriate, Storj has implemented industry best practices and provided a compatibility layer with existing technical approaches to immutability. Storj has also introduced several unique capabilities that reduce the complexity required to secure data while reducing the risk and impact associated with the most common attack vectors to immutable data.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/sVh154FoZgMFDeTqDOjyY_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/sVh154FoZgMFDeTqDOjyY_image.png)
 
 ## Privileged Account Management
 

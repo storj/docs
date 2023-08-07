@@ -23,11 +23,11 @@ Download the [Windows Uplink Binary](https://github.com/storj/storj/releases/lat
 
 In the Downloads folder, right-click and select "Extract all"
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/oKwJdejxfzapgH0sJBSaO_qsuplinkwindows01.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/oKwJdejxfzapgH0sJBSaO_qsuplinkwindows01.png)
 
 Extract to your user's folder ("**Alexey"** in this example):
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/okywjcPwdjfWjcUMWGKla_qsuplinkwindows02.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/okywjcPwdjfWjcUMWGKla_qsuplinkwindows02.png)
 
 Once extracted, do not try to open the file, as it can only be accessed via the command line.
 

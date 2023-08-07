@@ -12,9 +12,9 @@ You need to have a satellite account and installed Uplink CLI as described in []
 
 Navigate to the **Access** page within your project and then click on **Create Access Grant**. A modal window will pop up where you should enter a name for this access grant.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/tDPWIcmlm5DNtndvZZ-oi_create-access-1.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/tDPWIcmlm5DNtndvZZ-oi_create-access-1.png)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/empZoglAtQ5qKj1VJRPj1_create-access-2.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/empZoglAtQ5qKj1VJRPj1_create-access-2.png)
 
 {% callout type="info"  %}
 If you click **Encrypt My Access**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with [](docId:AsyYcUJFbO1JI8-Tu8tW3) for S3 compatibility. Only then will your access grant be shared with our servers. Storj does not know or store your encryption passphrase.
@@ -26,13 +26,13 @@ However, if you are still reluctant to enter your passphrase into our web applic
 
 **Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/0uBSt2BPz_u4bP9mCtKyN_create-access-3.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/0uBSt2BPz_u4bP9mCtKyN_create-access-3.png)
 
 Select a **Passphrase** type: Either **Enter** your own **_Encryption Passphrase_** or **Generate** a 12-Word **_Mnemonic Passphrase_**. Make sure you **save your encryption passphrase** as you'll not be able to reset this after it's created.
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/yjlB4DU8MBNHzdSohxzUN_create-access-4.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/yjlB4DU8MBNHzdSohxzUN_create-access-4.png)
 
 {% callout type="warning"  %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
@@ -44,10 +44,10 @@ Please note that **Storj does not know or store your encryption passphrase**, so
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/APMVw5JzZ74NLaYNPI7AS_create-access-5.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/APMVw5JzZ74NLaYNPI7AS_create-access-5.png)
 
 Click the **Create my Access** link to finish generating of Access Grant.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/hmCrRyczE1pi8g7jo2GN2_create-access-6.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hmCrRyczE1pi8g7jo2GN2_create-access-6.png)
 
 Access Grant is generated. **The Access Grant will only display once.** Save this information in a password manager or wherever you prefer to store sensitive information.&#x20;

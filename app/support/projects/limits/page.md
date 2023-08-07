@@ -13,7 +13,7 @@ Learn more about [](docId:M-5oxBinC6J1D-qSNjKYS)in Key Architecture Constructs u
 
 To select, create or **Manage Projects** you can click the name of your project on the left side toolbar above **Dashboard**.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/zkBfEiBnAa8o6fA_2ZMiO_manage-01.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zkBfEiBnAa8o6fA_2ZMiO_manage-01.png)
 
 ## Create a new Project
 
@@ -25,13 +25,13 @@ The availability of this function depends on your account tier. Please check [](
 
 Specify the **Project Name**, optional **Description** and confirm the creating with the **Create Project** button.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/DDXNF01IgUwZV8PqLrt3n_manage02.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DDXNF01IgUwZV8PqLrt3n_manage02.png)
 
 ## Modify the existing Project
 
 To modify the existing Project on the **_Projects_** screen you can select a needed project and modify its name or description.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/beljzrUkwGGXkjOMW7LMy_manage03.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/beljzrUkwGGXkjOMW7LMy_manage03.png)
 
 ## Changing Project Limits
 
@@ -39,7 +39,7 @@ If your account tier allows you to change [](docId:A4kUGYhfgGbVhlQ2ZHXVS), you w
 
 Select **Edit** to the right of the limit to change it. However, it will not allow to increase limits greater than your available maximum. To change the maximum you need to file a [](docId:xe__i9r3jY1QWUR6RYgzd) request to change your limits.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/GnLdZJSJOqBh_mqlH3lM0_manage04.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/GnLdZJSJOqBh_mqlH3lM0_manage04.png)
 
 ## Delete the existing Project
 

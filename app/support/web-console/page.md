@@ -24,19 +24,19 @@ When you click on the bucket, you will be prompted to read carefully - The objec
 Don't forget to save your **Encryption Passphrase** generated below, you will need it for future access.
 {% /callout %}
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/PgEXOy3cK2ue1zGwGqxdh_qsobject01.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PgEXOy3cK2ue1zGwGqxdh_qsobject01.png)
 
 If this is your first time using the object browser, you **must create an encryption passphrase.** We strongly encourage you to use a mnemonic phrase. The GUI automatically generates one on the client side for you with the **Generate passphrase** option. You can also download it as a text file.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/SWYh6j1RWfLrc4dPlgYW2_qsobject02.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/SWYh6j1RWfLrc4dPlgYW2_qsobject02.png)
 
 Alternatively, you can enter your own passphrase using the **Enter passphrase** option. Finish selection by click on **Continue** button.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/m_4pzkqRUSiGpOXmnWd60_qsobject03.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/m_4pzkqRUSiGpOXmnWd60_qsobject03.png)
 
 To continue, you need to mark the checkbox **_\[v] I understand, and I have saved the passphrase._** This will enable the **Continue** button.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/VJondlvfOjDcc04ILsAsF_qsobject04.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/VJondlvfOjDcc04ILsAsF_qsobject04.png)
 
 When you click the **Continue** button, you will be placed into the **Objects** view if you already have buckets, otherwise a new bucket **_demo-bucket_** will be created and you will be placed into that bucket view.
 
@@ -50,7 +50,7 @@ To upload larger files, please utilize the [](docId:TbMdOGCAXNWyPpQmH6EOq).
 
 If you have not yet created a bucket, the bucket **_demo-bucket_** will be created automatically to allow you to upload objects right away.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/A1VBtbjhSjxV187WZEiAH_qsobject04.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/A1VBtbjhSjxV187WZEiAH_qsobject04.png)
 
 To upload your first object, **drag it into the browser** or select **Upload File** and browse to the file you wish to upload.
 
@@ -66,11 +66,11 @@ When you drag and drop your file into the Satellite Admin Console Object Browser
 
 1\. If you select the three vertical dots on the right side of a file, a popup menu will appear:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/pEw5qFRbraYchiz0mtOv7_qsobject05.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/pEw5qFRbraYchiz0mtOv7_qsobject05.png)
 
 2\. Select the **Delete** command.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/JRQ09me42z8yIy05hLLn0_qsobject06.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JRQ09me42z8yIy05hLLn0_qsobject06.png)
 
 3\. Confirm deletion with **Yes**.
 
@@ -80,7 +80,7 @@ Buckets are your containers that store objects.&#x20;
 
 You can create your buckets in the **Objects** view or if you click on the **<-Back to Buckets** button, in the bucket view.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/oJ74hmgmN9h5iDemALwMk_qsobject07.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/oJ74hmgmN9h5iDemALwMk_qsobject07.png)
 
 {% callout type="warning"  %}
 The bucket name can only contain lowercase letters, numbers, and hyphens.
@@ -88,7 +88,7 @@ The bucket name can only contain lowercase letters, numbers, and hyphens.
 
 To create a new bucket, click the **New bucket** button in the **Buckets** view. A new module window will pop up called **Create Bucket**. Please provide a name using only lower case alphanumeric characters and dashes (this is a limitation for compatibility with existing object storages).
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Yewew2V1tdS66o93P_XIM_qsobject08.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Yewew2V1tdS66o93P_XIM_qsobject08.png)
 
 After creating your new bucket, you will be placed into the bucket where you can [](docId:gh5RtIDbMkAoomljO7f8d) &#x20;
 
@@ -96,11 +96,11 @@ After creating your new bucket, you will be placed into the bucket where you can
 
 1\. Clicking the three vertical dots on the right side of the bucket, a popup menu will appear:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/5YJzM4uQlX2DkoFIuyNp1_qsobject09.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5YJzM4uQlX2DkoFIuyNp1_qsobject09.png)
 
 2\. Click the **Delete** command
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/awroxWO45F35KG6mW6zys_qsobject10.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/awroxWO45F35KG6mW6zys_qsobject10.png)
 
 3\. Type the **_Bucket Name_** and **Confirm Delete Bucket**.
 
@@ -112,18 +112,18 @@ Be careful when deleting buckets - If you still have objects in the bucket being
 
 After an upload completes, you will have the option of creating a share link. If you wish, click the file name - it will open a preview with a map. Here you can click the **Share** button.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/vCYGlW3Gy5TJHiQHzLT_n_qsobjectshare01.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/vCYGlW3Gy5TJHiQHzLT_n_qsobjectshare01.png)
 
 Or you can click on the three vertical dots to the right of the file you want to share, and select **Share** to share your object.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/AvXeXUPRK2-PFiOyCGS6Z_qsobjectshare02.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/AvXeXUPRK2-PFiOyCGS6Z_qsobjectshare02.png)
 
 The **Share** pop-up window allows you to share the link via social media or copy it with **Copy Link**.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/GmA5kH_adiXmGOaw7iTAz_qsobjectshare03.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/GmA5kH_adiXmGOaw7iTAz_qsobjectshare03.png)
 
 The share link includes a rendering of where the pieces of your file are located on the globally distributed network of storage nodes, as well as a preview of that file.&#x20;
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/y1Z-utzw4fEsvj6gffynu_qsobjectshare04.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/y1Z-utzw4fEsvj6gffynu_qsobjectshare04.png)
 
 This concludes the Object Browser Quickstart.

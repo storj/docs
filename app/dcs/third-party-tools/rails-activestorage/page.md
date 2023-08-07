@@ -107,7 +107,7 @@ Edit `app/views/names/_form.html.erb` to include a `field_field` to allow the us
 
 Navigate to <http://localhost:3000/names/new> and you should see the following
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/exMR-EZ3OKl8eokEZk-Ox_screenshot-2023-02-02-at-41007-pm.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/exMR-EZ3OKl8eokEZk-Ox_screenshot-2023-02-02-at-41007-pm.png)
 
 Click "Create Name"&#x20;
 

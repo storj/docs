@@ -68,7 +68,7 @@ uplink meta get sj://cakes/cheesecake.jpg
 
 {% /code-group %}
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/zxWOIDRiLXcedbjVc6OmG_meta-get.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zxWOIDRiLXcedbjVc6OmG_meta-get.png)
 
 ### Query for a specific key in metadata
 
@@ -90,7 +90,7 @@ uplink meta get sj://cakes/cheesecake.jpg baker
 
 {% /code-group %}
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/B2qjHGPbKsZHONu74SsL0_meta-get-key.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/B2qjHGPbKsZHONu74SsL0_meta-get-key.png)
 
 {% callout type="info"  %}
 Querying for a non-existent key will raise an error.

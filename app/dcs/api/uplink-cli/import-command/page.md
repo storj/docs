@@ -72,4 +72,4 @@ uplink import cheesecake 13df....qa
 
 These two commands will have the same output:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/QMHA8C75PyqDP6qfMVNfR_access-imported.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/QMHA8C75PyqDP6qfMVNfR_access-imported.png)

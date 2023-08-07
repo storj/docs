@@ -30,4 +30,4 @@ uplink mb sj://cakes
 
 Result
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/VE2SKIz_0DR32w_SqGKly_bucketcakescreated.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/VE2SKIz_0DR32w_SqGKly_bucketcakescreated.png)

@@ -9,4 +9,4 @@ Smart Quick Start Wizards are made to help you/
 
 These Quick Start Wizards can help you to use the Satellite Admin Console.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Tgup1XHuNzp0knTU-h7-O_qs.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Tgup1XHuNzp0knTU-h7-O_qs.png)

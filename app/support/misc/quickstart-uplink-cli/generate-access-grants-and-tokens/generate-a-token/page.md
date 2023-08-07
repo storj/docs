@@ -16,15 +16,15 @@ Create an Access Grant in the Uplink CLI with Satellite and API Key info from th
 
 3.  Navigate to **Access** page and click the **Create Keys for CLI** link (rightmost option).
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/A-FVBJUPSoGo5PefsWReo_access-grants01.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/A-FVBJUPSoGo5PefsWReo_access-grants01.png)
 
 4\. Provide name, permissions and optionally buckets, select **Create Keys**.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/MDufnxlBjkqF4aA2sox0j_access-grants02.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MDufnxlBjkqF4aA2sox0j_access-grants02.png)
 
 5\. Copy and save the **Satellite Address** and **API Key** in a safe place or download them as they will only appear once.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/5nn_fN9lmg9VauZZ5S1ks_access-grants03.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5nn_fN9lmg9VauZZ5S1ks_access-grants03.png)
 
 6\. Make sure you've already [](docId:hFL-goCWqrQMJPcTN82NB) and run `uplink setup`.
 

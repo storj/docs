@@ -17,7 +17,7 @@ Learn more about Projects in [](docId:M-5oxBinC6J1D-qSNjKYS) under Concepts.
 
 On the Project Dashboard, there are a number of navigational elements and information displays:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/ciTyxd2Es4DaozorgD9wQ_dashboardpro1-projectactive.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ciTyxd2Es4DaozorgD9wQ_dashboardpro1-projectactive.png)
 
 1.  &#x20;**Projects management** - This element allows you to add Projects and switch between different Projects. There you also have a [](docId:s9MmhnH5OaJrTszOozt3k) setting.
 

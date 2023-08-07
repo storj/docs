@@ -53,4 +53,4 @@ URL       : https://link.storjshare.io/s/juexo54k2db7lt5fawuqkupqkcfa/cakes/chee
 
 This is a real distribution of your file's pieces that you uploaded to the network. You can share this file with anyone you'd like.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/wx1Ujm2Y4Fnpn9vtROT0R_object-distribution.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/wx1Ujm2Y4Fnpn9vtROT0R_object-distribution.png)

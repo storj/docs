@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Read the URLs from the JSON file
+urls=$(jq -r '.[]' images.json)
+
+# Loop through each URL
+for url in $urls; do
+  # Get the basename of the URL
+  filename=$(basename $url)
+
+  # Use wget to download the content of the URL and pipe it to uplink cp with the basename
+  wget -O - $url | uplink cp - "sj://docs/images/$filename"
+
+  echo "File downloaded and uploaded to uplink as $filename"
+done
+

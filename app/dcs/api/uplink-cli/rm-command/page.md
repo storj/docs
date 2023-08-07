@@ -77,7 +77,7 @@ uplink ls sj://cakes --encrypted
 
 {% /code-group %}
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/H3aTNgsLuQGUyyzoHvuOF_rm-01.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/H3aTNgsLuQGUyyzoHvuOF_rm-01.png)
 
 You can then use this path to delete the encrypted object:
 
@@ -97,4 +97,4 @@ uplink rm --encrypted sj://cakes/Ao8rmi2hw5v8_SS2GRokJwqkzQ2j9wXRH2Ll-1owEGPwIWM
 
 {% /code-group %}
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/312jWiPeE9_7b2PweTHUZ_rm-02.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/312jWiPeE9_7b2PweTHUZ_rm-02.png)

@@ -79,7 +79,7 @@ export default function TableOfContents({ tableOfContents, filepath }) {
                     href={`#${section.id}`}
                     className={clsx(
                       isActive(section)
-                        ? 'text-storj-blue-700'
+                        ? 'text-storj-blue-700 dark:text-storj-blue-500'
                         : 'font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
                     )}
                   >
@@ -97,7 +97,7 @@ export default function TableOfContents({ tableOfContents, filepath }) {
                           href={`#${subSection.id}`}
                           className={
                             isActive(subSection)
-                              ? 'text-storj-blue-700'
+                              ? 'text-storj-blue-700 dark:text-storj-blue-500'
                               : 'hover:text-slate-600 dark:hover:text-slate-300'
                           }
                         >

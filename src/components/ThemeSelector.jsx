@@ -59,8 +59,8 @@ export function ThemeSelector(props) {
         className="flex h-6 w-6 items-center justify-center rounded-lg shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-700 dark:ring-inset dark:ring-white/5"
         aria-label={theme?.name}
       >
-        <LightIcon className="hidden h-4 w-4 fill-sky-400 [[class=light]_&]:block" />
-        <DarkIcon className="hidden h-4 w-4 fill-sky-400 [[class=dark]_&]:block" />
+        <LightIcon className="hidden h-4 w-4 fill-storj-blue-700 dark:fill-storj-blue-500 [[class=light]_&]:block" />
+        <DarkIcon className="hidden h-4 w-4 fill-storj-blue-700 dark:fill-storj-blue-500 [[class=dark]_&]:block" />
         <LightIcon className="hidden h-4 w-4 fill-slate-400 [:not(.dark)[class=system]_&]:block" />
         <DarkIcon className="hidden h-4 w-4 fill-slate-400 [.dark[class=system]_&]:block" />
       </Listbox.Button>
@@ -73,7 +73,7 @@ export function ThemeSelector(props) {
               clsx(
                 'flex cursor-pointer select-none items-center rounded-[0.625rem] p-1',
                 {
-                  'text-sky-500': selected,
+                  'text-storj-blue-700 dark:text-storj-blue-500': selected,
                   'text-slate-900 dark:text-white': active && !selected,
                   'text-slate-700 dark:text-slate-400': !active && !selected,
                   'bg-slate-100 dark:bg-slate-900/40': active,
@@ -88,7 +88,7 @@ export function ThemeSelector(props) {
                     className={clsx(
                       'h-4 w-4',
                       selected
-                        ? 'fill-sky-400 dark:fill-sky-400'
+                        ? 'fill-storj-blue-700 dark:fill-storj-blue-500'
                         : 'fill-slate-400'
                     )}
                   />

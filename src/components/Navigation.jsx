@@ -30,13 +30,15 @@ function NavLink({ title, href, current, root, disclosure }) {
       as={Link}
       href={href}
       className={clsx(
-        root && disclosure ? 'font-semibold ' : 'block',
+        root && disclosure ? 'font-semibold dark:text-white' : 'block',
         padding,
         `w-full truncate py-0.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:z-10 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
         current
           ? clsx(
-              `font-semibold text-storj-blue-700`,
-              !root && !disclosure && 'before:bg-storj-blue-700'
+              `font-semibold text-storj-blue-700 dark:text-storj-blue-500`,
+              !root &&
+                !disclosure &&
+                'before:bg-storj-blue-700 dark:before:bg-storj-blue-500'
             )
           : clsx(
               `text-slate-600 dark:text-slate-400`,
@@ -84,7 +86,8 @@ function NavItem({ item, root }) {
               className={clsx(
                 open
                   ? `rotate-90 ${
-                      pathname.includes(item.type) && 'text-storj-blue-700'
+                      pathname.includes(item.type) &&
+                      'text-storj-blue-700 dark:text-storj-blue-500'
                     }`
                   : 'text-gray-500',
                 'z-30 -ml-1.5 h-4 w-4 shrink-0'

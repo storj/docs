@@ -1,21 +1,21 @@
-const Head = require('next/head');
-const Image = require('next/image');
-const Link = require('next/link');
-const Script = require('next/script');
+const Head = require('next/head')
+const Image = require('next/image')
+const Link = require('next/link')
+const Script = require('next/script')
 
 exports.comment = {
   description: 'Use to comment the content itself',
   attributes: {},
   transform() {
-    return [];
+    return []
   },
-};
+}
 
 exports.head = {
   render: Head,
   description: 'Renders a Next.js head tag',
   attributes: {},
-};
+}
 
 exports.image = {
   render: Image,
@@ -62,7 +62,7 @@ exports.image = {
       type: String,
     },
   },
-};
+}
 
 exports.link = {
   render: Link,
@@ -110,7 +110,7 @@ exports.link = {
       type: Boolean,
     },
   },
-};
+}
 
 exports.script = {
   render: Script,
@@ -126,4 +126,4 @@ exports.script = {
       matches: ['beforeInteractive', 'afterInteractive', 'lazyOnload'],
     },
   },
-};
+}

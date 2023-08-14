@@ -22,27 +22,33 @@ function NavLink({ title, href, current, root, disclosure }) {
     padding = 'pl-0'
   }
 
+  let ComponentToUse = disclosure ? Disclosure.Button : Link
+
   return (
-    <Link
+    <ComponentToUse
+      id={title}
+      as={Link}
       href={href}
       className={clsx(
-        `${
-          root && disclosure ? 'font-semibold ' : 'block'
-        } w-full ${padding} truncate py-0.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:z-10 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
+        root && disclosure ? 'font-semibold ' : 'block',
+        padding,
+        `w-full truncate py-0.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:z-10 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
         current
-          ? `font-semibold text-storj-blue-700 ${
-              root || disclosure ? '' : 'before:bg-storj-blue-700'
-            }`
-          : `text-slate-600 dark:text-slate-400 ${
-              root || disclosure
-                ? ''
-                : 'before:hidden before:bg-slate-500 hover:text-slate-700 hover:before:block dark:before:bg-slate-700 dark:hover:text-slate-300'
-            }`
+          ? clsx(
+              `font-semibold text-storj-blue-700`,
+              !root && !disclosure && 'before:bg-storj-blue-700'
+            )
+          : clsx(
+              `text-slate-600 dark:text-slate-400`,
+              !root &&
+                !disclosure &&
+                'before:hidden before:bg-slate-500 hover:text-slate-700 hover:before:block dark:before:bg-slate-700 dark:hover:text-slate-300'
+            )
       )}
       title={title}
     >
       {title}
-    </Link>
+    </ComponentToUse>
   )
 }
 

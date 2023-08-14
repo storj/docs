@@ -5,8 +5,8 @@ import clsx from 'clsx'
 
 const spaces = [
   { name: 'Home', path: '/', href: '/dcs' },
-  { name: 'Node', href: '/node' },
   { name: 'Learn', href: '/learn' },
+  { name: 'Node', href: '/node' },
   { name: 'Help Center', href: '/support' },
 ]
 

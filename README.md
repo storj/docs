@@ -8,7 +8,7 @@ The docs are built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](h
 
 If you're interested in contributing to Storj docs, please start by reading our CONTRIBUTING.md guide.
 
-## Running locally
+## Running docs locally
 
 To get started, first install the npm dependencies:
 

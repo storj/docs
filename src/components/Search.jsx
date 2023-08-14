@@ -42,7 +42,6 @@ function useAutocomplete(setOpen) {
                 return item.url
               },
               onSelect({ itemUrl }) {
-                console.log('onSelect', itemUrl)
                 setOpen(false)
                 router.push(itemUrl)
               },
@@ -228,7 +227,6 @@ function SearchDialog({ open, setOpen, className }) {
       return
     }
     const url = `${pathname}?${searchParams}`
-    console.log(url)
     setOpen(false)
     // You can now use the current URL
     // ...

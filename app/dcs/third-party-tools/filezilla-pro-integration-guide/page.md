@@ -58,7 +58,7 @@ If you click Encrypt My Access, our client-side javascript will finalize your ac
 
 However, if you are still reluctant to enter your passphrase into our web application, that’s completely understandable, and you should cancel creation of Access Grant in Web UI, select Create Keys for CLI and follow these instructions: [](docId:OXSINcFRuVMBacPvswwNU)
 
-\*\*The instructions below assume you selected\*\*** \*\*\***Encrypt My Access.\*\*\*
+**The instructions below assume you selected _Encrypt My Access._**
 {% /callout %}
 
 **Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:

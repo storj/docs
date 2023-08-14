@@ -73,6 +73,7 @@ export default function (nextConfig = {}) {
                   ast.attributes?.frontmatter?.match(
                     /^title:\s*(.*?)\s*$/m
                   )?.[1]
+                // [title, hash, content]
                 sections = [[title, null, []]]
                 extractSections(ast, sections)
                 cache.set(file, [md, sections])
@@ -91,7 +92,7 @@ export default function (nextConfig = {}) {
                 document: {
                   id: 'url',
                   index: 'content',
-                  store: ['title', 'pageTitle'],
+                  store: ['title', 'pageTitle', 'paragraphs'],
                 },
                 context: {
                   resolution: 9,
@@ -109,6 +110,7 @@ export default function (nextConfig = {}) {
                     title,
                     content: [title, ...content].join('\\n'),
                     pageTitle: hash ? sections[0][0] : undefined,
+                    ...(content[0] && { paragraphs: content })
                   })
                 }
               }
@@ -121,11 +123,48 @@ export default function (nextConfig = {}) {
                 if (result.length === 0) {
                   return []
                 }
-                return result[0].result.map((item) => ({
-                  url: item.id,
-                  title: item.doc.title,
-                  pageTitle: item.doc.pageTitle,
-                }))
+                return result[0].result.map((item) => {
+                  const spaceCount = 10; // Number of spaces before and after the match for the snippet
+                  // match a space only if it is followed by a non-whitespace character
+                  const regex = new RegExp(query.trim().replace(/ (?=\\S)/g, '|'), 'i');
+                  const matchingSnippets = item.doc.paragraphs?.map(paragraph => {
+                    const index = paragraph.search(regex);
+
+                    if (index !== -1) {
+                      let start = index;
+                      let end = index;
+
+                      // Find the start index
+                      for (let i = 0; i < spaceCount; i++) {
+                        start = paragraph.lastIndexOf(' ', start - 1);
+                        if (start === -1) {
+                          start = 0;
+                          break;
+                        }
+                      }
+
+                      // Find the end index
+                      for (let i = 0; i < spaceCount + 1; i++) { // +1 to include the matched query
+                        end = paragraph.indexOf(' ', end + 1);
+                        if (end === -1) {
+                          end = paragraph.length;
+                          break;
+                        }
+                      }
+
+                      return paragraph.substring(start, end).trim();
+                    }
+
+                    return null;
+                  }).filter(Boolean);
+
+                  return {
+                    url: item.id,
+                    title: item.doc.title,
+                    pageTitle: item.doc.pageTitle,
+                    snippets: matchingSnippets?.slice(0, 5).join("..."),
+                  }
+                })
               }
             `
           }),

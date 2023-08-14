@@ -88,7 +88,7 @@ function HighlightQuery({ text, query }) {
   return (
     <Highlighter
       highlightClassName="group-aria-selected:underline bg-transparent text-storj-blue-800 dark:text-storj-blue-400"
-      searchWords={[query]}
+      searchWords={query.split(' ')}
       autoEscape={true}
       textToHighlight={text}
     />
@@ -102,7 +102,9 @@ function SearchResult({ result, autocomplete, collection, query }) {
   let sectionTitle = navigation.find((section) =>
     section.links.find((link) => link.href === result.url.split('#')[0])
   )?.title
-  let hierarchy = [sectionTitle, result.pageTitle].filter(Boolean)
+  let hierarchy = [sectionTitle, result.pageTitle, result.snippets].filter(
+    Boolean
+  )
 
   return (
     <li
@@ -124,7 +126,7 @@ function SearchResult({ result, autocomplete, collection, query }) {
         <div
           id={`${id}-hierarchy`}
           aria-hidden="true"
-          className="mt-0.5 truncate whitespace-nowrap text-xs text-slate-500 dark:text-slate-400"
+          className="mt-0.5 text-xs text-slate-500 dark:text-slate-400"
         >
           {hierarchy.map((item, itemIndex, items) => (
             <Fragment key={itemIndex}>

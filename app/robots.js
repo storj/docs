@@ -4,7 +4,7 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: `https://${process.env.VERCEL_URL}/sitemap.xml`,
-		host:`https://${process.env.VERCEL_URL}`
+    sitemap: `${process.env.SITE_URL}/sitemap.xml`,
+    host: `${process.env.SITE_URL}`,
   }
 }

@@ -5,6 +5,9 @@ import withNavigation from './src/markdoc/navigation.mjs'
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md'],
+  env: {
+    SITE_URL: 'https://docs-storj.vercel.app',
+  },
   experimental: {
     scrollRestoration: true,
   },

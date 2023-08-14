@@ -9,7 +9,7 @@ const nextConfig = {
     scrollRestoration: true,
   },
   images: {
-    unoptimized: true, // Firebase is really slow at deploying when image optimization is enabled..
+    unoptimized: true,
   },
   webpack(config, options) {
     config.module.rules.push({

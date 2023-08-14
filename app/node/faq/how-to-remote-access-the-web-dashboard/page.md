@@ -135,7 +135,7 @@ Navigate to the **Hosts** in the hamburger menu.
 
 **Hosts**
 
-![](https://archbee.imgix.net/kv3plx2xmXcUGcVl4Lttj/BL4PNy3nbasglk_aTj7SU_screenshot2020-04-10-01-36-29-564comserverauditorsshclient.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/BL4PNy3nbasglk_aTj7SU_screenshot2020-04-10-01-36-29-564comserverauditorsshclient.png)
 
 ---
 
@@ -356,7 +356,7 @@ Confirm the export to the selected host.
 {% tab label="iOS" %}
 Select **Keychain** from the hamburger menu.
 
-![](https://archbee.imgix.net/kv3plx2xmXcUGcVl4Lttj/eW61FgtTMkNAdPZVykKSq_screenshot2020-04-10-01-36-41-348comserverauditorsshclient-1.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/eW61FgtTMkNAdPZVykKSq_screenshot2020-04-10-01-36-41-348comserverauditorsshclient-1.png)
 
 Select the key by tap on key icon, tap on three vertical dots and select **Export to host**.
 

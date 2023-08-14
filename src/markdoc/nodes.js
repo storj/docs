@@ -13,17 +13,26 @@ import crypto from 'crypto'
 import imageSizeCache from '../../.image-size-cache.json'
 
 const ImageWrap = ({ src, alt, width, height }) => {
-  // TODO size the image at build, but this works well enough in the meantime
-  let imgStyle = 'xs:max-w-full sm:max-w-sm max-h-96'
+  let imgStyle = 'xs:max-w-full sm:max-w-sm'
+  let newWidth = width
+  let newHeight = height
   if (width > height) {
-    imgStyle = 'max-w-full'
-    if (height >= 400) {
-      imgStyle = 'w-auto max-h-96'
-    }
+    imgStyle = 'max-w-full h-auto'
   }
+  if (height > 384) {
+    newHeight = 384
+    newWidth = (width * newHeight) / height
+  }
+
   return (
     <a target="_blank" rel="noreferrer" href={src}>
-      <img className={`object-fit ${imgStyle} `} src={src} alt={alt} />
+      <img
+        className={`object-fit ${imgStyle}`}
+        width={newWidth}
+        height={newHeight}
+        src={src}
+        alt={alt}
+      />
     </a>
   )
 }

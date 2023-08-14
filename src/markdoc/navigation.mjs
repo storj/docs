@@ -190,7 +190,6 @@ export default function (nextConfig = {}) {
             sortByWeightThenTitle(learn)
             let support = walkDir(`${dir}/support`, 'support')
             sortByWeightThenTitle(support)
-            // TODO just calculate the next and prev when making the page
             let dcsBottomNav = extractHrefObjects(structuredClone(dcs))
             let nodeBottomNav = extractHrefObjects(structuredClone(node))
             let learnBottomNav = extractHrefObjects(structuredClone(learn))

@@ -27,6 +27,7 @@ const languageMapping = {
   macos: 'shell',
   linux: 'shell',
   text: 'shell',
+  curl: 'shell',
 }
 
 export default function Fence({ language, children, copy = true }) {
@@ -34,6 +35,8 @@ export default function Fence({ language, children, copy = true }) {
   // nest it in a Client component for the copy button
   if (languageMapping[language?.toLowerCase()]) {
     language = languageMapping[language]
+  } else if (language === 'none') {
+    language = undefined
   }
   let codeComp = <Code lang={language}>{children.trim()}</Code>
   if (!copy) {

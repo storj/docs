@@ -32,7 +32,7 @@ const languageMapping = {
 export default function Fence({ language, children, copy = true }) {
   // Code has be to a Server Component to work
   // nest it in a Client component for the copy button
-  if (languageMapping[language.toLowerCase()]) {
+  if (languageMapping[language?.toLowerCase()]) {
     language = languageMapping[language]
   }
   let codeComp = <Code lang={language}>{children.trim()}</Code>

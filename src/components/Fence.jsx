@@ -14,16 +14,27 @@ Code.theme = {
   lightSelector: '[class="light"]',
   // lightSelector: 'html.light',
 }
+
 // Get attributes from .md files to pass to Code
 //   - Define attribute in @/markdoc/nodes for fence
 //        e.g. hello: { type: String }
 //   - Add attributes in markdown using {%...%}
 //        e.g. ```js {% hello="hi" %}
 //   - hello will appear as a prop for Fence
+
+const languageMapping = {
+  windows: 'powershell',
+  macos: 'shell',
+  linux: 'shell',
+  text: 'shell',
+}
+
 export default function Fence({ language, children, copy = true }) {
   // Code has be to a Server Component to work
   // nest it in a Client component for the copy button
-  //
+  if (languageMapping[language.toLowerCase()]) {
+    language = languageMapping[language]
+  }
   let codeComp = <Code lang={language}>{children.trim()}</Code>
   if (!copy) {
     return codeComp

@@ -88,6 +88,19 @@ function getFrontmatter(filepath) {
 }
 
 function walkDir(dir, space, currentPath = '') {
+  const filepath =
+    space == 'dcs' ? dir + '/../page.md' : path.join(dir, 'page.md')
+  let fm = getFrontmatter(filepath)
+  let entry = {
+    ...fm,
+    links: [],
+    href: space == 'dcs' ? '/' : `/${space}`,
+  }
+
+  return [entry, ...walkDirRec(dir, space, currentPath)]
+}
+
+function walkDirRec(dir, space, currentPath) {
   let results = []
   const list = fs.readdirSync(dir)
 
@@ -97,13 +110,13 @@ function walkDir(dir, space, currentPath = '') {
     const relativePath = path.join(currentPath, file)
 
     if (stat && stat.isDirectory()) {
-      let indexFilepath = filepath + '/page.md'
+      let pageFilepath = path.join(filepath, 'page.md')
       // For directories that don't have an page.md
-      let metaFilepath = filepath + '/_meta.json'
+      let metaFilepath = path.join(filepath, '_meta.json')
       let title = file.charAt(0).toUpperCase() + file.slice(1)
       let fm = null
-      if (fs.existsSync(indexFilepath)) {
-        fm = getFrontmatter(indexFilepath)
+      if (fs.existsSync(pageFilepath)) {
+        fm = getFrontmatter(pageFilepath)
       } else if (fs.existsSync(metaFilepath)) {
         const meta = fs.readFileSync(metaFilepath, 'utf8')
         fm = JSON.parse(meta)
@@ -111,22 +124,13 @@ function walkDir(dir, space, currentPath = '') {
       let entry = {
         type: file,
         title,
-        links: walkDir(filepath, space, relativePath),
+        links: walkDirRec(filepath, space, relativePath),
       }
       if (fm) {
         entry = Object.assign(entry, fm)
       }
-      if (fs.existsSync(indexFilepath)) {
+      if (fs.existsSync(pageFilepath)) {
         entry.href = `/${space}/${relativePath}`
-      }
-      results.push(entry)
-    } else if (path.extname(file) === '.md' && file !== 'page.md') {
-      let url = `${relativePath.replace(/\.md$/, '')}` // Remove .md extension
-      let fm = getFrontmatter(filepath)
-      let entry = {
-        ...fm,
-        links: [],
-        href: `/${space}/${url}`,
       }
       results.push(entry)
     }
@@ -168,13 +172,6 @@ export default function (nextConfig = {}) {
 
             let dcs = walkDir(`${dir}/dcs`, 'dcs')
             sortByWeightThenTitle(dcs)
-            let home = {
-              type: '',
-              title: 'Overview',
-              links: [],
-              href: '/',
-            }
-            dcs.unshift(home)
             let node = walkDir(`${dir}/node`, 'node')
             sortByWeightThenTitle(node)
             let learn = walkDir(`${dir}/learn`, 'learn')

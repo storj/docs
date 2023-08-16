@@ -5,6 +5,7 @@ redirects:
   - /dcs/storage/considerations
   - /dcs/storage
 pageTitle: Product overview
+weight: 0
 ---
 
 ## Introduction

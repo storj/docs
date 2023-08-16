@@ -2,6 +2,9 @@
 title: Overview
 pageTitle: Storj Docs
 description: Make the world your datacenter
+redirects:
+  - /dcs
+weight: 0
 ---
 
 Welcome to the Storj Documentation!

@@ -1,6 +1,4 @@
 @import 'tailwindcss/base';
-@import './fonts.css';
-@import './prism.css';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 .dark {

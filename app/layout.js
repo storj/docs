@@ -1,9 +1,35 @@
-import '@/styles/tailwind.css'
+import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
+import clsx from 'clsx'
+
 import { ThemeProvider } from '@/components/theme-provider'
 import { Navigation } from '@/components/Navigation'
 import Navbar from '@/components/Navbar'
 import { Hero as HeroWrap } from '@/components/Hero.client'
 import { Hero } from '@/components/Hero'
+
+import '@/styles/tailwind.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+// Use local version of Lexend so that we can use OpenType features
+const lexend = localFont({
+  src: '../src/fonts/lexend.woff2',
+  display: 'swap',
+  variable: '--font-lexend',
+})
+
+export const metadata = {
+  title: {
+    template: '%s - Storj Docs',
+    default: 'Storj Docs',
+  },
+  description: 'Make the world your data center',
+}
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -11,7 +37,11 @@ export default function RootLayout({
   children,
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={clsx('h-full antialiased', inter.variable, lexend.variable)}
+      suppressHydrationWarning
+    >
       <head />
       <body className="bg-white dark:bg-slate-900">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

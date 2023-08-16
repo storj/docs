@@ -219,6 +219,7 @@ export default function (nextConfig = {}) {
 
       return config
     },
+    /*
     async redirects() {
       let getRedirects = (space) => {
         let dir = path.resolve('./app')
@@ -236,5 +237,6 @@ export default function (nextConfig = {}) {
       return redirs
       // TODO don't overwrite existing redirects
     },
+    */
   })
 }

@@ -7,6 +7,8 @@ import { createLoader } from 'simple-functional-loader'
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md'],
+  output: 'export',
+  distDir: 'dist',
   env: {
     SITE_URL: 'https://docs-storj.vercel.app',
   },

@@ -1,6 +1,9 @@
 import { nodes as defaultNodes } from '@markdoc/markdoc'
+import { slugifyWithCounter } from '@sindresorhus/slugify'
+import yaml from 'js-yaml'
 import { Tag } from '@markdoc/markdoc'
 import { Link } from 'next/link'
+import MarkdownLayout from '@/components/MarkdownLayout'
 import Fence from '@/components/Fence'
 import {
   nodeBottomNav,
@@ -37,7 +40,38 @@ const ImageWrap = ({ src, alt, width, height }) => {
   )
 }
 
+let documentSlugifyMap = new Map()
+
 const nodes = {
+  document: {
+    ...defaultNodes.document,
+    render: MarkdownLayout,
+    async transform(node, config) {
+      documentSlugifyMap.set(config, slugifyWithCounter())
+
+      return new Tag(
+        this.render,
+        { frontmatter: yaml.load(node.attributes.frontmatter), ast: node },
+        await node.transformChildren(config)
+      )
+    },
+  },
+  heading: {
+    ...defaultNodes.heading,
+    transform(node, config) {
+      let slugify = documentSlugifyMap.get(config)
+      let attributes = node.transformAttributes(config)
+      let children = node.transformChildren(config)
+      let text = children.filter((child) => typeof child === 'string').join(' ')
+      let id = attributes.id ?? slugify(text)
+
+      return new Tag(
+        `h${node.attributes.level}`,
+        { ...attributes, id },
+        children
+      )
+    },
+  },
   link: {
     render: Link,
     attributes: {
@@ -70,9 +104,6 @@ const nodes = {
       }
       return new Tag('a', attributes, children)
     },
-  },
-  document: {
-    render: undefined,
   },
   image: {
     render: ImageWrap,

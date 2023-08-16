@@ -1,10 +1,20 @@
 'use client'
-import { useEffect, useId, useState, forwardRef, useRef, Fragment } from 'react'
-import { usePathname, useSearchParams, useRouter } from 'next/navigation'
+
+import {
+  forwardRef,
+  Fragment,
+  Suspense,
+  useCallback,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from 'react'
+import Highlighter from 'react-highlight-words'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { createAutocomplete } from '@algolia/autocomplete-core'
 import { Dialog } from '@headlessui/react'
 import clsx from 'clsx'
-import Highlighter from 'react-highlight-words'
 
 function SearchIcon(props) {
   return (
@@ -14,10 +24,21 @@ function SearchIcon(props) {
   )
 }
 
-function useAutocomplete(setOpen) {
+function useAutocomplete({ close }) {
   let id = useId()
   let router = useRouter()
   let [autocompleteState, setAutocompleteState] = useState({})
+
+  function navigate({ itemUrl }) {
+    router.push(itemUrl)
+
+    if (
+      itemUrl ===
+      window.location.pathname + window.location.search + window.location.hash
+    ) {
+      close(autocomplete)
+    }
+  }
 
   let [autocomplete] = useState(() =>
     createAutocomplete({
@@ -30,6 +51,9 @@ function useAutocomplete(setOpen) {
       shouldPanelOpen({ state }) {
         return state.query !== ''
       },
+      navigator: {
+        navigate,
+      },
       getSources({ query }) {
         return import('@/markdoc/search.mjs').then(({ search }) => {
           return [
@@ -41,10 +65,7 @@ function useAutocomplete(setOpen) {
               getItemUrl({ item }) {
                 return item.url
               },
-              onSelect({ itemUrl }) {
-                setOpen(false)
-                router.push(itemUrl)
-              },
+              onSelect: navigate,
             },
           ]
         })
@@ -97,8 +118,9 @@ function HighlightQuery({ text, query }) {
 
 function SearchResult({ result, autocomplete, collection, query }) {
   let id = useId()
-  let navigation = []
 
+  // TODO
+  let navigation = []
   let sectionTitle = navigation.find((section) =>
     section.links.find((link) => link.href === result.url.split('#')[0])
   )?.title
@@ -200,7 +222,7 @@ const SearchInput = forwardRef(function SearchInput(
           ) {
             // In Safari, closing the dialog with the escape key can sometimes cause the scroll position to jump to the
             // bottom of the page. This is a workaround for that until we can figure out a proper fix in Headless UI.
-            //document.activeElement?.blur()
+            document.activeElement?.blur()
 
             onClose()
           } else {
@@ -217,40 +239,35 @@ const SearchInput = forwardRef(function SearchInput(
   )
 })
 
+function CloseOnNavigation({ close, autocomplete }) {
+  let pathname = usePathname()
+  let searchParams = useSearchParams()
+
+  useEffect(() => {
+    close(autocomplete)
+  }, [pathname, searchParams, close, autocomplete])
+
+  return null
+}
+
 function SearchDialog({ open, setOpen, className }) {
   let formRef = useRef()
   let panelRef = useRef()
   let inputRef = useRef()
-  let { autocomplete, autocompleteState } = useAutocomplete(setOpen)
 
-  /* TODO
-  useEffect(() => {
-    if (!open) {
-      return
-    }
-    const url = `${pathname}?${searchParams}`
-    setOpen(false)
-    // You can now use the current URL
-    // ...
-  }, [setOpen, pathname, searchParams])
-  useEffect(() => {
-    if (!open) {
-      return
-    }
-
-    function onRouteChange() {
+  let close = useCallback(
+    (autocomplete) => {
       setOpen(false)
-    }
+      autocomplete.setQuery('')
+    },
+    [setOpen]
+  )
 
-    router.events.on('routeChangeStart', onRouteChange)
-    router.events.on('hashChangeStart', onRouteChange)
-
-    return () => {
-      router.events.off('routeChangeStart', onRouteChange)
-      router.events.off('hashChangeStart', onRouteChange)
-    }
-  }, [open, setOpen, router])
-  */
+  let { autocomplete, autocompleteState } = useAutocomplete({
+    close() {
+      close(autocomplete)
+    },
+  })
 
   useEffect(() => {
     if (open) {
@@ -272,49 +289,51 @@ function SearchDialog({ open, setOpen, className }) {
   }, [open, setOpen])
 
   return (
-    <Dialog
-      open={open}
-      onClose={() => {
-        setOpen(false)
-        autocomplete.setQuery('')
-      }}
-      className={clsx('fixed inset-0 z-50', className)}
-    >
-      <div className="fixed inset-0 bg-slate-900/50 backdrop-blur" />
+    <>
+      <Suspense fallback={null}>
+        <CloseOnNavigation close={close} autocomplete={autocomplete} />
+      </Suspense>
+      <Dialog
+        open={open}
+        onClose={() => close(autocomplete)}
+        className={clsx('fixed inset-0 z-50', className)}
+      >
+        <div className="fixed inset-0 bg-slate-900/50 backdrop-blur" />
 
-      <div className="fixed inset-0 overflow-y-auto px-4 py-4 sm:px-6 sm:py-20 md:py-32 lg:px-8 lg:py-[15vh]">
-        <Dialog.Panel className="mx-auto overflow-hidden rounded-xl bg-white shadow-xl dark:bg-slate-800 dark:ring-1 dark:ring-slate-700 sm:max-w-xl">
-          <div {...autocomplete.getRootProps({})}>
-            <form
-              ref={formRef}
-              {...autocomplete.getFormProps({
-                inputElement: inputRef.current,
-              })}
-            >
-              <SearchInput
-                ref={inputRef}
-                autocomplete={autocomplete}
-                autocompleteState={autocompleteState}
-                onClose={() => setOpen(false)}
-              />
-              <div
-                ref={panelRef}
-                className="border-t border-slate-200 bg-white px-2 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800"
-                {...autocomplete.getPanelProps({})}
+        <div className="fixed inset-0 overflow-y-auto px-4 py-4 sm:px-6 sm:py-20 md:py-32 lg:px-8 lg:py-[15vh]">
+          <Dialog.Panel className="mx-auto transform-gpu overflow-hidden rounded-xl bg-white shadow-xl dark:bg-slate-800 dark:ring-1 dark:ring-slate-700 sm:max-w-xl">
+            <div {...autocomplete.getRootProps({})}>
+              <form
+                ref={formRef}
+                {...autocomplete.getFormProps({
+                  inputElement: inputRef.current,
+                })}
               >
-                {autocompleteState.isOpen && (
-                  <SearchResults
-                    autocomplete={autocomplete}
-                    query={autocompleteState.query}
-                    collection={autocompleteState.collections[0]}
-                  />
-                )}
-              </div>
-            </form>
-          </div>
-        </Dialog.Panel>
-      </div>
-    </Dialog>
+                <SearchInput
+                  ref={inputRef}
+                  autocomplete={autocomplete}
+                  autocompleteState={autocompleteState}
+                  onClose={() => setOpen(false)}
+                />
+                <div
+                  ref={panelRef}
+                  className="border-t border-slate-200 bg-white px-2 py-3 empty:hidden dark:border-slate-400/10 dark:bg-slate-800"
+                  {...autocomplete.getPanelProps({})}
+                >
+                  {autocompleteState.isOpen && (
+                    <SearchResults
+                      autocomplete={autocomplete}
+                      query={autocompleteState.query}
+                      collection={autocompleteState.collections[0]}
+                    />
+                  )}
+                </div>
+              </form>
+            </div>
+          </Dialog.Panel>
+        </div>
+      </Dialog>
+    </>
   )
 }
 
@@ -331,12 +350,12 @@ function useSearchProps() {
     },
     dialogProps: {
       open,
-      setOpen(open) {
+      setOpen: useCallback((open) => {
         let { width, height } = buttonRef.current.getBoundingClientRect()
         if (!open || (width !== 0 && height !== 0)) {
           setOpen(open)
         }
-      },
+      }, []),
     },
   }
 }

@@ -1,5 +1,7 @@
+import withMarkdoc from '@markdoc/next.js'
 import withSearch from './src/markdoc/search.mjs'
 import withNavigation from './src/markdoc/navigation.mjs'
+import { createLoader } from 'simple-functional-loader'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -14,19 +16,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  webpack(config, options) {
-    config.module.rules.push({
-      test: /\.(md|mdoc)$/,
+  webpack(config) {
+    config.module.rules.unshift({
+      test: /\.md$/,
       use: [
-        // Adding the babel loader enables fast refresh
-        options.defaultLoaders.babel,
-        {
-          loader: './src/markdoc-loader/loader',
-          options: {
-            dir: options.dir,
-            schemaPath: './src/markdoc',
-          },
-        },
+        createLoader(function (source) {
+          return (
+            source + '\nexport const metadata = frontmatter.nextjs?.metadata;'
+          )
+        }),
       ],
     })
 
@@ -34,4 +32,6 @@ const nextConfig = {
   },
 }
 
-export default withNavigation(withSearch(nextConfig))
+export default withNavigation(
+  withSearch(withMarkdoc({ schemaPath: './src/markdoc' })(nextConfig))
+)

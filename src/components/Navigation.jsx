@@ -23,11 +23,12 @@ function NavLink({ title, href, current, root, disclosure }) {
   }
 
   let ComponentToUse = disclosure ? Disclosure.Button : Link
+  let disclosureProps = disclosure ? { as: Link } : {}
 
   return (
     <ComponentToUse
       id={title}
-      as={Link}
+      {...disclosureProps}
       href={href}
       className={clsx(
         root && disclosure ? 'font-semibold dark:text-white' : 'block',
@@ -56,13 +57,14 @@ function NavLink({ title, href, current, root, disclosure }) {
 
 function NavItem({ item, root }) {
   const pathname = usePathname()
+  const current = item.href === pathname
 
   if (item.href && item.links.length === 0) {
     return (
       <NavLink
         title={item.title}
         href={item.href}
-        current={item.href === pathname}
+        current={current}
         root={root}
       />
     )
@@ -100,7 +102,7 @@ function NavItem({ item, root }) {
                 root={root}
                 disclosure
                 href={item.href}
-                current={item.href === pathname}
+                current={current}
               />
             ) : (
               <h2

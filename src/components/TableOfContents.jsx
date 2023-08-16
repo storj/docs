@@ -1,5 +1,6 @@
 'use client'
 import { useCallback, useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import clsx from 'clsx'
 const GITHUB_EDIT_URL = 'https://github.com/storj/docs/tree/main/app'
@@ -48,7 +49,8 @@ function useTableOfContents(tableOfContents) {
   return currentSection
 }
 
-export default function TableOfContents({ tableOfContents, filepath }) {
+export default function TableOfContents({ tableOfContents }) {
+  const pathname = usePathname()
   let currentSection = useTableOfContents(tableOfContents)
 
   function isActive(section) {
@@ -117,7 +119,7 @@ export default function TableOfContents({ tableOfContents, filepath }) {
         target="_blank"
         rel="noreferrer"
         className="text-sm text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-        href={`${GITHUB_EDIT_URL}${filepath}`}
+        href={`${GITHUB_EDIT_URL}${pathname}/page.md`}
       >
         Edit this page on GitHub →
       </a>

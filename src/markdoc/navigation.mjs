@@ -1,5 +1,4 @@
 import { createLoader } from 'simple-functional-loader'
-import glob from 'fast-glob'
 import * as url from 'url'
 import * as path from 'path'
 import * as fs from 'fs'
@@ -62,14 +61,14 @@ function extractRedirects(data) {
   return redirects
 }
 
-function convertToNextRedirects(data) {
+function convertToFirebaseRedirects(data) {
   return data.flatMap((item) =>
     item.redirects
       .filter((redirect) => redirect !== item.href)
       .map((redirect) => ({
         source: redirect,
         destination: item.href,
-        permanent: false,
+        type: 307,
       }))
   )
 }
@@ -88,7 +87,7 @@ function getFrontmatter(filepath) {
   }
 }
 
-function walkDir(dir, space, currentPath = '', includeRedirects = false) {
+function walkDir(dir, space, currentPath = '') {
   let results = []
   const list = fs.readdirSync(dir)
 
@@ -112,15 +111,10 @@ function walkDir(dir, space, currentPath = '', includeRedirects = false) {
       let entry = {
         type: file,
         title,
-        links: walkDir(filepath, space, relativePath, includeRedirects),
+        links: walkDir(filepath, space, relativePath),
       }
       if (fm) {
-        let { redirects, ...rest } = fm
-        entry = Object.assign(entry, rest)
-
-        if (includeRedirects) {
-          entry.redirects = redirects
-        }
+        entry = Object.assign(entry, fm)
       }
       if (fs.existsSync(indexFilepath)) {
         entry.href = `/${space}/${relativePath}`
@@ -128,14 +122,11 @@ function walkDir(dir, space, currentPath = '', includeRedirects = false) {
       results.push(entry)
     } else if (path.extname(file) === '.md' && file !== 'page.md') {
       let url = `${relativePath.replace(/\.md$/, '')}` // Remove .md extension
-      let { redirects, ...fm } = getFrontmatter(filepath)
+      let fm = getFrontmatter(filepath)
       let entry = {
         ...fm,
         links: [],
         href: `/${space}/${url}`,
-      }
-      if (includeRedirects) {
-        entry.redirects = redirects
       }
       results.push(entry)
     }
@@ -190,6 +181,29 @@ export default function (nextConfig = {}) {
             sortByWeightThenTitle(learn)
             let support = walkDir(`${dir}/support`, 'support')
             sortByWeightThenTitle(support)
+
+            let getRedirects = (space) => {
+              let re = extractRedirects(space)
+              let cov = convertToFirebaseRedirects(re)
+              return cov
+            }
+            let redirs = [
+              ...getRedirects(dcs),
+              ...getRedirects(node),
+              ...getRedirects(learn),
+              ...getRedirects(support),
+            ]
+            let firebaseConfig = JSON.parse(
+              fs.readFileSync('firebase.base.json', 'utf8')
+            )
+
+            firebaseConfig.hosting.redirects = redirs
+
+            fs.writeFileSync(
+              'firebase.json',
+              JSON.stringify(firebaseConfig, null, 2)
+            )
+
             let dcsBottomNav = extractHrefObjects(structuredClone(dcs))
             let nodeBottomNav = extractHrefObjects(structuredClone(node))
             let learnBottomNav = extractHrefObjects(structuredClone(learn))
@@ -219,24 +233,5 @@ export default function (nextConfig = {}) {
 
       return config
     },
-    /*
-    async redirects() {
-      let getRedirects = (space) => {
-        let dir = path.resolve('./app')
-        let re = extractRedirects(walkDir(`${dir}/${space}`, space, '', true))
-        let cov = convertToNextRedirects(re)
-        return cov
-      }
-      let redirs = [
-        ...getRedirects('dcs'),
-        ...getRedirects('node'),
-        ...getRedirects('learn'),
-        ...getRedirects('support'),
-      ]
-
-      return redirs
-      // TODO don't overwrite existing redirects
-    },
-    */
   })
 }

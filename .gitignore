@@ -36,6 +36,9 @@ yarn-error.log*
 firebase-debug.log
 .image-size-cache.json
 
+# Generated at build-time
+firebase.json
+
 # next-sitemap
 sitemap*.xml
 robots.txt

@@ -29,11 +29,13 @@ To integrate Globus with Storj, you will need:
 
 - An active Storj account
 
-- A bucket designated for Globus in your Storj account
+- Bucket(s) to be shared in the Globus ecosystem
 
 - Storj S3 compatible credentials
 
-- Globus Connect Server instance (see [here](https://docs.globus.org/))
+- Globus Connect Server instance (see [here](https://docs.globus.org/globus-connect-server/))
+
+- Globus for [AWS S3 Connector Subscription](https://www.globus.org/connectors/)
 
 - Access to the Globus web interface for configuration and management
 
@@ -123,21 +125,9 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 The Globus Storage Gateway allows for a seamless integration with Storj's S3 compatible storage, creating an efficient bridge between your local data storage and Storj's decentralized cloud service.
 
-### Create s3 user credential
+### Enable the Globus for AWS S3 Connector
 
-First register user credentials with the Globus storage gateway using `globus-connect-server user-credentials s3-create`. For more details see [here](https://docs.globus.org/globus-connect-server/v5/reference/user-credentials/s3-create/).
-
-```shell
-globus-connect-server user-credentials s3-create --globus-identity user@example.org
-```
-
-Follow prompts to input S3 Access Key and Secret Key (created previously)
-
-> S3 access key id: access_key # REPLACE ME
-> S3 secret key: secret_key # REPLACE ME
-> Created credential 9bb3d1d1-f506-41f1-b161-41c372b7da19 for
->
-> <user@example.org>
+To enable the S3 connector follow the instructions [here](https://docs.globus.org/premium-storage-connectors/v4/aws-s3)
 
 ### Create S3 Storage Gateway
 
@@ -156,6 +146,42 @@ globus-connect-server storage-gateway create s3 \
 
 The command will output a unique id to identify the gateway.
 
-> Storage Gateway Created: 7187a9a0-68e4-48ea-b3b9-7fd06630f8ab
+```text
+Storage Gateway Created: 7187a9a0-68e4-48ea-b3b9-7fd06630f8ab
+```
 
 If you forget the id of a storage gateway, use the command [**globus-connect-server storage-gateway list**](https://docs.globus.org/globus-connect-server/v5/reference/storage-gateway/list) to get a list of the storage gateways on the endpoint.
+
+### Create S3 user credential
+
+First register user credentials with the Globus storage gateway using `globus-connect-server user-credentials s3-create`. For more details see [here](https://docs.globus.org/globus-connect-server/v5/reference/user-credentials/s3-create/).
+
+```shell
+globus-connect-server user-credentials s3-create --globus-identity user@example.org
+```
+
+Follow prompts to input S3 Access Key and Secret Key (created previously)
+
+```text
+S3 access key id: access_key # REPLACE ME
+S3 secret key: secret_key # REPLACE ME
+Created credential 9bb3d1d1-f506-41f1-b161-41c372b7da19 for
+
+<user@example.org>
+```
+
+### Create collection
+
+Create a collection (addition details [here](https://docs.globus.org/premium-storage-connectors/v5/aws-s3/#collection))
+
+The STORAGE_GATEWAY_ID is from the previous step of “Create S3 Gateway”
+
+```shell
+globus-connect-server collection create STORAGE_GATEWAY_ID  BASE_PATH DISPLAY_NAME
+```
+
+### Viewing the Collection with Globus File Manager
+
+Enter the COLLECTION ID from the previous step
+
+To be able to view collection follow the instructions [here](https://docs.globus.org/how-to/get-started/#the_file_manager)

@@ -36,13 +36,13 @@ Sometimes you just need help, and it's ok to ask. Our support process, responsib
 You can submit a ticket via our Support Portal or via our [Support Twitter handle](https://twitter.com/storjsupport) - @StorjSupport. &#x20;
 
 {% quick-links %}
-{% quick-link headerImage="https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cu2kUnzpC81Wj0J3ESwCL_screen-shot-2022-05-25-at-10258-pm.png" %} \***\*[**DCS Support**](https://supportdcs.storj.io/hc/en-us)\*\***
+{% quick-link title="DCS Support" href="https://supportdcs.storj.io/hc/en-us" headerImage="https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cu2kUnzpC81Wj0J3ESwCL_screen-shot-2022-05-25-at-10258-pm.png" %}
 
 FAQ, articles, and support
+
 {% /quick-link %}
 
-{% quick-link headerImage="https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/NVU4W66dwaWZso9tIWgpB_screen-shot-2022-05-25-at-10108-pm.png" %}
-[**Node Support**](https://support.storj.io/hc/en-us)\*\*\*\*
+{% quick-link title="Node Support" href="https://support.storj.io/hc/en-us" headerImage="https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/NVU4W66dwaWZso9tIWgpB_screen-shot-2022-05-25-at-10108-pm.png" %}
 
 FAQ, troubleshooting, and support
 {% /quick-link %}

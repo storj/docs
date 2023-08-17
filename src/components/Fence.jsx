@@ -11,8 +11,7 @@ Code.theme = {
   dark: dark,
   light: light,
   // using a different CSS selector:
-  lightSelector: '[class="light"]',
-  // lightSelector: 'html.light',
+  lightSelector: 'html.light',
 }
 
 // Get attributes from .md files to pass to Code

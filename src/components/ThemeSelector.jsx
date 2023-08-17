@@ -1,8 +1,7 @@
-'use client'
 import { useEffect, useState } from 'react'
+import { useTheme } from 'next-themes'
 import { Listbox } from '@headlessui/react'
 import clsx from 'clsx'
-import { useTheme } from 'next-themes'
 
 const themes = [
   { name: 'Light', value: 'light', icon: LightIcon },
@@ -47,22 +46,40 @@ function SystemIcon(props) {
 }
 
 export function ThemeSelector(props) {
-  const { theme, setTheme } = useTheme()
+  let { theme, setTheme } = useTheme()
+  let [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return <div className="h-6 w-6" />
+  }
 
   return (
-    <Listbox id={1} as="div" value={theme} onChange={setTheme} {...props}>
-      <Listbox.Label id={2} className="sr-only">
-        Theme
-      </Listbox.Label>
+    <Listbox as="div" value={theme} onChange={setTheme} {...props}>
+      <Listbox.Label className="sr-only">Theme</Listbox.Label>
       <Listbox.Button
-        id={3}
         className="flex h-6 w-6 items-center justify-center rounded-lg shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-700 dark:ring-inset dark:ring-white/5"
-        aria-label={theme?.name}
+        aria-label="Theme"
       >
-        <LightIcon className="hidden h-4 w-4 fill-storj-blue-700 dark:fill-storj-blue-500 [[class=light]_&]:block" />
-        <DarkIcon className="hidden h-4 w-4 fill-storj-blue-700 dark:fill-storj-blue-500 [[class=dark]_&]:block" />
-        <LightIcon className="hidden h-4 w-4 fill-slate-400 [:not(.dark)[class=system]_&]:block" />
-        <DarkIcon className="hidden h-4 w-4 fill-slate-400 [.dark[class=system]_&]:block" />
+        <LightIcon
+          className={clsx(
+            'h-4 w-4 dark:hidden',
+            theme === 'system'
+              ? 'fill-slate-400'
+              : 'fill-storj-blue-700 dark:fill-storj-blue-500'
+          )}
+        />
+        <DarkIcon
+          className={clsx(
+            'hidden h-4 w-4 dark:block',
+            theme === 'system'
+              ? 'fill-slate-400'
+              : 'fill-storj-blue-700 dark:fill-storj-blue-500'
+          )}
+        />
       </Listbox.Button>
       <Listbox.Options className="absolute left-1/2 top-full mt-3 w-36 -translate-x-1/2 space-y-1 rounded-xl bg-white p-3 text-sm font-medium shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-800 dark:ring-white/5">
         {themes.map((theme) => (

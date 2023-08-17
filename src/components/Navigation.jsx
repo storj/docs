@@ -31,9 +31,8 @@ function NavLink({ title, href, current, root, disclosure }) {
       {...disclosureProps}
       href={href}
       className={clsx(
-        root && disclosure ? 'font-semibold dark:text-white' : 'block',
         padding,
-        `w-full truncate py-0.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:z-10 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
+        `block w-full py-0.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:z-10 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
         current
           ? clsx(
               `font-semibold text-storj-blue-700 dark:text-storj-blue-500`,
@@ -81,7 +80,7 @@ function NavItem({ item, root }) {
           <Disclosure.Button
             id={item.title}
             className={clsx(
-              'flex w-full items-center gap-x-1 rounded-md py-0.5 text-left text-sm leading-none text-gray-700'
+              'flex w-full items-center gap-x-1 rounded-md py-0.5 text-left text-gray-700'
             )}
           >
             <ChevronRightIcon
@@ -107,9 +106,7 @@ function NavItem({ item, root }) {
             ) : (
               <h2
                 title={item.title}
-                className={`truncate py-0.5 ${
-                  root ? 'font-semibold ' : 'block'
-                } text-slate-600 hover:text-slate-700 dark:text-white`}
+                className={`block py-0.5 text-slate-600 hover:text-slate-700 dark:text-slate-400`}
               >
                 {item.title}
               </h2>
@@ -152,7 +149,10 @@ export function Navigation({ className }) {
     sideNavigation = supportNavigation
   }
   return (
-    <nav role="navigation" className={clsx('text-base lg:text-sm', className)}>
+    <nav
+      role="navigation"
+      className={clsx('lg:text-medium text-sm', className)}
+    >
       <ul className="space-y-3 md:py-0 lg:py-14">
         {sideNavigation.map((item, index) => (
           <li key={item.title + index}>

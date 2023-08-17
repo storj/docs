@@ -44,7 +44,7 @@ export default function RootLayout({
     >
       <head />
       <body className="bg-white dark:bg-slate-900">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" disableTransitionOnChange>
           <Navbar />
           <HeroWrap>
             <Hero />

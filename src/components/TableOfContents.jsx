@@ -74,8 +74,8 @@ export default function TableOfContents({ tableOfContents }) {
             On this page
           </h2>
           <ol role="list" className="mt-4 space-y-3 text-sm">
-            {tableOfContents.map((section) => (
-              <li key={section.id}>
+            {tableOfContents.map((section, i) => (
+              <li key={`${section.id}-${i}`}>
                 <h3>
                   <Link
                     href={`#${section.id}`}

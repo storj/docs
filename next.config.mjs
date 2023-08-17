@@ -10,7 +10,7 @@ const nextConfig = {
   output: 'export',
   distDir: 'dist',
   env: {
-    SITE_URL: 'https://docs-storj.vercel.app',
+    SITE_URL: 'https://storj-docs.web.app',
   },
   experimental: {
     scrollRestoration: true,

@@ -1,6 +1,48 @@
 ---
-title: Overview
+title: Help Center
 weight: 1
+docId: aibiech1hu8Chie4feej
+redirects:
+  - /help
 ---
 
-🚧
+Need help? If you couldn't find what you're looking for on this Documentation, you can use the search bar on the top bar, check the FAQ in our Community Forum or contact our Support.&#x20;
+
+| Link                                                        | Content                                                                                                                                                                                                                              |
+| ----------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Storj Docs &#xA;**📍You are here                          | Information on Storj product features, pricing, availability, and limits; how to use products from the control panel; how to manage your account, teams, and billing; and platform details like release notes and product policies.  |
+| [Community Forum](https://forum.storj.io/)                  | If you're stuck on an issue, chances are someone has seen it before or can help you troubleshoot it. How to build on top of Storj resources, administer servers, write and deploy code, and install and configure open source tools. |
+| [Support DCS](https://supportdcs.storj.io/hc/en-us)         | FAQ about Storj DCS, and get help with your account or services.                                                                                                                                                                     |
+| [Support Node](https://support.storj.io/hc/en-us)&#x20;     | FAQ about Storj SNO, and get help with your account or services.                                                                                                                                                                     |
+| [Status Page](https://status.storj.io/)                     | Check the current status of Storj services.                                                                                                                                                                                          |
+| [Github Issues](https://github.com/storj/storj/issues)      | Report of our issues.                                                                                                                                                                                                                |
+| [Product Releases](https://github.com/storj/storj/releases) | Updated product releases.                                                                                                                                                                                                            |
+| [Contact Sales](https://www.storj.io/contact-sales)         | Contact sales for help with large deployments.                                                                                                                                                                                       |
+| [Storj Blog](https://www.storj.io/blog)                     | Fresh posts from our team.                                                                                                                                                                                                           |
+
+---
+
+## FAQ & Support
+
+If you can't find what you're looking for in the Community Forum, contact Support.
+
+{% quick-links %}
+{% quick-link title="Storj Support" href="https://supportdcs.storj.io/hc/en-us" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Cu2kUnzpC81Wj0J3ESwCL_screen-shot-2022-05-25-at-10258-pm.png" %}
+
+FAQ, articles, and support
+{% /quick-link %}
+
+{% quick-link title="Storage Node Support" href="https://support.storj.io/hc/en-us" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/NVU4W66dwaWZso9tIWgpB_screen-shot-2022-05-25-at-10108-pm.png" %}
+
+FAQ, troubleshooting, and support
+{% /quick-link %}
+{% /quick-links %}
+
+&#x20;
+Our support process, responsibilities, and hours are published in our [Terms of Service](https://www.storj.io/terms-of-service). Our support hours are:
+
+- Between 9:00 A.M. to 8:00 P.M. Eastern Time on Business Days for Severity Level 1 Errors
+
+- Between 9:00 A.M. to 5:00 P.M. Eastern Time on Business Days for other Support Requests
+
+You can submit a ticket via our Support Portals or via our Twitter [@StorjSupport](https://twitter.com/storjsupport). &#x20;

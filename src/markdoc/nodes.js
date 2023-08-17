@@ -83,7 +83,7 @@ const nodes = {
       const children = node.transformChildren(config)
       if (attributes.href?.startsWith('docId')) {
         let parts = attributes.href.split(':')
-        let docId = parts[1]
+        let [docId, fragment] = parts[1].split('#')
         let entry = nodeBottomNav.find((o) => o.docId === docId)
         if (!entry) {
           entry = dcsBottomNav.find((o) => o.docId === docId)
@@ -97,7 +97,9 @@ const nodes = {
 
         let tag = new Tag(
           'a',
-          entry?.href ? { href: entry.href } : attributes,
+          entry?.href
+            ? { href: `${entry.href}${fragment ? `#${fragment}` : ''}` }
+            : attributes,
           children.length === 0 && entry?.title ? [entry.title] : children
         )
         return tag

@@ -3,7 +3,8 @@ title: Rucio
 docId: LUZSWyVR7NPwpyzgBD7S6
 redirects:
   - /dcs/how-tos/configuring-rucio-with-storj
-pageTitle: Configuring Rucio with Storj
+metadata:
+  title: Configuring Rucio with Storj
 ---
 
 ## Overview

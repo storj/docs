@@ -3,7 +3,8 @@ title: Zerto
 docId: 3fdjlw0QhKg2w6FU4ZdbX
 redirects:
   - /dcs/how-tos/zerto-integration-guide
-pageTitle: Zerto Integration Guide
+metadata:
+  title: Zerto Integration Guide
 ---
 
 ## Introduction

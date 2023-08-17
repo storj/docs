@@ -1,6 +1,7 @@
 ---
 title: How do I check my L2 zkSync payouts?
-description: You opted-in for L2 (zkSync)
+metadata:
+  description: You opted-in for L2 (zkSync)
 docId: 3bVxz-N4BRC_YuNBRCUJK
 redirects:
   - /node/resources/faq/how-do-i-check-my-l2-payouts

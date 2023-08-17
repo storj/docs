@@ -3,7 +3,8 @@ title: Design Decision - End-to-end Encryption
 docId: Pksf8d0TCLY2tBgXeT18d
 redirects:
   - /dcs/concepts/encryption-key/design-decision-end-to-end-encryption
-pageTitle: 'Design Decision: End-to-end Encryption'
+metadata:
+  title: 'Design Decision: End-to-end Encryption'
 ---
 
 When the privacy and security of your application data are mission critical, Storj DCS provides options to ensure only you have access to your data.

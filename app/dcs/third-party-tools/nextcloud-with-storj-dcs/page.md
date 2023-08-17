@@ -3,7 +3,8 @@ title: Nextcloud with Storj DCS
 docId: cp1ItDPvF1Up6dce41nNZ
 redirects:
   - /dcs/nextcloud-with-storj-dcs
-pageTitle: Nextcloud with Storj
+metadata:
+  title: Nextcloud with Storj
 ---
 
 ## Walk-through video guide

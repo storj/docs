@@ -3,7 +3,8 @@ title: MSP360
 docId: z4dmU9Ixxd2X3UyOpWb5C
 redirects:
   - /dcs/how-tos/msp360-integration-guide
-pageTitle: MSP360 Integration Guide
+metadata:
+  title: MSP360 Integration Guide
 ---
 
 MSP360 Managed Backup and from Cloudberry Labs is a cross-platform storage backup and disaster recovery solution designed for internal IT departments and managed service providers. It integrates with any S3-compatible cloud storage.

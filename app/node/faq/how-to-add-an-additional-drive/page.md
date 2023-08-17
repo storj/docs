@@ -1,6 +1,7 @@
 ---
 title: How to add an additional drive?
-description: Run multiple nodes
+metadata:
+  description: Run multiple nodes
 docId: NX30Zzpr870-px_UDpHvu
 redirects:
   - /node/resources/faq/how-to-add-an-additional-drive

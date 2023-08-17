@@ -1,7 +1,8 @@
 ---
 title: Overview
-pageTitle: Storj Docs
-description: Make the world your datacenter
+metadata:
+  title: Storj Docs
+  description: Make the world your datacenter
 redirects:
   - /dcs
 weight: 0

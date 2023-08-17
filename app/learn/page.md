@@ -4,7 +4,8 @@ docId: 2npG1YD8Y7JH9UiENkMqR
 redirects:
   - /dcs/storage/considerations
   - /dcs/storage
-pageTitle: Product overview
+metadata:
+  title: Product overview
 weight: 0
 ---
 

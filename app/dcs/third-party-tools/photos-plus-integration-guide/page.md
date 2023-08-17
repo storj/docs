@@ -3,7 +3,8 @@ title: Photos+
 docId: e8RYUgo0V1EGA6wbuvb2x
 redirects:
   - /dcs/how-tos/photos-plus-integration-guide
-pageTitle: Photos+ Integration Guide
+metadata:
+  title: Photos+ Integration Guide
 ---
 
 ## Introduction

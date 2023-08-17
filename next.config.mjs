@@ -24,7 +24,9 @@ const nextConfig = {
       use: [
         createLoader(function (source) {
           return (
-            source + '\nexport const metadata = frontmatter.nextjs?.metadata;'
+            source +
+            '\nexport const metadata = frontmatter.metadata || frontmatter.nextjs?.metadata || {};' +
+            '\nmetadata.title = metadata.title || frontmatter.title;'
           )
         }),
       ],

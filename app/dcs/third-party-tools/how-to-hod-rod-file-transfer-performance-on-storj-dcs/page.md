@@ -3,7 +3,8 @@ title: How to Fine-tune File Transfer Performance on Storj DCS
 docId: cQZlhPpzn3nD3Az3QTcm1
 redirects:
   - /dcs/how-tos/how-to-hod-rod-file-transfer-performance-on-storj-dcs
-pageTitle: How to Hod Rod File Transfer Performance on Storj DCS
+metadata:
+  title: How to Hod Rod File Transfer Performance on Storj DCS
 ---
 
 Many of the performance benefits of decentralized storage are achieved through distributed, redundant segmentation of files on the network. This redundancy and segmentation allow platforms like Storj to implement parallelism in the network for a greater performance boost. In the context of file transfers, parallelism is the concept of uploading or downloading different pieces of a file simultaneously (in parallel). As a user, there are ways to optimize these parallel transfers to achieve more efficient throughput.

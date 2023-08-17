@@ -3,7 +3,8 @@ title: Dashboard Windows
 docId: 3k4V1HFunDWHVso9b1Xt9
 redirects:
   - /node/setup/gui-windows/dashboard
-pageTitle: Dashboard
+metadata:
+  title: Dashboard
 ---
 
 ## Introduction

@@ -3,7 +3,8 @@ title: How do I shut down my node for system maintenance?
 docId: Zh_lD6UPciHT53wOWuAoD
 redirects:
   - /node/resources/faq/system-maintenance
-pageTitle: How do I shutdown my node for system maintenance?
+metadata:
+  title: How do I shutdown my node for system maintenance?
 ---
 
 If you need to shutdown the Storage Node for maintenance on your system, run:

@@ -2,7 +2,8 @@
 title: >-
   How do I estimate my potential earnings for a given amount of space and
   bandwidth?
-description: How to estimate your potential earnings before running the storage nod
+metadata:
+  description: How to estimate your potential earnings before running the storage nod
 docId: bG8Q88XbTvEPkzsuc02T8
 redirects:
   - >-

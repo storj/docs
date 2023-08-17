@@ -1,14 +1,15 @@
 ---
 title: Migrate from Wasabi to Storj
-description: >-
-  Learn how to smoothly migrate from Wasabi to Storj using the rclone tool. Our
-  comprehensive guide offers step-by-step instructions to securely transfer your
-  data between these cloud storage providers, ensuring data integrity and
-  cost-efficiency.
 docId: FQTEKVgNNJBpZwe2hT7LH
 redirects:
   - /dcs/how-tos/migrate-from-wasabi-to-storj
-pageTitle: How to migrate from Wasabi to Storj
+metadata:
+  title: How to migrate from Wasabi to Storj
+  description: >-
+    Learn how to smoothly migrate from Wasabi to Storj using the rclone tool. Our
+    comprehensive guide offers step-by-step instructions to securely transfer your
+    data between these cloud storage providers, ensuring data integrity and
+    cost-efficiency.
 ---
 
 This article will discuss the migration process from Wasabi to Storj using the rclone tool, a command-line program to manage files on cloud storage.

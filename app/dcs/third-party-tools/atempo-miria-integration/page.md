@@ -3,7 +3,8 @@ title: Atempo (Miria)
 docId: Sg-4A2Td09A3OeSu6H5ag
 redirects:
   - /dcs/how-tos/atempo-miria-integration
-pageTitle: Atempo (Miria) Integration Guide
+metadata:
+  title: Atempo (Miria) Integration Guide
 ---
 
 [Atempo](https://www.atempo.com/) is a leading software vendor providing data management solutions to companies worldwide. Miria is an open solution from Atempo that provides high-performance backup, movement, synchronization, and archiving for large data sets from heterogeneous sources. It delivers vendor-agnostic solutions for petascale NAS and cloud environments and has five pillars:

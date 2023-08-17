@@ -3,7 +3,8 @@ title: Object Browser
 docId: 4oDAezF-FcfPr0WPl7knd
 redirects:
   - /dcs/getting-started/quickstart-objectbrowser
-pageTitle: Quickstart - Object Browser
+metadata:
+  title: Quickstart - Object Browser
 ---
 
 ## Introduction

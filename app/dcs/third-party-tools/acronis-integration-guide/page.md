@@ -1,13 +1,14 @@
 ---
 title: Acronis
-description: >-
-  Get started integrating Acronis with Storj for cost effective cloud backup and
-  storage. Our guide provides step-by-step instructions to connect your Acronis
-  Cyber Infrastructure to Storj. Read now!
 docId: GhGW4KaBkd428zJ51EIdp
 redirects:
   - /dcs/how-tos/acronis-integration-guide
-pageTitle: Integration guide for connecting Storj to Acronis
+metadata:
+  title: Integration guide for connecting Storj to Acronis
+  description: >-
+    Get started integrating Acronis with Storj for cost effective cloud backup and
+    storage. Our guide provides step-by-step instructions to connect your Acronis
+    Cyber Infrastructure to Storj. Read now!
 ---
 
 ## Integration guide for connecting Storj to Acronis

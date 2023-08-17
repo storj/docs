@@ -4,7 +4,8 @@ docId: hf2uumViqYvS1oq8TYbeW
 redirects:
   - /dcs/concepts/encryption-key/design-decision-server-side-encryption
   - /concepts/encryption-key/design-decision-server-side-encryption
-pageTitle: 'Design Decision: Server-side Encryption'
+metadata:
+  title: 'Design Decision: Server-side Encryption'
 ---
 
 When it's important that your data and metadata are encrypted, but you require a simple and more compatible development approach, Storj DCS provides a best-in-class integration.

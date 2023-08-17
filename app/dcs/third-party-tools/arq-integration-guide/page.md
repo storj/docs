@@ -3,7 +3,8 @@ title: Arq
 docId: rnZKB53zoxOVjYLcnHngs
 redirects:
   - /dcs/how-tos/arq-integration-guide
-pageTitle: Arq Integration Guide
+metadata:
+  title: Arq Integration Guide
 ---
 
 ## Introduction

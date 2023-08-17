@@ -3,7 +3,8 @@ title: s3fs
 docId: cJm_o93WkIvh0qm40oBlV
 redirects:
   - /dcs/how-tos/how-to-connect-s3fs-to-storj-dcs
-pageTitle: How to connect s3fs to Storj DCS
+metadata:
+  title: How to connect s3fs to Storj DCS
 ---
 
 ## Prerequisites

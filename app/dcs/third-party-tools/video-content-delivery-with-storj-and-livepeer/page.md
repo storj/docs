@@ -1,9 +1,11 @@
 ---
-title: Workshop - Global Video Content Delivery with Storj and Livepeer
-description: >-
-  Learn to build a completely decentralized, fast video content delivery
-  service. With over tens of thousands of Storj nodes around the world, see how
-  simple it can be to remove your reliance on centralized providers.
+title: Livepeer - Video Content Delivery
+metadata:
+  title: Workshop - Global Video Content Delivery with Storj and Livepeer
+  description: >-
+    Learn to build a completely decentralized, fast video content delivery
+    service. With over tens of thousands of Storj nodes around the world, see how
+    simple it can be to remove your reliance on centralized providers.
 docId: S-xrhs_X1YHLh4CmwOt2T
 redirects:
   - /dcs/how-tos/video-content-delivery-with-storj-and-livepeer

@@ -3,7 +3,8 @@ title: Dataverse
 docId: lvqkxgrbdMrqc1XnnvDFj
 redirects:
   - /dcs/how-tos/dataverse-integration-guide
-pageTitle: Dataverse Integration Guide
+metadata:
+  title: Dataverse Integration Guide
 ---
 
 ## Storj Setup

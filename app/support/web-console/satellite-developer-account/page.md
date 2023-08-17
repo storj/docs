@@ -3,7 +3,8 @@ title: Satellite Admin Console
 docId: nGzxQBhV8nx5Pukj6O0zT
 redirects:
   - /dcs/getting-started/satellite-developer-account
-pageTitle: Quickstart - Satellite Admin Console
+metadata:
+  title: Quickstart - Satellite Admin Console
 ---
 
 ## Introduction

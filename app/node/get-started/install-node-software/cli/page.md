@@ -3,7 +3,8 @@ title: CLI Install
 docId: rz3s9lC3qAQHYSl37ngBN
 redirects:
   - /node/setup/cli
-pageTitle: Docker
+metadata:
+  title: Docker
 ---
 
 ## Before starting

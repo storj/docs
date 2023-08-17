@@ -3,7 +3,8 @@ title: Veeam
 docId: Cr9Ak4IM8F9uuHVlVtbpj
 redirects:
   - /dcs/how-tos/veeam-integration-guide
-pageTitle: Veeam Integration Guide
+metadata:
+  title: Veeam Integration Guide
 ---
 
 **Veeam Backup & Replication** is an all-in-one backup, recovery, and data security solution that serves both on-premises and cloud storage. It is the foundation of the Veeam Platform and delivers simple, flexible, reliable, and powerful data protection.

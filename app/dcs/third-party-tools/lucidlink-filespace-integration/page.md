@@ -3,7 +3,8 @@ title: LucidLink Filespace
 docId: N-d1y_hTKGgjDM0Z6Bjx5
 redirects:
   - /dcs/how-tos/lucidlink-filespace-integration
-pageTitle: LucidLink Filespace Integration Guide
+metadata:
+  title: LucidLink Filespace Integration Guide
 ---
 
 [LucidLink](https://www.lucidlink.com/) Filespaces is a distributed global file system for object storage that performs like a local disk and provides seamless access to data stored in distant locations. LucidLink's cloud-native distributed file system allows many users to access it concurrently via a folder placed on the local client. The LucidLink cloud NAS provides access to large datasets through direct streaming, eliminating the need for downloading and synchronizing.&#x20;

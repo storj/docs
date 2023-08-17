@@ -1,6 +1,7 @@
 ---
 title: Where can I check for a new version?
-description: You want to have the latest version to be a Cloud!
+metadata:
+  description: You want to have the latest version to be a Cloud!
 docId: CfmXIRjM5X5Sh8KDGC1qF
 redirects:
   - /node/resources/faq/where-can-i-check-for-a-new-version

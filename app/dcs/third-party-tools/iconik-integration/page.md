@@ -4,7 +4,8 @@ docId: DOrHKPnU0WwmIG7LX4Pfg
 redirects:
   - /dcs/iconik-integration
   - /dcs/how-tos/iconik-integration-guide
-pageTitle: Iconik Integration Guide
+metadata:
+  title: Iconik Integration Guide
 ---
 
 [Iconik](https://www.iconik.io/) is a cloud media management and collaboration software that gathers and organizes media from multiple storage locations. Iconik has powerful features that allow users to find, share, and collaborate on media from anywhere in the world. Iconik is web-based and runs in the cloud, using its Iconik Storage Gateway (ISG) to manage and track files while allowing users to bring their own storage.&#x20;

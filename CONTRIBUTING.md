@@ -36,13 +36,16 @@ The front matter is a section at the beginning of each Markdown file (page.md) t
 
 **title:** The title of the article or page. This is typically displayed at the top of the page.
 
-**description:** A brief summary or overview of the page's content. This description can be used in search results and previews.
-
 **docId:** A unique identifier for the document. This can be used for internal tracking and linking.
 
 **redirects:** A list of URLs that should redirect to this page. This is useful for maintaining links when a page's URL changes or for creating aliases for a page.
 
-**pageTitle:** The text that should be displayed in the browser's title bar for this page.
+**metadata:**
+
+&nbsp;&nbsp;**title:** The text that should be displayed in the browser's title bar for this page.
+&nbsp;&nbsp;**description:** A brief summary or overview of the page's content. This description can be used in search results and previews.
+
+The metadata fields are converted to a nextjs export. Additional metadata fields that may work can be found [here](https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadata-fields)
 
 ### Internal Linking
 

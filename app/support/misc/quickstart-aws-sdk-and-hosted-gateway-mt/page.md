@@ -3,7 +3,8 @@ title: AWS SDK and Hosted Gateway MT
 docId: LueFgrbZ9rJbWtDMXhIWZ
 redirects:
   - /dcs/getting-started/quickstart-aws-sdk-and-hosted-gateway-mt
-pageTitle: Quickstart - AWS SDK and Hosted Gateway MT
+metadata:
+  title: Quickstart - AWS SDK and Hosted Gateway MT
 ---
 
 Hosted S3 Compatible Multitenant Gateway - AWS SDK

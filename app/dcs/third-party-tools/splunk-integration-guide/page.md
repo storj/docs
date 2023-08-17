@@ -3,7 +3,8 @@ title: Splunk
 docId: QlBLsOc7Q7MhxEDvM9cod
 redirects:
   - /dcs/how-tos/splunk-integration-guide
-pageTitle: Splunk Integration Guide
+metadata:
+  title: Splunk Integration Guide
 ---
 
 [Splunk](https://www.splunk.com/) is a data analytics platform that provides data-driven insights across all aspects of a company.

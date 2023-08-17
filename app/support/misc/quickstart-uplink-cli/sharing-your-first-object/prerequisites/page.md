@@ -4,7 +4,8 @@ docId: TbMdOGCAXNWyPpQmH6EOq
 redirects:
   - /dcs/getting-started/quickstart-uplink-cli/prerequisites
   - /dcs/getting-started/quickstart-uplink-cli
-pageTitle: Quickstart Uplink CLI
+metadata:
+  title: Quickstart Uplink CLI
 ---
 
 ## Introduction

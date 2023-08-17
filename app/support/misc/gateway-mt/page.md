@@ -3,7 +3,8 @@ title: AWS CLI and Hosted Gateway MT
 docId: AsyYcUJFbO1JI8-Tu8tW3
 redirects:
   - /dcs/getting-started/gateway-mt
-pageTitle: Quickstart - AWS CLI and Hosted Gateway MT
+metadata:
+  title: Quickstart - AWS CLI and Hosted Gateway MT
 ---
 
 ## Introduction

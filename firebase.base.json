@@ -4,6 +4,13 @@
     "public": "dist",
     "cleanUrls": true,
     "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/dcs/how-tos",
+        "destination": "/dcs/third-party-tools",
+        "type": 308
+      }
+    ],
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }

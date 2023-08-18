@@ -61,7 +61,7 @@ export function Hero({ className }) {
                 your data is everywhere, even before you need it.
               </p>
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                <Button href="/dcs/quick-start">Quick Start</Button>
+                <Button href="/dcs/getting-started">Quick Start</Button>
               </div>
             </div>
           </div>

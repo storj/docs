@@ -5,15 +5,10 @@ import { Tag } from '@markdoc/markdoc'
 import { Link } from 'next/link'
 import MarkdownLayout from '@/components/MarkdownLayout'
 import Fence from '@/components/Fence'
-import {
-  nodeBottomNav,
-  dcsBottomNav,
-  learnBottomNav,
-  supportBottomNav,
-} from '@/markdoc/navigation.mjs'
 import probe from 'probe-image-size'
 import crypto from 'crypto'
 import imageSizeCache from '../../.image-size-cache.json'
+import { convertDocId } from './convertDocId'
 
 const ImageWrap = ({ src, alt, width, height }) => {
   let imgStyle = 'xs:max-w-full sm:max-w-sm'
@@ -81,30 +76,17 @@ const nodes = {
     transform(node, config) {
       const attributes = node.transformAttributes(config)
       const children = node.transformChildren(config)
-      if (attributes.href?.startsWith('docId')) {
-        let parts = attributes.href.split(':')
-        let [docId, fragment] = parts[1].split('#')
-        let entry = nodeBottomNav.find((o) => o.docId === docId)
-        if (!entry) {
-          entry = dcsBottomNav.find((o) => o.docId === docId)
-        }
-        if (!entry) {
-          entry = supportBottomNav.find((o) => o.docId === docId)
-        }
-        if (!entry) {
-          entry = learnBottomNav.find((o) => o.docId === docId)
-        }
-
-        let tag = new Tag(
-          'a',
-          entry?.href
-            ? { href: `${entry.href}${fragment ? `#${fragment}` : ''}` }
-            : attributes,
-          children.length === 0 && entry?.title ? [entry.title] : children
-        )
-        return tag
+      if (!attributes.href) {
+        return new Tag('a', attributes, children)
       }
-      return new Tag('a', attributes, children)
+
+      let { title, href } = convertDocId(attributes.href)
+      let tag = new Tag(
+        'a',
+        href ? { href } : attributes,
+        children.length === 0 && title ? [title] : children
+      )
+      return tag
     },
   },
   image: {

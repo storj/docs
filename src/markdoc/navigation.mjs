@@ -68,7 +68,7 @@ function convertToFirebaseRedirects(data) {
       .map((redirect) => ({
         source: redirect,
         destination: item.href,
-        type: 307,
+        type: 308,
       }))
   )
 }
@@ -194,7 +194,10 @@ export default function (nextConfig = {}) {
               fs.readFileSync('firebase.base.json', 'utf8')
             )
 
-            firebaseConfig.hosting.redirects = redirs
+            firebaseConfig.hosting.redirects = [
+              ...firebaseConfig.hosting.redirects,
+              ...redirs,
+            ]
 
             fs.writeFileSync(
               'firebase.json',

@@ -4,6 +4,7 @@ import { Callout } from '@/components/Callout'
 import { CodeGroup } from '@/components/Code'
 import { Tabs, Tab } from '@/components/Tabs'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
+import { TagLinks } from '@/components/TagLinks'
 import PartnerIntegration from '@/components/PartnerIntegration'
 
 const tags = {
@@ -72,6 +73,21 @@ const tags = {
 
       return new Tag(this.render, { languages }, node.transformChildren(config))
     },
+  },
+  'tag-links': {
+    render: TagLinks,
+    attributes: {
+      tag: { type: String, required: true },
+      directory: { type: String, required: true },
+    },
+    matches: [
+      'backup',
+      'large-file',
+      'file-management',
+      'scentific',
+      'cloud-ops',
+      'content-delivery',
+    ],
   },
   'quick-links': {
     render: QuickLinks,

@@ -33,10 +33,8 @@ export function TagLinks({ directory, tag }) {
         .map((item, index) => {
           let { href } = convertDocId(`docId:${item.frontmatter.docId}`)
           return (
-            <li>
-              <Link href={href} key={item.frontmatter.docId}>
-                {item.frontmatter.title}
-              </Link>
+            <li key={item.frontmatter.docId}>
+              <Link href={href}>{item.frontmatter.title}</Link>
             </li>
           )
         })}

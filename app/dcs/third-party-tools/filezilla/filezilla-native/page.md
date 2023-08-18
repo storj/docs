@@ -1,7 +1,5 @@
 ---
 title: FileZilla Native Integration
-tags:
-  - file-management
 docId: OkJongWeLGhPy4KKz34W4
 redirects:
   - /dcs/how-tos/set-up-filezilla-for-decentralized-file-transfer

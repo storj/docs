@@ -51,8 +51,6 @@ function collectHeadings(nodes, slugify = slugifyWithCounter()) {
 
 export default function DocsLayout({ children, frontmatter: { title }, ast }) {
   let tableOfContents = collectHeadings(ast.children)
-  let previousPage = null
-  let nextPage = null
   return (
     <>
       <main className="isolate min-w-0 px-5 pt-3.5 sm:px-12 xl:py-16 ">

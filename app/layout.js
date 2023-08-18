@@ -49,7 +49,7 @@ export default function RootLayout({
           <HeroWrap>
             <Hero />
           </HeroWrap>
-          <div className="grid grid-cols-only-content lg:grid-cols-sidebar-content 2xl:grid-cols-sidebar-content-toc">
+          <div className="grid grid-cols-only-content lg:grid-cols-sidebar-content xl:grid-cols-sidebar-content-toc">
             <div className="hidden lg:relative lg:block lg:flex-none">
               <div className="absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden" />
               <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />

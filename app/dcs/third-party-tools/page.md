@@ -27,9 +27,9 @@ Practical step-by-step guides to help you achieve a specific goal. Most useful w
 {% tag-links tag="content-delivery" directory="./app/dcs/third-party-tools" %}
 {% /tag-links %}
 
-## Scentific
+## Scientific
 
-{% tag-links tag="scentific" directory="./app/dcs/third-party-tools" %}
+{% tag-links tag="scientific" directory="./app/dcs/third-party-tools" %}
 {% /tag-links %}
 
 ## Cloud Ops

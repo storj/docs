@@ -2,7 +2,7 @@
 title: Globus
 docId: NHV1H2XZHxPHc8xeHiI8t
 tags:
-  - scentific
+  - scientific
 redirects:
   - /dcs/how-tos/globus-integration-guide
   - /dcs/how-to/globus-integration-guide

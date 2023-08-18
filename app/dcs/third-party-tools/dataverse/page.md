@@ -2,7 +2,7 @@
 title: Dataverse
 docId: lvqkxgrbdMrqc1XnnvDFj
 tags:
-  - scentific
+  - scientific
 redirects:
   - /dcs/how-tos/dataverse-integration-guide
 metadata:

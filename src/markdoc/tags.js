@@ -84,7 +84,7 @@ const tags = {
       'backup',
       'large-file',
       'file-management',
-      'scentific',
+      'scientific',
       'cloud-ops',
       'content-delivery',
     ],

@@ -1,6 +1,8 @@
 ---
 title: Hugging Face
 docId: _TbcS1aJ44twHRve9UDPy
+tags:
+  - large-file
 redirects:
   - /dcs/how-tos/hugging-face
 metadata:
@@ -22,7 +24,7 @@ _In this guide, we will walk through configuring _[_HuggingFace Datasets_](https
 
 - Familiarity with [Colab](https://colab.research.google.com/) or equivalent environment to run code in (see [Notebooks](https://huggingface.co/docs/transformers/notebooks))
 
-- Storj S3 compatible access and secret key (see [](docId:LueFgrbZ9rJbWtDMXhIWZ))&#x20;
+- Storj S3 compatible access and secret key (see [](docId:AsyYcUJFbO1JI8-Tu8tW3))&#x20;
 
 - A bucket created on Storj (see [](docId:OJPnxiexQIXHmzGBkvzHc))
 
@@ -36,7 +38,7 @@ First, install some dependencies needed.
 pip install -qqU s3fs datasets
 ```
 
-Next, enter your Storj S3 compatible access and secret key (see [](docId:LueFgrbZ9rJbWtDMXhIWZ))&#x20;
+Next, enter your Storj S3 compatible access and secret key (see [](docId:AsyYcUJFbO1JI8-Tu8tW3))&#x20;
 
 ```python
 from getpass import getpass

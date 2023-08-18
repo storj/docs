@@ -4,7 +4,8 @@ docId: jwCUqpDCk8CUuUqFuykFx
 redirects:
   - /dcs/jwCU-projects
   - /dcs/projects
-weight: 1
+  - /dcs/getting-started/satellite-developer-account/manage-projects
+weight: 5
 ---
 
 ## Introduction
@@ -39,7 +40,7 @@ To modify the existing Project on the **_Projects_** screen you can select a nee
 
 ## Changing Project Limits
 
-If your account tier allows you to change your [](docId:Zrbz4XYhIOm99hhRShWHg), you will have more options than a [](docId:3QsPeVcuS4Buq5WWgFnRu).
+If your account tier allows you to change your [](docId:Zrbz4XYhIOm99hhRShWHg), you will have more options than a free plan.
 
 Select **Edit** to the right of the limit to change it. However, it will not allow to increase limits greater than your available maximum. To change the maximum you need to file a support request to change your limits, see [](docId:A4kUGYhfgGbVhlQ2ZHXVS).
 

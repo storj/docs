@@ -1,5 +1,7 @@
 ---
-title: Store Tesla Sentry Mode & Dashcam videos on Storj DCS
+title: Tesla Sentry Mode Backup
+tags:
+  - backup
 docId: XjYoGwaE6ncc3xTICXOOu
 redirects:
   - /dcs/how-tos/tesla-sentry-mode-teslausb

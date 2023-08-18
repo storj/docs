@@ -1,5 +1,7 @@
 ---
 title: PixelFed
+tags:
+  - content-delivery
 docId: SboATM5Y5-lWay0Zg-k4T
 redirects:
   - /dcs/SboA-pixelfed

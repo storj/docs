@@ -36,13 +36,14 @@ The front matter is a section at the beginning of each Markdown file (page.md) t
 
 **title:** The title of the article or page. This is typically displayed at the top of the page.
 
-**docId:** A unique identifier for the document. This can be used for internal tracking and linking.
+**docId:** A unique identifier for the document. This can be used for internal tracking and linking. See [Internal Linking](/#internal-linking)
 
 **redirects:** A list of URLs that should redirect to this page. This is useful for maintaining links when a page's URL changes or for creating aliases for a page.
 
 **metadata:**
 
 &nbsp;&nbsp;**title:** The text that should be displayed in the browser's title bar for this page.
+
 &nbsp;&nbsp;**description:** A brief summary or overview of the page's content. This description can be used in search results and previews.
 
 The metadata fields are converted to a nextjs export. Additional metadata fields that may work can be found [here](https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadata-fields)
@@ -63,6 +64,12 @@ To create an internal link using docId, use the following syntax:
 
 Replace `your-doc-id-here` with the docId of the target document.
 
+You can optionally add a fragment to link to certain section of the page by adding a `#` after the docId followed by the fragment.
+
+```markdown
+[](docId:your-doc-id-here#fragment)
+```
+
 **Override Link Name**
 
 You can specify custom link text by inserting it between the square brackets []. Here's an example:
@@ -75,7 +82,7 @@ This will render as a link with the text "Custom Link Name," pointing to the doc
 
 ### Image handling
 
-Images must be stored within the "Website Assets" internal project at Storj with the prefix of `https://link.storjshare.io/jua7rls6hkx5556qfcmhrqed2tfa/docs/images`
+Images must be stored within the "Website Assets" internal project at Storj with the prefix of `https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images`
 
 ## Style Guidelines
 

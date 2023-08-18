@@ -1,9 +1,11 @@
 ---
 title: S3 Compatibility
 weight: 1
+redirects:
+  - /dcs/api-reference/s3-compatible-gateway/supported-s3-commands
 ---
 
-# S3 Compatibility
+The Storj S3-compatible Gateway supports a RESTful API that is compatible with the basic data access model of the Amazon S3 API.‌
 
 ## Compatibility Table
 

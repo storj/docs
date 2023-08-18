@@ -1,6 +1,7 @@
 ---
 title: Creating Your Account
 docId: HeEf9wiMdlQx9ZdS_-oZS
+weight: 5
 redirects:
   - /dcs/getting-started/satellite-developer-account/creating-your-account
 ---

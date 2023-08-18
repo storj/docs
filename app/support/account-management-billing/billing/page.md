@@ -2,7 +2,8 @@
 title: Billing
 docId: tljdK4mFWcVk0Nei6Zlj-
 redirects:
-  - /dcs/undefined
+  - /dcs/billing-payment-and-accounts-1/pricing
+weight: 0
 ---
 
 ## Introduction
@@ -17,7 +18,7 @@ You can expand any Project to see details of the charge. See [](docId:59T_2l7c1r
 
 ## Add a Payment Method
 
-To add a [](docId:7U4_uu6Pzg6u2N6FpV9VE)\*\* **you can switch to the **Payment Methods** tab and select **Add STORJ Tokens** or **Add New Payment Method\*\*.
+To add a [](docId:7U4_uu6Pzg6u2N6FpV9VE) you can switch to the **Payment Methods** tab and select **Add STORJ Tokens** or Add New Payment Method.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/B72QGAlJzf15QL7tVadUp_image.png)
 

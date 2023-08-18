@@ -2,7 +2,7 @@
 title: FileZilla
 docId: 3Vj_5zZ99c4mTMRhQjGFM
 redirects:
-  - /dcs/3Vj_-filezilla
+  - /dcs/filezilla
 ---
 
 {% quick-links %}

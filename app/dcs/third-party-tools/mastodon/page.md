@@ -1,8 +1,12 @@
 ---
 title: Mastodon
 docId: ThG-lYh8tu_EjNUcVqVK9
+tags:
+  - content-delivery
 redirects:
   - /dcs/ThG--mastodon
+metadata:
+  title: Mastodon integration guide
 ---
 
 We have a webinar walking you through it, but you can also refer to the steps below:

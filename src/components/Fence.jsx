@@ -41,6 +41,7 @@ const link = {
         <a
           href={href}
           target="_blank"
+          rel="noreferrer"
           className="border-b border-current no-underline hover:border-b-2"
         >
           {children}

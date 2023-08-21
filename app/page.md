@@ -44,4 +44,4 @@ If you're stuck on an issue, chances are someone has seen it before or can help 
 
 ## Getting help
 
-Visit our [Help Center](docId:aibiech1hu8Chie4feej) for comprehensive guides and support.
+Visit our [Help Center](docId:aibiech1hu8Chie4feej) for support.

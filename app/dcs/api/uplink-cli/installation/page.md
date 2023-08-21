@@ -3,7 +3,7 @@ title: Installation
 docId: hFL-goCWqrQMJPcTN82NB
 redirects:
   - /dcs/downloads/download-uplink-cli
-weight: 2
+weight: 0
 ---
 
 The native CLI tool for Storj DCS/OSP

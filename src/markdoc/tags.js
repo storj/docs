@@ -61,17 +61,29 @@ const tags = {
   },
   'code-group': {
     render: CodeGroup,
-    transform(node, config) {
-      const languages = node
+    async transform(node, config) {
+      const languages = await node
         .transformChildren(config)
         .filter((child) => {
           return child && child.name === 'Fence'
         })
         .map((tab) =>
-          typeof tab === 'object' ? tab.attributes.language : null
+          typeof tab === 'object'
+            ? tab.attributes.title || tab.attributes.language
+            : null
         )
+      let attributes = node.transformAttributes(config)
 
-      return new Tag(this.render, { languages }, node.transformChildren(config))
+      return new Tag(
+        this.render,
+        { ...attributes, languages },
+        node.transformChildren(config)
+      )
+    },
+    attributes: {
+      label: {
+        type: String,
+      },
     },
   },
   'tag-links': {

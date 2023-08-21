@@ -16,7 +16,7 @@ See [](docId:3k4V1HFunDWHVso9b1Xt9) or [](docId:gH4m4hVZ0BkMVAoW_jA2t) for docke
 See [](docId:gH4m4hVZ0BkMVAoW_jA2t) for docker version
 {% /tab %}
 
-{% tab label="macOS" %}
+{% tab label="MacOS" %}
 See [](docId:gH4m4hVZ0BkMVAoW_jA2t) for docker version
 {% /tab %}
 {% /tabs %}
@@ -86,7 +86,7 @@ ssh user@server
 `user@server:~$`
 {% /tab %}
 
-{% tab label="Linux" %}
+{% tab label="MacOS" %}
 
 ```Text
 ssh user@server
@@ -97,7 +97,7 @@ ssh user@server
 `user@server:~$`
 {% /tab %}
 
-{% tab label="macOS" %}
+{% tab label="Linux" %}
 
 ```Text
 ssh user@server
@@ -193,7 +193,7 @@ ssh -L 14002:localhost:14002 user@server
 
 {% /tab %}
 
-{% tab label="macOS" %}
+{% tab label="MacOS" %}
 
 ```Text
 ssh -L 14002:localhost:14002 user@server
@@ -274,7 +274,7 @@ ssh-keygen
 
 {% /tab %}
 
-{% tab label="macOS" %}
+{% tab label="MacOS" %}
 
 ```Text
 ssh-keygen
@@ -324,7 +324,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
 
 {% /tab %}
 
-{% tab label="macOS" %}
+{% tab label="MacOS" %}
 
 ```Text
 ssh-copy-id -i ~/.ssh/id_rsa.pub user@server

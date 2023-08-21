@@ -25,7 +25,7 @@ function CodePanelHeader({ tag, label }) {
   }
 
   return (
-    <div className="border-b-white/7.5 bg-white/2.5 dark:bg-white/1 flex h-9 items-center gap-2 border-y border-t-transparent bg-zinc-900 px-4 dark:border-b-white/5">
+    <div className="border-b-white/7.5 bg-white/2.5 dark:bg-white/1 flex h-9 items-center gap-2 border-y border-t-transparent bg-slate-900 px-4 shadow-lg dark:border-b-white/5 dark:bg-slate-800/60">
       {tag && (
         <div className="dark flex">
           <Tag variant="small">{tag}</Tag>
@@ -41,11 +41,11 @@ function CodePanelHeader({ tag, label }) {
   )
 }
 
-function CodePanel({ tag, label, children }) {
+function CodePanel({ tag, hasTabs, label, children }) {
   return (
     <>
       <CodePanelHeader tag={tag} label={label} />
-      <div className="p-4 text-sm">{children}</div>
+      <div className={clsx(hasTabs && 'text-sm')}>{children}</div>
     </>
   )
 }
@@ -98,7 +98,9 @@ function CodeGroupPanels({ children, ...props }) {
           // https://github.com/chakra-ui/chakra-ui/issues/4328#issuecomment-920884182
           return (
             <Tab.Panel key={index} id={index}>
-              <CodePanel {...props}>{child}</CodePanel>
+              <CodePanel hasTabs={hasTabs} {...props}>
+                {child}
+              </CodePanel>
             </Tab.Panel>
           )
         })}
@@ -147,7 +149,7 @@ const usePreferredLanguageStore = create((set) => ({
     })),
 }))
 
-function useTabGroupProps(availableLanguages) {
+export function useTabGroupProps(availableLanguages) {
   let { preferredLanguages, addPreferredLanguage } = usePreferredLanguageStore()
   let [selectedIndex, setSelectedIndex] = useState(0)
   let activeLanguage = [...availableLanguages].sort(
@@ -182,10 +184,14 @@ export function CodeGroup({ children, title, languages, ...props }) {
     ? { selectedIndex: tabGroupProps.selectedIndex }
     : {}
 
+  if (!hasTabs) {
+    return <CodePanel {...props}>{children}</CodePanel>
+  }
+
   return (
     <Container
       {...containerProps}
-      className="not-prose my-8 overflow-hidden rounded-xl bg-slate-900 pb-3 pt-1 shadow-lg dark:bg-slate-800/60 dark:shadow-none dark:ring-1 dark:ring-slate-300/10"
+      className="not-prose my-8 overflow-hidden rounded-xl bg-slate-900 shadow-lg dark:bg-slate-800/60 dark:shadow-none dark:ring-1 dark:ring-slate-300/10"
     >
       <CodeGroupHeader title={title} languages={languages} {...headerProps} />
       <CodeGroupPanels {...props}>{children}</CodeGroupPanels>

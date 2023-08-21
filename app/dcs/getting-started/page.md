@@ -7,147 +7,287 @@ redirects:
   - /dcs/getting-started/quickstart-aws-sdk-and-hosted-gateway-mt
 ---
 
-## Create a Storj Account
+Storj is the leading provider of enterprise-grade, globally distributed cloud object storage.
 
-To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
+It is a drop-in replacement for any S3-compatible object storage that is just as durable but with 99.95% availability and better global performance from a single upload.
 
-Navigate to <https://storj.io/signup> to sign up. Enter your full name, email address, and a password, as shown below:
+Storj delivers default multi-region CDN-like performance with zero-trust security at a [cost that’s 80%](docId:59T_2l7c1rvZVhI8p91VX) lower than AWS S3.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
+## Before you begin
 
-## Create a Bucket 
+To get started, create an account with Storj. You’ll automatically be on Storj's free plan that gives you access to try our storage with your [third-party tool](docId:REPde_t8MJMDaE2BU8RfQ) or project.
 
-Once you have your Storj account you can create a bucket for your data to be stored in.
+{% quick-links %}
+{% quick-link title="Sign up" href="https://storj.io/signup"  %}
 
-1\. Navigate to “Buckets” on the left side menu.
+If you've never used Storj before, sign up for a new Storj account
 
-2\. Click “New Bucket” on the top right.
+{% /quick-link %}
+{% quick-link title="Log in" href="https://storj.io/login"  %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
+If you already have a Storj account, log in to get started
 
-3\. Assign the bucket an easily identifiable name, such as "my-bucket".
+{% /quick-link %}
+{% /quick-links %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
+## Generate S3 compatible credentials
 
-4\. Click **Create bucket**
+{% partial file="s3-credentials.md" /%}
 
-## Generate S3 credentials
+## Install command-line tools
 
-Storj has an Amazon S3 compatible API and you'll need generate S3 credentials to use it. S3 credentials consist of an **access key**, **secret key**, and **endpoint**.
+Storj works with a variety command-line tools. Rclone is recommended for its compatibility with various cloud providers and ease of use.
 
-Create S3 credentials in the Storj web console:
+However, some may already be familiar with AWS CLI which is also a suitable option.
 
-1\. Navigate to **Access** on the left side menu.
+{% tabs %}
 
-2\. Click **Create S3 Credentials** under the S3 Credentials block.
+{% tab label="rclone" %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
+1. Install rclone
 
-3\. When the Create Access screen comes up, set specifications according to the following guidelines:
+   ```shell
+   sudo -v ; curl https://rclone.org/install.sh | sudo bash
+   ```
 
-- **Type:** S3 Credentials
+   Or use an [alternative method](https://rclone.org/downloads/)
 
-- **Name:** The name of the credentials (e.g. my-access)
+2. Configure rclone
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
+   Edit the rclone config file directly, you can find where it is stored by running the following:
 
-4\. Click **Continue** to provide permissions
+   ```shell
+   # focus
+   # terminal
+   rclone config file
 
-- **Permissions:** All
+   Configuration file is stored at:
+   /Users/dan/.config/rclone/rclone.conf
+   ```
 
-- **Buckets:** Feel free to specify the bucket you created above (e.g. my-bucket), or leave as “All”
+   In `rclone.conf`, set the `access_key_id` and `secret_access_key` with the S3 compatible credentials created above.
 
-- **End date**: provide an expiration date for these credentials (optional)
+   {% code-group label="~/.config/rclone/rclone.conf" %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
+   ```ini
+   [storj]
+   type = s3
+   provider = Storj
+   access_key_id =  access_key # REPLACE ME
+   secret_access_key = secret_key  # REPLACE ME
+   endpoint = gateway.storjshare.io
+   chunk_size = 64Mi
+   disable_checksum: true
+   ```
 
-5\. Click **Continue** to provide Access encryption Information
+   {% /code-group %}
 
-- **Use the current passphrase**: this is default option
+{% /tab %}
 
-- **Advanced**: you may provide a different encryption phrase either your own or generate a new one.
+{% tab label="aws cli" %}
 
-  - **Enter a new passphrase**: use this option, if you would like to provide your own new encryption phrase
+1. [Install the AWS CLI v2.x](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
 
-  - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
+2. Configure your AWS CLI with the gateway MT credentials from the previous step by running `aws configure` in your terminal:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
+   ```shell
+   # focus(1)
+   # terminal
+   aws configure
+     AWS Access Key ID [None]: <Access Key>
+     AWS Secret Access Key [None]: <Secret Key>
+   # link[31:36] docId:eem7iong0aSh7ahbich5
+     Default region name [None]: global
+     Default output format [None]:
+   ```
 
-{% callout type="warning"  %}
-In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
-{% /callout %}
+3. **Optional but strongly recommended**: Set the multipart threshold to 64 MB
 
-6\. Click **Create Access** to finish creation of your S3 credentials
+   See [](docId:20zlQyfMD9gmHJOUPx3jh)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
+{% /tab %}
+{% /tabs %}
 
-7\. Click **Confirm** the Confirm details pop-up message
+## Make a bucket
 
-8\. Your S3 credentials are created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
+Now that the command-line tool is configured, let's make a bucket to store our files.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
+{% code-group %}
 
-## Configure AWS CLI with your credentials
-
-{% callout type="info"  %}
-To continue make sure you have the AWS CLI installed on your machine.&#x20;
-{% /callout %}
-
-Verify your AWS CLI version by running `aws --version`in your terminal. AWS CLI current version is version 2. If you are using AWS CLI v1, you will need to install a plugin to be able to define the endpoint. See how on [](docId:20zlQyfMD9gmHJOUPx3jh).
-
-2\. Configure your AWS CLI with the gateway MT credentials from the previous step by running `aws configure` in your terminal:
-
-```shell
-~ % aws configure
-AWS Access Key ID [****************e53q]: <<yourAccessKey>>
-AWS Secret Access Key [****************bbxq]: <<yourSecretKey>>
-Default region name [us-east-1]:
-Default output format [None]:
-~ %
+```shell {% title="rclone" %}
+# terminal
+rclone mkdir storj:my-bucket
 ```
 
-3\. **Optional but strongly recommended**: Set the multipart threshold to 64 MB.&#x20;
-
-You can now use AWS CLI. Some examples of use:
-
-### Make a bucket
-
-```shell
+```shell {% title="aws cli" %}
+# terminal
 aws s3 --endpoint-url=https://gateway.storjshare.io mb s3://my-bucket
 ```
 
-### Display buckets
+{% /code-group %}
 
-```shell
-aws s3 --endpoint-url=https://gateway.storjshare.io ls
+## List buckets
+
+The bucket will show up in our bucket list (not to be mistaken with a life's to-do list)
+
+{% code-group %}
+
+```shell {% title="rclone" %}
+# `lsf` is non-recursive, while `ls` is recursive
+# focus
+# terminal
+# link[8:10] https://rclone.org/commands/rclone_lsf/
+rclone lsf storj:
+my-bucket/
 ```
 
-### Copy a file
-
-```shell
-aws s3 --endpoint-url=https://gateway.storjshare.io cp /tmp/test.zip s3://my-bucket
+```shell {% title="aws cli" %}
+# focus
+# terminal
+aws s3 --endpoint-url=https://gateway.storjshare.io ls s3://
+2023-08-21 15:30:40 my-bucket
 ```
 
-### List files in a bucket
+{% /code-group %}
 
-```shell
+## Upload file
+
+Next we'll upload a file. Here is an example image of a tree growing hard drives (while Storj doesn't grow hard drives on trees, it does emphasize [sustainability](https://www.storj.io/benefits/sustainability)). Right-click on it and save as `storj-tree.png` to your Downloads.
+
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-tree.png)
+
+Use this command to copy the file to your bucket.
+
+{% code-group %}
+
+```shell {% title="rclone" %}
+# terminal
+rclone copy ~/Downloads/storj-tree.png storj:my-bucket/
+```
+
+```shell {% title="aws cli" %}
+# focus
+# terminal
+aws s3 --endpoint-url=https://gateway.storjshare.io cp ~/Downloads/storj-tree.png s3://my-bucket/
+
+upload: Downloads/storj-tree.png to s3://my-bucket/storj-tree.png
+
+```
+
+{% /code-group %}
+
+## Download file
+
+To retrieve the file, use the same command as upload but reverse the order of the arguments
+
+{% code-group %}
+
+```shell {% title="rclone" %}
+# terminal
+rclone copy storj:my-bucket/ ~/Downloads/storj-tree-2.png
+```
+
+```shell {% title="aws cli" %}
+# terminal
+aws s3 --endpoint-url=https://gateway.storjshare.io cp s3://my-bucket/ ~/Downloads/storj-tree-2.png
+```
+
+{% /code-group %}
+
+## List files
+
+Let's see what files we have in the bucket.
+
+{% code-group %}
+
+```shell {% title="rclone" %}
+# focus
+# terminal
+# link[8:9] https://rclone.org/commands/rclone_ls/
+rclone ls storj:my-bucket
+
+   133220 storj-tree.png
+```
+
+```shell {% title="aws cli" %}
+# focus
+# terminal
 aws s3 --endpoint-url=https://gateway.storjshare.io ls s3://my-bucket
+2023-08-21 16:00:40     133220 storj-tree.png
 ```
 
-### Copy a file from a bucket
+{% /code-group %}
 
-```shell
-aws s3 --endpoint-url=https://gateway.storjshare.io cp s3://my-bucket/test.zip /tmp/Archive.zip
+Yep there's the Storj tree!
+
+## Delete file
+
+Okay time to remove the file.
+
+{% code-group %}
+
+```shell {% title="rclone" %}
+# focus
+# terminal
+# link[8:17] https://rclone.org/commands/rclone_deletefile/
+rclone deletefile storj:my-bucket/storj-tree.png
 ```
 
-### Delete a bucket
+```shell {% title="aws cli" %}
+# focus
+# terminal
+aws s3 --endpoint-url=https://gateway.storjshare.io rm s3://my-bucket/storj-tree.png
 
-```shell
+delete: s3://my-bucket/storj-tree.png
+```
+
+{% /code-group %}
+
+## Delete buckets
+
+Last but not least, we'll delete the bucket.
+
+{% code-group %}
+
+```shell {% title="rclone" %}
+# focus
+# terminal
+# link[8:12] https://rclone.org/commands/rclone_rmdir/
+rclone rmdir storj:my-bucket
+```
+
+```shell {% title="aws cli" %}
+# focus
+# terminal
 aws s3 --endpoint-url=https://gateway.storjshare.io rb s3://my-bucket/
+
+remove_bucket: my-bucket
 ```
+
+{% /code-group %}
 
 ### Delete a non-empty bucket
 
-```shell
-aws s3 --endpoint-url=https://gateway.storjshare.io rb --force s3://my-bucket/
+{% code-group %}
+
+```shell {% title="rclone" %}
+# focus
+# terminal
+# link[8:12] https://rclone.org/commands/rclone_purge/
+rclone purge storj:my-bucket
 ```
+
+```shell {% title="aws cli" %}
+# add `--force`
+# focus
+# terminal
+aws s3 --endpoint-url=https://gateway.storjshare.io rb --force s3://my-bucket/
+
+remove_bucket: my-bucket
+```
+
+{% /code-group %}
+
+## Next Steps
+
+Congratulations on getting started with Storj!

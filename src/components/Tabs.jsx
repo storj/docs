@@ -2,60 +2,19 @@
 import React, { useRef, useEffect } from 'react'
 import { Tab as HeadlessTab } from '@headlessui/react'
 import clsx from 'clsx'
-import { create } from 'zustand'
-
-function usePreventLayoutShift() {
-  let positionRef = useRef()
-  let rafRef = useRef()
-
-  useEffect(() => {
-    return () => {
-      window.cancelAnimationFrame(rafRef.current)
-    }
-  }, [])
-
-  return {
-    positionRef,
-    preventLayoutShift(callback) {
-      let initialTop = positionRef.current.getBoundingClientRect().top
-
-      callback()
-
-      rafRef.current = window.requestAnimationFrame(() => {
-        let newTop = positionRef.current.getBoundingClientRect().top
-        window.scrollBy(0, newTop - initialTop)
-      })
-    },
-  }
-}
-
-const useTabIndexStore = create((set) => ({
-  selectedIndex: 0,
-  setSelectedIndex: (index) =>
-    set((state) => ({
-      selectedIndex: index,
-    })),
-}))
+import { useTabGroupProps } from '@/components/Code'
 
 export function Tabs({ labels, children }) {
-  let { positionRef, preventLayoutShift } = usePreventLayoutShift()
-  let { selectedIndex, setSelectedIndex } = useTabIndexStore()
+  let tabGroupProps = useTabGroupProps(labels)
 
   return (
     <div className="w-full px-2 py-2 sm:px-0">
-      <HeadlessTab.Group
-        as="div"
-        ref={positionRef}
-        selectedIndex={selectedIndex}
-        onChange={(newIndex) =>
-          preventLayoutShift(() => setSelectedIndex(newIndex))
-        }
-      >
+      <HeadlessTab.Group {...tabGroupProps}>
         <HeadlessTab.List className="flex max-w-md space-x-1 rounded-xl bg-blue-900/20 p-1">
-          {labels.map((label) => (
+          {labels.map((label, i) => (
             <HeadlessTab
-              id={label}
-              key={label}
+              id={`${label}-${i}`}
+              key={`${label}-${i}`}
               className={({ selected }) =>
                 clsx(
                   'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',

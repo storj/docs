@@ -53,10 +53,10 @@ const nodes = {
   },
   heading: {
     ...defaultNodes.heading,
-    transform(node, config) {
-      let slugify = documentSlugifyMap.get(config)
+    async transform(node, config) {
+      let slugify = documentSlugifyMap.get(config) || slugifyWithCounter() // partials don't have the same config
       let attributes = node.transformAttributes(config)
-      let children = node.transformChildren(config)
+      let children = await node.transformChildren(config)
       let text = children.filter((child) => typeof child === 'string').join(' ')
       let id = attributes.id ?? slugify(text)
 
@@ -67,15 +67,26 @@ const nodes = {
       )
     },
   },
+  list: {
+    ...defaultNodes.list,
+    // support async transforms
+    async transform(node, config) {
+      return new Tag(
+        node.attributes.ordered ? 'ol' : 'ul',
+        node.transformAttributes(config),
+        await node.transformChildren(config)
+      )
+    },
+  },
   link: {
     render: Link,
     attributes: {
       ...defaultNodes.link.attributes,
     },
     children: defaultNodes.children,
-    transform(node, config) {
+    async transform(node, config) {
       const attributes = node.transformAttributes(config)
-      const children = node.transformChildren(config)
+      const children = await node.transformChildren(config)
       if (!attributes.href) {
         return new Tag('a', attributes, children)
       }
@@ -136,6 +147,9 @@ const nodes = {
   fence: {
     render: Fence,
     attributes: {
+      title: {
+        type: String,
+      },
       language: {
         type: String,
       },

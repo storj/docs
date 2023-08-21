@@ -1,11 +1,16 @@
 ---
 title: AWS CLI Advanced Options
+
 docId: 20zlQyfMD9gmHJOUPx3jh
 redirects:
   - /dcs/getting-started/gateway-mt/aws-cli-advanced-options
 ---
 
-## Install `awscli-plugin-endpoint` plugin
+If you want to utilize Storj with AWS CLI as best as possible, we recommend configuring the `multipart_threshold` and `multipart_chunksize` parameters.
+
+These features can be achieved by installing the `awscli-plugin-endpoint` plugin.
+
+## Install plugin
 
 {% tabs %}
 
@@ -15,21 +20,21 @@ redirects:
 
 2.  Install `awscli-plugin-endpoint` plugin:
 
-```shell
-pip3 install --no-deps awscli-plugin-endpoint
-```
+    ```shell
+    pip3 install --no-deps awscli-plugin-endpoint
+    ```
 
-3\. Configure the path in your `~/.aws/config` file (replace the `site-packages-path` to your path from a previous step):
+3.  Configure the path in your `~/.aws/config` file (replace the `site-packages-path` to your path from a previous step):
 
-```shell
-aws configure set plugins.cli_legacy_plugin_path site-packages-path
-```
+    ```shell
+    aws configure set plugins.cli_legacy_plugin_path site-packages-path
+    ```
 
-4\. Configure plugin in your `~/.aws/config` file:
+4.  Configure plugin in your `~/.aws/config` file:
 
-```shell
-aws configure set plugins.endpoint awscli_plugin_endpoint
-```
+    ```shell
+    aws configure set plugins.endpoint awscli_plugin_endpoint
+    ```
 
 {% /tab %}
 
@@ -49,14 +54,19 @@ aws configure set plugins.endpoint awscli_plugin_endpoint
 
 {% /tabs %}
 
-## Define an endpoint with AWS CLI
+## Multipart options
 
-Configure the default profile (see [](docId:EGM8O-1xt2Az03eBWT8Rf) to choose a correct endpoint):
+Configure the default profile
+
+```shell
+aws configure set default.s3.multipart_threshold 64MB
+aws configure set default.s3.multipart_chunksize 64MB
+```
+
+Optionally you can set Storj as the default endpoint so you can avoid having to repeatedly use the --endpoint option.
 
 ```shell
 aws configure set default.s3.endpoint_url https://gateway.storjshare.io
-aws configure set default.s3.multipart_threshold 60MB
-aws configure set default.s3.multipart_chunksize 60MB
 ```
 
 The resulting file would look like:
@@ -77,11 +87,15 @@ You can now use the AWS CLI without specifying an endpoint:
 aws s3 ls
 ```
 
+## s3api
+
 To configure `s3api` endpoint you can use this command:
 
 ```shell
 aws configure set default.s3api.endpoint_url https://gateway.storjshare.io
 ```
+
+## Set a Storj profile
 
 You can also use a different profile for Storj:
 

@@ -59,6 +59,7 @@ However, some may already be familiar with AWS CLI which is also a suitable opti
    ```shell
    # focus
    # terminal
+   # link[8:13] https://rclone.org/commands/rclone_config_file/
    rclone config file
 
    Configuration file is stored at:
@@ -115,6 +116,7 @@ Now that the command-line tool is configured, let's make a bucket to store our f
 {% code-group %}
 
 ```shell {% title="rclone" %}
+# link[8:12] https://rclone.org/commands/rclone_mkdir/
 # terminal
 rclone mkdir storj:my-bucket
 ```
@@ -161,6 +163,7 @@ Use this command to copy the file to your bucket.
 {% code-group %}
 
 ```shell {% title="rclone" %}
+# link[8:11] https://rclone.org/commands/rclone_copy/
 # terminal
 rclone copy ~/Downloads/storj-tree.png storj:my-bucket/
 ```
@@ -184,6 +187,7 @@ To retrieve the file, use the same command as upload but reverse the order of th
 
 ```shell {% title="rclone" %}
 # terminal
+# link[8:11] https://rclone.org/commands/rclone_copy/
 rclone copy storj:my-bucket/ ~/Downloads/storj-tree-2.png
 ```
 

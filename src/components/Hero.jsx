@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
 
@@ -6,21 +5,8 @@ import { Button } from '@/components/Button'
 import { HeroBackground } from '@/components/HeroBackground'
 import blurCyanImage from '@/images/blur-cyan.png'
 import blurIndigoImage from '@/images/blur-indigo.png'
-import Fence from './Fence'
-
-const codeLanguage = 'javascript'
-const code = `export default {
-  strategy: 'predictive',
-  engine: {
-    cpus: 12,
-    backups: ['./storage/cache.wtf'],
-  },
-}`
-
-const tabs = [
-  { name: '~/.aws/credentials', isActive: true },
-  { name: 'package.json', isActive: false },
-]
+import Fence, { transparent } from './Fence'
+import { HeroCode } from '@/components/HeroCode'
 
 function TrafficLightsIcon(props) {
   return (
@@ -95,46 +81,31 @@ export function Hero({ className }) {
                 <div className="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
                 <div className="pl-4 pt-4">
                   <TrafficLightsIcon className="h-2.5 w-auto stroke-slate-500/30" />
-                  <div className="mt-4 flex space-x-2 text-xs">
-                    {tabs.map((tab) => (
-                      <div
-                        key={tab.name}
-                        className={clsx(
-                          'flex h-6 rounded-full',
-                          tab.isActive
-                            ? 'bg-gradient-to-r from-sky-400/30 via-sky-400 to-sky-400/30 p-px font-medium text-sky-300'
-                            : 'text-slate-500'
-                        )}
-                      >
-                        <div
-                          className={clsx(
-                            'flex items-center rounded-full px-2.5',
-                            tab.isActive && 'bg-slate-800'
-                          )}
-                        >
-                          {tab.name}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-6 flex items-start px-1 text-sm">
-                    <div
-                      aria-hidden="true"
-                      className="select-none border-r border-slate-300/5 pr-4 font-mono text-slate-600"
+                  <HeroCode
+                    className="w-full"
+                    languages={['rclone', 'aws cli', 'uplink']}
+                  >
+                    <Fence
+                      theme={transparent}
+                      className="pb-1.5"
+                      copy={false}
+                      language="shell"
                     >
-                      {Array.from({
-                        length: code.split('\n').length,
-                      }).map((_, index) => (
-                        <Fragment key={index}>
-                          {(index + 1).toString().padStart(2, '0')}
-                          <br />
-                        </Fragment>
-                      ))}
-                    </div>
-                    <Fence language={codeLanguage} copy={false}>
-                      {code}
+                      rclone copy storj-tree.png storj:my-bucket/
                     </Fence>
-                  </div>
+                    <Fence theme={transparent} copy={false} language="shell">
+                      aws s3 --endpoint-url=https://gateway.storjshare.io cp
+                      storj-tree.png s3://my-bucket
+                    </Fence>
+                    <Fence
+                      theme={transparent}
+                      className="pb-1.5"
+                      copy={false}
+                      language="shell"
+                    >
+                      uplink cp storj-tree.png sj://my-bucket
+                    </Fence>
+                  </HeroCode>
                 </div>
               </div>
             </div>

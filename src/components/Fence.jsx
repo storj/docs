@@ -1,5 +1,6 @@
 // See https://bright.codehike.org/recipes for Code docs
 import { Code } from 'bright'
+import clsx from 'clsx'
 import { extractAnnotations } from '@code-hike/lighter'
 import CodeCopy from '@/components/CodeCopy'
 import { convertDocId } from '@/markdoc/convertDocId'
@@ -8,6 +9,10 @@ import { convertDocId } from '@/markdoc/convertDocId'
 import light from '@/components/storjCodeTheme.json'
 let dark = structuredClone(light)
 dark.colors['editor.background'] = '#182234'
+
+export const transparent = structuredClone(light)
+transparent.colors['editor.background'] = '#00000000'
+
 Code.theme = {
   dark: dark,
   light: light,
@@ -138,7 +143,14 @@ export const focus = {
   },
 }
 
-export default async function Fence({ language, children: code, copy = true }) {
+export default async function Fence({
+  language,
+  lineNumbers,
+  theme,
+  className,
+  children: code,
+  copy = true,
+}) {
   // Code has be to a Server Component to work
   // nest it in a Client component for the copy button
   if (languageMapping[language?.toLowerCase()]) {
@@ -171,8 +183,16 @@ export default async function Fence({ language, children: code, copy = true }) {
     newCode = parsedCode
   }
 
+  let themeProps = theme ? { theme } : {}
+
   let codeComp = (
-    <Code className="group" lang={language} extensions={extensions}>
+    <Code
+      {...themeProps}
+      className={clsx('group', className)}
+      lineNumbers={lineNumbers}
+      lang={language}
+      extensions={extensions}
+    >
       {code.trim()}
     </Code>
   )

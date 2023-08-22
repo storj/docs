@@ -68,8 +68,8 @@ function CodeGroupHeader({ title, languages, selectedIndex }) {
         <Tab.List className="-mb-px flex text-xs font-medium ">
           {languages.map((lang, childIndex) => (
             <Tab
-              id={lang}
-              key={lang}
+              id={`${lang}-${childIndex}`}
+              key={`${lang}-${childIndex}`}
               className={clsx(
                 'flex flex-none items-center border-b border-t  border-t-transparent px-4 py-2 pr-2 text-sky-300',
                 childIndex === selectedIndex
@@ -176,7 +176,7 @@ export function useTabGroupProps(availableLanguages) {
   }
 }
 
-export function CodeGroup({ children, title, languages, ...props }) {
+export function CodeGroup({ children, title, languages, className, ...props }) {
   let tabGroupProps = useTabGroupProps(languages)
   let hasTabs = children.length > 1
 
@@ -187,7 +187,10 @@ export function CodeGroup({ children, title, languages, ...props }) {
   return (
     <Tab.Group
       {...tabGroupProps}
-      className="not-prose my-8 overflow-hidden rounded-xl bg-slate-900 shadow-lg dark:bg-slate-800/60 dark:shadow-none dark:ring-1 dark:ring-slate-300/10"
+      className={clsx(
+        className,
+        'not-prose my-8 overflow-hidden rounded-xl bg-slate-900 shadow-lg dark:bg-slate-800/60 dark:shadow-none dark:ring-1 dark:ring-slate-300/10'
+      )}
     >
       <CodeGroupHeader
         title={title}

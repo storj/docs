@@ -153,6 +153,9 @@ const nodes = {
       language: {
         type: String,
       },
+      lineNumbers: {
+        type: Boolean,
+      },
     },
   },
 }

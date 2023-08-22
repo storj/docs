@@ -3,6 +3,7 @@ import { slugifyWithCounter } from '@sindresorhus/slugify'
 import { Prose } from '@/components/Prose'
 import TableOfContents from './TableOfContents'
 import { PrevNextLinks } from '@/components/PrevNextLinks'
+import clsx from 'clsx'
 
 function getNodeText(node) {
   let text = ''
@@ -60,16 +61,18 @@ export default function DocsLayout({
       <main className="isolate min-w-0 px-5 pt-3.5 sm:px-12 xl:py-16 ">
         <div className="mx-auto max-w-7xl">
           <article className="ml-0 max-w-4xl 2xl:mx-auto">
-            {title && !hideTitle && (
-              <header className="mb-9 space-y-1">
-                {title && (
-                  <h1 className="font-display text-3xl tracking-tight text-slate-900 dark:text-white">
-                    {title}
-                  </h1>
-                )}
-              </header>
-            )}
-
+            <header
+              className={clsx(
+                hideTitle ? 'mb-9 dark:mb-14' : 'mb-9',
+                'space-y-1'
+              )}
+            >
+              {title && !hideTitle && (
+                <h1 className="font-display text-3xl tracking-tight text-slate-900 dark:text-white">
+                  {title}
+                </h1>
+              )}
+            </header>
             <Prose>{children}</Prose>
           </article>
           <PrevNextLinks />

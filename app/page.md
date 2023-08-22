@@ -16,6 +16,8 @@ Storj is the leading provider of enterprise-grade, globally distributed cloud ob
 
 Easily integrated into any existing stack with S3 compatibility, Storj is a trustless, globally distributed network that utilizes existing excess storage capacity making enterprise-grade performance, privacy, and resiliency available with compelling economic benefits.
 
+{% youtube-embed videoId="JgKdBRIyIps" /%}
+
 ## Main features
 
 Some of the main Storj features include:

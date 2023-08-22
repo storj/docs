@@ -12,7 +12,7 @@ This guide will show you how to connect ActiveStorage in Rails 7 to Storj (an AW
 
 We have a webinar walking you through it, but you can also refer to the steps below:
 
-<https://www.youtube.com/watch?v=a8SlyTuoIwI>
+{% youtube-embed videoId="a8SlyTuoIwI" /%}
 
 ## Prerequisites:
 

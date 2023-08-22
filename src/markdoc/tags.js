@@ -6,6 +6,7 @@ import { Tabs, Tab } from '@/components/Tabs'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
 import { TagLinks } from '@/components/TagLinks'
 import PartnerIntegration from '@/components/PartnerIntegration'
+import YouTubeEmbed from '@/components/YouTubeEmbed'
 
 const tags = {
   callout: {
@@ -112,6 +113,13 @@ const tags = {
       description: { type: String },
       icon: { type: String },
       href: { type: String },
+    },
+  },
+  'youtube-embed': {
+    selfClosing: true,
+    render: YouTubeEmbed,
+    attributes: {
+      videoId: { type: String, required: true },
     },
   },
 }

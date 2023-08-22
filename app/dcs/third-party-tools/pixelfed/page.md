@@ -9,7 +9,7 @@ redirects:
 
 We have a webinar walking you through it, but you can also refer to the steps below:
 
-<https://www.youtube.com/watch?v=K-Zmgt6KtzI>
+{% youtube-embed videoId="K-Zmgt6KtzI" /%}
 
 The things you need here are:
 

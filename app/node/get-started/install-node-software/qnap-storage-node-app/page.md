@@ -15,7 +15,7 @@ In this guide, we are going to walk through the installation process for the Sto
 
 For a video walkthrough of this process, please see below:&#x20;
 
-<https://www.youtube.com/watch?v=H6bRljVjR48>
+{% youtube-embed videoId="H6bRljVjR48" /%}
 
 ## Prerequisites
 

@@ -23,7 +23,7 @@ This document will provide you with all the information you need to set up a cus
 
 We have a webinar walking you through it, but you can also refer to the steps below:
 
-<https://www.youtube.com/watch?v=b14EE--aAcU>
+{% youtube-embed videoId="b14EE--aAcU" /%}
 
 ## What are custom domains?
 

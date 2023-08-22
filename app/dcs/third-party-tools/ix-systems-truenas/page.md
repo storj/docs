@@ -1,5 +1,5 @@
 ---
-title: TrueNAS - iX Systems
+title: TrueNAS - iXsystems
 docId: ygezxeTPxu9ysDNPxY-WM
 tags:
   - backup
@@ -7,7 +7,7 @@ redirects:
   - /dcs/how-tos/ix-systems-truenas-integration
   - /dcs/ix-systems-truenas-integration
 metadata:
-  title: iX Systems TrueNAS Integration
+  title: iXsystems TrueNAS Integration
 ---
 
 TrueNAS is a network attached storage (NAS) solution that allows for an off-site backup with cloud storage, such as Storj, to provide simplicity, speed, and durability in data storage.

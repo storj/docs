@@ -1,17 +1,17 @@
 ---
-title: Host a Static Website with the Uplink CLI and Linksharing Service
+title: Static site hosting
 docId: GkgE6Egi02wRZtyryFyPz
+metadata:
+  title: Host a Static Website with the Uplink CLI and Linksharing Service
 redirects:
   - >-
     /dcs/how-tos/host-a-static-website/host-a-static-website-with-the-cli-and-linksharing-service
 ---
 
-You can use your own domain name and host your own static website on Storj DCS with the following setup.
+You can use your own domain name and host your own static website on Storj
 
 {% callout type="info"  %}
-**Static websites** serve files, including HTML, CSS, and Javascript files, exactly as they are stored on the server. All visitors will be served the same files.
-
-**Dynamic websites** use server-side processing to generate the underlying code behind each page. They support Create, Read, Update, Delete operations against a database. Web views can be custom rendered to each user.
+**Static websites** are files, including HTML, CSS, and Javascript files, presented to the user exactly as they are stored on disk.
 {% /callout %}
 
 ## Part 1: Uplink CLI

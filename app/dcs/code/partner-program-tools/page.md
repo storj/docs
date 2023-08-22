@@ -1,5 +1,5 @@
 ---
-title: Tools for the Partner Program
+title: Partner Program Tools
 docId: PUIq--JfqJvG36xkJ_Fia
 redirects:
   - /dcs/how-tos/configure-tools-for-the-partner-program

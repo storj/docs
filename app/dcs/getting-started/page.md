@@ -104,7 +104,10 @@ However, some may already be familiar with AWS CLI which is also a suitable opti
 
 3. **Optional but strongly recommended**: Set the multipart threshold to 64 MB
 
-   See [](docId:20zlQyfMD9gmHJOUPx3jh)
+```shell
+aws configure set default.s3.multipart_threshold 64MB
+aws configure set default.s3.multipart_chunksize 64MB
+```
 
 {% /tab %}
 {% /tabs %}
@@ -158,7 +161,7 @@ Next we'll upload a file. Here is an example image of a tree growing hard drives
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-tree.png)
 
-Use this command to copy the file to your bucket.
+Copy the file to your bucket.
 
 {% code-group %}
 
@@ -174,7 +177,6 @@ rclone copy ~/Downloads/storj-tree.png storj:my-bucket/
 aws s3 --endpoint-url=https://gateway.storjshare.io cp ~/Downloads/storj-tree.png s3://my-bucket/
 
 upload: Downloads/storj-tree.png to s3://my-bucket/storj-tree.png
-
 ```
 
 {% /code-group %}

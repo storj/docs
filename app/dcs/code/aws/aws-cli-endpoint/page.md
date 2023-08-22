@@ -1,12 +1,12 @@
 ---
-title: AWS CLI Advanced Options
+title: AWS CLI Endpoint
 
 docId: 20zlQyfMD9gmHJOUPx3jh
 redirects:
   - /dcs/getting-started/gateway-mt/aws-cli-advanced-options
 ---
 
-If you want to utilize Storj with AWS CLI as best as possible, we recommend configuring the `multipart_threshold` and `multipart_chunksize` parameters.
+This guide is so you can set Storj as the default endpoint so you can avoid having to repeatedly use the --endpoint option.
 
 These features can be achieved by installing the `awscli-plugin-endpoint` plugin.
 
@@ -54,17 +54,6 @@ aws configure set plugins.endpoint awscli_plugin_endpoint
 
 {% /tabs %}
 
-## Multipart options
-
-Configure the default profile
-
-```shell
-aws configure set default.s3.multipart_threshold 64MB
-aws configure set default.s3.multipart_chunksize 64MB
-```
-
-Optionally you can set Storj as the default endpoint so you can avoid having to repeatedly use the --endpoint option.
-
 ```shell
 aws configure set default.s3.endpoint_url https://gateway.storjshare.io
 ```
@@ -73,12 +62,10 @@ The resulting file would look like:
 
 ```none
 [default]
-aws_access_key_id = judjq3jjusboabcyw7qk6o5mqepq
-aws_secret_access_key = jygstztxxqreukegsd25vbpjyaaegdtgbd34uqvgapfswqk2467ze6
+aws_access_key_id = access_key # replace me
+aws_secret_access_key = secret_key # replace me
 s3 =
   endpoint_url = https://gateway.storjshare.io
-  multipart_threshold = 60MB
-  multipart_chunksize = 60MB
 ```
 
 You can now use the AWS CLI without specifying an endpoint:

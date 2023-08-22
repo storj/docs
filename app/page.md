@@ -1,5 +1,6 @@
 ---
 title: Overview
+hideTitle: true
 metadata:
   title: Storj Docs
   description: Make the world your datacenter

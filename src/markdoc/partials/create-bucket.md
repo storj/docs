@@ -1,5 +1,3 @@
-Once you have your Storj account you can create a bucket for your data to be stored in.
-
 1. Navigate to **Buckets** on the left side menu.
 
 2. Click **New Bucket** on the top right.

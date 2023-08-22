@@ -16,7 +16,7 @@ uplink share --url --readonly --disallow-lists --not-after=none sj://BUCKET
 ```
 
 {% /tab %}
-{% tab label="Web Console" %}
+{% tab label="Storj Console" %}
 
 1. Navigate to Buckets
 

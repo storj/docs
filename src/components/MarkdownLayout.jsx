@@ -49,14 +49,18 @@ function collectHeadings(nodes, slugify = slugifyWithCounter()) {
   return sections
 }
 
-export default function DocsLayout({ children, frontmatter: { title }, ast }) {
+export default function DocsLayout({
+  children,
+  frontmatter: { title, hideTitle = false },
+  ast,
+}) {
   let tableOfContents = collectHeadings(ast.children)
   return (
     <>
       <main className="isolate min-w-0 px-5 pt-3.5 sm:px-12 xl:py-16 ">
         <div className="mx-auto max-w-7xl">
           <article className="ml-0 max-w-4xl 2xl:mx-auto">
-            {title && (
+            {title && !hideTitle && (
               <header className="mb-9 space-y-1">
                 {title && (
                   <h1 className="font-display text-3xl tracking-tight text-slate-900 dark:text-white">

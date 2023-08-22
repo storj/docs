@@ -6,6 +6,8 @@ redirects:
   - /dcs/billing-payment-and-accounts-1/pricing/free-tier
 ---
 
+{% youtube-embed videoId="9uhX0X3ZW2c" /%}
+
 Billing is aggregated at the project level. A project is the Storj DCS service construct used for aggregating usage, calculating billing, invoicing fees, and collecting payment. Projects are created by a single user, then multiple users may be added to a project team, and one user may be on more than one project. Within a project, usage is tracked at the bucket level and aggregated for invoicing to the project. Project names are not client-side encrypted so that they may be rendered in the satellite user interface. For more information about Developer Accounts, Projects, Buckets, etc., please read [](docId:M-5oxBinC6J1D-qSNjKYS).
 
 The following table lists the types of metered services that appear in billing and usage user interfaces as well as invoices:
@@ -124,4 +126,3 @@ Storj DCS currently offers a free level of access for developers to try out the 
 - 10,000 segments in total for all projects.
 
 Usage for Static Object Storage and Download Bandwidth is calculated in the same way for the Free Plan as for the Pro Plan. A credit against billing will be applied each month for the Free Plan usage for as long as the Free Plan is offered. Accounts using the Free Plan of service are subject to [](docId:Zrbz4XYhIOm99hhRShWHg).
-

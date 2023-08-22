@@ -112,7 +112,7 @@ aws configure set default.s3.multipart_chunksize 64MB
 {% /tab %}
 {% /tabs %}
 
-## Make a bucket
+## Create a bucket
 
 Now that the command-line tool is configured, let's make a bucket to store our files.
 

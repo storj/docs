@@ -4,9 +4,8 @@ import { extractAnnotations } from '@code-hike/lighter'
 import CodeCopy from '@/components/CodeCopy'
 import { convertDocId } from '@/markdoc/convertDocId'
 
-// TODO make a storj theme for now this theme just changes the background color
 // https://themes.codehike.org/editor
-import light from '@/components/codeTheme.json'
+import light from '@/components/storjCodeTheme.json'
 let dark = structuredClone(light)
 dark.colors['editor.background'] = '#182234'
 Code.theme = {
@@ -47,6 +46,15 @@ const link = {
           {children}
         </a>
       </span>
+    )
+  },
+}
+
+export const highlight = {
+  name: 'highlight',
+  MultilineAnnotation: ({ children }) => {
+    return (
+      <span className="block bg-storj-blue-700 bg-opacity-50">{children}</span>
     )
   },
 }
@@ -138,7 +146,7 @@ export default async function Fence({ language, children: code, copy = true }) {
   } else if (!language || language === 'none') {
     language = 'text'
   }
-  let extensions = [link, focus, unfocusInline]
+  let extensions = [link, focus, unfocusInline, highlight]
   const extensionNames = extensions.map((e) => e.name)
   let { code: newCode, annotations } = await extractAnnotations(
     code.trim() || '',

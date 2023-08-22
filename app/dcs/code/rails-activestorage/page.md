@@ -102,7 +102,7 @@ end
 
 Edit `app/views/names/_form.html.erb` to include a `field_field` to allow the user to choose a file to upload
 
-```html
+```erb
 <div><%= form.label :main_image %> <%= form.file_field :main_image %></div>
 ```
 
@@ -114,9 +114,10 @@ Click "Create Name"&#x20;
 
 Edit `app/views/names/show.html.erb` to include `<%= image_tag @name.main_image %>` to display the image
 
-```html
+```erb
 <p style="color: green"><%= notice %></p>
 
+<%# highlight %>
 <%= render @name %> <%= image_tag @name.main_image %>
 
 <div>
@@ -155,7 +156,7 @@ ActiveStorage.start()
 
 Modify `app/views/names/_form.html.erb` `form.file_field` to include `direct_upload: true`&#x20;
 
-```html
+```erb
 <div>
   <%= form.label :main_image %> <%= form.file_field :main_image, direct_upload:
   true %>

@@ -144,12 +144,13 @@ const usePreferredLanguageStore = create((set) => ({
         ...state.preferredLanguages.filter(
           (preferredLanguage) => preferredLanguage !== language
         ),
-        language,
+        language.toLowerCase(),
       ],
     })),
 }))
 
 export function useTabGroupProps(availableLanguages) {
+  availableLanguages = availableLanguages.map((lang) => lang.toLowerCase())
   let { preferredLanguages, addPreferredLanguage } = usePreferredLanguageStore()
   let [selectedIndex, setSelectedIndex] = useState(0)
   let activeLanguage = [...availableLanguages].sort(
@@ -178,23 +179,22 @@ export function useTabGroupProps(availableLanguages) {
 export function CodeGroup({ children, title, languages, ...props }) {
   let tabGroupProps = useTabGroupProps(languages)
   let hasTabs = children.length > 1
-  let Container = hasTabs ? Tab.Group : 'div'
-  let containerProps = hasTabs ? tabGroupProps : {}
-  let headerProps = hasTabs
-    ? { selectedIndex: tabGroupProps.selectedIndex }
-    : {}
 
   if (!hasTabs) {
     return <CodePanel {...props}>{children}</CodePanel>
   }
 
   return (
-    <Container
-      {...containerProps}
+    <Tab.Group
+      {...tabGroupProps}
       className="not-prose my-8 overflow-hidden rounded-xl bg-slate-900 shadow-lg dark:bg-slate-800/60 dark:shadow-none dark:ring-1 dark:ring-slate-300/10"
     >
-      <CodeGroupHeader title={title} languages={languages} {...headerProps} />
+      <CodeGroupHeader
+        title={title}
+        languages={languages}
+        selectedIndex={tabGroupProps.selectedIndex}
+      />
       <CodeGroupPanels {...props}>{children}</CodeGroupPanels>
-    </Container>
+    </Tab.Group>
   )
 }

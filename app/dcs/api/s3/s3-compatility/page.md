@@ -1,5 +1,6 @@
 ---
 title: S3 Compatibility
+docId: eZ4caegh9queuQuaazoo
 weight: 1
 redirects:
   - /dcs/api-reference/s3-compatible-gateway/supported-s3-commands

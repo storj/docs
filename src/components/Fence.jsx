@@ -141,25 +141,27 @@ export default async function Fence({ language, children: code, copy = true }) {
   let extensions = [link, focus, unfocusInline]
   const extensionNames = extensions.map((e) => e.name)
   let { code: newCode, annotations } = await extractAnnotations(
-    code || '',
+    code.trim() || '',
     language || 'text',
     extensionNames
   )
 
+  let parsedCode = ''
+  const lines = newCode.split('\n')
   annotations.forEach((annotation) => {
     // Exclude all other code when copying
     if (annotation.name === 'terminal') {
-      let parsedCode = ''
       annotation.ranges.forEach((range) => {
         const fromLineNumber = range.fromLineNumber
         const toLineNumber = range.toLineNumber
-        const lines = newCode.split('\n')
         const rangeLines = lines.slice(fromLineNumber - 1, toLineNumber)
         parsedCode += rangeLines.join('\n') + '\n'
       })
-      newCode = parsedCode
     }
   })
+  if (parsedCode !== '') {
+    newCode = parsedCode
+  }
 
   let codeComp = (
     <Code className="group" lang={language} extensions={extensions}>

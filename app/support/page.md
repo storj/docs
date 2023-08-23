@@ -1,7 +1,7 @@
 ---
 title: Help Center
 weight: 1
-docId: aibiech1hu8Chie4feej
+docId: h0GeE0-z8ta1rOlKLL7lL
 redirects:
   - /help
 ---

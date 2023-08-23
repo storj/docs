@@ -22,7 +22,7 @@ Or use your own location where you extracted the binary. It could be _Downloads_
 cd ~/Downloads
 ```
 
-If you followed [](docId:hFL-goCWqrQMJPcTN82NB) or [](docId:OBgx_1X2IO-MKBpmP7yAf) - you doesn't need to change the current location. The shell will open the user's home folder by default. Or you can navigate to there:
+If you followed [](docId:hFL-goCWqrQMJPcTN82NB) or [](docId:EGM8O-1xt2Az03eBWT8Rf) - you don't need to change the current location. The shell will open the user's home folder by default. Or you can navigate to there:
 
 ```shell
 cd ~
@@ -92,7 +92,7 @@ You can learn more under Concepts for [](docId:CBMEVO2vA2lDZ_BVuZ9aP) and [](doc
 
 Storj DCS is a secure and private object storage service. While there are several different ways to interact with the service, including an S3 compatible gateway, CLI, developer library and tools like FileZilla, Rclone, Restic, Duplicati and more, you are responsible for keeping your encryption keys safe.
 
-You can learn more under [](docId:ZS9b7lYUWcC1NdsktRRkG) about Encryption and Access Management.
+You can learn more under [](docId:yI4q9JDB3w01xEkFWA4_z) and [](docId:KEt1PX_a8sbmwGXI4IhT_)
 
 ## When do you create an Access Grant in Satellite UI and when do you use the CLI?
 
@@ -142,7 +142,7 @@ For some sample Go code around access-restriction, check out: <https://godoc.org
 
 ## How do I pay with Storj Token?
 
-When you decide to become a paid customer of Storj DCS, you can choose to pay with a credit card or using STORJ token. The process for adding a payment method is covered in [](docId:xxo0jDSfb_UgbmQoUUbml). &#x20;
+When you decide to become a paid customer of Storj DCS, you can choose to pay with a credit card or using STORJ token. The process for adding a payment method is covered in [](docId:59T_2l7c1rvZVhI8p91VX). &#x20;
 
 ##
 
@@ -158,11 +158,11 @@ For more information on rate limits view the [](docId:Zrbz4XYhIOm99hhRShWHg) sec
 
 ## How do I get support?
 
-Our support process is described under the [](docId:xe__i9r3jY1QWUR6RYgzd) section of this documentation. Our Support SLA is covered under our [Terms of Service](https://www.storj.io/terms-of-service).
+Our support process is described under the [](docId:h0GeE0-z8ta1rOlKLL7lL) section of this documentation. Our Support SLA is covered under our [Terms of Service](https://www.storj.io/terms-of-service).
 
 ## How am I billed for usage?
 
-For detailed information on how billing and payment work on Storj DCS, please see the [](docId:xxo0jDSfb_UgbmQoUUbml) section of this documentation.
+For detailed information on how billing and payment work on Storj DCS, please see the [](docId:59T_2l7c1rvZVhI8p91VX) section of this documentation.
 
 ## How can I remove my credit card from my account?&#x20;
 

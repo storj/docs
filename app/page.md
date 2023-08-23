@@ -47,4 +47,4 @@ If you're stuck on an issue, chances are someone has seen it before or can help 
 
 ## Getting help
 
-Visit our [Help Center](docId:aibiech1hu8Chie4feej) for support.
+Visit our [Help Center](docId:h0GeE0-z8ta1rOlKLL7lL) for support.

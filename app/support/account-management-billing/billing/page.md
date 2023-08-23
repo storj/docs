@@ -1,8 +1,9 @@
 ---
 title: Billing
-docId: tljdK4mFWcVk0Nei6Zlj-
+docId: Hurx0SirlRp_O5aUzew7_
 redirects:
   - /dcs/billing-payment-and-accounts-1/pricing
+  - /dcs/getting-started/satellite-developer-account/billing
 weight: 0
 ---
 
@@ -22,7 +23,7 @@ To add a [](docId:7U4_uu6Pzg6u2N6FpV9VE) you can switch to the **Payment Methods
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/B72QGAlJzf15QL7tVadUp_image.png)
 
-Please read the [](docId:xxo0jDSfb_UgbmQoUUbml) section for details.
+Please read the [](docId:59T_2l7c1rvZVhI8p91VX) section for details.
 
 ## Adding STORJ tokens
 
@@ -46,7 +47,7 @@ Please note, the payment will be accounted only after some amount of confirmatio
 
 ### Viewing transactions
 
-You can click the **See transactions** button in the **\*Billing -\*\*** \***_Payment Methods_** section to see your transactions:
+You can click the **See transactions** button in the **Billing - Payment Methods** section to see your transactions:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/g4vqDj2OU3yjOWwdSra96_image.png)
 

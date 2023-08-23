@@ -1,6 +1,7 @@
 ---
 title: Software Updates
 docId: ojIatmeXyCN4rc-GPx8yW
+weight: 10
 redirects:
   - /node/setup/cli/software-updates
 ---
@@ -11,20 +12,20 @@ As of v1.52.2, the storagenode software will automatically update itself. We rec
 
 First, please pull the latest watchtower image from docker:
 
-```none
+```shell
 docker pull storjlabs/watchtower
 
 ```
 
 To set up auto-update for storagenode, please run the following command once:
 
-```none
+```shell
 docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower storagenode watchtower --stop-timeout 300s
 ```
 
 If you want to double check that watchtower is properly running, you can run the following command
 
-```none
+```shell
 docker ps -a
 
 ```
@@ -37,21 +38,21 @@ Please use manual updates only if the automatic update method was unsuccessful, 
 
 1\. Stop the running Storage Node container:
 
-```none
+```shell
 docker stop -t 300 storagenode
 
 ```
 
 2\. Remove the existing container:
 
-```none
+```shell
 docker rm storagenode
 
 ```
 
 3\. Pull the latest image from docker:
 
-```none
+```shell
 docker pull storjlabs/storagenode:latest
 
 ```

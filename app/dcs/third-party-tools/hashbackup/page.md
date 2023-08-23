@@ -35,15 +35,7 @@ To install HashBackup on your local system, follow these steps [as shown in the 
 
 Now, we must create a bucket in Storj DCS that will hold the backup data uploaded by HashBackup. While doing this, it will be important to also create access keys for the bucket which can be used by HashBackup to securely access the Storj bucket.
 
-1.  If you haven't already, create an account at [Storj.io/signup](https://storj.io/signup).
-
-2.  Once logged in, select a project and choose [](docId:pxdnqsVDjCLZgeEXt2S6x)\*\* **, followed by [](docId:OJPnxiexQIXHmzGBkvzHc)**.** Give the bucket a descriptive name, for example **"hashbackup"\*\*.
-
-3.  When the bucket has been created, go to the **Access** panel on the left-hand side and choose \*\* \*\*[](docId:b4-QgUOxVHDHSIWpAf3hG).
-
-4.  Give the new access grant a descriptive name and appropriate permissions. When you are finished, choose **Generate S3 Gateway Credentials,** see\*\* \*\*[](docId:AsyYcUJFbO1JI8-Tu8tW3).&#x20;
-
-5.  Save the **Access Key**, **Secret Key**, and **End Point** in a safe location as these will be used later to authenticate HashBackup with Storj.
+1.  Follow [](docId:quai3ugaP9paich3ai5e) to get an **Access Key**, **Secret Key**, and **End Point**. Keep them in a safe location as these will be used later to authenticate HashBackup with Storj.
 
 Now it is time to create the local backup directory with HashBackup. This step will initialize a local HashBackup folder which could normally be used to maintain encrypted backups on your personal machine. However, we will provide the additional configuration necessary to enable remote backups with Storj.
 

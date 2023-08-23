@@ -114,7 +114,7 @@ _Please, use the full command from_ [](docId:HaDkV_0aWg9OJoBe53o-J)_, the above 
 We assume that the second node would be run on the same device as the first one.
 
 {% callout type="info"  %}
-The Windows GUI installer can install only one node on the same Windows PC. For the second and next nodes we support only the docker version: [](docId:oYWv1yri9PgUlcbT6s-9l).
+The Windows GUI installer can install only one node on the same Windows PC. For the second and next nodes we support only the docker version: [](docId:rz3s9lC3qAQHYSl37ngBN).
 
 The alternative is to use the unofficial, Community supported Windows Toolbox made by @Vadim: [Win GUI Storj Node Toolbox](https://forum.storj.io/t/win-gui-storj-node-toolbox/4381), it allows you to set up more than one Windows node on the same PC.
 {% /callout %}

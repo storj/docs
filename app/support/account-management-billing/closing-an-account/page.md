@@ -30,7 +30,7 @@ Note that in order to verify the deletion request is legitimate, the user will n
 5.  State that the account should be deleted&#x20;
 
 {% callout type="info"  %}
-If you uses the [](docId:4oDAezF-FcfPr0WPl7knd) in the [](docId:nGzxQBhV8nx5Pukj6O0zT), then after deleting the last bucket please do not return to the [](docId:uyuWpwchZx29f28UGAILP), otherwise the `demo-bucket` will be created automatically. This bucket will prevent the account deletion. It also can create a linked Access grant, this will prevent the account deletion too.
+If you use the [](docId:4oDAezF-FcfPr0WPl7knd) in the [](docId:nGzxQBhV8nx5Pukj6O0zT), then after deleting the last bucket please do not return to the Buckets menu, otherwise the `demo-bucket` will be created automatically. This bucket will prevent the account deletion. It also can create a linked Access grant, this will prevent the account deletion too.
 {% /callout %}
 
 Once the ticket is received and the information has been verified, the payment method(s) will be removed before the end of the next billing cycle. Once all payment methods are removed from the account, the account will be deleted per the request. Note: The user will be required to verify the request via the registered email address on the account.

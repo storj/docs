@@ -1,6 +1,7 @@
 ---
 title: Docker
 docId: EW9B_0fJujL3Z5aTLUW7d
+weight: 0
 redirects:
   - /node/setup/cli/docker
 ---
@@ -11,9 +12,13 @@ What we use to package the Storage Node software and push new updates. To set up
 
 {% tabs %}
 {% tab label="Linux" %}
+
 [**Ubuntu Docker Installation**](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
 [**CentOS Docker Installation**](https://docs.docker.com/install/linux/docker-ce/centos/)
+
 [**Debian Docker Installation**](https://docs.docker.com/install/linux/docker-ce/debian/)
+
 [**Fedora Docker Installation**](https://docs.docker.com/install/linux/docker-ce/fedora/)
 {% /tab %}
 
@@ -31,7 +36,9 @@ All newer versions have various issues, such as losing network connection, have 
 {% /callout %}
 {% /tab %}
 
-{% tab label="Windows" %} \***\*[Windows Docker **Installation\*\*](https://docs.docker.com/docker-for-windows/install/#install-docker-desktop-for-windows-desktop-app)
+{% tab label="Windows" %}
+
+[Windows Docker Installation](https://docs.docker.com/docker-for-windows/install/#install-docker-desktop-for-windows-desktop-app)
 
 {% callout type="danger"  %}
 Please, install version **2.1.0.5** if your Windows doesn't support WSL2: [Docker Desktop Community](https://docs.docker.com/docker-for-mac/release-notes/#docker-desktop-community-2105)
@@ -42,6 +49,7 @@ All newer versions for Hyper-V have various issues, such as losing network conne
 {% callout type="warning"  %}
 **Docker Toolbox is not supported**
 {% /callout %}
+
 {% /tab %}
 {% /tabs %}
 

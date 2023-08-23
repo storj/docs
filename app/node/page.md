@@ -34,7 +34,7 @@ Install the software that works best for you.
 
 {% quick-links %}
 {% quick-link %}
-⌨️ [](docId:oYWv1yri9PgUlcbT6s-9l)[](docId:rz3s9lC3qAQHYSl37ngBN) &#x20;
+⌨️ [](docId:rz3s9lC3qAQHYSl37ngBN) &#x20;
 {% /quick-link %}
 
 {% quick-link %}

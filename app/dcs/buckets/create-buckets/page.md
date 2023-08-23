@@ -1,6 +1,9 @@
 ---
 title: Create buckets
+docId: pxdnqsVDjCLZgeEXt2S6x
 weight: 1
+redirects:
+  - /dcs/buckets
 ---
 
 You can create a bucket from various command-line tools or the Storj Console.

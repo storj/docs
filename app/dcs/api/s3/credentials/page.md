@@ -1,6 +1,6 @@
 ---
 title: S3 Credentials
-docId: shoocipurah5ca1Hienu
+docId: quai3ugaP9paich3ai5e
 ---
 
 {% partial file="s3-credentials.md" /%}

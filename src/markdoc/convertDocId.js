@@ -23,9 +23,7 @@ export function convertDocId(href) {
   }
 
   if (!entry) {
-    console.warn(`Could not find docId: ${docId}`)
-    return { title: null, href }
-    //throw new Error(`Could not find docId: ${docId}`)
+    throw new Error(`Could not find docId: ${docId}`)
   }
   return {
     title: entry.title,

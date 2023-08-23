@@ -5,6 +5,7 @@ redirects:
   - /dcs/api-reference/s3-gateway
   - /api-reference/s3-gateway
   - /dcs/api-reference/s3-gateway/gateway-st-advanced-usage
+  - /dcs/downloads/download-self-hosted-s3-compatible-gateway
 ---
 
 {% callout type="info"  %}
@@ -222,8 +223,6 @@ docker run -it --rm --mount type=bind,source=/path/to/gateway-config-dir/,destin
 
 This command will register the provided access as the default access in the gateway config file.
 
-It is possible to have several access grants, see how [](docId:SLxI54SPLjGgjhRWkKJdb).
-
 ## Run Gateway ST
 
 The gateway functions as a daemon. Start it and leave it running.
@@ -268,14 +267,6 @@ If you want to connect to your S3 Gateway via the network, then you should repla
 The gateway should output your S3-compatible endpoint, access key, and secret key.
 
 ![Example terminal output](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/3WoImqP2O-QBdVwDK-eHV_self-s3-05.png)
-
-If you are interested in more running options, checkout the Gateway ST Advanced Usage page where you can find how to:
-
-1.  [](docId:SLxI54SPLjGgjhRWkKJdb)
-
-2.  [](docId:SLxI54SPLjGgjhRWkKJdb)
-
-3.  [](docId:SLxI54SPLjGgjhRWkKJdb)
 
 ## Configure AWS CLI to use Gateway ST
 
@@ -366,10 +357,6 @@ And that's it! You've learned how to use our S3-compatible Gateway. Ideally, you
 
 Advanced usage for the single-tenant Gateway
 
-## Configuration options
-
-1.  [](docId:SLxI54SPLjGgjhRWkKJdb)&#x20;
-
 ## Adding Access Grants
 
 You can add several access grants to the `config.yaml`, using this format:
@@ -409,25 +396,13 @@ gateway help
 
 ## Running options
 
-1.  [](docId:SLxI54SPLjGgjhRWkKJdb)
-
-2.  [](docId:SLxI54SPLjGgjhRWkKJdb)
-
-3.  [](docId:SLxI54SPLjGgjhRWkKJdb)
-
-You can run a gateway with specifying the access grant (or its name) with the option `--access`, for example:
+You can run a gateway with specifying the access grant (or its name for example `--access site`) with the option `--access`, for example:
 
 {% tabs %}
 {% tab label="Windows" %}
 
 ```Text
 ./gateway run --access 14aV....
-```
-
-or with the name of the access grant from your config (see [](docId:SLxI54SPLjGgjhRWkKJdb))
-
-```Text
-./gateway run --access site
 ```
 
 {% /tab %}
@@ -438,24 +413,12 @@ or with the name of the access grant from your config (see [](docId:SLxI54SPLjGg
 gateway run --access 14aV....
 ```
 
-or with name of the access grant from your config (see [](docId:SLxI54SPLjGgjhRWkKJdb))
-
-```Text
-gateway run --access site
-```
-
 {% /tab %}
 
 {% tab label="macOS" %}
 
 ```Text
 gateway run --access 14aV....
-```
-
-or with name of the access grant from your config (see [](docId:SLxI54SPLjGgjhRWkKJdb))
-
-```Text
-gateway run --access site
 ```
 
 {% /tab %}
@@ -466,30 +429,18 @@ gateway run --access site
 docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access 14aV....
 ```
 
-or with name of the access grant from your config (see [](docId:SLxI54SPLjGgjhRWkKJdb))
-
-```Text
-docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access site
-```
-
 {% /tab %}
 {% /tabs %}
 
 ### Running Gateway ST to host a static website
 
-You can also run a gateway to handle a bucket as a static website. Make sure to set [](docId:SLxI54SPLjGgjhRWkKJdb).
+You can also run a gateway to handle a bucket as a static website.
 
 {% tabs %}
 {% tab label="Windows" %}
 
 ```Text
 ./gateway run --access 14aV.... --website
-```
-
-or with the name of the access grant from your config (see [](docId:SLxI54SPLjGgjhRWkKJdb))
-
-```Text
-./gateway run --access site --website
 ```
 
 {% /tab %}
@@ -500,12 +451,6 @@ or with the name of the access grant from your config (see [](docId:SLxI54SPLjGg
 gateway run --access 14aV.... --website
 ```
 
-or with name of the access grant from your config (see [](docId:SLxI54SPLjGgjhRWkKJdb))
-
-```Text
-gateway run --access site --website
-```
-
 {% /tab %}
 
 {% tab label="macOS" %}
@@ -514,24 +459,12 @@ gateway run --access site --website
 gateway run --access 14aV.... --website
 ```
 
-or with name of the access grant from your config (see [](docId:SLxI54SPLjGgjhRWkKJdb))
-
-```Text
-gateway run --access site --website
-```
-
 {% /tab %}
 
 {% tab label="Docker" %}
 
 ```Text
 docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access 14aV.... --website
-```
-
-or with name of the access grant from your config (see [](docId:SLxI54SPLjGgjhRWkKJdb))
-
-```Text
-docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access site --website
 ```
 
 {% /tab %}

@@ -70,7 +70,7 @@ Fastly also has documentation on how different objects are cached. You can find 
 
 ## Using a bucket for origin hosting
 
-To integrate your S3 compatible gateway as an origin with Fastly, first [](docId:_xWsamBjOsZYyu9xtQCm5). You will need the **Access key** and **Secret key**, as well as your bucket name and gateway endpoint.
+To integrate your S3 compatible gateway as an origin with Fastly, first [create S3 credentials](docId:quai3ugaP9paich3ai5e). You will need the **Access key** and **Secret key**, as well as your bucket name and gateway endpoint.
 
 Once you have the access grant you will use, enable your Fastly service to support the latest version of [Amazon's header-based authentication](https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-header-based-auth.html) by creating a [custom VCL](https://docs.fastly.com/en/guides/uploading-custom-vcl) on Fastly.
 

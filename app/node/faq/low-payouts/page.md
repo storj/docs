@@ -1,6 +1,6 @@
 ---
 title: Why are my payouts so low?
-docId: bXhPVB591zKroFzTF_YOK
+docId: ADB7HqQRe45givmFK7bfI
 redirects:
   - /node/resources/faq/low-payouts
 ---

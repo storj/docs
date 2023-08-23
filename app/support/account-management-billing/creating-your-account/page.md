@@ -1,5 +1,5 @@
 ---
-title: Creating Your Account
+title: Create Your Account
 docId: HeEf9wiMdlQx9ZdS_-oZS
 weight: 5
 redirects:

@@ -1,6 +1,9 @@
 ---
 title: Objects
+docId: uyuWpwchZx29f28UGAILP
 weight: 6
+redirects:
+  - /dcs/getting-started/satellite-developer-account/objects
 ---
 
 ## Upload file

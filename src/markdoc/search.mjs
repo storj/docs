@@ -27,6 +27,7 @@ function extractSections(node, sections, isRoot = true) {
     slugify.reset()
   }
   if (node.type === 'heading' || node.type === 'paragraph') {
+    // TODO transform this first so the text preview shows the final content
     let content = toString(node).trim()
     if (node.type === 'heading' && node.attributes.level <= 2) {
       let hash = node.attributes?.id ?? slugify(content)

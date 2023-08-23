@@ -1,9 +1,9 @@
 ---
 title: Users
-docId: LnUfFb_JcACKh7HS1hTue
+docId: 0_4hY4Dp5ju9B8Ec6OTf3
 weight: 20
 redirects:
-  - /dcs/undefined
+  - /dcs/getting-started/satellite-developer-account/users
 ---
 
 ## Introduction

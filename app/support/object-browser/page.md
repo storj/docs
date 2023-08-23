@@ -6,7 +6,7 @@ redirects:
   - /dcs/getting-started/quickstart-objectbrowser
 ---
 
-The Storj Console supports uploading and managing objects directly through the browser with no command-line tool required. This component uses our [](docId:yYCzPT8HHcbEZZMvfoCFa) service.
+The Object Browser supports uploading and managing objects directly through the browser with no command-line tool required. This component uses our [](docId:yYCzPT8HHcbEZZMvfoCFa) service.
 
 {% callout type="info"  %}
 By using hosted Gateway MT you are opting into **server-side encryption**. See [](docId:hf2uumViqYvS1oq8TYbeW)&#x20;
@@ -14,7 +14,7 @@ By using hosted Gateway MT you are opting into **server-side encryption**. See [
 
 ## Configure Object Browser Access
 
-**Navigate to the** [](docId:pxdnqsVDjCLZgeEXt2S6x)\*\* \*\*page within your project. If you do not have any buckets yet - we will create a `demo-bucket` for you.
+**Navigate to the** [](docId:pxdnqsVDjCLZgeEXt2S6x) page within your project. If you do not have any buckets yet - we will create a `demo-bucket` for you.
 
 When you click on the bucket, you will be prompted to read carefully - The object browser uses [](docId:hf2uumViqYvS1oq8TYbeW).
 

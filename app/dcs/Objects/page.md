@@ -8,6 +8,8 @@ redirects:
 
 ## Upload file
 
+test
+
 Copy a file to your bucket.
 
 {% tabs %}

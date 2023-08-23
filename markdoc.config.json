@@ -1,0 +1,12 @@
+[
+  {
+    "id": "storj-docs",
+    "path": "app",
+    "schema": {
+      "path": "src/markdoc/config.mjs",
+      "type": "esm",
+      "property": "default",
+      "watch": true
+    }
+  }
+]

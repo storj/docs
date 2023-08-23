@@ -3,5 +3,5 @@
 import YouTube from 'react-youtube'
 
 export default function YouTubeEmbed({ videoId }) {
-  return <YouTube videoId={videoId} />
+  return <YouTube videoId={videoId} className="youtubeContainer" />
 }

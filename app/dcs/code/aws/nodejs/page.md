@@ -3,8 +3,6 @@ title: AWS SDK Nodejs
 docId: LueFgrbZ9rJbWtDMXhIWZ
 ---
 
-
-
 ## 1. Install or include the Amazon S3 SDK
 
 e.g. with npm

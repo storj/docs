@@ -104,10 +104,10 @@ However, some may already be familiar with AWS CLI which is also a suitable opti
 
 3. **Optional but strongly recommended**: Set the multipart threshold to 64 MB
 
-```shell
-aws configure set default.s3.multipart_threshold 64MB
-aws configure set default.s3.multipart_chunksize 64MB
-```
+   ```shell
+   aws configure set default.s3.multipart_threshold 64MB
+   aws configure set default.s3.multipart_chunksize 64MB
+   ```
 
 {% /tab %}
 {% /tabs %}

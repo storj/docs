@@ -29,18 +29,18 @@ The `cp` command is used to upload and download objects. The `cp` command abstra
 
 ## Flags
 
-| Flag                            | Description                                                                                                   |
-| :------------------------------ | :------------------------------------------------------------------------------------------------------------ |
-| `--access string`               | the serialized access, or name of the access to use                                                           |
-| `-r, --recursive`               | Perform a recursive copy                                                                                      |
-| `-t, --transfers int`           | Controls how many uploads/downloads to perform in parallel (default 1)                                        |
-| `--dry-run`                     | Print what operations would happen but don't execute them                                                     |
-| `--progress`                    | Show a progress bar when possible (default true)                                                              |
+| Flag                            | Description                                                                                                                                                                |
+| :------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--access string`               | the serialized access, or name of the access to use                                                                                                                        |
+| `-r, --recursive`               | Perform a recursive copy                                                                                                                                                   |
+| `-t, --transfers int`           | Controls how many uploads/downloads to perform in parallel (default 1)                                                                                                     |
+| `--dry-run`                     | Print what operations would happen but don't execute them                                                                                                                  |
+| `--progress`                    | Show a progress bar when possible (default true)                                                                                                                           |
 | `--range string`                | Downloads the specified range bytes of an object. For more information about the HTTP Range header, see <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35> |
-| `-p, --parallelism int`         | Controls how many parallel chunks to upload/download from a file (default 1)                                  |
-| `--parallelism-chunk-size Size` | Controls the size of the chunks for parallelism (default 64.0 MiB)                                            |
-| `--expires relative_date`       | Schedule removal after this time (e.g. '+2h', 'now', '2020-01-02T15:04:05Z0700')                              |
-| `--help`, `-h`                  | help for cp                                                                                                   |
+| `-p, --parallelism int`         | Controls how many parallel chunks to upload/download from a file (default 1)                                                                                               |
+| `--parallelism-chunk-size Size` | Controls the size of the chunks for parallelism (default 64.0 MiB)                                                                                                         |
+| `--expires relative_date`       | Schedule removal after this time (e.g. '+2h', 'now', '2020-01-02T15:04:05Z0700')                                                                                           |
+| `--help`, `-h`                  | help for cp                                                                                                                                                                |
 
 ## Examples
 

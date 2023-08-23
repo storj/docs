@@ -52,8 +52,6 @@ Ubuntu - 64-bit version of one of these Ubuntu versions:
 
 > **Make sure you use static mount for your hard drive via**
 >
->
->
 > **/etc/fstab**
 
 {% /tab %}

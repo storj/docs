@@ -43,7 +43,7 @@ export function Hero({ className }) {
                 Make the world your datacenter
               </p>
               <p className="mt-3 text-2xl tracking-tight text-slate-400">
-                Store every byte with Storj&apos;s decentralized nodes, ensuring
+                Store every byte with Storj&apos;s distributed nodes, ensuring
                 your data is everywhere, even before you need it.
               </p>
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">

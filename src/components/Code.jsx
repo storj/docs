@@ -136,6 +136,16 @@ function usePreventLayoutShift() {
   }
 }
 
+const detectOS = () => {
+  var os = 'Linux'
+  if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+    os = 'macOS'
+  } else if (/(Win)/i.test(navigator.platform)) {
+    os = 'Windows'
+  }
+  return os
+}
+
 const usePreferredLanguageStore = create((set) => ({
   preferredLanguages: [],
   addPreferredLanguage: (language) =>
@@ -153,6 +163,10 @@ export function useTabGroupProps(availableLanguages) {
   availableLanguages = availableLanguages.map((lang) => lang.toLowerCase())
   let { preferredLanguages, addPreferredLanguage } = usePreferredLanguageStore()
   let [selectedIndex, setSelectedIndex] = useState(0)
+  useEffect(() => {
+    addPreferredLanguage(detectOS())
+  }, [addPreferredLanguage])
+
   let activeLanguage = [...availableLanguages].sort(
     (a, z) => preferredLanguages.indexOf(z) - preferredLanguages.indexOf(a)
   )[0]

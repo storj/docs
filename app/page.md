@@ -23,21 +23,20 @@ Easily integrated into any existing stack with S3 compatibility, Storj is a trus
 
 Some of the main Storj features include:
 
-| Feature               | Description                                                                                                                          |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| S3 Compatibility      | Change the endpoint and credentials with an S3-compatible tool of your choice and you’ll be up and running in minutes.               |
-| End-to-End Encryption | Own your data with default encryption and user-assigned access grants so no one can view or compromise your data without permission. |
-| Cost Efficiency       | Storage as low as $4.00 per TB per month with $7.00 per TB per month for egress                                                      |
-| Multi-region          | Multi-region cloud object storage by design distributed to tens of thousands of Storage nodes around the world                       |
-| Open Source           | Take advantage of absolute transparency through our open source code. You are not locked-in to our technology or cost structure.     |
+| Feature                                              | Description                                                                                                                          |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| [S3 Compatibility](docId:eZ4caegh9queuQuaazoo)       | Change the endpoint and credentials with an S3-compatible tool of your choice and you’ll be up and running in minutes.               |
+| [Third-party tools](docId:REPde_t8MJMDaE2BU8RfQ)     | Dozen of compatible tools allowing backups, transfering large files, file management, content delivery, scientific data, and more!   |
+| [End-to-End Encryption](docId:uuhN7eyr1a8P3l_vzdnDk) | Own your data with default encryption and user-assigned access grants so no one can view or compromise your data without permission. |
+| [Cost Efficiency](docId:59T_2l7c1rvZVhI8p91VX)       | Storage as low as $4.00 per TB per month with $7.00 per TB per month for egress.                                                     |
+| [Multi-region](docId:eem7iong0aSh7ahbich5)           | Multi-region cloud object storage by design distributed to tens of thousands of Storage nodes around the world.                      |
+| [Open Source](https://github.com/storj)              | Take advantage of absolute transparency through our open source code. You are not locked-in to our technology or cost structure.     |
 
 ## How to Use These Docs
 
 On the left side of the screen, you'll find the docs navbar. The pages are organized sequentially that you can follow step-by-step or if you're already familiar with object storage you can jump to the section that applies most to your use case.
 
 On the right side of the screen, there's a table of contents to help you move between parts of a page. To find a page fast, use the search bar at the top or press Ctrl+K or Cmd+K on your keyboard.
-
-If you're integrating Storj with third-party software, be sure to check out our [third-party tools guides](docId:REPde_t8MJMDaE2BU8RfQ).
 
 ## Join the community
 

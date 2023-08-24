@@ -1,0 +1,147 @@
+#!/usr/bin/env python3
+# source https://blog.hadenes.io/post/generating-blog-post-summaries-with-chatgpt/
+import glob
+import json
+import sys
+import termios
+import tty
+import os
+
+import backoff
+import frontmatter
+import openai
+
+openai.api_key = os.getenv('OPENAI_API_KEY')
+
+
+def _getch():
+    fd = sys.stdin.fileno()
+    old_settings = termios.tcgetattr(fd)
+    try:
+        tty.setraw(fd)
+        ch = sys.stdin.read(1)
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+    return ch
+
+
+@backoff.on_exception(backoff.expo, openai.error.RateLimitError)
+def completions_with_backoff(**kwargs):
+    return openai.ChatCompletion.create(**kwargs)
+
+
+system_prompt = [
+    "You are ChatGPT, a helpful assistant.",
+    "You generate insightful short summaries and relevant tags for user supplied blog posts.",
+    "Assume that the blog posts are in Markdown format.",
+    "You don't generate summaries that are cryptic or unhelpful.",
+    "You don't generate clickbait titles or summaries.",
+    "The summary you generate is SEO friendly and no longer than 80 characters.",
+    "Tags you generate are SEO friendly, lowercase and a single word each.",
+    "You can reply with a title field that is different from the original if it's more SEO friendly.",
+    "If the language is pt_BR, you must generate a summary and a title in Brazilian portuguese.",
+    "The title field should be a string.",
+    "The title field should not include Storj or Storj DCS as a prefix",
+    "The summary field should be a string.",
+    "The tags field should be a list of strings.",
+    "Don't include any kind of notes."
+    "Your response should be in JSON format.",
+    "Don't reply with anything other than the JSON object."
+]
+
+for fname in glob.glob("../../app/**/page.md", recursive=True):
+    with open(fname, "r") as f:
+        post = frontmatter.loads(f.read())
+        title = post.get('metadata', {}).get('title', post.get('title'))
+        content = post.content
+        description = post.get('metadata', {}).get('description', '')
+        tags = post.get('tags', [])
+        generated = 'description' in post.get('metadata', {})
+        language = post.get('language', 'en')
+    print(f'{fname} ({language})')
+
+    if generated:
+        print("  skipping already generated post")
+        print()
+        continue
+
+    user_prompt = [
+        "Here's a blog post I'd like to summarize:",
+        f"title: {title}",
+        f"tags: {tags}",
+        f"language: {language}",
+        "content:", content]
+
+    context_length = len('\n'.join(system_prompt + user_prompt)) * 0.75
+    context_length_without_content = len('\n'.join(system_prompt + user_prompt[:-1])) * 0.75
+    if context_length > 4096:
+        print("  ! reducing context length...")
+        diff = int(4096 - context_length_without_content)
+        user_prompt[-1] = user_prompt[-1][:diff]
+
+    while True:
+        completion = completions_with_backoff(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": '\n'.join(system_prompt)},
+                {"role": "user", "content": '\n'.join(user_prompt)},
+            ],
+        )
+
+        result = {}
+        try:
+            result = json.loads(completion["choices"][0]["message"]["content"].strip())
+        except json.decoder.JSONDecodeError:
+            try:
+                fields = completion["choices"][0]["message"]["content"].strip().split('\n')
+                for field in fields:
+                    key = field.split(':')[0].strip()
+                    value = ':'.join(field.split(':')[1:])
+                    result[key] = value
+            except Exception as e:
+                print("  [-] Failed to parse response")
+                print(completion)
+                print()
+                continue
+
+        print(completion)
+        new_title = result.get('title', title).strip()
+        new_summary = result.get('summary', description).strip()
+        new_tags = result.get('tags', tags)
+
+        print(f"  file: {fname}")
+        print()
+        print(f"  oldTitle: {title}")
+        print(f"  newTitle: {new_title}")
+        print()
+        print(f"  oldSummary: {description}")
+        print(f"  newSummary: {new_summary}")
+        print()
+
+        print("  accept? [y/n/s/q] ", end=' ')
+        sys.stdout.flush()
+        ch = _getch()
+
+        print()
+        if ch == 'y':
+            if 'metadata' not in post:
+                post['metadata'] = {}
+            post['metadata']['title'] = new_title
+            post['metadata']['description'] = new_summary
+            with open(fname, "w") as f:
+                f.write(frontmatter.dumps(post, sort_keys=False))
+            print('  saved...')
+            print()
+            break
+        elif ch == 'n':
+            print('  retrying...')
+            print()
+            continue
+        elif ch == 'q':
+            print('  exiting...')
+            print()
+            exit(0)
+        else:
+            print('  skipping...')
+            print()
+            break

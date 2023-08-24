@@ -34,15 +34,15 @@ To save on costs and improve performance, please see [](docId:rkPrCIwpTjmMKiZaje
 
 ## Steps:
 
-1.  [](docId:EGM8O-1xt2Az03eBWT8Rf)&#x20;
+1.  [Get and install Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#get-and-install-gateway-st)&#x20;
 
-2.  [](docId:EGM8O-1xt2Az03eBWT8Rf)&#x20;
+2.  [Configure Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#configure-gateway-st)&#x20;
 
-3.  [](docId:EGM8O-1xt2Az03eBWT8Rf)&#x20;
+3.  [Run Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#run-gateway-st)&#x20;
 
-4.  [](docId:EGM8O-1xt2Az03eBWT8Rf)&#x20;
+4.  [Configure AWS CLI to use Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#configure-aws-cli-to-use-gateway-st)&#x20;
 
-5.  [](docId:EGM8O-1xt2Az03eBWT8Rf)&#x20;
+5.  [Try it out!](docId:EGM8O-1xt2Az03eBWT8Rf#try-it-out)&#x20;
 
 ## Get and install Gateway ST
 

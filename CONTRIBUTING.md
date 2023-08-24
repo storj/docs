@@ -80,6 +80,10 @@ You can specify custom link text by inserting it between the square brackets [].
 
 This will render as a link with the text "Custom Link Name," pointing to the document with the `docId` `3gNhGvPOi3DFDya6NyVb0`.
 
+### Markdoc
+
+Markdown is parsed and rendered using [Markdoc](https://markdoc.io). It allows for custom components see `src/markdoc/tags.js`
+
 ### Image handling
 
 Images must be stored within the "Website Assets" internal project at Storj with the prefix of `https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images`

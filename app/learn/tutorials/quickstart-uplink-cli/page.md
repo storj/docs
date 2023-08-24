@@ -91,6 +91,6 @@ sudo install uplink /usr/local/bin/uplink
 
 **Direct Download**
 
-\*\*\*\*[macOS Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip)
+[macOS Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip)
 {% /tab %}
 {% /tabs %}

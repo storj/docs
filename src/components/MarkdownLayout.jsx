@@ -4,6 +4,7 @@ import { Prose } from '@/components/Prose'
 import TableOfContents from './TableOfContents'
 import { PrevNextLinks } from '@/components/PrevNextLinks'
 import clsx from 'clsx'
+import { SectionProvider } from '@/components/SectionProvider'
 
 function getNodeText(node) {
   let text = ''
@@ -57,7 +58,7 @@ export default function DocsLayout({
 }) {
   let tableOfContents = collectHeadings(ast.children)
   return (
-    <>
+    <SectionProvider sections={tableOfContents}>
       <main className="isolate min-w-0 px-5 pt-3.5 sm:px-12 xl:py-16 ">
         <div className="mx-auto max-w-7xl">
           <article className="ml-0 max-w-4xl 2xl:mx-auto">
@@ -81,6 +82,6 @@ export default function DocsLayout({
       <div className="hidden px-8 xl:sticky xl:top-[4.5rem] xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-14">
         <TableOfContents tableOfContents={tableOfContents} />
       </div>
-    </>
+    </SectionProvider>
   )
 }

@@ -31,6 +31,7 @@
     "fast-glob": "^3.2.12",
     "flexsearch": "^0.7.31",
     "focus-visible": "^5.2.0",
+    "framer-motion": "^10.16.1",
     "js-yaml": "^4.1.0",
     "next": "13.4.12",
     "next-themes": "^0.2.1",

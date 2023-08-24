@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
+import { AnimatePresence, motion, useIsPresent } from 'framer-motion'
 import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import {
@@ -22,13 +23,10 @@ function NavLink({ title, href, current, root, disclosure }) {
     padding = 'pl-0'
   }
 
-  let ComponentToUse = disclosure ? Disclosure.Button : Link
-  let disclosureProps = disclosure ? { as: Link } : {}
-
   return (
-    <ComponentToUse
+    <Link
       id={title}
-      {...disclosureProps}
+      aria-current={current ? 'page' : undefined}
       href={href}
       className={clsx(
         padding,
@@ -50,13 +48,28 @@ function NavLink({ title, href, current, root, disclosure }) {
       title={title}
     >
       {title}
-    </ComponentToUse>
+    </Link>
   )
+}
+
+// get first href in tree
+const walkTree = (node) => {
+  if (node.href) return node
+
+  if (node.links) {
+    for (const link of node.links) {
+      const result = walkTree(link)
+      if (result) return result
+    }
+  }
+
+  return null
 }
 
 function NavItem({ item, root }) {
   const pathname = usePathname()
   const current = item.href === pathname
+  const isActive = pathname.includes(item.type)
 
   if (item.href && item.links.length === 0) {
     return (
@@ -70,71 +83,70 @@ function NavItem({ item, root }) {
   }
 
   return (
-    <Disclosure
-      defaultOpen={pathname.includes(item.type)}
-      as="div"
-      className={`${root ? '' : 'ml-2'}`}
-    >
-      {({ open }) => (
-        <>
-          <Disclosure.Button
-            id={item.title}
+    <div className={`${root ? '' : 'ml-2'}`}>
+      <>
+        <div
+          id={item.title}
+          className={clsx(
+            'flex w-full items-center gap-x-1 rounded-md py-0.5 text-left text-gray-700'
+          )}
+        >
+          <ChevronRightIcon
             className={clsx(
-              'flex w-full items-center gap-x-1 rounded-md py-0.5 text-left text-gray-700'
+              isActive
+                ? `rotate-90 ${
+                    pathname.includes(item.type) &&
+                    'text-storj-blue-700 dark:text-storj-blue-500'
+                  }`
+                : 'text-gray-500',
+              'z-30 -ml-1.5 h-4 w-4 shrink-0'
             )}
-          >
-            <ChevronRightIcon
-              className={clsx(
-                open
-                  ? `rotate-90 ${
-                      pathname.includes(item.type) &&
-                      'text-storj-blue-700 dark:text-storj-blue-500'
-                    }`
-                  : 'text-gray-500',
-                'z-30 -ml-1.5 h-4 w-4 shrink-0'
-              )}
-              aria-hidden="true"
+            aria-hidden="true"
+          />
+          {item.href ? (
+            <NavLink
+              title={item.title}
+              root={root}
+              disclosure
+              href={item.href}
+              current={current}
             />
-            {item.href ? (
-              <NavLink
-                title={item.title}
-                root={root}
-                disclosure
-                href={item.href}
-                current={current}
-              />
-            ) : (
-              <h2
-                title={item.title}
-                className={`block py-0.5 text-slate-600 hover:text-slate-700 dark:text-slate-400`}
-              >
-                {item.title}
-              </h2>
-            )}
-          </Disclosure.Button>
-          <Transition
-            enter="transition-all ease-in-out duration-500 "
-            enterFrom="opacity-0 -translate-y-6"
-            enterTo="opacity-100 translate-y-0"
-            leave="transition-all ease-in-out duration-300"
-            leaveFrom="opacity-100 translate-y-0"
-            leaveTo="opacity-0 -translate-y-6"
-          >
-            <Disclosure.Panel
+          ) : (
+            <NavLink
+              title={item.title}
+              className={`block bg-orange-600 py-0.5 text-slate-600 hover:text-slate-700 dark:text-slate-400`}
+              root={root}
+              disclosure
+              href={walkTree(item).href}
+              current={current}
+            />
+          )}
+        </div>
+        <AnimatePresence mode="popLayout" initial={false}>
+          {isActive && (
+            <motion.ul
               id={item.title}
-              as="ul"
               className="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200"
+              role="list"
+              initial="collapsed"
+              animate="open"
+              exit="collapsed"
+              variants={{
+                open: { opacity: 1, height: 'auto' },
+                collapsed: { opacity: 0, height: 0 },
+              }}
+              transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
             >
               {item.links.map((subItem) => (
                 <li key={subItem.type + subItem.title} className="relative">
                   <NavItem item={subItem} />
                 </li>
               ))}
-            </Disclosure.Panel>
-          </Transition>
-        </>
-      )}
-    </Disclosure>
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </>
+    </div>
   )
 }
 
@@ -148,6 +160,7 @@ export function Navigation({ className }) {
   } else if (pathname.startsWith('/support')) {
     sideNavigation = supportNavigation
   }
+
   return (
     <nav
       role="navigation"

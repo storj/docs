@@ -9,6 +9,7 @@ import probe from 'probe-image-size'
 import crypto from 'crypto'
 import imageSizeCache from '../../.image-size-cache.json'
 import { convertDocId } from './convertDocId'
+import { Heading } from '@/components/Heading'
 
 const ImageWrap = ({ src, alt, width, height }) => {
   let imgStyle = 'xs:max-w-full sm:max-w-sm'
@@ -52,7 +53,10 @@ const nodes = {
     },
   },
   heading: {
-    ...defaultNodes.heading,
+    render: Heading,
+    attributes: {
+      level: { type: Number, required: true },
+    },
     async transform(node, config) {
       let slugify = documentSlugifyMap.get(config) || slugifyWithCounter() // partials don't have the same config
       let attributes = node.transformAttributes(config)
@@ -60,11 +64,7 @@ const nodes = {
       let text = children.filter((child) => typeof child === 'string').join(' ')
       let id = attributes.id ?? slugify(text)
 
-      return new Tag(
-        `h${node.attributes.level}`,
-        { ...attributes, id },
-        children
-      )
+      return new Tag(this.render, { ...attributes, id }, children)
     },
   },
   list: {

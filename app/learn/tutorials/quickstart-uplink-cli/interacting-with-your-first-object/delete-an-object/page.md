@@ -4,6 +4,7 @@ docId: Fr6x2DasCtv9DzvMQ8ugg
 redirects:
   - >-
     /dcs/getting-started/quickstart-uplink-cli/interacting-with-your-first-object/delete-an-object
+weight: 10
 ---
 
 ## Delete our object

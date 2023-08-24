@@ -3,6 +3,7 @@ title: Uploading Your First Object CLI
 docId: R8xZNlt1dr3nZzo-_ZQLx
 redirects:
   - /dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object
+weight: 0
 ---
 
 Install and configure the CLI and follow the steps below to upload your first object to Storj DCS.

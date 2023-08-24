@@ -3,9 +3,10 @@ title: Sharing Your First Object
 docId: LsiWFnRXOkhMuKjQhKbh3
 redirects:
   - /dcs/getting-started/quickstart-uplink-cli/sharing-your-first-object
+weight: 10
 ---
 
-[](docId:1IGea-b63x-CCtRsLj9WX)
+[](docId:TbMdOGCAXNWyPpQmH6EOq)
 
 [](docId:Ch4vLynsEqyT2-3qDEBiy)&#x20;
 

@@ -4,6 +4,7 @@ docId: OJPnxiexQIXHmzGBkvzHc
 redirects:
   - >-
     /dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-a-bucket
+weight: 10
 ---
 
 You need to have a satellite account and installed Uplink CLI as described in [](docId:TbMdOGCAXNWyPpQmH6EOq)

@@ -4,6 +4,7 @@ docId: oqG_1YITa3eUuBYrbJMTw
 redirects:
   - >-
     /dcs/getting-started/quickstart-uplink-cli/interacting-with-your-first-object/list-an-object
+weight: 0
 ---
 
 ## List the object in our bucket

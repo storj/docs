@@ -5,7 +5,10 @@ redirects:
   - /dcs/storage/considerations
   - /dcs/storage
 metadata:
-  title: Product overview
+  title: Introduction to Storj DCS
+  description:
+    Learn about Storj, the open-source software that creates a secure and
+    durable cloud storage service for developers.
 weight: 0
 ---
 

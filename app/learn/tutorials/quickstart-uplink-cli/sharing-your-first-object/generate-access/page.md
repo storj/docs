@@ -4,6 +4,7 @@ docId: Ch4vLynsEqyT2-3qDEBiy
 redirects:
   - >-
     /dcs/getting-started/quickstart-uplink-cli/sharing-your-first-object/generate-access
+weight: 5
 ---
 
 There are several ways to share access to an object:

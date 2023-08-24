@@ -4,6 +4,7 @@ docId: PbJju3DyzcfrrqDNRw9qz
 redirects:
   - >-
     /dcs/getting-started/quickstart-uplink-cli/interacting-with-your-first-object
+weight: 5
 ---
 
 Listing, downloading, and deleting Objects

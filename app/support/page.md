@@ -4,6 +4,9 @@ weight: 1
 docId: h0GeE0-z8ta1rOlKLL7lL
 redirects:
   - /help
+metadata:
+  title: Need Help Finding Information on Storj?
+  description: Check out our Help Center for resources, FAQs, and support options.
 ---
 
 Need help? If you couldn't find what you're looking for on this Documentation, you can use the search bar on the top bar, check the FAQ in our Community Forum or contact our Support.&#x20;

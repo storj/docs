@@ -1,10 +1,16 @@
 ---
 title: Getting started
 docId: AsyYcUJFbO1JI8-Tu8tW3
-weight: 1
+metadata:
+  description:
+    Learn how to get started with Storj, a leading provider of enterprise-grade,
+    globally distributed cloud object storage. Replace S3-compatible storage with
+    better global performance and cost savings.
+  title: 'Getting started with Storj: Enterprise-grade Cloud Object Storage'
 redirects:
   - /dcs/getting-started/gateway-mt
   - /dcs/getting-started/quickstart-aws-sdk-and-hosted-gateway-mt
+weight: 1
 ---
 
 Storj is the leading provider of enterprise-grade, globally distributed cloud object storage.

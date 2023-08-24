@@ -1,6 +1,9 @@
 ---
 title: Overview
 weight: 0
+metadata:
+  title: Storage Node Getting Started
+  description: Learn how to become a Storage Node Operator and contribute to the decentralized storage network.
 ---
 
 ## Introduction

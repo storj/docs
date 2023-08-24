@@ -4,6 +4,7 @@ docId: '-exN7OdOvfn9G84MTL0d9'
 redirects:
   - >-
     /dcs/getting-started/quickstart-uplink-cli/sharing-your-first-object/revoke-an-access-to-an-object
+weight: 15
 ---
 
 You can revoke an access grant to an object at any time with the command `uplink revoke`.

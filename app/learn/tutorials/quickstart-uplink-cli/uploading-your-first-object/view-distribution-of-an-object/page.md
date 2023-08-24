@@ -4,6 +4,7 @@ docId: '-v_wZieO-SN4FiEn3mmFU'
 redirects:
   - >-
     /dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/view-distribution-of-an-object
+weight: 20
 ---
 
 You need to have a satellite account and installed Uplink CLI as described in [](docId:TbMdOGCAXNWyPpQmH6EOq)

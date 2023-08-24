@@ -4,6 +4,7 @@ docId: K7tsSNrIYYpelUFtVKe_F
 redirects:
   - >-
     /dcs/getting-started/quickstart-uplink-cli/interacting-with-your-first-object/download-an-object
+weight: 5
 ---
 
 ## Download our object

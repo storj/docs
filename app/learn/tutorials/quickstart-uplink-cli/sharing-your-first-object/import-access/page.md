@@ -4,6 +4,7 @@ docId: R8OfnPylILOIrkpc187Xx
 redirects:
   - >-
     /dcs/getting-started/quickstart-uplink-cli/sharing-your-first-object/import-access
+weight: 10
 ---
 
 Importing an access is done using the `import` command.

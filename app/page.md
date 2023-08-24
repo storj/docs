@@ -13,7 +13,7 @@ Welcome to the Storj Documentation!
 
 ## What is Storj
 
-Storj is the leading provider of enterprise-grade, globally distributed cloud object storage. It is a drop-in replacement for any S3-compatible object storage that is just as durable but with 99.95% availability and better global performance from a single upload. Storj delivers default multi-region CDN-like performance with zero-trust security at a cost that’s 80% lower than AWS S3.
+Storj is the leading provider of enterprise-grade, globally distributed cloud object storage. It is a drop-in replacement for any S3-compatible object storage that is just as durable but with 99.9501% availability and better global performance from a single upload. Storj delivers default multi-region CDN-like performance with zero-trust security at a cost that’s 80% lower than AWS S3.
 
 Easily integrated into any existing stack with S3 compatibility, Storj is a trustless, globally distributed network that utilizes existing excess storage capacity making enterprise-grade performance, privacy, and resiliency available with compelling economic benefits.
 

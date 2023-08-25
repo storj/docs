@@ -22,7 +22,7 @@ We have a webinar walking you through it, but you can also refer to the steps be
 
 - Storj S3 compatiable access and secret key (see [](docId:AsyYcUJFbO1JI8-Tu8tW3))&#x20;
 
-- A bucket created on Storj (see [](docId:OJPnxiexQIXHmzGBkvzHc))
+- A bucket created on Storj (see [](docId:pxdnqsVDjCLZgeEXt2S6x))
 
 ## Configure ActiveStorage to Storj
 
@@ -60,7 +60,7 @@ storj:
 
 Edit `config/storage.yml`, enter the following to configure ActiveStorage to use Storj.&#x20;
 
-Be sure to replace the bucket with the one created earlier (see [](docId:OJPnxiexQIXHmzGBkvzHc))
+Be sure to replace the bucket with the one created earlier (see [](docId:pxdnqsVDjCLZgeEXt2S6x))
 
 ```yaml
 storj:

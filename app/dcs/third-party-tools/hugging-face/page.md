@@ -26,7 +26,7 @@ _In this guide, we will walk through configuring _[_HuggingFace Datasets_](https
 
 - Storj S3 compatible access and secret key (see [](docId:AsyYcUJFbO1JI8-Tu8tW3))&#x20;
 
-- A bucket created on Storj (see [](docId:OJPnxiexQIXHmzGBkvzHc))
+- A bucket created on Storj (see [](docId:pxdnqsVDjCLZgeEXt2S6x))
 
 ## Setup Storj with S3Fs
 
@@ -49,7 +49,7 @@ storage_options={"key":key, "secret":secret, "client_kwargs": {'endpoint_url':"h
 fs = s3fs.S3FileSystem(**storage_options)
 ```
 
-Create a bucket (see [](docId:OJPnxiexQIXHmzGBkvzHc)) from the dataset to be stored in. In this walk-through, the bucket will be called `my-dataset-bucket`.
+Create a bucket (see [](docId:pxdnqsVDjCLZgeEXt2S6x)) from the dataset to be stored in. In this walk-through, the bucket will be called `my-dataset-bucket`.
 
 ## Transfer the existing Hugging Face dataset to Storj
 

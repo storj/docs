@@ -32,7 +32,7 @@ chmod 600 ${HOME}/.passwd-s3fs
 
 ### Create a bucket
 
-You can [](docId:OJPnxiexQIXHmzGBkvzHc) with uplink, with [](docId:AsyYcUJFbO1JI8-Tu8tW3) , or with[](docId:4oDAezF-FcfPr0WPl7knd).
+First you will want to [create a bucket](docId:pxdnqsVDjCLZgeEXt2S6x).
 
 ## Mount a bucket to the folder
 

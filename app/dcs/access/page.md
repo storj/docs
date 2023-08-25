@@ -15,13 +15,13 @@ The Access Grant screen allows you to create or delete Access Grants, generate c
 
 ---
 
-## Create Access Grant
-
-{% partial file="create-access-grant.md" /%}
-
 ## Create S3 Credentials
 
 {% partial file="s3-credentials.md" /%}
+
+## Create Access Grant
+
+{% partial file="create-access-grant.md" /%}
 
 ## Create Keys for CLI
 

@@ -19,7 +19,7 @@ For the complete documentation for the service, see: <https://github.com/jasonmi
 
 ## Before you begin
 
-If you haven't yet, create a [Storj DCS account](https://www.storj.io/signup) before following the rest of the tutorial. Make sure to [](docId:Ch4vLynsEqyT2-3qDEBiy) and [](docId:OJPnxiexQIXHmzGBkvzHc).&#x20;
+If you haven't yet, create a [Storj DCS account](https://www.storj.io/signup) before following the rest of the tutorial. Make sure to [](docId:Ch4vLynsEqyT2-3qDEBiy) and [](docId:pxdnqsVDjCLZgeEXt2S6x).&#x20;
 
 ## Procure a Kubernetes cluster
 

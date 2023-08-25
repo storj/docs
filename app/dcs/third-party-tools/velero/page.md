@@ -35,7 +35,7 @@ The Storj DCS Velero plugin does not support volume snapshots for now.
 
 - [](docId:OXSINcFRuVMBacPvswwNU) for the project or create an access grant with the [](docId:TbMdOGCAXNWyPpQmH6EOq)&#x20;
 
-- [](docId:OJPnxiexQIXHmzGBkvzHc) where Velero will store the backups
+- [Create a bucket](docId:pxdnqsVDjCLZgeEXt2S6x) where Velero will store the backups
 
 ## Instructions
 

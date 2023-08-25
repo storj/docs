@@ -36,17 +36,11 @@ Find out what you could earn for being part of the Storj Network
 Install the software that works best for you.
 
 {% quick-links %}
-{% quick-link %}
-⌨️ [](docId:rz3s9lC3qAQHYSl37ngBN) &#x20;
-{% /quick-link %}
+{% quick-link title="⌨️ CLI Install" href="docId:rz3s9lC3qAQHYSl37ngBN" /%}
 
-{% quick-link %}
-🖥 [](docId:5shJebpS3baWj6LDV5ANQ)&#x20;
-{% /quick-link %}
+{% quick-link title="🖥 GUI Install - Windows" href="docId:5shJebpS3baWj6LDV5ANQ" /%}
 
-{% quick-link %}
-💻 [](docId:N-dnnf7HhHcOaavvXjplw)&#x20;
-{% /quick-link %}
+{% quick-link title="💻 QNAP Storage Node App" href="docId:N-dnnf7HhHcOaavvXjplw" /%}
 {% /quick-links %}
 
 ## 💻 Want to Contribute?&#x20;

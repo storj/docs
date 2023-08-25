@@ -7,7 +7,7 @@ import { MobileNavigation } from '@/components/MobileNavigation'
 import { Logo, Logomark } from '@/components/Logo'
 import { ThemeSelector } from '@/components/ThemeSelector'
 import { Search } from '@/components/Search'
-import Spaces from '@/components/Spaces'
+import Spaces, { TopLevelLink } from '@/components/Spaces'
 
 function GitHubIcon(props) {
   return (
@@ -53,7 +53,7 @@ export default function Navbar() {
         <div className="-my-5 mr-6 sm:mr-8 md:mr-0">
           <Search />
         </div>
-        <div className="relative flex basis-0 justify-end gap-6 sm:gap-8 md:flex-grow">
+        <div className="relative flex basis-0 items-center justify-end gap-6 sm:gap-8 md:ml-5 md:flex-grow">
           <ThemeSelector className="relative z-10" />
           <Link
             href="https://github.com/storj"
@@ -62,6 +62,9 @@ export default function Navbar() {
           >
             <GitHubIcon className="h-6 w-6 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300" />
           </Link>
+          <div className="hidden pl-5 min-[416px]:contents">
+            <TopLevelLink href="https://storj.io/login">Login</TopLevelLink>
+          </div>
         </div>
       </div>
       <nav

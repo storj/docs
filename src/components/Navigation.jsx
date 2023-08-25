@@ -2,8 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
-import { AnimatePresence, motion, useIsPresent } from 'framer-motion'
-import { Disclosure, Transition } from '@headlessui/react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import {
   dcsNavigation,
@@ -12,7 +11,7 @@ import {
   supportNavigation,
 } from '@/markdoc/navigation.mjs'
 
-function NavLink({ title, href, current, root, disclosure }) {
+function NavLink({ title, href, current, root, disclosure, className }) {
   let padding = 'pl-6'
   if (root) {
     padding = 'pl-4'
@@ -29,6 +28,7 @@ function NavLink({ title, href, current, root, disclosure }) {
       aria-current={current ? 'page' : undefined}
       href={href}
       className={clsx(
+        className,
         padding,
         `block w-full py-0.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:z-10 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full`,
         current
@@ -103,24 +103,13 @@ function NavItem({ item, root }) {
             )}
             aria-hidden="true"
           />
-          {item.href ? (
-            <NavLink
-              title={item.title}
-              root={root}
-              disclosure
-              href={item.href}
-              current={current}
-            />
-          ) : (
-            <NavLink
-              title={item.title}
-              className={`block bg-orange-600 py-0.5 text-slate-600 hover:text-slate-700 dark:text-slate-400`}
-              root={root}
-              disclosure
-              href={walkTree(item).href}
-              current={current}
-            />
-          )}
+          <NavLink
+            title={item.title}
+            root={root}
+            disclosure
+            href={item.href ? item.href : walkTree(item).href}
+            current={current}
+          />
         </div>
         <AnimatePresence mode="popLayout" initial={false}>
           {isActive && (

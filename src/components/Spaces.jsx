@@ -10,6 +10,24 @@ const spaces = [
   { name: 'Help Center', href: '/support' },
 ]
 
+export function TopLevelLink({ href, className, current, children }) {
+  return (
+    <Link
+      href={href}
+      className={clsx(
+        className,
+        current
+          ? 'bg-gray-200 text-gray-900 dark:bg-gray-50'
+          : 'text-gray-900 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white',
+        'inline-flex items-center rounded-md px-3 py-2 text-sm font-medium'
+      )}
+      aria-current={current ? 'page' : undefined}
+    >
+      {children}
+    </Link>
+  )
+}
+
 export default function Spaces() {
   const pathname = usePathname()
   return (
@@ -20,19 +38,13 @@ export default function Spaces() {
           current = true
         }
         return (
-          <Link
+          <TopLevelLink
             key={item.name}
             href={item.path ?? item.href}
-            className={clsx(
-              current
-                ? 'bg-gray-200 text-gray-900 dark:bg-gray-50'
-                : 'text-gray-900 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white',
-              'inline-flex items-center rounded-md px-3 py-2 text-sm font-medium'
-            )}
-            aria-current={current ? 'page' : undefined}
+            current={current}
           >
             {item.name}
-          </Link>
+          </TopLevelLink>
         )
       })}
     </>

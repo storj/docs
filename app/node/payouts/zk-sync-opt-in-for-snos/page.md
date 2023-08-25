@@ -6,11 +6,9 @@ redirects:
     /node/dependencies/storage-node-operator-payout-information/zk-sync-opt-in-for-snos
 ---
 
-# Introduction
-
 How to configure L2 Payments with zkSync
 
-# Background
+## Background
 
 &#x20;L2 scaling aligns with our goal of bringing decentralized cloud storage to the masses - via more efficient and autonomous payments.
 
@@ -30,7 +28,7 @@ One of the most interesting things about zkSync is it supports "gasless meta-tra
 
 [Introducing zkSync Era starting from July 2023!](https://forum.storj.io/t/july-5-2023-ethereum-layer-1-and-zksync-payouts-for-the-month-of-june-are-complete/23167?u=alexey)
 
-# Get Started and Opt-in
+## Get Started and Opt-in
 
 To opt-in to [zkSync Lite](https://docs.zksync.io/userdocs/intro/) and/or [zkSync Era](https://zksync.io/) you need to do a simple change in your Node configuration by following these steps:
 

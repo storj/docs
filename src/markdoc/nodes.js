@@ -56,6 +56,7 @@ const nodes = {
     render: Heading,
     attributes: {
       level: { type: Number, required: true },
+      anchor: { type: Boolean, default: true },
     },
     async transform(node, config) {
       let slugify = documentSlugifyMap.get(config) || slugifyWithCounter() // partials don't have the same config

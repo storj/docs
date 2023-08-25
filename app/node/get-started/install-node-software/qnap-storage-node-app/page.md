@@ -25,60 +25,65 @@ For a video walkthrough of this process, please see below:&#x20;
 
 ## Sharing Capacity Prerequisites
 
-First, navigate to QNAP App Center application, by double clicking on its icon on the QNAP Desktop Homepage.
+1. Navigate to QNAP App Center application, by double clicking on its icon on the QNAP Desktop Homepage.
 
-Next, click "Install Manually" and click on the QNAP Package (downloaded above) to install the QNAP Storj application onto the device.
+1. Click "Install Manually" and click on the QNAP Package (downloaded above) to install the QNAP Storj application onto the device.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/2_N44-j5CDn6cZiLzoCVG_spaces.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/2_N44-j5CDn6cZiLzoCVG_spaces.png)
 
-Before installing, you will be prompted to accept that the application has no official digital signature: hit "accept"
+1. Hit **accept** when prompted to accept that the application has no official digital signature:
 
 Once the installation is completed, the Storj Storage Node app will be available through the App Center, as well as be visible on the desktop.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1uAYJpLKzzU09nFBE3owp_image.png)
 
-{% callout type="info"  %}
-**Don't see the Storj app?**
+{% callout type="info" title="Don't see the Storj app?" %}
 
-Go to “**Control Panel** -> **Privileges**”, double click the storage node app and put a checkmark in the “**Allow**” box of the user you're logging in with. After that it should appear in the start menu.
+Go to **Control Panel** -> **Privileges**, double click the storage node app and put a checkmark in the **Allow** box of the user you're logging in with. After that it should appear in the start menu.
 {% /callout %}
 
-Open the application, and click "Wizard" in the sidebar. You will be prompted with a walkthrough of the application, like so:
+1. Open the application, and click "Wizard" in the sidebar. You will be prompted with a walkthrough of the application, like so:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9mKBXGbXoQJ95ywE_mbBL_image.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9mKBXGbXoQJ95ywE_mbBL_image.png)
 
-First, enter your email address that you would like associated with notifications for your node:
+1. Enter your email address that you would like associated with notifications for your node:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/kfnmhfsVG_k61weJPvi4a_image.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/kfnmhfsVG_k61weJPvi4a_image.png)
 
-Then, add your [ERC-20 Token Compatible Wallet Address](https://support.storj.io/hc/en-us/articles/360026611692-How-do-I-hold-STORJ-What-is-a-valid-address-or-compatible-wallet-) for payouts.
+1. Add your [ERC-20 Token Compatible Wallet Address](https://support.storj.io/hc/en-us/articles/360026611692-How-do-I-hold-STORJ-What-is-a-valid-address-or-compatible-wallet-) for payouts.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4nmAYwFJUzivgihR-NruY_image.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4nmAYwFJUzivgihR-NruY_image.png)
 
-After, configure Storage Allocation, and set the amount of excess storage capacity you would like to share with the network.
+1. Configure Storage Allocation, and set the amount of excess storage capacity you would like to share with the network.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LWmWZBADgrai71-5EQDp9_image.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LWmWZBADgrai71-5EQDp9_image.png)
 
-After, input a selected Storage Directory (which specifies the path where the data will be stored).
+1. Input a selected Storage Directory (which specifies the path where the data will be stored).
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DGiiifk0J5D7xotc04dp9_image.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DGiiifk0J5D7xotc04dp9_image.png)
 
-Next, configure the external [](docId:y0jltT-HzKPmDefi532sd) (this allows the connection for the Storj Network to come in, and communicate with the software running on the NAS).
+1. Configure the external [](docId:y0jltT-HzKPmDefi532sd)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jZ8twzcfbWd-AnTpKMprj_image.png)
+   This allows the connection for the Storj Network to come in, and communicate with the software running on the NAS.
 
-After, set the location for your node's identity certificate, like so:
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jZ8twzcfbWd-AnTpKMprj_image.png)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hIJRyypNup8zNmjTzKq7F_image.png)
+1. Set the location for your node's identity certificate, like so:
 
-Hit finish, and you have successfully completed that setup wizard for your QNAP device.&#x20;
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hIJRyypNup8zNmjTzKq7F_image.png)
+
+1. Hit **finish**, and you have successfully completed that setup wizard for your QNAP device.
 
 ## Run the Application
 
-After following the configuration steps above, click 'Start My Storage Node' and look for the log output, which indicates that the image is running.
+After following the configuration steps above,
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/AoZkAsmxNVvt8HkJX-h-K_image.png)
+1. Click **Start My Storage Node**
 
-You have successfully shared your excess capacity on your QNAP Device with the Storj Network. &#x20;
+   Look for the log output, which indicates that the image is running.
 
-Click the Dashboard Option to view your current stats - and keep an eye on that payout address!
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/AoZkAsmxNVvt8HkJX-h-K_image.png)
+
+1. You have successfully shared your excess capacity on your QNAP Device with the Storj Network.
+
+1. Click the Dashboard Option to view your current stats - and keep an eye on that payout address!

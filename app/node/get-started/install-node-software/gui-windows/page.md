@@ -7,6 +7,10 @@ redirects:
 
 ## Before starting
 
+{% callout type="warning"  %}
+Failure to complete these steps will prevent your storage node from working.
+{% /callout %}
+
 [](docId:hbCGTv1ZLLR2-kpSaGEXw)&#x20;
 
 [](docId:v-fUvPqySvUwTMF-od6hD)&#x20;
@@ -16,9 +20,3 @@ redirects:
 [](docId:owZeAc56KSDnUzDhsBfB8)&#x20;
 
 [](docId:aT6VAB297OWLd4vqeXxf5)&#x20;
-
-{% callout type="warning"  %}
-Failure to complete these steps will prevent your storage node from working.
-{% /callout %}
-
-Now, [](docId:LAtWfg_LTgbI5yJ8PILUI).

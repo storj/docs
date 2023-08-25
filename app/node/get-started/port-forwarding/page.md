@@ -21,7 +21,7 @@ How a Storage Node communicates with others on the Storj network, even though it
 
 Most, if not all ISPs give a dynamic IP address, which means your IP can change at any time. As a work around, you need a dynamic DNS service to ensure your storage node is connected.
 
-**Advanced: Already have a Static IP?** [](docId:y0jltT-HzKPmDefi532sd)\*\*\*\*
+**Advanced: Already have a Static IP?** [Setup port forwarding](docId:y0jltT-HzKPmDefi532sd#setup-port-forwarding-router-port-forwarding-configuration)
 
 ## Setup Dynamic DNS Service: Hostname Configuration
 
@@ -45,7 +45,7 @@ On the sign-up page, enter your email, username, and password. Make sure to writ
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Xzp-7nDgdp0H2r60KmFvq_image.png)
 
-Once you have created an account and clicked the confirmation link in the e-mail, scroll down to where it says _“How to remote access your device”_ and click _“Get started with Dynamic DNS.”_&#x20;
+Once you have created an account and clicked the confirmation link in the e-mail, scroll down to where it says _“How to remote access your device”_ and click _“Get started with Dynamic DNS.”_
 
 This will take you to the NoIP dashboard.
 
@@ -53,7 +53,7 @@ This will take you to the NoIP dashboard.
 
 ## Setup Dynamic DNS Service: Dynamic Update Client Tool
 
-You'll need to setup a dynamic update tool, which automatically tracks and assigns the IP address to your hostname. So, if your public IP changes, your node won’t get disconnected from the network.&#x20;
+You'll need to setup a dynamic update tool, which automatically tracks and assigns the IP address to your hostname. So, if your public IP changes, your node won’t get disconnected from the network.
 
 Please keep your hostname at hand as we will need it later.
 
@@ -70,31 +70,31 @@ First, open a new terminal window so you can type commands into Linux. Once you�
 
 Navigate to src folder:
 
-```Text
+```bash
 cd /usr/local/src/
 ```
 
 Download the necessary files:
 
-```Text
+```bash
 wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
 ```
 
 Extract the files using the following command:
 
-```Text
+```bash
 tar xf noip-duc-linux.tar.gz
 ```
 
 Navigate to the folder:
 
-```Text
+```bash
 cd noip-2.1.9-1/
 ```
 
 Once in the directory, type:
 
-```Text
+```bash
 make install
 ```
 
@@ -106,7 +106,7 @@ If you get “make not found” or “missing gcc” then you don’t have the g
 
 As root again (or with sudo) issue this command:
 
-```Text
+```bash
 /usr/local/bin/noip2 -C
 ```
 
@@ -118,7 +118,7 @@ You’ll then be prompted for your NoIP username and password, as well as the ho
 
 Now that the client is installed and configured, you just need to launch it. Simply issue this final command to launch the client in the background:
 
-```Text
+```bash
 /usr/local/bin/noip2
 ```
 
@@ -131,24 +131,25 @@ Check the README file in the `no-ip-2.1.9` folder for instructions on how to mak
 
 {% tab label="MacOS" %}
 
-## [Dynamic Update Client for Mac](https://www.noip.com/download?page=mac)
+## [Dynamic Update Client for Mac](https://www.noip.com/download?page=mac) {% anchor=false %}
 
-1.Download the most recent version above.
-2\. Open the downloaded file and drag the NoIP icon to the applications folder.
-3.Open the applications folder and double-click on the NoIP DUC icon.
-4\. Enter your NoIP username and password and Log In.
-5\. Select the hostnames you would like updated.
+1. Download the most recent version above.
+2. Open the downloaded file and drag the NoIP icon to the applications folder.
+3. Open the applications folder and double-click on the NoIP DUC icon.
+4. Enter your NoIP username and password and Log In.
+5. Select the hostnames you would like updated.
 
 Once complete, you can close the Select a Hostname window.
 {% /tab %}
 
 {% tab label="Windows" %}
 
-## [Dynamic Update Client for Windows](https://www.noip.com/download?page=win)
+## [Dynamic Update Client for Windows](https://www.noip.com/download?page=win) {% anchor=false %}
 
-1\. Download and install with link above.
-2\. Enter your NoIP credentials.
-3\. Select the hostname you created earlier and click "save".
+1. Download and install with link above.
+2. Enter your NoIP credentials.
+3. Select the hostname you created earlier and click "save".
+
 {% /tab %}
 {% /tabs %}
 
@@ -160,7 +161,7 @@ To set up port forwarding (TCP/UDP) on a router, we must first get the gateway I
 {% tab label="Linux" %}
 Open the terminal app and run the following command
 
-```Text
+```bash
 ip route | grep default
 ```
 
@@ -169,7 +170,7 @@ ip route | grep default
 {% tab label="MacOS" %}
 Open the terminal app and run the following command
 
-```Text
+```bash
  netstat -nr | grep default
 ```
 
@@ -187,7 +188,7 @@ ipconfig | findstr /i "Gateway"
 
 Once you have your gateway IP, open a browser and type it in.
 
-You'll be forwarded to a login page of your router.&#x20;
+You'll be forwarded to a login page of your router.
 
 If you don't know the login, try googling the default username and password for your router's make and model.
 
@@ -199,7 +200,7 @@ Now, you will need to get the local IP of your machine the node is running on:
 {% tab label="Linux" %}
 Open the terminal app and run the following command:
 
-```Text
+```bash
 hostname -I
 ```
 
@@ -211,13 +212,13 @@ Open the terminal app and run the following command:
 
 If you are connected to a wireless network:
 
-```Text
+```bash
 ipconfig getifaddr en0
 ```
 
 If you are connected via Ethernet:
 
-```Text
+```bash
 ipconfig getifaddr en1
 ```
 
@@ -294,6 +295,6 @@ Congratulations, you've set up port forwarding!
 {% /tab %}
 {% /tabs %}
 
-### Have any difficulties? &#x20;
+### Have any difficulties?
 
 Search for port forwarding instructions for your exact router model.

@@ -89,7 +89,7 @@ export function Heading({
       <Component
         ref={ref}
         className={clsx(
-          'not-prose',
+          anchor && 'not-prose',
           tag || label ? 'mt-2 scroll-mt-32' : 'scroll-mt-24'
         )}
         {...props}

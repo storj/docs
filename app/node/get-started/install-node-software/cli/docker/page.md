@@ -52,5 +52,3 @@ All newer versions for Hyper-V have various issues, such as losing network conne
 
 {% /tab %}
 {% /tabs %}
-
-Now, set up the [](docId:HaDkV_0aWg9OJoBe53o-J).

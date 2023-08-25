@@ -12,7 +12,7 @@ The Docker container has the software you need to run your Storage Node.
 
 ## Step 1. Download the Storage Node Docker Container
 
-```Text
+```shell
 docker pull storjlabs/storagenode:latest
 ```
 
@@ -34,7 +34,7 @@ A network-attached storage location may work, but this is neither supported nor 
 
 1.  Copy the command into a plain text editor like a `nano`:
 
-```Text
+```shell
 docker run --rm -e SETUP="true" \
     --user $(id -u):$(id -g) \
     --mount type=bind,source="<identity-dir>",destination=/app/identity \
@@ -48,7 +48,7 @@ docker run --rm -e SETUP="true" \
 
 1.  Copy the command into a plain text editor (do not use any word processors include Notes):
 
-```Text
+```shell
 docker run --rm -e SETUP="true" \
     --user $(id -u):$(id -g) \
     --mount type=bind,source="<identity-dir>",destination=/app/identity \
@@ -59,22 +59,23 @@ docker run --rm -e SETUP="true" \
 {% /tab %}
 
 {% tab label="Windows" %}
-Copy the command into a plain text editor (the `Notepad++` is recommended), do not use any word processor:
 
-```Text
+1. Copy the command into a plain text editor (the `Notepad++` is recommended), do not use any word processor:
+
+```shell
 docker run --rm -e SETUP="true" --mount type=bind,source="<identity-dir>",destination=/app/identity --mount type=bind,source="<storage-dir>",destination=/app/config --name storagenode storjlabs/storagenode:latest
 ```
 
 {% /tab %}
 {% /tabs %}
 
-2\. Replace the `<identity-dir>` and `<storage-dir>` with your parameters.&#x20;
+2. Replace the `<identity-dir>` and `<storage-dir>` with your parameters.&#x20;
 
-3\. Copy the updated command.
+3. Copy the updated command.
 
-4\. Run it in a terminal window.
+4. Run it in a terminal window.
 
-5\. Your node has been set up!
+5. Your node has been set up!
 
 ## Step 3. Run the Storage Node
 
@@ -84,7 +85,8 @@ docker run --rm -e SETUP="true" --mount type=bind,source="<identity-dir>",destin
 
 {% tabs %}
 {% tab label="Linux" %}
-1\. Copy the command into a plain text editor, like a `nano`:
+
+1. Copy the command into a plain text editor, like a `nano`:
 
 ```bash
 docker run -d --restart unless-stopped --stop-timeout 300 \
@@ -104,7 +106,8 @@ docker run -d --restart unless-stopped --stop-timeout 300 \
 {% /tab %}
 
 {% tab label="macOS" %}
-1\. Copy the command into a plain text editor (do not use any word processors include Notes):
+
+1. Copy the command into a plain text editor (do not use any word processors include Notes):
 
 ```bash
 docker run -d --restart unless-stopped --stop-timeout 300 \
@@ -124,7 +127,8 @@ docker run -d --restart unless-stopped --stop-timeout 300 \
 {% /tab %}
 
 {% tab label="Windows" %}
-Copy the command into a text editor (the `Notepad++` is recommended), do not use any word processor:
+
+1. Copy the command into a text editor (the `Notepad++` is recommended), do not use any word processor:
 
 ```bash
 docker run -d --restart unless-stopped --stop-timeout 300 -p 28967:28967/tcp -p 28967:28967/udp -p 127.0.0.1:14002:14002 -e WALLET="0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -e EMAIL="user@example.com" -e ADDRESS="domain.ddns.net:28967" -e STORAGE="2TB" --mount type=bind,source="<identity-dir>",destination=/app/identity --mount type=bind,source="<storage-dir>",destination=/app/config --name storagenode storjlabs/storagenode:latest
@@ -133,17 +137,17 @@ docker run -d --restart unless-stopped --stop-timeout 300 -p 28967:28967/tcp -p 
 {% /tab %}
 {% /tabs %}
 
-2\. Edit the `WALLET`, `EMAIL`, `ADDRESS`, `STORAGE` and replace the `<identity-dir>`, and `<storage-dir>` with your parameters.&#x20;
+2. Edit the `WALLET`, `EMAIL`, `ADDRESS`, `STORAGE` and replace the `<identity-dir>`, and `<storage-dir>` with your parameters.&#x20;
 
-3\. Copy the updated command.
+3. Copy the updated command.
 
-4\. Run it in a terminal window.
+4. Run it in a terminal window.
 
-5\. You're officially a Storage Node operator! 🎉
+5. You're officially a Storage Node operator! 🎉
 
 You can also check to see if the node was started properly by by running the following command in the terminal
 
-```Text
+```bash
 docker ps -a
 ```
 

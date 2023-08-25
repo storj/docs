@@ -21,7 +21,7 @@ Minimum of 5 Mbps bandwidth upstream
 ✅ **100 Mbps bandwidth downstream**
 Minimum of 25 Mbps bandwidth downstream
 
-**✅ Uptime (online and operational) of 99.5% per month**
+✅ **Uptime (online and operational) of 99.5% per month**
 Minimum uptime (online and operational) of 99.3% per month, max total downtime of 5 hours monthly
 
 ## System Requirements
@@ -86,7 +86,7 @@ Sign up <https://www.storj.io/node>
 
 {% callout type="warning"  %}
 
-## **Do not connect your computer directly to the internet without the assistance of a firewall.** 
+## **Do not connect your computer directly to the internet without the assistance of a firewall.** {% anchor=false %}
 
 **Make sure you’re connected to the Internet through a router and not through a modem without a firewall.**
 

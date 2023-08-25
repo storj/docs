@@ -3,7 +3,8 @@ title: Dashboard CLI
 docId: gH4m4hVZ0BkMVAoW_jA2t
 redirects:
   - /node/setup/cli/dashboard
-pageTitle: Dashboard
+metadata:
+  title: Storage Node Dashboard CLI
 ---
 
 ## Introduction
@@ -41,7 +42,7 @@ docker exec -it storagenode /app/dashboard.sh
 ```
 
 {% callout type="info"  %}
-**The dashboard may not load instantly.**&#x20;
+**The dashboard may not load instantly.**
 
 Give it some time to fully load. Also, it is not necessary to keep the dashboard constantly running. You can exit the dashboard with `Ctrl-C` and the Storage Node will continue running in the background.
 {% /callout %}

@@ -8,28 +8,11 @@ redirects:
 ## Now, select what works best for you:
 
 {% quick-links %}
-{% quick-link %}
-⌨️
+{% quick-link title="⌨️ CLI Install" href="docId:rz3s9lC3qAQHYSl37ngBN" /%}
 
-[](docId:rz3s9lC3qAQHYSl37ngBN)&#x20;
-{% /quick-link %}
+{% quick-link title="🖥 GUI Install - Windows" href="docId:5shJebpS3baWj6LDV5ANQ" /%}
 
-{% quick-link %}
-🖥
+{% quick-link title="💻 QNAP Storage Node App" href="docId:N-dnnf7HhHcOaavvXjplw" /%}
 
-[](docId:5shJebpS3baWj6LDV5ANQ)&#x20;
-{% /quick-link %}
-
-{% quick-link %}
-💻
-
-[](docId:N-dnnf7HhHcOaavvXjplw)&#x20;
-{% /quick-link %}
-{% /quick-links %}
-
-{% quick-links %}
-{% quick-link %}
-💻
-[TrueNAS Storage Node App](https://cdn.truenas.com/docs/scale/scaletutorials/apps/addstorjnode/)
-{% /quick-link %}
+{% quick-link title="💻 TrueNAS Storage Node App" href="https://cdn.truenas.com/docs/scale/scaletutorials/apps/addstorjnode/" /%}
 {% /quick-links %}

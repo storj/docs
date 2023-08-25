@@ -5,6 +5,7 @@ redirects:
   - /node/setup/gui-windows/dashboard
 metadata:
   title: Dashboard
+weight: 5
 ---
 
 ## Introduction

@@ -7,13 +7,13 @@ redirects:
 
 ## Before starting
 
-[](docId:hbCGTv1ZLLR2-kpSaGEXw)&#x20;
+[](docId:hbCGTv1ZLLR2-kpSaGEXw)
 
-[](docId:v-fUvPqySvUwTMF-od6hD)&#x20;
+[](docId:v-fUvPqySvUwTMF-od6hD)
 
-[](docId:y0jltT-HzKPmDefi532sd)&#x20;
+[](docId:y0jltT-HzKPmDefi532sd)
 
-[](docId:owZeAc56KSDnUzDhsBfB8)&#x20;
+[](docId:owZeAc56KSDnUzDhsBfB8)
 
 {% callout type="warning"  %}
 **Failure to complete these steps will prevent your storage node from working.**
@@ -30,7 +30,7 @@ Open a terminal window as a usual user (not administrator or root) and paste the
 {% tabs %}
 {% tab label="Linux" %}
 
-```Text
+```bash
 curl -L https://github.com/storj/storj/releases/latest/download/identity_linux_amd64.zip -o identity_linux_amd64.zip
 unzip -o identity_linux_amd64.zip
 chmod +x identity
@@ -41,7 +41,7 @@ ARM-based OS
 
 Raspberry PI:
 
-```Text
+```bash
 curl -L https://github.com/storj/storj/releases/latest/download/identity_linux_arm.zip -o identity_linux_arm.zip
 unzip -o identity_linux_arm.zip
 chmod +x identity
@@ -50,7 +50,7 @@ sudo mv identity /usr/local/bin/identity
 
 Devices Capable of the AARCH64 Instruction Set:
 
-```Text
+```bash
 curl -L https://github.com/storj/storj/releases/latest/download/identity_linux_arm64.zip -o identity_linux_arm64.zip
 unzip -o identity_linux_arm64.zip
 chmod +x identity
@@ -62,7 +62,7 @@ sudo mv identity /usr/local/bin/identity
 {% tab label="Windows" %}
 PowerShell:
 
-```Text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; curl https://github.com/storj/storj/releases/latest/download/identity_windows_amd64.zip -o identity_windows_amd64.zip; Expand-Archive ./identity_windows_amd64.zip . -Force
 ```
 
@@ -100,7 +100,7 @@ Plan to run your Node on a NAS, Raspberry Pi or similar? Create your identity on
 {% tabs %}
 {% tab label="Linux" %}
 
-```Text
+```shell
 identity create storagenode
 ```
 
@@ -122,7 +122,7 @@ identity.exe create storagenode
 
 {% /tab %}
 
-{% tab label="all macOS" %}
+{% tab label="macOS" %}
 
 ```shell
 identity create storagenode
@@ -131,7 +131,7 @@ identity create storagenode
 {% /tab %}
 {% /tabs %}
 
-4\. This process will continue until it reaches a difficulty of at least 36. On completion, it will look something like this:
+This process will continue until it reaches a difficulty of at least 36. On completion, it will look something like this:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ziCJkaXYzJYBRuLl0vyA2_image.png)
 
@@ -146,7 +146,7 @@ Authorize your Storage Node identity using your [](docId:v-fUvPqySvUwTMF-od6hD) 
 {% tabs %}
 {% tab label="Linux" %}
 
-```Text
+```shell
 identity authorize storagenode <email:characterstring>
 ```
 
@@ -158,15 +158,15 @@ identity authorize storagenode <email:characterstring>
 ./identity.exe authorize storagenode <email:characterstring>
 ```
 
-```Text
+```shell
 identity.exe authorize storagenode <email:characterstring>
 ```
 
 {% /tab %}
 
-{% tab label="all macOS" %}
+{% tab label="macOS" %}
 
-```macos
+```shell
 identity authorize storagenode <email:characterstring>
 ```
 
@@ -200,17 +200,17 @@ grep -c BEGIN ~/.local/share/storj/identity/storagenode/identity.cert
 (sls BEGIN "$env:AppData\Storj\Identity\storagenode\identity.cert").count
 ```
 
-```Text
+```powershell
 findstr "BEGIN" "%APPDATA%\Storj\Identity\storagenode\ca.cert" | find /c /v ""
 ```
 
-```Text
+```powershell
 findstr "BEGIN" "%APPDATA%\Storj\Identity\storagenode\identity.cert" | find /c /v ""
 ```
 
 {% /tab %}
 
-{% tab label="all macOS" %}
+{% tab label="macOS" %}
 
 ```macos
 grep -c BEGIN ~/Library/Application\ Support/Storj/identity/storagenode/ca.cert
@@ -251,8 +251,10 @@ Your identity folder is located in (PowerShell): `start "$Env:APPDATA/Storj/Iden
 In Command Prompt or Windows Explorer: `start "%APPDATA%\Storj\Identity\storagenode"`
 {% /tab %}
 
-{% tab label="all macOS" %}
-Your identity folder is located in: `/Users/USER/Library/Application Support/Storj/identity/storagenode`
+{% tab label="macOS" %}
+Your identity folder is located in:
+
+`/Users/USER/Library/Application Support/Storj/identity/storagenode`
 {% /tab %}
 {% /tabs %}
 

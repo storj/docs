@@ -8,7 +8,7 @@ weight: 10
 
 ## Introduction
 
-Storage Node Operators are compensated for the resources that are used by Storj Satellites for their nodes every month. Our payout policy and details can be found on the[ Storage Node Operator Terms and Conditions](https://storj.io/storj-operator-terms/). In the event of a conflict between this documentation and Node Operator Terms & Conditions, the Node Operator Terms & Conditions shall govern.
+Storage Node Operators are compensated for the resources that are used by Storj Satellites for their nodes every month. Our payout policy and details can be found on the [Storage Node Operator Terms and Conditions](https://storj.io/storj-operator-terms/). In the event of a conflict between this documentation and Node Operator Terms & Conditions, the Node Operator Terms & Conditions shall govern.
 
 ## Understanding How Storage Nodes are Paid on the Storj Network 
 
@@ -38,24 +38,24 @@ Storage Node Fees will not be paid for the following Storage Node usage:
 
 The following table includes the current Storj Satellite payout rates.
 
-| **Satellite / Payment Category **                              | **Rates as of July 1st 2023** |
-| -------------------------------------------------------------- | ----------------------------- |
-| **Non-production Satellite: saltlake.storj.io **               | &#xA;                         |
-| Storage (per TB Mo)                                            | $1.50                         |
-| Egress (per TB)                                                | $2.50                         |
-| Audit/Repair (per TB)                                          | $2.50                         |
-| **Production Satellite: \*\*\***asia-east-1**\***.storj.io\*\* | &#xA;                         |
-| Storage (per TB Mo)                                            | $1.50                         |
-| Egress (per TB)                                                | $6.00                         |
-| Audit/Repair (per TB)                                          | $6.00                         |
-| **Production Satellite: europe-west-1.storj.io**               | &#xA;                         |
-| Storage (per TB Mo)                                            | $1.50                         |
-| Egress (per TB)                                                | $6.00                         |
-| Audit/Repair (per TB)                                          | $6.00                         |
-| **Production Satellite: us-central-1.storj.io**                | &#xA;                         |
-| Storage (per TB Mo)                                            | $1.50                         |
-| Egress (per TB)                                                | $6.00                         |
-| Audit/Repair (per TB)                                          | $6.00                         |
+| **Satellite / Payment Category**                   | **Rates as of July 1st 2023** |
+| -------------------------------------------------- | ----------------------------- |
+| **Non-production Satellite:** _saltlake.storj.io_  | &#xA;                         |
+| Storage (per TB Mo)                                | $1.50                         |
+| Egress (per TB)                                    | $2.50                         |
+| Audit/Repair (per TB)                              | $2.50                         |
+| **Production Satellite:** _asia-east-1.storj.io_   | &#xA;                         |
+| Storage (per TB Mo)                                | $1.50                         |
+| Egress (per TB)                                    | $6.00                         |
+| Audit/Repair (per TB)                              | $6.00                         |
+| **Production Satellite:** _europe-west-1.storj.io_ | &#xA;                         |
+| Storage (per TB Mo)                                | $1.50                         |
+| Egress (per TB)                                    | $6.00                         |
+| Audit/Repair (per TB)                              | $6.00                         |
+| **Production Satellite:** _us-central-1.storj.io_  | &#xA;                         |
+| Storage (per TB Mo)                                | $1.50                         |
+| Egress (per TB)                                    | $6.00                         |
+| Audit/Repair (per TB)                              | $6.00                         |
 
 All payments are made pursuant to the terms specified in the [Node Operator Terms & Conditions](https://www.storj.io/node-operator-terms-conditions).
 
@@ -90,7 +90,9 @@ Both of these options will (for now) happen on a monthly schedule. We are commit
 {% /callout %}
 
 {% callout type="warning"  %}
-If you are running multiple storage nodes, the payment method you select will apply to the individual storage nodes separately. For instance, if you have four nodes, two using default layer 1 transactions, and two using zkSync, then you will receive two payouts, one on layer 1 for those two nodes, and one through zkSync for the zkSync enabled ones. **IMPORTANT**: These will be considered two separate payouts for purposes of reaching the minimum threshold.
+If you are running multiple storage nodes, the payment method you select will apply to the individual storage nodes separately. For instance, if you have four nodes, two using default layer 1 transactions, and two using zkSync, then you will receive two payouts, one on layer 1 for those two nodes, and one through zkSync for the zkSync enabled ones.
+
+**IMPORTANT**: These will be considered two separate payouts for purposes of reaching the minimum threshold.
 {% /callout %}
 
 ## Ethereum layer 1 transactions
@@ -123,7 +125,7 @@ Transaction fees can be paid using STORJ in zkSync, so no ETH will be needed for
 
 - Read about how to opt-in to [](docId:6TX_ve1PyUrXuwax-mWWw).
 
-- [You can read more about zkSync in general here.](https://zksync.io)
+- You can read more about zkSync in general [here](https://zksync.io).
 
 ## General advice
 

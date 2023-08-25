@@ -16,14 +16,17 @@ How to configure L2 Payments with zkSync
 
 Here are a few of the benefits of receiving payouts through this approach:
 
-**Better Scalability
-**With zkSync, payouts will consume less block space on the Ethereum network because transactions are bundled together and processed in batches. The system is currently capable of processing 2000 transactions per second!&#x20;
+**Better Scalability**
 
-**Lower Layer 2 Transfer Fees
-**ZkSync also dramatically lowers network transfer fees (compared to Layer 1 fees) for operators sharing their hard drive space and bandwidth on the Storj network. ZkSync accounts are tied to your existing Ethereum keys and current transaction fees on L2 are as low as \~0.000543 ETH at 210 Gwei. As the zkSync ecosystem grows, interoperability between projects and exchanges means even more savings. These fees can be reinvested in the community, creating new incentives for network operators to drive growth.
+With zkSync, payouts will consume less block space on the Ethereum network because transactions are bundled together and processed in batches. The system is currently capable of processing 2000 transactions per second!&#x20;
 
-**Pay Network Fees in STORJ Token
-**One of the most interesting things about zkSync is it supports "gasless meta-transactions" that allow users to pay transaction fees in the tokens being transferred. For example, if you want to transfer STORJ from L2 to an exchange, smart contract, or other address, there is no need for you to own ETH or any other tokens.
+**Lower Layer 2 Transfer Fees**
+
+ZkSync also dramatically lowers network transfer fees (compared to Layer 1 fees) for operators sharing their hard drive space and bandwidth on the Storj network. ZkSync accounts are tied to your existing Ethereum keys and current transaction fees on L2 are as low as \~0.000543 ETH at 210 Gwei. As the zkSync ecosystem grows, interoperability between projects and exchanges means even more savings. These fees can be reinvested in the community, creating new incentives for network operators to drive growth.
+
+**Pay Network Fees in STORJ Token**
+
+One of the most interesting things about zkSync is it supports "gasless meta-transactions" that allow users to pay transaction fees in the tokens being transferred. For example, if you want to transfer STORJ from L2 to an exchange, smart contract, or other address, there is no need for you to own ETH or any other tokens.
 
 [Introducing zkSync Era starting from July 2023!](https://forum.storj.io/t/july-5-2023-ethereum-layer-1-and-zksync-payouts-for-the-month-of-june-are-complete/23167?u=alexey)
 
@@ -73,23 +76,41 @@ If you decided to specify the `zksync` wallet feature as an option, you need to 
 
 ## How to check the opt-in for zkSync
 
-Navigate to your personal web-dashboard, you should see an indication of zkSync enabled:
+1. Navigate to your personal web-dashboard
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1dzgaZpKadOoLc2krD5Y1_image.png)
+   You should see an indication of zkSync enabled:
 
-After opting-in for zkSync payouts for STORJ payments, gather your ETH address and private key, navigate to the [zkSync Lite Wallet](https://wallet.zksync.io) (for zkSync Era you would use a [Bridge](https://bridge.zksync.io/)), and connect your L1 Ethereum wallet. If you have problems accessing your wallet, you might want to change your payout address to an address that you can access (for which you control the private keys).
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1dzgaZpKadOoLc2krD5Y1_image.png)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/RjsNN11_jBcPfwXP7FLsU_image.png)
+1. Opt-in for zkSync payouts for STORJ payments
 
-**Supported Wallets:** zkSync supports WalletConnect, an open source protocol for connecting decentralized applications to mobile wallets. The protocol also supports hardware wallets like Trezor/Ledger and software wallets like Metamask, MEW, Fortmatic, Portis, Oper, Dapper, Lattice, Torus and many other.
+1. Navigate to the [zkSync Lite Wallet](https://wallet.zksync.io)
 
-Finally, zkSync enables our Storage Node Operators to more easily interact directly with the world of DeFi through solutions like ZigZag, Curve, Uniswap V3, and others.
+   {% callout type="info" %}
+   For zkSync Era you would use a [Bridge](https://bridge.zksync.io/)
+   {% /callout %}
 
-**We are excited to share this update around payment scaling with our community of operators. If you have any questions about using zkSync, check out our documentation. If you have ideas, or would like to talk with the team, please feel free to** [**reach out on our forum**](http://forum.storj.io)**.**
+1. Connect your L1 Ethereum wallet
 
-You can read more about our approach to storage node payouts in general here: [](docId:DVKqtMtnBdZ99gFRWCojP).&#x20;
+   If you have problems accessing your wallet, you might want to change your payout address to an address that you can access (for which you control the private keys).
 
-# Understanding zkSync fees
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/RjsNN11_jBcPfwXP7FLsU_image.png)
+
+   zkSync supported wallets:
+
+   - WalletConnect, an open source protocol for connecting decentralized applications to mobile wallets.
+   - hardware wallets like Trezor/Ledger
+   - software wallets like Metamask, MEW, Fortmatic, Portis, Oper, Dapper, Lattice, Torus and many other.
+
+zkSync enables our Storage Node Operators to more easily interact directly with the world of DeFi through solutions like ZigZag, Curve, Uniswap V3, and others.
+
+We are excited to share this update around payment scaling with our community of operators. If you have any questions about using zkSync, check out our documentation.
+
+**If you have ideas, or would like to talk with the team, please feel free to [reach out on our forum](http://forum.storj.io)**.
+
+You can read more about our approach to storage node payouts in general [here](docId:DVKqtMtnBdZ99gFRWCojP).
+
+## Understanding zkSync fees
 
 Matter Labs runs an API for calculating transfer fees. Here's an example session to determine the _Layer 2 to Layer 1 withdrawal fee_:
 
@@ -182,7 +203,7 @@ This tells us that at a gas price of approximately 117 Gwei, the activation fee 
 
 You can learn more in the [zkSync Documentation](https://zksync.io/api/).
 
-# Transfer tokens from zkSync Lite (L2) to Ethereum (L1)
+## Transfer tokens from zkSync Lite (L2) to Ethereum (L1)
 
 If you want to withdraw your tokens from your zkSync Lite L2 wallet address to any L1 address, you need to reconnect your L1 Ethereum wallet to zkSync Lite with [zkSync Wallet](https://wallet.zksync.io/) - once connected, it will show your L2 token balance as shown below.
 
@@ -212,19 +233,21 @@ Currently, zkSync requires users to pay a one-time activation fee for registerin
 
 2.  Click the **Select token** button and select STORJ
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/fD8Y4jyeOdz8aul3hdrKi_image.png)
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/fD8Y4jyeOdz8aul3hdrKi_image.png)
 
-3\. Enter the amount you want to send into the **Amount** field. You will see a transaction fee, [one-time activation fee](https://zksync.io/faq/tutorials.html#account-activation) (only the first time you make a send to Ethereum), and the estimated fee values expressed in the token you selected (STORJ) and its equivalent value in USD.&#x20;
+3.  Enter the amount you want to send into the **Amount** field.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_kgYHzc8ry0gtPmSQJJSA_image.png)
+    You will see a transaction fee, [one-time activation fee](https://zksync.io/faq/tutorials.html#account-activation) (only the first time you make a send to Ethereum), and the estimated fee values expressed in the token you selected (STORJ) and its equivalent value in USD.&#x20;
 
-4\. Authorize the **_Send to Ethereum_** by pressing the **Authorize to Send to Ethereum** button. You will be asked for confirmation in your Wallet.
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_kgYHzc8ry0gtPmSQJJSA_image.png)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DDdoHwRMilkIwTdbOUytP_image.png)
+4.  Authorize the **_Send to Ethereum_** by pressing the **Authorize to Send to Ethereum** button. You will be asked for confirmation in your Wallet.
 
-5\. Confirm sending by pressing the **Send to Ethereum** button. You should be able to verify the withdrawal transaction was successful in **History**.
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DDdoHwRMilkIwTdbOUytP_image.png)
 
-See also [Transfer Funds to Ethereum](https://docs.zksync.io/userdocs/tutorials/#transfer-funds-to-ethereum) for details.
+5.  Confirm sending by pressing the **Send to Ethereum** button. You should be able to verify the withdrawal transaction was successful in **History**.
+
+    See also [Transfer Funds to Ethereum](https://docs.zksync.io/userdocs/tutorials/#transfer-funds-to-ethereum) for details.
 
 # Transfer tokens from zkSync Era to Ethereum
 
@@ -232,14 +255,14 @@ See also [Transfer Funds to Ethereum](https://docs.zksync.io/userdocs/tutorials/
 
 2.  Connect your Etherum Wallet
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/tTs9X2ONmxR_AUec8K14B_image.png)
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/tTs9X2ONmxR_AUec8K14B_image.png)
 
-3\. Configure your Wallet to use the zkSync Era Mainnet, following wizard for chosen Wallet, if you did not already.
+3.  Configure your Wallet to use the zkSync Era Mainnet, following wizard for chosen Wallet, if you did not already.
 
-4\. Select the token, specify an amount and provide a destination Ethereum address&#x20;
+4.  Select the token, specify an amount and provide a destination Ethereum address&#x20;
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8dL38QFUAEVItTHMoABaE_image.png)
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8dL38QFUAEVItTHMoABaE_image.png)
 
-5\. Confirm your selection by button **Continue**.
+5.  Confirm your selection by button **Continue**.
 
-6\. You will need to sign a transaction in your connected Wallet to transfer your tokens to the provided address.
+6.  You will need to sign a transaction in your connected Wallet to transfer your tokens to the provided address.

@@ -12,13 +12,13 @@ Our software attempts to increase the UDP receive buffer size. However, on Linux
 
 We recommend increasing the maximum buffer size by running the following to increase it to \~2.5MB.
 
-```none
+```bash
 sysctl -w net.core.rmem_max=2500000
 ```
 
 To make this value persistent across reboots, run the following instead (as root):
 
-```none
+```bash
 echo "net.core.rmem_max=2500000" >> /etc/sysctl.d/udp_buffer.conf
 
 sysctl -w net.core.rmem_max=2500000

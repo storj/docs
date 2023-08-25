@@ -36,29 +36,32 @@ You should see the “storjlabs/watchtower\:latest” container with the uptime 
 
 Please use manual updates only if the automatic update method was unsuccessful, or is unavailable for your node configuration.
 
-1\. Stop the running Storage Node container:
+1. Stop the running Storage Node container:
 
-```shell
-docker stop -t 300 storagenode
+   ```shell
+   docker stop -t 300 storagenode
 
-```
+   ```
 
-2\. Remove the existing container:
+2. Remove the existing container:
 
-```shell
-docker rm storagenode
+   ```shell
+   docker rm storagenode
 
-```
+   ```
 
-3\. Pull the latest image from docker:
+3. Pull the latest image from docker:
 
-```shell
-docker pull storjlabs/storagenode:latest
+   ```shell
+   docker pull storjlabs/storagenode:latest
 
-```
+   ```
 
-4\. Start your storage node again by running the following command after editing `WALLET`, `EMAIL`, `ADDRESS`, `STORAGE`, `<identity-dir>`, and `<storage-dir>` [](docId:HaDkV_0aWg9OJoBe53o-J).
+4. Start your storage node again
+   {% callout type="warning"  %}
+   Previous versions of the command `docker run storagenode` that used the `-v` rather than the `--mount` option will not work properly. Copy the updated command from the [](docId:HaDkV_0aWg9OJoBe53o-J#step-3-run-the-storage-node) article.
+   {% /callout %}
 
-{% callout type="warning"  %}
-**Previous versions of the command **`docker run storagenode`**  that used the**`-v`** rather than the **`--mount`** option will not work properly. Copy the updated command from the **[](docId:HaDkV_0aWg9OJoBe53o-J)** article.**
-{% /callout %}
+   Be sure to finish editing `WALLET`, `EMAIL`, `ADDRESS`, `STORAGE`, `<identity-dir>`, and `<storage-dir>`
+
+   [Run the storage node](docId:HaDkV_0aWg9OJoBe53o-J#step-3-run-the-storage-node).

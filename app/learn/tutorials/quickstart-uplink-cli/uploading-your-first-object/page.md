@@ -13,7 +13,7 @@ Every time you upload a file, the Storj DCS CLI will do all the heavy lifting - 
 {% /callout %}
 
 - [ ] [](docId:b4-QgUOxVHDHSIWpAf3hG)&#x20;
-- [ ] \*\*\*\*[](docId:h3RyJymEIi4gf2S9wVJg8)&#x20;
-- [ ] \*\*\*\*[](docId:OJPnxiexQIXHmzGBkvzHc)&#x20;
-- [ ] \*\*\*\*[](docId:gh5RtIDbMkAoomljO7f8d)&#x20;
-- [ ] \*\*\*\*[](docId:-v_wZieO-SN4FiEn3mmFU)
+- [ ] [](docId:h3RyJymEIi4gf2S9wVJg8)&#x20;
+- [ ] [](docId:OJPnxiexQIXHmzGBkvzHc)&#x20;
+- [ ] [](docId:gh5RtIDbMkAoomljO7f8d)&#x20;
+- [ ] [](docId:-v_wZieO-SN4FiEn3mmFU)

@@ -47,4 +47,4 @@ docker exec -it storagenode /app/dashboard.sh
 Give it some time to fully load. Also, it is not necessary to keep the dashboard constantly running. You can exit the dashboard with `Ctrl-C` and the Storage Node will continue running in the background.
 {% /callout %}
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/llc8cUNZ5Butv9vRMa9iw_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/llc8cUNZ5Butv9vRMa9iw_image.png)

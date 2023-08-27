@@ -116,6 +116,7 @@ const nodes = {
       const hash = crypto.createHash('md5').update(attributes.src).digest('hex')
       let result = imageSizeCache[hash]
       if (!result) {
+        console.warn(`image size not cached, probing... ${attributes.src}`)
         result = await probe(attributes.src)
       }
 

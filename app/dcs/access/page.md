@@ -31,15 +31,15 @@ The Access Grant screen allows you to create or delete Access Grants, generate c
 
 3. Navigate to "Access" page and click the **Create Keys for CLI** link (rightmost option).
 
-   ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/dBMRUSzPsBClfxJaXwk7S_cli-keys.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/dBMRUSzPsBClfxJaXwk7S_cli-keys.png)
 
 4. Provide name, permissions and optionally buckets, select **Create Keys**.
 
-   ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/NZGAlqeSEv-vuzJW1enUW_cli-keys2.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/NZGAlqeSEv-vuzJW1enUW_cli-keys2.png)
 
 5. Copy and save the **Satellite Address** and **API Key **in a safe place or download them as they will only appear once.
 
-   ![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/68ftNpbXKmJkroQyO2C9Q_cli-keys3.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/68ftNpbXKmJkroQyO2C9Q_cli-keys3.png)
 
 6. Make sure you've already [](docId:hFL-goCWqrQMJPcTN82NB) and run `uplink setup`.
 
@@ -103,11 +103,11 @@ The alternative for using the uplink setup command and then uplink share is to u
 
 To Delete an Access Grant, select three dots on the right side of the Access Grant and choose **Delete Access**:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/8DjOwU27KCkISKOJs9T3O_access10.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8DjOwU27KCkISKOJs9T3O_access10.png)
 
 Then confirm that you want to delete the Access Grant by typing its name and confirming with **Delete Access** button.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/--lULF4MsGMwhbtfyIa5W_access11.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/--lULF4MsGMwhbtfyIa5W_access11.png)
 
 {% callout type="danger"  %}
 **Important:** If you delete an Access Grant from the Satellite user interface, that Access Grant will immediately cease to function, and all hierarchically derived child Access Grants and Storj DCS gateway access credentials based on that Access Grant will also cease to function. Any data uploaded with that Access Grant will persist on Storj DCS. If you didn't back up the Encryption Passphrase used with the Access Grant you are deleting, you will not be able to decrypt that data without that Encryption Passphrase, and it will be effectively unrecoverable.

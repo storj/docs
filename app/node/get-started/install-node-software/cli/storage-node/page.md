@@ -155,4 +155,4 @@ docker ps -a
 
 You can check the status of your node, along with many other statistics by running the web [](docId:3k4V1HFunDWHVso9b1Xt9). It will look like this:
 
-![](https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/cFR1q3VoPctBwCp9bJ1CM_image.png)
+![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/cFR1q3VoPctBwCp9bJ1CM_image.png)

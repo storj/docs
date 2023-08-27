@@ -13,19 +13,19 @@ Storj is an S3-compatible platform and suite of decentralized applications that 
 ## Become a Storage Node Operator&#x20;
 
 {% quick-links %}
-{% quick-link title="Host a node" href="https://www.storj.io/host-a-node" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Bx-hdlLSeN9DN5u4q3I3K_storj-docs-quickstart-node.png" %}
+{% quick-link title="Host a node" href="https://www.storj.io/host-a-node" %}
 
 Learn how to configure and run your Storage Node
 
 {% /quick-link %}
 
-{% quick-link title="Requirements" href="/node/get-started/setup" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/BYDMiKn1tGNTqdP5uK4CR_storj-docs-node-ops.png" %}
+{% quick-link title="Requirements" href="/node/get-started/setup" %}
 
 Understand what you need to start hosting a node
 
 {% /quick-link %}
 
-{% quick-link href="/node/payouts" title="Payout Information" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/CO2U-fmKyP4_GeEs3XyR2_storj-docs-payment.png" %}
+{% quick-link href="/node/payouts" title="Payout Information" %}
 
 Find out what you could earn for being part of the Storj Network
 {% /quick-link %}

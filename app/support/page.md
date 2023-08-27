@@ -30,12 +30,12 @@ Need help? If you couldn't find what you're looking for on this Documentation, y
 If you can't find what you're looking for in the Community Forum, contact Support.
 
 {% quick-links %}
-{% quick-link title="Storj Support" href="https://supportdcs.storj.io/hc/en-us" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/Cu2kUnzpC81Wj0J3ESwCL_screen-shot-2022-05-25-at-10258-pm.png" %}
+{% quick-link title="Storj Support" href="https://supportdcs.storj.io/hc/en-us"  %}
 
 FAQ, articles, and support
 {% /quick-link %}
 
-{% quick-link title="Storage Node Support" href="https://support.storj.io/hc/en-us" headerImage="https://archbee-image-uploads.s3.amazonaws.com/kv3plx2xmXcUGcVl4Lttj/NVU4W66dwaWZso9tIWgpB_screen-shot-2022-05-25-at-10108-pm.png" %}
+{% quick-link title="Storage Node Support" href="https://support.storj.io/hc/en-us" %}
 
 FAQ, troubleshooting, and support
 {% /quick-link %}

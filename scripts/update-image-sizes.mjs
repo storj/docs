@@ -48,7 +48,7 @@ function extractImageUrlsFromMarkdown(filePath) {
 }
 
 function updateAllImageUrls() {
-  const filePaths = fg.sync('app/**/*.md') // This will search in all directories and subdirectories
+  const filePaths = fg.sync(['app/**/*.md', 'src/markdoc/partials/**/*.md'])
 
   const allUrls = []
 

@@ -1,5 +1,5 @@
 ---
-title: Uplink CLI
+title: Uplink CLI Tutorial
 docId: TbMdOGCAXNWyPpQmH6EOq
 redirects:
   - /dcs/getting-started/quickstart-uplink-cli/prerequisites

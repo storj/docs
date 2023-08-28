@@ -1,5 +1,5 @@
 ---
-title: Uplink CLI
+title: Uplink CLI API
 docId: TC-N6QQVQg8w2cRqvEqEf
 redirects:
   - /dcs/api-reference/uplink-cli

@@ -23,7 +23,7 @@ Most, if not all ISPs give a dynamic IP address, which means your IP can change 
 
 ## [](docId:owZeAc56KSDnUzDhsBfB8)&#x20; {% anchor=false %}
 
-This is a protocol based on UDP which promises more efficient usage of the internet connection with parallel downloads and uploads[.]()
+This is a protocol based on UDP which promises more efficient usage of the internet connection with parallel downloads and uploads.
 
 ## [](docId:aT6VAB297OWLd4vqeXxf5)&#x20; {% anchor=false %}
 

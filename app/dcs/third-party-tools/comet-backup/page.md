@@ -4,6 +4,7 @@ docId: ayERoOc0hFWpUG-cCjq1f
 redirects:
   - /dcs/comet-backup-integration-guide
   - /dcs/how-tos/cometbackup-integration-guide
+  - /dcs/how-tos/cometbackup-integration-guide/
 ---
 
 ## Introduction 

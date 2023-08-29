@@ -3,6 +3,7 @@ title: Object Browser
 docId: 4oDAezF-FcfPr0WPl7knd
 weight: 15
 redirects:
+  - /dcs/browser-usage
   - /dcs/getting-started/quickstart-objectbrowser
 metadata:
   title: Using the Object Browser

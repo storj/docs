@@ -2,6 +2,7 @@
 title: Billing
 docId: Hurx0SirlRp_O5aUzew7_
 redirects:
+  - /dcs/billing
   - /dcs/billing-payment-and-accounts
   - /dcs/billing-payment-and-accounts-1/pricing
   - /dcs/getting-started/satellite-developer-account/billing

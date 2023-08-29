@@ -3,6 +3,12 @@ title: Linksharing Service
 docId: sN2GhYgGUtqBVF65GhKEa
 redirects:
   - /dcs/api-reference/linksharing-service
+metadata:
+  title: Explaining the Linksharing Service
+  description:
+    Guide to using Storj's Linksharing service, covering features like
+    sharing via custom domains, path-based linkshare, direct download linkshare, and
+    handling access restrictions.
 ---
 
 ## Overview

@@ -5,6 +5,11 @@ redirects:
   - /dcs/billing-payment-and-accounts-1/pricing
   - /dcs/getting-started/satellite-developer-account/billing
 weight: 0
+metadata:
+  title: Managing Billing and Payments
+  description:
+    Instructions on how to manage billing, add payment methods, view invoices
+    and transactions, and apply coupons.
 ---
 
 ## Introduction

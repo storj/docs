@@ -3,6 +3,14 @@ title: Decentralization
 docId: 2FjPu5jsYrOUNfU1DVH9F
 redirects:
   - /dcs/concepts/decentralization
+metadata:
+  title: Understanding Decentralized Cloud Storage
+  description:
+    Explore the benefits and unique features of decentralized cloud storage,
+    like higher security, privacy, lower infrastructure cost, and geographically distributed
+    cloud storage. Learn about client-side encryption, erasure codes, data repair,
+    and file audit, all helping to provide a secure, private, and economical data
+    storage option.
 ---
 
 Decentralized data storage means more security and privacy. Decentralized cloud storage is more difficult to attack than traditional centralized data. On a decentralized network, files are broken apart and spread across multiple nodes. Storj DCS uses Erasure Coding to distribute file pieces over many nodes located in different physical locations around the world.‌

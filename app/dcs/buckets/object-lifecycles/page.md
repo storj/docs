@@ -1,6 +1,10 @@
 ---
 title: Object Lifecycles
 weight: 10
+metadata:
+  title: Setting Object Lifecycles
+  description: Explaining how to specify Time to Live for an object in Storj
+    using different tools like rclone, aws cli, and uplink.
 ---
 
 It's possible to specify TTL for the object by sending the `X-Amz-Meta-Object-Expires` header (see [](docId:eZ4caegh9queuQuaazoo#object-level-ttl)) with one of the following:

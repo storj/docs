@@ -6,7 +6,10 @@ tags:
 redirects:
   - /dcs/nextcloud-with-storj-dcs
 metadata:
-  title: Nextcloud with Storj
+  title: Implementing Nextcloud Using Storj
+  description:
+    A guide to implementing Nextcloud with Storj, complete with video guide
+    and Github resources.
 ---
 
 ## Walk-through video guide

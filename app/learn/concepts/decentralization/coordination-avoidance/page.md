@@ -3,6 +3,14 @@ title: Coordination Avoidance
 docId: UxLZTYCEDciC5L0f3LRWd
 redirects:
   - /dcs/concepts/decentralization/coordination-avoidance
+metadata:
+  title: Understanding Coordination Avoidance in the Storj Network
+  description:
+    The Storj Network maintains a coordination avoidant approach for better
+    performance, scalability, and reliability, compared to coordination-dependent
+    systems. While it does not utilize blockchain consensus for file transfers, it
+    leverages it for payment processing. The network's decentralization allows for
+    greater scalability by minimizing coordination overhead.
 ---
 
 Rather than coming to a global consensus around the entire state of the network (as in blockchains like ethereum, etc.) The Storj Network is **Coordination Avoidant.** The network does not need global consistency (as per CAP Theorem) as each uplink user only needs to be able to recover _their_ files.

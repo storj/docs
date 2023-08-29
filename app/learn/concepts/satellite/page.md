@@ -3,11 +3,19 @@ title: Satellite (Metadata Region)
 docId: v0b3GtAU4dDT_1qibwCxc
 redirects:
   - /dcs/concepts/satellite
+metadata:
+  title: Understanding Satellites and Metadata Regions in the Network
+  description:
+    Explore the role of Satellites in Storj, their key responsibilities,
+    and how to choose a metadata region. Satellites aid with functions like node discovery,
+    payment processing, data audit and repair. Users have options to use Storj
+    satellites or run their own. The doc also discusses Storj's unique region concept
+    and the importance of selecting an appropriate Satellite.
 ---
 
 The **Satellite** is a set of hosted services that is responsible for a range of functions on the network, including the node discovery system, node address information caching, per-object metadata storage, storage node reputation management, billing data aggregation, storage node payment, data audit and repair, as well as user account and authorization management.&#x20;
 
-Users have accounts on and trust specific Satellites. Any user can run their own Satellite, but we expect many users will choose to avoid the operational complexity and create an account on another Satellite hosted by a trusted third party such as Storj Labs, a friend, group, or workplace. Storj Labs satellites are operated under the Storj DCS brand. This component has a number of key responsibilities:&#x20;
+Users have accounts on and trust specific Satellites. Any user can run their own Satellite, but we expect many users will choose to avoid the operational complexity and create an account on another Satellite hosted by a trusted third party such as Storj, a friend, group, or workplace. Storj satellites are operated under the Storj brand. This component has a number of key responsibilities:&#x20;
 
 1.  Developer account registration & management&#x20;
 
@@ -23,10 +31,10 @@ Users of the network will have accounts on a specific Satellite instance, which 
 
 ## Choosing a metadata region
 
-While Storj DCS doesn't have "regions" like other cloud storage providers who operate data centers in one or more geographic location, the closest thing to a "region" is a satellite. While your data is stored across a globally distributed network of storage nodes, the encrypted metadata is stored across multiple satellites in a region.&#x20;
+While Storj doesn't have "regions" like other cloud storage providers who operate data centers in one or more geographic location, the closest thing to a "region" is a satellite. While your data is stored across a globally distributed network of storage nodes, the encrypted metadata is stored across multiple satellites in a region.&#x20;
 
 {% callout type="info"  %}
-When selecting the Satellite for your project, you'll want to choose the geographic region where the majority of the end users of your service who will be interacting with the objects on Storj DCS will be located.
+When selecting the Satellite for your project, you'll want to choose the geographic region where the majority of the end users of your service who will be interacting with the objects on Storj will be located.
 {% /callout %}
 
 Importantly, a specific Satellite instance does not necessarily constitute one server. A Satellite may be run as a collection of servers and be backed by a horizontally scalable trusted database for higher uptime. Storj operates clusters of Satellites in regions, with all Satellites in a region sharing a multi-region, distributed back end. This configuration provides a highly resilient and available architecture in which the loss of any Satellite service, an entire Satellite or the unavailability of a facility hosting a Satellite has no impact on the availability of data stored on the network.

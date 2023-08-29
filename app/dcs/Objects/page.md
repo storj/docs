@@ -4,6 +4,11 @@ docId: uyuWpwchZx29f28UGAILP
 weight: 6
 redirects:
   - /dcs/getting-started/satellite-developer-account/objects
+metadata:
+  title: Uploading and Downloading Files Guide
+  description:
+    Learn how to upload and download files to and from your bucket using
+    various methods.
 ---
 
 ## Upload file

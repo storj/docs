@@ -3,6 +3,13 @@ title: Usage Limits
 docId: Zrbz4XYhIOm99hhRShWHg
 redirects:
   - /dcs/concepts/limits
+metadata:
+  title: Understanding Storj Usage Limits
+  description:
+    Explains the usage limits for free and pro accounts in Storj, including
+    project number, bucket quantity, storage capacity, egress bandwidth, and request
+    rate. Also discusses the rationale behind these limits and how to request limit
+    increases.
 ---
 
 Usage Limits allow us to ensure a consistent level of service for all customers. We have limits for usage established per Project on all Storj DCS Satellites. All limits are set to default values as follows:

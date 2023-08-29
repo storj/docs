@@ -3,13 +3,20 @@ title: Encryption Keys
 docId: yI4q9JDB3w01xEkFWA4_z
 redirects:
   - /dcs/concepts/access/encryption-and-keys
+metadata:
+  title: Understanding Encryption Keys and Security
+  description:
+    This page explains how encryption keys work on Storj, detailing the
+    management of encryption keys, the interplay between encryption & access grants,
+    and the supported encryption standards. It also emphasizes the importance of data
+    encryption and the risk of failing to do so.
 ---
 
-How encryption and encryption keys work on Storj DCS
+How encryption and encryption keys work on Storj.
 
 ## Managing Encryption Keys
 
-One very important design consideration is that data stored on Storj DCS is encrypted. That means only you have the encryption keys for your data. The service doesn't ever have access to or store your encryption keys. If you lose your keys (and lose the Access Grant containing your encryption passphrase), you will be unable to recover your data.&#x20;
+One very important design consideration is that data stored on Storj is encrypted. That means only you have the encryption keys for your data. The service doesn't ever have access to or store your encryption keys. If you lose your keys (and lose the Access Grant containing your encryption passphrase), you will be unable to recover your data.&#x20;
 
 ## Encryption & Access Grants
 
@@ -35,11 +42,11 @@ During ordinary Satellite file repair operation, file segments are downloaded by
 
 ### Allowing Decryption for Shared Access to Objects
 
-The first part of this documentation explains how Access Grants work when access to objects stored on the Storj DCS Platform is to be shared between applications. Encryption keys work in a very similar way.
+The first part of this documentation explains how Access Grants work when access to objects stored on the Storj Platform is to be shared between applications. Encryption keys work in a very similar way.
 
 ### Encryption Management Encoded into the Access Grant
 
-Each Access Grant has an Encryption Passphrase that is configured when the Access Grant is initially created. This Encryption Passphrase is used to encrypt all objects and metadata stored on Storj DCS. When a child Restricted Access Grant is created, two things happen:
+Each Access Grant has an Encryption Passphrase that is configured when the Access Grant is initially created. This Encryption Passphrase is used to encrypt all objects and metadata stored on Storj. When a child Restricted Access Grant is created, two things happen:
 
 1.  A restricted API Key is created inside of the new child Restricted Access Grant with a caveat that includes the restrictions in the API Key
 

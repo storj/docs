@@ -3,6 +3,13 @@ title: File Redundancy
 docId: CBMEVO2vA2lDZ_BVuZ9aP
 redirects:
   - /dcs/concepts/file-redundancy
+metadata:
+  title:
+    'Understanding File Redundancy: Durability, Expansion Factors, and Erasure
+    Codes'
+  description:
+    Explains file redundancy in decentralized networks, the relation between
+    durability and expansion factor, and the benefits of erasure codes over replication.
 ---
 
 ## Durability and expansion factor&#x20;

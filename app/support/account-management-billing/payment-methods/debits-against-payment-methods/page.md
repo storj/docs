@@ -1,9 +1,14 @@
 ---
 title: Debits Against Payment Methods
-docId: '-rKjIYI_qQVmhCaGTdo9D'
+docId: -rKjIYI_qQVmhCaGTdo9D
 redirects:
-  - >-
-    /dcs/billing-payment-and-accounts-1/storj-token/debits-against-payment-methods
+  - /dcs/billing-payment-and-accounts-1/storj-token/debits-against-payment-methods
+metadata:
+  title: Payment Method Hierarchy & Order of Operations
+  description:
+    'Explanation of the order in which payments are debited against various
+    methods: Coupons, Credits, STORJ Token, credit card, along with implications of
+    unpaid balances.'
 ---
 
 If you have an amount due, your payment methods will be debited in the following order (the order of operations is entirely programmatic):

@@ -6,7 +6,11 @@ tags:
 redirects:
   - /dcs/how-tos/dataverse-integration-guide
 metadata:
-  title: Dataverse Integration Guide
+  title: Guide for Integrating Storj with Dataverse
+  description:
+    A comprehensive guide on integrating Storj with Dataverse, including
+    steps for Storj setup, generating S3 credentials, and configuring Dataverse with
+    Storj.
 ---
 
 ## Storj Setup

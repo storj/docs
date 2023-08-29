@@ -1,10 +1,12 @@
 ---
-title: Custom Domains for Linksharing
+title: Custom Domains
 docId: RI4zz1sLvVEZ4ZcZbuT7l
 redirects:
   - /dcs/custom-domains-for-linksharing
-createdAt: 2023-02-07T19:18:17.000Z
-updatedAt: 2023-06-04T08:16:25.000Z
+metadata:
+  title: Setting Up Custom Domains
+  description: A guide to using secure custom domains in Storj. Includes
+    benefits of custom domains, prerequisites, and a step-by-step guide to set up.
 ---
 
 {% callout type="success"  %}

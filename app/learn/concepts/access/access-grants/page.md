@@ -3,6 +3,12 @@ title: Access Grants
 docId: XKib9SzjtEXTXWvdyYWX6
 redirects:
   - /dcs/concepts/access/access-grants
+metadata:
+  title: Understand and Manage Access Grants
+  description:
+    Learn how access grants enable secure, private interaction with data
+    stored on Storj, and how to use developer tools to encode objects for access management
+    and encryption or decryption.
 ---
 
 An Access Grant is a bearer token that enables applications to interact with Storj DCS to access objects stored on the service and decrypt them client-side.

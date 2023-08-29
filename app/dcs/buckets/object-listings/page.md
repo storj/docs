@@ -4,7 +4,11 @@ docId: sSBwV86liLJ--jeWCN1DB
 redirects:
   - /dcs/lexicographically-sorted-object-listings
 metadata:
-  title: Lexicographically Sorted Object Listings
+  title: Enabling Lexicographic Sorting of Object Listings
+  description:
+    Guide on how to enable lexicographically sorted object listings in
+    Storj by disabling object key encryption. Includes step-by-step instructions to
+    adjust settings via the Satellite Console and Uplink CLI.
 ---
 
 Storj comes with highly-secure default settings for uploading data to the network. By default, not only is the object content encrypted, but the object metadata and the object key are as well. See [](docId:KEt1PX_a8sbmwGXI4IhT_) for details on how object keys (also know as paths) are encrypted.

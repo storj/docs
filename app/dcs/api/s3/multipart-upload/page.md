@@ -3,6 +3,11 @@ title: Multipart Upload
 docId: _49AHstKRWMEMsbx_SQ8P
 redirects:
   - /dcs/api-reference/s3-compatible-gateway/multipart-upload
+metadata:
+  title: Understanding Multipart Upload
+  description:
+    Learn about multipart upload, its benefits, and how to use it for efficient
+    file uploads on the globally distributed, S3-compatible gateway.
 ---
 
 Understanding how to use Multipart Upload with the Storj DCS globally distributed, multi-region cloud-hosted S3-compatible gateway

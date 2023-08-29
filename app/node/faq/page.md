@@ -4,6 +4,12 @@ docId: IsOkCjvE5sqGHcaamSB7X
 redirects:
   - /node/resources/faq
   - /node/resources
+metadata:
+  title: Frequently Asked Questions
+  description:
+    Comprehensive resource to various FAQs covering topics like maintenance,
+    migration, monitoring, payouts, remote access, reputation, settings, storage,
+    troubleshooting, and updates.
 ---
 
 ## Maintenance

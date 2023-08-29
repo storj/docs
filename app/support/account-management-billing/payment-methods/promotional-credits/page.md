@@ -3,6 +3,11 @@ title: Promotional Credits
 docId: i6OGJ9eZJC7Vw04nKSqcD
 redirects:
   - /dcs/billing-payment-and-accounts-1/storj-token/promotional-credits
+metadata:
+  title: Understanding Promotional Credits
+  description:
+    Overview of Storj's incentive programs, explaining how Credits and
+    Coupons work to promote adoption and usage of the platform.
 ---
 
 The Storj DCS Service includes incentive programs to encourage adoption and use of the platform. These incentives are operationalized as Promotional Credits and include Credits and Coupons.&#x20;

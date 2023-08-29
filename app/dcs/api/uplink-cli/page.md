@@ -3,6 +3,11 @@ title: Uplink CLI API
 docId: TC-N6QQVQg8w2cRqvEqEf
 redirects:
   - /dcs/api-reference/uplink-cli
+metadata:
+  title: Using the Uplink CLI
+  description:
+    A guide to using the Uplink CLI tool for accessing, managing, and uploading
+    objects and buckets on Storj. Includes command details and flag usage.
 ---
 
 ## Introduction

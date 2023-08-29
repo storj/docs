@@ -6,7 +6,12 @@ tags:
 redirects:
   - /dcs/how-tos/lucidlink-filespace-integration
 metadata:
-  title: LucidLink Filespace Integration Guide
+  title: Guide for Integrating LucidLink Filespaces with Storj
+  description:
+    Learn how to perform LucidLink Filespaces integration with Storj for
+    enhanced performance, security, and accessibility of cloud data. This guide contains
+    detailed steps including setting up Storj account and bucket, and generating S3
+    credentials for LucidLink.
 ---
 
 [LucidLink](https://www.lucidlink.com/) Filespaces is a distributed global file system for object storage that performs like a local disk and provides seamless access to data stored in distant locations. LucidLink's cloud-native distributed file system allows many users to access it concurrently via a folder placed on the local client. The LucidLink cloud NAS provides access to large datasets through direct streaming, eliminating the need for downloading and synchronizing.&#x20;

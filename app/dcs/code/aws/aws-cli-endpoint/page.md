@@ -1,9 +1,13 @@
 ---
 title: AWS CLI Endpoint
-
 docId: 20zlQyfMD9gmHJOUPx3jh
 redirects:
   - /dcs/getting-started/gateway-mt/aws-cli-advanced-options
+metadata:
+  title: Setting Up AWS CLI Endpoint to Storj
+  description:
+    Instructions for setting up Storj as the default endpoint in AWS CLI
+    using awscli-plugin-endpoint plugin.
 ---
 
 This guide is so you can set Storj as the default endpoint so you can avoid having to repeatedly use the --endpoint option.

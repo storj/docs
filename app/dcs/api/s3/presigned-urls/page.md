@@ -3,6 +3,11 @@ title: Using presigned URLs
 docId: _pCGnHv0_XwR0-mX0rIkJ
 redirects:
   - /dcs/api-reference/s3-compatible-gateway/using-presigned-urls
+metadata:
+  title: Creating and Using Presigned URLs with Storj
+  description:
+    Step-by-step guide on creating and using presigned URLs for unauthenticated
+    object access using Storj's S3-compatible gateway. Includes Python scripting instructions.
 ---
 
 ## Introduction

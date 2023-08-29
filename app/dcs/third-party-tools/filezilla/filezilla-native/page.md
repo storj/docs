@@ -3,6 +3,11 @@ title: FileZilla Native Integration
 docId: OkJongWeLGhPy4KKz34W4
 redirects:
   - /dcs/how-tos/set-up-filezilla-for-decentralized-file-transfer
+metadata:
+  title: Setting Up FileZilla for File Transfer
+  description:
+    A comprehensive guide on setting up FileZilla for seamless file transfers
+    over Storj, including creating an Access Grant, and encryption options.
 ---
 
 ## Introduction

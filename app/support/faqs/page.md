@@ -3,6 +3,12 @@ title: FAQ
 docId: 4qPQxa8HlvDIO1Kgqa2No
 redirects:
   - /dcs/support/faqs
+metadata:
+  title: Frequently Asked Questions (FAQ)
+  description:
+    Comprehensive overview of common questions around Storj, including
+    navigation to binary location, file upload, URL creation for sharing objects,
+    and web hosting.
 ---
 
 Frequently asked questions about Storj DCS.

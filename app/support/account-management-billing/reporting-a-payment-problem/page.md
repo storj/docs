@@ -3,6 +3,11 @@ title: Reporting a Payment Problem
 docId: Tq6GxPXWKrg75rbUTGB3F
 redirects:
   - /dcs/billing-payment-and-accounts-1/storj-token/reporting-a-payment-problem
+metadata:
+  title: Resolving Payment Issues
+  description:
+    Instructions on how to address payment problems with Storj, whether
+    it's a credit card payment via Stripe or a STORJ token transaction via CoinPayments.
 ---
 
 We use best-in-class partners for payment processing (Stripe for credit card payments and CoinPayments for STORJ utility token transactions). Still, sometimes unanticipated issues can arise.

@@ -6,7 +6,11 @@ tags:
 redirects:
   - /dcs/how-tos/create-and-host-chainstate-snapshots
 metadata:
-  title: Create and host Chainstate Snapshots
+  title: Setting up Chainstate Snapshots using Storj
+  description:
+    Learn how to create, host, and provide download access for Chainstate
+    Snapshots using Storj. The guide covers account setup, 'uplink' CLI setup and
+    use, and the generation of access tokens.
 ---
 
 Host snapshots at reduced cost when spinning up new node.

@@ -3,6 +3,11 @@ title: API Key
 docId: XOtletuYWGeA2Om86yvwA
 redirects:
   - /dcs/concepts/access/access-grants/api-key
+metadata:
+  title: Understanding API Keys and Access Management
+  description:
+    Discussion on API Keys in Storj, including their construction, access
+    management at different levels, and sharing access to objects securely.
 ---
 
 API Keys are based on Macaroons and include the capability to encode programmatic access restrictions into the API Key.

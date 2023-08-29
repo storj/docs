@@ -1,16 +1,20 @@
 ---
-title: When to use the Satellite Web Interface and When to use the CLI
+title: When to use the Storj Console and When to use the CLI
 docId: oUovFUZTldzMuuiM4KbHr
 redirects:
-  - >-
-    /dcs/concepts/access/access-grants/when-to-use-the-satellite-web-interface-and-when-to-use-the-cli
+  - /dcs/concepts/access/access-grants/when-to-use-the-satellite-web-interface-and-when-to-use-the-cli
+metadata:
+  title: Deciding Between Storj Console and CLI
+  description: Learn when to use the Storj Console for generating Access
+    Grants and the CLI or other tools for interacting with the service. Understand
+    the roles of unrestricted and restricted Access Grants.
 ---
 
 Determining when to use the different tools for generating Access Grants is driven by the use of the underlying tool. You can generate an Access Grant in the [](docId:nGzxQBhV8nx5Pukj6O0zT), or you can use either our Go Library or [](docId:OXSINcFRuVMBacPvswwNU). &#x20;
 
-## When to use the Satellite Admin Console
+## When to use the Storj Console
 
-In general, you use the Satellite Admin Console web interface to create an Access Grant that is then used to set up whatever client tool you are using. In order to configure and use the CLI or an application like [](docId:OkJongWeLGhPy4KKz34W4) or [](docId:LdrqSoECrAyE_LQMvj3aF) you must first [](docId:b4-QgUOxVHDHSIWpAf3hG) to configure the client. You may create an unrestricted Access Grant or Restricted Access Grant with limited access. The Satellite Admin Console web interface is also used to generate credentials if you want to use an application with the Storj hosted S3-compatible gateway.
+In general, you use the Storj Console to create an Access Grant that is then used to set up whatever client tool you are using. In order to configure and use the CLI or an application like [](docId:OkJongWeLGhPy4KKz34W4) or [](docId:LdrqSoECrAyE_LQMvj3aF) you must first [](docId:b4-QgUOxVHDHSIWpAf3hG) to configure the client. You may create an unrestricted Access Grant or Restricted Access Grant with limited access. The Storj Console is also used to generate credentials if you want to use an application with the Storj hosted S3-compatible gateway.
 
 {% callout type="warning"  %}
 **Remember:** When you use an Access Grant to generate credentials for the Storj hosted S3-compatible gateway, the hosted gateway uses server-side encryption. If end-to-end encryption is essential for your use case, you should encrypt your data before sending it to the hosted gateway, or use a self-hosted S3-compatible Gateway.
@@ -18,7 +22,7 @@ In general, you use the Satellite Admin Console web interface to create an Acces
 
 ## When to use an Uplink client
 
-Once you have created an Access Grant from the Satellite Admin Console web interface, the CLI, client library or other client tool can then use that Access Grant to interact with the Storj DCS service, or create additional restricted Access Grants - child Access Grants of the parent created in the Satellite Admin Console. The Uplink Client can be used to create additional child Restricted Access Grants.&#x20;
+Once you have created an Access Grant from the Storj Console, the CLI, client library or other client tool can then use that Access Grant to interact with the Storj service, or create additional restricted Access Grants - child Access Grants of the parent created in the Storj Console. The Uplink Client can be used to create additional child Restricted Access Grants.&#x20;
 
 {% callout type="warning"  %}
 **Remember:** When you create child Restricted Access Grants from a parent Restricted Access Grant, the child Restricted Access Grants can have the same level of access as the parent or less access, but never more.&#x20;

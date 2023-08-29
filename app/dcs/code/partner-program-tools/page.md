@@ -3,6 +3,12 @@ title: Partner Program Tools
 docId: PUIq--JfqJvG36xkJ_Fia
 redirects:
   - /dcs/how-tos/configure-tools-for-the-partner-program
+metadata:
+  title: Configuring Storj for Partners
+  description:
+    Guide to configuring user agent for Storj's partner value attribution,
+    including in-code, programmatic, and YAML methods. Also includes details on how
+    revenue sharing works within the Storj Partner Ecosystem.
 ---
 
 ## Introduction

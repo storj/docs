@@ -3,6 +3,12 @@ title: Closing an Account
 docId: 1AZ8BVkKsR3a2MTEKq85b
 redirects:
   - /dcs/billing-payment-and-accounts-1/closing-an-account
+metadata:
+  title: How to Close Your Account
+  description:
+    Guide to discontinuing your Storj account, including deleting all data,
+    removing access grants, and submitting a support ticket to finally delete the
+    account.
 ---
 
 We want all of our users to receive value when they choose the Storj DCS Platform for their storage needs, but it’s possible that a user may no longer need Storj DCS services. If a user wants to stop using an account and permanently delete the account, the user may submit a request for this only after following the steps outlined below to eliminate platform usage.

@@ -6,12 +6,13 @@ tags:
 redirects:
   - /dcs/how-tos/arq-integration-guide
 metadata:
-  title: Arq Integration Guide
+  title: Guide for Integrating Arq Backup Software with Storj
+  description: Tutorial on how to configure Arq backup software to work with Storj, along with detailed instructions to create and implement a backup plan.
 ---
 
 ## Introduction
 
-**Arq** is a backup software that allows you to use your own cloud storage account on a Mac or Windows-based system. You can use **Arq** with **Storj DCS** S3-compatible storage.
+**Arq** is a backup software that allows you to use your own cloud storage account on a Mac or Windows-based system. You can use **Arq** with **Storj ** S3-compatible storage.
 
 **Main site**: [Arqbackup](https://www.arqbackup.com/) - you can download and follow the instructions to install Arq [here](https://www.arqbackup.com/download/).
 

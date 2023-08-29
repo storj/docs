@@ -2,8 +2,12 @@
 title: Multipart Part Size
 docId: rkPrCIwpTjmMKiZajeaxp
 redirects:
-  - >-
-    /dcs/api-reference/s3-compatible-gateway/multipart-upload/multipart-part-size
+  - /dcs/api-reference/s3-compatible-gateway/multipart-upload/multipart-part-size
+metadata:
+  title: Optimizing Multipart Upload Part Size for Better Performance
+  description:
+    Guidance on optimizing multipart upload part size to improve Storj
+    performance and control costs. Recommended size is 64MB.
 ---
 
 The site of the Multipart Parts your application uploads can impact the performance and potentially the cost of your storage on Storj DCS.

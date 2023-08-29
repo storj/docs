@@ -5,6 +5,11 @@ weight: 10
 redirects:
   - /dcs/getting-started/satellite-developer-account/my-account
   - /dcs/getting-started/satellite-developer-account/dashboard
+metadata:
+  title: Understanding the Storj Console Project Dashboard
+  description:
+    An overview of Storj's Console Project Dashboard and details on its navigational
+    elements, storage and bandwidth usage, project details, and bucket information.
 ---
 
 The landing page for the Storj DCS Satellite Admin Console is the Project Dashboard.

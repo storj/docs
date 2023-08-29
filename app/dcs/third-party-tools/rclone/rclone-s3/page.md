@@ -3,6 +3,9 @@ title: Rclone S3 API
 docId: WayQo-4CZXkITaHiGeQF_
 redirects:
   - /dcs/how-tos/sync-files-with-rclone/rclone-with-hosted-gateway
+metadata:
+  title: Rclone with S3 Compatibility Guide
+  description: Step-by-step guide to configure Rclone pointed to Storj's S3 compatible API, providing better upload performance and lower network load.
 ---
 
 ## Selecting an Integration Pattern

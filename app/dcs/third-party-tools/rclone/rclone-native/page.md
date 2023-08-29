@@ -3,6 +3,12 @@ title: Rclone Native Integration
 docId: Mk51zylAE6xmqP7jUYAuX
 redirects:
   - /dcs/how-tos/sync-files-with-rclone/rclone-with-native-integration
+metadata:
+  title: Configure Rclone Natively
+  description:
+    Guide on how to natively configure Rclone with Storj for optimal download
+    performance and client-side encryption. Explains the setup process including configuration
+    and authentication.
 ---
 
 ## Selecting an Integration Pattern

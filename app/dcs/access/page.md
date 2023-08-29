@@ -3,6 +3,12 @@ title: Access
 docId: _xWsamBjOsZYyu9xtQCm5
 redirects:
   - /dcs/getting-started/satellite-developer-account/access-grants
+metadata:
+  title: Generating and Managing Access Grants
+  description:
+    A guide on how to create access grants, generate S3-compatible credentials,
+    create API keys for the CLI, and manage these elements in Storj for secure data
+    access.
 ---
 
 An Access Grant is a security envelope that contains a satellite address, a restricted API Key, and a restricted path-based encryption key - everything an application needs to locate an object on the network, access that object, and decrypt it.

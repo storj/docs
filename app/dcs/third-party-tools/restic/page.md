@@ -5,6 +5,11 @@ tags:
   - backup
 redirects:
   - /dcs/how-tos/backup-with-restic
+metadata:
+  title: Using Restic for Backups
+  description:
+    Step-by-step guide on how to set up and use Restic, a Go-based backup
+    client, with Storj for effective data backup and restore.
 ---
 
 ## Introduction

@@ -6,7 +6,10 @@ tags:
 redirects:
   - /dcs/how-tos/how-to-connect-s3fs-to-storj-dcs
 metadata:
-  title: How to connect s3fs to Storj DCS
+  title: Connecting s3fs to Storj
+  description:
+    Learn how to connect s3fs to Storj, create and mount a bucket, and
+    ensure the bucket is available on boot. Also, explore alternative uses with rclone.
 ---
 
 ## Prerequisites

@@ -3,6 +3,12 @@ title: Key Architecture Constructs
 docId: M-5oxBinC6J1D-qSNjKYS
 redirects:
   - /dcs/concepts/key-architecture-constructs
+metadata:
+  title: Understanding Key Constructs in Storj Architecture
+  description:
+    Explore the main constructs in the architecture of Storj such as Satellite,
+    Developer Account, and Project. Understand how these elements contribute to building
+    secure and private applications on Storj.
 ---
 
 Developing applications on Storj DCS require a basic familiarity with the basic constructs of the service.

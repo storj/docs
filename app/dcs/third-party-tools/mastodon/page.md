@@ -6,7 +6,11 @@ tags:
 redirects:
   - /dcs/ThG--mastodon
 metadata:
-  title: Mastodon integration guide
+  title: 'Integrating Mastodon with Storj: A Comprehensive Guide'
+  description:
+    Learn how to set up integration between Mastodon and Storj using Storj's
+    Uplink CLI, generate S3-compatible and linksharing credentials, and configure
+    Mastodon's .env.production file.
 ---
 
 We have a webinar walking you through it, but you can also refer to the steps below:

@@ -6,7 +6,10 @@ docId: 3fdjlw0QhKg2w6FU4ZdbX
 redirects:
   - /dcs/how-tos/zerto-integration-guide
 metadata:
-  title: Zerto Integration Guide
+  title: How to Integrate Zerto with Storj
+  description:
+    Detailed guide on how to integrate Zerto, a disaster recovery and data
+    protection solution, with Storj, an S3-compatible storage solution.
 ---
 
 ## Introduction

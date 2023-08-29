@@ -6,7 +6,10 @@ docId: hUGykcHCQO4pRDRHaIxQX
 redirects:
   - /dcs/how-tos/unitrends-integration-guide
 metadata:
-  title: Unitrends Integration Guide
+  title: Comprehensive Guide to Integrating Unitrends and Storj
+  description:
+    This guide offers details on how to integrate Unitrends backup appliance
+    and Storj, enabling cost-effective cloud storage and efficient data recovery.
 ---
 
 Unitrends provides backup appliances, backup software, and cloud data protection that leverage cutting-edge technology to automate manual tasks, eliminate management complexity, and deliver tested hardware and software resilience. The Unitrends backup software identifies and resolves software issues that threaten backup and recovery before they happen. Unitrends backup appliances help IT administrators save more time on data backups. Its\*\* \*\*intuitive management console lets you quickly and easily search, filter, manage, and recover thousands of backups.

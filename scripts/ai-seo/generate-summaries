@@ -12,6 +12,7 @@ import frontmatter
 import openai
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.organization = os.getenv('OPENAI_ORG')
 
 
 def _getch():
@@ -32,8 +33,8 @@ def completions_with_backoff(**kwargs):
 
 system_prompt = [
     "You are ChatGPT, a helpful assistant.",
-    "You generate insightful short summaries and relevant tags for user supplied blog posts.",
-    "Assume that the blog posts are in Markdown format.",
+    "You generate insightful short summaries and relevant tags for user supplied doc pages.",
+    "Assume that the doc pages are in Markdown format.",
     "You don't generate summaries that are cryptic or unhelpful.",
     "You don't generate clickbait titles or summaries.",
     "The summary you generate is SEO friendly and no longer than 80 characters.",
@@ -42,6 +43,8 @@ system_prompt = [
     "If the language is pt_BR, you must generate a summary and a title in Brazilian portuguese.",
     "The title field should be a string.",
     "The title field should not include Storj or Storj DCS as a prefix",
+    "Don't refer to Storj DCS, just say Storj",
+    "The title must not say 'in storj' or refer to Storj",
     "The summary field should be a string.",
     "The tags field should be a list of strings.",
     "Don't include any kind of notes."
@@ -66,7 +69,7 @@ for fname in glob.glob("../../app/**/page.md", recursive=True):
         continue
 
     user_prompt = [
-        "Here's a blog post I'd like to summarize:",
+        "Here's a doc page I'd like to summarize:",
         f"title: {title}",
         f"tags: {tags}",
         f"language: {language}",
@@ -81,7 +84,7 @@ for fname in glob.glob("../../app/**/page.md", recursive=True):
 
     while True:
         completion = completions_with_backoff(
-            model="gpt-3.5-turbo",
+            model="gpt-4",
             messages=[
                 {"role": "system", "content": '\n'.join(system_prompt)},
                 {"role": "user", "content": '\n'.join(user_prompt)},

@@ -3,6 +3,11 @@ title: Immutability
 docId: lTRh1sv6vWZv_KFyFOtfK
 redirects:
   - /dcs/lTRh-immutability
+metadata:
+  title: Understanding Data Immutability in Object Storage
+  description:
+    The post discusses the concept of immutability in data storage and
+    how Storj implements this concept to ensure secure and unquestionable data preservation.
 ---
 
 # Immutability

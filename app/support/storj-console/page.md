@@ -4,6 +4,10 @@ docId: nGzxQBhV8nx5Pukj6O0zT
 redirects:
   - /dcs/getting-started/satellite-developer-account
 weight: 3
+metadata:
+  title: Using the Storj Console
+  description: Explore how to interact with the Storj Console, manage projects,
+    and track usage.
 ---
 
 The Storj Console is the web interface for developers to interact with Storj

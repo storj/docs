@@ -3,6 +3,12 @@ title: Payment Methods
 docId: 7U4_uu6Pzg6u2N6FpV9VE
 redirects:
   - /dcs/billing-payment-and-accounts-1/storj-token
+metadata:
+  title: Payment Methods and Policies
+  description:
+    Learn about the payment methods accepted by Storj, the process for
+    adding a payment method, and unique guidelines for using credit card and STORJ
+    token for payments.
 ---
 
 Storj DCS accepts the following two payment methods:

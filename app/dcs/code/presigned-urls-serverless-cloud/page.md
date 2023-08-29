@@ -3,6 +3,11 @@ title: Presigned URLs in the serverless cloud
 docId: AJzzSRQQpE3ecAOJ_3tpl
 redirects:
   - /dcs/how-tos/presigned-urls-in-the-serverless-cloud
+metadata:
+  title: Generating Presigned URLs in Serverless Cloud with Go
+  description:
+    A guide to creating presigned URLs in a serverless cloud using Go,
+    including setup and implementation with AWS Lambda functions.
 ---
 
 This document will guide you through the process of creating presigned URLs in a serverless cloud environment using the Go programming language.

@@ -5,11 +5,16 @@ tags:
 docId: LcjEYyxUmyViTjNYy6hDd
 redirects:
   - /dcs/how-tos/simplify-file-management-with-s3-browser-and-storj-dcs
+metadata:
+  title: Managing Files using S3 Browser with Storj
+  description: Guide on efficiently managing AWS S3 compatible storage
+    with Storj using the S3 Browser, including license details, relevant configurations,
+    download process, and using Gateway MT for accessing Storj.
 ---
 
-## Simplify File Management with S3 Browser and Storj DCS
+## Simplify File Management with S3 Browser and Storj
 
-S3 Browser is a Windows-based client that provides simple and reliable file management for AWS S3 storage and [AWS S3 compatible storage such as Storj DCS](https://www.storj.io/blog/what-is-s3-compatibility). Via the intuitive web file management interface, users can store and retrieve files from their Storj DCS bucket anytime and anywhere.
+S3 Browser is a Windows-based client that provides simple and reliable file management for AWS S3 storage and [AWS S3 compatible storage such as Storj](https://www.storj.io/blog/what-is-s3-compatibility). Via the intuitive web file management interface, users can store and retrieve files from their Storj bucket anytime and anywhere.
 
 While S3 Browser is free for personal use, users who wish to utilize the S3 Browser in commercial, business, government, or military institutions, or for any other profit activity, must purchase a pro license.
 
@@ -45,7 +50,7 @@ There is no option to download S3 Browser via CLI
 
 ### Generate Credentials to the Gateway MT
 
-Users interested in accessing their Storj DCS bucket(s) via S3 Browser can do so via the hosted AWS multitenant gateway known as Gateway MT. This backward-compatible hosted gateway is one of the most versatile ways to get up and running with Storj DCS when using platforms such as S3 Browser or other file manager platforms that support Storj DCS.
+Users interested in accessing their Storj bucket(s) via S3 Browser can do so via the hosted AWS multitenant gateway known as Gateway MT. This backward-compatible hosted gateway is one of the most versatile ways to get up and running with Storj when using platforms such as S3 Browser or other file manager platforms that support Storj.
 
 **Gateway MT offers the following:**
 
@@ -85,7 +90,7 @@ Storj does not know or store your encryption passphrase. However, if you are sti
 
 ### Configuring Storj + S3 Browser
 
-Now that your S3 Browser client is downloaded and installed and you’ve generated and saved your S3 Gateway Credentials, it’s time to configure S3 Browser to interface with your Storj DCS bucket.
+Now that your S3 Browser client is downloaded and installed and you’ve generated and saved your S3 Gateway Credentials, it’s time to configure S3 Browser to interface with your Storj bucket.
 
 Select the **Accounts** menu item at the top left of the S3 Browser client. Select **Add New Account**. Add any name to your account in the **Display Name** selection. In the dropdown menu titled **Account type** select **S3 Compatible Storage**.
 
@@ -105,9 +110,9 @@ Finallly, hit **Connect**.
 
 If you’ve added in your S3 Gateway Credentials properly, you’ll see the following:
 
-### Uploading Files to Storj DCS Through S3 Browser
+### Uploading Files to Storj Through S3 Browser
 
-Within the S3 Browser, you’ll be able to upload files directly to your Storj DCS bucket once you’ve effectively tied in StorJ DCS to S3 Browser.
+Within the S3 Browser, you’ll be able to upload files directly to your Storj bucket once you’ve effectively tied in StorJ to S3 Browser.
 
 Start by selecting which Storj bucket you wish to upload data into by selecting the bucket at the top left. Once you’ve selected your bucket, select the **Upload** icon.
 
@@ -115,9 +120,9 @@ Here, you’ll be prompted to select whether you’d like to **upload file(s)** 
 
 Following a selection of **upload file(s)** or **upload folder(s)** you’ll be prompted with a file navigator to select the file or folder you wish to upload.
 
-### Downloading Files From Storj DCS Through S3 Browser
+### Downloading Files From Storj Through S3 Browser
 
-Within the S3 Browser, you’ll be able to download files directly from your Storj DCS bucket once you’ve effectively tied in StorJ DCS to S3 Browser.
+Within the S3 Browser, you’ll be able to download files directly from your Storj bucket once you’ve effectively tied in StorJ to S3 Browser.
 
 Start by selecting which Storj bucket you wish to download data from by selecting the bucket at the top left.
 

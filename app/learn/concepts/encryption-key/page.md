@@ -3,6 +3,11 @@ title: Encryption
 docId: uuhN7eyr1a8P3l_vzdnDk
 redirects:
   - /dcs/concepts/encryption-key
+metadata:
+  title: Exploring Encryption Mechanisms
+  description:
+    Overview of encryption mechanisms in Storj, detailing different levels
+    and applications for enhanced application privacy and security.
 ---
 
 This section describes the encryption mechanisms used on Storj DCS and describes supported approaches to data and metadata encryption.

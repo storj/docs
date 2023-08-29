@@ -2,6 +2,9 @@
 title: Public Buckets
 weight: 2
 docId: cie0gae7voob2Weigh3c
+metadata:
+  title: Creating Public Buckets and Embedding Content
+  description: Guide on generating a LINKSHARINGKEY to make Storj buckets public and embedding content from the buckets.
 ---
 
 Storj supports public access with a `LINKSHARINGKEY`, which similar to public buckets on S3 but has more [fine-grained controls](docId:tBnCSrmR1jbOewG38fIr4#flags).

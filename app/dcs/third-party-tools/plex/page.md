@@ -6,7 +6,11 @@ docId: Ywf4qZUmhJXxbFy55G8Mj
 redirects:
   - /dcs/how-tos/how-to-use-plex-and-storj-dcs-as-a-private-streaming-service
 metadata:
-  title: Plex and Storj DCS as a private streaming service
+  title: Setting Up Plex with Storj for Private Streaming
+  description:
+    Tutorial on combining Plex with Storj for a private streaming service
+    using rclone. It highlights the advantages of decentralized storage, such as higher
+    availability, better security and lower budget.
 ---
 
 ## Video Storage

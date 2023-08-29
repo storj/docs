@@ -2,10 +2,12 @@
 title: Static site hosting
 docId: GkgE6Egi02wRZtyryFyPz
 metadata:
-  title: Host a Static Website with the Uplink CLI and Linksharing Service
+  title: Hosting a Static Website
+  description:
+    Guide on hosting a static website on Storj using Uplink CLI and Linksharing
+    service, covering website setup, DNS configuration, and custom domain usage.
 redirects:
-  - >-
-    /dcs/how-tos/host-a-static-website/host-a-static-website-with-the-cli-and-linksharing-service
+  - /dcs/how-tos/host-a-static-website/host-a-static-website-with-the-cli-and-linksharing-service
 ---
 
 You can use your own domain name and host your own static website on Storj

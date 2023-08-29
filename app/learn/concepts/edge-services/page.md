@@ -3,6 +3,12 @@ title: Edge Services
 docId: 21Y2RfU-4h21vZycBqizJ
 redirects:
   - /dcs/concepts/edge-services
+metadata:
+  title: Understanding Storj's Edge Services
+  description:
+    Exploring Storj's Edge Services, which include S3 compatibility, data
+    sharing services like a globally distributed Gateway, Linkshare Service, and Auth
+    Service.
 ---
 
 ## Overview

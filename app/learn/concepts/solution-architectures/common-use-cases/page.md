@@ -3,6 +3,12 @@ title: Common Use Cases
 docId: zFCXk7pvmYvyefN2SZhHj
 redirects:
   - /dcs/solution-architectures/common-use-cases
+metadata:
+  title: Best Use Cases for Distributed Storage Solutions
+  description:
+    This page outlines common use cases where distributed object storage
+    like Storj excels, including general and database backup, private data, and multimedia
+    storage and streaming.
 ---
 
 ## Introduction

@@ -3,6 +3,12 @@ title: Third-Party Tools
 docId: REPde_t8MJMDaE2BU8RfQ
 redirects:
   - /dcs/how-tos
+metadata:
+  title: Guides to Using Third-Party Tools
+  description:
+    Step-by-step guides on leveraging third-party tools, including backups,
+    large file handling, file management, content delivery, scientific applications,
+    and cloud operations.
 ---
 
 Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.

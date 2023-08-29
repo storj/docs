@@ -7,7 +7,11 @@ redirects:
   - /dcs/how-tos/ix-systems-truenas-integration
   - /dcs/ix-systems-truenas-integration
 metadata:
-  title: iXsystems TrueNAS Integration
+  title: TrueNAS Integration with Storj for Secure Data Storage
+  description:
+    A guide to integrating TrueNAS storage solution with Storj for off-site
+    backup, data durability, speed, and simplicity. Steps include creating a Storj
+    account, setting up a bucket, and generating S3 credentials.
 ---
 
 TrueNAS is a network attached storage (NAS) solution that allows for an off-site backup with cloud storage, such as Storj, to provide simplicity, speed, and durability in data storage.

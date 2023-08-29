@@ -4,6 +4,12 @@ docId: 4oDAezF-FcfPr0WPl7knd
 weight: 15
 redirects:
   - /dcs/getting-started/quickstart-objectbrowser
+metadata:
+  title: Using the Object Browser
+  description:
+    Guidance on how to use the Object Browser to upload and manage objects
+    hassle-free, as well as steps on how to configure access and upload files and
+    folders.
 ---
 
 The Object Browser supports uploading and managing objects directly through the browser with no command-line tool required. This component uses our [](docId:yYCzPT8HHcbEZZMvfoCFa) service.

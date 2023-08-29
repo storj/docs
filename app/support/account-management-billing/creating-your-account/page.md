@@ -4,6 +4,11 @@ docId: HeEf9wiMdlQx9ZdS_-oZS
 weight: 5
 redirects:
   - /dcs/getting-started/satellite-developer-account/creating-your-account
+metadata:
+  title: Account Creation Guide
+  description:
+    Learn how to choose a satellite, register a developer account, and
+    select the type of your account on Storj.
 ---
 
 Choose a Satellite from one of the available metadata regions and register for a developer account.

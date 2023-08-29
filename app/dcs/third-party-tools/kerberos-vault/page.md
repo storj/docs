@@ -4,10 +4,13 @@ docId: c0Ay0w8gxfln0EJxle0bz
 tags:
   - file-management
 redirects:
-  - >-
-    /dcs/how-tos/how-to-set-up-video-analytics-and-video-management-with-kerberos-vault
+  - /dcs/how-tos/how-to-set-up-video-analytics-and-video-management-with-kerberos-vault
 metadata:
-  title: Video analytics and management with Kerberos Vault
+  title: Integrating Kerberos Vault with Distributed Cloud Storage
+  description:
+    Step-by-step guide on how to integrate Kerberos Vault, an extensible
+    storage solution for video files, with Storj's secure and reliable distributed
+    cloud storage.
 ---
 
 ## Introduction

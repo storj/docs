@@ -5,6 +5,11 @@ tags:
   - file-management
 redirects:
   - /dcs/how-tos/how-to-use-cyberduck-and-storj-dcs
+metadata:
+  title: Setting Up and Using Cyberduck
+  description:
+    A guide on how to download, setup, and use the free, open-source Cyberduck
+    file manager to integrate and transfer files easily with Storj.
 ---
 
 ## Introduction

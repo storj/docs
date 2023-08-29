@@ -5,6 +5,11 @@ tags:
   - file-management
 redirects:
   - /dcs/filezilla
+metadata:
+  title: FileZilla Integration
+  description:
+    Learn how to set up FileZilla to easily transfer and manage files over
+    Storj.
 ---
 
 {% quick-links %}

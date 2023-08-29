@@ -3,7 +3,10 @@ title: WordPress backup with UpdraftPlus
 tags:
   - backup
 metadata:
-  title: How to backup your WordPress site with UpdraftPlus to Storj DCS
+  title: Backing up WordPress with UpdraftPlus plugin and Storj
+  description:
+    Detailed guide on how to install UpdraftPlus plugin in your WordPress
+    setup and use it to backup your site to Storj using generated Gateway MT credentials.
 docId: VzNAjuGSXXvsIh-mfhKVr
 redirects:
   - /dcs/how-tos/how-to-backup-your-wordpress-site-with-updraftplus-to-storj-dcs

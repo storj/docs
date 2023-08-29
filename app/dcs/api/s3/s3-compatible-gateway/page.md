@@ -4,6 +4,12 @@ docId: yYCzPT8HHcbEZZMvfoCFa
 redirects:
   - /dcs/api-reference/s3-compatible-gateway
   - /getting-started/beta-gateway-mt
+metadata:
+  title: S3 Compatible Gateway Hosted by Storj
+  description:
+    This document details Storj's globally distributed S3-compatible gateway,
+    emphasizing its security and benefits over centralized providers, and providing
+    instructions on how to get started with it.
 ---
 
 The Storj DCS globally distributed, multi-region cloud-hosted S3-compatible gateway

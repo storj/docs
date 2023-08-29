@@ -3,6 +3,11 @@ title: Changing Payment Methods
 docId: bjm8eBFwzz3EVxWG1Rk4i
 redirects:
   - /dcs/billing-payment-and-accounts-1/storj-token/changing-payment-methods
+metadata:
+  title: Switching Payment Methods
+  description:
+    Guide on how to change payment methods on an account, including switching
+    between credit cards and STORJ tokens.
 ---
 
 Users may change payment methods on accounts, but at least one valid payment method must be configured on an account at all times. &#x20;

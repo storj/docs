@@ -6,7 +6,11 @@ tags:
 redirects:
   - /dcs/how-tos/backup-with-duplicati
 metadata:
-  title: Duplicati integration guide
+  title: Guide to Integrating Duplicati for Optimized Backups
+  description:
+    A comprehensive guide on how to integrate and use Duplicati, a tool
+    for backup that helps in grouping, deduping, and compressing smaller files for
+    efficient storage. The guide includes installation, setup, and usage instructions.
 ---
 
 ## Introduction

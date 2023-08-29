@@ -6,16 +6,19 @@ docId: XjYoGwaE6ncc3xTICXOOu
 redirects:
   - /dcs/how-tos/tesla-sentry-mode-teslausb
 metadata:
-  title: Tesla Sentry Mode & Dashcam videos
+  title: Automatically Backing Up Tesla Sentry Mode and Dashcam videos
+  description:
+    A step-by-step guide on how to automatically transfer and backup Tesla
+    Sentry Mode and Dashcam videos to Storj using a Raspberry Pi.
 ---
 
 ## Introduction
 
-In this How To, we'll demonstrate how to automatically transfer Tesla Sentry Mode and Dashcam video clips over WiFi to Storj DCS and make room for more videos the next day. We'll use a Raspberry Pi (a small, low cost, low power computer) plugged into the USB port in the dashboard to store the video files. When the Tesla pulls into your garage at night, the Raspberry Pi will connect via WiFi and upload all the videos to Storj DCS, then clear off the drive for use the next day. This will also work for videos recorded in Track Mode if you have one of the performance models, and you can easily share any of the videos with your friends.
+In this How To, we'll demonstrate how to automatically transfer Tesla Sentry Mode and Dashcam video clips over WiFi to Storj and make room for more videos the next day. We'll use a Raspberry Pi (a small, low cost, low power computer) plugged into the USB port in the dashboard to store the video files. When the Tesla pulls into your garage at night, the Raspberry Pi will connect via WiFi and upload all the videos to Storj, then clear off the drive for use the next day. This will also work for videos recorded in Track Mode if you have one of the performance models, and you can easily share any of the videos with your friends.
 
 ## What you'll need
 
-You'll need some hardware, some software and a Storj DCS account for this project.
+You'll need some hardware, some software and a Storj account for this project.
 
 ## Hardware required
 
@@ -29,7 +32,7 @@ All in, you’re looking at right around $60 of hardware to get going (prices as
 
 - [USB Cable to plug into the car](https://www.adafruit.com/product/592) USB A to Micro-B - 3 foot long
 
-- [Storj DCS cloud storage](https://www.storj.io) - Secure, private and decentralized.&#x20;
+- [Storj cloud storage](https://www.storj.io) - Secure, private and decentralized.&#x20;
 
 Optional hardware for easier setup:
 
@@ -37,15 +40,15 @@ Optional hardware for easier setup:
 
 ### Software required
 
-The code used in this tutorial is open source and uses, among other things, [Rlcone](https://github.com/rclone/rclone) which includes native support for Storj DCS. The GitHub Repository for the code is available at: <https://github.com/marcone/teslausb> and the project was originally described on the [/r/teslamotors](https://www.reddit.com/r/teslamotors/comments/9m9gyk/build_a_smart_usb_drive_for_your_tesla_dash_cam/) subreddit.&#x20;
+The code used in this tutorial is open source and uses, among other things, [Rlcone](https://github.com/rclone/rclone) which includes native support for Storj. The GitHub Repository for the code is available at: <https://github.com/marcone/teslausb> and the project was originally described on the [/r/teslamotors](https://www.reddit.com/r/teslamotors/comments/9m9gyk/build_a_smart_usb_drive_for_your_tesla_dash_cam/) subreddit.&#x20;
 
-### Storj DCS Account
+### Storj Account
 
 If you have not yet signed up, please [do so now](https://storj.io/signup).
 
 ## Step-by-step guide
 
-Using the software in the [teslausb](https://github.com/marcone/teslausb) project with Storj DCS is a multipart process, we will accomplish the following:
+Using the software in the [teslausb](https://github.com/marcone/teslausb) project with Storj is a multipart process, we will accomplish the following:
 
 - Generate Credentials for Storj DSC
 
@@ -57,10 +60,10 @@ Using the software in the [teslausb](https://github.com/marcone/teslausb) projec
 
     - This is done by flashing a preconfigured Raspbian image and then filling out a config file.
 
-  - Part 2 - Rclone Configuration with Storj DCS via hosted Gateway MT
+  - Part 2 - Rclone Configuration with Storj via hosted Gateway MT
     - This is done by accessing the Pi via SSH and installing/configuring Rclone
 
-### Sign Up for a Storj DCS Account
+### Sign Up for a Storj Account
 
 If you have not yet signed up, please head here to[ sign up for the free tier.](https://www.storj.io/signup)&#x20;
 
@@ -121,12 +124,12 @@ Now we have our **credentials** and can move on to configuring teslausb.
     - **Endpoint**
 
 {% callout type="info"  %}
-Learn more about [](docId:bNywu7-9KLjYfk5LBQABx) on Storj DCS and using [](docId:XKib9SzjtEXTXWvdyYWX6).&#x20;
+Learn more about [](docId:bNywu7-9KLjYfk5LBQABx) on Storj and using [](docId:XKib9SzjtEXTXWvdyYWX6).&#x20;
 {% /callout %}
 
 ### Configure teslausb
 
-Teslausb is the open source software that will run on the Raspberry Pi to send your videos to Storj DCS. Now that you have your gateway credentials for Storj DCS, you need to set up teslausb on the Raspberry Pi and configure it for use with those Storj DCS credentials.
+Teslausb is the open source software that will run on the Raspberry Pi to send your videos to Storj. Now that you have your gateway credentials for Storj, you need to set up teslausb on the Raspberry Pi and configure it for use with those Storj credentials.
 
 ### Part 1 - One-step setup
 
@@ -140,7 +143,7 @@ You'll find the one-step setup guide for testlausb in this GitHub repo: <https:/
 
 3.  Mount the SD card to edit the initial configuration file located in the `boot` directory. Create a `teslausb_setup_variables.conf`A sample config file is located in the `boot` folder on the SD card. The latest sample is also available from GitHub via [pi-gen-sources/00-teslausb-tweaks/files/teslausb_setup_variables.conf.sample](https://github.com/marcone/teslausb/blob/main-dev/pi-gen-sources/00-teslausb-tweaks/files/teslausb_setup_variables.conf.sample).
 
-4.  Specifically, set the \`ARCHIVE_SYSTEM\` to \`none\`. This is because we need to boot the Pi to install some additional software to push our sentry clips in Storj DCS. Please also set your Wifi settings. Save the file when you are done editing.
+4.  Specifically, set the \`ARCHIVE_SYSTEM\` to \`none\`. This is because we need to boot the Pi to install some additional software to push our sentry clips in Storj. Please also set your Wifi settings. Save the file when you are done editing.
 
 Below is a small portion of the config file showing 'export ARCHIVE_SYSTEM=none' as well as the wifi settings.&#x20;
 
@@ -167,7 +170,7 @@ export WIFIPASS='your_pass'
 
 ### Part 2 - Rclone Configuration
 
-Now that Raspbian is installed and configured, it's time to set up Rclone, the software that will actually transfer the files from the Raspberry Pi to Storj DCS. (If you're not familiar with [Rclone](https://github.com/rclone), it's Rsync for cloud storage.) Boot up that Pi and let' s keep it moving.
+Now that Raspbian is installed and configured, it's time to set up Rclone, the software that will actually transfer the files from the Raspberry Pi to Storj. (If you're not familiar with [Rclone](https://github.com/rclone), it's Rsync for cloud storage.) Boot up that Pi and let' s keep it moving.
 
 The Rclone Setup Guide for teslausb is available at: <https://github.com/marcone/teslausb/blob/v2.5/doc/SetupRClone.md>
 
@@ -186,7 +189,7 @@ sudo -i
 curl https://rclone.org/install.sh | sudo bash
 ```
 
-**Configure** Rclone with the settings and Storj DCS gateway credentials created above:
+**Configure** Rclone with the settings and Storj gateway credentials created above:
 
 ```Text
 # setup rclone
@@ -239,6 +242,6 @@ Shut down your Pi and plug it into your Tesla: If you are using a RPi4, you only
 
 To test that everything is set up correctly, you can navigate to the Pi’s web interface at \<rpi ip address>:80. Enable **_Honk to Save Clips_** on your Tesla, and then under the Tools page of your Raspberry Pi’s web interface, click the **_Trigger archive/sync_** button.
 
-Follow along on the **Archive log** page to see your clips being acknowledged and pushed to Storj DCS.
+Follow along on the **Archive log** page to see your clips being acknowledged and pushed to Storj.
 
-Finally, log in to your Storj DCS account and take advantage of the [](docId:4oDAezF-FcfPr0WPl7knd) to manage and share your clips!
+Finally, log in to your Storj account and take advantage of the [](docId:4oDAezF-FcfPr0WPl7knd) to manage and share your clips!

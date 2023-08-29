@@ -5,6 +5,12 @@ tags:
 docId: mSHcwI19g4F9qo0XBpiOh
 redirects:
   - /dcs/how-tos/nft-storage
+metadata:
+  title: Storing and Accessing NFTs with OpenSea on Decentralized Cloud
+  description:
+    Guide for NFT creators and developers to store and serve digital assets
+    on Storj using OpenSea. Covers uploading assets, creating public links, and registering
+    NFTs.
 ---
 
 Storj DCS makes it easy for NFT (Non-Fungible Token) creators and developers to store their digital art, music, and videos on the decentralized cloud via Storj DCS.

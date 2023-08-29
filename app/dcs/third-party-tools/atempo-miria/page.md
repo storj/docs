@@ -6,7 +6,11 @@ tags:
 redirects:
   - /dcs/how-tos/atempo-miria-integration
 metadata:
-  title: Atempo (Miria) Integration Guide
+  title: Integration Guide for Atempo Miria with Storj
+  description:
+    Learn how to integrate the Atempo Miria data management tool with Storj
+    for cost-effective, high-performance cloud storage, including set up and security
+    features.
 ---
 
 [Atempo](https://www.atempo.com/) is a leading software vendor providing data management solutions to companies worldwide. Miria is an open solution from Atempo that provides high-performance backup, movement, synchronization, and archiving for large data sets from heterogeneous sources. It delivers vendor-agnostic solutions for petascale NAS and cloud environments and has five pillars:

@@ -6,7 +6,12 @@ docId: QlBLsOc7Q7MhxEDvM9cod
 redirects:
   - /dcs/how-tos/splunk-integration-guide
 metadata:
-  title: Splunk Integration Guide
+  title: Integrating Storj with Splunk Analytics
+  description:
+    Learn how to integrate Splunk with Storj to empower your data storage.
+    The document guides you on creating a Storj account, setting up a bucket for data
+    storage and generating S3 compatible credentials, allowing Splunk to work with
+    Storj's cloud storage platform.
 ---
 
 [Splunk](https://www.splunk.com/) is a data analytics platform that provides data-driven insights across all aspects of a company.

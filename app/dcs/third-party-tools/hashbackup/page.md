@@ -6,7 +6,10 @@ tags:
 redirects:
   - /dcs/how-tos/backups-with-hashbackup
 metadata:
-  title: HashBackup integration guide
+  title: Guidelines for Integrating HashBackup with Storj
+  description:
+    Detailed tutorial on integrating the HashBackup system with Storj for
+    secure, efficient data backups and recovery strategies.
 ---
 
 ## Introduction

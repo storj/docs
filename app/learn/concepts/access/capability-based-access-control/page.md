@@ -3,6 +3,12 @@ title: Capability Based Access vs Access Control Lists
 docId: UmcbVZxfA8YJzjeq035-8
 redirects:
   - /dcs/concepts/access/capability-based-access-control
+metadata:
+  title: 'Comparison: Capability Based Access and Access Control Lists'
+  description:
+    Explore a comparison on how capability-based models in decentralized
+    cloud offer superior security compared to Public Cloud's ACL framework, with an
+    emphasis on Storj's model.
 ---
 
 Why decentralized cloud has a better security model than Cloud ACL

@@ -3,6 +3,12 @@ title: Definitions
 docId: zdT8t_UAROwruiARiquHr
 redirects:
   - /dcs/concepts/definitions
+metadata:
+  title: Glossary of Storj Network Terms
+  description:
+    Comprehensive guide clarifying the terminology used across Storj's
+    network like Peer Class, Storage Node, Uplink, and Satellite. It also covers definitions
+    related to encryption, erasure coding, and client-side technologies.
 ---
 
 The Storj DCS service uses an array of different technologies such as strong encryption and erasure codes to ensure a differentiated level of privacy and security across a network of peer classes. Some of the terms we use may be familiar and some may be new, but if you see a word you don't recognize or see a familiar word in a different context, you'll probably find a useful definition here:

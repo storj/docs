@@ -4,6 +4,11 @@ docId: A4kUGYhfgGbVhlQ2ZHXVS
 weight: 25
 redirects:
   - /dcs/billing-payment-and-accounts-1/pricing/usage-limit-increases
+metadata:
+  title: Requesting and Understanding Usage Limit Increases
+  description:
+    Provides information on requesting limit increases for different project
+    components in Storj, and the associated costs.
 ---
 
 If the default Project Limits do not appear to be appropriate for your use case, you may request a [Project Limit Increase form](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212). Increases in Project Limits may result in increased costs associated with your usage of Storj DCS.

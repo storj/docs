@@ -3,6 +3,12 @@ title: How Encryption is Implemented
 docId: KEt1PX_a8sbmwGXI4IhT_
 redirects:
   - /dcs/concepts/encryption-key/how-encryption-is-implemented
+metadata:
+  title: Implementing Data Encryption in a Decentralized Network
+  description:
+    Details on how Storj implements strong, client-side encryption to protect
+    data and metadata stored on its decentralized network. Discusses encryption algorithms,
+    concepts, and a high-level view of path encryption.
 ---
 
 Strong encryption is essential when data is stored on a network of storage nodes operated by 3rd parties

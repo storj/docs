@@ -2,11 +2,14 @@
 title: Kubernetes Backup via Velero
 tags:
   - cloud-ops
-docId: '-qeCzVrbZxM-Wz6P5SQbZ'
+docId: -qeCzVrbZxM-Wz6P5SQbZ
 redirects:
   - /dcs/how-tos/kubernetes-backup-via-velero
 metadata:
-  title: Kubernetes Backup via Velero
+  title: Velero-based Kubernetes Backup Guide
+  description:
+    Detailed guide on backing up and restoring Kubernetes clusters using
+    Storj and Velero CLI tool.
 ---
 
 ## Introduction

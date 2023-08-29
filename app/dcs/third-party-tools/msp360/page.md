@@ -6,7 +6,11 @@ tags:
 redirects:
   - /dcs/how-tos/msp360-integration-guide
 metadata:
-  title: MSP360 Integration Guide
+  title: Guide for MSP360 Integration
+  description:
+    Comprehensive guide to integrate MSP360, a cross-platform storage backup
+    and disaster recovery solution, with Storj. Explains benefits, integration process,
+    and requirements.
 ---
 
 MSP360 Managed Backup and from Cloudberry Labs is a cross-platform storage backup and disaster recovery solution designed for internal IT departments and managed service providers. It integrates with any S3-compatible cloud storage.

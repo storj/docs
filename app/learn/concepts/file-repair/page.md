@@ -3,6 +3,12 @@ title: File Repair
 docId: z4JgCuivlGbnn4YQMmlVX
 redirects:
   - /dcs/concepts/file-repair
+metadata:
+  title: Understanding File Repair in a Distributed Network
+  description:
+    Overview of how data durability is ensured in a distributed network,
+    even when nodes fail or leave the network, including a detailed explanation of
+    the File Repair function.
 ---
 
 This section describes at a high level how the system maintains availability of data on the network in the event that one or more storage nodes fail or leave the network.

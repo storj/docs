@@ -3,6 +3,12 @@ title: FileZilla Pro Integration
 docId: APk9353kCNcg5PKRPQ06u
 redirects:
   - /dcs/how-tos/filezilla-pro-integration-guide
+metadata:
+  title: Understanding FileZilla Pro Integration
+  description:
+    Guide on integrating FileZilla Pro with Storj. Learn differences between
+    FileZilla & FileZilla Pro, and how to leverage native uplink or Gateway MT for
+    file transfers.
 ---
 
 ## How to Integrate Filezilla Pro with Storj DCS to Easily Find, Transfer and Download All Of Your Files

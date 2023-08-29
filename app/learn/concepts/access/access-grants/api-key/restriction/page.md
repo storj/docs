@@ -3,6 +3,13 @@ title: Access Restrictions
 docId: BvM5lT5lXn3A7BNqs__1w
 redirects:
   - /dcs/concepts/access/access-grants/api-key/restriction
+metadata:
+  title: Understanding Access Restrictions and Caveats
+  description:
+    Details about encoding access restrictions into the API Key with Caveats,
+    including operations, bucket access, path restrictions, as well as time window
+    limitations. Additional information on the role of Access Grants for object retrieval,
+    sharing read access, and uplink client actions.
 ---
 
 Access restrictions are encoded into the API Key inside of an Access Grant via Caveats.

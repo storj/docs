@@ -6,7 +6,11 @@ tags:
 redirects:
   - /dcs/how-tos/container-registry-docker
 metadata:
-  title: Container Registry - Docker
+  title: Utilizing Storj as a Docker Container Registry
+  description:
+    A guide on storing Docker containers on Storj infrastructure. It covers
+    the structure of a container registry and explains how one can publish a Docker
+    container using Storj.
 ---
 
 Containers are wonderful: Containers provide a powerful way to package and deploy an application and make the runtime environment immutable and reproducible. But using containers also requires more infrastructure - distributing containers requires a docker registry, either a public one (like Dockerhub) or a private instance.

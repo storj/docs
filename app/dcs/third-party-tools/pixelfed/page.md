@@ -5,6 +5,12 @@ tags:
 docId: SboATM5Y5-lWay0Zg-k4T
 redirects:
   - /dcs/SboA-pixelfed
+metadata:
+  title: Configuring PixelFed with Storj
+  description:
+    Detailed guide on configuring PixelFed with Storj, with steps including
+    creating a Storj bucket, generating S3 compatible and linksharing credentials,
+    and setting up the PixelFed environment.
 ---
 
 We have a webinar walking you through it, but you can also refer to the steps below:

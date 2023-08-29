@@ -3,6 +3,12 @@ title: Access Management at the Edge
 docId: hPCZn6O9uBcooyg4dzgBO
 redirects:
   - /dcs/concepts/access/access-management-at-the-edge
+metadata:
+  title: Benefits of Edge-Based Authorization Model in Access Management
+  description:
+    Understanding the implementation and advantages of an edge-based delegated
+    authorization model, exploring topics like security model, access control, zero-knowledge
+    security architecture and distributed cloud storage.
 ---
 
 &#x20;A discussion of the implementation approach and benefits of an edge-based delegated authorization model.

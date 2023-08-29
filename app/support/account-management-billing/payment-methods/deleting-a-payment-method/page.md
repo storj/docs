@@ -3,6 +3,12 @@ title: Deleting a Payment Method
 docId: WMzdlxUZzKJ4TbNa8TETG
 redirects:
   - /dcs/billing-payment-and-accounts-1/storj-token/deleting-a-payment-method
+metadata:
+  title: Process for Removing a Payment Method from Your Account
+  description:
+    Guidance on how to remove a payment method from a Storj account. Includes
+    information on submitting a support ticket after deleting objects, buckets, and
+    Access Grants.
 ---
 
 To use the Storj DCS Paid Tier, a user must have a valid payment method on their account. Users may delete payment methods: &#x20;

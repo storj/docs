@@ -6,6 +6,12 @@ redirects:
   - /dcs/projects
   - /dcs/getting-started/satellite-developer-account/manage-projects
 weight: 5
+metadata:
+  title: Managing Projects on the Storj Console
+  description:
+    Learn how to manage, create, modify, limit and delete your projects
+    on the Storj Console. Information on how usage, billing and invoicing
+    works at the project level is also included.
 ---
 
 ## Introduction

@@ -2,8 +2,13 @@
 title: When to use different encryption keys
 docId: DUfoyppOZA756jGFgj9qw
 redirects:
-  - >-
-    /dcs/concepts/access/encryption-and-keys/when-to-use-different-encryption-keys
+  - /dcs/concepts/access/encryption-and-keys/when-to-use-different-encryption-keys
+metadata:
+  title: Understanding Use Cases for Multiple Encryption Keys
+  description:
+    Explains the use of multiple encryption keys in different scenarios,
+    discussing how encryption keys are used in Access Grants and the impact of different
+    passphrases on data access and security.
 ---
 
 Each Access Grant includes only one encryption key, but there are use cases where multiple keys are relevant and useful.

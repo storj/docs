@@ -3,6 +3,12 @@ title: Auth Service
 docId: cSsmRiNfJD_NK3ksKCPQ4
 redirects:
   - /dcs/concepts/edge-services/auth-service
+metadata:
+  title: Understanding Storj's Auth Service and its Security Layers
+  description:
+    A deep-dive into Storj's Auth Service, explaining its role in enabling
+    Storj S3-compatible gateway and Linkshare service to interact with cloud-native
+    applications.
 ---
 
 The Auth Service is one of the Edge Services that enables the Storj S3-compatible gateway and Linkshare service to interact with browser-based or other cloud-native applications.

@@ -6,7 +6,10 @@ tags:
 redirects:
   - /dcs/how-tos/hammerspace-integration-guide
 metadata:
-  title: Hammerspace Integration Guide
+  title: How to Integrate Hammerspace with Storj
+  description:
+    A comprehensive guide on integrating Hammerspace with Storj, including
+    benefits, prerequisites, account and bucket creation, and S3 credential generation.
 ---
 
 [**Hammerspace**](https://hammerspace.com/) is a software solution that creates a global data environment mimicking the experience of local access to globally distributed data. Data connected under Hammerspace can include different, typically incompatible storage types, such as data centers and cloud storage, as well as locations. Hammerspace provides a unified view and control over all connected data as a single, easily accessible dataset.

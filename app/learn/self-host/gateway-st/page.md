@@ -6,6 +6,12 @@ redirects:
   - /api-reference/s3-gateway
   - /dcs/api-reference/s3-gateway/gateway-st-advanced-usage
   - /dcs/downloads/download-self-hosted-s3-compatible-gateway
+metadata:
+  title: Setting Up a Self-Hosted S3 Compatible Gateway
+  description:
+    Steps to set up a self-hosted S3 Compatible Gateway including requirements,
+    dependencies, download and installation, and configuration. Also covers cost-saving
+    techniques and performance improvements.
 ---
 
 {% callout type="info"  %}

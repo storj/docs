@@ -2,10 +2,11 @@
 title: Product Overview
 docId: 2npG1YD8Y7JH9UiENkMqR
 redirects:
+  - /dcs/concepts/overview
   - /dcs/storage/considerations
   - /dcs/storage
 metadata:
-  title: Introduction to Storj DCS
+  title: Introduction to Storj
   description:
     Learn about Storj, the open-source software that creates a secure and
     durable cloud storage service for developers.
@@ -16,17 +17,17 @@ weight: 0
 
 Storj makes open-source software that anyone can run - individuals with a Network Attached Storage Device or NAS, those with desktop computers that are always on, businesses, or data centers - that allows these users to share unused disk drive space and bandwidth with the network. Our software aggregates all of that storage capacity and bandwidth to create an extremely secure, private, and durable cloud storage service for developers.&#x20;
 
-Storj makes that storage and bandwidth available as a distributed cloud object storage service for developers, with an enterprise-grade 99.95% availability, eleven 9s of durability, and S3 compatibility under the Storj DCS brand.&#x20;
+Storj makes that storage and bandwidth available as a distributed cloud object storage service for developers, with an enterprise-grade 99.95% availability, eleven 9s of durability, and S3 compatibility under the Storj brand.&#x20;
 
-## What is Storj DCS?
+## What is Storj?
 
-Storj DCS (Decentralized Cloud Storage) is an encrypted, secure, and affordable object storage service that enables you to store, back up, and archive large amounts of data to the decentralized cloud.
+Storj is an encrypted, secure, and affordable object storage service that enables you to store, back up, and archive large amounts of data to the decentralized cloud.
 
 <https://www.youtube.com/watch?v=JgKdBRIyIps>
 
-For developers who demand ownership of their data and who want to build with confidence, Storj Decentralized Cloud Storage (DCS) is private by design and secure by default—delivering unparalleled data protection and privacy when compared to traditional centralized cloud object storage alternatives.
+For developers who demand ownership of their data and who want to build with confidence, Storj is private by design and secure by default—delivering unparalleled data protection and privacy when compared to traditional centralized cloud object storage alternatives.
 
-Storj DCS offers affordable and predictable pricing, S3 compatibility, a robust library of open source technical documentation, and familiar development tools - along with a vibrant user community - which enables developers to economically and easily learn and leverage decentralized cloud storage technology to take control of their data when building the next great application or service.
+Storj offers affordable and predictable pricing, S3 compatibility, a robust library of open source technical documentation, and familiar development tools - along with a vibrant user community - which enables developers to economically and easily learn and leverage decentralized cloud storage technology to take control of their data when building the next great application or service.
 
 ## Peer Classes
 
@@ -34,13 +35,13 @@ There are 3 main components, or peer classes, on the network - Storage nodes, th
 
 The Storage Node stores data for others, and gets paid for storage and bandwidth. All data stored on storage nodes is client-side encrypted and erasure-coded.&#x20;
 
-Uplink Clients enables developers to store data on Storj DCS, handling end-to-end encryption from the client-side (by default), and erasure coding, where files are split into 80 pieces then distributed across our network of storage nodes. Each of the 80 pieces is stored on different, diverse storage nodes, with different operators, power supplies, networks, and geographies, etc. - yielding tremendous security, performance, and durability advantages. The client-side managed, end-to-end encryption combined with our edge-based access management capabilities provide easy-to-use tools for building applications that are more private, more secure, and less susceptible to a range of common attack vectors. Uplink clients include both our self-hosted and Storj-hosted S3 compatible gateways, the CLI, and the libuplink Go library and bindings.&#x20;
+Uplink Clients enables developers to store data on Storj, handling end-to-end encryption from the client-side (by default), and erasure coding, where files are split into 80 pieces then distributed across our network of storage nodes. Each of the 80 pieces is stored on different, diverse storage nodes, with different operators, power supplies, networks, and geographies, etc. - yielding tremendous security, performance, and durability advantages. The client-side managed, end-to-end encryption combined with our edge-based access management capabilities provide easy-to-use tools for building applications that are more private, more secure, and less susceptible to a range of common attack vectors. Uplink clients include both our self-hosted and Storj-hosted S3 compatible gateways, the CLI, and the libuplink Go library and bindings.&#x20;
 
-The Satellite is a set of hosted services that handles developer account access, API access management, metadata management, storage node reputation, data audit, and data repair, as well as billing developers and payment for Storage Nodes. Storj Labs satellites are operated under the Storj DCS brand.&#x20;
+The Satellite is a set of hosted services that handles developer account access, API access management, metadata management, storage node reputation, data audit, and data repair, as well as billing developers and payment for Storage Nodes. Storj Labs satellites are operated under the Storj brand.&#x20;
 
 ## How it's Different
 
-To give you a sense of how the Storj DCS service is different, it’s helpful to describe what happens with a round-trip upload and download of a file. Files are uploaded using an Uplink client, whether directly using the CLI or S3 compatible gateway, or indirectly using a tool that has integrated the libuplink library, such as FileZilla, Rclone or Restic.&#x20;
+To give you a sense of how the Storj service is different, it’s helpful to describe what happens with a round-trip upload and download of a file. Files are uploaded using an Uplink client, whether directly using the CLI or S3 compatible gateway, or indirectly using a tool that has integrated the libuplink library, such as FileZilla, Rclone or Restic.&#x20;
 
 ## What Happens When You Upload
 
@@ -56,9 +57,9 @@ The Uplink Client attempts a few more than 80 during the upload process to elimi
 
 When the Uplink Client downloads a file, it’s essentially the same process as an upload but in reverse. The Uplink Client requests a file from the Satellite and the Satellite returns a list of 35 Storage Nodes from which the Uplink Client can retrieve the pieces of the file. The Uplink Client starts attempting to download pieces from all 35 Storage Nodes, again, stopping once it has retrieved the 29 pieces needed to reconstitute the file after eliminating latency from the long-tail effect. The pieces are re-encoded and then decrypted by the Uplink client as only it has the encryption key.&#x20;
 
-## Why Developers Love Storj DCS
+## Why Developers Love Storj
 
-Even with the sophisticated privacy and security features and the default multi-region availability, developers love Storj DCS because it's extremely easy for them to get started and build more secure and private applications.&#x20;
+Even with the sophisticated privacy and security features and the default multi-region availability, developers love Storj because it's extremely easy for them to get started and build more secure and private applications.&#x20;
 
 When uploading and downloading files, a developer or app issues a simple `cp` command - the Uplink Client does the rest, abstracting all of the complexity of encryption, erasure coding, and distributing pieces on storage nodes to the Storj software in the background.&#x20;
 
@@ -66,7 +67,7 @@ What's more, developers can use the Satellite Admin Console web interface or the
 
 ## Features
 
-Developers have a wide range of choices for S3-compatible object storage, but Storj DCS provides a number of key advantages to help developers build more secure and private applications:
+Developers have a wide range of choices for S3-compatible object storage, but Storj provides a number of key advantages to help developers build more secure and private applications:
 
 {% quick-links %}
 {% quick-link %}
@@ -105,7 +106,7 @@ Download your data anytime you need it with multi-region architecture, no single
 
 **Durability**
 
-Automate file repair and know that Reed-Solomon erasure coding enables the highest levels of durability for all files uploaded to Storj DCS.
+Automate file repair and know that Reed-Solomon erasure coding enables the highest levels of durability for all files uploaded to Storj.
 {% /quick-link %}
 
 {% quick-link %}
@@ -140,6 +141,6 @@ Take advantage of familiar development tools and robust technical documentation,
 
 **Community Driven**
 
-Share, discuss and collaborate with other open source developers in the Storj DCS community and find answers to questions in our very active forum.
+Share, discuss and collaborate with other open source developers in the Storj community and find answers to questions in our very active forum.
 {% /quick-link %}
 {% /quick-links %}

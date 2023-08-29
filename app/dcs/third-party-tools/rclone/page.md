@@ -5,6 +5,11 @@ tags:
 docId: LdrqSoECrAyE_LQMvj3aF
 redirects:
   - /dcs/how-tos/sync-files-with-rclone
+metadata:
+  title: Getting Started with Rclone Configuration
+  description:
+    A beginner's guide to setting up and using Rclone with Storj, including
+    different integration patterns for optimized performance and security.
 ---
 
 ## Introduction

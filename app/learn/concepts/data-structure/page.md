@@ -3,6 +3,12 @@ title: Data Structure
 docId: Lq9m1BFtBYYz1I-4RwEhp
 redirects:
   - /dcs/concepts/data-structure
+metadata:
+  title: Understanding Hierarchical Data Structure and Advanced Terminology
+  description:
+    Details the hierarchy of data storage in Storj, with focus on terms
+    like projects, buckets, objects, object key, segments, inline and remote segment,
+    stripe, erasure share, and piece.
 ---
 
 How data is logically segmented on the network

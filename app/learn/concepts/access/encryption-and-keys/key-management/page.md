@@ -3,6 +3,11 @@ title: Key Management
 docId: sj3WfIZpLE65brw6Dtp9r
 redirects:
   - /dcs/concepts/access/encryption-and-keys/key-management
+metadata:
+  title: Managing Encryption Keys
+  description:
+    Understanding the importance of creating, backing up, securing, and
+    choosing complex encryption keys in ensuring your data's security.
 ---
 
 End-to-end encryption means that you are responsible for creating and maintaining the encryption keys to your data. Lose your encryption keys and you've effectively lost access to your data.

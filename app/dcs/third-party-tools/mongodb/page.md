@@ -5,6 +5,11 @@ tags:
   - cloud-ops
 redirects:
   - /dcs/how-tos/mongodb-ops-manager-backup
+metadata:
+  title: Guide on Deploying MongoDB Ops Manager with Storj DCS
+  description:
+    Step-by-step tutorial on how to deploy, monitor, and scale MongoDB
+    using Ops Manager on your own infrastructure with Storj DCS.
 ---
 
 ## Introduction

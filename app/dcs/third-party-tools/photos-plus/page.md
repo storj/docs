@@ -6,7 +6,8 @@ tags:
 redirects:
   - /dcs/how-tos/photos-plus-integration-guide
 metadata:
-  title: Photos+ Integration Guide
+  title: Guide to Integrate Photos+ App with Storj
+  description: Step-by-step guide on configuring Photos+ app to use Storj for your cloud storage needs.
 ---
 
 ## Introduction

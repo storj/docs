@@ -3,6 +3,12 @@ title: Access Revocation
 docId: k-qsdTq8rYcpbfhWIFLeR
 redirects:
   - /dcs/concepts/access/access-revocation
+metadata:
+  title: Revoking Client-Side Delegated Authorization
+  description:
+    Describes how to revoke client-side delegated authorization using hierarchically
+    deterministic API keys on Storj, either by deleting a primary Access Grant or
+    adding it to the Revocation service.
 ---
 
 Storj DCS provides an easy way to revoke client-side delegated authorization with hierarchically deterministic API keys

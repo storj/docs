@@ -3,6 +3,11 @@ title: Common Architectural Pattern
 docId: wpnNd2zF3PXpmlv5haLnO
 redirects:
   - /dcs/solution-architectures/common-architectural-patterns
+metadata:
+  title: Overview of Common Integration Patterns for Storj Uplink
+  description:
+    Outlines various common integration patterns for Storj Uplink, offering
+    a solution architecture overview showcasing each pattern's decentralized advantage.
 ---
 
 ## Introduction

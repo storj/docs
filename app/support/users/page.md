@@ -4,6 +4,11 @@ docId: 0_4hY4Dp5ju9B8Ec6OTf3
 weight: 20
 redirects:
   - /dcs/getting-started/satellite-developer-account/users
+metadata:
+  title: Adding Users to a Project Team
+  description:
+    Step-by-step guide on how to add collaborative developers to a project
+    on the same satellite.
 ---
 
 ## Introduction

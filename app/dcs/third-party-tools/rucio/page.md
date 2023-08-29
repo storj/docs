@@ -6,7 +6,10 @@ tags:
 redirects:
   - /dcs/how-tos/configuring-rucio-with-storj
 metadata:
-  title: Configuring Rucio with Storj
+  title: Rucio Integration Guide
+  description:
+    This document provides a step-by-step guide for configuring Rucio,
+    an open-source scientific data management framework, with Storj.
 ---
 
 ## Overview

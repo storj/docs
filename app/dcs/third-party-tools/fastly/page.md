@@ -6,7 +6,10 @@ tags:
 redirects:
   - /dcs/how-tos/fastly-integration
 metadata:
-  title: Fastly integration guide
+  title: Guide for Integrating Fastly with Storj
+  description:
+    A step-by-step guide on how to connect Storj buckets with Fastly, configure
+    Fastly as edge server, and verify the Fastly service configuration.
 ---
 
 ## Introduction

@@ -4,6 +4,11 @@ docId: pxdnqsVDjCLZgeEXt2S6x
 weight: 1
 redirects:
   - /dcs/buckets
+metadata:
+  title: Creating Buckets Using Different Tools
+  description:
+    Guide on how to create Storj buckets using command-line tools or the
+    Storj Console.
 ---
 
 You can create a bucket from various command-line tools or the Storj Console.

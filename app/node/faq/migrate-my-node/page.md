@@ -38,7 +38,7 @@ Your default identity folder is located in: `~/.local/share/storj/identity/stora
 
 Your default orders folder is located in the data location.
 
-&#x20;[](docId:jEntWNvi2M6Eo74NICIJg)
+[](docId:jEntWNvi2M6Eo74NICIJg)
 {% /tab %}
 
 {% tab label="macOS" %}

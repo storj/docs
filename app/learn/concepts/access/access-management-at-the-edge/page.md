@@ -11,7 +11,7 @@ metadata:
     security architecture and distributed cloud storage.
 ---
 
-&#x20;A discussion of the implementation approach and benefits of an edge-based delegated authorization model.
+A discussion of the implementation approach and benefits of an edge-based delegated authorization model.
 
 One of the areas where we’re seeing the strongest interest from developers, customers and partners building apps is our [security model and access control](https://www.storj.io/blog/2019/12/secure-access-control-in-the-decentralized-cloud/) layer. The security and privacy capabilities of the platform are some of the most differentiating features and they give our partners and customers some exciting new tools.
 

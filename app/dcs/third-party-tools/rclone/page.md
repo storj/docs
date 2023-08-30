@@ -16,7 +16,7 @@ metadata:
 
 These 'Getting Starting' tutorials will showcase the process for configuring [Rclone](https://rclone.org) with Storj DCS. We will cover only some of the basic features in this guide.
 
-&#x20;To make the most of Rclone, look at the complete Rclone [command reference](https://rclone.org/commands/).
+To make the most of Rclone, look at the complete Rclone [command reference](https://rclone.org/commands/).
 
 {% callout type="danger"  %}
 These guides are experimental. The main functionality appears to work, but there are expected to be undiscovered issues (including issues around connection timeouts). Please report any issues you may run into on this [forum thread](https://forum.storj.io/t/two-more-tech-previews-rclone-and-restic/6072).

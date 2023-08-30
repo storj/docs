@@ -68,7 +68,7 @@ For example, running
 uplink share --dns www.example.com sj://bucket/prefix
 ```
 
-&#x20; will output a zone file like the following:
+ will output a zone file like the following:
 
 ```Text
 $ORIGIN example.com.
@@ -92,7 +92,7 @@ Ensure you include the trailing `.` at the end of your CNAME if your DNS provide
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/6lBTvetkB98edSAjvyB_q_root.png)
 
-&#x20;**Access Key:** the readonly and public access key to your root path.
+**Access Key:** the readonly and public access key to your root path.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jYrqviRrJEWf_dUioa0TE_access.png)
 

@@ -41,7 +41,7 @@ FAQ, troubleshooting, and support
 {% /quick-link %}
 {% /quick-links %}
 
-&#x20;
+
 Our support process, responsibilities, and hours are published in our [Terms of Service](https://www.storj.io/terms-of-service). Our support hours are:
 
 - Between 9:00 A.M. to 8:00 P.M. Eastern Time on Business Days for Severity Level 1 Errors

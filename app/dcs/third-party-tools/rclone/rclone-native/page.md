@@ -183,7 +183,7 @@ e/n/d/r/c/s/q> q
 {% callout type="info"  %}
 For additional security, you should consider using the (s) option
 
-&#x20;`Set configuration password` option. It will encrypt the `rclone.conf` configuration file. This way secrets like the [](docId:OXSINcFRuVMBacPvswwNU) (access token), the encryption passphrase, and the access grant won't be stolen if an attacker get access to your configuration file.
+`Set configuration password` option. It will encrypt the `rclone.conf` configuration file. This way secrets like the [](docId:OXSINcFRuVMBacPvswwNU) (access token), the encryption passphrase, and the access grant won't be stolen if an attacker get access to your configuration file.
 {% /callout %}
 
 ## Create a Bucket

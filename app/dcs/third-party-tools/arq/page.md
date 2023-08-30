@@ -65,7 +65,7 @@ Files are stored encrypted within the Storj network. Using Arq's encryption woul
 Choose which files you’d like to back up, and click **Create Backup Plan**:
 
 {% callout type="warning"  %}
-&#x20;To change the schedule, the files being backed up, and many other options, click on your backup plan on the left and click “Edit…”.
+To change the schedule, the files being backed up, and many other options, click on your backup plan on the left and click “Edit…”.
 {% /callout %}
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/snmPnsOGwsJ2aQ7Ub_wiy_screen-shot-2022-05-27-at-94712-am-1024x814.png)

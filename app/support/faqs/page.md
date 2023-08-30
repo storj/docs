@@ -208,4 +208,4 @@ The Storj DCS service is not designed to handle identity management for end user
 
 # Need help?
 
-&#x20;If you don't find the answers you're looking for, visit our [](docId:h0GeE0-z8ta1rOlKLL7lL).
+If you don't find the answers you're looking for, visit our [](docId:h0GeE0-z8ta1rOlKLL7lL).

@@ -59,7 +59,7 @@ tools/run_tests_docker.sh -i
 The image has python3 linked in `/usr/bin/python` but yum requires python2
 
 One workaround is to change the first line of `/usr/bin/yum` and `/usr/libexec/urlgrabber-ext-down`&#x20;
-&#x20;to use `/usr/bin/python2` .
+to use `/usr/bin/python2` .
 
 `vi /usr/bin/yum` < now change "python" to "python2" in the first line
 

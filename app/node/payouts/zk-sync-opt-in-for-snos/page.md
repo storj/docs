@@ -10,7 +10,7 @@ How to configure L2 Payments with zkSync
 
 ## Background
 
-&#x20;L2 scaling aligns with our goal of bringing decentralized cloud storage to the masses - via more efficient and autonomous payments.
+L2 scaling aligns with our goal of bringing decentralized cloud storage to the masses - via more efficient and autonomous payments.
 
 Here are a few of the benefits of receiving payouts through this approach:
 

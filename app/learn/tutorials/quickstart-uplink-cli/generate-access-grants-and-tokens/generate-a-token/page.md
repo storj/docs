@@ -53,7 +53,7 @@ For anyone who has previously configured an Uplink, please use a named access. I
 8\. Generate the Access Grant by running `uplink access restrict` with no restrictions.
 
 {% callout type="info"  %}
-&#x20;If you chose an access name, you'll need to specify it in the following command as `--access=name`
+If you chose an access name, you'll need to specify it in the following command as `--access=name`
 {% /callout %}
 
 {% code-group %}

@@ -46,7 +46,7 @@ To complete the integration, follow the steps below.
 
 To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
 
-Navigate to <https://storj.io/signup> to sign up. Enter your full name, email address, and a password, as shown below:
+Navigate to <https://www.storj.io/signup?partner=splunk> to sign up. Enter your full name, email address, and a password, as shown below:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 

@@ -27,7 +27,7 @@ metadata:
 
 For more information, visit <https://www.atempo.com/solutions/hybrid-nas-storage-synchronizations/#>
 
-## Advantages of Miria with Storj 
+## Advantages of Miria with Storj
 
 The combination of Miria and Storj provides complete flexibility for cloud management at a competitive cost. Miria handles data archiving and organization from primary storage to the Storj cloud S3 infrastructure; large data sets can be hosted, stored, replicated, and recovered at any time through Storj's platform.
 
@@ -61,7 +61,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 
@@ -139,7 +139,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 ### Miria Configuration
 
-1\. Log into the Miria web UI. In the left panel, select **Infrastructure**, then **Object Storages**.&#x20;
+1\. Log into the Miria web UI. In the left panel, select **Infrastructure**, then **Object Storages**.
 
 2\. Select **New Storage Manager**.
 
@@ -157,11 +157,11 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/KApbFdOcEAxy0sPeG-Xyr_2.png)
 
-9\. The new **Storage Manager Container **is ready for data storage. You can store backups, archives, tiered data, or synchronized files from primary storage.&#x20;
+9\. The new **Storage Manager Container **is ready for data storage. You can store backups, archives, tiered data, or synchronized files from primary storage.
 
 ## Success!
 
-1\. Create a new **project**.&#x20;
+1\. Create a new **project**.
 
 2\. Configure **Start the task** and check its progression.
 

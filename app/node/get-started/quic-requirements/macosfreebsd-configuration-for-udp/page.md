@@ -10,7 +10,7 @@ UDP transfers on high-bandwidth connections can be limited by the size of the UD
 
 Our software attempts to increase the UDP receive buffer size. However, on macOS/FreeBSD, an application is only allowed to increase the buffer size up to a maximum value set in the kernel, and the default maximum value is too small for high-bandwidth UDP transfers.
 
-We recommend increasing the maximum buffer size by running the following to increase it to \~2.5MB. Accordingly [article of Cameron Sparr](https://medium.com/@CameronSparr/increase-os-udp-buffers-to-improve-performance-51d167bb1360), on BSD/Darwin systems you need to add about a 15% padding to the kernel limit socket buffer, i.e. `2.5MB * 1.15 = 2.875MB`.&#x20;
+We recommend increasing the maximum buffer size by running the following to increase it to \~2.5MB. Accordingly [article of Cameron Sparr](https://medium.com/@CameronSparr/increase-os-udp-buffers-to-improve-performance-51d167bb1360), on BSD/Darwin systems you need to add about a 15% padding to the kernel limit socket buffer, i.e. `2.5MB * 1.15 = 2.875MB`.
 
 You may check the current UDP/IP buffer limit by typing the following command:
 

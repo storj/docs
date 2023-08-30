@@ -27,7 +27,7 @@ Also, you can [enable WSL, install Ubuntu from the Microsoft store](https://docs
 {% quick-link %}
 ✍🏼
 
-[](docId:aKZt7A92CnGjPy1JY1YpF)&#x20;
+[](docId:aKZt7A92CnGjPy1JY1YpF)
 {% /quick-link %}
 {% /quick-links %}
 
@@ -38,7 +38,7 @@ Your default identity folder is located in: `~/.local/share/storj/identity/stora
 
 Your default orders folder is located in the data location.
 
-&#x20;[](docId:jEntWNvi2M6Eo74NICIJg)
+[](docId:jEntWNvi2M6Eo74NICIJg)
 {% /tab %}
 
 {% tab label="macOS" %}
@@ -54,7 +54,7 @@ Your default orders folder is located in the data location.
 
 We will assume that your parameters look like this:
 
-- the source folder where the existing identity is located is `/mnt/storj/identity/storagenode`;&#x20;
+- the source folder where the existing identity is located is `/mnt/storj/identity/storagenode`;
 
 - the source folder where the existing stored data is located is `/mnt/storj/storagenode/storage`;
 

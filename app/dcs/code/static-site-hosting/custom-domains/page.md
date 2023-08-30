@@ -95,7 +95,7 @@ uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url>
 {% /tab %}
 {% /tabs %}
 
-Anything shared with `--dns` will be _readonly_ and available _publicly_ (no secret key needed).&#x20;
+Anything shared with `--dns` will be _readonly_ and available _publicly_ (no secret key needed).
 
 The command above prints a zone file with the information needed to create 3 DNS records. Your CNAME should match the linkshare service domain (`link.storjshare.io` by default).
 
@@ -117,9 +117,9 @@ txt-<hostname> 	IN	TXT  	storj-access:<access key>
 
 - Create two TXT records, prepending `txt-` to your hostname. The value of each of these should also be in the generated file above:
 
-  - `storj-root:<bucket>/<prefix>`&#x20;
+  - `storj-root:<bucket>/<prefix>`
 
-  - `storj-access:<access key id>`&#x20;
+  - `storj-access:<access key id>`
 
 Your final set of DNS entries should look like the following:
 
@@ -139,7 +139,7 @@ To enable HTTPS for your custom domain (Pro Accounts Only) create one last TXT r
 
 ## Frequently Asked Questions
 
-### How do I set up a custom domain for my linksharing?&#x20;
+### How do I set up a custom domain for my linksharing?
 
 To set up a custom domain, you need to create several DNS entries in your domain's DNS configuration, such as a CNAME record that points to the linksharing service domain, a TXT record that contains the root of your file share (either a bucket or prefix), and a TXT record that contains your access key. Please refer to the steps above for more details.
 

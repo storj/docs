@@ -49,7 +49,7 @@ For more details, visit <https://owncloud.dev/>
 
 To begin, you will need to create a Storj account [https://storj.io/signup?partner=owncloud. ](https://storj.io/signup?partner=owncloud) If you already have an account, go to <https://storj.io/login>.
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 
@@ -141,7 +141,7 @@ Then, you have to configure the S3NG specific settings:
 
 - **STORAGE_USERS_S3NG_SECRET_KEY**: This sets the secret key for the Storj service created above. This should be kept secure as it, along with the access key, allows access to your Storj account.
 
-- **STORAGE_USERS_S3NG_BUCKET**: This sets the bucket in the Storj service where oCIS will store its data.&#x20;
+- **STORAGE_USERS_S3NG_BUCKET**: This sets the bucket in the Storj service where oCIS will store its data.
 
 ```shell
 # activate s3ng storage driver

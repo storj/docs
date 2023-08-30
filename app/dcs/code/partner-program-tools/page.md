@@ -17,7 +17,7 @@ How to configure the User agent for partner value attribution from commandline, 
 
 ## Partner Program
 
-The Storj Partner Ecosystem enables developers to build Storj DCS Connectors, which their customers can use to store data on Storj DSC.&#x20;
+The Storj Partner Ecosystem enables developers to build Storj DCS Connectors, which their customers can use to store data on Storj DSC.
 
 The data itself is client-side encrypted, however we are able to measure the aggregate volume of storage and bandwidth usage. When a user of a Storj DCS Connector stores data in a bucket, we are able to give the partner attribution for the stored data and the used bandwidth for the Connector Integration, and provide programmatic revenue share.
 

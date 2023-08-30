@@ -17,11 +17,11 @@ If the default Project Limits do not appear to be appropriate for your use case,
 
 The Free Tier is not eligible for Project Limit Increases.
 
-## Object Storage&#x20;
+## Object Storage
 
 When you request an increase to the Object Storage Project Limit, there is no additional fee beyond the cost for any incremental Object Storage utilized on Storj DCS.
 
-## Egress Bandwidth&#x20;
+## Egress Bandwidth
 
 When you request an increase to the Egress Bandwidth Project Limit, there is no additional fee beyond the cost for any incremental Egress Bandwidth utilized on Storj DCS.
 

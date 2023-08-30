@@ -90,7 +90,7 @@ sudo mv identity /usr/local/bin/identity
 {% /tabs %}
 
 {% callout type="info"  %}
-**This can take several hours or days, depending on your machines processing power and luck.**&#x20;
+**This can take several hours or days, depending on your machines processing power and luck.**
 
 Plan to run your Node on a NAS, Raspberry Pi or similar? Create your identity on a more powerful machine and transfer it over.
 {% /callout %}

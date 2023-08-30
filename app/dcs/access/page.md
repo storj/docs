@@ -97,7 +97,7 @@ The Access Grant screen allows you to create or delete Access Grants, generate c
    Keep your full-rights Access Grant secret, it contains the encryption key and will enable uploading, downloading or deleting your data from the entire project!
    {% /callout %}
 
-9. Your Access Grant should have been output.&#x20;
+9. Your Access Grant should have been output.
 
 {% callout type="success"  %}
 The alternative for using the uplink setup command and then uplink share is to use the `uplink access create` command instead, it will print the Access Grant right away.

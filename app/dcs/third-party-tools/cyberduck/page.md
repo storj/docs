@@ -142,7 +142,7 @@ _If you do not feel comfortable entering this sensitive information into your br
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/N6BqEH4bKainTDV7T_spV_screen-shot-2021-04-16-at-90350-am.png)
 
-Be sure to download the Access Grant to save it and then click on the **Generate S3 Gateway Credentials** link.&#x20;
+Be sure to download the Access Grant to save it and then click on the **Generate S3 Gateway Credentials** link.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_1N0mondSjpRRtnlrLkrc_screen-shot-2021-04-16-at-90354-am.png)
 
@@ -166,7 +166,7 @@ Whether using Windows or macOS, you’ll simply add the Storj Gateway S3 credent
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rAvBeUlBjTAhTZnsj_S7H_image.png)
 
-**Click Connect**&#x20;
+**Click Connect**
 
 {% callout type="info"  %}
 _Use endpoint without, i.e., \***\*gateway.us1.storjshare.io\*\*** in the Cyberduck \***\*Server\*\*** entry above. Otherwise, Cyberduck will revert to WEBDAV (HTTPS), causing a connection error._

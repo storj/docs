@@ -16,11 +16,11 @@ We have a webinar walking you through it, but you can also refer to the steps be
 
 ## Prerequisites:
 
-- Installed ruby 3.1.2 or later&#x20;
+- Installed ruby 3.1.2 or later
 
 - Installed rails 7.0.4.2 or later
 
-- Storj S3 compatiable access and secret key (see [](docId:AsyYcUJFbO1JI8-Tu8tW3))&#x20;
+- Storj S3 compatiable access and secret key (see [](docId:AsyYcUJFbO1JI8-Tu8tW3))
 
 - A bucket created on Storj (see [](docId:pxdnqsVDjCLZgeEXt2S6x))
 
@@ -38,7 +38,7 @@ Install ActiveStorage
 rails active_storage:install
 ```
 
-Edit `Gemfile`, add the `aws-sdk-s3` gem and run `bundle install`&#x20;
+Edit `Gemfile`, add the `aws-sdk-s3` gem and run `bundle install`
 
 ```ruby
 gem "aws-sdk-s3", require: false
@@ -50,7 +50,7 @@ Edit the rails credentials
 rails credentials:edit
 ```
 
-Add to the credentials your access key and secret key (see [](docId:AsyYcUJFbO1JI8-Tu8tW3)) under `storj:`&#x20;
+Add to the credentials your access key and secret key (see [](docId:AsyYcUJFbO1JI8-Tu8tW3)) under `storj:`
 
 ```yaml
 storj:
@@ -58,7 +58,7 @@ storj:
   secret_access_key: <secret_key>
 ```
 
-Edit `config/storage.yml`, enter the following to configure ActiveStorage to use Storj.&#x20;
+Edit `config/storage.yml`, enter the following to configure ActiveStorage to use Storj.
 
 Be sure to replace the bucket with the one created earlier (see [](docId:pxdnqsVDjCLZgeEXt2S6x))
 
@@ -72,7 +72,7 @@ storj:
   bucket: active-storj
 ```
 
-Edit `config/environments/development.rb`, change the ActiveStorage service to `:storj` &#x20;
+Edit `config/environments/development.rb`, change the ActiveStorage service to `:storj`
 
 ```ruby
 config.active_storage.service = :storj
@@ -86,13 +86,13 @@ First we'll need a basic app to interact with generated with [Rails scaffolding]
 rails generate scaffold Name name
 ```
 
-Edit `config/routes.rb` set `root` to `"names#index`&#x20;
+Edit `config/routes.rb` set `root` to `"names#index`
 
 ```ruby
   root "names#index"
 ```
 
-Edit `app/models/name.rb` to have `has_one_attached`&#x20;
+Edit `app/models/name.rb` to have `has_one_attached`
 
 ```ruby
 class Name < ApplicationRecord
@@ -110,7 +110,7 @@ Navigate to <http://localhost:3000/names/new> and you should see the following
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/exMR-EZ3OKl8eokEZk-Ox_screenshot-2023-02-02-at-41007-pm.png)
 
-Click "Create Name"&#x20;
+Click "Create Name"
 
 Edit `app/views/names/show.html.erb` to include `<%= image_tag @name.main_image %>` to display the image
 
@@ -154,7 +154,7 @@ const application = Application.start()
 ActiveStorage.start()
 ```
 
-Modify `app/views/names/_form.html.erb` `form.file_field` to include `direct_upload: true`&#x20;
+Modify `app/views/names/_form.html.erb` `form.file_field` to include `direct_upload: true`
 
 ```erb
 <div>

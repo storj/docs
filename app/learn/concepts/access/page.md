@@ -11,7 +11,7 @@ metadata:
     encryption, and Access Grants.
 ---
 
-Distributed and decentralized cloud storage is a fantastic way to take advantage of underutilized storage and bandwidth, but in order to provide highly available and durable cloud storage, we needed to build in some fairly sophisticated security and privacy controls.&#x20;
+Distributed and decentralized cloud storage is a fantastic way to take advantage of underutilized storage and bandwidth, but in order to provide highly available and durable cloud storage, we needed to build in some fairly sophisticated security and privacy controls.
 
 Since we had to build with the assumption that any Peer Class besides the Uplink could be run by an untrusted person, we had to implement a zero-knowledge security architecture. This turns out to not only make our system far more resistant to attacks than traditional architectures but also brings significant benefits to developers building apps on Storj.
 
@@ -45,4 +45,4 @@ Understanding how **Authorization** and **Encryption** work together is crit
 
 Storj uses hierarchically deterministic Access Grants as an access management layer for objects. An Access Grant is a security envelope that contains a satellite address, a restricted API Key, and a restricted path-based encryption key—everything an application needs to locate an object on the network, access that object, and decrypt it. The key benefit of this approach is that these Access Grants and any associated restrictions can be entirely managed client-side, without a central Access Control List or other server-side mechanism involved in the access management process. We call this delegated authorization.
 
-Read more about [](docId:XKib9SzjtEXTXWvdyYWX6).&#x20;
+Read more about [](docId:XKib9SzjtEXTXWvdyYWX6).

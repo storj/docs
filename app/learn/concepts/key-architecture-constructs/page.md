@@ -17,7 +17,7 @@ At a high level, object storage is a well-understood technology with established
 
 This section will orient you to some of the main constructs within the service and describes how to use Storj DCS in your application.
 
-## But first, a word on information architecture...&#x20;
+## But first, a word on information architecture...
 
 It's important to understand the constructs of Storj DCS so that an application storing data is optimized depending on the requirements for privacy, access control, sharing, etc. The main constructs to understand are shown in the figure below:
 
@@ -25,7 +25,7 @@ It's important to understand the constructs of Storj DCS so that an application 
 
 ## Satellite
 
-The Satellite is a set of hosted services that is responsible for a range of functions on the network, including the node discovery system, node address information caching, per-object metadata storage, storage node reputation management, billing data aggregation, storage node payment, data audit, and repair, as well as user account and authorization management.&#x20;
+The Satellite is a set of hosted services that is responsible for a range of functions on the network, including the node discovery system, node address information caching, per-object metadata storage, storage node reputation management, billing data aggregation, storage node payment, data audit, and repair, as well as user account and authorization management.
 
 {% callout type="info"  %}
 **Key Point:** You'll create an account on a Satellite. We have them all over the world. You choose a Satellite based on where your data will be most frequently accessed, as Satellites are where metadata is stored and node selection takes place.
@@ -61,21 +61,21 @@ Projects are also useful for managing phases of software development across envi
 
 From a billing perspective, if you only have one application, or you’re an individual using an app like [FileZilla](https://www.storj.io/integrations/filezilla) or [Duplicati](https://www.storj.io/integrations/backup-with-duplicati), you probably only need one project. If you are a managed service provider or systems integrator, and you have multiple applications or want separate invoices for each of the applications, customers, or environments you have, depending on what is relevant to your business, you’ll want to create multiple projects. Usage is itemized within projects at the bucket level, but projects have separate invoices.
 
-## Bucket&#x20;
+## Bucket
 
-A bucket is an unbounded but named collection of objects identified by paths. Every object has a unique path within a bucket.&#x20;
+A bucket is an unbounded but named collection of objects identified by paths. Every object has a unique path within a bucket.
 
 {% callout type="warning"  %}
-**Key Point:** Bucket names are not client-side encrypted so that they may be rendered in the Satellite user interface.&#x20;
+**Key Point:** Bucket names are not client-side encrypted so that they may be rendered in the Satellite user interface.
 {% /callout %}
 
-Bucket names are not client-side encrypted so that they may be rendered in the Satellite user interface.&#x20;
+Bucket names are not client-side encrypted so that they may be rendered in the Satellite user interface.
 
 Usage is tracked and itemized on invoices at the Bucket level. One practical consideration when choosing how to map constructs in your application to constructs on Storj DCS is that large numbers of buckets will increase the size and complexity of your invoices.
 
 From an access management perspective, there’s really no difference between using a bucket and using a top-level path within a bucket. The only differences are that bucket names are unencrypted and appear on invoices while top-level path names are encrypted and billing is aggregated at the bucket level.
 
-If you are an individual user with a single application, you may only need one Bucket. If you are building a multi-tenant or multi-user application, the best practice is to use a single bucket for the application, then create a separate top-level path to store object data associated with each tenant or user within the application. Each top-level path can be secured with a separate Restricted Access Grant.&#x20;
+If you are an individual user with a single application, you may only need one Bucket. If you are building a multi-tenant or multi-user application, the best practice is to use a single bucket for the application, then create a separate top-level path to store object data associated with each tenant or user within the application. Each top-level path can be secured with a separate Restricted Access Grant.
 
 With this structure, your application can manage the data for all of the tenants or users of your application, but 100% of the objects and object metadata will be encrypted, and the tenants or users of your application will not have any access to the data of their peers unless they specifically authorize that access.
 
@@ -89,13 +89,13 @@ While many object storage platforms provide access management restrictions only 
 
 ## Object (encrypted metadata)
 
-An object is the main data type in our system. An object is referred to by an object key, contains an arbitrary amount of bytes, and has no minimum or maximum size. An object is represented by an ordered collection of one or more segments. Segments have a fixed maximum size. An object also supports a limited amount of key/value user-defined fields called user-defined metadata.&#x20;
+An object is the main data type in our system. An object is referred to by an object key, contains an arbitrary amount of bytes, and has no minimum or maximum size. An object is represented by an ordered collection of one or more segments. Segments have a fixed maximum size. An object also supports a limited amount of key/value user-defined fields called user-defined metadata.
 
 ## Access Grant
 
 Storj DCS uses hierarchically deterministic Access Grants as an access management layer for objects. An Access Grant is a security envelope that contains a satellite address, a restricted API Key, and a restricted path component prefix-based encryption key—everything an application needs to locate an object on the network, access that object, and decrypt it. The key benefit of this approach is that these Access Grants and any associated restrictions can be entirely managed client-side, without a central Access Control List or other server-side mechanism involved in the access management process. We call this delegated authorization.
 
-The most important thing to understand about Access Grants is, even though an Access Grant contains a serialized encryption key encapsulated in the Access Grant, that encryption key is NEVER passed to a Satellite. Storj DCS Uplink clients separate the API Key from the Access Grant and only pass the API Key to Satellites. That way, a Satellite can receive an access request, evaluate the validity of the API Key associated with that request, and respond with the metadata needed to retrieve the pieces of the object associated with that request without having any ability to decrypt the underlying data or metadata or have any information about the context of the user or application making the request.&#x20;
+The most important thing to understand about Access Grants is, even though an Access Grant contains a serialized encryption key encapsulated in the Access Grant, that encryption key is NEVER passed to a Satellite. Storj DCS Uplink clients separate the API Key from the Access Grant and only pass the API Key to Satellites. That way, a Satellite can receive an access request, evaluate the validity of the API Key associated with that request, and respond with the metadata needed to retrieve the pieces of the object associated with that request without having any ability to decrypt the underlying data or metadata or have any information about the context of the user or application making the request.
 
 The result is that the Storj DCS service allows you to create more private and secure applications. Below is a brief description of the three components within an Access Grant:
 
@@ -123,7 +123,7 @@ All data stored on Storj DCS is encrypted. By using hierarchically-derived encry
 
 If you're interested in more details, please read more about [](docId:uuhN7eyr1a8P3l_vzdnDk) at your leisure.
 
-A unique encryption key can be derived client-side for each object. That unique key is generated automatically when sharing objects, allowing users to share single objects or object key prefixes, with the ability to decrypt just the objects that are shared without having to worry about separately managing encryption access to objects that aren’t being shared.&#x20;
+A unique encryption key can be derived client-side for each object. That unique key is generated automatically when sharing objects, allowing users to share single objects or object key prefixes, with the ability to decrypt just the objects that are shared without having to worry about separately managing encryption access to objects that aren’t being shared.
 
 But, your keys are your data. If you lose the encryption passphrase, you effectively lose the ability to recover your data. Satellites never have access to your encryption keys. Satellites can’t access your data so your privacy is ensured, but if you lose the key, that means we also can’t help you recover it. **The point:** don’t lose your encryption key.
 
@@ -135,11 +135,11 @@ A Primary Access Grant can then be imported into an Uplink Client for use. The U
 
 ## Restricted Access Grants
 
-The Storj DCS service generates primary Access Grants, and restricted Access Grants are derived from a primary Access Grant or any other Access Grant via the Uplink Client. Parent-to-child, access may be further restricted, but not expanded. A restricted Access Grant can never have more access than its parent.&#x20;
+The Storj DCS service generates primary Access Grants, and restricted Access Grants are derived from a primary Access Grant or any other Access Grant via the Uplink Client. Parent-to-child, access may be further restricted, but not expanded. A restricted Access Grant can never have more access than its parent.
 
 A primary Access Grant is created in the admin console of the Satellite. A primary Access Grant has all permissions to all buckets within a project and can be used to create a child Access Grant.
 
-A restricted Access Grant may be created using the Satellite console or Uplink client. Restricted Access Grants are created in the context of creating access. Essentially, you don’t explicitly create a Restricted Access Grant, the Uplink client creates one when you generate an access, which handles both access management and encryption, both restricted to the scope of access being shared.&#x20;
+A restricted Access Grant may be created using the Satellite console or Uplink client. Restricted Access Grants are created in the context of creating access. Essentially, you don’t explicitly create a Restricted Access Grant, the Uplink client creates one when you generate an access, which handles both access management and encryption, both restricted to the scope of access being shared.
 
 The Storj DCS service also supports the revocation of Access Grants. Note that revoking an Access Grant adds that Access Grant to a revocation list and invalidates the Access Grant and any child Access Grant derived from the Access Grant that has been revoked. Revoking a primary access grant can be done in the UI, but currently revoking a restricted access grant can only happen via the Uplink CLI.
 

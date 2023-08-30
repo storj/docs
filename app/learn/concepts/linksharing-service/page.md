@@ -30,7 +30,7 @@ The Linksharing service provides an easy way to share an object via a web browse
 The Linkshare service is part of the Storj [](docId:21Y2RfU-4h21vZycBqizJ) and provides an additional way to access objects over the internet via a browser in addition to the [](docId:yYCzPT8HHcbEZZMvfoCFa).
 
 {% callout type="info"  %}
-Note: All of the Edge Services, including the Linksharing service use [](docId:hf2uumViqYvS1oq8TYbeW).&#x20;
+Note: All of the Edge Services, including the Linksharing service use [](docId:hf2uumViqYvS1oq8TYbeW).
 {% /callout %}
 
 ## Linkshare Examples
@@ -41,15 +41,15 @@ The Storj Linkshare web page and Path-based Linkshare web page are shown below:
 
 ![Storj Path-based Linkshare web page example](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_imI9aKD9jERtnE3ffL5Q_screen-shot-2021-09-03-at-92131-am.png)
 
-## Linkshare QuickStart&#x20;
+## Linkshare QuickStart
 
 To accelerate your time to success we offer an Object Browser GUI that allows you to upload and share with no command line interface required. Check out [](docId:4oDAezF-FcfPr0WPl7knd).
 
-The [](docId:4oDAezF-FcfPr0WPl7knd) are included in that tutorial.&#x20;
+The [](docId:4oDAezF-FcfPr0WPl7knd) are included in that tutorial.
 
 ## Linkshare via CLI (Advanced)
 
-If you prefer a command line interface (CLI) or wish to programmatically integrate to Storj _ DCS we have our_ [](docId:tBnCSrmR1jbOewG38fIr4) in addition to our [](docId:2x_b4StTLjm2WoHEPx2Cm). You can also [](docId:GkgE6Egi02wRZtyryFyPz).&#x20;
+If you prefer a command line interface (CLI) or wish to programmatically integrate to Storj _ DCS we have our_ [](docId:tBnCSrmR1jbOewG38fIr4) in addition to our [](docId:2x_b4StTLjm2WoHEPx2Cm). You can also [](docId:GkgE6Egi02wRZtyryFyPz).
 
 ## Regions of availability
 

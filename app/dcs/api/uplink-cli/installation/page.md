@@ -8,7 +8,7 @@ weight: 0
 
 The native CLI tool for Storj DCS/OSP
 
-First, [](docId:HeEf9wiMdlQx9ZdS_-oZS).&#x20;
+First, [](docId:HeEf9wiMdlQx9ZdS_-oZS).
 
 **Install** the binary for your OS:
 
@@ -89,4 +89,4 @@ Direct Download
 {% /tab %}
 {% /tabs %}
 
-Then, check [](docId:TbMdOGCAXNWyPpQmH6EOq)&#x20;
+Then, check [](docId:TbMdOGCAXNWyPpQmH6EOq)

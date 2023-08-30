@@ -13,25 +13,25 @@ metadata:
     and the importance of selecting an appropriate Satellite.
 ---
 
-The **Satellite** is a set of hosted services that is responsible for a range of functions on the network, including the node discovery system, node address information caching, per-object metadata storage, storage node reputation management, billing data aggregation, storage node payment, data audit and repair, as well as user account and authorization management.&#x20;
+The **Satellite** is a set of hosted services that is responsible for a range of functions on the network, including the node discovery system, node address information caching, per-object metadata storage, storage node reputation management, billing data aggregation, storage node payment, data audit and repair, as well as user account and authorization management.
 
-Users have accounts on and trust specific Satellites. Any user can run their own Satellite, but we expect many users will choose to avoid the operational complexity and create an account on another Satellite hosted by a trusted third party such as Storj, a friend, group, or workplace. Storj satellites are operated under the Storj brand. This component has a number of key responsibilities:&#x20;
+Users have accounts on and trust specific Satellites. Any user can run their own Satellite, but we expect many users will choose to avoid the operational complexity and create an account on another Satellite hosted by a trusted third party such as Storj, a friend, group, or workplace. Storj satellites are operated under the Storj brand. This component has a number of key responsibilities:
 
-1.  Developer account registration & management&#x20;
+1.  Developer account registration & management
 
 2.  API credential & access management
 
 3.  Object metadata storage
 
-4.  Billing & payment&#x20;
+4.  Billing & payment
 
-5.  Audit & repair &#x20;
+5.  Audit & repair
 
-Users of the network will have accounts on a specific Satellite instance, which will: store their file metadata, manage authorization to data, keep track of storage node reliability, repair and maintain data when redundancy is reduced, and issue payments to storage nodes on the user’s behalf.&#x20;
+Users of the network will have accounts on a specific Satellite instance, which will: store their file metadata, manage authorization to data, keep track of storage node reliability, repair and maintain data when redundancy is reduced, and issue payments to storage nodes on the user’s behalf.
 
 ## Choosing a metadata region
 
-While Storj doesn't have "regions" like other cloud storage providers who operate data centers in one or more geographic location, the closest thing to a "region" is a satellite. While your data is stored across a globally distributed network of storage nodes, the encrypted metadata is stored across multiple satellites in a region.&#x20;
+While Storj doesn't have "regions" like other cloud storage providers who operate data centers in one or more geographic location, the closest thing to a "region" is a satellite. While your data is stored across a globally distributed network of storage nodes, the encrypted metadata is stored across multiple satellites in a region.
 
 {% callout type="info"  %}
 When selecting the Satellite for your project, you'll want to choose the geographic region where the majority of the end users of your service who will be interacting with the objects on Storj will be located.

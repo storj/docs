@@ -17,7 +17,7 @@ MSP360 Managed Backup and from Cloudberry Labs is a cross-platform storage backu
 
 For more information, visit [msp360.com](), or sign up for a [free trial](https://www.msp360.com/managed-backup/).
 
-## Advantages of MSP360 with Storj 
+## Advantages of MSP360 with Storj
 
 - Outstanding security features, including immutability, or object lock, encryption, and 2-factor authentication.
 
@@ -27,7 +27,7 @@ For more information, visit [msp360.com](), or sign up for a [free trial](https:
 
 ## Integration
 
-MSP360 integrates with Storj cloud storage through the S3 protocol.&#x20;
+MSP360 integrates with Storj cloud storage through the S3 protocol.
 
 To integrate MSP360 with Storj, you will need to create S3 credentials for MSP360 in Storj and pass them to the MSP360 managed backup server through the MSP360 web interface or SaaS control.
 
@@ -55,7 +55,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 
@@ -169,7 +169,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 7\. Under **Create Backup Destination**, choose something memorable for the display name, such as "MSP360-Backup - Storj".
 
-8\. Select **Show Advanced Settings**, and next to **Bucket**, select the **Select Existing** bubble. This pulls up the existing buckets in your Storj instance that have access to the S3 credentials for MSP360.&#x20;
+8\. Select **Show Advanced Settings**, and next to **Bucket**, select the **Select Existing** bubble. This pulls up the existing buckets in your Storj instance that have access to the S3 credentials for MSP360.
 
 9\. Select the bucket(s) you would like to sync with MSP360. In this case, choose the "msp360-backup" bucket you created in Storj earlier. Then select **Next**.
 

@@ -29,7 +29,7 @@ A network-attached storage location may work, but this is neither supported nor 
 {% tabs %}
 {% tab label="Linux" %}
 {% callout type="danger"  %}
-**Linux Users:** You **must** static mount via /etc/fstab. Failure to do so will put you in high risk of failing audits and getting disqualified. Here's how to do that: [](docId:nZeFxmawYPdgkwUPy6f9s)&#x20;
+**Linux Users:** You **must** static mount via /etc/fstab. Failure to do so will put you in high risk of failing audits and getting disqualified. Here's how to do that: [](docId:nZeFxmawYPdgkwUPy6f9s)
 {% /callout %}
 
 1.  Copy the command into a plain text editor like a `nano`:
@@ -69,7 +69,7 @@ docker run --rm -e SETUP="true" --mount type=bind,source="<identity-dir>",destin
 {% /tab %}
 {% /tabs %}
 
-2. Replace the `<identity-dir>` and `<storage-dir>` with your parameters.&#x20;
+2. Replace the `<identity-dir>` and `<storage-dir>` with your parameters.
 
 3. Copy the updated command.
 
@@ -137,7 +137,7 @@ docker run -d --restart unless-stopped --stop-timeout 300 -p 28967:28967/tcp -p 
 {% /tab %}
 {% /tabs %}
 
-2. Edit the `WALLET`, `EMAIL`, `ADDRESS`, `STORAGE` and replace the `<identity-dir>`, and `<storage-dir>` with your parameters.&#x20;
+2. Edit the `WALLET`, `EMAIL`, `ADDRESS`, `STORAGE` and replace the `<identity-dir>`, and `<storage-dir>` with your parameters.
 
 3. Copy the updated command.
 

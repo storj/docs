@@ -70,9 +70,9 @@ If there are too many storage nodes, there won’t be enough use to provide a me
 
 We set rate limits between the uplink and the satellite to ensure a good quality of service for all uplink users. Without the rate limit it would be possible for users to inadvertently consume most of the database resources available on the satellite and cause issues for other users. We selected a limit that would be mostly unnoticed by end users (as the typical use case shouldn’t hit the limit). The current default limits are based on requests per second for all meta info calls: list, get, delete, put.
 
-We set the default limits for the number of buckets per project to ensure performance.&#x20;
+We set the default limits for the number of buckets per project to ensure performance.
 
-In addition, we limit the number of Projects per Developer Account to minimize complexity.&#x20;
+In addition, we limit the number of Projects per Developer Account to minimize complexity.
 
 We have also set the default limit for the number of segments to a level that is healthy for the network. Note that increasing the Segment Project Limit may incur additional fees. Read more about [](docId:A4kUGYhfgGbVhlQ2ZHXVS).
 

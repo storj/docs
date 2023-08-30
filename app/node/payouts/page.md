@@ -10,7 +10,7 @@ weight: 10
 
 Storage Node Operators are compensated for the resources that are used by Storj Satellites for their nodes every month. Our payout policy and details can be found on the [Storage Node Operator Terms and Conditions](https://storj.io/storj-operator-terms/). In the event of a conflict between this documentation and Node Operator Terms & Conditions, the Node Operator Terms & Conditions shall govern.
 
-## Understanding How Storage Nodes are Paid on the Storj Network 
+## Understanding How Storage Nodes are Paid on the Storj Network
 
 This document explains how storage node operators are paid for the data they store and the bandwidth that is utilized by Storj. Storage node operators are paid for the resources actually used on the service by Storj Labs-operated satellites. Any satellites operated by third parties not associated with Storj Labs may be subject to different terms, rates and payment methodologies.
 
@@ -26,7 +26,7 @@ Storj nodes share underutilized hard drive capacity and bandwidth with the Storj
 
 **Audit Bandwidth** - egress bandwidth used when Storj satellites retrieve data from storage nodes to perform an audit is calculated in GB is paid monthly at the rates specified below.
 
-## Exclusions 
+## Exclusions
 
 Storage Node Fees will not be paid for the following Storage Node usage:
 
@@ -97,7 +97,7 @@ If you are running multiple storage nodes, the payment method you select will ap
 
 ## Ethereum layer 1 transactions
 
-The default behavior is for us to transmit funds using Ethereum layer 1 (standard ERC20 transactions) for our STORJ token. This fee is calculated using the Ethereum gas costs of similar transactions, the gas to ETH conversion prices, and the price of ETH.&#x20;
+The default behavior is for us to transmit funds using Ethereum layer 1 (standard ERC20 transactions) for our STORJ token. This fee is calculated using the Ethereum gas costs of similar transactions, the gas to ETH conversion prices, and the price of ETH.
 
 These transaction fees are typically much higher than layer 2 transactions (see below), and thus incur a much higher minimum payout threshold.
 
@@ -115,7 +115,7 @@ Any node operator running [v1.22.2](https://github.com/storj/storj/releases/tag/
 We will use this type of transaction when possible, but we may revert to layer 1 transactions (and associated minimum payout thresholds) if circumstances require.
 {% /callout %}
 
-The main benefit of zkSync is a much lower L2 transaction fee, and therefore a much lower minimum payout threshold. Low earning wallet addresses will get payouts at a more frequent schedule with zkSync.&#x20;
+The main benefit of zkSync is a much lower L2 transaction fee, and therefore a much lower minimum payout threshold. Low earning wallet addresses will get payouts at a more frequent schedule with zkSync.
 
 The main consideration with this method is that if the node operator wants to withdraw their funds from layer 2 back to layer 1 (for an exchange address of an exchange that does not yet support zkSync or similar), they will have to pay a transaction fee for that withdrawal. This withdrawal fee can be paid in STORJ, but may be more than a standard layer ERC20 transfer.
 

@@ -14,19 +14,19 @@ metadata:
 
 Creating presigned URLs for Storj DCS - HTTP POST & GET to a URL
 
-All objects and paths are private and encrypted by default. However, it is possible to use a pre-signed URL via our S3-compatible gateway to enable unauthenticated customers/users to upload objects to buckets or access objects in buckets without providing an [](docId:XKib9SzjtEXTXWvdyYWX6) or [](docId:AsyYcUJFbO1JI8-Tu8tW3).&#x20;
+All objects and paths are private and encrypted by default. However, it is possible to use a pre-signed URL via our S3-compatible gateway to enable unauthenticated customers/users to upload objects to buckets or access objects in buckets without providing an [](docId:XKib9SzjtEXTXWvdyYWX6) or [](docId:AsyYcUJFbO1JI8-Tu8tW3).
 
 ## HTTP GET vs Storj Linkshare Service
 
 While we support this behavior via the S3-compatible pre-signed URL function, as an alternative to sharing with a customer/user via a GET, consider utilizing our [](docId:sN2GhYgGUtqBVF65GhKEa). One advantage of this approach is the ability to easily create perpetual share links, valid until you remove them or until a configurable end date of any duration. You can even [host a static website](docId:GkgE6Egi02wRZtyryFyPz) via Linkshare.
 
-## Tutorial&#x20;
+## Tutorial
 
 The goal of the following tutorial is to guide you in the creation of pre-signed URLs for storage DCS using a Python script and our multi-tenant hosted gateway.
 
-Our lab example took place on MacOSX and used BREW as a package manager. Depending on your host operating system, you will need to use the appropriate package manager to fetch the prerequisites listed below.&#x20;
+Our lab example took place on MacOSX and used BREW as a package manager. Depending on your host operating system, you will need to use the appropriate package manager to fetch the prerequisites listed below.
 
-Our implementation of the S3 standard allows additional configuration options. Please reference the official [AWS S3 User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html) for additional details.&#x20;
+Our implementation of the S3 standard allows additional configuration options. Please reference the official [AWS S3 User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html) for additional details.
 
 ### Prerequisites
 

@@ -94,7 +94,7 @@ Select the 'New Site' option
 
 ### Configure the Satellite and Access Grant
 
-Next, select Protocol: "Storj - Decentralized Cloud Storage" from the Protocol dropdown in the "General" tab.&#x20;
+Next, select Protocol: "Storj - Decentralized Cloud Storage" from the Protocol dropdown in the "General" tab.
 
 Now enter the **Satellite** and **Access Grant** as shown below (Entering the port is not required)
 

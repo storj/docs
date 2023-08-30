@@ -14,7 +14,7 @@ metadata:
 
 ## Introduction
 
-[**Zerto**](https://www.zerto.com) brings together disaster recovery and data protection. It provides a single, scalable solution that offers simple cloud data management and protection across on-premises, hybrid, and multi-cloud environments. &#x20;
+[**Zerto**](https://www.zerto.com) brings together disaster recovery and data protection. It provides a single, scalable solution that offers simple cloud data management and protection across on-premises, hybrid, and multi-cloud environments.
 
 - You can use **Zerto** with **Storj DCS** S3-compatible storage.
 

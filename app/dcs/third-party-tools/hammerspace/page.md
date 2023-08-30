@@ -16,11 +16,11 @@ metadata:
 
 Contact Hammerspace for a [demo](https://hammerspace.com/hammerspace-software/).
 
-## Advantages of Hammerspace with Storj 
+## Advantages of Hammerspace with Storj
 
-- **Universal data access layer**: read and write to data from anywhere worldwide.&#x20;
+- **Universal data access layer**: read and write to data from anywhere worldwide.
 
-- **Unify your Storj data **with data residing in legacy DAS, NAS, SAN, object storage, and other cloud storage environments.&#x20;
+- **Unify your Storj data **with data residing in legacy DAS, NAS, SAN, object storage, and other cloud storage environments.
 
 - **Multiple mechanisms to protect data from disasters and attacks**: snapshots, undelete, WORM (write once read many), and file versioning.
 
@@ -32,7 +32,7 @@ To integrate Storj with Hammerspace, you will need to create S3 credentials in S
 
 ### Requirements
 
-- To begin, you will need to create a Storj account.&#x20;
+- To begin, you will need to create a Storj account.
 
 - Navigate to <https://us1.storj.io/signup?partner=hammerspace> to sign up, or log in <https://storj.io/login> if you already have an account.
 
@@ -52,7 +52,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

@@ -15,7 +15,7 @@ Why decentralized cloud has a better security model than Cloud ACL
 
 From a security-design standpoint, the capability model introduces a fundamentally better approach to identity and access management than Public Cloud’s ACL framework.
 
-By tying access to keys, rather than a centralized control system, capability-based models push security to the edge, decentralizing the large ACL attack vector and creating a more secure IAM system.&#x20;
+By tying access to keys, rather than a centralized control system, capability-based models push security to the edge, decentralizing the large ACL attack vector and creating a more secure IAM system.
 
 The capability-based model solves both the ambient authority trap and the confused deputy problem by design.
 
@@ -29,6 +29,6 @@ This gives the client-user full insight into their privilege set, illustrating t
 
 Similar to how in the Blockchain world, “your keys are your money,” with Storj DCS, your keys are your data, and access grants add additional capabilities that allow the owners of data to caveat it, or granularly delegate access for sharing, programmatically.
 
-Key-based ownership of object data will enable users to intuitively control their data as a first principle, and then delegate it as they see fit. The decentralized cloud eliminates the increasingly apparent risk of data loss/extortion due to holding data on one single provider (like Amazon, Google, or Microsoft).&#x20;
+Key-based ownership of object data will enable users to intuitively control their data as a first principle, and then delegate it as they see fit. The decentralized cloud eliminates the increasingly apparent risk of data loss/extortion due to holding data on one single provider (like Amazon, Google, or Microsoft).
 
 Storj DCS presents a better model where object data is encrypted, erasure-coded, and spread across thousands of nodes stratified by reputation whereby any and every computer can be the cloud.

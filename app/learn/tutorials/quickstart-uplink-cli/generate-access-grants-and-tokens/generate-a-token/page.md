@@ -53,7 +53,7 @@ For anyone who has previously configured an Uplink, please use a named access. I
 8\. Generate the Access Grant by running `uplink access restrict` with no restrictions.
 
 {% callout type="info"  %}
-&#x20;If you chose an access name, you'll need to specify it in the following command as `--access=name`
+If you chose an access name, you'll need to specify it in the following command as `--access=name`
 {% /callout %}
 
 {% code-group %}
@@ -76,7 +76,7 @@ uplink access restrict --readonly=false
 Keep your full-rights Access Grant secret, it contains the encryption key and will enable uploading, downloading or deleting your data from the entire project!
 {% /callout %}
 
-9\. Your Access Grant should have been output.&#x20;
+9\. Your Access Grant should have been output.
 
 {% callout type="success"  %}
 The alternative for using the `uplink setup` command and then `uplink access restrict` is to use the `uplink access create` command instead, it will print the Access Grant right away.

@@ -17,7 +17,7 @@ Containers are wonderful: Containers provide a powerful way to package and deplo
 
 Under the hood, the container registry serves simple REST requests. As Storj DCS also can serve files via HTTP, it can be used as a container registry if the pieces are uploaded in the right order and mode.
 
-## The structure of a container registry&#x20;
+## The structure of a container registry
 
 But what is the right order? The container registry API follows a simple structure:
 
@@ -59,7 +59,7 @@ If we upload the layers and metadata files in the same structure, Docker pull wi
 
 3.  The container registry should be served under the root path of the domain ( is correct, while is incorrect). It can be resolved by assigning a custom domain name for the Storj bucket.
 
-### Publish the container&#x20;
+### Publish the container
 
 So let’s see an example. What is the publishing process, assuming we have a local docker container (elek/herbsttag in this example)?
 
@@ -141,6 +141,6 @@ And now we can test the pull command:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/lKLwfi3Eg3yQue73SIWqF_3-fix.png)
 
-### Summary&#x20;
+### Summary
 
 Storj supports custom Content-Type for any key, so it can be used as a container registry to distribute container images. Currently, it has some limitations (no custom SSL, push is a manual process, no easy way to share layers), but distributing static container images for a large-scale audience can be done with all the advantages of a real Decentralized Cloud Storage.

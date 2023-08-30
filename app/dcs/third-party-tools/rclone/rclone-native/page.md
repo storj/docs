@@ -13,7 +13,7 @@ metadata:
 
 ## Selecting an Integration Pattern
 
-Use our native integration pattern to take advantage of client-side encryption as well as to achieve the best possible download performance. Uploads will be erasure-coded locally, thus a 1GB upload will result in 2.68GB of data being uploaded to storage nodes across the network.&#x20;
+Use our native integration pattern to take advantage of client-side encryption as well as to achieve the best possible download performance. Uploads will be erasure-coded locally, thus a 1GB upload will result in 2.68GB of data being uploaded to storage nodes across the network.
 
 ## Use this pattern for
 
@@ -183,7 +183,7 @@ e/n/d/r/c/s/q> q
 {% callout type="info"  %}
 For additional security, you should consider using the (s) option
 
-&#x20;`Set configuration password` option. It will encrypt the `rclone.conf` configuration file. This way secrets like the [](docId:OXSINcFRuVMBacPvswwNU) (access token), the encryption passphrase, and the access grant won't be stolen if an attacker get access to your configuration file.
+`Set configuration password` option. It will encrypt the `rclone.conf` configuration file. This way secrets like the [](docId:OXSINcFRuVMBacPvswwNU) (access token), the encryption passphrase, and the access grant won't be stolen if an attacker get access to your configuration file.
 {% /callout %}
 
 ## Create a Bucket
@@ -203,7 +203,7 @@ rclone lsf waterbear:
 ```
 
 {% callout type="info"  %}
-Note the colon (`:`) character at the end of the command line.&#x20;
+Note the colon (`:`) character at the end of the command line.
 {% /callout %}
 
 ## Delete a Bucket

@@ -20,7 +20,7 @@ For a cost comparison between Wasabi and Storj, see <https://www.storj.io/landin
 
 Before starting the migration process, you'll need to have the following:
 
-1.  Access to both your Wasabi and Storj accounts.&#x20;
+1.  Access to both your Wasabi and Storj accounts.
 
     - Navigate to <https://us1.storj.io/signup?partner=rclone> to sign up or log in to an existing Storj account.
 
@@ -58,10 +58,10 @@ Once the key is created, you can view and copy the Access Key and Secret Key. Ma
 
 ## Update Rclone config
 
-After getting your access keys for Storj and Wasabi, you need to configure rclone.&#x20;
+After getting your access keys for Storj and Wasabi, you need to configure rclone.
 
 {% callout type="info"  %}
-We'll edit the rclone config directory directly, but you can also run `rclone config` for a more interactive experience.&#x20;
+We'll edit the rclone config directory directly, but you can also run `rclone config` for a more interactive experience.
 {% /callout %}
 
 We'll edit the rclone config file directly, you can find where it is stored by running the following:

@@ -27,7 +27,7 @@ These configuration instructions were adapted from the draft instructions being 
 {% callout type="info"  %}
 Already have a Rucio environment?
 
-Skip ahead to [](docId:LUZSWyVR7NPwpyzgBD7S6)&#x20;
+Skip ahead to [](docId:LUZSWyVR7NPwpyzgBD7S6)
 {% /callout %}
 
 ### Clone Rucio and jump into the docker container
@@ -58,8 +58,7 @@ tools/run_tests_docker.sh -i
 {% callout type="info"  %}
 The image has python3 linked in `/usr/bin/python` but yum requires python2
 
-One workaround is to change the first line of `/usr/bin/yum` and `/usr/libexec/urlgrabber-ext-down`&#x20;
-&#x20;to use `/usr/bin/python2` .&#x20;
+One workaround is to change the first line of `/usr/bin/yum` and `/usr/libexec/urlgrabber-ext-down` to use `/usr/bin/python2` .
 
 `vi /usr/bin/yum` < now change "python" to "python2" in the first line
 

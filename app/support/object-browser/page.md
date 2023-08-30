@@ -16,7 +16,7 @@ metadata:
 The Object Browser supports uploading and managing objects directly through the browser with no command-line tool required. This component uses our [](docId:yYCzPT8HHcbEZZMvfoCFa) service.
 
 {% callout type="info"  %}
-By using hosted Gateway MT you are opting into **server-side encryption**. See [](docId:hf2uumViqYvS1oq8TYbeW)&#x20;
+By using hosted Gateway MT you are opting into **server-side encryption**. See [](docId:hf2uumViqYvS1oq8TYbeW)
 {% /callout %}
 
 ## Configure Object Browser Access
@@ -64,7 +64,7 @@ You can upload not only files but also folders, just **drag them into the browse
 If you want to create a folder, you can do that with the **New Folder** button.
 
 {% callout type="success"  %}
-When you drag and drop your file into the Satellite Admin Console Object Browser, the Storj DCS S3-compatible Gateway will encrypt the data using [](docId:hf2uumViqYvS1oq8TYbeW), break large files into 64MB Segments (or for smaller files a single segment), then erasure code the segments, breaking each segment into 80 pieces, then distributing those pieces over our network of thousands of independently operated storage nodes.&#x20;
+When you drag and drop your file into the Satellite Admin Console Object Browser, the Storj DCS S3-compatible Gateway will encrypt the data using [](docId:hf2uumViqYvS1oq8TYbeW), break large files into 64MB Segments (or for smaller files a single segment), then erasure code the segments, breaking each segment into 80 pieces, then distributing those pieces over our network of thousands of independently operated storage nodes.
 {% /callout %}
 
 ## Deleting files
@@ -81,7 +81,7 @@ When you drag and drop your file into the Satellite Admin Console Object Browser
 
 ## Creating buckets
 
-Buckets are your containers that store objects.&#x20;
+Buckets are your containers that store objects.
 
 You can create your buckets in the **Objects** view or if you click on the **<-Back to Buckets** button, in the bucket view.
 
@@ -95,7 +95,7 @@ To create a new bucket, click the **New bucket** button in the **Buckets** view.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Yewew2V1tdS66o93P_XIM_qsobject08.png)
 
-After creating your new bucket, you will be placed into the bucket where you can [](docId:gh5RtIDbMkAoomljO7f8d) &#x20;
+After creating your new bucket, you will be placed into the bucket where you can [](docId:gh5RtIDbMkAoomljO7f8d)
 
 ## Deleting buckets
 
@@ -127,7 +127,7 @@ The **Share** pop-up window allows you to share the link via social media or cop
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/GmA5kH_adiXmGOaw7iTAz_qsobjectshare03.png)
 
-The share link includes a rendering of where the pieces of your file are located on the globally distributed network of storage nodes, as well as a preview of that file.&#x20;
+The share link includes a rendering of where the pieces of your file are located on the globally distributed network of storage nodes, as well as a preview of that file.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/y1Z-utzw4fEsvj6gffynu_qsobjectshare04.png)
 

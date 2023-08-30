@@ -16,7 +16,7 @@ metadata:
 
 [Splunk](https://www.splunk.com/) is a data analytics platform that provides data-driven insights across all aspects of a company.
 
-Visit <https://www.splunk.com/> for more information.&#x20;
+Visit <https://www.splunk.com/> for more information.
 
 ## Advantages of Splunk with Storj
 
@@ -28,15 +28,15 @@ Visit <https://www.splunk.com/> for more information.&#x20;
 
 Integrating Splunk with Storj requires S3 credentials from Storj that will be added to the [indexes.conf]() in Splunk.
 
-Splunk Enterprise integrates with any S3-compatible cloud storage platform.&#x20;
+Splunk Enterprise integrates with any S3-compatible cloud storage platform.
 
 To complete the integration, you will need:
 
-- A Storj account&#x20;
+- A Storj account
 
-- An on-premises instance of Splunk&#x20;
+- An on-premises instance of Splunk
 
-Splunk is compatible with Windows, Mac, and Linux OS.&#x20;
+Splunk is compatible with Windows, Mac, and Linux OS.
 
 To complete the integration, follow the steps below.
 
@@ -50,7 +50,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 
@@ -134,7 +134,7 @@ To get started with Splunk Enterprise, visit <https://www.splunk.com/en_us/produ
 
 ### Connect Storj remote storage
 
-1\. To connect Storj remote storage to Splunk, add Storj volume information to indexes.conf. This is usually added at the top of the file.&#x20;
+1\. To connect Storj remote storage to Splunk, add Storj volume information to indexes.conf. This is usually added at the top of the file.
 
 See Splunk's [indexes.conf](https://docs.splunk.com/Documentation/Splunk/7.3.1/Admin/Indexesconf#indexes.conf.spec) documentation for more details.
 
@@ -184,7 +184,7 @@ echo "test" > test01.txt
 ./opt/splunk/bin/splunk cmd splunkd rfs -- ls --starts-with volume:Storj
 ```
 
-3\. You should see the file listed in the shell and in your Storj web UI.&#x20;
+3\. You should see the file listed in the shell and in your Storj web UI.
 
 ```shell
 Size	Name

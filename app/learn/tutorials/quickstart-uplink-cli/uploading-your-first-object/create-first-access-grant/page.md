@@ -51,4 +51,4 @@ Click the **Create my Access** link to finish generating of Access Grant.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hmCrRyczE1pi8g7jo2GN2_create-access-6.png)
 
-Access Grant is generated. **The Access Grant will only display once.** Save this information in a password manager or wherever you prefer to store sensitive information.&#x20;
+Access Grant is generated. **The Access Grant will only display once.** Save this information in a password manager or wherever you prefer to store sensitive information.

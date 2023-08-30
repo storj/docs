@@ -35,7 +35,7 @@ uplink access register <flags> <ACCESS-GRANT>
 
 ## Example
 
-Once you have an access grant from the [](docId:OXSINcFRuVMBacPvswwNU) or `uplink share` you can register it with a GatewayMT auth service and designate the access to be public (no secret ket necessary to access) or private. If you want to use it to host a static site or share a URL, you must create a public access.&#x20;
+Once you have an access grant from the [](docId:OXSINcFRuVMBacPvswwNU) or `uplink share` you can register it with a GatewayMT auth service and designate the access to be public (no secret ket necessary to access) or private. If you want to use it to host a static site or share a URL, you must create a public access.
 
 {% code-group %}
 

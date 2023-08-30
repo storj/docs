@@ -7,13 +7,13 @@ redirects:
   - /dcs/how-tos/cometbackup-integration-guide/
 ---
 
-## Introduction 
+## Introduction
 
 Comet is a flexible backup platform that gives users total control over their backup environment and storage destinations. Comet provides solutions to protect and restore partitions, databases, servers, files, and folders. Whether users are looking for cloud backup, computer backup, or data backup, Comet can address those needs.
 
-Visit <https://cometbackup.com/> for more information.&#x20;
+Visit <https://cometbackup.com/> for more information.
 
-## Advantages of Storj with Comet Backup 
+## Advantages of Storj with Comet Backup
 
 Using Storj with Comet Backup provides resilient cloud object storage with blazing performance and zero-trust security. This integration ensures:
 
@@ -23,13 +23,13 @@ Using Storj with Comet Backup provides resilient cloud object storage with blazi
 
 3.  **Security**: Backup storage is ransomware resistant with end-to-end encryption.
 
-### Software Requirements 
+### Software Requirements
 
 Comet integrates with any S3-compatible cloud storage platform, including Storj. Storj functionality is available on Comet Server version 22.9.0 and above.
 
 To integrate Comet with Storj, you will need:
 
-- A Storj account&#x20;
+- A Storj account
 
 - A Storj bucket for Comet
 
@@ -59,7 +59,7 @@ Navigate to <https://us1.storj.io/signup?partner=comet> to sign up or log in t
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Q7WPRJpkbFkJs17bqTZBD_comet-backup-storj.png)
 
-### Create a Storj Bucket 
+### Create a Storj Bucket
 
 Once you have your Storj account, create a Storj bucket for Comet following the steps below. This bucket is where Comet will create Storage Vaults.
 
@@ -87,7 +87,7 @@ Once you have your Storj account, create a Storj bucket for Comet following the 
 Remember your passphrase as you will need it for future access of your data. Storj is unable to recover your passphrase for you.
 {% /callout %}
 
-### Generate a Storj Access Key 
+### Generate a Storj Access Key
 
 Users will need to configure a Storj **access key** for Comet to be able to create Storage Vaults. Create an API access key in the Storj web console:
 
@@ -117,7 +117,7 @@ Users will need to configure a Storj **access key** for Comet to be able to crea
 
 To complete the integration, you will need the credentials (bucket name and passphrase) for the Storj bucket and the Storj API access key you created above.
 
-### Configuring a Storj Storage Template 
+### Configuring a Storj Storage Template
 
 1\. Navigate to your Comet Server settings and find the Storage Templates section
 

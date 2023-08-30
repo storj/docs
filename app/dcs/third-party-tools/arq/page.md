@@ -57,7 +57,7 @@ Click **Continue** to use the storage location you just added:
 Choose an encryption password for Arq to encrypt your data **before** transmitting it (this password will never leave your computer):
 
 {% callout type="warning"  %}
-Files are stored encrypted within the Storj network. Using Arq's encryption would add a second layer of encryption. Users may want to uncheck `Encrypt with password` when given the option. This is optional.&#x20;
+Files are stored encrypted within the Storj network. Using Arq's encryption would add a second layer of encryption. Users may want to uncheck `Encrypt with password` when given the option. This is optional.
 {% /callout %}
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/j-ej_S6qiBjUl-c_-ggZb_screen-shot-2022-05-27-at-94638-am-1024x814.png)
@@ -65,7 +65,7 @@ Files are stored encrypted within the Storj network. Using Arq's encryption woul
 Choose which files you’d like to back up, and click **Create Backup Plan**:
 
 {% callout type="warning"  %}
-&#x20;To change the schedule, the files being backed up, and many other options, click on your backup plan on the left and click “Edit…”.
+To change the schedule, the files being backed up, and many other options, click on your backup plan on the left and click “Edit…”.
 {% /callout %}
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/snmPnsOGwsJ2aQ7Ub_wiy_screen-shot-2022-05-27-at-94712-am-1024x814.png)

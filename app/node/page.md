@@ -8,9 +8,9 @@ metadata:
 
 ## Introduction
 
-Storj is an S3-compatible platform and suite of decentralized applications that allows you to store data in a secure and decentralized manner. Storage Node Operators contribute unused hard drive capacity to the network, enabling the storage network to be distributed around the world.&#x20;
+Storj is an S3-compatible platform and suite of decentralized applications that allows you to store data in a secure and decentralized manner. Storage Node Operators contribute unused hard drive capacity to the network, enabling the storage network to be distributed around the world.
 
-## Become a Storage Node Operator&#x20;
+## Become a Storage Node Operator
 
 {% quick-links %}
 {% quick-link title="Host a node" href="https://www.storj.io/host-a-node" %}
@@ -43,6 +43,6 @@ Install the software that works best for you.
 {% quick-link title="💻 QNAP Storage Node App" href="docId:N-dnnf7HhHcOaavvXjplw" /%}
 {% /quick-links %}
 
-## 💻 Want to Contribute?&#x20;
+## 💻 Want to Contribute?
 
 All of our code for Storj is completely open source. Have a code change you think would make Storj better? Please send a pull request along! Make sure to sign our [Contributor License Agreement (CLA)](https://docs.google.com/forms/d/e/1FAIpQLSdVzD5W8rx-J_jLaPuG31nbOzS8yhNIIu4yHvzonji6NeZ4ig/viewform) first. See our [license section](https://github.com/storj/storj#license) for more details.

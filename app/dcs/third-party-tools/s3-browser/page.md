@@ -34,13 +34,13 @@ As noted, S3 Browser is only available for Windows, supporting **Windows XP/Vist
 
 Users can download the S3 Browser client by navigating to the S3 Browser homepage at [https://s3browser.com/](https://s3browser.com) and selecting the _Download Now_ icon, or at <https://s3browser.com/download.aspx>.
 
-Some stats for the S3 Browser Download:&#x20;
+Some stats for the S3 Browser Download:
 
-**S3 Browser Version** 10.3.1&#x20;
+**S3 Browser Version** 10.3.1
 
-**Size of file**: 5.37 MB (5 631 160 bytes)&#x20;
+**Size of file**: 5.37 MB (5 631 160 bytes)
 
-**SHA256**: 0b813e6f4d5cc9d2898fd9045f577d0f5e750dd960408abf3894b447033143e2&#x20;
+**SHA256**: 0b813e6f4d5cc9d2898fd9045f577d0f5e750dd960408abf3894b447033143e2
 
 **Operating System**: Windows XP/Vista/7/8/10/11 and Windows Server 2003/2008/2012/2016/2019/2022
 

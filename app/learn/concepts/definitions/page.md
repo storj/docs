@@ -31,13 +31,13 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
     3.  **Uplink** **CLI** A command line interface for uploading and downloading files from the network, managing permissions and sharing, and managing accounts.
 
-4.  **Satellite** - A peer class and one of the primary components of the Storj network. The satellite participates in the node discovery system, caches node address information, stores per-object metadata, maintains storage node reputation, aggregates billing data, pays storage nodes, performs audits and repair, and manages authorization and user accounts. Users have accounts on and trust specific Satellites. Any user can run their own Satellite, but we expect many users to elect to avoid the operational complexity and create an account on another Satellite hosted by a trusted third party such as Storj Labs, a friend, group, or workplace. Storj Labs satellites are operated under the Storj DCS brand. This component has a couple of main responsibilities:&#x20;
+4.  **Satellite** - A peer class and one of the primary components of the Storj network. The satellite participates in the node discovery system, caches node address information, stores per-object metadata, maintains storage node reputation, aggregates billing data, pays storage nodes, performs audits and repair, and manages authorization and user accounts. Users have accounts on and trust specific Satellites. Any user can run their own Satellite, but we expect many users to elect to avoid the operational complexity and create an account on another Satellite hosted by a trusted third party such as Storj Labs, a friend, group, or workplace. Storj Labs satellites are operated under the Storj DCS brand. This component has a couple of main responsibilities:
 
-    1.  developer account registration & management,&#x20;
+    1.  developer account registration & management,
 
-    2.  API credential & access management,&#x20;
+    2.  API credential & access management,
 
-    3.  billing & payment,&#x20;
+    3.  billing & payment,
 
     4.  audit & repair,
 
@@ -49,13 +49,13 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
 7.  **Weak Encryption** - a weak encryption algorithm is one that cannot guarantee the confidentiality of sensitive data. Antiquated encryption algorithms such as DES (or even 3DES) no longer provide sufficient protection for use with sensitive data. Encryption algorithms rely on key size as one of the primary mechanisms to ensure cryptographic strength. Cryptographic strength is often measured by the time and computational power needed to generate a valid key. Advances in computing power and cryptanalytic techniques have made it possible to obtain small encryption keys in a reasonable amount of time. For example, the 56-bit key used in DES posed a significant computational hurdle in the 1970s when the algorithm was first developed, but today DES can be cracked in less than a day using commonly available equipment.
 
-8.  **Backdoor** - A backdoor refers to any method by which authorized and unauthorized users are able to get around normal security measures and gain high level user access (aka root access) on a computer system, network or software application.&#x20;
+8.  **Backdoor** - A backdoor refers to any method by which authorized and unauthorized users are able to get around normal security measures and gain high level user access (aka root access) on a computer system, network or software application.
 
 9.  **Open-source** - Open source software is software with source code that anyone can inspect, modify, and enhance.
 
 10. **Privacy Policy** - A privacy policy is a statement or a legal document that discloses some or all of the ways a party gathers, uses, discloses, and manages a customer or client's data. Personal information can be anything that can be used to identify an individual, not limited to the person's name, address, date of birth, marital status, contact information, ID issue, and expiry date, financial records, credit information, medical history, where one travels, and intentions to acquire goods and services. It is often a statement that declares a party's policy on how it collects, stores, and releases personal information it collects. It informs the user what specific information is collected, and whether it is kept confidential, shared with partners, or sold to other firms or enterprises. Privacy policies typically represent a broader, more generalized treatment, as opposed to data use statements, which tend to be more detailed and specific.
 
-11. **Data Element Definitions** - Object data stored on the network is structured in a way that maps to constructs consistent with traditional object storage generally, with aspects that also include attributes adapted to the distributed storage model.&#x20;
+11. **Data Element Definitions** - Object data stored on the network is structured in a way that maps to constructs consistent with traditional object storage generally, with aspects that also include attributes adapted to the distributed storage model.
 
     1.  **Project** - A project is the basic unit for aggregating usage, calculating billing, invoicing fees, and collecting payment. Currently, user accounts are limited to a handful of Projects by default, but users can request and pay for more. Multiple users may be added to a project team. Within a Project, usage is tracked at the bucket level and aggregated for invoicing to the project. Project names are not client-side encrypted so that they may be rendered in the satellite user interface.
 
@@ -81,7 +81,7 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
     10. **Pointer** - A pointer is a subset of metadata that is data structure that either contains the inline segment data, or keeps track of which storage nodes the pieces of a remote segment were stored on, along with other per-file metadata. Pointer data is not client side encrypted, so that a Satellite can repair a segment and replace the location of pieces.
 
-12. **Erasure Code Definitions** - Data redundancy on the network is achieved using erasure codes. Erasure coding is a means of data protection in which data is broken into pieces, where each piece is expanded and encoded with redundant data. The pieces are then stored across a set of different storage locations to reduce the risk of data loss due to the loss of any one data location.&#x20;
+12. **Erasure Code Definitions** - Data redundancy on the network is achieved using erasure codes. Erasure coding is a means of data protection in which data is broken into pieces, where each piece is expanded and encoded with redundant data. The pieces are then stored across a set of different storage locations to reduce the risk of data loss due to the loss of any one data location.
 
     1.  **Erasure Code Ratio** - An erasure code is often described as a ratio of two numbers, _k_ and _n_. If a block of data is encoded with a _k_, _n_ erasure code, there are _n_ total generated erasure shares, where only any _k_ of them are required to recover the original block of data! It doesn’t matter if you recover all of the even numbered shares, all of the odd numbered shares, the first _k_ shares, the last _k_ shares, whatever. Any _k_ shares can recover the original block.
 
@@ -95,11 +95,11 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
         3.  **_m_ = 52** – This is the repair threshold for a Segment. Satellites track when Storage Nodes fail or leave the network making pieces unavailable. If too many storage nodes become unavailable, putting the potential durability of a Segment at risk, the Satellite will recreate the missing pieces via file repair and store the repaired pieces on diverse, health storage nodes.
 
-        4.  **_n_ = 80** – The maximum number of pieces stored for a Segment&#x20;
+        4.  **_n_ = 80** – The maximum number of pieces stored for a Segment
 
-        5.  **_o_ = 130** – The number of pieces an Uplink attempts to upload to diverse Storage Nodes when uploading a Segment.&#x20;
+        5.  **_o_ = 130** – The number of pieces an Uplink attempts to upload to diverse Storage Nodes when uploading a Segment.
 
-13. **Multipart Upload** Multipart Upload is a function that allows large files to be broken up into smaller pieces for more efficient uploads. When an object is uploaded using Multipart Upload, a file is first broken into parts, each part of a Multipart Upload is also stored as one or more Segments. With Multipart Upload, a single object is uploaded as a set of parts. Each part is an integral portion of the data comprising the object. The object parts may be uploaded independently, in parallel, and in any order. Uploads may be paused and resumed by uploading an initial set of parts, then resuming and uploading the remaining parts. If the upload of any part fails, that part may be re-uploaded without impacting the upload of other parts. All of these parts are broken into one or more Segments by the Storj DCS Gateway based on whether the Part Size is smaller or larger than the default Segment size. While Multipart Upload is most appropriate for files larger than the 64MB default Segment size, the Part Size is configurable in applications that use Multipart Upload.&#x20;
+13. **Multipart Upload** Multipart Upload is a function that allows large files to be broken up into smaller pieces for more efficient uploads. When an object is uploaded using Multipart Upload, a file is first broken into parts, each part of a Multipart Upload is also stored as one or more Segments. With Multipart Upload, a single object is uploaded as a set of parts. Each part is an integral portion of the data comprising the object. The object parts may be uploaded independently, in parallel, and in any order. Uploads may be paused and resumed by uploading an initial set of parts, then resuming and uploading the remaining parts. If the upload of any part fails, that part may be re-uploaded without impacting the upload of other parts. All of these parts are broken into one or more Segments by the Storj DCS Gateway based on whether the Part Size is smaller or larger than the default Segment size. While Multipart Upload is most appropriate for files larger than the 64MB default Segment size, the Part Size is configurable in applications that use Multipart Upload.
 
     1.  **Part** - a single piece of an object that has been separated into multiple piece during a MultiPart Upload.
 

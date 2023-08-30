@@ -17,7 +17,7 @@ metadata:
 
 [Acronis](https://www.acronis.com/) is a leading cyber protection solution provider that delivers innovative backup, disaster recovery, and secure file sync and share services. With a wide range of products and services for businesses and individuals, Acronis ensures data safety, accessibility, privacy, authenticity, and security.
 
-## Advantages of Acronis with Storj 
+## Advantages of Acronis with Storj
 
 The combination of Acronis and Storj provides comprehensive cloud management capabilities at a competitive cost. Acronis offers reliable backup and disaster recovery solutions for data archiving and organization, seamlessly integrating with Storj's S3 infrastructure for cost-effective storage and retrieval of large datasets.
 
@@ -45,11 +45,11 @@ For more details, see <https://www.acronis.com/en-us/products/>
 
 ## Create a Storj Account
 
-To begin, you will need to create a Storj account.&#x20;
+To begin, you will need to create a Storj account.
 
 Navigate to <https://us1.storj.io/signup?partner=acronis> to sign up, or log in <https://storj.io/login> if you already have an account.
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 
@@ -162,7 +162,7 @@ To set up Backup Gateway, do the following:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ysUUNOfYk4qJY7M-1Yw5H_screenshot-2023-03-08-at-20100-pm.png)
 
-8\. Sign in to your Acronis account and click **Next**.&#x20;
+8\. Sign in to your Acronis account and click **Next**.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/SMydqxrJiWu53hMoIbliJ_screenshot-2023-03-08-at-20344-pm.png)
 

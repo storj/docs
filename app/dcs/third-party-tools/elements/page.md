@@ -14,7 +14,7 @@ metadata:
     for your media content.
 ---
 
-[ELEMENTS](https://elements.tv/) provides a powerful hardware and software platform that supports every post-production and broadcasting workflow step – from sophisticated on-premise technologies with unique features to future-proof cloud solutions.&#x20;
+[ELEMENTS](https://elements.tv/) provides a powerful hardware and software platform that supports every post-production and broadcasting workflow step – from sophisticated on-premise technologies with unique features to future-proof cloud solutions.
 
 ## **Advantages of ELEMENTS with Storj**
 
@@ -44,7 +44,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

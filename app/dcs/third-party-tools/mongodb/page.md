@@ -18,17 +18,17 @@ MongoDB is a powerful, flexible, and scalable general purpose database. It combi
 
 Ops Manager is a management platform that makes it easy to deploy, monitor, back up, and scale MongoDB on your own infrastructure.
 
-MongoDB Enterprise supports a variety of cloud-native deployment options. This gives you and your apps access to locally deployed MongoDB clusters alongside direct access to MongoDB clusters running in the MongoDB Atlas cloud.&#x20;
+MongoDB Enterprise supports a variety of cloud-native deployment options. This gives you and your apps access to locally deployed MongoDB clusters alongside direct access to MongoDB clusters running in the MongoDB Atlas cloud.
 
 For the complete documentation for the service, see: <https://github.com/jasonmimick/total-cluster>
 
 ## Before you begin
 
-If you haven't yet, create a [Storj DCS account](https://www.storj.io/signup) before following the rest of the tutorial. Make sure to [](docId:Ch4vLynsEqyT2-3qDEBiy) and [](docId:pxdnqsVDjCLZgeEXt2S6x).&#x20;
+If you haven't yet, create a [Storj DCS account](https://www.storj.io/signup) before following the rest of the tutorial. Make sure to [](docId:Ch4vLynsEqyT2-3qDEBiy) and [](docId:pxdnqsVDjCLZgeEXt2S6x).
 
 ## Procure a Kubernetes cluster
 
-Your first step is to procure a Kubernetes cluster. This full example will require 5 to 7 worker nodes with 2 nodes having at least 8 gb of ram.&#x20;
+Your first step is to procure a Kubernetes cluster. This full example will require 5 to 7 worker nodes with 2 nodes having at least 8 gb of ram.
 
 Next, set up your S3-compatible Gateway (formerly known as Tardigrade gateway) for total-cluster, or you can use our [](docId:yYCzPT8HHcbEZZMvfoCFa). Check out the details for that over in the [gateway chart](https://github.com/jasonmimick/total-cluster/tree/master/addons/tardigade-gateway) in total-cluster.
 
@@ -62,7 +62,7 @@ NAME                                                       DESIRED   CURRENT   R
 replicaset.apps/s3-gateway-tardigrade-gateway-68fbf4b4d7   1         1         1       104s
 ```
 
-Once your gateway is setup and running, install the entire MongoDB data platform with the total-cluster chart.&#x20;
+Once your gateway is setup and running, install the entire MongoDB data platform with the total-cluster chart.
 
 ```Text
 git clone https://github.com/jasonmimick/total-cluster
@@ -89,7 +89,7 @@ You should see your MongoDB cluster once connected:
 
 ## Setting up the S3 Blockstore pointing to local gateway
 
-**You can configure backups for your app databases following this guide:** [**Backup Overview**](https://docs.opsmanager.mongodb.com/current/core/backup-overview/)**.**&#x20;
+**You can configure backups for your app databases following this guide:** [**Backup Overview**](https://docs.opsmanager.mongodb.com/current/core/backup-overview/)**.**
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/kJgbgrQYMtvXwRk64uzND_mongodb2.png)
 
@@ -106,11 +106,11 @@ $ aws --endpoint-url http://localhost:7777 s3 ls test
 
 ## Conclusion
 
-We look forward to seeing what MongoDB users do with Storj DCS (formerly known as Tardigrade).&#x20;
+We look forward to seeing what MongoDB users do with Storj DCS (formerly known as Tardigrade).
 
-We regularly hear from users who would like cloud backup services that provide end-to-end encryption, multi-region redundancy, as well as lower and more predictable costs compared to centralized services.&#x20;
+We regularly hear from users who would like cloud backup services that provide end-to-end encryption, multi-region redundancy, as well as lower and more predictable costs compared to centralized services.
 
-Storj DCS delivers on all of these needs, while still offering the same enterprise service level agreements users absolutely require.&#x20;
+Storj DCS delivers on all of these needs, while still offering the same enterprise service level agreements users absolutely require.
 
 **Learn more**
 

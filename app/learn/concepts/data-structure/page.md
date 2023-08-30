@@ -27,7 +27,7 @@ How data is logically segmented on the network
 
 **Bucket:** represent a collection of objects. You can upload, download, list, and delete objects of any size or shape.
 
-A bucket is an unbounded but named collection of files identified by object keys. Every object has a unique key within a bucket.&#x20;
+A bucket is an unbounded but named collection of files identified by object keys. Every object has a unique key within a bucket.
 
 **Object:** Each object typically includes the data itself, a variable amount of [metadata](https://en.wikipedia.org/wiki/Metadata), and a [globally unique identifier](https://en.wikipedia.org/wiki/Globally_unique_identifier) (Object key) which uniquely identifies the object in a bucket. Objects within buckets are represented by keys, where keys can optionally be listed using the "/" delimiter. Objects are always end-to-end encrypted.
 
@@ -35,7 +35,7 @@ A bucket is an unbounded but named collection of files identified by object keys
 
 **Segment:** represents a single array of bytes up to 64 MB.
 
-**Inline Segment:** A inline segment is a file smaller than the meta data required to keep track of all of the pieces on the network for it. Since inline segments are smaller than the metadata for remote segments these inline segments are stored directly on the satellite. this means inline segments are **NOT** stored on the decentralized network.&#x20;
+**Inline Segment:** A inline segment is a file smaller than the meta data required to keep track of all of the pieces on the network for it. Since inline segments are smaller than the metadata for remote segments these inline segments are stored directly on the satellite. this means inline segments are **NOT** stored on the decentralized network.
 
 **Remote Segment:** A remote segment is a segment that will be erasure encoded and distributed across the network. A remote segment is larger than the metadata required to keep track of it on the network.
 

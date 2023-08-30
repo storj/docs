@@ -47,7 +47,7 @@ Keep the credential window open until you have completed the `uplink setup` comm
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/faDJYPJEby6kdGKcDksq4_screen-shot-2022-07-01-at-103337-am.png)
 
-Run `uplink setup` to start the credentials prompt&#x20;
+Run `uplink setup` to start the credentials prompt
 
 ```Text
 uplink setup
@@ -87,7 +87,7 @@ uplink mb sj://snapshots
 
 ### Upload snapshots
 
-Compress small files/directories to a single compressed file (e.g use `tar`).&#x20;
+Compress small files/directories to a single compressed file (e.g use `tar`).
 
 ```Text
 tar cf snapshot.tar /path/to/snapshot

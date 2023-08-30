@@ -49,7 +49,7 @@ For this, do the following steps:
 
 2\) On the main dashboard, click [](docId:pxdnqsVDjCLZgeEXt2S6x) and **"New Bucket"**
 
-3\) Give your bucket a descriptive name in the text box, for example "**kerberos-vault**"&#x20;
+3\) Give your bucket a descriptive name in the text box, for example "**kerberos-vault**"
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/37JTYTC20PveNiS6h-Kj2_kerberos1.png)
 

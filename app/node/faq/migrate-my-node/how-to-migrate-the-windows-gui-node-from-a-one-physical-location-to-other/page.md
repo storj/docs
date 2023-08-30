@@ -50,7 +50,7 @@ After the above `robocopy` commands have finished executing for the first time, 
 net stop storagenode
 ```
 
-Then run the commands for copying the data and orders one last time.&#x20;
+Then run the commands for copying the data and orders one last time.
 
 Now you should uninstall the storagenode Windows GUI version from your first PC and install it on the new PC following these instructions: [](docId:5shJebpS3baWj6LDV5ANQ), but please skip the steps for receiving the authorization token and generating the identity.
 
@@ -68,7 +68,7 @@ There are plenty of options how to transfer the identity and data to the remote 
 
 - ftp service
 
-- file sharing services&#x20;
+- file sharing services
 
 - BitTorrent
 

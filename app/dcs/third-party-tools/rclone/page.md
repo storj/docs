@@ -16,7 +16,7 @@ metadata:
 
 These 'Getting Starting' tutorials will showcase the process for configuring [Rclone](https://rclone.org) with Storj DCS. We will cover only some of the basic features in this guide.
 
-&#x20;To make the most of Rclone, look at the complete Rclone [command reference](https://rclone.org/commands/).
+To make the most of Rclone, look at the complete Rclone [command reference](https://rclone.org/commands/).
 
 {% callout type="danger"  %}
 These guides are experimental. The main functionality appears to work, but there are expected to be undiscovered issues (including issues around connection timeouts). Please report any issues you may run into on this [forum thread](https://forum.storj.io/t/two-more-tech-previews-rclone-and-restic/6072).
@@ -32,7 +32,7 @@ You will need one of the following:
 
 ## Native
 
-Use our native integration pattern to take advantage of client-side encryption as well as to achieve the best possible download performance. Uploads will be erasure-coded [](docId:Pksf8d0TCLY2tBgXeT18d), thus a 1GB upload will result in 2.68GB of data being uploaded to storage nodes across the network.&#x20;
+Use our native integration pattern to take advantage of client-side encryption as well as to achieve the best possible download performance. Uploads will be erasure-coded [](docId:Pksf8d0TCLY2tBgXeT18d), thus a 1GB upload will result in 2.68GB of data being uploaded to storage nodes across the network.
 
 ### Use this pattern for
 
@@ -42,7 +42,7 @@ Use our native integration pattern to take advantage of client-side encryption a
 
 {% quick-links %}
 {% quick-link %}
-[](docId:Mk51zylAE6xmqP7jUYAuX)&#x20;
+[](docId:Mk51zylAE6xmqP7jUYAuX)
 {% /quick-link %}
 {% /quick-links %}
 
@@ -62,6 +62,6 @@ By selecting this integration pattern, you are opting in to server-side encrypti
 
 {% quick-links %}
 {% quick-link %}
-[](docId:WayQo-4CZXkITaHiGeQF_)&#x20;
+[](docId:WayQo-4CZXkITaHiGeQF_)
 {% /quick-link %}
 {% /quick-links %}

@@ -5,8 +5,7 @@ redirects:
   - /node/resources/faq/redirect-logs
 ---
 
-1\. To redirect the logs to a file, stop your Node:&#x20;
-CLI Install
+1\. To redirect the logs to a file, stop your Node:
 
 {% tabs %}
 {% tab label="CLI Install" %}
@@ -28,7 +27,7 @@ Or click the “Stop” button in the Windows Services applet on “Storj V3 Sto
 {% /tab %}
 {% /tabs %}
 
-2\. Then edit your `config.yaml` (you can use _nano_ or _vi_ editor for Linux/MacOS or _Notepad++_ for Windows) to add (or change) the log location (see [](docId:gDXZgLlP_rcSW8SuflgqS)):&#x20;
+2\. Then edit your `config.yaml` (you can use _nano_ or _vi_ editor for Linux/MacOS or _Notepad++_ for Windows) to add (or change) the log location (see [](docId:gDXZgLlP_rcSW8SuflgqS)):
 
 {% tabs %}
 {% tab label="CLI Install" %}

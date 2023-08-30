@@ -16,7 +16,7 @@ metadata:
 Storj Edge Services are hosted components that provide S3 compatibility and publicly-available data sharing services and are composed of the Storj Gateway MT, the auth service and the link sharing service. Storj Edge Services use server-side encryption.
 
 {% callout type="info"  %}
-**Note:** All of the Edge Services use [](docId:hf2uumViqYvS1oq8TYbeW).&#x20;
+**Note:** All of the Edge Services use [](docId:hf2uumViqYvS1oq8TYbeW).
 {% /callout %}
 
 ### Edge Services
@@ -29,7 +29,7 @@ Storj DCS includes a globally distributed, multi-region cloud-hosted [](docId:yY
 
 **Linkshare Service**
 
-The [](docId:sN2GhYgGUtqBVF65GhKEa) is a globally distributed, multi-region cloud-hosted gateway for standard HTTP requests, for sharing objects with users via a web browser.&#x20;
+The [](docId:sN2GhYgGUtqBVF65GhKEa) is a globally distributed, multi-region cloud-hosted gateway for standard HTTP requests, for sharing objects with users via a web browser.
 
 **Auth Service**
 

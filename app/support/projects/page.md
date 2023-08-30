@@ -54,7 +54,7 @@ Select **Edit** to the right of the limit to change it. However, it will not all
 
 ## Delete the existing Project
 
-At the moment the Satellite Admin Console will not allow you to delete a Project.&#x20;
+At the moment the Satellite Admin Console will not allow you to delete a Project.
 
 {% callout type="success"  %}
 But you can delete all buckets and Access Grants from it and rename it to something like "not used". The empty project costs nothing.

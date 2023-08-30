@@ -52,7 +52,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 
@@ -136,7 +136,7 @@ To enable the S3 connector follow the instructions [here](https://docs.globus.or
 
 Next run `globus-connect-server storage-gateway create s3`, which initiates the process of creating a new S3 storage gateway.
 
-Replace `my-bucket` with the one created previously in the command below. You can specify more than one bucket if needed. For more details see [here](https://docs.globus.org/premium-storage-connectors/v5/aws-s3/#creating_the_storage_gateway).&#x20;
+Replace `my-bucket` with the one created previously in the command below. You can specify more than one bucket if needed. For more details see [here](https://docs.globus.org/premium-storage-connectors/v5/aws-s3/#creating_the_storage_gateway).
 
 ```shell
 globus-connect-server storage-gateway create s3 \

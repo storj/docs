@@ -85,7 +85,7 @@ If you would like to choose your own access name, please be sure to only use low
 Enter name to import as [default: main]:
 ```
 
-&#x20;3\. Enter the [](docId:OXSINcFRuVMBacPvswwNU) you generated:
+3\. Enter the [](docId:OXSINcFRuVMBacPvswwNU) you generated:
 
 ```Text
 Enter API key or Access grant:

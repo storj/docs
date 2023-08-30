@@ -29,6 +29,6 @@ Storj DCS is an enterprise, production-ready version of the Storj network, compl
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9K_5V8vYA1l3jjFHSe3bl_image.png)
 
-As shown in the above architecture, there are three primary peer classes within the Storj network. All are open source, and capable of being run by any third party, making the network architecture fundamentally decentralized.&#x20;
+As shown in the above architecture, there are three primary peer classes within the Storj network. All are open source, and capable of being run by any third party, making the network architecture fundamentally decentralized.
 
 The Storj network can leverage the decentralized nature of storage nodes and Satellites to create partitions in the network to isolate users and file transfers from each other, which helps minimize coordination across the Storj network. For extremely high throughput demands, organizations can run their own Satellite. This avoids coordination overhead with the rest of Storj DCS and allows users to make their own decisions about what database infrastructure their Satellite will use and relax consistency guarantees if they wish.

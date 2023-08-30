@@ -13,13 +13,13 @@ In this guide, we are going to walk through the installation process for the Sto
 
 2.  Back up your NAS Device to the Network using Gateway-MT and any S3-compatible backup solution.
 
-For a video walkthrough of this process, please see below:&#x20;
+For a video walkthrough of this process, please see below:
 
 {% youtube-embed videoId="H6bRljVjR48" /%}
 
 ## Prerequisites
 
-- [](docId:aT6VAB297OWLd4vqeXxf5)&#x20;
+- [](docId:aT6VAB297OWLd4vqeXxf5)
 
 - Download the [QNAP Binary](https://github.com/storj-thirdparty/qnap-storagenode-app/releases/latest)
 

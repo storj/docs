@@ -27,7 +27,7 @@ One of the main motivations for preferring decentralization is to drive down inf
 
 Our decentralization goals for fundamental infrastructure, such as storage, are also driven by our desire to provide a viable alternative to the few major centralized storage entities who dominate the market at present. We believe that there exists inherent risk in trusting a single entity, company, or organization with a significant percentage of the world’s data. In fact, we believe that there is an implicit cost associated with the risk of trusting any third party with custodianship of personal data.‌
 
-## Unique Advantages of Decentralized Storage&#x20;
+## Unique Advantages of Decentralized Storage
 
 **​**[](docId:Pksf8d0TCLY2tBgXeT18d)**:** the [cryptographic](https://en.wikipedia.org/wiki/Cryptographic) technique of [encrypting](https://en.wikipedia.org/wiki/Encrypting) data on the sender's side, before it is transmitted to a [server](<https://en.wikipedia.org/wiki/Server_(computing)>) such as a cloud storage service. Client-side encryption features an encryption key that is not available to the service provider (in this case, Storj), making it difficult or impossible for service providers to decrypt hosted data. Client-side encryption allows for the creation of applications whose providers cannot access the data its users have stored, thus offering a high level of privacy. (Source: <https://en.wikipedia.org/wiki/Client-side_encryption>)‌
 

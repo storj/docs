@@ -5,7 +5,7 @@ redirects:
   - /dcs/api-reference/uplink-cli/ls-command
 ---
 
-&#x20;List objects and prefixes or all buckets
+List objects and prefixes or all buckets
 
 ## Usage
 

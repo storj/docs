@@ -24,7 +24,7 @@ The latest compatibility can be found in [the compatibility table for GatewayST 
 
 ## When to use GatewayMT
 
-If you have an existing application that is using an S3-compatible object storage service and you want to switch to Storj, the easiest way to switch is to use the hosted S3-compatible service. The main design decision you need to be aware of is that Gateway-MT uses [](docId:hf2uumViqYvS1oq8TYbeW). You can learn about the supported commands and endpoints for S3 compatibility under the SDK & Reference section for the [](docId:yYCzPT8HHcbEZZMvfoCFa).&#x20;
+If you have an existing application that is using an S3-compatible object storage service and you want to switch to Storj, the easiest way to switch is to use the hosted S3-compatible service. The main design decision you need to be aware of is that Gateway-MT uses [](docId:hf2uumViqYvS1oq8TYbeW). You can learn about the supported commands and endpoints for S3 compatibility under the SDK & Reference section for the [](docId:yYCzPT8HHcbEZZMvfoCFa).
 
 ## When to use GatewayST
 

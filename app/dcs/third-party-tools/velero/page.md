@@ -36,7 +36,7 @@ The Storj DCS Velero plugin does not support volume snapshots for now.
 
 - [Create a Storj DCS account](https://storj.io/signup)
 
-- [](docId:OXSINcFRuVMBacPvswwNU) for the project or create an access grant with the [](docId:TbMdOGCAXNWyPpQmH6EOq)&#x20;
+- [](docId:OXSINcFRuVMBacPvswwNU) for the project or create an access grant with the [](docId:TbMdOGCAXNWyPpQmH6EOq)
 
 - [Create a bucket](docId:pxdnqsVDjCLZgeEXt2S6x) where Velero will store the backups
 
@@ -86,6 +86,6 @@ In the example below, we can see a Disaster Recovery scenario where we might nee
 
 ---
 
-In this scenario, Cluster B is restored from the backup of A and reconstituting the Kubernetes volume in the cluster. &#x20;
+In this scenario, Cluster B is restored from the backup of A and reconstituting the Kubernetes volume in the cluster.
 
 ## Github Source: [Velero Plugin](https://github.com/storj/velero-plugin)

@@ -22,7 +22,7 @@ If your S3-compatible app requires object listings to be lexicographically sorte
 [](docId:XKib9SzjtEXTXWvdyYWX6) determine the access to objects and how they are encrypted, including their object key. Follow these steps to create an access grant with disabled encryption for object keys and register it as S3 credentials.
 
 {% callout type="info"  %}
-The following instructions cannot be executed entirely in the Satellite Console and require the final steps to be completed with the Uplink CLI (v1.76 or later).&#x20;
+The following instructions cannot be executed entirely in the Satellite Console and require the final steps to be completed with the Uplink CLI (v1.76 or later).
 {% /callout %}
 
 1.  Log in to the Satellite Console and follow the steps to [](docId:OXSINcFRuVMBacPvswwNU).

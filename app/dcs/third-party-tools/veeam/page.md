@@ -16,15 +16,15 @@ metadata:
 
 For more information, visit [veeam.com](). You can also [download a free trial](https://www.veeam.com/vm-backup-recovery-replication-software.html) for 30 days.
 
-## Advantages of Veeam with Storj 
+## Advantages of Veeam with Storj
 
 - **Eliminate downtime**: instant recovery and protection from cyber threats.
 
-- **Fast and secure backup for your data: **automate workload backup and discovery across cloud, virtual, physical, and NAS. Fast image-based backups take advantage of VMs, hardware, and OS snapshots.&#x20;
+- **Fast and secure backup for your data: **automate workload backup and discovery across cloud, virtual, physical, and NAS. Fast image-based backups take advantage of VMs, hardware, and OS snapshots.
 
 - **Lightning-fast data recovery for any scenario**: instant recovery of OSes, applications, databases, VMs, files, folders, objects, and shares. Recovery works across multiple clouds and platforms.
 
-- **Flexibility**: a software-defined and hardware–agnostic solution for ultimate flexibility.&#x20;
+- **Flexibility**: a software-defined and hardware–agnostic solution for ultimate flexibility.
 
 ## Integration
 
@@ -50,7 +50,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 
@@ -132,9 +132,9 @@ Storj backup is integrated with Veeam using Veeam's **New Object Repository** w
 
 1\. Launch the **New Object Repository** wizard:
 
-1.  Open the **Backup Infrastructure** view.&#x20;
+1.  Open the **Backup Infrastructure** view.
 
-2.  In the inventory pane select the **Backup Repositories** node and click **Add Repository** on the ribbon.&#x20;
+2.  In the inventory pane select the **Backup Repositories** node and click **Add Repository** on the ribbon.
 
 3.  In the **Add Backup Repository** dialog, select **Object Storage > S3 Compatible**.
 
@@ -142,9 +142,9 @@ Storj backup is integrated with Veeam using Veeam's **New Object Repository** w
 
 2\. Specify the Object Storage Name
 
-1.  &#x20;At the **Name** step of the wizard, specify a name and description for the object storage repository. In the **Name** field, specify a name for the new object storage repository, such as **Storj.**
+1.  At the **Name** step of the wizard, specify a name and description for the object storage repository. In the **Name** field, specify a name for the new object storage repository, such as **Storj.**
 
-2.  In the **Description** field, enter an optional description.&#x20;
+2.  In the **Description** field, enter an optional description.
 
 3.  To limit the maximum number of tasks that can be processed at once, select the **Limit concurrent tasks to N** check box.
 
@@ -180,7 +180,8 @@ Credentials window:
 
 3.  If desired, select the **Limit object storage consumption to** check box to define a soft limit that can be exceeded temporarily for your object storage consumption. Enter a limit value in terabytes or petabytes.
 
-4.  If desired, select the** Make recent backups immutable for** check box to prohibit the deletion of blocks of data from object storage. Specify the immutability period, in days.&#x20;
+4.  If desired, select the** Make recent backups immutable for** check box to prohibit the deletion of blocks of data from object storage. Specify the immutability period, in days.
+
     Note: selecting this option might increase storage costs. For more information about immutability, see [Immutability](https://helpcenter.veeam.com/docs/backup/vsphere/immutability_sobr.html?ver=120) on the Veeam website.
 
 5.  Select **Next**.

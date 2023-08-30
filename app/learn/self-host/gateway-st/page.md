@@ -34,21 +34,21 @@ To save on costs and improve performance, please see [](docId:rkPrCIwpTjmMKiZaje
 
 ## Dependencies
 
-✅ [](docId:TbMdOGCAXNWyPpQmH6EOq)&#x20;
+✅ [](docId:TbMdOGCAXNWyPpQmH6EOq)
 
-✅ [](docId:OXSINcFRuVMBacPvswwNU) or [](docId:b4-QgUOxVHDHSIWpAf3hG)&#x20;
+✅ [](docId:OXSINcFRuVMBacPvswwNU) or [](docId:b4-QgUOxVHDHSIWpAf3hG)
 
 ## Steps:
 
-1.  [Get and install Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#get-and-install-gateway-st)&#x20;
+1.  [Get and install Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#get-and-install-gateway-st)
 
-2.  [Configure Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#configure-gateway-st)&#x20;
+2.  [Configure Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#configure-gateway-st)
 
-3.  [Run Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#run-gateway-st)&#x20;
+3.  [Run Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#run-gateway-st)
 
-4.  [Configure AWS CLI to use Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#configure-aws-cli-to-use-gateway-st)&#x20;
+4.  [Configure AWS CLI to use Gateway ST](docId:EGM8O-1xt2Az03eBWT8Rf#configure-aws-cli-to-use-gateway-st)
 
-5.  [Try it out!](docId:EGM8O-1xt2Az03eBWT8Rf#try-it-out)&#x20;
+5.  [Try it out!](docId:EGM8O-1xt2Az03eBWT8Rf#try-it-out)
 
 ## Get and install Gateway ST
 
@@ -126,7 +126,7 @@ You have two ways to configure your Gateway ST:
 
 1.  [](docId:EGM8O-1xt2Az03eBWT8Rf) (only if it is your first setup)
 
-2.  [](docId:EGM8O-1xt2Az03eBWT8Rf)&#x20;
+2.  [](docId:EGM8O-1xt2Az03eBWT8Rf)
 
 ## Interactive Setup
 
@@ -169,7 +169,7 @@ docker run -it --rm --mount type=bind,source=/path/to/gateway-config-dir/,destin
 {% /tab %}
 {% /tabs %}
 
-2\. Enter the numeric choice or satellite address corresponding to the satellite you've created your account on.&#x20;
+2\. Enter the numeric choice or satellite address corresponding to the satellite you've created your account on.
 
 The satellite address should be entered as \<nodeid>@\<address>:\<port> for example: `12L9ZFwhzVpuEKMUNUqkaTLGzwY9G24tbiigLiXpmZWKwmcNDDs@eu1.storj.io:7777`, or just use the number from the list:
 
@@ -192,7 +192,7 @@ If you would like to choose your own access name, please be sure to only use low
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/r0PGzFlbeZmrAUhoUXuYJ_self-s3-04.png)
 
 {% callout type="warning"  %}
-Please note that **Storj Labs does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.&#x20;
+Please note that **Storj Labs does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
 {% /callout %}
 
 6\. Your S3 gateway is configured and ready to use!
@@ -203,7 +203,7 @@ You can use two methods to obtain an Access Grant:
 
 1.  [](docId:Ch4vLynsEqyT2-3qDEBiy)
 
-2.  [](docId:b4-QgUOxVHDHSIWpAf3hG)&#x20;
+2.  [](docId:b4-QgUOxVHDHSIWpAf3hG)
 
 Now we got our access grant and can configure the gateway as follows:
 
@@ -479,7 +479,7 @@ docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gat
 Now you can navigate to <http://localhost:7777/site/> to see the bucket `site` as XML or to <http://localhost:7777/site/index.html> to see a static page, uploaded to the bucket `site`.
 
 {% callout type="info"  %}
-You can publish this page to the internet, but in this case, you should run your gateway with the option `--server.address local_IP:local_Port` (replace`local_IP`with the local IP of your PC and`local_Port` with the port you want to expose).&#x20;
+You can publish this page to the internet, but in this case, you should run your gateway with the option `--server.address local_IP:local_Port` (replace`local_IP`with the local IP of your PC and`local_Port` with the port you want to expose).
 
 If you use`localhost` or `127.0.0.1` as your `local_IP,` you will not be able to publish it directly (via port forwarding for example), instead, you will have to use a reverse proxy here.
 {% /callout %}

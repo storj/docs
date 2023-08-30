@@ -16,7 +16,7 @@ metadata:
 
 **Restic** is a backup client written in Go language, it is highly secure and efficient. Each **Restic** backup is a snapshot of the server/files/directory, deduplicated from what was stored before. Any restore to a given backup will restore the server/files/directories to the exact state they were at that time.
 
-This is a quick-start tutorial that covers [Restic](https://restic.net) usage with Storj DCS.&#x20;
+This is a quick-start tutorial that covers [Restic](https://restic.net) usage with Storj DCS.
 
 In this guide, we will cover only some of the basic features of the tool. The complete documentation for Restic is located here, at their [complete command reference](https://restic.readthedocs.io/en/latest/manual_rest.html).
 
@@ -57,9 +57,9 @@ First, [install](https://restic.readthedocs.io/en/stable/020_installation.html) 
 restic --repo rclone:storj:bucket/my-backup init
 ```
 
-Flag `--repo` defines that we will use `rclone` as a tool for backup with `storj` configuration. The last part `bucket/my-backup` specifies where our backup will be stored remotely.&#x20;
+Flag `--repo` defines that we will use `rclone` as a tool for backup with `storj` configuration. The last part `bucket/my-backup` specifies where our backup will be stored remotely.
 
-The label `storj` refers to the `rclone` configuration name which you chose during setup.&#x20;
+The label `storj` refers to the `rclone` configuration name which you chose during setup.
 
 Now, enter a password for your repository.
 
@@ -75,7 +75,7 @@ Now you are ready to do your first backup!
 
 ## Backing Up
 
-Execute the backup command:&#x20;
+Execute the backup command:
 
 ```Text
 restic --repo rclone:storj:bucket/my-backup backup ~/directory-to-backup --pack-size=60
@@ -123,7 +123,7 @@ To restore the latest snapshot of your backup:
 restic --repo rclone:storj:bucket/my-backup restore latest --target ~/restore
 ```
 
-The `latest` option means we want to restore the latest snapshot.&#x20;
+The `latest` option means we want to restore the latest snapshot.
 
 The `--target` flag defines the directory where the backup will be restored.
 

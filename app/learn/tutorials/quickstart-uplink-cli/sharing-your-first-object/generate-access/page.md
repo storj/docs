@@ -9,9 +9,9 @@ weight: 5
 
 There are several ways to share access to an object:
 
-- by [](docId:tBnCSrmR1jbOewG38fIr4)&#x20;
+- by [](docId:tBnCSrmR1jbOewG38fIr4)
 
-- by [](docId:R8OfnPylILOIrkpc187Xx)&#x20;
+- by [](docId:R8OfnPylILOIrkpc187Xx)
 
 - by [](docId:jWrIx32jqwp0r45vQcodH) using Uplink CLI
 
@@ -59,7 +59,7 @@ The command `uplink access restrict` allows you to create a restricted access gr
 An access generated using `uplink access restrict` with no arguments creates an access to your **entire project** with read permissions!
 {% /callout %}
 
-Example:&#x20;
+Example:
 
 {% code-group %}
 
@@ -87,13 +87,13 @@ See the [](docId:jWrIx32jqwp0r45vQcodH) command reference for more actions.
 
 ## Restrictions
 
-The `--readonly` flag prevents all write operations (delete and write). Similarly, the `--writeonly` flag prevents all read operations (read and list).&#x20;
+The `--readonly` flag prevents all write operations (delete and write). Similarly, the `--writeonly` flag prevents all read operations (read and list).
 
 By default, the access is read-only. To give full permissions, use `--readonly=false`
 
 You may also indicate the duration of access by specifying a start and end time.
 
-The list of all restrictions can be found [](docId:tBnCSrmR1jbOewG38fIr4). Example:&#x20;
+The list of all restrictions can be found [](docId:tBnCSrmR1jbOewG38fIr4). Example:
 
 {% code-group %}
 

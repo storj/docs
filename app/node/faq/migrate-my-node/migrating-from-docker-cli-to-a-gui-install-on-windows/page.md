@@ -16,7 +16,7 @@ redirects:
 robocopy /MIR /MOVE D:\Storj\orders "$env:ProgramFiles\Storj\Storage Node\orders"
 ```
 
-3\. Point to the same exact **storage** folder where you were previously storing the data.&#x20;
+3\. Point to the same exact **storage** folder where you were previously storing the data.
 
 {% callout type="warning"  %}
 Do NOT copy the path from the old `config.yaml` or `source` part of the `--mount` option of your Docker node where the **storage** subfolder was not explicitly included in the path.
@@ -34,6 +34,6 @@ It is better to specify the path to the **storage** subfolder with the **Browse.
 
 ## Migrating from Docker CLI on Linux to a GUI install on Windows
 
-First you need to transfer both the identity and the data from the Linux installation to the new Windows device: [](docId:jEntWNvi2M6Eo74NICIJg)&#x20;
+First you need to transfer both the identity and the data from the Linux installation to the new Windows device: [](docId:jEntWNvi2M6Eo74NICIJg)
 
 Then you can follow the instructions in this guide.

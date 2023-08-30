@@ -5,7 +5,7 @@ redirects:
   - /node/resources/faq/machine-restart-shutdown
 ---
 
-If you have properly mounted your hard drive (if on Linux, [](docId:nZeFxmawYPdgkwUPy6f9s)), then your Node should start up again automatically after your machine has rebooted.&#x20;
+If you have properly mounted your hard drive (if on Linux, [](docId:nZeFxmawYPdgkwUPy6f9s)), then your Node should start up again automatically after your machine has rebooted.
 
 However, power failures on [](docId:hbCGTv1ZLLR2-kpSaGEXw) or other abrupt disconnections may cause database corruption leading to errors such as: `database error: database disk image is malformed` or `database: file is not a database` in [](docId:O68S24Iww4ZEnVk8yO7Mv)).
 

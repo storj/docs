@@ -32,7 +32,7 @@ You will need one of the following:
 
 ## Native
 
-Use our native integration pattern to take advantage of client-side encryption as well as to achieve the best possible download performance. Uploads will be erasure-coded [](docId:Pksf8d0TCLY2tBgXeT18d), thus a 1GB upload will result in 2.68GB of data being uploaded to storage nodes across the network.&#x20;
+Use our native integration pattern to take advantage of client-side encryption as well as to achieve the best possible download performance. Uploads will be erasure-coded [](docId:Pksf8d0TCLY2tBgXeT18d), thus a 1GB upload will result in 2.68GB of data being uploaded to storage nodes across the network.
 
 ### Use this pattern for
 

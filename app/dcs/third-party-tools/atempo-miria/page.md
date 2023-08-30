@@ -139,7 +139,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 ### Miria Configuration
 
-1\. Log into the Miria web UI. In the left panel, select **Infrastructure**, then **Object Storages**.&#x20;
+1\. Log into the Miria web UI. In the left panel, select **Infrastructure**, then **Object Storages**.
 
 2\. Select **New Storage Manager**.
 
@@ -157,11 +157,11 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/KApbFdOcEAxy0sPeG-Xyr_2.png)
 
-9\. The new **Storage Manager Container **is ready for data storage. You can store backups, archives, tiered data, or synchronized files from primary storage.&#x20;
+9\. The new **Storage Manager Container **is ready for data storage. You can store backups, archives, tiered data, or synchronized files from primary storage.
 
 ## Success!
 
-1\. Create a new **project**.&#x20;
+1\. Create a new **project**.
 
 2\. Configure **Start the task** and check its progression.
 

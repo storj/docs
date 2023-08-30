@@ -24,9 +24,9 @@ See [the compatibility table for GatewayST](https://github.com/storj/gateway-st/
 
 ### Security and encryption
 
-Where the Storj network really excels compared to centralized providers is in its privacy and security, so we’d be remiss in not addressing these topics specifically as they pertain to S3.&#x20;
+Where the Storj network really excels compared to centralized providers is in its privacy and security, so we’d be remiss in not addressing these topics specifically as they pertain to S3.
 
-The distributed security tokens (access grants) that Storj typically uses (via libuplink, etc.) contain too much detail to fit into an S3 access key or secret key field. Storj offers an S3-specific authorization service, which maps S3-compatible credentials to a Storj access grant. This service saves access grants encrypted into a database. The access grants are individually encrypted using information from the much shorter returned access key, which is not stored in our auth service. Access grants never remain decrypted longer than they are needed, and only a hash of the access key is ever persisted. In short, the system is designed to protect your data at rest.&#x20;
+The distributed security tokens (access grants) that Storj typically uses (via libuplink, etc.) contain too much detail to fit into an S3 access key or secret key field. Storj offers an S3-specific authorization service, which maps S3-compatible credentials to a Storj access grant. This service saves access grants encrypted into a database. The access grants are individually encrypted using information from the much shorter returned access key, which is not stored in our auth service. Access grants never remain decrypted longer than they are needed, and only a hash of the access key is ever persisted. In short, the system is designed to protect your data at rest.
 
 ### Benefits
 
@@ -44,7 +44,7 @@ There are two primary ways to get started using our hosted S3 gateway and get is
 
 The first main way is to use the web wizard in the Satellite web interface. The web wizard is simple and easy to use, but lacks some configurability, like the ability to restrict to specific prefixes within a bucket or use a different auth service. If you need those features, consider the CLI, farther below.
 
-After logging in, create a new access grant and select "continue in browser."&#x20;
+After logging in, create a new access grant and select "continue in browser."
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DIo-yHe7nogLu4JXyGztm_s3-01.png)
 

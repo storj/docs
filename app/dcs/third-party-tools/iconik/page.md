@@ -14,7 +14,7 @@ metadata:
     Topics covered include account creation, bucket creation and S3 credentials generation.
 ---
 
-[Iconik](https://www.iconik.io/) is a cloud media management and collaboration software that gathers and organizes media from multiple storage locations. Iconik has powerful features that allow users to find, share, and collaborate on media from anywhere in the world. Iconik is web-based and runs in the cloud, using its Iconik Storage Gateway (ISG) to manage and track files while allowing users to bring their own storage.&#x20;
+[Iconik](https://www.iconik.io/) is a cloud media management and collaboration software that gathers and organizes media from multiple storage locations. Iconik has powerful features that allow users to find, share, and collaborate on media from anywhere in the world. Iconik is web-based and runs in the cloud, using its Iconik Storage Gateway (ISG) to manage and track files while allowing users to bring their own storage.
 
 ## Advantages of Iconik with Storj
 
@@ -24,13 +24,13 @@ Iconik is easy to use and intuitive with a clean and intuitive platform. It orga
 
 2.  **Aggregates files from multiple cloud storages.** If Storj is only one part of your storage solution, Iconik makes it easy to aggregate your files from multiple storage providers.
 
-3.  **Cost Savings. **Adds editing and sharing features to your Storj data, creating feature-rich storage and while maintaining low costs for the storage itself.&#x20;
+3.  **Cost Savings. **Adds editing and sharing features to your Storj data, creating feature-rich storage and while maintaining low costs for the storage itself.
 
 ## Integration
 
 To integrate Storj storage with Iconik, you will mount your cloud storage in Iconik's Admin section using S3 credentials.
 
-Iconik integrates with any S3-compatible cloud storage platform.&#x20;
+Iconik integrates with any S3-compatible cloud storage platform.
 
 To complete the integration, you will need:
 
@@ -130,7 +130,7 @@ To complete the integration, you will need the S3 credentials created in the pre
 
 ### Iconik Access
 
-To sign in to your Iconik account, visit [https://iconik.io/](https://app.iconik.io/) and click Sign In. This takes you to <https://app.iconik.io/> from where you can enter your credentials.&#x20;
+To sign in to your Iconik account, visit [https://iconik.io/](https://app.iconik.io/) and click Sign In. This takes you to <https://app.iconik.io/> from where you can enter your credentials.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/W_L58KzUqW4fiZ9RTNCul_image.png)
 
@@ -202,7 +202,7 @@ If you do not have an Iconik account, you must request a trial by clicking Reque
 
 ### Confirmation of Success
 
-A pop-up window confirms that your storage was created successfully with a green checkmark next to "Access credentials" and "Permissions on the storage".&#x20;
+A pop-up window confirms that your storage was created successfully with a green checkmark next to "Access credentials" and "Permissions on the storage".
 
 Click Close to exit, or Edit to make changes to your storage credentials.
 

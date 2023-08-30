@@ -11,7 +11,7 @@ metadata:
     encryption, and Access Grants.
 ---
 
-Distributed and decentralized cloud storage is a fantastic way to take advantage of underutilized storage and bandwidth, but in order to provide highly available and durable cloud storage, we needed to build in some fairly sophisticated security and privacy controls.&#x20;
+Distributed and decentralized cloud storage is a fantastic way to take advantage of underutilized storage and bandwidth, but in order to provide highly available and durable cloud storage, we needed to build in some fairly sophisticated security and privacy controls.
 
 Since we had to build with the assumption that any Peer Class besides the Uplink could be run by an untrusted person, we had to implement a zero-knowledge security architecture. This turns out to not only make our system far more resistant to attacks than traditional architectures but also brings significant benefits to developers building apps on Storj.
 

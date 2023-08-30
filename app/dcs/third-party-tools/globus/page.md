@@ -136,7 +136,7 @@ To enable the S3 connector follow the instructions [here](https://docs.globus.or
 
 Next run `globus-connect-server storage-gateway create s3`, which initiates the process of creating a new S3 storage gateway.
 
-Replace `my-bucket` with the one created previously in the command below. You can specify more than one bucket if needed. For more details see [here](https://docs.globus.org/premium-storage-connectors/v5/aws-s3/#creating_the_storage_gateway).&#x20;
+Replace `my-bucket` with the one created previously in the command below. You can specify more than one bucket if needed. For more details see [here](https://docs.globus.org/premium-storage-connectors/v5/aws-s3/#creating_the_storage_gateway).
 
 ```shell
 globus-connect-server storage-gateway create s3 \

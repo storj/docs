@@ -11,7 +11,7 @@ redirects:
 
 Comet is a flexible backup platform that gives users total control over their backup environment and storage destinations. Comet provides solutions to protect and restore partitions, databases, servers, files, and folders. Whether users are looking for cloud backup, computer backup, or data backup, Comet can address those needs.
 
-Visit <https://cometbackup.com/> for more information.&#x20;
+Visit <https://cometbackup.com/> for more information.
 
 ## Advantages of Storj with Comet Backup
 
@@ -29,7 +29,7 @@ Comet integrates with any S3-compatible cloud storage platform, including Storj.
 
 To integrate Comet with Storj, you will need:
 
-- A Storj account&#x20;
+- A Storj account
 
 - A Storj bucket for Comet
 

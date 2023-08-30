@@ -22,13 +22,13 @@ Using Storj with TrueNAS provides resilient cloud object storage with blazing pe
 
 1.  **Data durability**: Use Storj as an offsite backup for your TrueNAS storage for multi-region durability.
 
-2.  **Speed and simplicity** of on-site storage with the added protection of a back-up in the cloud.&#x20;
+2.  **Speed and simplicity** of on-site storage with the added protection of a back-up in the cloud.
 
 3.  &#x20;It is also configurable in a variety of ways.
 
 ## Integration
 
-This integration uses S3 credentials passed from Storj to TrueNAS. You will need to set up a Storj account, create a Storj bucket for TrueNAS, and generate S3 credentials for TrueNAS. Then, you will need to create a Cloud Credential on TrueNAS that will grant it access to the bucket in Storj.&#x20;
+This integration uses S3 credentials passed from Storj to TrueNAS. You will need to set up a Storj account, create a Storj bucket for TrueNAS, and generate S3 credentials for TrueNAS. Then, you will need to create a Cloud Credential on TrueNAS that will grant it access to the bucket in Storj.
 
 ### Software Requirements
 
@@ -36,9 +36,9 @@ Storj is fully integrated with TrueNAS.
 
 To integrate TrueNAS with Storj, you will need:
 
-- A Storj account&#x20;
+- A Storj account
 
-- A TrueNAS storage device connected to your network.&#x20;
+- A TrueNAS storage device connected to your network.
 
 For more information about the iX Storj integration, see the [press release](https://www.truenas.com/blog/ix-and-storj-deliver-globally-distributed-storage-to-truenas/).
 
@@ -46,7 +46,7 @@ For more information about the iX Storj integration, see the [press release](htt
 
 ## Setting up Storj
 
-### Sign up for an account&#x20;
+### Sign up for an account
 
 Navigate to <https://us1.storj.io/signup?partner=ixsystems> to sign up iX-Storj account. Enter your full name, email address, and a password, as shown below:
 

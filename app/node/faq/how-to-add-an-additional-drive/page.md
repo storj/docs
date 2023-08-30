@@ -31,7 +31,7 @@ Each node must have its own generated unique identity signed with a new authoriz
 
 ## General rules to run multiple nodes in the same network
 
-If you have only one external address, then you need to have a unique port for each storagenode. The default port for storagenode is `28967`, protocols `TCP+UDP`.&#x20;
+If you have only one external address, then you need to have a unique port for each storagenode. The default port for storagenode is `28967`, protocols `TCP+UDP`.
 
 ```Text
 # the public address of the node, useful for nodes behind NAT
@@ -40,7 +40,7 @@ contact.external-address: "my.ddns.tld:28967"
 
 If you want to add an additional new node, you can use the next free port or simply increase the previous used port by 1, for example - `28968`.
 
-If you run multiple nodes on the same device, you will need a unique port for the dashboard too. The default port for the dashboard is `14002` TCP.&#x20;
+If you run multiple nodes on the same device, you will need a unique port for the dashboard too. The default port for the dashboard is `14002` TCP.
 
 ```Text
 # server address of the api gateway and frontend app
@@ -55,7 +55,7 @@ You need to forward only the external node's port. Please, do not forward the da
 
 If you run a binary version of storagenode ([](docId:5shJebpS3baWj6LDV5ANQ) for example) or a docker version with `--network host` option, you also need to have unique internal ports.
 
-For the node's CLI dashboard, the default internal address and port is `127.0.0.1:7778`, it is specified in the `server.private-address` option.&#x20;
+For the node's CLI dashboard, the default internal address and port is `127.0.0.1:7778`, it is specified in the `server.private-address` option.
 
 ```Text
 # private address to listen on

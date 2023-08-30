@@ -16,7 +16,7 @@ Here are a few of the benefits of receiving payouts through this approach:
 
 **Better Scalability**
 
-With zkSync, payouts will consume less block space on the Ethereum network because transactions are bundled together and processed in batches. The system is currently capable of processing 2000 transactions per second!&#x20;
+With zkSync, payouts will consume less block space on the Ethereum network because transactions are bundled together and processed in batches. The system is currently capable of processing 2000 transactions per second!
 
 **Lower Layer 2 Transfer Fees**
 
@@ -34,7 +34,7 @@ To opt-in to [zkSync Lite](https://docs.zksync.io/userdocs/intro/) and/or [zkSyn
 
 ## Binary versions (include Windows/Linux GUI)
 
-Open your storage node's `config.yaml` (see [](docId:gDXZgLlP_rcSW8SuflgqS)) and add the line&#x20;
+Open your storage node's `config.yaml` (see [](docId:gDXZgLlP_rcSW8SuflgqS)) and add the line
 
 ```yaml
 operator.wallet-features: ['zksync']
@@ -235,7 +235,7 @@ Currently, zkSync requires users to pay a one-time activation fee for registerin
 
 3.  Enter the amount you want to send into the **Amount** field.
 
-    You will see a transaction fee, [one-time activation fee](https://zksync.io/faq/tutorials.html#account-activation) (only the first time you make a send to Ethereum), and the estimated fee values expressed in the token you selected (STORJ) and its equivalent value in USD.&#x20;
+    You will see a transaction fee, [one-time activation fee](https://zksync.io/faq/tutorials.html#account-activation) (only the first time you make a send to Ethereum), and the estimated fee values expressed in the token you selected (STORJ) and its equivalent value in USD.
 
     ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_kgYHzc8ry0gtPmSQJJSA_image.png)
 
@@ -257,7 +257,7 @@ Currently, zkSync requires users to pay a one-time activation fee for registerin
 
 3.  Configure your Wallet to use the zkSync Era Mainnet, following wizard for chosen Wallet, if you did not already.
 
-4.  Select the token, specify an amount and provide a destination Ethereum address&#x20;
+4.  Select the token, specify an amount and provide a destination Ethereum address
 
     ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8dL38QFUAEVItTHMoABaE_image.png)
 

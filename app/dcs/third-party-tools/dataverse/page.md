@@ -39,7 +39,7 @@ Credentials will only appear once. Be sure to store them, including the Access K
 
 Dataverse will use the "AWS credentials profile file" that is configured for the user you run the Payara service with (e.g. `/home/dataverse/.aws/config`).
 
-Enter the Storj S3 credentials using `aws configure`&#x20;
+Enter the Storj S3 credentials using `aws configure`
 
 ```Text
 aws configure
@@ -72,7 +72,7 @@ Create a bucket called `dataverse` to store your files.
 aws --endpoint-url=https://gateway.storjshare.io s3 mb s3://dataverse
 ```
 
-### Configure Storj option in Dataverse&#x20;
+### Configure Storj option in Dataverse
 
 Using `asadmin` (usually located at `/usr/local/payara5/bin/asadmin`) run the following commands.
 

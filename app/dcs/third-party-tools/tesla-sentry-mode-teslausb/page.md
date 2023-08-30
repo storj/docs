@@ -32,7 +32,7 @@ All in, you’re looking at right around $60 of hardware to get going (prices as
 
 - [USB Cable to plug into the car](https://www.adafruit.com/product/592) USB A to Micro-B - 3 foot long
 
-- [Storj cloud storage](https://www.storj.io) - Secure, private and decentralized.&#x20;
+- [Storj cloud storage](https://www.storj.io) - Secure, private and decentralized.
 
 Optional hardware for easier setup:
 
@@ -40,7 +40,7 @@ Optional hardware for easier setup:
 
 ### Software required
 
-The code used in this tutorial is open source and uses, among other things, [Rlcone](https://github.com/rclone/rclone) which includes native support for Storj. The GitHub Repository for the code is available at: <https://github.com/marcone/teslausb> and the project was originally described on the [/r/teslamotors](https://www.reddit.com/r/teslamotors/comments/9m9gyk/build_a_smart_usb_drive_for_your_tesla_dash_cam/) subreddit.&#x20;
+The code used in this tutorial is open source and uses, among other things, [Rlcone](https://github.com/rclone/rclone) which includes native support for Storj. The GitHub Repository for the code is available at: <https://github.com/marcone/teslausb> and the project was originally described on the [/r/teslamotors](https://www.reddit.com/r/teslamotors/comments/9m9gyk/build_a_smart_usb_drive_for_your_tesla_dash_cam/) subreddit.
 
 ### Storj Account
 
@@ -65,7 +65,7 @@ Using the software in the [teslausb](https://github.com/marcone/teslausb) projec
 
 ### Sign Up for a Storj Account
 
-If you have not yet signed up, please head here to[ sign up for the free tier.](https://www.storj.io/signup)&#x20;
+If you have not yet signed up, please head here to[ sign up for the free tier.](https://www.storj.io/signup)
 
 {% callout type="info"  %}
 Please consult [](docId:nGzxQBhV8nx5Pukj6O0zT) for details on setting up an account and using the Satellite Admin Console.
@@ -99,13 +99,13 @@ Click the **Create my Access** link to finish generating of S3 credentials.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cpk1IzKHX4r9A7Kh0Jw8C_tesla8.png)
 
-**Copy** your **Access Key, Secret Key,** and **Endpoint** to a safe location. We will use this information later to configure Rclone with the hosted Gateway MT.&#x20;
+**Copy** your **Access Key, Secret Key,** and **Endpoint** to a safe location. We will use this information later to configure Rclone with the hosted Gateway MT.
 
 Now we have our **credentials** and can move on to configuring teslausb.
 
-### Overview of credentials collected&#x20;
+### Overview of credentials collected
 
-- **Encryption Passphrase**&#x20;
+- **Encryption Passphrase**
 
   - We will need this to view and/or retrieve clips in the browser later
 
@@ -145,7 +145,7 @@ You'll find the one-step setup guide for testlausb in this GitHub repo: <https:/
 
 4.  Specifically, set the \`ARCHIVE_SYSTEM\` to \`none\`. This is because we need to boot the Pi to install some additional software to push our sentry clips in Storj. Please also set your Wifi settings. Save the file when you are done editing.
 
-Below is a small portion of the config file showing 'export ARCHIVE_SYSTEM=none' as well as the wifi settings.&#x20;
+Below is a small portion of the config file showing 'export ARCHIVE_SYSTEM=none' as well as the wifi settings.
 
 ```Text
 # Variables for CIFS (Windows/Mac file sharing) archiving
@@ -183,7 +183,7 @@ sudo -i
 /root/bin/remountfs_rw
 ```
 
-**Install** Rclone:&#x20;
+**Install** Rclone:
 
 ```Text
 curl https://rclone.org/install.sh | sudo bash

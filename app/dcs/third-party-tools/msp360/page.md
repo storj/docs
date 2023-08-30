@@ -27,7 +27,7 @@ For more information, visit [msp360.com](), or sign up for a [free trial](https:
 
 ## Integration
 
-MSP360 integrates with Storj cloud storage through the S3 protocol.&#x20;
+MSP360 integrates with Storj cloud storage through the S3 protocol.
 
 To integrate MSP360 with Storj, you will need to create S3 credentials for MSP360 in Storj and pass them to the MSP360 managed backup server through the MSP360 web interface or SaaS control.
 
@@ -169,7 +169,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 7\. Under **Create Backup Destination**, choose something memorable for the display name, such as "MSP360-Backup - Storj".
 
-8\. Select **Show Advanced Settings**, and next to **Bucket**, select the **Select Existing** bubble. This pulls up the existing buckets in your Storj instance that have access to the S3 credentials for MSP360.&#x20;
+8\. Select **Show Advanced Settings**, and next to **Bucket**, select the **Select Existing** bubble. This pulls up the existing buckets in your Storj instance that have access to the S3 credentials for MSP360.
 
 9\. Select the bucket(s) you would like to sync with MSP360. In this case, choose the "msp360-backup" bucket you created in Storj earlier. Then select **Next**.
 

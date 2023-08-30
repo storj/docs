@@ -14,7 +14,7 @@ End-to-end encryption means that you are responsible for creating and maintainin
 
 ## A Word of Caution on encryption keys
 
-At several points in the Documentation it’s important to point out three important things about your encryption keys. Please make sure you clearly understand how encryption keys are used on Storj DCS. You, your application and/or your users are responsible for managing your encryption keys. &#x20;
+At several points in the Documentation it’s important to point out three important things about your encryption keys. Please make sure you clearly understand how encryption keys are used on Storj DCS. You, your application and/or your users are responsible for managing your encryption keys. 
 
 {% callout type="info"  %}
 If you lose your encryption keys, you have lost the ability to decrypt your data rendering it useless.&#x20;
@@ -30,7 +30,7 @@ It is very important you make sure to backup your encryption keys in a safe plac
 
 ### Thing 3: Secure your encryption keys
 
-This probably goes without saying, but be careful with how your app stores and transmits encryption keys.&#x20;
+This probably goes without saying, but be careful with how your app stores and transmits encryption keys.
 
 By keeping encryption and access management separate, and by implementing client-side encryption, Storj DCS ensures that your data can’t be processed, mined, scanned by Storj or any unauthorized 3rd parties. If you don’t, it will end badly and Storj won’t be able to help.
 

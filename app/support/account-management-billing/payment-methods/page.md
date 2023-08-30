@@ -21,7 +21,7 @@ Storj DCS accepts the following two payment methods:
 
 ## How To Add A Payment Method
 
-Once you have created a user account and a project, registered users are required to add a payment method before storing data on Storj DCS. Payment methods are added from the [](docId:Hurx0SirlRp_O5aUzew7_) section of the user interface.&#x20;
+Once you have created a user account and a project, registered users are required to add a payment method before storing data on Storj DCS. Payment methods are added from the [](docId:Hurx0SirlRp_O5aUzew7_) section of the user interface.
 
 Begin by selecting "Billiing" from the "My Account" dropdown menu at the left bottom corner of your dashboard.
 
@@ -39,7 +39,7 @@ You’ll be prompted to add your card information. Using a credit card is somewh
 
 - Users can add multiple credit cards, but only one can be the default method of payment.
 
-- A default credit card can only be deleted once all usage has stopped on the account, all data is removed, and any outstanding balance is paid. To remove a credit card from an account, any outstanding balance must be paid prior to contacting our support team to request that the card be removed.&#x20;
+- A default credit card can only be deleted once all usage has stopped on the account, all data is removed, and any outstanding balance is paid. To remove a credit card from an account, any outstanding balance must be paid prior to contacting our support team to request that the card be removed.
 
 - Up to one full billing cycle may be required prior to the removal of all payment methods.
 
@@ -47,9 +47,9 @@ You’ll be prompted to add your card information. Using a credit card is somewh
 
 - If a credit card expires, a user will receive a notification to the registered email on the account, however, if a new payment method is not added within a reasonable amount of time, we reserve the right to reclaim the available storage and bandwidth, reset usage limits to zero and delete any data stored on the account pursuant to our data retention policy.
 
-### Using STORJ Token&#x20;
+### Using STORJ Token
 
-In addition to credit cards, users may also pay for usage fees with STORJ token. Storj created the STORJ utility token as a medium of exchange on its decentralized cloud storage network. The STORJ utility token facilitates payments from people around the world for their use of the Storj DCS network to store their data, and Storj uses it to pay our community of Storage Node Operators that rent their unused hard drive capacity and bandwidth to the network.&#x20;
+In addition to credit cards, users may also pay for usage fees with STORJ token. Storj created the STORJ utility token as a medium of exchange on its decentralized cloud storage network. The STORJ utility token facilitates payments from people around the world for their use of the Storj DCS network to store their data, and Storj uses it to pay our community of Storage Node Operators that rent their unused hard drive capacity and bandwidth to the network.
 
 Making payments with STORJ token is a different process than using a credit card. When using STORJ as your payment method, you commit to using a pre-payment model, which means you must first deposit X amount of STORJ tokens, which will be automatically converted to Y amount of $USD based on the spot price of the token at the time of the payment transaction.
 

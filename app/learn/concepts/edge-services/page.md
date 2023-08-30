@@ -29,7 +29,7 @@ Storj DCS includes a globally distributed, multi-region cloud-hosted [](docId:yY
 
 **Linkshare Service**
 
-The [](docId:sN2GhYgGUtqBVF65GhKEa) is a globally distributed, multi-region cloud-hosted gateway for standard HTTP requests, for sharing objects with users via a web browser.&#x20;
+The [](docId:sN2GhYgGUtqBVF65GhKEa) is a globally distributed, multi-region cloud-hosted gateway for standard HTTP requests, for sharing objects with users via a web browser.
 
 **Auth Service**
 

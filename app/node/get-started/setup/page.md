@@ -11,7 +11,7 @@ By becoming a Storage Node Operator you enable your unused hard drive space to b
 
 ## [](docId:hbCGTv1ZLLR2-kpSaGEXw)&#x20; {% anchor=false %}
 
-Includes Hardware Requirements (Recommended), System Requirements, Internet Connection, Power Supply.&#x20;
+Includes Hardware Requirements (Recommended), System Requirements, Internet Connection, Power Supply.
 
 ## [](docId:v-fUvPqySvUwTMF-od6hD)&#x20; {% anchor=false %}
 
@@ -27,7 +27,7 @@ This is a protocol based on UDP which promises more efficient usage of the inter
 
 ## [](docId:aT6VAB297OWLd4vqeXxf5)&#x20; {% anchor=false %}
 
-This can take several hours or days, depending on your machine's processing power and luck. Plan to run your Node on a NAS, Raspberry Pi, or similar? Create your identity on a more powerful machine and transfer it over.&#x20;
+This can take several hours or days, depending on your machine's processing power and luck. Plan to run your Node on a NAS, Raspberry Pi, or similar? Create your identity on a more powerful machine and transfer it over.
 
 ## [](docId:XC--4Jtp1o309gbWFOHPn) {% anchor=false %}
 

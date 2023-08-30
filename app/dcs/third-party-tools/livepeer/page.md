@@ -67,9 +67,9 @@ Create an Access Grant in the Storj web console:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/d49yH5Krbqdh6Sd-vA8k1_screenshot-2023-02-28-at-20757-pm.png)
 
-4\. Select "Encrypt My Access"&#x20;
+4\. Select "Encrypt My Access"
 
-5\. Set an encryption passphrase and agree to the prompt&#x20;
+5\. Set an encryption passphrase and agree to the prompt
 
 {% callout type="info"  %}
 Use the same encryption passphrase for the access grant as the one you used for the web console in order to view your files in both places
@@ -107,7 +107,7 @@ Upload the video to be used as a source file in the transcoder later.
 uplink cp global-upload.mp4 sj://livepeer/
 ```
 
-Finally, create S3 compatible credentials.&#x20;
+Finally, create S3 compatible credentials.
 
 ```shell
 uplink share --register --readonly=false --not-after=none sj://livepeer
@@ -188,7 +188,7 @@ Notice the livepeer API takes a json object with the following keys:
 
 `input` has been set to read the `global-upload.mp4` video file and `livepeer` bucket created earlier.
 
-`storage` is where the transcoded file will be uploaded to&#x20;
+`storage` is where the transcoded file will be uploaded to
 
 `outputs` specifies the output path of `resized/hls`
 
@@ -219,7 +219,7 @@ Let's make the `resized` directory public so we can easily see the videos by run
 uplink share --url --public --readonly=true --disallow-lists --not-after=none sj://livepeer/resized
 ```
 
-You’ll get a Browser URL, but the URL is not quite right. It will be of the form `https://link.storjshare.io/s/LINKSHARINGKEY/livepeer/`. To make the content embeddable, swap the `/s/` for `/raw/`.&#x20;
+You’ll get a Browser URL, but the URL is not quite right. It will be of the form `https://link.storjshare.io/s/LINKSHARINGKEY/livepeer/`. To make the content embeddable, swap the `/s/` for `/raw/`.
 
 Livepeer transcoded the source video file to `hls` video files which means that in order to play the video, we'll need to find the `index<profile name>.m3u8` and pass it to a compatible video player.
 

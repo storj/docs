@@ -26,7 +26,7 @@ uplink access revoke asdfRF...
 {% /code-group %}
 
 {% callout type="info"  %}
-The access will be revoked permanently for this parent access grant.&#x20;
+The access will be revoked permanently for this parent access grant.
 
 If you want to share this content again you should create a new access grant through the web interface.
 {% /callout %}

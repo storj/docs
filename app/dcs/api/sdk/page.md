@@ -5,11 +5,11 @@ redirects:
   - /dcs/api-reference/storj-client-libraries
 ---
 
-The `libuplink` developer library is written for the Go language. This will allow you to integrate with the object store programmatically.&#x20;
+The `libuplink` developer library is written for the Go language. This will allow you to integrate with the object store programmatically.
 
 `libuplink` contains a number of interesting components, including pre-written code and subroutines, classes, values or type specifications, message templates, configuration walkthroughs, and great documentation.
 
-Storj DCS currently has community contributed bindings for Python, Swift, .Net, PHP, and Node.js. &#x20;
+Storj DCS currently has community contributed bindings for Python, Swift, .Net, PHP, and Node.js. 
 
 Below are Storj's provided bindings:
 

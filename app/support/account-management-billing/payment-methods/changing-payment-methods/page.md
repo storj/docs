@@ -10,7 +10,7 @@ metadata:
     between credit cards and STORJ tokens.
 ---
 
-Users may change payment methods on accounts, but at least one valid payment method must be configured on an account at all times. &#x20;
+Users may change payment methods on accounts, but at least one valid payment method must be configured on an account at all times. 
 
 ## Changing Credit Cards
 

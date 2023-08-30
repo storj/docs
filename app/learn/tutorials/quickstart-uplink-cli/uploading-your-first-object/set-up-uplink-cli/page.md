@@ -22,7 +22,7 @@ weight: 5
 For security reasons it's better to use a casual user to work from the CLI, thus please run PowerShell as a casual user, not as an Administrator.
 {% /callout %}
 
-Navigate to the directory your **uplink.exe** file is located (Check the FAQ: [](docId:4qPQxa8HlvDIO1Kgqa2No) for instructions):&#x20;
+Navigate to the directory your **uplink.exe** file is located (Check the FAQ: [](docId:4qPQxa8HlvDIO1Kgqa2No) for instructions):
 
 ```Text
 ./uplink.exe access import main accessgrant.txt

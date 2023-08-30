@@ -9,8 +9,8 @@ weight: 5
 
 Listing, downloading, and deleting Objects
 
-[](docId:oqG_1YITa3eUuBYrbJMTw)&#x20;
+[](docId:oqG_1YITa3eUuBYrbJMTw)
 
-[](docId:K7tsSNrIYYpelUFtVKe_F)&#x20;
+[](docId:K7tsSNrIYYpelUFtVKe_F)
 
 [](docId:Fr6x2DasCtv9DzvMQ8ugg)&#x20;

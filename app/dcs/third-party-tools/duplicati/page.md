@@ -39,7 +39,7 @@ To restore a small file, Duplicati has to download the entire block it is contai
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ferela1Npve8771EbpzNc_duplicatinoencryption-1.png)
 
-3\. Click the storage type dropdown and select "Storj DCS (Decentralized Cloud Storage)." The authentication method should be Access Grant (Access Grant). Enter an Access Grant, see [](docId:OXSINcFRuVMBacPvswwNU), bucket, and, optionally, a folder.&#x20;
+3\. Click the storage type dropdown and select "Storj DCS (Decentralized Cloud Storage)." The authentication method should be Access Grant (Access Grant). Enter an Access Grant, see [](docId:OXSINcFRuVMBacPvswwNU), bucket, and, optionally, a folder.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/iya_7I3bOi2_y092qX4oy_screenshot-2023-07-17-at-74955-am.png)
 

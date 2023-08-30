@@ -44,7 +44,7 @@ You can upload your first object by following our documentation [](docId:R8xZNlt
 
 ## How do I create a URL to share an object?
 
-All you need to create a shareable URL is the linksharing base URL for your region, a public, read-only [](docId:6hH_ygAn1FJdrIZQ0CGsJ) from the Gateway MT of the same region, and the path to your object or bucket. For a shortcut, [](docId:tBnCSrmR1jbOewG38fIr4) will generate the shareable URL for you.&#x20;
+All you need to create a shareable URL is the linksharing base URL for your region, a public, read-only [](docId:6hH_ygAn1FJdrIZQ0CGsJ) from the Gateway MT of the same region, and the path to your object or bucket. For a shortcut, [](docId:tBnCSrmR1jbOewG38fIr4) will generate the shareable URL for you.
 
 {% callout type="warning"  %}
 **Please, do not use the possibility to manually build the URL with your access grant described below!**
@@ -72,7 +72,7 @@ Please, think twice before using the described method above - it exposes your ac
 
 ## Can I use Storj DCS for web hosting?
 
-The Storj DCS service allows you to **host static websites** along with multimedia streaming, large file distribution, and other web-delivered assets.&#x20;
+The Storj DCS service allows you to **host static websites** along with multimedia streaming, large file distribution, and other web-delivered assets.
 
 Since your webpages and assets are simply objects stored on the network and there is no server/database, Storj DCS does **not** support the hosting of **dynamic websites.** However, you can store all of your unchanging assets on Storj DCS and reference them from your dynamic site that is hosted on an external compute service of your choice.
 
@@ -86,9 +86,9 @@ There are a few ways you can host your static site on Storj DCS. We recommend us
 
 ##
 
-## What happens if nodes go offline?&#x20;
+## What happens if nodes go offline?
 
-When your data is uploaded, each object is encrypted, then broken into 64 MB Segments, then each Segment is erasure coded, meaning it's broken into 80 pieces, of which only 29 are required to reconstitute an object or segment. Each of those 80 pieces is then uploaded directly, peer-to-peer, to statistically uncorrelated storage nodes. The erasure coded redundancy means that 51 of those nodes (operated by different people, in different locations, with different power supplies and internet connections. If too many nodes fail or leave the network, the network can repair the missing pieces.&#x20;
+When your data is uploaded, each object is encrypted, then broken into 64 MB Segments, then each Segment is erasure coded, meaning it's broken into 80 pieces, of which only 29 are required to reconstitute an object or segment. Each of those 80 pieces is then uploaded directly, peer-to-peer, to statistically uncorrelated storage nodes. The erasure coded redundancy means that 51 of those nodes (operated by different people, in different locations, with different power supplies and internet connections. If too many nodes fail or leave the network, the network can repair the missing pieces.
 
 You can learn more under Concepts for [](docId:CBMEVO2vA2lDZ_BVuZ9aP) and [](docId:z4JgCuivlGbnn4YQMmlVX).
 
@@ -108,7 +108,7 @@ If you want to learn more, check out the [](docId:M-5oxBinC6J1D-qSNjKYS) section
 
 ## How can I delete an Access Grant?
 
-Access Grants created using the Satellite user interface my be deleted using the Remove button on the Access page. Check the box next to the Access Grant(s) you want to delete, then click the Remove Selected button and follow the prompts. &#x20;
+Access Grants created using the Satellite user interface my be deleted using the Remove button on the Access page. Check the box next to the Access Grant(s) you want to delete, then click the Remove Selected button and follow the prompts. 
 
 {% callout type="success"  %}
 **Important:** If you delete an Access Grant from the Satellite user interface, that Access Grant will immediately cease to function, and all hierarchically derived child Access Grants will also cease to function. Any data uploaded with that Access Grant will persist on Storj DCS. If you didn't back up the encryption passphrase used with the Access Grant you are deleting, you will not be able to decrypt that data without that encryption passphrase, and it will be effectively unrecoverable.
@@ -138,7 +138,7 @@ You can generate a restricted Access Grant from the Satellite user interface, us
 
 - **Specific operations:** Caveats can restrict whether an API Key can perform any of the following operations: Read, Write, Delete, List
 
-- **Bucket:** Caveats can restrict whether an API Key can perform operations on one or more Buckets&#x20;
+- **Bucket:** Caveats can restrict whether an API Key can perform operations on one or more Buckets
 
 - **Path and path prefix:** Caveats can restrict whether an API Key can perform operations on Objects within a specific path in the object hierarchy
 
@@ -148,7 +148,7 @@ For some sample Go code around access-restriction, check out: <https://godoc.org
 
 ## How do I pay with Storj Token?
 
-When you decide to become a paid customer of Storj DCS, you can choose to pay with a credit card or using STORJ token. The process for adding a payment method is covered in [](docId:59T_2l7c1rvZVhI8p91VX). &#x20;
+When you decide to become a paid customer of Storj DCS, you can choose to pay with a credit card or using STORJ token. The process for adding a payment method is covered in [](docId:59T_2l7c1rvZVhI8p91VX). 
 
 ##
 
@@ -156,7 +156,7 @@ When you decide to become a paid customer of Storj DCS, you can choose to pay wi
 
 The default usage limits for a new account are published on the [](docId:Zrbz4XYhIOm99hhRShWHg) section under Concept.
 
-## How do I increase my usage limits?&#x20;
+## How do I increase my usage limits?
 
 The default usage limits may not be suitable for all projects. Usage limits may be increased for paid tier accounts. A valid credit card or a sufficient balance of STORJ token relative to the usage limit increase requested as the payment method must be added before a [usage limit request form may be submitted](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212). Please note that you will be required to verify email address on account by making a help desk account before requesting a limit increase.
 
@@ -170,7 +170,7 @@ Our support process is described under the [](docId:h0GeE0-z8ta1rOlKLL7lL) secti
 
 For detailed information on how billing and payment work on Storj DCS, please see the [](docId:59T_2l7c1rvZVhI8p91VX) section of this documentation.
 
-## How can I remove my credit card from my account?&#x20;
+## How can I remove my credit card from my account?
 
 For detailed information on how to remove a credit card from the Storj DCS service, please see [](docId:WMzdlxUZzKJ4TbNa8TETG) under the [](docId:7U4_uu6Pzg6u2N6FpV9VE) section of this documentation. Please note that a valid payment method must be maintained on a paid tier account. You may be required to submit a support request as part of the payment method removal process.
 
@@ -180,7 +180,7 @@ Buckets can be created and deleted using the S3-compatible gateway, CLI, or Go l
 
 - [](docId:4oDAezF-FcfPr0WPl7knd)
 
-- [](docId:Wo5-shT0hZDNMeyM1kA12)&#x20;
+- [](docId:Wo5-shT0hZDNMeyM1kA12)
 
 - [Delete a bucket using the Go library](https://pkg.go.dev/storj.io/uplink#Project.DeleteBucket)
 
@@ -196,13 +196,13 @@ The easiest way to delete your data is to use the CLI. For detailed information 
 
 We want all of our users to receive value when they choose the Storj DCS service for their storage needs, but it’s possible that a user may no longer need Storj DCS services. If a user wants to stop using their account and permanently delete it, the user may do so only after following the steps outlined in the Billing Documentation to eliminate service usage.
 
-The process to eliminate service usage starts with deleting all data from the service, including all objects and buckets. Next, all Access Grants should be deleted. Once this is done, the user should submit a support ticket to remove all payment methods and delete the account.&#x20;
+The process to eliminate service usage starts with deleting all data from the service, including all objects and buckets. Next, all Access Grants should be deleted. Once this is done, the user should submit a support ticket to remove all payment methods and delete the account.
 
 For detailed information on how to close your account on Storj DCS, please see the [](docId:1AZ8BVkKsR3a2MTEKq85b) section of this documentation.
 
 ## Does Storj DCS provide tools for end-user identity management for applications that store data on the service?
 
-The Storj DCS service is not designed to handle identity management for end users of applications that store data on the service. User authentication is expected to be handled by applications. Application developers may then make further design decisions related to use the authorization management functions of the service to enable secure and private sharing of data between users of an application or sharing data with a publicly available URL.&#x20;
+The Storj DCS service is not designed to handle identity management for end users of applications that store data on the service. User authentication is expected to be handled by applications. Application developers may then make further design decisions related to use the authorization management functions of the service to enable secure and private sharing of data between users of an application or sharing data with a publicly available URL.
 
 ---
 

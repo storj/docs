@@ -5,7 +5,7 @@ redirects:
   - /node/resources/faq/check-my-node
 ---
 
-In a future update, we'll have e-mail notifications for when your Node goes down. Until then, a great way to stay updated with your Node's status is to use [UptimeRobot](https://uptimerobot.com).&#x20;
+In a future update, we'll have e-mail notifications for when your Node goes down. Until then, a great way to stay updated with your Node's status is to use [UptimeRobot](https://uptimerobot.com).
 
 UptimeRobot will check to see if your port is listening every x minutes. When your port is not listening, you will receive an e-mail alerting you that your port is closed, meaning there's something going on with your Node. To get started, [sign up for an account](https://uptimerobot.com/signUp).
 

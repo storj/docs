@@ -76,7 +76,7 @@ uplink access restrict --readonly=false
 Keep your full-rights Access Grant secret, it contains the encryption key and will enable uploading, downloading or deleting your data from the entire project!
 {% /callout %}
 
-9\. Your Access Grant should have been output.&#x20;
+9\. Your Access Grant should have been output.
 
 {% callout type="success"  %}
 The alternative for using the `uplink setup` command and then `uplink access restrict` is to use the `uplink access create` command instead, it will print the Access Grant right away.

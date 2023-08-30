@@ -21,7 +21,7 @@ One key to the durability of the network is the distribution of data over a hete
 
 ## Satellites
 
-While the network of Storage Nodes is inherently multi-region, customers frequently ask whether the Satellites that host the metadata and are critical to the storage and retrieval of data are also multi-region. Storj Satellites operated by Storj are also inherently multi-region. &#x20;
+While the network of Storage Nodes is inherently multi-region, customers frequently ask whether the Satellites that host the metadata and are critical to the storage and retrieval of data are also multi-region. Storj Satellites operated by Storj are also inherently multi-region. 
 
 A specific Satellite instance does not necessarily constitute one server. A Satellite may be run as a collection of servers and be backed by a horizontally scalable trusted database for higher uptime. Storj operates clusters of Satellites in regions, with all Satellites in a region sharing a multi-region, distributed back end. This configuration provides a highly resilient and available architecture in which the loss of any Satellite service, an entire Satellite or the unavailability of a facility hosting a Satellite has no impact on the availability of data stored on the network.
 

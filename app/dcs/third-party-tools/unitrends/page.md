@@ -150,7 +150,7 @@ Follow the steps below to complete the integration:
 
 4\. In the **Storage Details** window, fill out the appropriate connection data:
 
-- Select Wasabi as the cloud storage provider from the **Cloud Storage ** drop-down menu.&#x20;
+- Select Wasabi as the cloud storage provider from the **Cloud Storage ** drop-down menu.
 
 - In the **Storage Path** field, enter the name of your bucket for Unitrends in your Storj account. In this demo, we named the bucket "unitrends."
 

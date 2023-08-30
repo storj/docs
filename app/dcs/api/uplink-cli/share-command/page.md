@@ -121,7 +121,7 @@ Access    : 12BncZWg9xc4GyXCgCi3YvBg...
 
 ### Register with Gateway MT
 
-Generate credentials to use with our S3 multitenant gateway: [](docId:AsyYcUJFbO1JI8-Tu8tW3)&#x20;
+Generate credentials to use with our S3 multitenant gateway: [](docId:AsyYcUJFbO1JI8-Tu8tW3)
 
 {% code-group %}
 
@@ -205,7 +205,7 @@ REMINDER  : Object key must end in '/' when trying to share recursively
 URL       : https://link.storjshare.io/s/jvguri.../cakes
 ```
 
-Also note that the URL uses the same Gateway MT access key, so if you have that already, you don't necessarily need to run this command to generate a shareable link.&#x20;
+Also note that the URL uses the same Gateway MT access key, so if you have that already, you don't necessarily need to run this command to generate a shareable link.
 
 `https://link.storjshare.io/s/<access key>/<object path>`
 

@@ -36,6 +36,6 @@ Specific Operations: Caveats can restrict whether an Access Grant can permit any
 
 The [code related to the supported Caveats](https://github.com/storj/common/blob/main/macaroon/apikey.go) on the Satellite is available for review on GitHub.When an Access Grant is created to share access to an object, it creates an Access Grant because the object will need to be retrieved using the API Key in the Access Grant and decrypted using the encryption key.
 
-When an Uplink Client makes a request to a Satellite to perform an action on an object, the Satellite will evaluate the validity of the Access Grant and allow the action if the Access Grant is valid for the action and object.&#x20;
+When an Uplink Client makes a request to a Satellite to perform an action on an object, the Satellite will evaluate the validity of the Access Grant and allow the action if the Access Grant is valid for the action and object.
 
 In the case of sharing read access to an object, the Access Grant is used to allow an Uplink Client to download the pieces of a file and re-encode the pieces into a complete file, but the Uplink Client must also be able to decrypt the encrypted file for file sharing to be actually useful.&#x20;

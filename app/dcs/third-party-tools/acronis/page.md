@@ -45,7 +45,7 @@ For more details, see <https://www.acronis.com/en-us/products/>
 
 ## Create a Storj Account
 
-To begin, you will need to create a Storj account.&#x20;
+To begin, you will need to create a Storj account.
 
 Navigate to <https://us1.storj.io/signup?partner=acronis> to sign up, or log in <https://storj.io/login> if you already have an account.
 
@@ -162,7 +162,7 @@ To set up Backup Gateway, do the following:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ysUUNOfYk4qJY7M-1Yw5H_screenshot-2023-03-08-at-20100-pm.png)
 
-8\. Sign in to your Acronis account and click **Next**.&#x20;
+8\. Sign in to your Acronis account and click **Next**.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/SMydqxrJiWu53hMoIbliJ_screenshot-2023-03-08-at-20344-pm.png)
 

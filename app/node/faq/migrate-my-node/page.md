@@ -54,7 +54,7 @@ Your default orders folder is located in the data location.
 
 We will assume that your parameters look like this:
 
-- the source folder where the existing identity is located is `/mnt/storj/identity/storagenode`;&#x20;
+- the source folder where the existing identity is located is `/mnt/storj/identity/storagenode`;
 
 - the source folder where the existing stored data is located is `/mnt/storj/storagenode/storage`;
 

@@ -12,7 +12,7 @@ metadata:
     durability and expansion factor, and the benefits of erasure codes over replication.
 ---
 
-## Durability and expansion factor&#x20;
+## Durability and expansion factor
 
 In a decentralized storage network, any storage node could go offline permanently at any time. A storage network’s redundancy strategy must store data in a way that provides access with high probability, even though any given number of individual nodes may be in an offline state. To achieve a specific level of _durability_ (defined as the probability that data remains available in the face of failures), many products in this space (Filecoin, MaidSafe, Siacoin, GFS, Ceph, IPFS, etc.) by default use replication, which means simply having multiple copies of the data stored on different nodes.
 
@@ -22,7 +22,7 @@ For example, suppose your desired durability level requires a replication strate
 
 On the one hand, replication does make network maintenance simpler. If a node goes offline, only one of the other storage nodes is needed to bring a new replacement node into the fold. On the other hand, for every node that is added to the redundancy pool, 100% of the replicated data must be transferred.
 
-### Erasure Code&#x20;
+### Erasure Code
 
 Erasure codes are another redundancy approach, and importantly, they do not tie durability to the expansion factor. You can tune your durability without increasing the overall network traffic!
 
@@ -50,7 +50,7 @@ Comparing the two tables, notice that replicating data at 10x can’t beat erasu
 
 If you want to learn more about how erasure codes work, you can read [this introductory tutorial](https://innovation.vivint.com/introduction-to-reed-solomon-bc264d0794f8) co-written by some of our team members in 2017.
 
-### Okay, erasure codes take less disk space. But isn’t repairing data more expensive?&#x20;
+### Okay, erasure codes take less disk space. But isn’t repairing data more expensive?
 
 It’s true that replication makes repair _simpler_. Every time a node is lost, only one of the remaining nodes is necessary for recovery. On the flip side, erasure codes require several nodes to be involved for each repair. Though this feels like a problem, it’s actually not.
 
@@ -60,7 +60,7 @@ At 9x, replication in our model of course has an expansion factor of 9. Once aga
 
 With _k_ = 18, _n_ = 36 erasure codes (with an expansion factor of only two), losing one-third of our nodes means we now only have 24 nodes still available and need to repair to twelve new nodes. The data each node is storing is only 1 MB each, but eighteen nodes must be contacted to rebuild the data. Let’s designate one of the nodes to rebuild the data. It will download eighteen 1 MB pieces, reconstruct the original file, then store the missing twelve 1 MB pieces on new nodes. If this designated node is one of the new nodes, we can avoid one of the transfers. The total overall bandwidth used is at most 30 MB, which is almost half of the replication scenario. This advantage in bandwidth savings becomes even wider with higher durabilities.
 
-### Downsides?&#x20;
+### Downsides?
 
 Erasure coding did require more CPU time, that’s true. Still, a reasonable erasure encoding library can generate encoded data at at least 650 MB/s, which is unlikely to be the major throughput bottleneck over a wide-area network with unreliable storage nodes.
 
@@ -68,7 +68,7 @@ Erasure coding also required a designated node to do the repair. While this comp
 
 Notably, erasure coding does _not_ complicate streaming. Remember how I said erasure codes are used for satellite communication and CDs? As long as erasure coding is batched into small operations, streaming continues to work just fine. See Figure 4.2 and sections 4.1.2 and 4.8 in [our white paper](https://storj.io/storjv3.pdf) for more details about how we can pull native video streaming off.
 
-### Upsides?&#x20;
+### Upsides?
 
 Comparing 9x replication and _k_ = 18, _n_ = 36 erasure coding, the latter uses less than half the overall bandwidth for repair. It also uses less than a third of the bandwidth for storage and takes up less than a third of the disk space. It is roughly ten times more durable! Holy crap!
 
@@ -78,7 +78,7 @@ It’s worth re-reading those last two paragraphs. These gains are significant. 
 
 In this edition we dive deeper into why nodes joining and leaving the network - also known as churn - has a much more significant (and also bad) impact on a redundancy strategy that relies on replication. We make the case that using replication in a high-churn environment is not only impractical, but inevitably doomed to fail. Quoting [Blake and Rodrigues](https://pmg.csail.mit.edu/iris/blake03high-abstract.html), “Data redundancy is the key to any data guarantees. However, preserving redundancy in the face of highly dynamic membership is costly.”
 
-### An Aside on Dynamics&#x20;
+### An Aside on Dynamics
 
 Before diving into the exciting math parts, we need to quickly define a couple of concepts relating to network dynamics. The lifetime of a node is the duration between it joining and leaving the system for whatever reason. A network made of several nodes has an average lifetime, commonly called the mean time to failure (MTTF). The inverse of mean time to failure is churn rate or frequency of failure-per-unit-of-time. It’s an important relationship to understand, especially when MTTF is a unit of time much greater than the units needed for a specific problem.
 
@@ -86,13 +86,13 @@ Distributed storage systems have mechanisms to repair data by replacing the piec
 
 After reading part one of this series, it’s clearly not feasible to rely on replication alone, but some projects have proposed combining erasure coding and replication. Once you’ve erasure coded a file and distributed it across a set of nodes, it’s going to have a defined durability for a given level of node churn. If you want to increase that durability for that given level of node churn, you have two choices: increase the erasure code k/n ratio or use replication to make copies of the erasure coded pieces. These two strategies are very different and have a huge impact on the network beyond just increasing durability.
 
-### Our Hypothetical Networks&#x20;
+### Our Hypothetical Networks
 
 So, let’s define two hypothetical distributed storage networks, one using erasure coding alone for redundancy (the approach used on Storj’s V3 network), and one using erasure coding plus replication for redundancy (which is the approach used by Filecoin as well as the previous, depreciated Storj network). We will assume nodes on both networks are free to join and leave at any time, and that uptime for nodes can be highly variable based on the hardware, OS, available bandwidth, and a variety of other factors. When a node leaves a network, the pieces of data on that node become permanently unavailable. Of course, if nodes fall below a certain threshold of availability in a given month, the impact on the overall availability of files is effectively equivalent to the node leaving the network altogether.
 
 Let’s also assume both hypothetical networks use a 4⁄8 Reed-Solomon erasure code ratio and have 99.9% durability with node churn at 10%. Both networks want to achieve eleven 9s of durability though. One is going to achieve it through erasure coding alone, and the other is going to combine erasure coding with replication.
 
-### And Now, Some Math&#x20;
+### And Now, Some Math
 
 As it turns out, if you know the target durability, you know the MTTF for nodes, and you know the erasure coding scheme, you can calculate the amount of data churn in a given time period. The formula for calculating data churn is:
 

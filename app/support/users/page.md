@@ -21,7 +21,7 @@ If you need to collaborate with other developers on a project, you can add other
 When you add another user to your project, that user will have full access to the Project Dashboard, Object Browser, and access Grants for your Project.&#x20;
 {% /callout %}
 
-Navigate to the **Users** screen.&#x20;
+Navigate to the **Users** screen.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/eMttBc7nDmSUgP9Y-OAnI_users1.png)
 

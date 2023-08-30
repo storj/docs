@@ -14,7 +14,7 @@ metadata:
     credentials for LucidLink.
 ---
 
-[LucidLink](https://www.lucidlink.com/) Filespaces is a distributed global file system for object storage that performs like a local disk and provides seamless access to data stored in distant locations. LucidLink's cloud-native distributed file system allows many users to access it concurrently via a folder placed on the local client. The LucidLink cloud NAS provides access to large datasets through direct streaming, eliminating the need for downloading and synchronizing.&#x20;
+[LucidLink](https://www.lucidlink.com/) Filespaces is a distributed global file system for object storage that performs like a local disk and provides seamless access to data stored in distant locations. LucidLink's cloud-native distributed file system allows many users to access it concurrently via a folder placed on the local client. The LucidLink cloud NAS provides access to large datasets through direct streaming, eliminating the need for downloading and synchronizing.
 
 ## Advantages of Storj with Lucidlink
 
@@ -24,7 +24,7 @@ Using Storj with LucidLink provides resilient cloud object storage with blazing 
 
 2.  **Combined security features**: LucidLink provides a “Zero-Knowledge” [security model](https://www.lucidlink.com/wp-content/uploads/LucidLink-Security_Model.pdf) that encrypts all the data starting in the local cache on the client, in-flight, and in the object storage itself—and only the customer has the encryption key. Storj encrypts your data as well.
 
-3.  **Access**: Allows multiple globally distributed users simultaneous access to data.&#x20;
+3.  **Access**: Allows multiple globally distributed users simultaneous access to data.
 
 ## Integration
 
@@ -32,17 +32,17 @@ This integration uses S3 credentials passed from Storj to LucidLink. You will ne
 
 ### Software Requirements
 
-LucidLink integrates with any S3-compatible cloud storage platform, including Storj.&#x20;
+LucidLink integrates with any S3-compatible cloud storage platform, including Storj.
 
 To integrate LucidLink with Storj, you will need:
 
-- A Storj account.&#x20;
+- A Storj account.
 
-  - [Login](https://storj.io/login), if you already have an account, or sign up here <https://us1.storj.io/signup?partner=lucidlink> &#x20;
+  - [Login](https://storj.io/login), if you already have an account, or sign up here <https://us1.storj.io/signup?partner=lucidlink> 
 
 - A LucidLink account
 
-- The LucidLink desktop app&#x20;
+- The LucidLink desktop app
 
 LucidLink is available for Windows, MacOS, and Linux. Download LucidLink here: <https://www.lucidlink.com/download>
 
@@ -176,7 +176,7 @@ When you initially log in to LucidLink, you will be prompted to name your domain
 
 9\. On the Advanced Settings page, enter the bucket name that you created in Storj. In this instance, the bucket is "lucidlink-bucket".
 
-10\. It is recommended to set the block size to **at least 2MB** for optimal data stream quality.&#x20;
+10\. It is recommended to set the block size to **at least 2MB** for optimal data stream quality.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_UNPS7Kq_nfEidJ3xFVU5_00026bucket.png)
 
@@ -192,9 +192,9 @@ Initializing your Filespace must be completed through the LucidLink client, whic
 
 1\. Click "Initialize" on your new Filespace.
 
-2\. Read through the pop-up window detailing the instructions for initializing your Filespace.&#x20;
+2\. Read through the pop-up window detailing the instructions for initializing your Filespace.
 
-1.  At the top is a link to download the LucidLink client. If you have not already downloaded it, click on the link, or visit <https://www.lucidlink.com/download>.&#x20;
+1.  At the top is a link to download the LucidLink client. If you have not already downloaded it, click on the link, or visit <https://www.lucidlink.com/download>.
 
 2.  If you have already downloaded the LucidLink client (LucidApp), click "Launch the desktop client" at the bottom of the window.
 

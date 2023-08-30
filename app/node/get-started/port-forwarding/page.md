@@ -7,9 +7,9 @@ redirects:
 
 ## Before starting
 
-[](docId:hbCGTv1ZLLR2-kpSaGEXw)&#x20;
+[](docId:hbCGTv1ZLLR2-kpSaGEXw)
 
-[](docId:v-fUvPqySvUwTMF-od6hD)&#x20;
+[](docId:v-fUvPqySvUwTMF-od6hD)
 
 {% callout type="warning"  %}
 **Failure to complete these steps will prevent your storage node from working.**
@@ -110,7 +110,7 @@ As root again (or with sudo) issue this command:
 /usr/local/bin/noip2 -C
 ```
 
-You’ll then be prompted for your NoIP username and password, as well as the hostnames you wish to update.&#x20;
+You’ll then be prompted for your NoIP username and password, as well as the hostnames you wish to update.
 
 {% callout type="info"  %}
 **One of the questions is, “Do you wish to update ALL hosts?”** If answered incorrectly, this could affect hostnames in your account that are pointing at other locations.

@@ -10,7 +10,7 @@ metadata:
     the roles of unrestricted and restricted Access Grants.
 ---
 
-Determining when to use the different tools for generating Access Grants is driven by the use of the underlying tool. You can generate an Access Grant in the [](docId:nGzxQBhV8nx5Pukj6O0zT), or you can use either our Go Library or [](docId:OXSINcFRuVMBacPvswwNU). &#x20;
+Determining when to use the different tools for generating Access Grants is driven by the use of the underlying tool. You can generate an Access Grant in the [](docId:nGzxQBhV8nx5Pukj6O0zT), or you can use either our Go Library or [](docId:OXSINcFRuVMBacPvswwNU). 
 
 ## When to use the Storj Console
 
@@ -22,10 +22,10 @@ In general, you use the Storj Console to create an Access Grant that is then use
 
 ## When to use an Uplink client
 
-Once you have created an Access Grant from the Storj Console, the CLI, client library or other client tool can then use that Access Grant to interact with the Storj service, or create additional restricted Access Grants - child Access Grants of the parent created in the Storj Console. The Uplink Client can be used to create additional child Restricted Access Grants.&#x20;
+Once you have created an Access Grant from the Storj Console, the CLI, client library or other client tool can then use that Access Grant to interact with the Storj service, or create additional restricted Access Grants - child Access Grants of the parent created in the Storj Console. The Uplink Client can be used to create additional child Restricted Access Grants.
 
 {% callout type="warning"  %}
-**Remember:** When you create child Restricted Access Grants from a parent Restricted Access Grant, the child Restricted Access Grants can have the same level of access as the parent or less access, but never more.&#x20;
+**Remember:** When you create child Restricted Access Grants from a parent Restricted Access Grant, the child Restricted Access Grants can have the same level of access as the parent or less access, but never more.
 
 **For example:** A parent Restricted Access Grant that only has Read and Write access to a particular may be used to create child Restricted Access Grants that have Read-only access to the bucket or just one path within that bucket. But, a parent Restricted Access Grant that only has Read and Write access to a particular may NOT be used to create child Restricted Access Grants that have Read-write-delete access to the bucket or another path within another bucket to which the parent Restricted Access Grant does not have any access.
 {% /callout %}

@@ -10,7 +10,7 @@ metadata:
     Coupons work to promote adoption and usage of the platform.
 ---
 
-The Storj DCS Service includes incentive programs to encourage adoption and use of the platform. These incentives are operationalized as Promotional Credits and include Credits and Coupons.&#x20;
+The Storj DCS Service includes incentive programs to encourage adoption and use of the platform. These incentives are operationalized as Promotional Credits and include Credits and Coupons.
 
 ## Credits
 

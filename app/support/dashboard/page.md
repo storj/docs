@@ -28,11 +28,11 @@ On the Project Dashboard, there are a number of navigational elements and inform
 
 2.  **Project Navigation** - This element allows you to move between the different functions related to the project you have selected, to view the [](docId:k6QwBZM3hnzxkCuQxLOal), use the [](docId:4oDAezF-FcfPr0WPl7knd) to interact with data stored on Storj DCS through a web browser interface, create [](docId:XKib9SzjtEXTXWvdyYWX6) for native integrations and credentials for the [](docId:yYCzPT8HHcbEZZMvfoCFa), invite other developers to collaborate with you on your project in [](docId:0_4hY4Dp5ju9B8Ec6OTf3), see [](docId:Hurx0SirlRp_O5aUzew7_), and **Quick Start**, and manage your Account in **My Account**.
 
-3.  **Storage Utilization** - This element displays the amount of storage utilized in the current month measured in GB hours; see [](docId:59T_2l7c1rvZVhI8p91VX).&#x20;
+3.  **Storage Utilization** - This element displays the amount of storage utilized in the current month measured in GB hours; see [](docId:59T_2l7c1rvZVhI8p91VX).
 
 4.  **Bandwidth Utilization** - This element displays the amount of download bandwidth utilized in the current month measured in GB.
 
-5.  **Project Details** - This element displays the number of users added to a project, the number of [](docId:XKib9SzjtEXTXWvdyYWX6), the current number of[](docId:M-5oxBinC6J1D-qSNjKYS) and the estimated charge for the current month; see [](docId:59T_2l7c1rvZVhI8p91VX).&#x20;
+5.  **Project Details** - This element displays the number of users added to a project, the number of [](docId:XKib9SzjtEXTXWvdyYWX6), the current number of[](docId:M-5oxBinC6J1D-qSNjKYS) and the estimated charge for the current month; see [](docId:59T_2l7c1rvZVhI8p91VX).
 
 6.  **Bucket Information** - This element displays the names of [](docId:M-5oxBinC6J1D-qSNjKYS) , the current month usage on Buckets and the number of objects in Buckets.
 

@@ -14,7 +14,7 @@ metadata:
     for your media content.
 ---
 
-[ELEMENTS](https://elements.tv/) provides a powerful hardware and software platform that supports every post-production and broadcasting workflow step – from sophisticated on-premise technologies with unique features to future-proof cloud solutions.&#x20;
+[ELEMENTS](https://elements.tv/) provides a powerful hardware and software platform that supports every post-production and broadcasting workflow step – from sophisticated on-premise technologies with unique features to future-proof cloud solutions.
 
 ## **Advantages of ELEMENTS with Storj**
 

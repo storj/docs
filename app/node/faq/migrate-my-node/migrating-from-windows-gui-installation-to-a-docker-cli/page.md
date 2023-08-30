@@ -8,9 +8,9 @@ redirects:
 
 ## Preparing the destination system
 
-[](docId:hbCGTv1ZLLR2-kpSaGEXw)&#x20;
+[](docId:hbCGTv1ZLLR2-kpSaGEXw)
 
-[](docId:rz3s9lC3qAQHYSl37ngBN)&#x20;
+[](docId:rz3s9lC3qAQHYSl37ngBN)
 
 {% callout type="info"  %}
 If your Windows doesn't support WSL2 we recommend to install version 2.1.0.5. We do not recommend using later versions with Hyper-V as [a lot of bugs](https://forum.storj.io/t/latest-docker-desktop-for-windows-compatibility/6045) have been reported.
@@ -79,7 +79,7 @@ To be able to copy files from the Windows OS, we will use a SSH session to your 
 {% /tab %}
 {% /tabs %}
 
-Then, [](docId:y0jltT-HzKPmDefi532sd)&#x20;
+Then, [](docId:y0jltT-HzKPmDefi532sd)
 
 ## Preparing the source Windows system
 
@@ -135,9 +135,9 @@ We will assume that your identity is placed in the default location, i.e. `%APPD
 robocopy /MIR /MOVE $env:AppData\Storj\Identity\storagenode D:\STORJ\identity
 ```
 
-The storage data has already been migrated in the previous step.&#x20;
+The storage data has already been migrated in the previous step.
 
-&#x20;
+
 
 Now move orders to the data location:
 

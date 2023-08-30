@@ -141,7 +141,7 @@ Then, you have to configure the S3NG specific settings:
 
 - **STORAGE_USERS_S3NG_SECRET_KEY**: This sets the secret key for the Storj service created above. This should be kept secure as it, along with the access key, allows access to your Storj account.
 
-- **STORAGE_USERS_S3NG_BUCKET**: This sets the bucket in the Storj service where oCIS will store its data.&#x20;
+- **STORAGE_USERS_S3NG_BUCKET**: This sets the bucket in the Storj service where oCIS will store its data.
 
 ```shell
 # activate s3ng storage driver

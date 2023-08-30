@@ -15,7 +15,7 @@ metadata:
 
 One of the areas where we’re seeing the strongest interest from developers, customers and partners building apps is our [security model and access control](https://www.storj.io/blog/2019/12/secure-access-control-in-the-decentralized-cloud/) layer. The security and privacy capabilities of the platform are some of the most differentiating features and they give our partners and customers some exciting new tools.
 
-Distributed and decentralized cloud storage is a fantastic way to take advantage of underutilized storage and bandwidth, but in order to provide highly available and durable cloud storage, we needed to build in some fairly sophisticated security and privacy controls. Because we had to build with the assumption that any Node could be run by an untrusted person, we had to implement a zero-knowledge security architecture. This turns out to not only make our system far more resistant to attacks than traditional architectures, but also brings significant benefits to developers building apps on the platform.&#x20;
+Distributed and decentralized cloud storage is a fantastic way to take advantage of underutilized storage and bandwidth, but in order to provide highly available and durable cloud storage, we needed to build in some fairly sophisticated security and privacy controls. Because we had to build with the assumption that any Node could be run by an untrusted person, we had to implement a zero-knowledge security architecture. This turns out to not only make our system far more resistant to attacks than traditional architectures, but also brings significant benefits to developers building apps on the platform.
 
 ## Decentralized Architecture Requires Strong Privacy and Security
 
@@ -39,7 +39,7 @@ All data stored on Storj DCS is encrypted from the client side. What that means 
 
 By using hierarchically derived encryption keys, it becomes easy to share the ability to decrypt a single object or set of objects without sharing the private encryption passphrase or having to re-encrypt objects. Unlike the HD API Keys, where the hierarchy is derived from further restrictions of access, the path prefix structure of the object storage hierarchy is the foundation of the encryption structure.
 
-A unique encryption key can be derived client-side for each object whether it’s a path or file. That unique key is generated automatically when sharing objects, allowing users to share single objects or paths, with the ability to encrypt just the objects that are shared, without having to worry about separately managing encryption access to objects that aren’t being shared.&#x20;
+A unique encryption key can be derived client-side for each object whether it’s a path or file. That unique key is generated automatically when sharing objects, allowing users to share single objects or paths, with the ability to encrypt just the objects that are shared, without having to worry about separately managing encryption access to objects that aren’t being shared.
 
 ### Access Management with API Keys
 
@@ -47,7 +47,7 @@ In addition to providing the tools to share the ability to decrypt objects, Stor
 
 Unlike the HD encryption keys where the hierarchy is derived from the path prefix structure of the object storage hierarchy, the hierarchy of API Keys is derived from the structure and relationship of access restrictions. HD API Keys embed the logic for the access it allows and can be restricted, simply by embedding the path restrictions and any additional restrictions within the string that represents the API Key. Unlike a typical API key, the Storj DCS API Key is not a random string of bytes, but rather an envelope with access logic encoded in it.
 
-### Bringing it Together with the Access&#x20;
+### Bringing it Together with the Access
 
 Access management on Storj DCS requires coordination of the two parallel constructs described above—encryption and authorization. Both of these constructs work together to provide an access management framework that is secure and private, as well as extremely flexible for application developers. Both encryption and delegation of authorization are managed client-side.
 

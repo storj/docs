@@ -47,9 +47,9 @@ The custom domains feature allows users to use their own domain name to access t
 A Pro Account is required if you want the custom domain to be served via HTTPS
 {% /callout %}
 
-1.  A Storj account:\*\* **[**https://www.storj.io/signup**](https://www.storj.io/signup)**.**
+1.  A Storj account: **[https://www.storj.io/signup](https://www.storj.io/signup)**.
 
-2.  The Uplink CLI tool installed on your local machine: [](docId:TbMdOGCAXNWyPpQmH6EOq)\*\* \*\*
+2.  The Uplink CLI tool installed on your local machine: **[](docId:TbMdOGCAXNWyPpQmH6EOq)**
 
 3.  A custom domain registered with a domain name registrar.
 

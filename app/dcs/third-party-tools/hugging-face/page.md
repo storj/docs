@@ -12,7 +12,7 @@ metadata:
     Examples of how to transfer, save, and load datasets.
 ---
 
-[Hugging Face](https://huggingface.co/) (🤗 ) is a platform that allows developers to train and deploy open-source AI models. It's similar to GitHub in providing a space for developers to code and deploy AI applications, including language models, transformers, text2image, and more. 
+[Hugging Face](https://huggingface.co/) (🤗 ) is a platform that allows developers to train and deploy open-source AI models. It's similar to GitHub in providing a space for developers to code and deploy AI applications, including language models, transformers, text2image, and more.
 
 One of the stand-out features of the platform is “🤗 Datasets” – which is a collection of over 5,000 ML datasets that are available for use.
 

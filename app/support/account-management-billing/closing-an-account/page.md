@@ -21,7 +21,7 @@ Note that in order to verify the deletion request is legitimate, the user will n
 
 2.  State that all Access grants have been deleted
 
-3.  Identify the 
+3.  Identify the
 
     1.  Satellite
 

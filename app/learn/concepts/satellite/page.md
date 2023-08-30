@@ -25,7 +25,7 @@ Users have accounts on and trust specific Satellites. Any user can run their own
 
 4.  Billing & payment
 
-5.  Audit & repair 
+5.  Audit & repair
 
 Users of the network will have accounts on a specific Satellite instance, which will: store their file metadata, manage authorization to data, keep track of storage node reliability, repair and maintain data when redundancy is reduced, and issue payments to storage nodes on the user’s behalf.
 

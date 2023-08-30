@@ -108,7 +108,7 @@ If you want to learn more, check out the [](docId:M-5oxBinC6J1D-qSNjKYS) section
 
 ## How can I delete an Access Grant?
 
-Access Grants created using the Satellite user interface my be deleted using the Remove button on the Access page. Check the box next to the Access Grant(s) you want to delete, then click the Remove Selected button and follow the prompts. 
+Access Grants created using the Satellite user interface my be deleted using the Remove button on the Access page. Check the box next to the Access Grant(s) you want to delete, then click the Remove Selected button and follow the prompts.
 
 {% callout type="success"  %}
 **Important:** If you delete an Access Grant from the Satellite user interface, that Access Grant will immediately cease to function, and all hierarchically derived child Access Grants will also cease to function. Any data uploaded with that Access Grant will persist on Storj DCS. If you didn't back up the encryption passphrase used with the Access Grant you are deleting, you will not be able to decrypt that data without that encryption passphrase, and it will be effectively unrecoverable.
@@ -148,7 +148,7 @@ For some sample Go code around access-restriction, check out: <https://godoc.org
 
 ## How do I pay with Storj Token?
 
-When you decide to become a paid customer of Storj DCS, you can choose to pay with a credit card or using STORJ token. The process for adding a payment method is covered in [](docId:59T_2l7c1rvZVhI8p91VX). 
+When you decide to become a paid customer of Storj DCS, you can choose to pay with a credit card or using STORJ token. The process for adding a payment method is covered in [](docId:59T_2l7c1rvZVhI8p91VX).
 
 ##
 

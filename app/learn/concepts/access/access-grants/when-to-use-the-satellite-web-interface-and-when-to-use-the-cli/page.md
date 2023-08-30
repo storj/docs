@@ -10,7 +10,7 @@ metadata:
     the roles of unrestricted and restricted Access Grants.
 ---
 
-Determining when to use the different tools for generating Access Grants is driven by the use of the underlying tool. You can generate an Access Grant in the [](docId:nGzxQBhV8nx5Pukj6O0zT), or you can use either our Go Library or [](docId:OXSINcFRuVMBacPvswwNU). 
+Determining when to use the different tools for generating Access Grants is driven by the use of the underlying tool. You can generate an Access Grant in the [](docId:nGzxQBhV8nx5Pukj6O0zT), or you can use either our Go Library or [](docId:OXSINcFRuVMBacPvswwNU).
 
 ## When to use the Storj Console
 

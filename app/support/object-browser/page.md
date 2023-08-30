@@ -95,7 +95,7 @@ To create a new bucket, click the **New bucket** button in the **Buckets** view.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Yewew2V1tdS66o93P_XIM_qsobject08.png)
 
-After creating your new bucket, you will be placed into the bucket where you can [](docId:gh5RtIDbMkAoomljO7f8d) 
+After creating your new bucket, you will be placed into the bucket where you can [](docId:gh5RtIDbMkAoomljO7f8d)
 
 ## Deleting buckets
 

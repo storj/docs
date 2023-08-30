@@ -72,7 +72,7 @@ storj:
   bucket: active-storj
 ```
 
-Edit `config/environments/development.rb`, change the ActiveStorage service to `:storj` 
+Edit `config/environments/development.rb`, change the ActiveStorage service to `:storj`
 
 ```ruby
 config.active_storage.service = :storj

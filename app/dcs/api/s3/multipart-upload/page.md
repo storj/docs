@@ -28,7 +28,7 @@ Multipart upload takes a single object and divides it into encapsulated pieces t
 
 - **Streaming** - When the size of the object is unknown you can upload parts of the object until specifically completing the operation.
 
-- **Resuming Operations** - If connectivity is disrupted you can resume uploading pieces anytime after the multipart process is initiated. 
+- **Resuming Operations** - If connectivity is disrupted you can resume uploading pieces anytime after the multipart process is initiated.
 
 ## Workflow for Multipart upload
 
@@ -44,7 +44,7 @@ At the start of a multipart upload, Storj DCS will return an ID that you use to 
 
 While uploading an object part you need to specify the ID received when you created the multipart upload along with a unique part number that your specific call will be sending to the platform. Because of the capability of multipart upload to work non sequentially, you can upload any part at any time before the multipart upload is completed. Additionally, you can over right existing parts numbers you've previously transferred as long as the multipart upload has not been completed. Part numbers are chosen by the client and are between 1 and 2^31. When a part is uploaded, the Storj DCS platform will return several items, one of which is an ETag. To complete the multipart upload process you will need to provide a list of part IDs and their corresponding ETags.
 
-Be advised that billing occurs when data is stored on the Storj DCS platform - as such - when you initiate a multipart upload and begin uploading parts, charges will be applied based on the amount of space the parts occupy. Billing will occur regardless of a multipart upload being completed. 
+Be advised that billing occurs when data is stored on the Storj DCS platform - as such - when you initiate a multipart upload and begin uploading parts, charges will be applied based on the amount of space the parts occupy. Billing will occur regardless of a multipart upload being completed.
 
 ### Completing a multipart upload
 

@@ -16,7 +16,7 @@ Unitrends provides backup appliances, backup software, and cloud data protection
 
 Find more information on the [Unitrends website](https://www.unitrends.com/products). Request a [free trial](https://www.unitrends.com/confirm/free-trial) of Unitrends, as well.
 
-## Advantages of Unitrends with Storj 
+## Advantages of Unitrends with Storj
 
 - Unitrends provides ultra-low-cost secondary cloud storage and aligns storage costs with data value.
 
@@ -50,7 +50,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

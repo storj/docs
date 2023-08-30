@@ -16,7 +16,7 @@ metadata:
 
 TrueNAS is a network attached storage (NAS) solution that allows for an off-site backup with cloud storage, such as Storj, to provide simplicity, speed, and durability in data storage.
 
-## Advantages of Storj with TrueNAS 
+## Advantages of Storj with TrueNAS
 
 Using Storj with TrueNAS provides resilient cloud object storage with blazing performance and zero-trust security. This integration ensures:
 
@@ -30,7 +30,7 @@ Using Storj with TrueNAS provides resilient cloud object storage with blazing pe
 
 This integration uses S3 credentials passed from Storj to TrueNAS. You will need to set up a Storj account, create a Storj bucket for TrueNAS, and generate S3 credentials for TrueNAS. Then, you will need to create a Cloud Credential on TrueNAS that will grant it access to the bucket in Storj.&#x20;
 
-### Software Requirements 
+### Software Requirements
 
 Storj is fully integrated with TrueNAS.
 
@@ -56,7 +56,7 @@ If you have an existing Storj account, you will need to contact support to have 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PnQ7D7Z6fU0RPKZpOCRXJ_image.png)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

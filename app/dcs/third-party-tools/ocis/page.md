@@ -49,7 +49,7 @@ For more details, visit <https://owncloud.dev/>
 
 To begin, you will need to create a Storj account [https://storj.io/signup?partner=owncloud. ](https://storj.io/signup?partner=owncloud) If you already have an account, go to <https://storj.io/login>.
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

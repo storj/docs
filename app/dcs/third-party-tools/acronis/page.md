@@ -17,7 +17,7 @@ metadata:
 
 [Acronis](https://www.acronis.com/) is a leading cyber protection solution provider that delivers innovative backup, disaster recovery, and secure file sync and share services. With a wide range of products and services for businesses and individuals, Acronis ensures data safety, accessibility, privacy, authenticity, and security.
 
-## Advantages of Acronis with Storj 
+## Advantages of Acronis with Storj
 
 The combination of Acronis and Storj provides comprehensive cloud management capabilities at a competitive cost. Acronis offers reliable backup and disaster recovery solutions for data archiving and organization, seamlessly integrating with Storj's S3 infrastructure for cost-effective storage and retrieval of large datasets.
 
@@ -49,7 +49,7 @@ To begin, you will need to create a Storj account.&#x20;
 
 Navigate to <https://us1.storj.io/signup?partner=acronis> to sign up, or log in <https://storj.io/login> if you already have an account.
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

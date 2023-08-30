@@ -16,7 +16,7 @@ metadata:
 
 Contact Hammerspace for a [demo](https://hammerspace.com/hammerspace-software/).
 
-## Advantages of Hammerspace with Storj 
+## Advantages of Hammerspace with Storj
 
 - **Universal data access layer**: read and write to data from anywhere worldwide.&#x20;
 
@@ -52,7 +52,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

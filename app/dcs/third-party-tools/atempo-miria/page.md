@@ -27,7 +27,7 @@ metadata:
 
 For more information, visit <https://www.atempo.com/solutions/hybrid-nas-storage-synchronizations/#>
 
-## Advantages of Miria with Storj 
+## Advantages of Miria with Storj
 
 The combination of Miria and Storj provides complete flexibility for cloud management at a competitive cost. Miria handles data archiving and organization from primary storage to the Storj cloud S3 infrastructure; large data sets can be hosted, stored, replicated, and recovered at any time through Storj's platform.
 
@@ -61,7 +61,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

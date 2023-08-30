@@ -10,7 +10,7 @@ weight: 10
 
 Storage Node Operators are compensated for the resources that are used by Storj Satellites for their nodes every month. Our payout policy and details can be found on the [Storage Node Operator Terms and Conditions](https://storj.io/storj-operator-terms/). In the event of a conflict between this documentation and Node Operator Terms & Conditions, the Node Operator Terms & Conditions shall govern.
 
-## Understanding How Storage Nodes are Paid on the Storj Network 
+## Understanding How Storage Nodes are Paid on the Storj Network
 
 This document explains how storage node operators are paid for the data they store and the bandwidth that is utilized by Storj. Storage node operators are paid for the resources actually used on the service by Storj Labs-operated satellites. Any satellites operated by third parties not associated with Storj Labs may be subject to different terms, rates and payment methodologies.
 
@@ -26,7 +26,7 @@ Storj nodes share underutilized hard drive capacity and bandwidth with the Storj
 
 **Audit Bandwidth** - egress bandwidth used when Storj satellites retrieve data from storage nodes to perform an audit is calculated in GB is paid monthly at the rates specified below.
 
-## Exclusions 
+## Exclusions
 
 Storage Node Fees will not be paid for the following Storage Node usage:
 

@@ -15,7 +15,7 @@ metadata:
 
 Storj DCS makes it easy for NFT (Non-Fungible Token) creators and developers to store their digital art, music, and videos on the decentralized cloud via Storj DCS.
 
-## Getting Started with NFT Storage on Storj DCS 
+## Getting Started with NFT Storage on Storj DCS
 
 In this tutorial, we’re going to cover three main steps:
 

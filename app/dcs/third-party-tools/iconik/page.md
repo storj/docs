@@ -16,7 +16,7 @@ metadata:
 
 [Iconik](https://www.iconik.io/) is a cloud media management and collaboration software that gathers and organizes media from multiple storage locations. Iconik has powerful features that allow users to find, share, and collaborate on media from anywhere in the world. Iconik is web-based and runs in the cloud, using its Iconik Storage Gateway (ISG) to manage and track files while allowing users to bring their own storage.&#x20;
 
-## Advantages of Iconik with Storj 
+## Advantages of Iconik with Storj
 
 Iconik is easy to use and intuitive with a clean and intuitive platform. It organizes your media by making it searchable.
 
@@ -50,7 +50,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

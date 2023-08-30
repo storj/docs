@@ -16,7 +16,7 @@ metadata:
 
 For more information, visit [veeam.com](). You can also [download a free trial](https://www.veeam.com/vm-backup-recovery-replication-software.html) for 30 days.
 
-## Advantages of Veeam with Storj 
+## Advantages of Veeam with Storj
 
 - **Eliminate downtime**: instant recovery and protection from cyber threats.
 
@@ -50,7 +50,7 @@ Navigate to <https://storj.io/signup> to sign up. Enter your full name, email 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
-### Create a Bucket 
+### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 

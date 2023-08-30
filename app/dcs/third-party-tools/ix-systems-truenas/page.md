@@ -24,7 +24,7 @@ Using Storj with TrueNAS provides resilient cloud object storage with blazing pe
 
 2.  **Speed and simplicity** of on-site storage with the added protection of a back-up in the cloud.
 
-3.  &#x20;It is also configurable in a variety of ways.
+3.  It is also configurable in a variety of ways.
 
 ## Integration
 

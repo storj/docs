@@ -27,9 +27,9 @@ uplink meta [command]
 
 ## Child commands
 
-| Command                               | Description                   |
-| :------------------------------------ | :---------------------------- |
-| [](docId:0u8rcWLCr1hwNmWRnyvgn)&#x20; | Get a Storj object's metadata |
+| Command                          | Description                   |
+| :------------------------------- | :---------------------------- |
+| [](docId:0u8rcWLCr1hwNmWRnyvgn)  | Get a Storj object's metadata |
 
 ## Flags
 

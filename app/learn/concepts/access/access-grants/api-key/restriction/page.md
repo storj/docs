@@ -38,4 +38,4 @@ The [code related to the supported Caveats](https://github.com/storj/common/blob
 
 When an Uplink Client makes a request to a Satellite to perform an action on an object, the Satellite will evaluate the validity of the Access Grant and allow the action if the Access Grant is valid for the action and object.
 
-In the case of sharing read access to an object, the Access Grant is used to allow an Uplink Client to download the pieces of a file and re-encode the pieces into a complete file, but the Uplink Client must also be able to decrypt the encrypted file for file sharing to be actually useful.&#x20;
+In the case of sharing read access to an object, the Access Grant is used to allow an Uplink Client to download the pieces of a file and re-encode the pieces into a complete file, but the Uplink Client must also be able to decrypt the encrypted file for file sharing to be actually useful.

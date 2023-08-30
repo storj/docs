@@ -142,7 +142,7 @@ Storj backup is integrated with Veeam using Veeam's **New Object Repository** w
 
 2\. Specify the Object Storage Name
 
-1.  &#x20;At the **Name** step of the wizard, specify a name and description for the object storage repository. In the **Name** field, specify a name for the new object storage repository, such as **Storj.**
+1.  At the **Name** step of the wizard, specify a name and description for the object storage repository. In the **Name** field, specify a name for the new object storage repository, such as **Storj.**
 
 2.  In the **Description** field, enter an optional description.
 

@@ -90,7 +90,7 @@ Please consult [](docId:nGzxQBhV8nx5Pukj6O0zT) for details on setting up an acco
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
 {% callout type="info"  %}
-Please **_save_** this **Encryption Passphrase** in a safe place as it will be required to decrypt and view your sentry mode videos from the web.&#x20;
+Please **_save_** this **Encryption Passphrase** in a safe place as it will be required to decrypt and view your sentry mode videos from the web.
 {% /callout %}
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ElpzbwDB96FCM8TqKXQte_tesla7.png)
@@ -124,7 +124,7 @@ Now we have our **credentials** and can move on to configuring teslausb.
     - **Endpoint**
 
 {% callout type="info"  %}
-Learn more about [](docId:bNywu7-9KLjYfk5LBQABx) on Storj and using [](docId:XKib9SzjtEXTXWvdyYWX6).&#x20;
+Learn more about [](docId:bNywu7-9KLjYfk5LBQABx) on Storj and using [](docId:XKib9SzjtEXTXWvdyYWX6).
 {% /callout %}
 
 ### Configure teslausb

@@ -27,7 +27,7 @@ Also, you can [enable WSL, install Ubuntu from the Microsoft store](https://docs
 {% quick-link %}
 ✍🏼
 
-[](docId:aKZt7A92CnGjPy1JY1YpF)&#x20;
+[](docId:aKZt7A92CnGjPy1JY1YpF)
 {% /quick-link %}
 {% /quick-links %}
 

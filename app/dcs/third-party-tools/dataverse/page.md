@@ -108,5 +108,3 @@ You'll need to delete the existing default storage driver and set a new one usin
 After you've configured your server, the Storj storage option will appear as a when creating a new Dataverse.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ElEbYhWSbPGCdUWhzvYKj_screen-shot-2022-06-10-at-35521-pm.png)
-
-## &#x20;

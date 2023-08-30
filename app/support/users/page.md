@@ -18,7 +18,7 @@ Collaborate with other developers and give them access to work with your project
 If you need to collaborate with other developers on a project, you can add other developers who have an account on the same Satellite as your project.
 
 {% callout type="warning"  %}
-When you add another user to your project, that user will have full access to the Project Dashboard, Object Browser, and access Grants for your Project.&#x20;
+When you add another user to your project, that user will have full access to the Project Dashboard, Object Browser, and access Grants for your Project.
 {% /callout %}
 
 Navigate to the **Users** screen.

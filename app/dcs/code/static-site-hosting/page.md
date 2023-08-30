@@ -105,5 +105,5 @@ Ensure you include the trailing `.` at the end of your CNAME if your DNS provide
 {% callout type="info"  %}
 **Why is my browser telling me that my connection is not secure?**
 
-While Linksharing links are secure, when you use a custom domain the browser is expecting a TLS certificate for your domain to be present on the Storj servers hosting the link. We do not generate this certificate by default, so you will need to upgrade to a Pro Account and follow the relevant steps for enabling TLS (HTTPS) for custom domains here: [](docId:RI4zz1sLvVEZ4ZcZbuT7l)&#x20;
+While Linksharing links are secure, when you use a custom domain the browser is expecting a TLS certificate for your domain to be present on the Storj servers hosting the link. We do not generate this certificate by default, so you will need to upgrade to a Pro Account and follow the relevant steps for enabling TLS (HTTPS) for custom domains here: [](docId:RI4zz1sLvVEZ4ZcZbuT7l)
 {% /callout %}

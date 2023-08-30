@@ -89,4 +89,4 @@ Direct Download
 {% /tab %}
 {% /tabs %}
 
-Then, check [](docId:TbMdOGCAXNWyPpQmH6EOq)&#x20;
+Then, check [](docId:TbMdOGCAXNWyPpQmH6EOq)

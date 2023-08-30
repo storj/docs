@@ -45,4 +45,4 @@ Understanding how **Authorization** and **Encryption** work together is crit
 
 Storj uses hierarchically deterministic Access Grants as an access management layer for objects. An Access Grant is a security envelope that contains a satellite address, a restricted API Key, and a restricted path-based encryption key—everything an application needs to locate an object on the network, access that object, and decrypt it. The key benefit of this approach is that these Access Grants and any associated restrictions can be entirely managed client-side, without a central Access Control List or other server-side mechanism involved in the access management process. We call this delegated authorization.
 
-Read more about [](docId:XKib9SzjtEXTXWvdyYWX6).&#x20;
+Read more about [](docId:XKib9SzjtEXTXWvdyYWX6).

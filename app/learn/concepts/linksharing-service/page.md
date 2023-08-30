@@ -30,7 +30,7 @@ The Linksharing service provides an easy way to share an object via a web browse
 The Linkshare service is part of the Storj [](docId:21Y2RfU-4h21vZycBqizJ) and provides an additional way to access objects over the internet via a browser in addition to the [](docId:yYCzPT8HHcbEZZMvfoCFa).
 
 {% callout type="info"  %}
-Note: All of the Edge Services, including the Linksharing service use [](docId:hf2uumViqYvS1oq8TYbeW).&#x20;
+Note: All of the Edge Services, including the Linksharing service use [](docId:hf2uumViqYvS1oq8TYbeW).
 {% /callout %}
 
 ## Linkshare Examples

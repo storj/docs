@@ -42,7 +42,7 @@ Use our native integration pattern to take advantage of client-side encryption a
 
 {% quick-links %}
 {% quick-link %}
-[](docId:Mk51zylAE6xmqP7jUYAuX)&#x20;
+[](docId:Mk51zylAE6xmqP7jUYAuX)
 {% /quick-link %}
 {% /quick-links %}
 
@@ -62,6 +62,6 @@ By selecting this integration pattern, you are opting in to server-side encrypti
 
 {% quick-links %}
 {% quick-link %}
-[](docId:WayQo-4CZXkITaHiGeQF_)&#x20;
+[](docId:WayQo-4CZXkITaHiGeQF_)
 {% /quick-link %}
 {% /quick-links %}

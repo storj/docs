@@ -29,7 +29,7 @@ A network-attached storage location may work, but this is neither supported nor 
 {% tabs %}
 {% tab label="Linux" %}
 {% callout type="danger"  %}
-**Linux Users:** You **must** static mount via /etc/fstab. Failure to do so will put you in high risk of failing audits and getting disqualified. Here's how to do that: [](docId:nZeFxmawYPdgkwUPy6f9s)&#x20;
+**Linux Users:** You **must** static mount via /etc/fstab. Failure to do so will put you in high risk of failing audits and getting disqualified. Here's how to do that: [](docId:nZeFxmawYPdgkwUPy6f9s)
 {% /callout %}
 
 1.  Copy the command into a plain text editor like a `nano`:

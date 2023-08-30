@@ -106,7 +106,7 @@ docker run .... -p 28968:28967/tcp -p 28968:28967/udp -p 172.0.0.1:14003:14002 -
 _Please, use the full command from_ [](docId:HaDkV_0aWg9OJoBe53o-J)_, the above is an excerpt showing only the changed parts._
 
 {% callout type="info"  %}
-[](docId:bMlttgapdFJxCNAULJDIv)&#x20;
+[](docId:bMlttgapdFJxCNAULJDIv)
 {% /callout %}
 
 ## Binary version

@@ -66,7 +66,7 @@ From a billing perspective, if you only have one application, or you’re an ind
 A bucket is an unbounded but named collection of objects identified by paths. Every object has a unique path within a bucket.
 
 {% callout type="warning"  %}
-**Key Point:** Bucket names are not client-side encrypted so that they may be rendered in the Satellite user interface.&#x20;
+**Key Point:** Bucket names are not client-side encrypted so that they may be rendered in the Satellite user interface.
 {% /callout %}
 
 Bucket names are not client-side encrypted so that they may be rendered in the Satellite user interface.

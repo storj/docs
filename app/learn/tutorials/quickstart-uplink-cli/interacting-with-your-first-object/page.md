@@ -13,4 +13,4 @@ Listing, downloading, and deleting Objects
 
 [](docId:K7tsSNrIYYpelUFtVKe_F)
 
-[](docId:Fr6x2DasCtv9DzvMQ8ugg)&#x20;
+[](docId:Fr6x2DasCtv9DzvMQ8ugg)

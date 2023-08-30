@@ -180,7 +180,8 @@ Credentials window:
 
 3.  If desired, select the **Limit object storage consumption to** check box to define a soft limit that can be exceeded temporarily for your object storage consumption. Enter a limit value in terabytes or petabytes.
 
-4.  If desired, select the** Make recent backups immutable for** check box to prohibit the deletion of blocks of data from object storage. Specify the immutability period, in days.&#x20;
+4.  If desired, select the** Make recent backups immutable for** check box to prohibit the deletion of blocks of data from object storage. Specify the immutability period, in days.
+
     Note: selecting this option might increase storage costs. For more information about immutability, see [Immutability](https://helpcenter.veeam.com/docs/backup/vsphere/immutability_sobr.html?ver=120) on the Veeam website.
 
 5.  Select **Next**.

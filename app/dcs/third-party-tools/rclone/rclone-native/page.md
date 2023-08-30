@@ -203,7 +203,7 @@ rclone lsf waterbear:
 ```
 
 {% callout type="info"  %}
-Note the colon (`:`) character at the end of the command line.&#x20;
+Note the colon (`:`) character at the end of the command line.
 {% /callout %}
 
 ## Delete a Bucket

@@ -114,7 +114,7 @@ Automate file repair and know that Reed-Solomon erasure coding enables the highe
 
 **Cost Efficiency**
 
-Get high availability multi-region cloud object storage for a fraction of the price of a single availability zone from centralized providers like AWS.&#x20;
+Get high availability multi-region cloud object storage for a fraction of the price of a single availability zone from centralized providers like AWS.
 {% /quick-link %}
 
 {% quick-link %}

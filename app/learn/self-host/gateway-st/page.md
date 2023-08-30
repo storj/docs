@@ -192,7 +192,7 @@ If you would like to choose your own access name, please be sure to only use low
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/r0PGzFlbeZmrAUhoUXuYJ_self-s3-04.png)
 
 {% callout type="warning"  %}
-Please note that **Storj Labs does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.&#x20;
+Please note that **Storj Labs does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
 {% /callout %}
 
 6\. Your S3 gateway is configured and ready to use!

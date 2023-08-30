@@ -35,7 +35,7 @@ In Windows, we will use the same folder`D:\STORJ` and PowerShell as a terminal.
 
 We will assume that your Windows user is called `user` and it has full access to the `D:\STORJ` folder.
 
-If you are moving the identity and data to the new Windows CLI host, you need to share the destination folder on that host and follow the guide [](docId:NGHe10jmn-kdgzTf3FUz0)&#x20;
+If you are moving the identity and data to the new Windows CLI host, you need to share the destination folder on that host and follow the guide [](docId:NGHe10jmn-kdgzTf3FUz0)
 {% /callout %}
 {% /tab %}
 

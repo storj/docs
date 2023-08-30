@@ -5,8 +5,7 @@ redirects:
   - /node/resources/faq/redirect-logs
 ---
 
-1\. To redirect the logs to a file, stop your Node:&#x20;
-CLI Install
+1\. To redirect the logs to a file, stop your Node:
 
 {% tabs %}
 {% tab label="CLI Install" %}

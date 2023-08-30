@@ -48,4 +48,4 @@ Our support process, responsibilities, and hours are published in our [Terms of 
 
 - Between 9:00 A.M. to 5:00 P.M. Eastern Time on Business Days for other Support Requests
 
-You can submit a ticket via our Support Portals or via our Twitter [@StorjSupport](https://twitter.com/storjsupport). &#x20;
+You can submit a ticket via our Support Portals or via our Twitter [@StorjSupport](https://twitter.com/storjsupport).

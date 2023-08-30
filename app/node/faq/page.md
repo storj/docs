@@ -88,4 +88,4 @@ metadata:
 
 ## Need help?
 
-If you still couldn't find the answers to your questions, visit our [](docId:h0GeE0-z8ta1rOlKLL7lL)&#x20;
+If you still couldn't find the answers to your questions, visit our [](docId:h0GeE0-z8ta1rOlKLL7lL)

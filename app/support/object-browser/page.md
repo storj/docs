@@ -16,7 +16,7 @@ metadata:
 The Object Browser supports uploading and managing objects directly through the browser with no command-line tool required. This component uses our [](docId:yYCzPT8HHcbEZZMvfoCFa) service.
 
 {% callout type="info"  %}
-By using hosted Gateway MT you are opting into **server-side encryption**. See [](docId:hf2uumViqYvS1oq8TYbeW)&#x20;
+By using hosted Gateway MT you are opting into **server-side encryption**. See [](docId:hf2uumViqYvS1oq8TYbeW)
 {% /callout %}
 
 ## Configure Object Browser Access
@@ -64,7 +64,7 @@ You can upload not only files but also folders, just **drag them into the browse
 If you want to create a folder, you can do that with the **New Folder** button.
 
 {% callout type="success"  %}
-When you drag and drop your file into the Satellite Admin Console Object Browser, the Storj DCS S3-compatible Gateway will encrypt the data using [](docId:hf2uumViqYvS1oq8TYbeW), break large files into 64MB Segments (or for smaller files a single segment), then erasure code the segments, breaking each segment into 80 pieces, then distributing those pieces over our network of thousands of independently operated storage nodes.&#x20;
+When you drag and drop your file into the Satellite Admin Console Object Browser, the Storj DCS S3-compatible Gateway will encrypt the data using [](docId:hf2uumViqYvS1oq8TYbeW), break large files into 64MB Segments (or for smaller files a single segment), then erasure code the segments, breaking each segment into 80 pieces, then distributing those pieces over our network of thousands of independently operated storage nodes.
 {% /callout %}
 
 ## Deleting files

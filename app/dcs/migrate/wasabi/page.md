@@ -61,7 +61,7 @@ Once the key is created, you can view and copy the Access Key and Secret Key. Ma
 After getting your access keys for Storj and Wasabi, you need to configure rclone.
 
 {% callout type="info"  %}
-We'll edit the rclone config directory directly, but you can also run `rclone config` for a more interactive experience.&#x20;
+We'll edit the rclone config directory directly, but you can also run `rclone config` for a more interactive experience.
 {% /callout %}
 
 We'll edit the rclone config file directly, you can find where it is stored by running the following:

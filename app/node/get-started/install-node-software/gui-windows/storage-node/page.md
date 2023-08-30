@@ -49,7 +49,7 @@ weight: 0
    {% /callout %}
 
    {% callout type="warning"  %}
-   **Moving an existing node on a CLI Setup to a Windows GUI Setup?**&#x20;
+   **Moving an existing node on a CLI Setup to a Windows GUI Setup?**
    {% /callout %}
 
    ![Storage folder selection screen](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/i8pjCLqJCL9JuQnPFALsH_pasted-image-0.png)
@@ -75,5 +75,5 @@ weight: 0
     ![Install finish screen](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gLOwNZjPUw8q4ZecabrXQ_pasted-image-0.png)
 
     {% callout type="info"  %}
-    Note: The Storage node and auto updater are installed as a Windows service. If you want to stop or restart the storage node you have to open the windows service page to do so.&#x20;
+    Note: The Storage node and auto updater are installed as a Windows service. If you want to stop or restart the storage node you have to open the windows service page to do so.
     {% /callout %}

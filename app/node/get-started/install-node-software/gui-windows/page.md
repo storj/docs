@@ -19,4 +19,4 @@ Failure to complete these steps will prevent your storage node from working.
 
 [](docId:owZeAc56KSDnUzDhsBfB8)
 
-[](docId:aT6VAB297OWLd4vqeXxf5)&#x20;
+[](docId:aT6VAB297OWLd4vqeXxf5)

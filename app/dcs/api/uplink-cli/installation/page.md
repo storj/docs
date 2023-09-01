@@ -1,9 +1,11 @@
 ---
-title: Installation
+title: Download and Installation
 docId: hFL-goCWqrQMJPcTN82NB
 redirects:
   - /dcs/downloads/download-uplink-cli
 weight: 0
+metadata:
+  title: Download and install uplink
 ---
 
 The native CLI tool for Storj DCS/OSP
@@ -30,11 +32,11 @@ Open **Windows PowerShell** and continue on to the next step.
 {% /tab %}
 
 {% tab label="Linux" %}
-AMD64
+**AMD64**
 
 Curl Download
 
-```Text
+```bash
 curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_amd64.zip -o uplink_linux_amd64.zip
 unzip -o uplink_linux_amd64.zip
 sudo install uplink /usr/local/bin/uplink
@@ -44,11 +46,11 @@ Direct Download
 
 [Linux AMD64 Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_linux_amd64.zip)
 
-ARM
+**ARM**
 
 Curl Download
 
-```Text
+```bash
 curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm.zip -o uplink_linux_arm.zip
 unzip -o uplink_linux_arm.zip
 sudo install uplink /usr/local/bin/uplink
@@ -58,11 +60,11 @@ Direct Download
 
 [Linux ARM Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_linux_arm.zip)
 
-ARM64
+**ARM64**
 
 Curl Download
 
-```Text
+```bash
 curl -L https://github.com/storj/storj/releases/latest/download/uplink_linux_arm64.zip -o uplink_linux_arm64.zip
 unzip -o uplink_linux_arm64.zip
 sudo install uplink /usr/local/bin/uplink
@@ -76,7 +78,7 @@ Direct Download
 {% tab label="macOS" %}
 Curl Download
 
-```Text
+```bash
 curl -L https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip -o uplink_darwin_amd64.zip
 unzip -o uplink_darwin_amd64.zip
 sudo install uplink /usr/local/bin/uplink

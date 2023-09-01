@@ -36,7 +36,7 @@ The front matter is a section at the beginning of each Markdown file (page.md) t
 
 **title:** The title of the article or page. This is typically displayed at the top of the page.
 
-**docId:** A unique identifier for the document. This can be used for internal tracking and linking. See [Internal Linking](/#internal-linking)
+**docId:** A unique identifier for the document. This can be used for internal tracking and linking. See [Internal Linking](/CONTRIBUTING.md#internal-linking)
 
 **redirects:** A list of URLs that should redirect to this page. This is useful for maintaining links when a page's URL changes or for creating aliases for a page.
 
@@ -52,7 +52,7 @@ The metadata fields are converted to a nextjs export. Additional metadata fields
 
 **Linking by docId**
 
-You can link to other documents using their docId. This ensures that the link will still work even if the URL of the target page changes. Using docId for internal links ensures that the links remain valid even if the URL structure changes.
+You can link to other documents using their docId. The link name will be the title of the linked document. Linking by docId ensures that the links remain valid even if the URL structure changes.
 
 **Syntax**
 

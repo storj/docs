@@ -50,7 +50,7 @@ weight: 0
 
    {% callout type="danger"  %}
    Splitting subfolders from the storage location (junctions, symlinks, hardlinks, etc.) will lead to a quick disqualification if they become unavailable!
-   The writeability and readability checks are performed on storage location, not on subfolders.
+   The writeability and readability checks are performed on the storage location, not on subfolders.
    {% /callout %}
 
    {% callout type="warning"  %}

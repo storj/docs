@@ -48,8 +48,15 @@ weight: 0
    The network-attached storage location could work, but it is neither supported nor recommended!
    {% /callout %}
 
+   {% callout type="danger"  %}
+   Splitting subfolders from the storage location (junctions, symlinks, hardlinks, etc.) will lead to a quick disqualification if they become unavailable!
+   The writeability and readability checks are performed on storage location, not on subfolders.
+   {% /callout %}
+
    {% callout type="warning"  %}
    **Moving an existing node on a CLI Setup to a Windows GUI Setup?**
+   
+   See [](docId:PsB_5Yp43KeN0DszuE2DN)
    {% /callout %}
 
    ![Storage folder selection screen](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/i8pjCLqJCL9JuQnPFALsH_pasted-image-0.png)

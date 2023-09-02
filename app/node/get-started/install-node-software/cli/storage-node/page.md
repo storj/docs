@@ -26,6 +26,11 @@ docker pull storjlabs/storagenode:latest
 A network-attached storage location may work, but this is neither supported nor recommended!
 {% /callout %}
 
+{% callout type="warning"  %}
+Splitting subfolders from the storage location (junctions, symlinks, hardlinks, etc.) will lead to a quick disqualification if they become unavailable!
+The writeability and readability checks are performed on the storage location, not on subfolders.
+{% /callout %}
+
 {% tabs %}
 {% tab label="Linux" %}
 {% callout type="danger"  %}

@@ -20,7 +20,7 @@ For more information, visit [veeam.com](). You can also [download a free trial](
 
 - **Eliminate downtime**: instant recovery and protection from cyber threats.
 
-- **Fast and secure backup for your data: **automate workload backup and discovery across cloud, virtual, physical, and NAS. Fast image-based backups take advantage of VMs, hardware, and OS snapshots.
+- **Fast and secure backup for your data**: automate workload backup and discovery across cloud, virtual, physical, and NAS. Fast image-based backups take advantage of VMs, hardware, and OS snapshots.
 
 - **Lightning-fast data recovery for any scenario**: instant recovery of OSes, applications, databases, VMs, files, folders, objects, and shares. Recovery works across multiple clouds and platforms.
 
@@ -161,7 +161,7 @@ Storj backup is integrated with Veeam using Veeam's **New Object Repository** w
 3.  To add the Storj credentials, selecy the **Add... **button next to the **Credentials** drop-down list. Enter the access key and session key in their corresponding fields. Add an optional description in the **Description** field, if desired.
     **Note**: you can also click the **Manage cloud accounts** link to add, edit, or remove a credentials record.
 
-4.  Note the** Use the following gateway server** check box. If selected without a server specified, by default the role of a gateway server is assigned to the machine where Veeam is installed.
+4.  Note the **Use the following gateway server** check box. If selected without a server specified, by default the role of a gateway server is assigned to the machine where Veeam is installed.
     For more information on considerations and limitations for using a gateway server, see [Considerations and Limitations](https://helpcenter.veeam.com/docs/backup/vsphere/object_storage_repository_cal.html) on the Veeam website.
 
 5.  Select **Next**.
@@ -174,13 +174,13 @@ Credentials window:
 
 4\. Specify the bucket settings.
 
-1.  From the **Bucket **drop-down list, select the "veeam" bucket created earlier.
+1.  From the **Bucket** drop-down list, select the "veeam" bucket created earlier.
 
 2.  In the **Select Folder** field, select **Browse** and find the cloud folder in your "veeam" bucket to map your object storage repository, if it already exists. If not, you can select **New Folder** to make a new one.
 
 3.  If desired, select the **Limit object storage consumption to** check box to define a soft limit that can be exceeded temporarily for your object storage consumption. Enter a limit value in terabytes or petabytes.
 
-4.  If desired, select the** Make recent backups immutable for** check box to prohibit the deletion of blocks of data from object storage. Specify the immutability period, in days.
+4.  If desired, select the **Make recent backups immutable for** check box to prohibit the deletion of blocks of data from object storage. Specify the immutability period, in days.
 
     Note: selecting this option might increase storage costs. For more information about immutability, see [Immutability](https://helpcenter.veeam.com/docs/backup/vsphere/immutability_sobr.html?ver=120) on the Veeam website.
 
@@ -193,5 +193,3 @@ Credentials window:
 1.  Review the information in the **Summary** window. Go back and make any necessary edits using the **Previous** button.
 
 2.  Select **Finish** and exit the wizard.
-
-##

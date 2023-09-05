@@ -38,6 +38,8 @@ To integrate Storj with Veeam, you will need to create S3 credentials in Storj a
 
 - An installation of Veeam.
 
+{% callout %} Important Note: Please be sure to use at least **large** and ideally **extra large blocks** as demonstrated in the Job Creation Wizard below.  {% /callout %}
+
 Download a [free trial](https://www.veeam.com/vm-backup-recovery-replication-software.html) of Veeam or [create a Veeam account](https://www.veeam.com/signin.html?client_id=my-veeam-com).
 
 ---
@@ -126,7 +128,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 ## Connecting Veeam to Storj
 
-### Veeam Configuration
+### Repository Configuration
 
 Storj backup is integrated with Veeam using Veeam's **New Object Repository** wizard. Follow the steps below to complete the integration:
 
@@ -193,3 +195,32 @@ Credentials window:
 1.  Review the information in the **Summary** window. Go back and make any necessary edits using the **Previous** button.
 
 2.  Select **Finish** and exit the wizard.
+
+### Job Configuration
+
+New Backup Job wizard to configure the backup job. Follow the steps below to complete the integration. This is an important step to optimize cost and performance of your backups. For more detail please see the following [Object Storage Considerations Veeam.](https://community.veeam.com/blogs-and-podcasts-57/sobr-veeam-capacity-tier-calculations-and-considerations-in-v11-2548)
+
+1. Launch the New Object Repository wizard:
+
+2. Work your way though the configuration and open **Advanced** on the [Storage Selection Step](https://helpcenter.veeam.com/docs/backup/vsphere/backup_job_storage_vm.html)
+
+![](https://link.storjshare.io/raw/jxujkau67l6nxg3yf5e3annjtdla/documentationimages/veeam1.png)
+3. Upon opening **Advanced** you will be presented with the option of selecting **Storage Optimization**. **Large** (4MB) and **extra large blocks** (8MB) are the ideal settings for best performance and least segment cost. **Extra large** (8MB) is the ideal setting but is hidden by default. 
+
+![](https://link.storjshare.io/raw/juxv66gz66lpjb53piiov6cw56aq/documentationimages/veeam2.png)
+
+4. To enable **extra large blocks**, create the UIShowLegacyBlockSize (DWORD, 1) registry value under the 'HKLM\SOFTWARE\Veeam\Veeam Backup and Replication' key on the backup server. Keep in mind that this option significantly increases incremental backups size and requires an active full backup to be activated. This requires Veeam 11a or newer. 
+
+Open the Backup Infrastructure view.
+
+
+
+
+
+
+
+
+
+
+
+

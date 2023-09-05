@@ -158,7 +158,7 @@ Storj backup is integrated with Veeam using Veeam's **New Object Repository** w
 
 2.  In the **Region** field, specify a region, such as **us-east-1**.
 
-3.  To add the Storj credentials, selecy the **Add... **button next to the **Credentials** drop-down list. Enter the access key and session key in their corresponding fields. Add an optional description in the **Description** field, if desired.
+3.  To add the Storj credentials, selecy the **Add...** button next to the **Credentials** drop-down list. Enter the access key and session key in their corresponding fields. Add an optional description in the **Description** field, if desired.
     **Note**: you can also click the **Manage cloud accounts** link to add, edit, or remove a credentials record.
 
 4.  Note the **Use the following gateway server** check box. If selected without a server specified, by default the role of a gateway server is assigned to the machine where Veeam is installed.

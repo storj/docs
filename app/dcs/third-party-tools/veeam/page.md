@@ -38,6 +38,8 @@ To integrate Storj with Veeam, you will need to create S3 credentials in Storj a
 
 - An installation of Veeam.
 
+{% callout %} Important Note: Please be sure to use at least **large** and ideally **extra large blocks** as demonstrated in the Job Creation Wizard below.  {% /callout %}
+
 Download a [free trial](https://www.veeam.com/vm-backup-recovery-replication-software.html) of Veeam or [create a Veeam account](https://www.veeam.com/signin.html?client_id=my-veeam-com).
 
 ---
@@ -48,7 +50,7 @@ To begin, you will need to create a Storj account. If you already an account, go
 
 Navigate to <https://storj.io/signup> to sign up. Enter your full name, email address, and a password, as shown below:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
 ### Create a Bucket
 
@@ -58,11 +60,11 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 2\. Click “New Bucket” on the top right.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
 
 3\. Assign the bucket an easily identifiable name, such as "my-bucket".
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
 
 4\. Click **Create bucket**
 
@@ -76,7 +78,7 @@ Create S3 credentials in the Storj web console:
 
 2\. Click **Create S3 Credentials** under the S3 Credentials block.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
 
 3\. When the Create Access screen comes up, set specifications according to the following guidelines:
 
@@ -84,7 +86,7 @@ Create S3 credentials in the Storj web console:
 
 - **Name:** The name of the credentials (e.g. my-access)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
 
 4\. Click **Continue** to provide permissions
 
@@ -94,7 +96,7 @@ Create S3 credentials in the Storj web console:
 
 - **End date**: provide an expiration date for these credentials (optional)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
 
 5\. Click **Continue** to provide Access encryption Information
 
@@ -106,7 +108,7 @@ Create S3 credentials in the Storj web console:
 
   - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
 
 {% callout type="warning"  %}
 In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
@@ -114,19 +116,19 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 6\. Click **Create Access** to finish creation of your S3 credentials
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
 
 7\. Click **Confirm** the Confirm details pop-up message
 
 8\. Your S3 credentials are created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
 
 ---
 
 ## Connecting Veeam to Storj
 
-### Veeam Configuration
+### Repository Configuration
 
 Storj backup is integrated with Veeam using Veeam's **New Object Repository** wizard. Follow the steps below to complete the integration:
 
@@ -138,7 +140,7 @@ Storj backup is integrated with Veeam using Veeam's **New Object Repository** w
 
 3.  In the **Add Backup Repository** dialog, select **Object Storage > S3 Compatible**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MMbsPEmATTdZ81_JyAe92_news3storagesplash.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MMbsPEmATTdZ81_JyAe92_news3storagesplash.png)
 
 2\. Specify the Object Storage Name
 
@@ -150,7 +152,7 @@ Storj backup is integrated with Veeam using Veeam's **New Object Repository** w
 
 4.  Select **Next**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/XLfq1ljqWaRGqlyKujk7K_s3repository.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/XLfq1ljqWaRGqlyKujk7K_s3repository.png)
 
 3\. At the **Account** step of the wizard, add the object storage account created in the previous section. Here you will need the S3 credentials created in Storj to specify the connection settings:
 
@@ -166,11 +168,11 @@ Storj backup is integrated with Veeam using Veeam's **New Object Repository** w
 
 5.  Select **Next**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Nm_ozkSpgKbrppfRK5G_v_archiverepositorys3c.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Nm_ozkSpgKbrppfRK5G_v_archiverepositorys3c.png)
 
 Credentials window:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PSB-9XpGQgOYkyM-rMD4l_awsaccount.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PSB-9XpGQgOYkyM-rMD4l_awsaccount.png)
 
 4\. Specify the bucket settings.
 
@@ -186,10 +188,39 @@ Credentials window:
 
 5.  Select **Next**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YOE-le-vX4D0wfn7tnrey_archiverepositorys3cbucket.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YOE-le-vX4D0wfn7tnrey_archiverepositorys3cbucket.png)
 
 5\. Review the credentials and selections.
 
 1.  Review the information in the **Summary** window. Go back and make any necessary edits using the **Previous** button.
 
 2.  Select **Finish** and exit the wizard.
+
+### Job Configuration
+
+Use the New **Backup Job wizard** to configure the backup job. Follow the steps below to complete the integration. This is an important step to optimize cost and performance of your backups. For more detail please see the following [Object Storage Considerations Veeam.](https://community.veeam.com/blogs-and-podcasts-57/sobr-veeam-capacity-tier-calculations-and-considerations-in-v11-2548)
+
+1. Launch the New Object Repository wizard:
+
+2. Work your way though the configuration and open **Advanced** on the [Storage Selection Step](https://helpcenter.veeam.com/docs/backup/vsphere/backup_job_storage_vm.html)
+
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam1.png)
+
+3. Upon opening **Advanced** you will be presented with the option of selecting **Storage Optimization**. **Large** (4MB) and **extra large blocks** (8MB) are the ideal settings for best performance and least segment cost. **Extra large** (8MB) is the ideal setting but is hidden by default. 
+
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam2.png)
+
+4. To enable **extra large blocks**, create the UIShowLegacyBlockSize (DWORD, 1) registry value under the 'HKLM\SOFTWARE\Veeam\Veeam Backup and Replication' key on the backup server. Keep in mind that this option significantly increases incremental backups size and requires an active full backup to be activated. This requires Veeam 11a or newer. 
+
+
+
+
+
+
+
+
+
+
+
+
+

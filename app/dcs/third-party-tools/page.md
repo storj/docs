@@ -3,6 +3,8 @@ title: Third-Party Tools
 docId: REPde_t8MJMDaE2BU8RfQ
 redirects:
   - /dcs/how-tos
+  - /dcs/backups
+  - /dcs/file-transfer
 metadata:
   title: Guides to Using Third-Party Tools
   description:

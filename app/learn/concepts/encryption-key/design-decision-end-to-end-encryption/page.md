@@ -3,6 +3,7 @@ title: Design Decision - End-to-end Encryption
 docId: Pksf8d0TCLY2tBgXeT18d
 redirects:
   - /dcs/concepts/encryption-key/design-decision-end-to-end-encryption
+  - /concepts/encryption-key/design-decision-end-to-end-encryption
 metadata:
   title: Using End-to-End Encryption
   description: Learn how to implement end-to-end encryption using Storj tools

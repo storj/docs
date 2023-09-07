@@ -48,7 +48,7 @@ For more information about the iX Storj integration, see the [press release](htt
 
 ### Sign up for an account
 
-Navigate to <https://us1.storj.io/signup?partner=ixsystems> to sign up iX-Storj account. Enter your full name, email address, and a password, as shown below:
+Navigate to <https://us1.storj.io/signup?partner=ix-storj-1> to sign up iX-Storj account. Enter your full name, email address, and a password, as shown below:
 
 {% callout type="warning"  %}
 If you have an existing Storj account, you will need to contact support to have it linked to the iX Storj integration. See [here](https://forum.storj.io/t/truenas-backups-and-differences-between-storj-and-storj-ix/20044/7) for more information

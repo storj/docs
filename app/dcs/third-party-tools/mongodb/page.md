@@ -5,6 +5,7 @@ tags:
   - cloud-ops
 redirects:
   - /dcs/how-tos/mongodb-ops-manager-backup
+  - /how-tos/mongodb-ops-manager-backup
 metadata:
   title: Guide on Deploying MongoDB Ops Manager with Storj DCS
   description:

@@ -5,6 +5,8 @@ redirects:
   - /dcs/billing
   - /dcs/billing-payment-and-accounts
   - /dcs/getting-started/satellite-developer-account/billing
+  - /billing-payment-and-accounts-1/pricing/billing-and-payment
+  - /dcs/billing-payment-and-accounts-1/pricing/billing-and-payment
 weight: 0
 metadata:
   title: Managing Billing and Payments

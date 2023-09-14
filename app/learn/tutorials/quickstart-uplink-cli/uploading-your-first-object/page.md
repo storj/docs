@@ -3,6 +3,7 @@ title: Uploading Your First Object CLI
 docId: R8xZNlt1dr3nZzo-_ZQLx
 redirects:
   - /dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object
+  - /getting-started/quickstart-uplink-cli/uploading-your-first-object
 weight: 0
 ---
 

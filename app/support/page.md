@@ -4,6 +4,7 @@ weight: 1
 docId: h0GeE0-z8ta1rOlKLL7lL
 redirects:
   - /help
+  - /dcs/support/support-process-overview
 metadata:
   title: Need Help Finding Information on Storj?
   description: Check out our Help Center for resources, FAQs, and support options.
@@ -40,7 +41,6 @@ FAQ, articles, and support
 FAQ, troubleshooting, and support
 {% /quick-link %}
 {% /quick-links %}
-
 
 Our support process, responsibilities, and hours are published in our [Terms of Service](https://www.storj.io/terms-of-service). Our support hours are:
 

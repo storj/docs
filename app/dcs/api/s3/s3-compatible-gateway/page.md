@@ -3,6 +3,7 @@ title: Storj-hosted S3 Compatible Gateway
 docId: yYCzPT8HHcbEZZMvfoCFa
 redirects:
   - /dcs/api-reference/s3-compatible-gateway
+  - /api-reference/s3-compatible-gateway
   - /getting-started/beta-gateway-mt
 metadata:
   title: S3 Compatible Gateway Hosted by Storj

@@ -5,6 +5,7 @@ tags:
   - large-file
 redirects:
   - /dcs/how-tos/how-to-hod-rod-file-transfer-performance-on-storj-dcs
+  - /how-tos/how-to-hod-rod-file-transfer-performance-on-storj-dcs
 metadata:
   title: Optimizing File Transfer Performance on Storj
   description:

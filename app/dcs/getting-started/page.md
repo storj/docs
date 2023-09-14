@@ -10,6 +10,8 @@ metadata:
 redirects:
   - /dcs/getting-started/gateway-mt
   - /dcs/getting-started/quickstart-aws-sdk-and-hosted-gateway-mt
+  - /docs/getting-started
+  - /docs/intro
 weight: 1
 ---
 

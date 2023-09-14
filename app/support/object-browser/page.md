@@ -5,6 +5,7 @@ weight: 15
 redirects:
   - /dcs/browser-usage
   - /dcs/getting-started/quickstart-objectbrowser
+  - /dcs/getting-started/quickstart-objectbrowser/
 metadata:
   title: Using the Object Browser
   description:

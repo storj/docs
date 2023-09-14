@@ -3,6 +3,7 @@ title: FileZilla Native Integration
 docId: OkJongWeLGhPy4KKz34W4
 redirects:
   - /dcs/how-tos/set-up-filezilla-for-decentralized-file-transfer
+  - /how-tos/set-up-filezilla-for-decentralized-file-transfer
 metadata:
   title: Setting Up FileZilla for File Transfer
   description:

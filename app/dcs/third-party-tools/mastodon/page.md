@@ -4,7 +4,7 @@ docId: ThG-lYh8tu_EjNUcVqVK9
 tags:
   - content-delivery
 redirects:
-  - /dcs/ThG--mastodon
+  - /dcs/mastodon
 metadata:
   title: 'Integrating Mastodon with Storj: A Comprehensive Guide'
   description:

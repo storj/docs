@@ -3,6 +3,7 @@ title: Linksharing Service
 docId: sN2GhYgGUtqBVF65GhKEa
 redirects:
   - /dcs/api-reference/linksharing-service
+  - /docs/storj-share-gui
 metadata:
   title: Explaining the Linksharing Service
   description:

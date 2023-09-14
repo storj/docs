@@ -3,6 +3,7 @@ title: Presigned URLs in the serverless cloud
 docId: AJzzSRQQpE3ecAOJ_3tpl
 redirects:
   - /dcs/how-tos/presigned-urls-in-the-serverless-cloud
+  - /dcs/presigned-urls-in-the-serverless-cloud
 metadata:
   title: Generating Presigned URLs in Serverless Cloud with Go
   description:

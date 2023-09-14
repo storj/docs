@@ -3,6 +3,7 @@ title: Uplink CLI API
 docId: TC-N6QQVQg8w2cRqvEqEf
 redirects:
   - /dcs/api-reference/uplink-cli
+  - /api-reference/uplink-cli
 metadata:
   title: Using the Uplink CLI
   description:

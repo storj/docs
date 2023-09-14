@@ -6,6 +6,7 @@ redirects:
     /dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant
   - >-
     /getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant
+  - /getting-started/uploading-your-first-object/create-first-access-grant
 weight: 0
 ---
 

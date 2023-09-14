@@ -5,6 +5,7 @@ tags:
   - file-management
 redirects:
   - /dcs/filezilla
+  - /docs/filezilla-getting-started
 metadata:
   title: FileZilla Integration
   description:

@@ -2,8 +2,10 @@
 title: Uplink CLI Tutorial
 docId: TbMdOGCAXNWyPpQmH6EOq
 redirects:
+  - /getting-started/uploading-your-first-object/set-up-uplink-cli
   - /dcs/getting-started/quickstart-uplink-cli/prerequisites
   - /dcs/getting-started/quickstart-uplink-cli
+  - /getting-started/quickstart-uplink-cli/uploading-your-first-object/set-up-uplink-cli
 metadata:
   title: Quickstart Uplink CLI
 ---

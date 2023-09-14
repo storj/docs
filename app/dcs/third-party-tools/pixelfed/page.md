@@ -4,7 +4,7 @@ tags:
   - content-delivery
 docId: SboATM5Y5-lWay0Zg-k4T
 redirects:
-  - /dcs/SboA-pixelfed
+  - /dcs/pixelfed
 metadata:
   title: Configuring PixelFed with Storj
   description:

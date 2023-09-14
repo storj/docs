@@ -8,6 +8,7 @@ metadata:
     service, covering website setup, DNS configuration, and custom domain usage.
 redirects:
   - /dcs/how-tos/host-a-static-website/host-a-static-website-with-the-cli-and-linksharing-service
+  - /dcs/web-hosting
 ---
 
 You can use your own domain name and host your own static website on Storj
@@ -68,7 +69,7 @@ For example, running
 uplink share --dns www.example.com sj://bucket/prefix
 ```
 
- will output a zone file like the following:
+will output a zone file like the following:
 
 ```Text
 $ORIGIN example.com.

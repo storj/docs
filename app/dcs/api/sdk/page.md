@@ -3,6 +3,8 @@ title: SDKs
 docId: 2x_b4StTLjm2WoHEPx2Cm
 redirects:
   - /dcs/api-reference/storj-client-libraries
+  - /api-reference/libraries
+  - /dcs/downloads/download-storj-client-libraries
 ---
 
 The `libuplink` developer library is written for the Go language. This will allow you to integrate with the object store programmatically.

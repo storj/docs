@@ -5,6 +5,7 @@ tags:
   - file-management
 redirects:
   - /dcs/nextcloud-with-storj-dcs
+  - /how-tos/set-up-tardigrade-with-nextcloud-primary-storage
 metadata:
   title: Implementing Nextcloud Using Storj
   description:

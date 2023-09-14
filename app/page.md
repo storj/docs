@@ -6,6 +6,7 @@ metadata:
   description: Make the world your datacenter
 redirects:
   - /dcs
+  - /docs
 weight: 0
 ---
 

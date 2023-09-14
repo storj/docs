@@ -5,6 +5,7 @@ tags:
 docId: LdrqSoECrAyE_LQMvj3aF
 redirects:
   - /dcs/how-tos/sync-files-with-rclone
+  - /how-tos/sync-files-with-rclone
 metadata:
   title: Getting Started with Rclone Configuration
   description:

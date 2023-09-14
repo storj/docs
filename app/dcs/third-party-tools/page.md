@@ -5,6 +5,7 @@ redirects:
   - /dcs/how-tos
   - /dcs/backups
   - /dcs/file-transfer
+  - /dcs/multimedia-storage-and-streaming
 metadata:
   title: Guides to Using Third-Party Tools
   description:

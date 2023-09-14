@@ -2,7 +2,7 @@
 title: Projects
 docId: jwCUqpDCk8CUuUqFuykFx
 redirects:
-  - /dcs/jwCU-projects
+  - /setup/project
   - /dcs/projects
   - /dcs/getting-started/satellite-developer-account/manage-projects
 weight: 5

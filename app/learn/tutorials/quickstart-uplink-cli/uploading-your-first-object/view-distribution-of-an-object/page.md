@@ -4,6 +4,7 @@ docId: '-v_wZieO-SN4FiEn3mmFU'
 redirects:
   - >-
     /dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/view-distribution-of-an-object
+  - /getting-started/uploading-your-first-object/view-distribution-of-an-object
 weight: 20
 ---
 

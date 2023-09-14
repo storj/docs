@@ -5,6 +5,7 @@ tags:
 docId: -qeCzVrbZxM-Wz6P5SQbZ
 redirects:
   - /dcs/how-tos/kubernetes-backup-via-velero
+  - /how-tos/kubernetes-backup-via-velero
 metadata:
   title: Velero-based Kubernetes Backup Guide
   description:

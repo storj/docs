@@ -5,6 +5,7 @@ tags:
   - backup
 redirects:
   - /dcs/how-tos/backup-with-restic
+  - /how-tos/backup-with-restic
 metadata:
   title: Using Restic for Backups
   description:

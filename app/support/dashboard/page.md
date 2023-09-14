@@ -5,6 +5,7 @@ weight: 10
 redirects:
   - /dcs/getting-started/satellite-developer-account/my-account
   - /dcs/getting-started/satellite-developer-account/dashboard
+  - /dcs/gWMS-getting-started/satellite-developer-account/my-account
 metadata:
   title: Understanding the Storj Console Project Dashboard
   description:

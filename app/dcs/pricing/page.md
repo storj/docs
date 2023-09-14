@@ -3,7 +3,6 @@ title: Pricing
 docId: 59T_2l7c1rvZVhI8p91VX
 redirects:
   - /dcs/billing-payment-and-accounts-1/pricing
-  - /dcs/billing-payment-and-accounts-1/pricing/billing-and-payment
   - /dcs/billing-payment-and-accounts-1/pricing/free-tier
 ---
 

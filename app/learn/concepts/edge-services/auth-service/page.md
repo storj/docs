@@ -35,4 +35,4 @@ Where customers elect to utilize [](docId:hf2uumViqYvS1oq8TYbeW) in conjunction 
 
 ### Registering an Access Grant
 
-Access Grants are registered with the Auth Service either via [](docId:4oDAezF-FcfPr0WPl7knd) in the Satellite Admin Console or via the CLI. The CLI may be used to [](docId:tBnCSrmR1jbOewG38fIr4) or [](docId:tBnCSrmR1jbOewG38fIr4).
+Access Grants are registered with the Auth Service either via [](docId:4oDAezF-FcfPr0WPl7knd) in the Satellite Admin Console or via the CLI. The CLI may be used to [](docId:tBnCSrmR1jbOewG38fIr4) or [](docId:6hH_ygAn1FJdrIZQ0CGsJ).

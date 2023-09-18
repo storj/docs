@@ -45,6 +45,7 @@ An access generated using `uplink share` with no arguments creates an access to 
 | `--help`, `-h`          | help for share                                                                                                  |
 | `--not-after`           | disallow access after this time (e.g. '+2h', '2020-01-02T15:01:01-01:00')                                       |
 | `--not-before`          | disallow access before this time (e.g. '+2h', '2020-01-02T15:01:01-01:00')                                      |
+| `--max-object-ttl`      | The object is automatically deleted after this period. (e.g. '1h30m', '24h', '720h')                            |
 | `--public`              | if true, the access will be public. `--dns`and `--url`override this                                             |
 | `--readonly`            | implies `--disallow-writes` and `--disallow-deletes`                                                            |
 | `--register`            | if true, creates and registers access grant                                                                     |
@@ -75,15 +76,16 @@ Notice that by default, only download (read) and list operations are allowed.
 
 ```Text
 =========== ACCESS RESTRICTIONS ==========================================================
-Download  : Allowed
-Upload    : Disallowed
-Lists     : Allowed
-Deletes   : Disallowed
-NotBefore : No restriction
-NotAfter  : No restriction
-Paths     : sj://cakes/cheesecake.jpg
+Download     : Allowed
+Upload       : Disallowed
+Lists        : Allowed
+Deletes      : Disallowed
+NotBefore    : No restriction
+NotAfter     : No restriction
+MaxObjectTTL : Not set
+Paths        : sj://cakes/cheesecake.jpg
 =========== SERIALIZED ACCESS WITH THE ABOVE RESTRICTIONS TO SHARE WITH OTHERS ===========
-Access    : 12yUGNqdsKX1Xky2qVoGwdpL...
+Access       : 12yUGNqdsKX1Xky2qVoGwdpL...
 ```
 
 ### Share a bucket with all permissions
@@ -108,15 +110,16 @@ As the `--readonly` flag is set to false, _uploads_ and _deletes_ are allowed.
 
 ```Text
 =========== ACCESS RESTRICTIONS ==========================================================
-Download  : Allowed
-Upload    : Allowed
-Lists     : Allowed
-Deletes   : Allowed
-NotBefore : No restriction
-NotAfter  : No restriction
-Paths     : sj://cakes/
+Download     : Allowed
+Upload       : Allowed
+Lists        : Allowed
+Deletes      : Allowed
+NotBefore    : No restriction
+NotAfter     : No restriction
+MaxObjectTTL : Not set
+Paths        : sj://cakes/
 =========== SERIALIZED ACCESS WITH THE ABOVE RESTRICTIONS TO SHARE WITH OTHERS ===========
-Access    : 12BncZWg9xc4GyXCgCi3YvBg...
+Access       : 12BncZWg9xc4GyXCgCi3YvBg...
 ```
 
 ### Register with Gateway MT
@@ -143,15 +146,16 @@ Notice the endpoint generated for Gateway MT: `https://gateway.storjshare.io`.
 
 ```Text
 =========== ACCESS RESTRICTIONS ==========================================================
-Download  : Allowed
-Upload    : Disallowed
-Lists     : Allowed
-Deletes   : Disallowed
-NotBefore : No restriction
-NotAfter  : No restriction
-Paths     : sj://cakes/ (entire bucket)
+Download     : Allowed
+Upload       : Disallowed
+Lists        : Allowed
+Deletes      : Disallowed
+NotBefore    : No restriction
+NotAfter     : No restriction
+MaxObjectTTL : Not set
+Paths        : sj://cakes/ (entire bucket)
 =========== SERIALIZED ACCESS WITH THE ABOVE RESTRICTIONS TO SHARE WITH OTHERS ===========
-Access    : 1Q74vfxunqiAQ15WPxPqreya...
+Access       : 1Q74vfxunqiAQ15WPxPqreya...
 ========== CREDENTIALS ===================================================================
 Access Key ID: jvguri...
 Secret Key   : j3nj4x...
@@ -186,15 +190,16 @@ See [](docId:tBnCSrmR1jbOewG38fIr4) for details.
 
 ```Text
 =========== ACCESS RESTRICTIONS ==========================================================
-Download  : Allowed
-Upload    : Disallowed
-Lists     : Allowed
-Deletes   : Disallowed
-NotBefore : No restriction
-NotAfter  : No restriction
-Paths     : sj://cakes/ (entire bucket)
+Download     : Allowed
+Upload       : Disallowed
+Lists        : Allowed
+Deletes      : Disallowed
+NotBefore    : No restriction
+NotAfter     : No restriction
+MaxObjectTTL : Not set
+Paths        : sj://cakes/ (entire bucket)
 =========== SERIALIZED ACCESS WITH THE ABOVE RESTRICTIONS TO SHARE WITH OTHERS ===========
-Access    : 1Q74vfxunqiAQ15WPxPqreya...
+Access       : 1Q74vfxunqiAQ15WPxPqreya...
 ========== CREDENTIALS ===================================================================
 Access Key ID: jvguri...
 Secret Key   : j3nj4x...
@@ -237,15 +242,16 @@ uplink share --dns www.mysite.com sj://cakes/ --base-url https://link.storjshare
 
 ```Text
 =========== ACCESS RESTRICTIONS ==========================================================
-Download  : Allowed
-Upload    : Disallowed
-Lists     : Allowed
-Deletes   : Disallowed
-NotBefore : No restriction
-NotAfter  : No restriction
-Paths     : sj://cakes/ (entire bucket)
+Download     : Allowed
+Upload       : Disallowed
+Lists        : Allowed
+Deletes      : Disallowed
+NotBefore    : No restriction
+NotAfter     : No restriction
+MaxObjectTTL : Not set
+Paths        : sj://cakes/ (entire bucket)
 =========== SERIALIZED ACCESS WITH THE ABOVE RESTRICTIONS TO SHARE WITH OTHERS ===========
-Access    : 12BncZWg9xc4GyXCDX73...
+Access       : 12BncZWg9xc4GyXCDX73...
 ========== CREDENTIALS ===================================================================
 Access Key ID: ju3ga56lfk7x...
 Secret Key   : j2psszecoqtc...

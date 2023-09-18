@@ -41,11 +41,11 @@ uplink cp --expires "+5m" storj-tree.png sj://my-bucket
 
 ## Setting Object TTL in the Access Grant / S3 Credentials
 
-If the S3 client cannot send custom HTTP headers, it is possible to restrict an access grant with the `MaxObjectTTL` permission. Uploaded objects get a TTL that reflects the configured MaxObjectTTL period.
+If the S3 client cannot send custom HTTP headers, it is possible to restrict an access grant with the `MaxObjectTTL` permission. Uploaded objects get a TTL that reflects the configured `MaxObjectTTL` period.
 
 {% callout type="info" %} The following instructions cannot be executed entirely in the Satellite Console and require to be completed with the Uplink CLI (v1.88 or later). {% /callout %}
 
-1.  Log in to the Satellite Console and follow the steps to [](docId:_xWsamBjOsZYyu9xtQCm5#create-access-grant).
+1.  Log in to the Satellite Console and follow the steps to [Create Access Grant](docId:_xWsamBjOsZYyu9xtQCm5#create-access-grant).
 
 2.  Switch to your command terminal and execute the [](docId:jWrIx32jqwp0r45vQcodH) command.
 

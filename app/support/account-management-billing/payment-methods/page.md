@@ -57,8 +57,6 @@ Making payments with STORJ token is a different process than using a credit card
 Please note that at the moment your deposit address in your account can accept only L1 (Ethereum) transactions.
 {% /callout %}
 
-Also note that if a user wants to pay solely using STORJ token, they must deposit a sufficient amount of tokens to their account to cover potential usage up to the [](docId:A4kUGYhfgGbVhlQ2ZHXVS) for at least for the next 3 months.
-
 {% callout type="info"  %}
 Important: If a user does not want to add a credit card but wants to pay only via STORJ token, they should exclusively deposit STORJ token and should not add a credit card to their account because, once a credit card is added as a payment method, it can only be removed by closing the account or requesting removal of the credit card after adding STORJ token, using the support process defined in this documentation.
 {% /callout %}

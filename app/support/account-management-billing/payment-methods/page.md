@@ -47,7 +47,7 @@ You’ll be prompted to add your card information. Using a credit card is somewh
 
 - If a credit card expires, a user will receive a notification to the registered email on the account, however, if a new payment method is not added within a reasonable amount of time, we reserve the right to reclaim the available storage and bandwidth, reset usage limits to zero and delete any data stored on the account pursuant to our data retention policy.
 
-### Using STORJ Token
+## Using STORJ Token
 
 In addition to credit cards, users may also pay for usage fees with STORJ token. Storj created the STORJ utility token as a medium of exchange on its decentralized cloud storage network. The STORJ utility token facilitates payments from people around the world for their use of the Storj DCS network to store their data, and Storj uses it to pay our community of Storage Node Operators that rent their unused hard drive capacity and bandwidth to the network.
 
@@ -56,8 +56,6 @@ Making payments with STORJ token is a different process than using a credit card
 {% callout type="info"  %}
 Please note that at the moment your deposit address in your account can accept only L1 (Ethereum) transactions.
 {% /callout %}
-
-Also note that if a user wants to pay solely using STORJ token, they must deposit a sufficient amount of tokens to their account to cover potential usage up to the [](docId:A4kUGYhfgGbVhlQ2ZHXVS) for at least for the next 3 months.
 
 {% callout type="info"  %}
 Important: If a user does not want to add a credit card but wants to pay only via STORJ token, they should exclusively deposit STORJ token and should not add a credit card to their account because, once a credit card is added as a payment method, it can only be removed by closing the account or requesting removal of the credit card after adding STORJ token, using the support process defined in this documentation.

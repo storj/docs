@@ -26,9 +26,9 @@ Adding a credit card as payment method will result in your per project limits be
 
 - 25 TB storage per project
 
-- 100 TB egress bandwidth per project
+- 100 TB egress bandwidth per month per project
 
-- 100,000,000 segments
+- 100,000,000 segments per project
 
 - 100 request per second rate limit
 

@@ -43,6 +43,7 @@ uplink access restrict [flags]
 | `--disallow-writes`          | Disallow writes with the access                                                                                                                               |
 | `--not-before relative_date` | Disallow access before this time (e.g. '+2h', 'now', '2020-01-02T15:04:05Z0700')                                                                              |
 | `--not-after relative_date`  | Disallow access after this time (e.g. '+2h', 'now', '2020-01-02T15:04:05Z0700')                                                                               |
+| `--max-object-ttl period`    | The object is automatically deleted after this period. (e.g. '1h30m', '24h', '720h')                                                                          |
 
 ## Global flags
 

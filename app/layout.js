@@ -16,13 +16,6 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-// Use local version of Lexend so that we can use OpenType features
-const lexend = localFont({
-  src: '../src/fonts/lexend.woff2',
-  display: 'swap',
-  variable: '--font-lexend',
-})
-
 export const metadata = {
   title: {
     template: '%s - Storj Docs',
@@ -39,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx('h-full antialiased', inter.variable, lexend.variable)}
+      className={clsx('h-full antialiased', inter.variable)}
       suppressHydrationWarning
     >
       <head />

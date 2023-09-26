@@ -68,7 +68,7 @@ export default function Navbar() {
         </div>
       </div>
       <nav
-        className="mt-4 hidden lg:flex lg:space-x-8 lg:py-2"
+        className="mt-5 hidden lg:flex lg:space-x-8 py-4"
         aria-label="Global"
       >
         <Spaces />

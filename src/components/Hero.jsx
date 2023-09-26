@@ -22,7 +22,7 @@ export function Hero({ className }) {
   return (
     <div
       className={clsx(
-        'overflow-hidden bg-slate-900 dark:-mb-32 dark:mt-[-4.5rem] dark:pb-32 dark:pt-[4.5rem] dark:lg:mt-[-8rem] dark:lg:pt-[4.5rem]',
+        'overflow-hidden',
         className
       )}
     >
@@ -39,10 +39,10 @@ export function Hero({ className }) {
               priority
             />
             <div className="relative">
-              <p className="inline bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+              <h1 className="inline font-bold text-4xl tracking-tight">
                 Make the world your datacenter
-              </p>
-              <p className="mt-3 text-2xl tracking-tight text-slate-400">
+              </h1>
+              <p className="mt-3 text-2xl tracking-tight">
                 Store every byte with Storj&apos;s distributed nodes, ensuring
                 your data is everywhere, even before you need it.
               </p>

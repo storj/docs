@@ -3,8 +3,6 @@ import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { HeroBackground } from '@/components/HeroBackground'
-import blurCyanImage from '@/images/blur-cyan.png'
-import blurIndigoImage from '@/images/blur-indigo.png'
 import Fence, { transparent } from './Fence'
 import { HeroCode } from '@/components/HeroCode'
 
@@ -29,15 +27,6 @@ export function Hero({ className }) {
       <div className="py-16 sm:px-2 lg:relative lg:px-0 lg:py-20">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 lg:max-w-8xl lg:grid-cols-2 lg:px-8 xl:gap-x-16 xl:px-12">
           <div className="relative z-10 md:text-center lg:text-left">
-            <Image
-              className="absolute bottom-full right-full -mb-56 -mr-72 opacity-50"
-              src={blurCyanImage}
-              alt=""
-              width={530}
-              height={530}
-              unoptimized
-              priority
-            />
             <div className="relative">
               <h1 className="inline font-semibold text-3xl tracking-tight">
                 Make the world your datacenter
@@ -52,28 +41,10 @@ export function Hero({ className }) {
             </div>
           </div>
           <div className="relative lg:static xl:pl-10">
-            <div className="absolute inset-x-[-50vw] -bottom-48 -top-32 [mask-image:linear-gradient(white,transparent)] md:[mask-image:linear-gradient(white,white,transparent)] lg:[mask-image:linear-gradient(white,transparent,white)]">
-              <HeroBackground className="dark:opacity-30 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-[-60%]" />
+            <div className="absolute inset-x-[-50vw] -bottom-32 -top-32 [mask-image:linear-gradient(white,transparent)] md:[mask-image:linear-gradient(white,white,transparent)] lg:[mask-image:linear-gradient(white,transparent,white)]">
+              <HeroBackground className="dark:opacity-20 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-[-60%]" />
             </div>
             <div className="relative">
-              <Image
-                className="absolute -right-64 -top-64"
-                src={blurCyanImage}
-                alt=""
-                width={530}
-                height={530}
-                unoptimized
-                priority
-              />
-              <Image
-                className="absolute -bottom-40 -right-44"
-                src={blurIndigoImage}
-                alt=""
-                width={567}
-                height={567}
-                unoptimized
-                priority
-              />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10 blur-lg" />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10" />
               <div className="relative rounded-2xl bg-[#0A101F]/80 ring-1 ring-white/10 backdrop-blur">

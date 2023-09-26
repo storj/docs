@@ -78,7 +78,7 @@ export default function DocsLayout({
           <PrevNextLinks />
         </div>
       </main>
-      <div className="hidden px-8 xl:sticky xl:top-[4.5rem] xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-14">
+      <div className="hidden px-8 xl:sticky xl:top-[6rem] xl:block xl:h-[calc(100vh-6rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-14">
         <TableOfContents tableOfContents={tableOfContents} />
       </div>
     </>

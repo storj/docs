@@ -18,7 +18,8 @@ function useTableOfContents(tableOfContents) {
         let style = window.getComputedStyle(el)
         let scrollMt = parseFloat(style.scrollMarginTop)
 
-        let top = window.scrollY + el.getBoundingClientRect().top - scrollMt
+        // subtract 1 because it's almost exact, but not quite
+        let top = window.scrollY + el.getBoundingClientRect().top - scrollMt - 1
         return { id, top }
       })
       .filter((value) => value !== undefined)

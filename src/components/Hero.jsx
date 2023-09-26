@@ -39,21 +39,21 @@ export function Hero({ className }) {
               priority
             />
             <div className="relative">
-              <h1 className="inline font-bold text-4xl tracking-tight">
+              <h1 className="inline font-semibold text-3xl tracking-tight">
                 Make the world your datacenter
               </h1>
-              <p className="mt-3 text-2xl tracking-tight">
+              <p className="mt-3 text-xl tracking-tight text-slate-700 dark:text-slate-400">
                 Store every byte with Storj&apos;s distributed nodes, ensuring
                 your data is everywhere, even before you need it.
               </p>
-              <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
+              <div className="mt-6 flex gap-4 md:justify-center lg:justify-start">
                 <Button href="/dcs/getting-started">Quick Start</Button>
               </div>
             </div>
           </div>
           <div className="relative lg:static xl:pl-10">
             <div className="absolute inset-x-[-50vw] -bottom-48 -top-32 [mask-image:linear-gradient(white,transparent)] md:[mask-image:linear-gradient(white,white,transparent)] lg:[mask-image:linear-gradient(white,transparent,white)]">
-              <HeroBackground className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-[-60%]" />
+              <HeroBackground className="dark:opacity-30 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-[-60%]" />
             </div>
             <div className="relative">
               <Image

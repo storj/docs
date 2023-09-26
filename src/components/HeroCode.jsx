@@ -17,7 +17,7 @@ export function HeroCode({ languages, children }) {
               clsx(
                 'flex h-6 rounded-full',
                 selected
-                  ? 'bg-gradient-to-r from-sky-400/30 via-sky-400 to-sky-400/30 p-px font-medium text-sky-300'
+                  ? 'bg-gradient-to-r from-storj-blue-700/30 via-storj-blue-700 to-storj-blue-700/30 p-px font-medium text-storj-blue-100'
                   : 'text-slate-500'
               )
             }
@@ -26,7 +26,7 @@ export function HeroCode({ languages, children }) {
               <div
                 className={clsx(
                   'flex h-full items-center rounded-full px-2.5',
-                  selected && 'bg-slate-800'
+                  selected && 'bg-storj-blue-dark'
                 )}
               >
                 {lang}

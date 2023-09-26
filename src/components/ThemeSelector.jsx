@@ -93,7 +93,7 @@ export function ThemeSelector(props) {
                   'text-storj-blue-700 dark:text-storj-blue-500': selected,
                   'text-slate-900 dark:text-white': active && !selected,
                   'text-slate-700 dark:text-slate-400': !active && !selected,
-                  'bg-slate-100 dark:bg-slate-900/40': active,
+                  'bg-slate-100 dark:bg-storj-black/40': active,
                 }
               )
             }

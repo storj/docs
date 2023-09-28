@@ -31,6 +31,8 @@ Most applications will need some secure, server-side logic to enforce access-con
 
 ## Presigning URLs via Amazon Lambda
 
+{% callout type="warning" %} Please note that this pattern inherently transfers your encryption keys to the serverless provider. {%/ callout %}
+
 Create a new Go file `main.go` and import the necessary packages (e.g. run `go get -u`)
 
 ```go
@@ -145,6 +147,8 @@ curl 'https://<YOUR LAMBDA NUMBER>.lambda-url.us-east-1.on.aws/?key=test&method=
 ```
 
 ## Presigning URLs via Google Cloud Functions
+
+{% callout type="warning" %} Please note that this pattern inherently transfers your encryption keys to the serverless provider. {%/ callout %}
 
 Create a new Go file `main.go` and import the necessary packages (e.g. run `go get -u`)
 

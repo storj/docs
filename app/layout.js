@@ -36,7 +36,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head />
-      <body className="bg-white dark:bg-slate-900">
+      <body className="bg-white dark:bg-storj-black">
         <ThemeProvider attribute="class" disableTransitionOnChange>
           <Navbar />
           <HeroWrap>

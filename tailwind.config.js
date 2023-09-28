@@ -51,7 +51,7 @@ module.exports = {
           950: '#0a225c',
         },
         'storj-blue-dark': '#0218A7',
-        'storj-black': '#091c45',
+        'storj-black': '#090920',
         'smoke-grey': '#F5F6F8',
         'storj-green': {
           50: '#edfff6',

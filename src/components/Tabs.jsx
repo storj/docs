@@ -29,7 +29,7 @@ export function Tabs({ labels, children }) {
             </HeadlessTab>
           ))}
         </HeadlessTab.List>
-        <HeadlessTab.Panels className="mt-3 bg-slate-900 rounded-lg">{children}</HeadlessTab.Panels>
+        <HeadlessTab.Panels className="mt-3 bg-slate-100 dark:bg-slate-900 rounded-xl">{children}</HeadlessTab.Panels>
       </HeadlessTab.Group>
       {/* <div className="flex flex-auto items-center rounded-tl border border-l-0 border-slate-500/30 bg-slate-700/50"></div> */}
     </div>

@@ -3,7 +3,7 @@ title: Multi-tenant Data Partitioning and Isolation
 docId: eisait3Wieso5tij
 metadata:
   title: Options for Multi-tenant Data Partitioning and Isolation
-  description: Options for Data Partitioning and Isolation when designing Multi-tenant  applications or configuring usage as an Managed Service Provider or Value Added Reseller
+  description: Data Partitioning and Isolation when designing Multi-tenant applications or configuring usage as an Managed Service Provider or Value Added Reseller
 ---
 
 Many software-as-a-service (SaaS) applications store multi-tenant data with Storj. In addition, many Managed Service Providers (MSPs) and Value Added Resellers (VARs) leverage Storj to securely store data for their customers.

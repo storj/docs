@@ -21,19 +21,18 @@ function getFrontmatter(filePath) {
 }
 
 export function convertDocId(href) {
-  if (href?.includes('docs.storj.io')) {
+  const siteHost = new URL(process.env.SITE_URL).host
+  if (href?.includes(siteHost)) {
     const url = new URL(href)
     let dir = path.resolve('./app')
     const filePath = path.join(dir, url.pathname, 'page.md')
-    if (
-      process.env.NODE_ENV !== 'production' ||
-      (url.host === new URL(process.env.SITE_URL).host && existsSync(filePath))
-    ) {
+    if (existsSync(filePath)) {
       let { docId } = getFrontmatter(filePath)
       throw new Error(
         `Internal links should use the docId. replace ${href} with docId:${docId}`
       )
     }
+    throw new Error(`Could not find document for ${href}`)
   }
 
   if (!href?.startsWith('docId')) {

@@ -117,7 +117,11 @@ const nodes = {
       let result = imageSizeCache[hash]
       if (!result) {
         console.warn(`image size not cached, probing... ${attributes.src}`)
-        result = await probe(attributes.src)
+        try {
+          result = await probe(attributes.src)
+        } catch (err) {
+          throw new Error(`${err}\nOccurred on ${attributes.src}`)
+        }
       }
 
       return new Tag(

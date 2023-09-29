@@ -157,11 +157,11 @@ Problem: Customers using Cloudflare (or likely anything as a reverse proxy) who 
 
 ![Cloudflare Invalid SSL Certificate Error](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/dsxcEfc44l_gwzQHRiRKS_167760201695824623.png)
 
-**Solution 1: Update your Cloudflare SSL/TLS encryption mode to "Flexible" **
+**Solution 1: Update your Cloudflare SSL/TLS encryption mode to "Flexible"**
 
 ![Cloudflare Flexible SSL/TLS encryption](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Y_EKNdQvTeG-lHQ52HbX9_image.png)
 
-**Solution 2: Follow the steps above for **[](docId:RI4zz1sLvVEZ4ZcZbuT7l) (Pro Accounts only) - this will enable you to use the "Full (strict)" option with Cloudflare
+**Solution 2: Follow the steps above for [](docId:RI4zz1sLvVEZ4ZcZbuT7l)** (Pro Accounts only) - this will enable you to use the "Full (strict)" option with Cloudflare
 
 ### How do I verify my custom domain?
 

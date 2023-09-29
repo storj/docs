@@ -73,4 +73,4 @@ AWS_SECRET_ACCESS_KEY=SECRET_KEY
 
 If you’re doing the `rake mastodon:setup` wizard and Storj isn't listed, choosing `Minio` as your object storage provider and telling it you do want to access the uploaded files from your own domain should allow you to set the same settings in the setup wizard.
 
-Of course, these instructions mean all your media will be served from [link.storjshare.io](http://link.storjshare.io/), and maybe you don’t like that. You can always follow [our instructions for sharing a bucket via DNS settings for your own domain name](https://docs.storj.io/dcs/how-tos/host-a-static-website/host-a-static-website-with-the-cli-and-linksharing-service/). If you do that, you’d replace `S3_ALIAS_HOST` with your domain name backed by Storj.
+Of course, these instructions mean all your media will be served from [link.storjshare.io](http://link.storjshare.io/), and maybe you don’t like that. You can always follow [our instructions for sharing a bucket via DNS settings for your own domain name](docId:GkgE6Egi02wRZtyryFyPz). If you do that, you’d replace `S3_ALIAS_HOST` with your domain name backed by Storj.

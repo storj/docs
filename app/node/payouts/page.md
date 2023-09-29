@@ -61,9 +61,9 @@ All payments are made pursuant to the terms specified in the [Node Operator Term
 
 ## Related FAQ
 
-[How do I estimate my payouts per Satellite?](https://docs.storj.io/node/resources/faq/estimate-payouts)
+[How do I estimate my payouts per Satellite?](docId:2tLLmAjix5YnHHa1oflQp)
 
-[How do I estimate my potential earnings for a given amount of space and bandwidth?](https://docs.storj.io/node/resources/faq/how-do-i-estimate-my-potential-earnings-for-given-amount-of-space-and-bandwidth)
+[How do I estimate my potential earnings for a given amount of space and bandwidth?](docId:bG8Q88XbTvEPkzsuc02T8)
 
 ## Minimum payment thresholds
 

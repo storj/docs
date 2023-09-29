@@ -16,11 +16,11 @@ A number of object storage use cases require storage of data in a manner that th
 
 Storj provides a unique combination of technologies that enable customers and partners to store data in a secure manner that achieves the goal of indeterminate preservation with immutability. This documentation covers the foundational technologies and their usage in the following other sections:
 
-- [Foundational Information Architecture](https://docs.storj.io/dcs/concepts/key-architecture-constructs)
+- [Foundational Information Architecture](docId:M-5oxBinC6J1D-qSNjKYS)
 
-- [Access and Authorization Management](https://docs.storj.io/dcs/concepts/access)
+- [Access and Authorization Management](docId:bNywu7-9KLjYfk5LBQABx)
 
-- [API Key Access Restrictions](https://docs.storj.io/dcs/concepts/access/access-grants/api-key/restriction)
+- [API Key Access Restrictions](docId:BvM5lT5lXn3A7BNqs__1w)
 
 This section will describe how those foundational technologies and the associated features are implemented to achieve data immutability.
 
@@ -118,11 +118,11 @@ Creating a credential to achieve immutability is simply a matter of limiting the
 
 In this case, the credential should be created to allow writes, but disallow reads, lists, reads and deletes. Restricted credentials can be either created as an Access Grant for native integrations or as S3 compatible gateway credentials. Credentials can be created from the Satellite Admin console or via the Storj CLI. A write-only credential may also be limited based on the timeframe for which it is valid and may also be restricted to a specific bucket, path key or object key. The documentation for creating a restricted access credential may be found:
 
-- [List of Flags for Access Restrictions](https://docs.storj.io/dcs/api-reference/uplink-cli/share-command#slEsu)
+- [List of Flags for Access Restrictions](docId:tBnCSrmR1jbOewG38fIr4)
 
-- [Using the Satellite Web Console for Access Restrictions](https://docs.storj.io/dcs/api-reference/s3-compatible-gateway#I7p7Q)
+- [Using the Satellite Web Console for Access Restrictions](docId:yYCzPT8HHcbEZZMvfoCFa)
 
-- [Using the CLI for Access Restrictions](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token)
+- [Using the CLI for Access Restrictions](docId:_xWsamBjOsZYyu9xtQCm5#create-access-grant)
 
 Once the write-only credential has been created, it is not possible to modify the credential to add additional operations, paths or objects to which the credential has access, or otherwise increase the scope of privilege. While a credential may be used to create a child credential with the same or less scope of privileges, the scope can never be increased. Properly created restricted credentials are fixed as of the int in time of creation and may not be altered to escalate privilege.
 

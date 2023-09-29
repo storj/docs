@@ -19,7 +19,7 @@ Use our S3-compatible Hosted Gateway integration pattern to increase upload perf
 - Reduction in network load
 
 {% callout type="info"  %}
-By selecting this integration pattern, you are opting into [Server-side Encryption](https://docs.storj.io/dcs/concepts/encryption-key/design-decision-server-side-encryption).
+By selecting this integration pattern, you are opting into [Server-side Encryption](docId:hf2uumViqYvS1oq8TYbeW).
 {% /callout %}
 
 ## Prerequisites

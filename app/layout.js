@@ -17,11 +17,15 @@ const inter = Inter({
 })
 
 export const metadata = {
+  metadataBase: new URL(process.env.SITE_URL),
   title: {
     template: '%s - Storj Docs',
     default: 'Storj Docs',
   },
   description: 'Make the world your data center',
+  alternates: {
+    canonical: '/',
+  },
 }
 
 export default function RootLayout({

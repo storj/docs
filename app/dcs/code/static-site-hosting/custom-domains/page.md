@@ -153,7 +153,7 @@ While Linksharing links are secure, when you use a custom domain the browser is 
 
 ### Why am I seeing an "Invalid SSL certificate" error from Cloudflare?
 
-Problem: Customers using Cloudflare (or likely anything as a reverse proxy) who have certain TLS settings may see an error. In an effort to improve security and bring users SSL certs without the need for a CDN proxy, we no longer support self-signed certificates for custom domains. Keep reading for two ways to resolve the problem.
+Problem: Customers using Cloudflare (or likely anything as a reverse proxy) who have certain TLS settings may see an error. In an effort to improve security and bring users SSL certs without the need for a CDN proxy, we no longer support self-signed certificates for custom domains.
 
 ![Cloudflare Invalid SSL Certificate Error](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/dsxcEfc44l_gwzQHRiRKS_167760201695824623.png)
 

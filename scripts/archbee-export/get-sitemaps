@@ -1,6 +1,0 @@
-#!/bin/bash
-
-wget https://docs.storj.io/dcs/sitemap.xml -O sitemap-dcs.xml
-wget https://docs.storj.io/node/sitemap.xml -O sitemap-node.xml
-wget https://docs.storj.io/resources/sitemap.xml -O sitemap-resources.xml
-wget https://docs.storj.io/help/sitemap.xml -O sitemap-help.xml

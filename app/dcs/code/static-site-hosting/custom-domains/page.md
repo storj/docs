@@ -143,7 +143,7 @@ To enable HTTPS for your custom domain (Pro Accounts Only) create one last TXT r
 
 Cloudflare will default to [proxying DNS records](https://developers.cloudflare.com/learning-paths/get-started-free/onboarding/proxy-dns-records/).
 
-This must be disabled for the `CNAME` record, if you've added the `storj-tls:true` TXT record. If proxy is enabled, Cloudflare will terminate TLS and hinder the ability of the linksharing service to procure and renew TLS certificates for your custom domain.
+Proxying must be disabled for the `CNAME` record, if you've added the `storj-tls:true` TXT record. If enabled, Cloudflare will terminate TLS and hinder the ability of the linksharing service to procure and renew TLS certificates for your custom domain.
 
 Disabling the proxy will mean the requests are sent directly to the linksharing service which will provide an end-to-end encryption from the user to the service.
 

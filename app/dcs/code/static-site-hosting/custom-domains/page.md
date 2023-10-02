@@ -137,6 +137,25 @@ To enable HTTPS for your custom domain (Pro Accounts Only) create one last TXT r
 
 3\. You should now be able to access your content using your custom domain! DNS propagation usually takes less than a few hours, but can take up to 48 hours in some cases.
 
+## Considerations if setting up DNS with a CDN like Cloudflare
+
+### When HTTPS is enabled for custom domains (Pro Accounts Only)
+
+Cloudflare will default to [proxying DNS records](https://developers.cloudflare.com/learning-paths/get-started-free/onboarding/proxy-dns-records/).
+
+This must be disabled if you've added the `storj-tls:true` record, as Cloudflare will terminate TLS and hinder the ability of the linksharing service to procure and renew TLS certificates.
+
+Disabling the proxy will mean the requests are sent directly to the linksharing service which will provide an end-to-end encryption from the user to the service.
+
+### Using Cloudflare as a proxy
+
+If you still want to use Cloudflare as the proxy for your custom domain and use HTTPS, these steps should be followed:
+
+* Ensure the `storj-tls:true` DNS TXT record is removed.
+* Change the [TLS encryption mode](https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes) to "Flexible".
+
+This is helpful if you require HTTPS, but don't have Pro Account yet. Cloudflare will be managing the TLS certificate and provide HTTPS for your custom domain.
+
 ## Frequently Asked Questions
 
 ### How do I set up a custom domain for my linksharing?

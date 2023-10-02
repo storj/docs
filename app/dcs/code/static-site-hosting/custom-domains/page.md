@@ -154,7 +154,7 @@ If you still want to use Cloudflare as the proxy for your custom domain and use 
 * Ensure the `storj-tls:true` DNS TXT record is removed.
 * Change the [TLS encryption mode](https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes) to "Flexible".
 
-This is helpful if you require HTTPS, but don't have Pro Account yet. Cloudflare will be managing the TLS certificate and provide HTTPS for your custom domain.
+This is helpful if you require HTTPS, but don't have a Pro Account yet. Cloudflare will be managing the TLS certificate and provide HTTPS for your custom domain.
 
 ## Frequently Asked Questions
 

@@ -44,7 +44,7 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 |       GetBucketInventoryConfiguration       |   No    |                              No                              |                                                     |
 |       GetBucketLifecycle (deprecated)       |   No    |               We could partially support this                |                                                     |
 |       GetBucketLifecycleConfiguration       |   No    |               We could partially support this                |                                                     |
-|              GetBucketLocation              |   No    |                    We could support this                     | Location constraints would be different from AWS S3 |
+|              GetBucketLocation              |   Full    |                                                            | See below for specific region values used           |
 |              GetBucketLogging               |   No    |                              No                              |                                                     |
 |        GetBucketMetricsConfiguration        |   No    |                              No                              |                                                     |
 |     GetBucketNotification (deprecated)      |   No    |                              No                              |                                                     |
@@ -124,6 +124,16 @@ implemented.
 
 Partial compatibility means that we don't support all features of a specific
 action (see Caveats column).
+
+### GetBucketLocation
+
+#### LocationConstraint
+Specifies the placement region where the bucket data is stored.
+
+| Value | Description |
+| :---: | :---------: |
+| `global` | Stored on the entire globe connected to the public network |
+| `us-select-1` | Stored on infrastructure located in SOC2 Type2 certified facilities located in the continental United States of America |
 
 ### ListObjects
 

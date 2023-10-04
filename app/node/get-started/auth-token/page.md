@@ -7,11 +7,11 @@ redirects:
 
 ## Before starting
 
-[](docId:hbCGTv1ZLLR2-kpSaGEXw)
-
 {% callout type="warning"  %}
 **Failure to complete these steps will prevent your storage node from working.**
 {% /callout %}
+
+[](docId:hbCGTv1ZLLR2-kpSaGEXw)
 
 ## Get your token
 

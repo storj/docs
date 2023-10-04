@@ -9,6 +9,10 @@ redirects:
 
 By becoming a Storage Node Operator you enable your unused hard drive space to be accessible by the Storj storage services. Once your node is up and running you will be compensated in STORJ for any storage and bandwidth usage accessing your node.
 
+{% callout type="warning"  %}
+**Failure to complete these steps will prevent your storage node from working.**
+{% /callout %}
+
 ## [](docId:hbCGTv1ZLLR2-kpSaGEXw) {% anchor=false %}
 
 Includes Hardware Requirements (Recommended), System Requirements, Internet Connection, Power Supply.
@@ -32,18 +36,6 @@ This can take several hours or days, depending on your machine's processing powe
 ## [](docId:XC--4Jtp1o309gbWFOHPn) {% anchor=false %}
 
 Install the software that works best for you.
-
-{% quick-links %}
-{% quick-link title="⌨️ CLI Install" href="docId:rz3s9lC3qAQHYSl37ngBN" /%}
-
-{% quick-link title="🖥 GUI Install - Windows" href="docId:5shJebpS3baWj6LDV5ANQ" /%}
-
-{% quick-link title="💻 QNAP Storage Node App" href="docId:N-dnnf7HhHcOaavvXjplw" /%}
-{% /quick-links %}
-
-{% callout type="warning"  %}
-**Failure to complete these steps will prevent your storage node from working.**
-{% /callout %}
 
 ---
 

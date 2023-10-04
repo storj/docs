@@ -2,11 +2,12 @@
 title: Pricing
 docId: 59T_2l7c1rvZVhI8p91VX
 redirects:
-- /dcs/billing-payment-and-accounts-1/pricing
-- /dcs/billing-payment-and-accounts-1/pricing/free-tier
+  - /dcs/billing-payment-and-accounts-1/pricing
+  - /dcs/billing-payment-and-accounts-1/pricing/free-tier
 metadata:
   title: Understanding Storj Pricing Structure
-  description: Guides users on Storj's cost and billing system, explaining different
+  description:
+    Guides users on Storj's cost and billing system, explaining different
     metered services like object storage, egress bandwidth, segments, and their respective
     prices.
 ---
@@ -133,3 +134,4 @@ Storj DCS currently offers a free level of access for developers to try out the 
 - 10,000 segments in total for all projects.
 
 Usage for Static Object Storage and Download Bandwidth is calculated in the same way for the Free Plan as for the Pro Plan. A credit against billing will be applied each month for the Free Plan usage for as long as the Free Plan is offered. Accounts using the Free Plan of service are subject to [](docId:Zrbz4XYhIOm99hhRShWHg).
+

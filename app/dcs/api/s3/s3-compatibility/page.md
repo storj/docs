@@ -72,10 +72,10 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | ListBucketInventoryConfigurations           | No      | No                                                           |                                                     |
 | ListBucketMetricsConfigurations             | No      | No                                                           |                                                     |
 | ListBuckets                                 | Full    |                                                              |                                                     |
-| ListMultipartUploads                        | Partial | Planned full. See https://github.com/storj/roadmap/issues/20 | See ListMultipartUploads section                    |
+| ListMultipartUploads                        | Partial | We may support lexicographical ordering in the future. | See ListMultipartUploads section                    |
 | ListObjectVersions                          | No      | Planned. See https://github.com/storj/roadmap/issues/23      |                                                     |
-| ListObjects                                 | Partial | Planned full. See https://github.com/storj/roadmap/issues/20 | See ListObjects section                             |
-| ListObjectsV2                               | Partial | Planned full. See https://github.com/storj/roadmap/issues/20 | See ListObjects section                             |
+| ListObjects                                 | Partial | We may support lexicographical ordering in the future.  | See ListObjects section                             |
+| ListObjectsV2                               | Partial | We may support lexicographical ordering in the future. | See ListObjects section                             |
 | ListParts                                   | Full    |                                                              |                                                     |
 | PutBucketAccelerateConfiguration            | No      | No                                                           |                                                     |
 | PutBucketAcl                                | No      | No                                                           |                                                     |
@@ -107,7 +107,7 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | RestoreObject                               | No      | No                                                           |                                                     |
 | SelectObjectContent                         | No      | No                                                           |                                                     |
 | UploadPart                                  | Full    |                                                              |                                                     |
-| UploadPartCopy                              | No      | Planned. See https://github.com/storj/roadmap/issues/40      |                                                     |
+| UploadPartCopy                              | No      | Partial Support Planned. See https://github.com/storj/roadmap/issues/76      |                                                     |
 | WriteGetObjectResponse                      | No      | No                                                           |                                                     |
 
 ## Compatibility Table Support/Caveats
@@ -126,11 +126,11 @@ This is currently supported in Gateway-MT only.
 
 #### LocationConstraint
 
-Specifies the placement region where the bucket data is stored:
+Specifies the placement region where the object data for a bucket is stored:
 
 |     Value     |                                                        Description                                                        |
 |:-------------:|:-------------------------------------------------------------------------------------------------------------------------:|
-| `global`      | Stored on the entire globe connected to the public network                                                                |
+| `global`      | Stored on nodes connected to the global public network                                                                |
 | `us-select-1` | Stored on infrastructure located in SOC 2 Type 2 certified facilities located in the continental United States of America |
 
 #### Partial compatibility

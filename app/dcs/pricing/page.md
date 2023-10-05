@@ -4,11 +4,17 @@ docId: 59T_2l7c1rvZVhI8p91VX
 redirects:
   - /dcs/billing-payment-and-accounts-1/pricing
   - /dcs/billing-payment-and-accounts-1/pricing/free-tier
+metadata:
+  title: Understanding Storj Pricing Structure
+  description:
+    Guides users on Storj's cost and billing system, explaining different
+    metered services like object storage, egress bandwidth, segments, and their respective
+    prices.
 ---
 
 {% youtube-embed videoId="9uhX0X3ZW2c" /%}
 
-Billing is aggregated at the project level. A project is the Storj DCS service construct used for aggregating usage, calculating billing, invoicing fees, and collecting payment. Projects are created by a single user, then multiple users may be added to a project team, and one user may be on more than one project. Within a project, usage is tracked at the bucket level and aggregated for invoicing to the project. Project names are not client-side encrypted so that they may be rendered in the satellite user interface. For more information about Developer Accounts, Projects, Buckets, etc., please read [](docId:M-5oxBinC6J1D-qSNjKYS).
+The price for object storage is as low as $4.00 per TB per month with $7.00 per TB per month for egress.
 
 The following table lists the types of metered services that appear in billing and usage user interfaces as well as invoices:
 
@@ -18,6 +24,8 @@ The following table lists the types of metered services that appear in billing a
 | Egress Bandwidth         | Bytes             | GB            | Total Volume     | $0.007 per GB                | Bandwidth related to object downloads calculated on bytes downloaded including long tail elimination-related bandwidth         |
 | Segments                 | Segments          | Segment Hour  | Segment Month    | $0.0000088 per Segment Month | Segments usage depends on Storage. The default size for the Segment is 64MB (or less), i.e. smaller objects uses more Segments |
 
+Billing is aggregated at the project level. A project is the Storj service construct used for aggregating usage, calculating billing, invoicing fees, and collecting payment. Projects are created by a single user, then multiple users may be added to a project team, and one user may be on more than one project. Within a project, usage is tracked at the bucket level and aggregated for invoicing to the project. Project names are not client-side encrypted so that they may be rendered in the satellite user interface. For more information about Developer Accounts, Projects, Buckets, etc., please read [](docId:M-5oxBinC6J1D-qSNjKYS).
+
 The following section describes how the charges listed in the table above are calculated to provide users detailed insights into their cloud storage usage, broken down by storage, egress bandwidth, and number of objects. Note that for billing purposes, usage data is continuously rolled up and aggregated. Billing data is not displayed in real-time in the satellite interface and some time lag should be expected.
 
 ## Object Storage
@@ -26,7 +34,7 @@ Object storage is priced per GB per month in increments of byte hours. The calcu
 
 **Example**
 
-A user uploads a 1TB file. Half way through the month, the user deletes the file. With encryption overhead, the file is stored as 1.001TB. The 1.001TB is accounted for as 1,001,000,000,000 bytes. The file is stored for 360 hours. The file is stored for 360,360,000,000,000 byte hours. The price per GB month is $0.004. The price per GB hour is $0.000005556. The price per byte hour is $0.000000000000005556. The total amount charged for the storage is $2.00.
+A user uploads a 1TB file. Half way through the month, the user deletes the file. With encryption overhead, the file is stored as 1.001TB. The 1.001TB is accounted for as 1,001,000,000,000 bytes. The file is stored for 360 hours. The file is stored for 360,360,000,000,000 byte hours. In this example, the price per GB month is $0.004 and per GB hour is $0.000005556. The price per byte hour is $0.000000000000005556. The total amount charged for the storage is $2.00.
 
 ## Bandwidth Fee
 
@@ -36,7 +44,7 @@ When an object is downloaded, there are a number of factors that can impact the 
 
 **Example**
 
-A user downloads one 1 TB file. Based on the long tail elimination, up to 1.3 TB of download bandwidth may be used. The 1.3 TB of download bandwidth is accounted for as 1,300,000,000 bytes. The price per GB is $0.007. The price per byte is $0.000000045. The total amount charged for the egress is $9.10.
+A user downloads one 1 TB file. Based on the long tail elimination, up to 1.3 TB of download bandwidth may be used. The 1.3 TB of download bandwidth is accounted for as 1,300,000,000 bytes. In this example, the price per GB is $0.007 and per byte is $0.000000045. The total amount charged for the egress is $9.10.
 
 Unlike other cloud object storage vendors, we don't use high egress fees to create vendor lock-in. If you discover that Storj DCS isn't a fit for your project or application and you transfer your data to another service, use our support portal to submit a ticket and let us know. As long as you follow the process, we won't charge you for that egress bandwidth.
 
@@ -126,3 +134,4 @@ Storj DCS currently offers a free level of access for developers to try out the 
 - 10,000 segments in total for all projects.
 
 Usage for Static Object Storage and Download Bandwidth is calculated in the same way for the Free Plan as for the Pro Plan. A credit against billing will be applied each month for the Free Plan usage for as long as the Free Plan is offered. Accounts using the Free Plan of service are subject to [](docId:Zrbz4XYhIOm99hhRShWHg).
+

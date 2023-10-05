@@ -69,20 +69,12 @@ VirtualBox prior to version 4.3.30 cannot be installed. If you have a newer vers
 {% tab label="Windows" %}
 Windows 8, Windows Server 2012 or later.
 
-**If you are currently running a storage node on Windows using the Docker desktop, it will require good monitoring. If you are still running a node with Docker, your node may go offline randomly and require restarting your node, so it is recommended you switch to the **[](docId:5shJebpS3baWj6LDV5ANQ). 
+**If you are currently running a storage node on Windows using the Docker desktop, it will require good monitoring. If you are still running a node with Docker, your node may go offline randomly and require restarting your node, so it is recommended you switch to the **[](docId:5shJebpS3baWj6LDV5ANQ).
 [](docId:jA6Jl8XzCR1nc4_WyJj1a)
 {% /tab %}
 {% /tabs %}
 
 ## Internet Connection
-
-It is highly recommended to have your Storage Node connected via LAN instead of WiFi to ensure a consistent and stable connection.
-
-## Power Supply
-
-If you live in a location where power outages or brownouts are a frequent occurrence, please consider protecting your hardware, including the equipment you run your node on, as well as your router/modem, with an Uninterrupted Power Supply (UPS). This would help protect against damage to your hardware and against the corruption of your database resulting from abrupt shutdowns, which could lead to the unrecoverable loss of your node.
-
-Sign up <https://www.storj.io/node>
 
 {% callout type="warning"  %}
 
@@ -92,3 +84,9 @@ Sign up <https://www.storj.io/node>
 
 Our software serves requests from the Internet, but not all software you may have installed is designed to be exposed to the Internet directly. This is especially true for users on Windows with applications responding to requests on all IPs.
 {% /callout %}
+
+It is highly recommended to have your Storage Node connected via LAN instead of WiFi to ensure a consistent and stable connection.
+
+## Power Supply
+
+If you live in a location where power outages or brownouts are a frequent occurrence, please consider protecting your hardware, including the equipment you run your node on, as well as your router/modem, with an Uninterrupted Power Supply (UPS). This would help protect against damage to your hardware and against the corruption of your database resulting from abrupt shutdowns, which could lead to the unrecoverable loss of your node.

@@ -93,10 +93,10 @@ Compress small files/directories to a single compressed file (e.g use `tar`).
 tar cf snapshot.tar /path/to/snapshot
 ```
 
-Use `uplink cp` to upload your snapshot to Storj DCS. Scale parallelism to at most 2x your thread count (16 threads = 32 parallelism)
+Use `uplink cp` to upload your snapshot to Storj DCS. Scale parallelism starting at 4 on powerful servers. Scale up by 2 until throughput no longer improves. You should have at least one cpu core for each parallelism. Parallelism 8 will require 8 cores or 16 threads. 
 
 ```Text
-uplink cp --parallelism 8 snapshot.tar sj://snapshots/snapshot.tar
+uplink cp --parallelism 4 snapshot.tar sj://snapshots/snapshot.tar
 ```
 
 ### Create download access grant

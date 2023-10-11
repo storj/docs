@@ -91,13 +91,13 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
         1.  **_k_ = 29** – This is the number of pieces required to recreate a Segment. Any 29 of the pieces of a Segment can be used to reconstitute a Segment
 
-        2.  **_l_ = 39** – This is the number of pieces an Uplink will attempt to download when downloading a Segment. The Uplink will cut off any piece downloads after 29 pieces have been downloaded. The Uplink attempts to download more pieces than needed to eliminate the long tail effect of dependency on the slowest Storage Node.
+        2.  **_m_ = 35** – This is the number of pieces an Uplink will attempt to download when downloading a Segment. The Uplink will cut off any piece downloads after 29 pieces have been downloaded. The Uplink attempts to download more pieces than needed to eliminate the long tail effect of dependency on the slowest Storage Node.
+   
+          Note that m is also the repair threshold for a Segment. Satellites track when Storage Nodes fail or leave the network making pieces unavailable. If too many storage nodes become unavailable, putting the potential durability of a Segment at risk, the Satellite will recreate the missing pieces via file repair and store the repaired pieces on diverse, health storage nodes. The repair threshold may be overwritten and for Storj Satellites, and is set to 54.
 
-        3.  **_m_ = 52** – This is the repair threshold for a Segment. Satellites track when Storage Nodes fail or leave the network making pieces unavailable. If too many storage nodes become unavailable, putting the potential durability of a Segment at risk, the Satellite will recreate the missing pieces via file repair and store the repaired pieces on diverse, health storage nodes.
+        3.  **_o_ = 80** – The maximum number of pieces stored for a Segment
 
-        4.  **_n_ = 80** – The maximum number of pieces stored for a Segment
-
-        5.  **_o_ = 130** – The number of pieces an Uplink attempts to upload to diverse Storage Nodes when uploading a Segment.
+        4.  **_n_ = 130** – The number of pieces an Uplink attempts to upload to diverse Storage Nodes when uploading a Segment.
 
 13. **Multipart Upload** Multipart Upload is a function that allows large files to be broken up into smaller pieces for more efficient uploads. When an object is uploaded using Multipart Upload, a file is first broken into parts, each part of a Multipart Upload is also stored as one or more Segments. With Multipart Upload, a single object is uploaded as a set of parts. Each part is an integral portion of the data comprising the object. The object parts may be uploaded independently, in parallel, and in any order. Uploads may be paused and resumed by uploading an initial set of parts, then resuming and uploading the remaining parts. If the upload of any part fails, that part may be re-uploaded without impacting the upload of other parts. All of these parts are broken into one or more Segments by the Storj DCS Gateway based on whether the Part Size is smaller or larger than the default Segment size. While Multipart Upload is most appropriate for files larger than the 64MB default Segment size, the Part Size is configurable in applications that use Multipart Upload.
 

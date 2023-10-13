@@ -124,9 +124,9 @@ docker pull storjlabs/gateway
 
 You have two ways to configure your Gateway ST:
 
-1.  [](docId:EGM8O-1xt2Az03eBWT8Rf) (only if it is your first setup)
+1.  [Interactive Setup](#interactive-setup) (only if it is your first setup)
 
-2.  [](docId:EGM8O-1xt2Az03eBWT8Rf)
+2.  [Using an Access Grant](#using-an-access-grant)
 
 ## Interactive Setup
 

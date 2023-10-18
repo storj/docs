@@ -13,7 +13,7 @@ metadata:
     different integration patterns for optimized performance and security.
 ---
 
-# Introduction
+## Introduction
 
 These 'Getting Starting' tutorials will showcase the process for configuring [Rclone](https://rclone.org) with Storj DCS. We will cover only some of the basic features in this guide.
 
@@ -29,7 +29,7 @@ You will need one of the following:
 
 - [](docId:OXSINcFRuVMBacPvswwNU) (access token) of a Storj DCS project you are a member of.
 
-# Selecting an Integration Pattern
+## Selecting an Integration Pattern
 
 ## Native
 

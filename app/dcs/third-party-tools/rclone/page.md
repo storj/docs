@@ -13,7 +13,7 @@ metadata:
     different integration patterns for optimized performance and security.
 ---
 
-## Introduction
+# Introduction
 
 These 'Getting Starting' tutorials will showcase the process for configuring [Rclone](https://rclone.org) with Storj DCS. We will cover only some of the basic features in this guide.
 
@@ -29,7 +29,7 @@ You will need one of the following:
 
 - [](docId:OXSINcFRuVMBacPvswwNU) (access token) of a Storj DCS project you are a member of.
 
-## Selecting an Integration Pattern
+# Selecting an Integration Pattern
 
 ## Native
 
@@ -47,7 +47,7 @@ Use our native integration pattern to take advantage of client-side encryption a
 {% /quick-link %}
 {% /quick-links %}
 
-### Hosted Gateway
+## Hosted Gateway
 
 Use our S3 compatible Hosted Gateway integration pattern to increase upload performance and reduce the load on your systems and network. Uploads will be encrypted and erasure-coded [](docId:hf2uumViqYvS1oq8TYbeW), thus, a 1GB upload will result in only 1GB of data being uploaded to the Hosted Gateway.
 

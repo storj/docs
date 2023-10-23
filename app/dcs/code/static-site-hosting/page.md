@@ -80,7 +80,7 @@ $TTL    3600
 www.example.com    	IN	CNAME	link.storjshare.io.
 txt-www.example.com	IN	TXT  	storj-root:bucket/prefix
 txt-www.example.com	IN	TXT  	storj-access:abcdefghijklmnopqrstuvwxzy
-txt-www.example.com 	IN	TXT  	storj-tls:true
+txt-www.example.com IN	TXT  	storj-tls:true
 ```
 
 ## Part 2: DNS Provider

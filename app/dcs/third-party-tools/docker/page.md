@@ -112,7 +112,7 @@ uplink cp manifest.json sj://registry/v2/elek/herbsttag/manifests/sha256:be9eeb0
 Now we are almost there. There are two remaining parts. First, we need to register a custom domain for our _sj://registry_ bucket. The exact process is documented in [](docId:GkgE6Egi02wRZtyryFyPz), in short, an uplink command can be used to save the access grant and assign it to a domain:
 
 ```bash
-uplink share --public sj://registry/ --base-url https://link.storjshare.io --dns registry.anzix.net --auth-service https://auth.storjshare.io
+uplink share --public sj://registry/ --dns registry.anzix.net
 ```
 
 The command returns all the important information to modify the DNS zones. The usage of this information depends on the DNS registrar.

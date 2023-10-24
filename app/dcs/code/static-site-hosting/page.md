@@ -28,7 +28,7 @@ You can use your own domain name and host your own static website on Storj
 {% tab label="Windows" %}
 
 ```Text
-./uplink.exe share --dns <hostname> sj://<bucket>/<prefix> --tls
+./uplink.exe share --dns <hostname> sj://<bucket>/<prefix> --tls --not-after=none
 ```
 
 {% /tab %}

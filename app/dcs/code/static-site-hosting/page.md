@@ -21,13 +21,14 @@ You can use your own domain name and host your own static website on Storj
 
 1.  Download the uplink binary ([](docId:h3RyJymEIi4gf2S9wVJg8)) and upload your static site files to Storj DCS. You may also upload your files in any other manner, but you will need the Uplink CLI for the remaining steps.
 
-2.  Share the bucket or object prefix (not individual objects) that will be the root of your website/subdomain. At the root, name your home page`index.html`. The website will serve the index.html file automatically e.g.`http://www.example.test` and `http://www.example.test/index.html`will serve the same content. Anything shared with `--dns` will be _readonly_ and available _publicly_ (no secret key needed). You can optionally specify your preferred linkshare endpoint with `--base-url`
+2.  Share the bucket or object prefix (not individual objects) that will be the root of your website/subdomain. At the root, name your home page `index.html`. The website will serve the index.html file automatically e.g. `http://www.example.test` and `http://www.example.test/index.html` will serve the same content. Anything shared with `--dns` will be _readonly_ and available _publicly_ (no secret key needed).
+3. Finally, you can optionally add the `--tls` flag in order to return an additional DNS entry used for securing your domain with TLS.
 
 {% tabs %}
 {% tab label="Windows" %}
 
 ```Text
-./uplink.exe share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url>
+./uplink.exe share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url> --tls
 ```
 
 {% /tab %}
@@ -35,7 +36,7 @@ You can use your own domain name and host your own static website on Storj
 {% tab label="Linux" %}
 
 ```Text
-uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url>
+uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url> --tls
 ```
 
 {% /tab %}
@@ -43,7 +44,7 @@ uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url>
 {% tab label="macOS" %}
 
 ```Text
-uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url>
+uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url> --tls
 ```
 
 {% /tab %}
@@ -59,6 +60,7 @@ $TTL    3600
 <hostname>    	IN	CNAME	link.storjshare.io.
 txt-<hostname> 	IN	TXT  	storj-root:<bucket>/<prefix>
 txt-<hostname> 	IN	TXT  	storj-access:<access key>
+txt-<hostname> 	IN	TXT  	storj-tls:true
 ```
 
 Remember to update the `$ORIGIN` from `example.com` to your domain name (keep the trailing `.`). You may also change the DNS `$TTL`.
@@ -76,7 +78,8 @@ $ORIGIN example.com.
 $TTL    3600
 www.example.com    	IN	CNAME	link.storjshare.io.
 txt-www.example.com	IN	TXT  	storj-root:bucket/prefix
-txt-www.example.com	IN	TXT  	storj-access:jqaz8xihdea93jfbaks8324jrhq1
+txt-www.example.com	IN	TXT  	storj-access:abcdefghijklmnopqrstuvwxzy
+txt-www.example.com IN	TXT  	storj-tls:true
 ```
 
 ## Part 2: DNS Provider

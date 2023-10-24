@@ -29,7 +29,6 @@ uplink access inspect [ACCESS-GRANT] [flags]
 
 | Flag              | Description                                         |
 | :---------------- | :-------------------------------------------------- |
-| `--access string` | the serialized access, or name of the access to use |
 | `--help`,` -h`    | help for inspect                                    |
 
 ## Examples

@@ -19,16 +19,16 @@ You can use your own domain name and host your own static website on Storj
 
 ## Part 1: Uplink CLI
 
-1.  Download the uplink binary ([](docId:h3RyJymEIi4gf2S9wVJg8)) and upload your static site files to Storj DCS. You may also upload your files in any other manner, but you will need the Uplink CLI for the remaining steps.
+1. Download the uplink binary ([](docId:h3RyJymEIi4gf2S9wVJg8)) and upload your static site files to Storj DCS. You may also upload your files in any other manner, but you will need the Uplink CLI for the remaining steps.
 
-2.  Share the bucket or object prefix (not individual objects) that will be the root of your website/subdomain. At the root, name your home page `index.html`. The website will serve the index.html file automatically e.g. `http://www.example.test` and `http://www.example.test/index.html` will serve the same content. Anything shared with `--dns` will be _readonly_ and available _publicly_ (no secret key needed).
+2. Share the bucket or object prefix (not individual objects) that will be the root of your website/subdomain. At the root, name your home page `index.html`. The website will serve the index.html file automatically e.g. `http://www.example.test` and `http://www.example.test/index.html` will serve the same content. Anything shared with `--dns` will be _readonly_ and available _publicly_ (no secret key needed).
 3. Finally, you can optionally add the `--tls` flag in order to return an additional DNS entry used for securing your domain with TLS.
 
 {% tabs %}
 {% tab label="Windows" %}
 
 ```Text
-./uplink.exe share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url> --tls
+./uplink.exe share --dns <hostname> sj://<bucket>/<prefix> --tls --not-after=none
 ```
 
 {% /tab %}
@@ -36,7 +36,7 @@ You can use your own domain name and host your own static website on Storj
 {% tab label="Linux" %}
 
 ```Text
-uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url> --tls
+uplink share --dns <hostname> sj://<bucket>/<prefix> --tls --not-after=none
 ```
 
 {% /tab %}
@@ -44,7 +44,7 @@ uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url> 
 {% tab label="macOS" %}
 
 ```Text
-uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url> --tls
+uplink share --dns <hostname> sj://<bucket>/<prefix> --tls --not-after=none
 ```
 
 {% /tab %}

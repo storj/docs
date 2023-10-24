@@ -34,8 +34,8 @@ An access generated using `uplink share` with no arguments creates an access to 
 | Flag                    | Description                                                                                                     |
 | :---------------------- | :-------------------------------------------------------------------------------------------------------------- |
 | `--access string`       | the serialized access, or name of the access to use                                                             |
-| `--auth-service string` | url for shared auth service, by default                                                                         |
-| `--base-url string`     | the base url for link sharing, by default                                                                       |
+| `--auth-service string` | url for shared auth service (default "https://auth.storjshare.io")                                              |
+| `--base-url string`     | the base URL for link sharing (default "https://link.storjshare.io")                                            |
 | `--disallow-deletes`    | if true, disallow deletes                                                                                       |
 | `--disallow-lists`      | if true, disallow lists                                                                                         |
 | `--disallow-reads`      | if true, disallow reads                                                                                         |
@@ -169,15 +169,15 @@ You can also generate a URL to share your projects/buckets/objects
 {% code-group %}
 
 ```windows
-./uplink.exe share sj://cakes/ --url --not-after=none --base-url=https://link.storjshare.io
+./uplink.exe share sj://cakes/ --url --not-after=none
 ```
 
 ```linux
-uplink share sj://cakes/ --url --not-after=none --base-url=https://link.storjshare.io
+uplink share sj://cakes/ --url --not-after=none
 ```
 
 ```macos
-uplink share sj://cakes/ --url --not-after=none --base-url=https://link.storjshare.io
+uplink share sj://cakes/ --url --not-after=none
 ```
 
 {% /code-group %}
@@ -227,15 +227,15 @@ While you may share individual objects with the above linksharing instructions, 
 {% code-group %}
 
 ```windows
-./uplink.exe share --dns www.mysite.com sj://cakes/ --base-url https://link.storjshare.io
+./uplink.exe share --dns www.mysite.com sj://cakes/
 ```
 
 ```linux
-uplink share --dns www.mysite.com sj://cakes/ --base-url https://link.storjshare.io
+uplink share --dns www.mysite.com sj://cakes/
 ```
 
 ```macos
-uplink share --dns www.mysite.com sj://cakes/ --base-url https://link.storjshare.io
+uplink share --dns www.mysite.com sj://cakes/
 ```
 
 {% /code-group %}

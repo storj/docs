@@ -27,11 +27,11 @@ uplink setup [flags]
 
 ## Flags
 
-| Flag                    | Description                                                                                 |
-| :---------------------- | :------------------------------------------------------------------------------------------ |
-| `--auth-service string` | If generating backwards-compatible S3 Gateway credentials, use this auth service (default ) |
-| `-f`, `--force`         | Force overwrite an existing saved access                                                    |
-| `--use`                 | Switch the default access to the newly created one                                          |
+| Flag                    | Description                                                                                                             |
+| :---------------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| `--auth-service string` | If generating backwards-compatible S3 Gateway credentials, use this auth service (default "https://auth.storjshare.io") |
+| `-f`, `--force`         | Force overwrite an existing saved access                                                                                |
+| `--use`                 | Switch the default access to the newly created one                                                                      |
 
 ## Global flags
 

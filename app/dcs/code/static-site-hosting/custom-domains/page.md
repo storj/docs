@@ -64,16 +64,14 @@ For this step you will execute `uplink share` for the bucket or object prefix (n
 The following placeholders should be replaced in the sample code provided below:
 
 - **_\<hostname>_**: This is your custom subdomain (sub.domain.com)
-
 - **_\<bucket>_**: The bucket you want to share
-
 - **_\<prefix>_** (optional): The path to the specific folder you want to share (this is known as a prefix)
 
 {% tabs %}
 {% tab label="Windows" %}
 
 ```powershell
-./uplink.exe share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url>
+./uplink.exe share --dns <hostname> sj://<bucket>/<prefix>
 ```
 
 {% /tab %}
@@ -89,7 +87,7 @@ uplink share --dns <hostname> sj://<bucket>/<prefix>
 {% tab label="macOS" %}
 
 ```shell
-uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url>
+uplink share --dns <hostname> sj://<bucket>/<prefix>
 ```
 
 {% /tab %}

@@ -29,7 +29,6 @@ uplink access register <flags> <ACCESS-GRANT>
 
 | Flag                    | Description                                                                                          |
 | :---------------------- | :--------------------------------------------------------------------------------------------------- |
-| `--access string`       | the serialized access, or name of the access to use                                                  |
 | `--auth-service string` | the address to the service you wish to register your access with (default "auth.storjshare.io:7777") |
 | `--public`              | if the access should be public. Default false                                                        |
 

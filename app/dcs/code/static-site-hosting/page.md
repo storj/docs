@@ -44,7 +44,7 @@ uplink share --dns <hostname> sj://<bucket>/<prefix> --tls --not-after=none
 {% tab label="macOS" %}
 
 ```Text
-uplink share --dns <hostname> sj://<bucket>/<prefix> --tls
+uplink share --dns <hostname> sj://<bucket>/<prefix> --tls --not-after=none
 ```
 
 {% /tab %}

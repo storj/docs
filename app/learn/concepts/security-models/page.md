@@ -6,7 +6,17 @@ metadata:
   description: Explore Storj's diverse data access solutions from public Linksharing to encrypted S3 credentials, ensuring optimal security for your storage needs.
 ---
 
-Storj provides multiple data access methods: "Linksharing" for public links, "Presigned URLs" for time-limited access, "Customer-specific S3 Credentials" for personalized encryption, and "Rotating Credentials" for broader time-restricted access. Each offers distinct security levels.
+Storj provides multiple data access methods: "Linksharing" for public links, "Presigned URLs" for time-limited access, "Customer-specific S3 Credentials" for personalized encryption, and "Rotating Credentials" for broader time-restricted access. You can use your own application server to have even finer control. Each offers distinct security levels and benefits.
+
+## Customer Application Server
+
+By incorporating Storj within your application server, you can exercise more granular control over data access, security, and governance. You essentially act as an intermediary between the client application and the Storj storage service. This approach offers a centralized method for controlling and monitoring data access. Below are some strategies for using or proxying Storj in the customer application server tier:
+
+- Expose specific API endpoints that route to the various Storj services.
+- Dynamically issue temporary credentials based on the user's role or other contextual information
+- Caching Strategy to reduce the number of round trips to the Storj service or frequently accessed data
+- Access Monitoring for auditing of access patterns
+- Data Preprocessing for transformation or enrichment before storage or retrieval
 
 ## Linksharing
 

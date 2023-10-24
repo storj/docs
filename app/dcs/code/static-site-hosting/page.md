@@ -36,7 +36,7 @@ You can use your own domain name and host your own static website on Storj
 {% tab label="Linux" %}
 
 ```Text
-uplink share --dns <hostname> sj://<bucket>/<prefix> --tls
+uplink share --dns <hostname> sj://<bucket>/<prefix> --tls --not-after=none
 ```
 
 {% /tab %}

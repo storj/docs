@@ -47,7 +47,7 @@ Use our native integration pattern to take advantage of client-side encryption a
 {% /quick-link %}
 {% /quick-links %}
 
-### Hosted Gateway
+## Hosted Gateway
 
 Use our S3 compatible Hosted Gateway integration pattern to increase upload performance and reduce the load on your systems and network. Uploads will be encrypted and erasure-coded [](docId:hf2uumViqYvS1oq8TYbeW), thus, a 1GB upload will result in only 1GB of data being uploaded to the Hosted Gateway.
 

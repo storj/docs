@@ -173,7 +173,7 @@ identity authorize storagenode <email:characterstring>
 {% /tab %}
 {% /tabs %}
 
-Confirm the identity
+### Confirm the identity
 
 Run the following command to confirm you have the required identity files:
 

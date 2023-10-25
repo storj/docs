@@ -32,7 +32,7 @@ uplink share --url --readonly --disallow-lists --not-after=none sj://BUCKET
 
 ## Embeddable Content
 
-The share from above will give you a browser URL linking to the default Storj share page. It will be of the form `https://link.storjshare.io/LINKSHARINGKEY/BUCKET/`.
+The share from above will give you a browser URL linking to the default Storj share page. It will be of the form `https://link.storjshare.io/s/LINKSHARINGKEY/BUCKET/`.
 
 To make the content embeddable insert `/raw/` before `LINKSHARINGKEY` (you may need to swap `/s/` for `/raw/` instead). This prefix can then be used to access anything in the bucket.
 

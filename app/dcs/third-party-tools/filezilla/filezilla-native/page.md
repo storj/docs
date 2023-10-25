@@ -37,14 +37,6 @@ With the launch of the native Storj DCS Integration into the FileZilla client, d
 
 {% partial file="create-access-grant.md" /%}
 
-{% callout type="warning"  %}
-**This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
-
-Importantly, if you want two access grants to have access to the same data, **they must use the same passphrase**. You won't be able to access your data if the passphrase in your access grant is different than the passphrase you uploaded the data with.
-
-Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
-{% /callout %}
-
 ## Downloading FileZilla
 
 To download the latest release of FileZilla, navigate to <https://filezilla-project.org/download.php?show_all=1> and select the version appropriate for your operating system, then install FileZilla.

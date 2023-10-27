@@ -2,6 +2,11 @@
 title: Commercial Node
 weight: 4
 docId: eisoh4oa2uRaac1n
+metadata:
+  title: Understanding the Commercial Storage Node Operator Program
+  description: Guide to Storj's Commercial Storage Node Operator Program, offering
+    detailed insights into the aim, eligibility, advantages, and comparison with the
+    public network.
 ---
 
 Welcome to the Commercial Storage Node Operator Program documentation. This program is designed to facilitate the participation of node operators in data centers and enterprise-grade facilities within the Storj network, ensuring that their nodes meet specific certifications and characteristics. This guide will provide information about the program's purpose, eligibility, advantages, and how it differs from the public network.

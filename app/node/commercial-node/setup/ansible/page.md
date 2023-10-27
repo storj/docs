@@ -1,6 +1,11 @@
 ---
 title: Sample Ansible Configuration
 docId: aiwee4RieY4cooMa
+metadata:
+  title: Creating Storage Nodes Using Ansible
+  description: This document provides an example for creating multiple Storj Storage
+    nodes using Ansible. A playbook is provided that details how to run a single host
+    machine with multiple hard drives to run multiple Storage nodes.
 ---
 
 {% callout type="danger" %}
@@ -108,5 +113,3 @@ The `docker logs` command displays the standard output and standard error logs o
 ```
 docker logs --tail 20 storagenode1
 ```
-
-

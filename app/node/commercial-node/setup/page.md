@@ -1,6 +1,12 @@
 ---
 title: Setup
 docId: ohngie2AhcuiX1ce
+weight: 5
+metadata:
+  title: Setting Up Commercial Storage Nodes
+  description:
+    Guide for Cloud Operations Engineers on how to set up commercial storage
+    nodes with Storj including prerequisites and node acceptance.
 ---
 
 This guide is tailored for Cloud Operations Engineers who manage multiple racked servers, data centers, and enterprise-grade facilities and wish to run [Commercial Storage Nodes](docId:eisoh4oa2uRaac1n).
@@ -48,6 +54,14 @@ For step 6, Commercial Storage Nodes require additional environment variables
 STORJ_STORAGE2_TRUST_SOURCES="https://www.storj.io/trusted-satellites-soc2"
 WALLET="0x0000000000000000000000000000000000000000"
 ```
+
+## Multi Storage node per host
+
+Since it's recommended to run one Storage Node per drive a [sample ansible configuration](docId:aiwee4RieY4cooMa) is provided for some ideas on how to manage the nodes. Metrics for the Storage nodes can also be setup by following [the node dashboard guide](docId:eCupaiZizohpah7I).
+
+## Auto updating
+
+To ensure optimal functionality and security, it's mandatory to update your nodes to at least the minimum required version (usually updates every 2 to 3 weeks). We recommend utilizing the built-in auto-updater in the Storage Node docker image for hassle-free updates.
 
 ## Node acceptance
 

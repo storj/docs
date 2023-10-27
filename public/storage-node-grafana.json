@@ -1,0 +1,1430 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [
+    {
+      "asDropdown": true,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": ["default"],
+      "targetBlank": false,
+      "title": "Dashboards",
+      "tooltip": "",
+      "type": "dashboards",
+      "url": ""
+    }
+  ],
+  "liveNow": false,
+  "panels": [
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{ "color": "green", "value": null }]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byName", "options": "Percent" },
+            "properties": [{ "id": "unit" }]
+          }
+        ]
+      },
+      "gridPos": { "h": 4, "w": 12, "x": 0, "y": 0 },
+      "id": 26,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action=\"GET\"}[1d]))",
+          "interval": "",
+          "legendFormat": "Day",
+          "refId": "Day"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action=\"GET\"}[1d])) * 30",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Estimate Day",
+          "refId": "Estimate Day"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action=\"GET\"}[1w]))",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Week",
+          "refId": "Week"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action=\"GET\"}[1w])) / 7 * 30",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Estimate Week",
+          "refId": "Estimate Week"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action=\"GET\"}[30d]))",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Month",
+          "refId": "Month"
+        }
+      ],
+      "title": "Customer Downloads",
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{ "color": "green", "value": null }]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 4, "w": 12, "x": 12, "y": 0 },
+      "id": 27,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action!=\"GET\"}[1d]))",
+          "interval": "",
+          "legendFormat": "Day",
+          "refId": "Day"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action!=\"GET\"}[1d])) * 30",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Estimate Day",
+          "refId": "Estimate Day"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action!=\"GET\"}[1w]))",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Week",
+          "refId": "Week"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action!=\"GET\"}[1w])) / 7 * 30",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Estimate Week",
+          "refId": "Estimate Week"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action!=\"GET\"}[30d]))",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Month",
+          "refId": "Month"
+        }
+      ],
+      "title": "Repair Downloads",
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{ "color": "green", "value": null }]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 4, "w": 12, "x": 0, "y": 4 },
+      "id": 25,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(used_space{field=\"recent\"}) - sum(used_space{field=\"recent\"} offset 1d)",
+          "interval": "",
+          "legendFormat": "Day",
+          "refId": "Day"
+        },
+        {
+          "exemplar": true,
+          "expr": "(sum(used_space{field=\"recent\"}) - sum(used_space{field=\"recent\"} offset 1d)) * 30",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Estimate Day",
+          "refId": "Estimate Day"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(used_space{field=\"recent\"}) - sum(used_space{field=\"recent\"} offset 1w)",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Week",
+          "refId": "Week"
+        },
+        {
+          "exemplar": true,
+          "expr": "(sum(used_space{field=\"recent\"}) - sum(used_space{field=\"recent\"} offset 1w)) / 7 * 30",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Estimate Week",
+          "refId": "Estimate Week"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(used_space{field=\"recent\"}) - sum(used_space{field=\"recent\"} offset 30d)",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Month",
+          "refId": "Month"
+        }
+      ],
+      "title": "Growrate",
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{ "color": "green", "value": null }]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byRegexp", "options": ".*Space" },
+            "properties": [{ "id": "unit", "value": "decbytes" }]
+          },
+          {
+            "matcher": { "id": "byName", "options": "Time To Fill" },
+            "properties": [{ "id": "unit", "value": "d" }]
+          }
+        ]
+      },
+      "gridPos": { "h": 4, "w": 12, "x": 12, "y": 4 },
+      "id": 28,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sum(used_space{field=\"recent\"})",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Used Space",
+          "refId": "Used Space"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(((sgn(available_space{field=\"recent\"}) + 1) / 2) * available_space{field=\"recent\"})",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Free Space",
+          "refId": "Free Space"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(((sgn(available_space{field=\"recent\"}) + 1) / 2) * available_space{field=\"recent\"}) / ((sum(available_space{field=\"recent\"} offset 7d) - sum(available_space{field=\"recent\"})) / 7)",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Time To Fill",
+          "refId": "Fime To Fill"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action=\"GET\"}[30d])) / sum(used_space{field=\"recent\"})",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Customer Downloads",
+          "refId": "Customer"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\",action!=\"GET\"}[30d])) / sum(used_space{field=\"recent\"})",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Repair Downloads",
+          "refId": "Repair + Audit"
+        },
+        {
+          "exemplar": true,
+          "expr": "sum(increase(download_success_byte_meter{field=\"total\"}[30d])) / sum(used_space{field=\"recent\"})",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "All Downloads",
+          "refId": "All Traffic"
+        }
+      ],
+      "title": "Stats",
+      "type": "stat"
+    },
+    {
+      "description": "Downloaded bytes per hour",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "normal" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 80 }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+      "id": 9,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "multi", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase(download_success_size_bytes{field=\"sum\",action=\"GET\"}[6m])",
+          "interval": "",
+          "legendFormat": "{{pod}} {{action}} downloads",
+          "refId": "downloads"
+        }
+      ],
+      "thresholds": [],
+      "title": "Customer Downloads",
+      "type": "timeseries"
+    },
+    {
+      "description": "Uploaded bytes per hour",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "normal" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 80 }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+      "id": 8,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "multi", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase(upload_success_size_bytes{field=\"sum\"}[6m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{pod}} uploads",
+          "refId": "uploads"
+        }
+      ],
+      "thresholds": [],
+      "title": "Uploads",
+      "type": "timeseries"
+    },
+    {
+      "description": "Downloaded bytes per hour",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "normal" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 80 }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 16 },
+      "id": 12,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "multi", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase(download_success_size_bytes{field=\"sum\",action=\"GET_REPAIR\"}[1h])",
+          "interval": "",
+          "legendFormat": "{{pod}} {{action}} downloads",
+          "refId": "downloads"
+        }
+      ],
+      "title": "Repair Downloads",
+      "type": "timeseries"
+    },
+    {
+      "description": "audit, suspension and online score",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "none" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "max": 1,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 80 }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 16 },
+      "id": 34,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "multi", "sort": "none" }
+      },
+      "targets": [
+        {
+          "editorMode": "code",
+          "exemplar": true,
+          "expr": "audit_reputation_score{field=\"recent\",satellite_id=\"_12EayRS2V1kEsWESU9QMRseFhdxYxKicsiFmxrsLZHeLUtdps3S\"} != 1",
+          "interval": "",
+          "legendFormat": "audit {{pod}}",
+          "range": true,
+          "refId": "audit"
+        },
+        {
+          "editorMode": "code",
+          "expr": "suspension_score{field=\"recent\",satellite_id=\"_12EayRS2V1kEsWESU9QMRseFhdxYxKicsiFmxrsLZHeLUtdps3S\"} != 1",
+          "hide": false,
+          "legendFormat": "suspension {{pod}}",
+          "range": true,
+          "refId": "suspension"
+        },
+        {
+          "editorMode": "code",
+          "expr": "online_score{field=\"recent\",satellite_id=\"_12EayRS2V1kEsWESU9QMRseFhdxYxKicsiFmxrsLZHeLUtdps3S\"} != 1",
+          "hide": false,
+          "legendFormat": "online {{pod}}",
+          "range": true,
+          "refId": "online"
+        }
+      ],
+      "thresholds": [],
+      "title": "Score",
+      "type": "timeseries"
+    },
+    {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": { "params": [0.95], "type": "lt" },
+            "operator": { "type": "and" },
+            "query": { "params": ["Audit", "48h", "now"] },
+            "reducer": { "params": [], "type": "last" },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "10m",
+        "frequency": "1m",
+        "handler": 1,
+        "message": "Audit ${job} ${action} low success rate",
+        "name": "Alert: Audit Success Rate",
+        "noDataState": "ok",
+        "notifications": [{ "uid": "vddsvqi7k" }]
+      },
+      "description": "download sucess / download started over 30 minutes\n\nShould also detect timeouts (high amount of download started without success)",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "none" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 80 }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 24 },
+      "id": 11,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "multi", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase(download_success_count{field=\"value\", action=\"GET_AUDIT\"}[30m]) / increase(download_started_count{field=\"value\", action=\"GET_AUDIT\"}[30m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{pod}} {{action}}",
+          "refId": "Audit"
+        }
+      ],
+      "thresholds": [
+        { "colorMode": "critical", "op": "lt", "value": 0.95, "visible": true }
+      ],
+      "title": "Alert: Audit Success Rate",
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "normal" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 80 }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 24 },
+      "id": 23,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "multi", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "used_space{field=\"recent\"}",
+          "interval": "",
+          "legendFormat": "{{pod}}",
+          "refId": "A"
+        }
+      ],
+      "title": "Used Space",
+      "type": "timeseries"
+    },
+    {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": { "params": [0.8], "type": "lt" },
+            "operator": { "type": "and" },
+            "query": { "params": ["Download", "48h", "now"] },
+            "reducer": { "params": [], "type": "last" },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "5m",
+        "frequency": "1m",
+        "handler": 1,
+        "message": "Download ${job} ${action} low success rate",
+        "name": "Alert: Download Success Rate alert",
+        "noDataState": "ok",
+        "notifications": [{ "uid": "vddsvqi7k" }]
+      },
+      "description": "download sucess / download started over 30 minutes\n\nShould also detect timeouts (high amount of download started without success)",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "none" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 80 }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 32 },
+      "id": 30,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "multi", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase(download_success_count{field=\"value\", action=\"GET\"}[6h]) / increase(download_started_count{field=\"value\", action=\"GET\"}[6h])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{pod}} {{action}}",
+          "refId": "Download"
+        }
+      ],
+      "thresholds": [
+        { "colorMode": "critical", "op": "lt", "value": 0.8, "visible": true }
+      ],
+      "title": "Alert: Download Success Rate",
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "none" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 80 }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 32 },
+      "id": 17,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "single", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "garbage_collection_loop_duration{field=\"recent\"}",
+          "interval": "",
+          "legendFormat": "{{pod}} GC",
+          "refId": "A"
+        }
+      ],
+      "title": "GC Runtime",
+      "type": "timeseries"
+    },
+    {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": { "params": [0.8], "type": "lt" },
+            "operator": { "type": "and" },
+            "query": { "params": ["Upload", "48h", "now"] },
+            "reducer": { "params": [], "type": "last" },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "5m",
+        "frequency": "1m",
+        "handler": 1,
+        "message": "Upload ${job} ${action} low success rate",
+        "name": "Alert: Upload Success Rate alert",
+        "noDataState": "ok",
+        "notifications": [{ "uid": "vddsvqi7k" }]
+      },
+      "description": "download sucess / download started over 30 minutes\n\nShould also detect timeouts (high amount of download started without success)",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "none" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 80 }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 40 },
+      "id": 29,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "multi", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase(upload_success_count{field=\"value\"}[6h]) / increase(upload_started_count{field=\"value\"}[6h])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{pod}} Upload",
+          "refId": "Upload"
+        }
+      ],
+      "thresholds": [
+        { "colorMode": "critical", "op": "lt", "value": 0.8, "visible": true }
+      ],
+      "title": "Alert: Upload Success Rate",
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "none" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 80 }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 40 },
+      "id": 19,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "single", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "garbage_collection_pieces_deleted{field=\"recent\"}",
+          "interval": "",
+          "legendFormat": "{{pod}} GC",
+          "refId": "A"
+        }
+      ],
+      "title": "GC Deleted",
+      "type": "timeseries"
+    },
+    {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": { "params": [0.95], "type": "lt" },
+            "operator": { "type": "and" },
+            "query": { "params": ["Repair", "48h", "now"] },
+            "reducer": { "params": [], "type": "last" },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "5m",
+        "frequency": "1m",
+        "handler": 1,
+        "message": "Repair ${job} ${action} low success rate",
+        "name": "Alert: Repair Success Rate alert",
+        "noDataState": "ok",
+        "notifications": [{ "uid": "vddsvqi7k" }]
+      },
+      "description": "download sucess / download started over 30 minutes\n\nShould also detect timeouts (high amount of download started without success)",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "none" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{ "color": "green" }, { "color": "red", "value": 80 }]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 48 },
+      "id": 31,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "multi", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase(download_success_count{field=\"value\", action=\"GET_REPAIR\"}[6h]) / increase(download_started_count{field=\"value\", action=\"GET_REPAIR\"}[6h])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{pod}} {{action}}",
+          "refId": "Repair"
+        }
+      ],
+      "thresholds": [
+        { "colorMode": "critical", "op": "lt", "value": 0.95, "visible": true }
+      ],
+      "title": "Alert: Repair Success Rate",
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "none" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{ "color": "green" }, { "color": "red", "value": 80 }]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 48 },
+      "id": 15,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": { "mode": "single", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "piecedeleter_queue_size{field=\"recent\"}",
+          "interval": "",
+          "legendFormat": "{{pod}}",
+          "refId": "Queue"
+        }
+      ],
+      "title": "Delete Queue",
+      "type": "timeseries"
+    },
+    {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": { "params": [50], "type": "gt" },
+            "operator": { "type": "and" },
+            "query": { "params": ["Checkin", "48h", "now"] },
+            "reducer": { "params": [], "type": "last" },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "0m",
+        "frequency": "1m",
+        "handler": 1,
+        "message": "${job} checkin failure",
+        "name": "${job} checkin failure",
+        "noDataState": "alerting",
+        "notifications": [{ "uid": "vddsvqi7k" }]
+      },
+      "description": "Detects any kind of network issue. The storage node should checkin once per hour.",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "none" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{ "color": "green" }, { "color": "red", "value": 80 }]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byType", "options": "time" },
+            "properties": [{ "id": "custom.axisPlacement", "value": "auto" }]
+          }
+        ]
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 56 },
+      "id": 6,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": { "mode": "single", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase(function{name=\"__Service__pingSatelliteOnce\", field=\"failures\"}[61m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{pod}} checkin",
+          "refId": "Checkin"
+        }
+      ],
+      "thresholds": [
+        { "colorMode": "critical", "op": "gt", "value": 50, "visible": true }
+      ],
+      "title": "Alert: Checkin failure",
+      "type": "timeseries"
+    },
+    {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": { "params": [2], "type": "gt" },
+            "operator": { "type": "and" },
+            "query": { "params": ["Order", "48h", "now"] },
+            "reducer": { "params": [], "type": "last" },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "2m",
+        "frequency": "1m",
+        "handler": 1,
+        "message": "${job} Order Submission failure",
+        "name": "Alert: Order Submission failure",
+        "noDataState": "keep_state",
+        "notifications": [{ "uid": "vddsvqi7k" }]
+      },
+      "description": "Detects any kind of network issue. The storage node should checkin once per hour.",
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "hidden",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "none" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{ "color": "green" }, { "color": "red", "value": 80 }]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byType", "options": "time" },
+            "properties": [{ "id": "custom.axisPlacement", "value": "auto" }]
+          }
+        ]
+      },
+      "gridPos": { "h": 1, "w": 3, "x": 12, "y": 64 },
+      "id": 13,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": { "mode": "none", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase(function{name=\"__Service__SendOrders\", field=\"failures\"}[61m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{pod}} order failure",
+          "refId": "Order"
+        }
+      ],
+      "thresholds": [
+        { "colorMode": "critical", "op": "gt", "value": 2, "visible": true }
+      ],
+      "title": "Alert: Order failure",
+      "type": "timeseries"
+    },
+    {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": { "params": [0.9], "type": "lt" },
+            "operator": { "type": "and" },
+            "query": { "params": ["Storagenode", "48h", "now"] },
+            "reducer": { "params": [], "type": "last" },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "2m",
+        "frequency": "10s",
+        "handler": 1,
+        "message": "${job} process down",
+        "name": "${job} process down",
+        "noDataState": "alerting",
+        "notifications": [{ "uid": "vddsvqi7k" }]
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "hidden",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": { "type": "linear" },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": { "group": "A", "mode": "none" },
+            "thresholdsStyle": { "mode": "off" }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{ "color": "green" }, { "color": "red", "value": 80 }]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byType", "options": "time" },
+            "properties": [{ "id": "custom.axisPlacement", "value": "auto" }]
+          }
+        ]
+      },
+      "gridPos": { "h": 1, "w": 3, "x": 12, "y": 65 },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": { "mode": "none", "sort": "none" }
+      },
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "up{job=~\"storagenode.+\"}",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "{{pod}}",
+          "refId": "Storagenode"
+        }
+      ],
+      "thresholds": [
+        { "colorMode": "critical", "op": "lt", "value": 0.9, "visible": true }
+      ],
+      "title": "Alert: Process down",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": ["default"],
+  "templating": { "list": [] },
+  "time": { "from": "now-3h", "to": "now" },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Storage Nodes",
+  "uid": "AA6sH8c7z",
+  "version": 3,
+  "weekStart": ""
+}

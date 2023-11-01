@@ -134,7 +134,7 @@ The share link includes a rendering of where the pieces of your file are located
 
 ## Share a bucket
 
-1. Click the three vertical dots on the right of the bucket, a popup menu will appear
+1. Click the three vertical dots to the right of the bucket, a popup menu will appear
 ![Share Bucket](https://link.storjshare.io/raw/juc6cqmbtg2qgaja6jzx67zfkjwa/docs/images/Share-Bucket.png)
 
 2. Click the **Share Bucket** command

@@ -132,4 +132,15 @@ The share link includes a rendering of where the pieces of your file are located
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/y1Z-utzw4fEsvj6gffynu_qsobjectshare04.png)
 
+## Share a bucket
+
+1. Click the three vertical dots on the right of the bucket, a popup menu will appear
+![Share Bucket](https://link.storjshare.io/raw/juc6cqmbtg2qgaja6jzx67zfkjwa/docs/images/Share-Bucket.png)
+
+2. Click the **Share Bucket** command
+
+![Share the link](https://link.storjshare.io/raw/jwkhjjn4le4udilzxbeoe3wj7iwa/docs/images/Share%20a%20link.png)
+
+3. Click the needed button to share the link
+
 This concludes the Object Browser Quickstart.

@@ -135,11 +135,11 @@ The share link includes a rendering of where the pieces of your file are located
 ## Share a bucket
 
 1. Click the three vertical dots on the right of the bucket, a popup menu will appear
-![Share Bucket](https://github.com/storj/docs/assets/26858949/377b8012-455e-4914-a284-786b0276fbe2)
+![Share Bucket](https://link.storjshare.io/raw/juc6cqmbtg2qgaja6jzx67zfkjwa/docs/images/Share-Bucket.png)
 
 2. Click the **Share Bucket** command
 
-![Share the link](https://github.com/storj/docs/assets/26858949/0c3f7da7-a9a8-44f9-840e-a8569cb1cf9d)
+![Share the link](https://link.storjshare.io/raw/jwkhjjn4le4udilzxbeoe3wj7iwa/docs/images/Share%20a%20link.png)
 
 3. Click the needed button to share the link
 

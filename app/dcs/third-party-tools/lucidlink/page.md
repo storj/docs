@@ -38,7 +38,7 @@ To integrate LucidLink with Storj, you will need:
 
 - A Storj account.
 
-  - [Login](https://storj.io/login), if you already have an account, or sign up here <https://us1.storj.io/signup?partner=lucidlink> 
+  - [Login](https://storj.io/login), if you already have an account, or sign up here <https://storj.io/signup?partner=lucidlink> 
 
 - A LucidLink account
 

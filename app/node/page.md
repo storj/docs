@@ -41,6 +41,8 @@ Install the software that works best for you.
 {% quick-link title="🖥 GUI Install - Windows" href="docId:5shJebpS3baWj6LDV5ANQ" /%}
 
 {% quick-link title="💻 QNAP Storage Node App" href="docId:N-dnnf7HhHcOaavvXjplw" /%}
+
+{% quick-link title="💻 TrueNAS Storage Node App" href="https://cdn.truenas.com/docs/scale/scaletutorials/apps/addstorjnode/" /%}
 {% /quick-links %}
 
 ## 💻 Want to Contribute?

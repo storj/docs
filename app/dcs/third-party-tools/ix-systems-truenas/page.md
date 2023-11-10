@@ -40,7 +40,7 @@ To integrate TrueNAS with Storj, you will need:
 
 - A TrueNAS storage device connected to your network.
 
-For more information about the iX Storj integration, see the [press release](https://www.truenas.com/blog/ix-and-storj-deliver-globally-distributed-storage-to-truenas/).
+For more information about the iX Storj integration, visit <https://www.truenas.com/ix-storj>.
 
 ---
 

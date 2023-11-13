@@ -1,5 +1,6 @@
 import path from 'path'
 import withMarkdoc from '@markdoc/next.js'
+
 import withSearch from './src/markdoc/search.mjs'
 import withNavigation from './src/markdoc/navigation.mjs'
 import { createLoader } from 'simple-functional-loader'
@@ -48,5 +49,7 @@ const nextConfig = {
 }
 
 export default withNavigation(
-  withSearch(withMarkdoc({ schemaPath: './src/markdoc' })(nextConfig))
+  withSearch(
+    withMarkdoc({ schemaPath: './src/markdoc', nextjsExports: [] })(nextConfig)
+  )
 )

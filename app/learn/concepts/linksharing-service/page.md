@@ -50,7 +50,7 @@ The [](docId:4oDAezF-FcfPr0WPl7knd) are included in that tutorial.
 
 ## Linkshare via CLI (Advanced)
 
-If you prefer a command line interface (CLI) or wish to programmatically integrate to Storj _ DCS we have our_ [](docId:tBnCSrmR1jbOewG38fIr4) in addition to our [](docId:2x_b4StTLjm2WoHEPx2Cm). You can also [](docId:GkgE6Egi02wRZtyryFyPz).
+If you prefer a command line interface (CLI) or wish to programmatically integrate to Storj DCS we have our [uplink CLI](docId:tBnCSrmR1jbOewG38fIr4) in addition to our [](docId:2x_b4StTLjm2WoHEPx2Cm). You can also use a [](docId:GkgE6Egi02wRZtyryFyPz).
 
 ## Regions of availability
 

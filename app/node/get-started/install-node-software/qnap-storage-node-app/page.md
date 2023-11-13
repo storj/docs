@@ -11,7 +11,7 @@ In this guide, we are going to walk through the installation process for the Sto
 
 1.  Monetize your excess capacity on the Storj Network
 
-2.  Back up your NAS Device to the Network using Gateway-MT and any S3-compatible backup solution.
+2.  [Back up your NAS Device](docId:ahJah5samahgueFu) using QNAP's HBS 3 using Storj's S3-compatible API
 
 For a video walkthrough of this process, please see below:
 

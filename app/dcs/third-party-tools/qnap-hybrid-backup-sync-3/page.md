@@ -3,8 +3,13 @@ title: QNAP Hybrid Backup Sync 3
 tags:
   - backup
 docId: ahJah5samahgueFu
+metadata:
+  title: QNAP Hybrid Backup Sync 3 Overview and Integration with Storj
+  description:
+    Comprehensive guide on using QNAP HBS 3, its advantages with Storj
+    integration, and steps to set it up on QNAP NAS for efficient data backup and
+    recovery.
 ---
-
 
 **QNAP Hybrid Backup Sync (HBS) 3** is a comprehensive backup, recovery, and data synchronization solution for QNAP NAS devices. It supports various storage solutions, including local, remote, and cloud storage.
 
@@ -57,7 +62,6 @@ To integrate your QNAP NAS with your preferred backup solution using HBS 3, you'
 
 1. Select **Create**
 
-
 ### Configure Backup Jobs
 
 1. Create a New Backup Job: Choose remote as the backup you want to create
@@ -73,5 +77,4 @@ To integrate your QNAP NAS with your preferred backup solution using HBS 3, you'
 1. Set Schedule and Options: Configure backup schedule, versioning, encryption, and other options based on your needs.
 
 1. Save and Run the Backup Job: Save the configuration and run the backup job to ensure it works as expected.
-
 

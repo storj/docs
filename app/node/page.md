@@ -35,14 +35,20 @@ Find out what you could earn for being part of the Storj Network
 
 Install the software that works best for you.
 
+### General Hardware
+
 {% quick-links %}
 {% quick-link title="⌨️ CLI Install" href="docId:rz3s9lC3qAQHYSl37ngBN" /%}
 
 {% quick-link title="🖥 GUI Install - Windows" href="docId:5shJebpS3baWj6LDV5ANQ" /%}
+{% /quick-links %}
 
+### Network Attached Storage (NAS) systems
+
+{% quick-links %}
+{% quick-link title="💻 TrueNAS Storage Node App" href="https://cdn.truenas.com/docs/scale/scaletutorials/apps/addstorjnode/" /%}
 {% quick-link title="💻 QNAP Storage Node App" href="docId:N-dnnf7HhHcOaavvXjplw" /%}
 
-{% quick-link title="💻 TrueNAS Storage Node App" href="https://cdn.truenas.com/docs/scale/scaletutorials/apps/addstorjnode/" /%}
 {% /quick-links %}
 
 ## 💻 Want to Contribute?

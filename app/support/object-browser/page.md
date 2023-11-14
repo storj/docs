@@ -70,15 +70,15 @@ When you drag and drop your file into the Satellite Admin Console Object Browser
 
 ## Deleting files
 
-1\. If you select the three vertical dots on the right side of a file, a popup menu will appear:
+1. If you select the three vertical dots on the right side of a file, a popup menu will appear:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/pEw5qFRbraYchiz0mtOv7_qsobject05.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/pEw5qFRbraYchiz0mtOv7_qsobject05.png)
 
-2\. Select the **Delete** command.
+2. Select the **Delete** command.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JRQ09me42z8yIy05hLLn0_qsobject06.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JRQ09me42z8yIy05hLLn0_qsobject06.png)
 
-3\. Confirm deletion with **Yes**.
+3. Confirm deletion with **Yes**.
 
 ## Creating buckets
 
@@ -100,15 +100,15 @@ After creating your new bucket, you will be placed into the bucket where you can
 
 ## Deleting buckets
 
-1\. Clicking the three vertical dots on the right side of the bucket, a popup menu will appear:
+1. Clicking the three vertical dots on the right side of the bucket, a popup menu will appear:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5YJzM4uQlX2DkoFIuyNp1_qsobject09.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5YJzM4uQlX2DkoFIuyNp1_qsobject09.png)
 
-2\. Click the **Delete** command
+2. Click the **Delete** command
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/awroxWO45F35KG6mW6zys_qsobject10.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/awroxWO45F35KG6mW6zys_qsobject10.png)
 
-3\. Type the **_Bucket Name_** and **Confirm Delete Bucket**.
+3. Type the **_Bucket Name_** and **Confirm Delete Bucket**.
 
 {% callout type="warning"  %}
 Be careful when deleting buckets - If you still have objects in the bucket being deleted, they will be deleted too!
@@ -135,11 +135,12 @@ The share link includes a rendering of where the pieces of your file are located
 ## Share a bucket
 
 1. Click the three vertical dots to the right of the bucket, a popup menu will appear
-![Share Bucket](https://link.storjshare.io/raw/juc6cqmbtg2qgaja6jzx67zfkjwa/docs/images/Share-Bucket.png)
+
+   ![Share Bucket](https://link.storjshare.io/raw/juc6cqmbtg2qgaja6jzx67zfkjwa/docs/images/Share-Bucket.png)
 
 2. Click the **Share Bucket** command
 
-![Share the link](https://link.storjshare.io/raw/jwkhjjn4le4udilzxbeoe3wj7iwa/docs/images/Share%20a%20link.png)
+   ![Share the link](https://link.storjshare.io/raw/jwkhjjn4le4udilzxbeoe3wj7iwa/docs/images/Share%20a%20link.png)
 
 3. Click the needed button to share the link
 

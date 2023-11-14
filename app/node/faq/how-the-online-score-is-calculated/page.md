@@ -11,7 +11,7 @@ In production, we have 12-hour windows and a 30-day tracking period, which trans
 
 So in one 12-hour window, if a storage node gets 1 offline audit and 10 total audits, the `online_score` _for that window_ will be 0.9. Then, the score for that window will be averaged with all the other windows in the 30-day tracking period to calculate the storage node's overall `online_score`. So if this storage node had perfect uptime outside of the 12-hour window mentioned above, the online score would be approximately
 
-(59 \* *1.0 + 1 \* *0.9)/60 = 0.99833
+(59 \* 1.0 + 1 \* 0.9)/60 = 0.99833
 
 The `online_score` is reported back to nodes not immediately but with some delay (up to 12 hours), so it may not drop until long after the downtime happened.
 

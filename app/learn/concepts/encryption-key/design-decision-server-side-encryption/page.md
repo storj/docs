@@ -18,6 +18,8 @@ Strong encryption is critical to decentralized projects especially where a signi
 
 It's also important to enable the broadest range of use cases for object storage, and some of those use cases rely on server-side encryption for privacy and security.
 
+## Server-side Encryption
+
 {% callout type="warning"  %}
 The Storj hosted S3-compatible gateway service uses server-side encryption, following the industry standard practices for managing access credentials.
 {% /callout %}

@@ -119,14 +119,7 @@ function HighlightQuery({ text, query }) {
 function SearchResult({ result, autocomplete, collection, query }) {
   let id = useId()
 
-  // TODO
-  let navigation = []
-  let sectionTitle = navigation.find((section) =>
-    section.links.find((link) => link.href === result.url.split('#')[0])
-  )?.title
-  let hierarchy = [sectionTitle, result.pageTitle, result.snippets].filter(
-    Boolean
-  )
+  let hierarchy = [result.pageTitle, result.snippets].filter(Boolean)
 
   return (
     <li
@@ -151,18 +144,9 @@ function SearchResult({ result, autocomplete, collection, query }) {
           className="mt-0.5 text-xs text-slate-500 dark:text-slate-400"
         >
           {hierarchy.map((item, itemIndex, items) => (
-            <Fragment key={itemIndex}>
+            <div className="mb-2" key={itemIndex}>
               <HighlightQuery text={item} query={query} />
-              <span
-                className={
-                  itemIndex === items.length - 1
-                    ? 'sr-only'
-                    : 'mx-2 text-slate-300 dark:text-slate-700'
-                }
-              >
-                /
-              </span>
-            </Fragment>
+            </div>
           ))}
         </div>
       )}

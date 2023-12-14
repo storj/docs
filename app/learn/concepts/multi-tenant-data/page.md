@@ -117,7 +117,7 @@ Summary of Project per Tenant configuration:
 - **Access Management:** No tenant can access data of other tenant unless explicitly shared; Tenants are logically isolated as it is not possible to create a single Access Grant credential that can perform operations on data in two different Projects
 - **Security:**  Encryption passphrase may be set at the Project level and is automated with hierarchically deterministic derivation; Project name is unencrypted for UI and invoicing, so data that may potentially contain user identifiable data should be Object Key/ Path Prefix-based to ensure it is encrypted; Advance usage allows granular encryption passphrase implementation at the Object-key or Bucket level
 - **Billing:**  Usage is aggregated at the bucket level, invoicing is at the project level
-- **Restrictions:** The default limit is 3 Projects per Account; the hard limit is 1,000 Projects per Account; Separate Projects may have different Placement Rules applied that restrict the storage nodes on which encrypted, erasure-coded pieces of data is stored associated with Buckets in that Project
+- **Restrictions:** The default limit is 3 Projects per Account; the hard limit is 80 Projects per Account; Separate Projects may have different Placement Rules applied that restrict the storage nodes on which encrypted, erasure-coded pieces of data is stored associated with Buckets in that Project
 
 ## Tenancy Model Comparison Matrix
 

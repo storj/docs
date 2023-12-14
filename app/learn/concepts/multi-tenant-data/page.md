@@ -52,7 +52,7 @@ The most straightforward approach to partitioning tenant data with Storj is to a
 
 With this approach, each tenant would be assigned a bucket that holds its data. This bucket would be given a name that uniquely associates it with the tenant.
 
-This model works well when you’re working with a smaller collection of tenants (tens or hundreds). However, it does not scale well for environments that need to support a much larger population of tenants. Storj has a default quota of 100 buckets and the hard quota of 10,000 buckets per Storj Project within an Account.
+This model works well when you’re working with a smaller collection of tenants (tens or hundreds). However, it does not scale well for environments that need to support a much larger population of tenants. Storj has a default quota of 100 buckets and the hard quota of 1,000 buckets per Storj Project within an Account.
 
 The other consideration here is bucket naming. Each bucket name must be unique within a Storj Project in your Storj account.  A bucket-per-tenant model would require a naming convention that ensured your tenant bucket names would support this requirement. Since bucket names are public, they are not encrypted and you should generally avoid using names that include tenant-specific information.
 
@@ -69,7 +69,7 @@ Summary of Bucket Per Tenant configuration:
 - **Access Management:** No tenant can access data of other tenant unless explicitly shared; An administrative Access Grant credential can perform any operation on any data in any bucket
 - **Security:**  Encryption passphrase is automated with hierarchically deterministic derivation; Bucket name is unencrypted for UI, so data that may potentially contain user identifiable data should be Object Key/ Path Prefix-based to ensure it is encrypted; Advance usage allows users to be allowed to choose encryption passphrase
 - **Billing:**  Usage is aggregated at the bucket level, invoicing is at the project level
-- **Restrictions:** The default limit is 100 buckets per Project; the hard limit is 10,000 Buckets per Project; Separate Buckets may have different Placement Rules applied that restrict the storage nodes on which encrypted, erasure-coded pieces of data is stored associated with that Bucket
+- **Restrictions:** The default limit is 100 buckets per Project; the hard limit is 1,000 Buckets per Project; Separate Buckets may have different Placement Rules applied that restrict the storage nodes on which encrypted, erasure-coded pieces of data is stored associated with that Bucket
 
 ## Multi-tenant Application - Object Key Path Prefix per Tenant
 

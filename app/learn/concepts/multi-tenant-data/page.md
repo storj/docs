@@ -81,7 +81,7 @@ Here, you will notice that two tenants are sharing a single bucket. Each tenant 
 
 In this model, using tenant-identifying information in the Object Key Path Prefix is acceptable as all Object Key Path Prefix data is encrypted.
 
-Note that it is possible to store data in an encrypted state but enable unencrypted metadata storage to support lexicographical sorting. Not that when using this option, it’s extremely important to be thoughtful about how authorization and access restrictions are implemented to avoid inadvertent disclosure of tenant-specific path-prefix information.
+Note that it is possible to store data in an encrypted state but enable unencrypted metadata storage to support lexicographical sorting. Note that when using this option, it’s extremely important to be thoughtful about how authorization and access restrictions are implemented to avoid inadvertent disclosure of tenant-specific path-prefix information.
 
 One challenge that can surface is that the activity for your S3 keys is unlikely to be evenly distributed across your tenants. In this model, you will need to separately monitor and meter usage per tenant. Storj does not aggregate usage information at the Object Key Path Prefix level.
 

@@ -1,5 +1,5 @@
 ---
-title: Multi-tenant Data Partitioning and Isolation/
+title: Multi-tenant Data Partitioning and Isolation
 docId: eisait3Wieso5tij
 metadata:
   title: Options for Multi-tenant Data Partitioning and Isolation

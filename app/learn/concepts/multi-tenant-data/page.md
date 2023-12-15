@@ -66,7 +66,7 @@ Summary of Bucket Per Tenant configuration:
 
 - **Solution Architecture:**  Tenant data in an application is stored in a single Bucket per tenant
 - **Provisioning:** Each tenant represented as a Bucket where usage data is separate, but within the same Project
-- **Access Management:** No tenant can access data of other tenant unless explicitly shared; An administrative Access Grant credential can perform any operation on any data in any bucket
+- **Access Management:** No tenant can access data of other tenants unless explicitly shared; An administrative Access Grant credential can perform any operation on any data in any bucket
 - **Security:**  Encryption passphrase is automated with hierarchically deterministic derivation; Bucket name is unencrypted for UI, so data that may potentially contain user identifiable data should be Object Key/ Path Prefix-based to ensure it is encrypted; Advance usage allows users to be allowed to choose encryption passphrase
 - **Billing:**  Usage is aggregated at the bucket level, invoicing is at the project level
 - **Restrictions:** The default limit is 100 buckets per Project; the hard limit is 1,000 Buckets per Project; Separate Buckets may have different Placement Rules applied that restrict the storage nodes on which encrypted, erasure-coded pieces of data is stored associated with that Bucket

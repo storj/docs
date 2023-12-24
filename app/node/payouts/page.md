@@ -38,24 +38,11 @@ Storage Node Fees will not be paid for the following Storage Node usage:
 
 The following table includes the current Storj Satellite payout rates.
 
-| **Satellite / Payment Category**                   | **Rates as of July 1st 2023** |
+| **Payment Category**                               | **Rates as of Dec 1st, 2023** |
 | -------------------------------------------------- | ----------------------------- |
-| **Non-production Satellite:** _saltlake.storj.io_  | &#xA;                         |
 | Storage (per TB Mo)                                | $1.50                         |
-| Egress (per TB)                                    | $2.50                         |
-| Audit/Repair (per TB)                              | $2.50                         |
-| **Production Satellite:** _asia-east-1.storj.io_   | &#xA;                         |
-| Storage (per TB Mo)                                | $1.50                         |
-| Egress (per TB)                                    | $6.00                         |
-| Audit/Repair (per TB)                              | $6.00                         |
-| **Production Satellite:** _europe-west-1.storj.io_ | &#xA;                         |
-| Storage (per TB Mo)                                | $1.50                         |
-| Egress (per TB)                                    | $6.00                         |
-| Audit/Repair (per TB)                              | $6.00                         |
-| **Production Satellite:** _us-central-1.storj.io_  | &#xA;                         |
-| Storage (per TB Mo)                                | $1.50                         |
-| Egress (per TB)                                    | $6.00                         |
-| Audit/Repair (per TB)                              | $6.00                         |
+| Egress (per TB)                                    | $2.00                         |
+| Audit/Repair (per TB)                              | $2.00                         |
 
 All payments are made pursuant to the terms specified in the [Node Operator Terms & Conditions](https://www.storj.io/node-operator-terms-conditions).
 

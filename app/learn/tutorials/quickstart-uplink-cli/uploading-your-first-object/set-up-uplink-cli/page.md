@@ -9,7 +9,7 @@ weight: 5
 
 1\. You need to have a satellite account and installed Uplink CLI as described in [](docId:TbMdOGCAXNWyPpQmH6EOq)
 
-2\. **Save the **[](docId:b4-QgUOxVHDHSIWpAf3hG)** to a file.** The Access Grant that you created in the web interface (or [](docId:OXSINcFRuVMBacPvswwNU)[CLI]()) needs to be saved to disk in a plain text file for simplicity (_for example - Mac terminal would not allow you to paste the whole access grant directly due terminal limitations_). Specify the path to the saved access grant in the following command (`~/Downloads/accessgrant.txt` _for example_).
+2\. **Save the **[](docId:b4-QgUOxVHDHSIWpAf3hG)** to a file.** The Access Grant that you created in the web interface (or [](docId:OXSINcFRuVMBacPvswwNU)) needs to be saved to disk in a plain text file for simplicity (_for example - Mac terminal would not allow you to paste the whole access grant directly due terminal limitations_). Specify the path to the saved access grant in the following command (`~/Downloads/accessgrant.txt` _for example_).
 
 3\. **Import** Access Grant.
 
@@ -22,7 +22,7 @@ weight: 5
 For security reasons it's better to use a casual user to work from the CLI, thus please run PowerShell as a casual user, not as an Administrator.
 {% /callout %}
 
-Navigate to the directory your **uplink.exe** file is located (Check the FAQ: [](docId:4qPQxa8HlvDIO1Kgqa2No) for instructions):
+Navigate to the directory your **uplink.exe** file is located (Check the [](docId:4qPQxa8HlvDIO1Kgqa2No) for instructions):
 
 ```Text
 ./uplink.exe access import main accessgrant.txt

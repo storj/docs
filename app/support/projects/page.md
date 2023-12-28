@@ -65,3 +65,51 @@ If you believe that you need to remove it anyway, then please remove all data an
 {% callout type="warning"  %}
 We do not have an access to your data and Access Grants, because they are encrypted, and cannot remove your data on your behalf. So, please, remove them yourself before file a support request. We will ask you to do so anyway.
 {% /callout %}
+
+## Manage Passphrase
+
+You may manage your [Passphrase](docId:M-5oxBinC6J1D-qSNjKYS#encryption-key) used for [Buckets](docId:4oDAezF-FcfPr0WPl7knd) view.
+
+![](https://link.storjshare.io/raw/jvqobk4svumlsdxgn66o4heyi75q/docs%2Fimages%2FManage%20Passphrase%202023-12-28%20102824.png)
+
+The **Manage Passphrase** window will allow you to:
+* [Create a new Passphrase](#create-a-new-passphrase)
+* [Switch current Passphrase](#switch-the-current-passphrase)
+* [Clear saved Passphrase](#clear-the-saved-passphrase)
+
+![](https://link.storjshare.io/raw/ju5pajakxkq6iykj33fueoyzwjya/docs%2Fimages%2FManage%20Passphrase%20-%20choice%202023-12-28%20103213.png)
+
+### Create a new Passphrase
+
+![](https://link.storjshare.io/raw/jvodweijki7eso7z2u4rd2oawika/docs%2Fimages%2FCreate%20a%20new%20passphrase%202023-12-28%20103850.png)
+
+After click the **Continue** button you will have a choice how do you want to provide your Encryption Passphrase:
+* [Generate a 12-words Encryption Passphrase](#generate-12-word-passphrase)
+* [Enter your own Encryption Passphrase](#enter-a-new-passphrase)
+
+![](https://link.storjshare.io/raw/jwutrovcovetzu3lhi7j2wxgfgxq/docs%2Fimages%2FEncryption%20Passphrase%202023-12-28%20104218.png)
+
+#### Generate 12-word passphrase
+![](https://link.storjshare.io/raw/jx57khok3xb4t52trdjmjhhrammq/docs%2Fimages%2FPassphrase%20Generated%202023-12-28%20104455.png)
+
+Now you may:
+* **Copy** the generated Passphrase
+* **Download** the generated Passphrase
+* **Show Passphrase**
+
+You need to select a checkbox **[ ] Yes, I saved my encryption passphrase** to **Continue**
+
+#### Enter a new passphrase
+![](https://link.storjshare.io/raw/jw34uudu6bmdzycjed7vr726rxzq/docs%2Fimages%2FEnter%20Passphrase%202023-12-28%20105653.png)
+
+You should enter your own Encryption Passphrase (or a previously used), select a checkbox **[ ] Yes, I saved my encryption passphrase** to **Continue**
+
+### Switch the current Passphrase
+![](https://link.storjshare.io/raw/jubisqg4sjzbk7t7nx3w4bzjavya/docs%2Fimages%2FSwitch%20Passphrase%202023-12-28%20110317.png)
+
+You should enter your own Encryption Passphrase (or a previously used) to **Continue**
+
+### Clear the saved Passphrase
+![](https://link.storjshare.io/raw/jwzhuxi7onvp7jc7cfgdipnlmqra/docs%2Fimages%2FClear%20my%20passphrase%202023-12-28%20110818.png)
+
+Click the **Continue** button to clear your currently saved Encryption Passphrase

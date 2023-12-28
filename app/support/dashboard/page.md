@@ -33,9 +33,9 @@ On the Project Dashboard, there are a number of navigational elements and inform
 
 4. **Bandwidth Utilization** - This element displays the amount of download bandwidth utilized in the current month measured in GB.
 
-5. **Project Details** - This element displays the number of users added to a project, the number of [](docId:XKib9SzjtEXTXWvdyYWX6), the current number of[](docId:M-5oxBinC6J1D-qSNjKYS) and the estimated charge for the current month; see [](docId:59T_2l7c1rvZVhI8p91VX).
+5. **Project Details** - This element displays the number of users added to a project, the number of [](docId:XKib9SzjtEXTXWvdyYWX6), the current number of [Buckets](docId:M-5oxBinC6J1D-qSNjKYS#bucket) and the estimated charge for the current month; see [](docId:59T_2l7c1rvZVhI8p91VX).
 
-6. **Bucket Information** - This element displays the names of [](docId:M-5oxBinC6J1D-qSNjKYS) , the current month usage on Buckets and the number of objects in Buckets.
+6. **Bucket Information** - This element displays the names of [Buckets](docId:M-5oxBinC6J1D-qSNjKYS#bucket), the current month usage on Buckets and the number of objects in Buckets.
 
 Here are some links to help you get a better understanding of your Satellite Admin Console and Storj DCS constructs:
 

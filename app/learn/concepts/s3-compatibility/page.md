@@ -20,7 +20,7 @@ Storj offers two options for S3 compatibility:
 
 2.  [](docId:EGM8O-1xt2Az03eBWT8Rf): Self-hosted S3 Compatible Binary (run your own S3 endpoint)
 
-The latest compatibility can be found in [the compatibility table for GatewayST in our GitHub repo](https://github.com/storj/gateway-st/blob/main/docs/s3-compatibility.md).
+The latest compatibility can be found in [the S3 compatibility table](docId:eZ4caegh9queuQuaazoo).
 
 ## When to use GatewayMT
 

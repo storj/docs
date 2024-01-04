@@ -21,7 +21,7 @@ When Amazon launched its S3 service 15 years ago and created the cloud storage i
 
 Amazon S3 is accessed via APIs, most of which rely on the HTTP protocol and XML serialization. By making a storage system compatible with these APIs, it makes it much easier for users to migrate to new services without much effort. All you have to do is point files to the new buckets and migrate any static data you’d like to keep. For example, core features such as basic upload and download, of course, should map quite easily to the new ecosystem, including systems like Storj. We support organizing objects by bucket and key, all HTTP verbs including HEAD, byte-range fetches, as well as uploading files in multiple parts.
 
-See [the compatibility table for GatewayST](https://github.com/storj/gateway-st/blob/main/docs/s3-compatibility.md) and [S3-compatibility list of GatewayMT](https://github.com/storj/gateway-mt/blob/main/docs/gateway-mt.md#s3-api-compatibility).
+See the latest S3-compatibility in [the S3 compatibility table](docId:eZ4caegh9queuQuaazoo) and [S3-compatibility list of GatewayMT](https://github.com/storj/gateway-mt/blob/main/docs/gateway-mt.md#s3-api-compatibility).
 
 ### Security and encryption
 

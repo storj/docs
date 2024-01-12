@@ -76,7 +76,8 @@ Direct Download
 {% /tab %}
 
 {% tab label="macOS" %}
-**Intel**
+**Intel Mac**
+
 Curl Download
 
 ```bash
@@ -90,6 +91,9 @@ Direct Download
 [macOS Intel Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip)
 
 **Apple Silicon**
+
+Curl Download
+
 ```bash
 curl -L https://github.com/storj/storj/releases/latest/download/uplink_darwin_arm64.zip -o uplink_darwin_arm64.zip
 unzip -o uplink_darwin_arm64.zip

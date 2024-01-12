@@ -76,6 +76,8 @@ Direct Download
 {% /tab %}
 
 {% tab label="macOS" %}
+**Intel Mac**
+
 Curl Download
 
 ```bash
@@ -86,7 +88,21 @@ sudo install uplink /usr/local/bin/uplink
 
 Direct Download
 
-[macOS Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip)
+[macOS Intel Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip)
+
+**Apple Silicon**
+
+Curl Download
+
+```bash
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_darwin_arm64.zip -o uplink_darwin_arm64.zip
+unzip -o uplink_darwin_arm64.zip
+sudo install uplink /usr/local/bin/uplink
+```
+
+Direct Download
+
+[macOS Apple Silicon Uplink Binary](https://github.com/storj/storj/releases/latest/download/uplink_darwin_arm64.zip)
 
 {% /tab %}
 {% /tabs %}

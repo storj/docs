@@ -69,7 +69,7 @@ VirtualBox prior to version 4.3.30 cannot be installed. If you have a newer vers
 {% tab label="Windows" %}
 Windows 8, Windows Server 2012 or later.
 
-**If you are currently running a storage node on Windows using the Docker desktop, it will require good monitoring. If you are still running a node with Docker, your node may go offline randomly and require restarting your node, so it is recommended you switch to the **[](docId:5shJebpS3baWj6LDV5ANQ).
+**If you are currently running a storage node on Windows using the Docker desktop, it will require good monitoring. If you are still running a node with Docker, your node may go offline randomly and require restarting your node, so it is recommended you switch to the** [](docId:5shJebpS3baWj6LDV5ANQ).
 [](docId:jA6Jl8XzCR1nc4_WyJj1a)
 {% /tab %}
 {% /tabs %}
@@ -90,3 +90,29 @@ It is highly recommended to have your Storage Node connected via LAN instead of 
 ## Power Supply
 
 If you live in a location where power outages or brownouts are a frequent occurrence, please consider protecting your hardware, including the equipment you run your node on, as well as your router/modem, with an Uninterrupted Power Supply (UPS). This would help protect against damage to your hardware and against the corruption of your database resulting from abrupt shutdowns, which could lead to the unrecoverable loss of your node.
+
+## Information for consideration
+
+We do not recommend to invest to anything with purpose only for Storj, it's better to use what you have now and what will be online with Storj or without.
+The usage depends on the Customers, not on the hardware or configuration options, thus usage is not predictable.
+However, it's not a requirement, make your own decision.
+
+{% callout type="warning"  %}
+A network-attached storage location may work, but this is neither supported nor recommended!
+Please consider to run the node directly on your file server/NAS instead.
+If that is not possible for some reason, then take into consideration, that the only working network protocol for storage is iSCSI.
+{% /callout %}
+
+* exFAT filesystem is better to be avoided, it has a big cluster size, so the actually used space will differ from the accounted used space, each file will consume at least 128kiB of disk space, so you may end with 50% of usage and full disk.
+Please consider to backup all data and reformat this disk to a native filesystem for your OS (NTFS for Windows or ext4 for Linux) and restore your data back.
+* The single BTRFS/zfs pool may work poorly without a proper tuning and caching (RAM or adding an SSD cache), you may also have issues with a [discrepancy between used and reported space](https://forum.storj.io/t/disk-usage-discrepancy/24715?u=alexey), however it's only information for consideration, not a requirement.
+* If you use RAID, please consider to do not use RAID without a redundancy (RAID0, striped volume, concatenated volume, merged JBOD, MergeFS, simple LVM volume, simple MDRAID, simple MDRAID + BTRFS, simple zfs pool, simple Storage Space in Windows Storage Spaces, etc.) for storagenode data - with one disk failure the whole node is gone.
+Please note, the RAID with parity usually works as slow as a slowest disk in the pool, so it's not advisable to run more than one node on such pool, they inevitable will affect each other, makes them all slow.
+RAID with parity may be tuned and improved with RAM/SSD cache in expense of the additional costs.
+You may also have a [usage discrepancy issue](https://forum.storj.io/t/disk-usage-discrepancy/24715?u=alexey) as well.
+See also [**RAID vs No RAID choice** thread on the forum](https://forum.storj.io/t/raid-vs-no-raid-choice/6776).
+However, all this is not a requirement.
+* Using NTFS under Linux is not recommended - it works slowly in 2-3 times than ext4 and may be corrupted due to not fully compatibility of the NTFS implementation under Linux, you likely will need to re-attach it from time to time to the Windows PC to check and fix the corrupted file system (this check under Linux rarely can fix all issues), it may also have a [usage discrepancy issue](https://forum.storj.io/t/disk-usage-discrepancy/24715?u=alexey) as well.
+So it's better to use a native filesystem for your OS: NTFS for Windows, ext4 for Linux.
+In almost all cases you need to backup all data, reformat to the native filesystem and restore data back.
+However, this is not a requirement.

@@ -69,7 +69,7 @@ VirtualBox prior to version 4.3.30 cannot be installed. If you have a newer vers
 {% tab label="Windows" %}
 Windows 8, Windows Server 2012 or later.
 
-**If you are currently running a storage node on Windows using the Docker desktop, it will require good monitoring. If you are still running a node with Docker, your node may go offline randomly and require restarting your node, so it is recommended you switch to the **[](docId:5shJebpS3baWj6LDV5ANQ).
+**If you are currently running a storage node on Windows using the Docker desktop, it will require good monitoring. If you are still running a node with Docker, your node may go offline randomly and require restarting your node, so it is recommended you switch to the** [](docId:5shJebpS3baWj6LDV5ANQ).
 [](docId:jA6Jl8XzCR1nc4_WyJj1a)
 {% /tab %}
 {% /tabs %}

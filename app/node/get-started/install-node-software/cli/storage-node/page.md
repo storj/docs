@@ -85,7 +85,7 @@ docker run --rm -e SETUP="true" --mount type=bind,source="<identity-dir>",destin
 ## Step 3. Run the Storage Node
 
 {% callout type="warning"  %}
-**Previous versions of the command that used the rather than the option will not work properly. Copy the updated command below.**
+**Previous versions of the command that used the `-v` option rather than the `--mount type=bind` option will not work properly. Copy the updated command below.**
 {% /callout %}
 
 {% tabs %}

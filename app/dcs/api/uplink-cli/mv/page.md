@@ -29,14 +29,26 @@ The `mv` command is used to move or rename objects within the same Storj DCS pro
 
 ## Flags
 
-| Flag              | Description                                         |
-| :---------------- | :-------------------------------------------------- |
-| `--access string` | the serialized access, or name of the access to use |
-| `--help`, `-h`    | help for mv                                         |
+| Flag                    | Description                                                       |
+| :---------------------- | :---------------------------------------------------------------- |
+| `--access string`       | the serialized access, or name of the access to use               |
+| `-r, --recursive`       | Move all objects or files under the specified prefix or directory |
+| `-p, --parallelism int` | Controls how many objects will be moved in parallel (default 1)   |
+| `--dryrun`              | Print what operations would happen but don't execute them         |
+| `--progress`            | Show a progress bar when possible (default true)                  |
+| `--help`, `-h`          | help for mv                                                       |
+
+## Global Flags
+
+| Flag                  | Description                                                                         |
+| :-------------------- | :---------------------------------------------------------------------------------- |
+| `--config-dir string` | Directory that stores the configuration (default "/home/user/.config/storj/uplink") |
+| `--summary`           | prints a summary of what commands are available                                     |
+| `--advanced`          | when used with -h, prints advanced flags help                                       |
 
 ## Examples
 
-## Move an object within an existing bucket
+### Move an object within an existing bucket
 
 When the `mv` command is used to move a file within Storj DCS, the CLI will move (rename) the object using the server-side method to rename the object.
 

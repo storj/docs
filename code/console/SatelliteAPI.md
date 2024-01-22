@@ -47,3 +47,9 @@ Depending on the answers to the above questions, it may be necessary to do one o
 * discuss with product, design, and/or marketing teams about whether it is necessary to collect the information
 * sanitize the input before it is stored in the database or sent in an email (this should be avoided if possible, because there are almost always edge cases with sanitization, and being too restrictive can be a problem for users who use non-English characters)
 
+### Response Data
+
+The type of data returned by endpoints varies a lot, but there are some general guidelines we should follow for all endpoints:
+* do not ever return fields with sensitive authentication data to the client-side (e.g. password hashes, MFA secrets)
+* if data can be retrieved by multiple users on a project, it should only return the information that is necessary for the feature, and should not include any potentially private user information
+* if the data returned is derived from a Go type, `json` annotations should be added to all the fields on the struct, with explicit exclusion of sensitive fields (`json:"-"` for fields that should not be returned to the client) 

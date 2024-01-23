@@ -9,7 +9,7 @@ metadata:
     setup, Prometheus and Grafana configuration.
 ---
 
-This guide assists commercial Storage Node operators in setting up advanced monitoring using Prometheus and Grafana. There are alternative monitoring tools that also will work. Consider the following as guidelines rather than a strict requirement for how it do it.
+This guide assists commercial Storage Node operators in setting up advanced monitoring using Prometheus and Grafana. There are alternative monitoring tools that also will work. Consider the following as guidelines rather than a strict requirement for how to do it.
 
 {% callout type="danger" %}
 
@@ -24,7 +24,7 @@ This guide is for Commerical Storage Nodes, if you're looking to join the public
 
 ## Metrics
 
-Storage nodes have a Prometheus metrics endpoint that can be scraped periodically Prometheus for better insight to the health of your network.
+Storage nodes have a Prometheus metrics endpoint that can be scraped periodically for better insight on the health of your network.
 
 To enable the endpoint set the `STORJ_DEBUG_ADDR` or `--debug.addr` flag for each Storage node (incrementing the port by 1 if multiple nodes are on the same machine).
 
@@ -32,11 +32,11 @@ To enable the endpoint set the `STORJ_DEBUG_ADDR` or `--debug.addr` flag for eac
 STORJ_DEBUG_ADDR=127.0.0.1:6000
 ```
 
-Visit 127.0.0.1:6000 for an overview page of monitoring capabilities. More specifically the `/metrics` endpoint can be view for more specific overview of what is available
+Visit 127.0.0.1:6000 for an overview page of monitoring capabilities. More specifically, the `/metrics` endpoint can be viewed for a more specific overview of what is available
 
 ### Prometheus configuration
 
-Next create a `prometheus.yaml` configured to scrape the Storage nodes in your network.
+Next, create a `prometheus.yaml` configured to scrape the Storage nodes in your network.
 
 List each Storage Node's debug address and port as targets.
 
@@ -88,7 +88,7 @@ Login to Grafana by visiting <http://localhost:3000> (username and password is `
 
 ### Connect Prometheus to your Grafana instance
 
-In order to view the metrics data in Grafana, you'll need to create a new Prometheus data source.
+To view the metrics data in Grafana, you'll need to create a new Prometheus data source.
 
 1. Click **Add new connection** from the left sidebar under connections.
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/grafana-add-new-data-source.png)

@@ -53,116 +53,58 @@ Request [a demo of Miria](https://www.atempo.com/demo-request/) or [contact Atem
 
 ---
 
-### Create a Storj Account
+## Set up Storj
 
-To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
+### Create an Account
 
-Navigate to <https://storj.io/signup> to sign up. Enter your full name, email address, and a password, as shown below:
+To begin, you will need to create a Storj account.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
+Navigate to <https://storj.io/signup?partner=atempo> to sign up, or log in <https://storj.io/login> if you already have an account.
 
 ### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 
-1\. Navigate to “Buckets” on the left side menu.
-
-2\. Click “New Bucket” on the top right.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
-
-3\. Assign the bucket an easily identifiable name, such as "my-bucket".
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
-
-4\. Click **Create bucket**
+{% partial file="create-bucket.md" /%}
 
 ### Generate S3 credentials
 
-Storj has an Amazon S3 compatible API and you'll need generate S3 credentials to use it. S3 credentials consist of an **access key**, **secret key**, and **endpoint**.
-
-Create S3 credentials in the Storj web console:
-
-1\. Navigate to **Access** on the left side menu.
-
-2\. Click **Create S3 Credentials** under the S3 Credentials block.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
-
-3\. When the Create Access screen comes up, set specifications according to the following guidelines:
-
-- **Type:** S3 Credentials
-
-- **Name:** The name of the credentials (e.g. my-access)
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
-
-4\. Click **Continue** to provide permissions
-
-- **Permissions:** All
-
-- **Buckets:** Feel free to specify the bucket you created above (e.g. my-bucket), or leave as “All”
-
-- **End date**: provide an expiration date for these credentials (optional)
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
-
-5\. Click **Continue** to provide Access encryption Information
-
-- **Use the current passphrase**: this is default option
-
-- **Advanced**: you may provide a different encryption phrase either your own or generate a new one.
-
-  - **Enter a new passphrase**: use this option, if you would like to provide your own new encryption phrase
-
-  - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
-
-{% callout type="warning"  %}
-In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
-{% /callout %}
-
-6\. Click **Create Access** to finish creation of your S3 credentials
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
-
-7\. Click **Confirm** the Confirm details pop-up message
-
-8\. Your S3 credentials are created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
+{% partial file="s3-credentials.md" /%}
 
 ---
 
-## Integrating Miria with Storj
+## Integrating Atempo (Miria) with Storj
 
-### Miria Configuration
+1. Log into the Miria web UI.
 
-1\. Log into the Miria web UI. In the left panel, select **Infrastructure**, then **Object Storages**.
+1. Select **Infrastructure** in the left panel
 
-2\. Select **New Storage Manager**.
+1. Select **Object Storages**.
 
-3\. Choose "Storj" or "General Storage" in the** Storage Manager Type **dropdown list.
+1. Select **New Storage Manager**.
 
-5\. Click **Next**.
+1. Choose "Storj" or "General Storage" in the **Storage Manager Type** dropdown list.
 
-6\. Enter a name for your **Storage Manager**, such as Storj, and the appropriate **Storj service URL** into the **Configuration **part. Click Create.
+1. Click **Next**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zM2lJCGBJZOFUWbZW7fPc_0.png)
+1. Enter a name for your **Storage Manager**, such as Storj, and the appropriate **Storj service URL** into the **Configuration** part.
 
-7\. Now, you will need the S3 credentials generated earlier. Enter the **access key** in the **Access Key ID** field\*\* **and the **secret key** in the **Secret Access Key\*\* field.
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zM2lJCGBJZOFUWbZW7fPc_0.png)
 
-8\. If desired, enable the** Data compression** checkbox to optimize the size of data stored in the Object Storage.
+1. Click **Create**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/KApbFdOcEAxy0sPeG-Xyr_2.png)
+1. Enter the **access key** in the **Access Key ID** field and the **secret key** in the **Secret Access Key** field with the S3 credentials generated previously.
 
-9\. The new **Storage Manager Container **is ready for data storage. You can store backups, archives, tiered data, or synchronized files from primary storage.
+1. If desired, enable the **Data compression** checkbox to optimize the size of data stored in the Object Storage.
 
-## Success!
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/KApbFdOcEAxy0sPeG-Xyr_2.png)
 
-1\. Create a new **project**.
+1. The new **Storage Manager Container** is ready for data storage.
 
-2\. Configure **Start the task** and check its progression.
+   You can store backups, archives, tiered data, or synchronized files from primary storage.
 
-12\. Once the task is complete, you should see the **files** and **folders** on your Storj account inside the **storj-miria-bucket**.
+1. Create a new **project**.
+
+1. Configure **Start the task** and check its progression.
+
+1. Once the task is complete, you should see the **files** and **folders** on your Storj account inside **my-bucket**.

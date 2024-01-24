@@ -43,83 +43,25 @@ For more details, see <https://www.acronis.com/en-us/products/>
 
 ---
 
-## Create a Storj Account
+## Set up Storj
+
+### Create an Account
 
 To begin, you will need to create a Storj account.
 
-Navigate to <https://us1.storj.io/signup?partner=acronis> to sign up, or log in <https://storj.io/login> if you already have an account.
+Navigate to <https://storj.io/signup?partner=acronis> to sign up, or log in <https://storj.io/login> if you already have an account.
 
 ### Create a Bucket
 
 Once you have your Storj account you can create a bucket for your data to be stored in.
 
-1\. Navigate to “Buckets” on the left side menu.
-
-2\. Click “New Bucket” on the top right.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
-
-3\. Assign the bucket an easily identifiable name, such as "my-bucket".
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
-
-4\. Click **Create bucket**
+{% partial file="create-bucket.md" /%}
 
 ### Generate S3 credentials
 
-Storj has an Amazon S3 compatible API and you'll need generate S3 credentials to use it. S3 credentials consist of an **access key**, **secret key**, and **endpoint**.
+{% partial file="s3-credentials.md" /%}
 
-Create S3 credentials in the Storj web console:
-
-1\. Navigate to **Access** on the left side menu.
-
-2\. Click **Create S3 Credentials** under the S3 Credentials block.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
-
-3\. When the Create Access screen comes up, set specifications according to the following guidelines:
-
-- **Type:** S3 Credentials
-
-- **Name:** The name of the credentials (e.g. my-access)
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
-
-4\. Click **Continue** to provide permissions
-
-- **Permissions:** All
-
-- **Buckets:** Feel free to specify the bucket you created above (e.g. my-bucket), or leave as “All”
-
-- **End date**: provide an expiration date for these credentials (optional)
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
-
-5\. Click **Continue** to provide Access encryption Information
-
-- **Use the current passphrase**: this is default option
-
-- **Advanced**: you may provide a different encryption phrase either your own or generate a new one.
-
-  - **Enter a new passphrase**: use this option, if you would like to provide your own new encryption phrase
-
-  - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
-
-{% callout type="warning"  %}
-In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
-{% /callout %}
-
-6\. Click **Create Access** to finish creation of your S3 credentials
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
-
-7\. Click **Confirm** the Confirm details pop-up message
-
-8\. Your S3 credentials are created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
+---
 
 ## Connecting to Storj via Backup Gateway
 
@@ -127,47 +69,47 @@ Before proceeding, ensure the destination storage has enough space for backups.
 
 To set up Backup Gateway, do the following:
 
-1\. On the **INFRASTRUCTURE** > **Networks** screen, make sure that the **ABGW private** and **ABGW public** traffic types are added to your networks.
+1.  On the **INFRASTRUCTURE** > **Networks** screen, make sure that the **ABGW private** and **ABGW public** traffic types are added to your networks.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Zzfpt2JpXnvew_u57s4Em_screenshot-2023-03-08-at-15302-pm.png)
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Zzfpt2JpXnvew_u57s4Em_screenshot-2023-03-08-at-15302-pm.png)
 
-2\. In the left menu, click **STORAGE SERVICES** > **Backup storage**.
+2.  In the left menu, click **STORAGE SERVICES** > **Backup storage**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/VcMLWnSaqkHs9Rt_KV-rn_screenshot-2023-03-08-at-15353-pm.png)
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/VcMLWnSaqkHs9Rt_KV-rn_screenshot-2023-03-08-at-15353-pm.png)
 
-3\. Click **Create backup storage**.
+3.  Click **Create backup storage**.
 
-4\. Select **Public cloud** and click **next.**
+4.  Select **Public cloud** and click **next.**
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5xj9hChjVLwVJs5QpOL-U_screenshot-2023-03-08-at-15443-pm.png)
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5xj9hChjVLwVJs5QpOL-U_screenshot-2023-03-08-at-15443-pm.png)
 
-5\. Select the node(s) to run the gateway services on and click **Next.
-**
+5.  Select the node(s) to run the gateway services on and click **Next.
+    **
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hnehZ46GqDA6tjCM2A0YU_screenshot-2023-03-08-at-15521-pm.png)
+        ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hnehZ46GqDA6tjCM2A0YU_screenshot-2023-03-08-at-15521-pm.png)
 
-6\. Configure Public cloud with the following in their respective fields:
+6.  Configure Public cloud with the following in their respective fields:
 
-- **Object Storage type**: Select AuthV2 compatible (S3).
+    - **Object Storage type**: Select AuthV2 compatible (S3).
 
-- **Endpoint URL**: <https://gateway.storjshare.io>
+    - **Endpoint URL**: <https://gateway.storjshare.io>
 
-- **Access Key**: Enter the access key from the S3 credentials you generated in Storj.
+    - **Access Key**: Enter the access key from the S3 credentials you generated in Storj.
 
-- **Secret Key**: Enter the secret key from the S3 credentials you generated in Storj.
+    - **Secret Key**: Enter the secret key from the S3 credentials you generated in Storj.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/nrSFaE1HABH7hiU1PYavW_screenshot-2023-06-20-at-24524-pm.png)
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/nrSFaE1HABH7hiU1PYavW_screenshot-2023-06-20-at-24524-pm.png)
 
-7\. Click **Next** on the Storage policy.
+7.  Click **Next** on the Storage policy.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ysUUNOfYk4qJY7M-1Yw5H_screenshot-2023-03-08-at-20100-pm.png)
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ysUUNOfYk4qJY7M-1Yw5H_screenshot-2023-03-08-at-20100-pm.png)
 
-8\. Sign in to your Acronis account and click **Next**.
+8.  Sign in to your Acronis account and click **Next**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/SMydqxrJiWu53hMoIbliJ_screenshot-2023-03-08-at-20344-pm.png)
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/SMydqxrJiWu53hMoIbliJ_screenshot-2023-03-08-at-20344-pm.png)
 
-9\. Click **Create.**
+9.  Click **Create.**
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4vrgngJbaH5JLjl4HyFql_screenshot-2023-03-08-at-24028-pm.png)
+    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4vrgngJbaH5JLjl4HyFql_screenshot-2023-03-08-at-24028-pm.png)
 
-You now should be able to use Storj as a backup destination.
+    You now should be able to use Storj as a backup destination.

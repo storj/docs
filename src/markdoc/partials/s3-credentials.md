@@ -11,7 +11,6 @@ Create S3 credentials in the Storj console:
 3. When the Create Access screen comes up, set specifications according to the following guidelines:
 
    - **Type:** S3 Credentials
-
    - **Name:** The name of the credentials (e.g. my-access)
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/s3_credentials_2.png)
@@ -19,9 +18,7 @@ Create S3 credentials in the Storj console:
 4. Click **Continue** to provide permissions
 
    - **Permissions:** All
-
    - **Buckets:** Feel free to specify the bucket you created above (e.g. my-bucket), or leave as “All”
-
    - **End date**: provide an expiration date for these credentials (optional)
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/s3_credentials_3.png)
@@ -32,11 +29,8 @@ Create S3 credentials in the Storj console:
    {% /callout %}
 
    - **Use the current passphrase**: this is default option
-
    - **Advanced**: you may provide a different encryption phrase either your own or generate a new one.
-
      - **Enter a new passphrase**: use this option, if you would like to provide your own new encryption phrase
-
      - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/s3_credentials_4.png)

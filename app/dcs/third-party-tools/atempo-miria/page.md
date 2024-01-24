@@ -16,13 +16,9 @@ metadata:
 [Atempo](https://www.atempo.com/) is a leading software vendor providing data management solutions to companies worldwide. Miria is an open solution from Atempo that provides high-performance backup, movement, synchronization, and archiving for large data sets from heterogeneous sources. It delivers vendor-agnostic solutions for petascale NAS and cloud environments and has five pillars:
 
 - Analytics
-
 - Migration
-
 - Data backup
-
 - Data archiving
-
 - Synchronization
 
 For more information, visit <https://www.atempo.com/solutions/hybrid-nas-storage-synchronizations/#>
@@ -42,11 +38,8 @@ To integrate Miria with Storj, you must create S3 credentials for Miria in Storj
 ### Requirements
 
 - An active Storj account, or you can sign up here <https://us1.storj.io/signup?partner=atempo>
-
 - A bucket for Miria in your Storj instance
-
 - An instance of Miria 2021 or newer
-
 - Access to the Miria Web UI
 
 Request [a demo of Miria](https://www.atempo.com/demo-request/) or [contact Atempo for pricing.](https://www.atempo.com/contact-atempo/)

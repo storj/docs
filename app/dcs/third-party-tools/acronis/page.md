@@ -30,13 +30,9 @@ The integration between Storj and Acronis is achieved through the S3 protocol, w
 To integrate Acronis with Storj, you will need:
 
 - An active Storj account
-
 - A bucket for Acronis in your Storj account
-
 - Storj S3 compatible credentials
-
 - Acronis Cyber Infrastructure instance (see [here](https://dl.acronis.com/u/software-defined/html/AcronisCyberInfrastructure_5_4_abgw_quick_start_guide_for_amazon_s3_ec2_en-US/#launching-the-instance.html))
-
 - [Partner Account Access](https://www.acronis.com/en-us/partners/registration/) to the Acronis web interface for configuration and management
 
 For more details, see <https://www.acronis.com/en-us/products/>
@@ -83,8 +79,7 @@ To set up Backup Gateway, do the following:
 
     ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5xj9hChjVLwVJs5QpOL-U_screenshot-2023-03-08-at-15443-pm.png)
 
-5.  Select the node(s) to run the gateway services on and click **Next.
-    **
+5.  Select the node(s) to run the gateway services on and click **Next**
 
         ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hnehZ46GqDA6tjCM2A0YU_screenshot-2023-03-08-at-15521-pm.png)
 

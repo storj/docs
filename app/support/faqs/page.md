@@ -36,8 +36,6 @@ cd ~
 
 {% /callout %}
 
-##
-
 ## How do I upload a file?
 
 You can upload your first object by following our documentation [](docId:R8xZNlt1dr3nZzo-_ZQLx).
@@ -68,8 +66,6 @@ e.g. `https://link.ap1.storjshare.io/s/<access key>/my/path`
 Please, think twice before using the described method above - it exposes your access grant. If you would like to use this method anyway, then make sure to limit the access as much as possible. Ideally - read-only with time duration and only to one or two objects/paths, not to the whole bucket!
 {% /callout %}
 
-## /
-
 ## Can I use Storj DCS for web hosting?
 
 The Storj DCS service allows you to **host static websites** along with multimedia streaming, large file distribution, and other web-delivered assets.
@@ -84,15 +80,11 @@ There are a few ways you can host your static site on Storj DCS. We recommend us
 **Dynamic websites** use server-side processing to generate the underlying code behind each page. They support Create, Read, Update, Delete operations against a database. Web views can be custom rendered to each user.
 {% /callout %}
 
-##
-
 ## What happens if nodes go offline?
 
 When your data is uploaded, each object is encrypted, then broken into 64 MB Segments, then each Segment is erasure coded, meaning it's broken into 80 pieces, of which only 29 are required to reconstitute an object or segment. Each of those 80 pieces is then uploaded directly, peer-to-peer, to statistically uncorrelated storage nodes. The erasure coded redundancy means that 51 of those nodes (operated by different people, in different locations, with different power supplies and internet connections. If too many nodes fail or leave the network, the network can repair the missing pieces.
 
 You can learn more under Concepts for [](docId:CBMEVO2vA2lDZ_BVuZ9aP) and [](docId:z4JgCuivlGbnn4YQMmlVX).
-
-##
 
 ## How are encryption keys managed?
 
@@ -150,8 +142,6 @@ For some sample Go code around access-restriction, check out: <https://godoc.org
 
 When you decide to become a paid customer of Storj DCS, you can choose to pay with a credit card or using STORJ token. The process for adding a payment method is covered in [](docId:59T_2l7c1rvZVhI8p91VX).
 
-##
-
 ## What are the current rate and usage limits?
 
 The default usage limits for a new account are published on the [](docId:Zrbz4XYhIOm99hhRShWHg) section under Concept.
@@ -185,8 +175,6 @@ Buckets can be created and deleted using the S3-compatible gateway, CLI, or Go l
 - [Delete a bucket using the Go library](https://pkg.go.dev/storj.io/uplink#Project.DeleteBucket)
 
 - [](docId:AsyYcUJFbO1JI8-Tu8tW3)
-
-##
 
 ## How do I delete all my data?
 

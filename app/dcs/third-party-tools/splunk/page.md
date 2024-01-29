@@ -144,7 +144,6 @@ Name this volume Storj and specify credentials underneath.
 
 - For the `path` , use `s3://splunk/` .
 
-- Set `maxGlobalDataSizeMB` to 5 for optimal performance.
 
 ```shell
 [volume:Storj]
@@ -160,8 +159,6 @@ remote.s3.secret_key = SECRET_KEY
 remote.s3.endpoint = https://gateway.storjshare.io
 
 remote.s3.auth_region = global
-
-maxGlobalDataSizeMB = 5
 
 # If versioning is not being utilized add:
 

@@ -202,7 +202,7 @@ Use the New **Backup Job wizard** to configure the backup job. Follow the steps 
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam1.png)
 
-3. Upon opening Advanced - Storage, you will be presented with the option of selecting Storage Optimization. The ideal setting for object storage is **4MB** or **8MB**.  The larger sizes provide faster backup/restores and lowers the [Storj segment cost](https://docs.storj.io/dcs/pricing#per-segment-fee). Note: using 4MB or 8MB will result in larger incremental backups compared to 1MB (the Veeam default), but Storj's recommendation is to choose 4MB or 8MB to dramatically reduce your Storj costs while also providing better backup and restore times.
+3. Upon opening Advanced - Storage, you will be presented with the option of selecting Storage Optimization. The ideal setting for object storage is **4MB** or **8MB**.  The larger sizes provide faster backup/restores and lowers the [Storj segment cost](docId:59T_2l7c1rvZVhI8p91VX#per-segment-fee). Note: using 4MB or 8MB will result in larger incremental backups compared to 1MB (the Veeam default), but Storj's recommendation is to choose 4MB or 8MB to dramatically reduce your Storj costs while also providing better backup and restore times.
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam_advanced_settings.png)
 

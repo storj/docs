@@ -182,11 +182,7 @@ Credentials window:
 
 3.  If desired, select the **Limit object storage consumption to** check box to define a soft limit that can be exceeded temporarily for your object storage consumption. Enter a limit value in terabytes or petabytes.
 
-4.  If desired, select the **Make recent backups immutable for** check box to prohibit the deletion of blocks of data from object storage. Specify the immutability period, in days.
-
-    Note: selecting this option might increase storage costs. For more information about immutability, see [Immutability](https://helpcenter.veeam.com/docs/backup/vsphere/immutability_sobr.html?ver=120) on the Veeam website.
-
-5.  Select **Next**.
+4.  Select **Next**.
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YOE-le-vX4D0wfn7tnrey_archiverepositorys3cbucket.png)
 
@@ -206,11 +202,11 @@ Use the New **Backup Job wizard** to configure the backup job. Follow the steps 
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam1.png)
 
-3. Upon opening **Advanced** you will be presented with the option of selecting **Storage Optimization**. **Large** (4MB) and **extra large blocks** (8MB) are the ideal settings for best performance and least segment cost. **Extra large** (8MB) is the ideal setting but is hidden by default. 
+3. Upon opening Advanced - Storage, you will be presented with the option of selecting Storage Optimization. The ideal setting for object storage is **4MB** or **8MB**.  The larger sizes provide faster backup/restores and lowers the [Storj segment cost](https://docs.storj.io/dcs/pricing#per-segment-fee). Note: using 4MB or 8MB will result in larger incremental backups compared to 1MB (the Veeam default), but Storj's recommendation is to choose 4MB or 8MB to dramatically reduce your Storj costs while also providing better backup and restore times.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam2.png)
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam_advanced_settings.png)
 
-4. To enable **extra large blocks**, create the UIShowLegacyBlockSize (DWORD, 1) registry value under the 'HKLM\SOFTWARE\Veeam\Veeam Backup and Replication' key on the backup server. Keep in mind that this option significantly increases incremental backups size and requires an active full backup to be activated. This requires Veeam 11a or newer. 
+4. To enable **8MB** as a Storage Optimization option, create the UIShowLegacyBlockSize (DWORD, 1) registry value under the 'HKLM\SOFTWARE\Veeam\Veeam Backup and Replication' key on the backup server. This requires Veeam 11a or newer. 
 
 
 

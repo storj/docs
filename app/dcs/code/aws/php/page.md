@@ -13,7 +13,7 @@ composer require aws/aws-sdk-php
 
 ### 2. Import the S3 Client
 
-```none
+```php
 use Aws\S3\S3Client;
 ```
 

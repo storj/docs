@@ -65,7 +65,7 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
     4.  **Object or file** - An object (or file) is the main data type in our system. An object is referred to by an object key, contains an arbitrary amount of bytes, and has no minimum or maximum size. An object is represented by an ordered collection of one or more segments. Segments have a fixed maximum size. An object also supports a limited amount of key/value user- defined fields in which to store user metadata. Like object keys, the object data is client-side encrypted.
 
-    5.  **Segment** - A segment represents a single array of bytes, between 0 and a system-configurable maximum segment size. The max Segment size on Storj DCS Satellites is 64MB. An object smaller than 64MB is stored as one segment. Objects larger than 64MB are stored in multiple 64MB Segments. Each Segment is stored as 80 pieces on the network. Only 29 Pieces of the 80 are required to reconstitute a Segment. All Segments are required to reconstitute an Object. Segment data is client-side encrypted.
+    5.  **Segment** - A segment represents a single array of bytes, between 0 and a system-configurable maximum segment size. The max Segment size on Storj DCS Satellites is 64MB. An object smaller than 64MB is stored as one segment. Objects larger than 64MB are stored in multiple 64MB Segments. Each Segment is stored as pieces on the network. Only a subset of pieces of the total are required to reconstitute a Segment. All Segments are required to reconstitute an Object. Segment data is client-side encrypted.
 
         1.  **Remote Segment** - A remote segment is a segment that will be erasure encoded and distributed across the network. A remote segment is larger than the metadata required to keep track of its bookkeeping, which includes information such as the IDs of the nodes that the data is stored on. Remote segment data is client-side encrypted.
 
@@ -92,8 +92,8 @@ The Storj DCS service uses an array of different technologies such as strong enc
         1.  **_k_ = 29** – This is the number of pieces required to recreate a Segment. Any 29 of the pieces of a Segment can be used to reconstitute a Segment
 
         2.  **_m_ = 35** – This is the number of pieces an Uplink will attempt to download when downloading a Segment. The Uplink will cut off any piece downloads after 29 pieces have been downloaded. The Uplink attempts to download more pieces than needed to eliminate the long tail effect of dependency on the slowest Storage Node.
-   
-          Note that m is also the repair threshold for a Segment. Satellites track when Storage Nodes fail or leave the network making pieces unavailable. If too many storage nodes become unavailable, putting the potential durability of a Segment at risk, the Satellite will recreate the missing pieces via file repair and store the repaired pieces on diverse, health storage nodes. The repair threshold may be overwritten and for Storj Satellites, and is set to 54.
+
+        Note that m is also the repair threshold for a Segment. Satellites track when Storage Nodes fail or leave the network making pieces unavailable. If too many storage nodes become unavailable, putting the potential durability of a Segment at risk, the Satellite will recreate the missing pieces via file repair and store the repaired pieces on diverse, health storage nodes. The repair threshold may be overwritten and for Storj Satellites, and is set to 54.
 
         3.  **_o_ = 80** – The maximum number of pieces stored for a Segment
 

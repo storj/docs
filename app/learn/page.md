@@ -45,7 +45,9 @@ To give you a sense of how the Storj service is different, it’s helpful to des
 
 ## What Happens When You Upload
 
-When a file is uploaded, it’s first encrypted by the Uplink client using an encryption key held by that client. Next, it’s erasure-coded, meaning it’s broken up into at least 80 pieces, of which only 29 (any 29) are required to reconstitute a file. (The redundancy from erasure coding is far more efficient than replicating files and this technology used by most data storage systems, including DVDs, which is why you can still watch a movie even if there are scratches and fingerprints on the disk.)
+When a file is uploaded, it’s first encrypted by the Uplink client using an encryption key held by that client. Next, it’s erasure-coded, meaning it’s broken up into pieces, of which only a subset are required to reconstitute a file. The redundancy from erasure coding is far more efficient than replicating files and this technology used by most data storage systems, including DVDs, which is why you can still watch a movie even if there are scratches and fingerprints on the disk.
+
+For example, we may need 29 of the 80 pieces we uploaded.
 
 The Uplink Client then contacts the satellite to get a list of Storage Nodes on which to store the pieces. The satellite returns more than 80 Storage Node addresses. The Uplink Client uploads pieces peer-to-peer, in parallel, directly to the Storage Nodes. The Uplink client stops attempting to upload pieces once 80 pieces have been successfully uploaded to at least 80 Storage Nodes.
 
@@ -55,7 +57,7 @@ The Uplink Client attempts a few more than 80 during the upload process to elimi
 
 ## What Happens When You Download
 
-When the Uplink Client downloads a file, it’s essentially the same process as an upload but in reverse. The Uplink Client requests a file from the Satellite and the Satellite returns a list of 35 Storage Nodes from which the Uplink Client can retrieve the pieces of the file. The Uplink Client starts attempting to download pieces from all 35 Storage Nodes, again, stopping once it has retrieved the 29 pieces needed to reconstitute the file after eliminating latency from the long-tail effect. The pieces are re-encoded and then decrypted by the Uplink client as only it has the encryption key.
+When the Uplink Client downloads a file, it’s essentially the same process as an upload but in reverse. The Uplink Client requests a file from the Satellite and the Satellite returns a list of Storage Nodes from which the Uplink Client can retrieve the pieces of the file. The Uplink Client starts attempting to download pieces from the given Storage Nodes, again, stopping once it has retrieved the required pieces needed to reconstitute the file after eliminating latency from the long-tail effect. The pieces are re-encoded and then decrypted by the Uplink client as only it has the encryption key.
 
 ## Why Developers Love Storj
 

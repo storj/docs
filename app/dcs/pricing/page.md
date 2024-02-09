@@ -40,7 +40,7 @@ A user uploads a 1TB file. Half way through the month, the user deletes the file
 
 Download bandwidth, also referred to as egress bandwidth, is priced per GB in increments of bytes downloaded. The calculation of download bandwidth price per byte is derived from the GB download bandwidth divided by the base 10 conversion of GB to bytes. The calculated number of bytes is then multiplied by the byte download bandwidth per byte price.
 
-When an object is downloaded, there are a number of factors that can impact the actual amount of bandwidth used. The download process includes requests for pieces from more than the minimum number of storage nodes required. While only 29 pieces out of 80 are required to reconstitute an object, in order to avoid potential long-tail performance lag from a single storage node, an Uplink will try to retrieve an object from 39 storage nodes. The Uplink will terminate all incomplete downloads in process once 29 pieces are successfully downloaded and the object can be re-encoded. In addition, if a user terminates a download before completion, the amount of data that is transferred might exceed the amount of data that the customer’s application receives. This discrepancy can occur because a transfer termination request cannot be executed instantaneously, and some amount of data might be in transit pending execution of the termination request. This data that was transferred is billed as data download bandwidth.
+When an object is downloaded, there are a number of factors that can impact the actual amount of bandwidth used. The download process includes requests for pieces from more than the minimum number of storage nodes required. While only a subset of pieces out of total are required to reconstitute an object, in order to avoid potential long-tail performance lag from a single storage node, uplink will try to retrieve an object from additional storage nodes. Uplink will terminate all incomplete downloads in process once the required pieces are successfully downloaded and the object can be re-encoded. For example, we may need 29 of the 80 pieces we uploaded. In addition, if a user terminates a download before completion, the amount of data that is transferred might exceed the amount of data that the customer’s application receives. This discrepancy can occur because a transfer termination request cannot be executed instantaneously, and some amount of data might be in transit pending execution of the termination request. This data that was transferred is billed as data download bandwidth.
 
 **Example**
 
@@ -62,7 +62,7 @@ The Per Segment Fee is priced per Segment per month in increments of Segment hou
 
 As described elsewhere in this documentation, objects stored on Storj DCS are encrypted and erasure coded, with the encrypted, erasure coded pieces stored on various Storage Nodes on the distributed and decentralized network. Each object stored on the network is represented as at least one Segment.
 
-A Segment is a single array of bytes, between 0 and a user-configurable maximum segment size. The default Segment size on Storj DCS Satellites is 64MB. A File smaller than 64MB is stored as one segment. Files larger than 64MB are stored in multiple 64MB Segments. Each Segment is stored as 80 pieces on the network. Only 29 Pieces of the 80 are required to reconstitute a Segment. All Segments are required to reconstitute a File.
+A Segment is a single array of bytes, between 0 and a user-configurable maximum segment size. The default Segment size on Storj DCS Satellites is 64MB. A File smaller than 64MB is stored as one segment. Files larger than 64MB are stored in multiple 64MB Segments. Each Segment is stored as pieces on the network. Only a subset of pieces of the total pieces (e.g. 29 of the 80) are required to reconstitute a Segment . All Segments are required to reconstitute a File.
 
 **Examples:**
 
@@ -134,4 +134,3 @@ Storj DCS currently offers a free level of access for developers to try out the 
 - 10,000 segments in total for all projects.
 
 Usage for Static Object Storage and Download Bandwidth is calculated in the same way for the Free Plan as for the Pro Plan. A credit against billing will be applied each month for the Free Plan usage for as long as the Free Plan is offered. Accounts using the Free Plan of service are subject to [](docId:Zrbz4XYhIOm99hhRShWHg).
-

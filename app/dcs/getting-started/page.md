@@ -171,13 +171,22 @@ Next we'll upload a file. Here is an example image of a tree growing hard drives
 
 Copy the file to your bucket.
 
-{% code-group %}
+{% tabs %}
+{% tab label="rclone" %}
+
+{% callout type="info"  %}
+Using `--disable-http2` with rclone for Storj is recommended for increased transfer speeds by avoiding HTTP/2 specific issues.
+{% /callout %}
 
 ```shell {% title="rclone" %}
 # link[8:11] https://rclone.org/commands/rclone_copy/
 # terminal
-rclone copy ~/Downloads/storj-tree.png storj:my-bucket/
+rclone copy --disable-http2 ~/Downloads/storj-tree.png storj:my-bucket/
 ```
+
+{% /tab %}
+
+{% tab label="aws cli" %}
 
 ```shell {% title="aws cli" %}
 # focus
@@ -187,26 +196,39 @@ aws s3 --endpoint-url=https://gateway.storjshare.io cp ~/Downloads/storj-tree.pn
 upload: Downloads/storj-tree.png to s3://my-bucket/storj-tree.png
 ```
 
-{% /code-group %}
+{% /tab %}
+
+{% /tabs %}
 
 ## Download file
 
 To retrieve the file, use the same command as upload but reverse the order of the arguments
 
-{% code-group %}
+{% tabs %}
+{% tab label="rclone" %}
+
+{% callout type="info"  %}
+Using `--disable-http2` with rclone for Storj is recommended for increased transfer speeds by avoiding HTTP/2 specific issues.
+{% /callout %}
 
 ```shell {% title="rclone" %}
 # terminal
 # link[8:11] https://rclone.org/commands/rclone_copy/
-rclone copy storj:my-bucket/ ~/Downloads/storj-tree-2.png
+rclone copy --disable-http2 storj:my-bucket/ ~/Downloads/storj-tree-2.png
 ```
+
+{% /tab %}
+
+{% tab label="aws cli" %}
 
 ```shell {% title="aws cli" %}
 # terminal
 aws s3 --endpoint-url=https://gateway.storjshare.io cp s3://my-bucket/ ~/Downloads/storj-tree-2.png
 ```
 
-{% /code-group %}
+{% /tab %}
+
+{% /tabs %}
 
 ## List files
 

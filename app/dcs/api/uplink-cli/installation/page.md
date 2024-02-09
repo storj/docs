@@ -94,6 +94,11 @@ Direct Download
 
 Curl Download
 
+{% callout type="info" %}
+If you receive a "command not found" error when trying to run `uplink`, it's likely that /usr/local/bin is not in your PATH.
+In that case, you can execute uplink directly from the current directory using: `./uplink`
+{% /callout %}
+
 ```bash
 curl -L https://github.com/storj/storj/releases/latest/download/uplink_darwin_arm64.zip -o uplink_darwin_arm64.zip
 unzip -o uplink_darwin_arm64.zip

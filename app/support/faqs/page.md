@@ -82,7 +82,7 @@ There are a few ways you can host your static site on Storj DCS. We recommend us
 
 ## What happens if nodes go offline?
 
-When your data is uploaded, each object is encrypted, then broken into 64 MB Segments, then each Segment is erasure coded, meaning it's broken into 80 pieces, of which only 29 are required to reconstitute an object or segment. Each of those 80 pieces is then uploaded directly, peer-to-peer, to statistically uncorrelated storage nodes. The erasure coded redundancy means that 51 of those nodes (operated by different people, in different locations, with different power supplies and internet connections. If too many nodes fail or leave the network, the network can repair the missing pieces.
+When your data is uploaded, each object is encrypted, then broken into 64 MB Segments, then each Segment is erasure coded, meaning it's broken into many pieces, of which only a subset are required to reconstitute an object or segment. For example, we may need 29 of the 80 pieces we uploaded. Each of those 80 pieces is then uploaded directly, peer-to-peer, to statistically uncorrelated storage nodes. The erasure coded redundancy means that 51 of those nodes (operated by different people, in different locations, with different power supplies and internet connections. If too many nodes fail or leave the network, the network can repair the missing pieces.
 
 You can learn more under Concepts for [](docId:CBMEVO2vA2lDZ_BVuZ9aP) and [](docId:z4JgCuivlGbnn4YQMmlVX).
 

@@ -15,7 +15,7 @@ All nodes behind the same subnet /24 of a public IP are treated as a single node
 Adding more drives/nodes will not increase the ingress traffic, only usage by customers can do this.
 {% /callout %}
 
-You can, of course, use RAID instead, but this reduncancy not required for the network's operation - the network itself has a built-in redundancy due to the usage of erasure codes: the customer needs only 29 pieces out of 80 to reconstruct the whole file.
+You can, of course, use RAID instead, but this reduncancy not required for the network's operation - the network itself has a built-in redundancy due to the usage of erasure codes: the customer needs only a subset of pieces out of total to reconstruct the whole file.
 
 If you would like to use RAID anyway, please note - your node will not receive more customer data only because you use RAID, this will not affect the node selection.
 

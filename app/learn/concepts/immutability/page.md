@@ -24,6 +24,8 @@ Storj provides a unique combination of technologies that enable customers and pa
 
 This section will describe how those foundational technologies and the associated features are implemented to achieve data immutability.
 
+For more information on implementing Write Once, Read Many (WORM) storage see [here](docId:uowaeHeigea0peCei1Pei)
+
 ## Defining Immutability
 
 Immutability in data storage may be broadly defined as providing a set of controls that ensure data may not be altered or deleted except under a specific set of circumstances and via credentials created by specific, authorized users. Data that has been configured for immutable storage is by definition read-only, meaning that it cannot be lost, accidentally deleted, corrupted, subjected to cyberattacks or ransomware, deliberately or inadvertently altered or otherwise left vulnerable to issues that can compromise the data. Immutable storage ensures the provenance and authenticity of data and provides reliable and dispositive data recovery for essential data.

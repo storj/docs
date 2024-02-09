@@ -1,4 +1,4 @@
-Storj has an Amazon S3 compatible API and you'll need generate S3 credentials to use it. S3 credentials consist of an **access key**, **secret key**, and **endpoint**.
+Storj has an Amazon [S3 compatible API](docId:eZ4caegh9queuQuaazoo) and you'll need generate S3 credentials to use it. S3 credentials consist of an **access key**, **secret key**, and **endpoint**.
 
 Create S3 credentials in the Storj console:
 

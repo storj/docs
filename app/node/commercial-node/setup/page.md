@@ -40,6 +40,8 @@ Follow Steps 1 through 6 in the [Storage Node setup guide](docId:kjMiGo7HTr4v_qw
 
 [](docId:v-fUvPqySvUwTMF-od6hD)
 
+For Step 2, if you require a significant number of authorization tokens, please reach out to your contact for assistance.
+
 [](docId:y0jltT-HzKPmDefi532sd)
 
 [](docId:owZeAc56KSDnUzDhsBfB8)

@@ -21,7 +21,7 @@ docker logs --tail 20 storagenode
 
 ```
 
-For CLI Docker install on Windows, if you have[](docId:EeyBBKEeuNK5oqkB4EyU0), please execute the following command in PowerShell, inserting your actual path to your log file instead of “pathtologfile”
+For CLI Docker install on Windows, if you would like to copy your logs to a file you can follow this link [](docId:EeyBBKEeuNK5oqkB4EyU0) or you can execute the following command in PowerShell, inserting your actual path to your log file instead of “pathtologfile”
 
 ```powershell
 Get-Content "pathtologfile" -Tail 20 -Wait

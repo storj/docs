@@ -39,32 +39,32 @@ Visiting the URL in a browser is a convenient fix in most circumstances.
 
 ## Configure Bunny CDN
 
-Log into Bunny.
+1. Log into Bunny.
 
-Click `CDN` of the left hand menu.
+2. Click `CDN` of the left hand menu.
 
-Click `Add Pull Zone` in the upper right.
+3. Click `Add Pull Zone` in the upper right.
 
-Enter any name in the Pull Zone Name section.  Record the full domain name (EG: `example.b-cdn.net`) for later use.
+4. Enter any name in the Pull Zone Name section.  Record the full domain name (EG: `example.b-cdn.net`) for later use.
 
-Set `Origin URL` to `http://link.storjshare.io/`
+5. Set `Origin URL` to `http://link.storjshare.io/`
 
-Set `Host Header` to the URL to the desired final hostname (EG: `www.example.test`).
+6. Set `Host Header` to the URL to the desired final hostname (EG: `www.example.test`).
 
-Chose your tier and pricing zones.
+7. Chose your tier and pricing zones.
 
-Click `Add Pull Zone`
+8. Click `Add Pull Zone`
 
 
 ## Configure Your Domain Registrar
 
-1\. In your DNS provider, create a CNAME record on your hostname corresponding to your Bunny domain created above (EG: `example.b-cdn.net`).
+1. In your DNS provider, create a CNAME record on your hostname corresponding to your Bunny domain created above (EG: `example.b-cdn.net`).
 
 {% callout type="info"  %}
 Ensure you include the trailing `.` at the end of your CNAME if your DNS providers allows.
 {% /callout %}
 
-2\. Create two TXT records, prepending `txt-` to your hostname.  Set them equal to your `storj-root` and `storj-access` values.
+2. Create two TXT records, prepending `txt-` to your hostname.  Set them equal to your `storj-root` and `storj-access` values.
 
 **Root Path:** the bucket or object prefix key that you want your root domain to resolve to (and that contains your index.html file).
 
@@ -74,18 +74,13 @@ Ensure you include the trailing `.` at the end of your CNAME if your DNS provide
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jYrqviRrJEWf_dUioa0TE_access.png)
 
-3\. You can check to make sure your DNS records are ready with `dig @1.1.1.1 txt-<hostname>.<domain> TXT`
+3. You can check to make sure your DNS records are ready with `dig @1.1.1.1 txt-<hostname>.<domain> TXT`
 
-4\. Optionally, if you create a page titled `404.html`in the root of your shared prefix, it will be served in 404 conditions.
+4. Optionally, if you create a page titled `404.html`in the root of your shared prefix, it will be served in 404 conditions.
 
-5\. That's it! You should be all set to access your website! e.g.`http://www.example.test`
+5. That's it! You should be all set to access your website! e.g.`http://www.example.test`
 
 
 {% callout type="info"  %}
 For more detailed information, refer to [Bunny's documentation for integrating Bunny CDN with Cloudflare](https://support.bunny.net/hc/en-us/articles/360001631951-How-to-set-up-BunnyCDN-with-a-custom-hostname-on-CloudFlare)
 {% /callout %}
-
-
-
-
-storj-access:jvw277zguldl24xqb2qpi2l2rx6q

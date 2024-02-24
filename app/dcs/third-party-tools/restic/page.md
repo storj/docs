@@ -27,7 +27,7 @@ This guide is experimental. The main functionality appears to work, but there ar
 
 ## Before you begin
 
-If you haven't yet, [create a Storj DCS account](https://us1.storj.io/signup?partner=restic) before following the rest of the tutorial.
+If you haven't yet, [create a Storj DCS account](https://storj.io/signup?partner=restic) before following the rest of the tutorial.
 
 You will need the following:
 

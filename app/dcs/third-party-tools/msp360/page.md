@@ -35,7 +35,7 @@ To integrate MSP360 with Storj, you will need to create S3 credentials for MSP36
 
 - An active Storj account
 
-  - Navigate to <https://us1.storj.io/signup?partner=MSP360> to sign up, or log in <https://storj.io/login> if you already have an account.
+  - Navigate to <https://storj.io/signup?partner=MSP360> to sign up, or log in <https://storj.io/login> if you already have an account.
 
 - A bucket for MSP360 in your Storj instance.
 

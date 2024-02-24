@@ -55,7 +55,7 @@ The sections below provide a detailed walkthrough of the integration steps.
 
 To begin setting up Comet with Storj, first create a Storj account.
 
-Navigate to <https://us1.storj.io/signup?partner=comet> to sign up or log in to an existing Storj account. If signing up, enter your full name, email address, and password, as shown below:
+Navigate to <https://storj.io/signup?partner=comet> to sign up or log in to an existing Storj account. If signing up, enter your full name, email address, and password, as shown below:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Q7WPRJpkbFkJs17bqTZBD_comet-backup-storj.png)
 

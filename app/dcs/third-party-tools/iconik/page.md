@@ -34,7 +34,7 @@ Iconik integrates with any S3-compatible cloud storage platform.
 
 To complete the integration, you will need:
 
-- A Storj account - sign up here <https://us1.storj.io/signup?partner=iconik> or go to <https://storj.io/login> if you already have an account.
+- A Storj account - sign up here <https://storj.io/signup?partner=iconik> or go to <https://storj.io/login> if you already have an account.
 
 - An Iconik account.
 
@@ -46,7 +46,7 @@ Iconik is compatible with Windows, Mac, and Linux OS. To request a trial, visit 
 
 To begin, you will need to create a Storj account. If you already an account, go to <https://storj.io/login>.
 
-Navigate to <https://storj.io/signup> to sign up. Enter your full name, email address, and a password, as shown below:
+Navigate to <https://storj.io/signup?partner=iconik> to sign up. Enter your full name, email address, and a password, as shown below:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 

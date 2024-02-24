@@ -158,7 +158,7 @@ Whether using Windows or macOS, you’ll simply add the Storj Gateway S3 credent
 
 - First, start by selecting S3 from the drop-down menu
 
-- Enter your S3 Gateway Credentials Endpoint for the **Server** selection (**without**)
+- Enter your S3 Gateway Credentials Endpoint for the **Server** selection (**without `https://`**)
 
 - Enter your S3 Gateway Credentials Access Key into the **Access Key ID** selection
 

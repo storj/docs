@@ -34,7 +34,7 @@ To integrate Storj with Hammerspace, you will need to create S3 credentials in S
 
 - To begin, you will need to create a Storj account.
 
-- Navigate to <https://us1.storj.io/signup?partner=hammerspace> to sign up, or log in <https://storj.io/login> if you already have an account.
+- Navigate to <https://storj.io/signup?partner=hammerspace> to sign up, or log in <https://storj.io/login> if you already have an account.
 
 - A bucket for Hammerspace in your Storj instance.
 

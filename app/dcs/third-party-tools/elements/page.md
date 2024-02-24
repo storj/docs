@@ -26,7 +26,7 @@ The integration between ELEMENTS and Storj is achieved through the S3 protocol, 
 
 To integrate ELEMENTS with Storj, you will need:
 
-- To begin, you need to create a Storj account. Navigate to <https://us1.storj.io/signup?partner=elements> to sign up, or log in <https://storj.io/login> if you already have an account.
+- To begin, you need to create a Storj account. Navigate to <https://storj.io/signup?partner=elements> to sign up, or log in <https://storj.io/login> if you already have an account.
 
 - A bucket for ELEMENTS in your Storj account
 
@@ -118,7 +118,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 ## Connect ELEMENTS to Storj
 
-1\. Copy the **Access Key**,** Secret Key**, and** Endpoint **from Storj to the connection fields on ELEMENTS system (Requires ELEMENTS’ 3rd party storage licensing).
+1\. Copy the **Access Key**, **Secret Key**, and **Endpoint** from Storj to the connection fields on ELEMENTS system (Requires ELEMENTS’ 3rd party storage licensing).
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8R3ocB94DKFmSg7XD8rfj_image003.png)
 

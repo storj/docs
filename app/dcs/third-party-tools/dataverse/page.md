@@ -15,7 +15,7 @@ metadata:
 
 ## Storj Setup
 
-After [creating an account](https://us1.storj.io/signup?partner=dataverse) on Storj DCS, you'll need to generate an access grant in order to get S3 credentials.
+After [creating an account](https://storj.io/signup?partner=dataverse) on Storj DCS, you'll need to generate an access grant in order to get S3 credentials.
 
 ## Generate S3 credentials
 

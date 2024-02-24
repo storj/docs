@@ -20,11 +20,11 @@ metadata:
 
 Iconik is easy to use and intuitive with a clean and intuitive platform. It organizes your media by making it searchable.
 
-1.  **Edit, manage, and collaborate on files in a feature-rich environment. **Storj integration with Iconik allows multiple users from different locations to view and edit your files on Storj simultaneously. Even parties who do not use Iconik can be invited to collaborate on documents in Iconik. Iconik also provides fine control of data sharing, allowing you to remove shares and add a time limit on shares.
+1.  **Edit, manage, and collaborate on files in a feature-rich environment.** Storj integration with Iconik allows multiple users from different locations to view and edit your files on Storj simultaneously. Even parties who do not use Iconik can be invited to collaborate on documents in Iconik. Iconik also provides fine control of data sharing, allowing you to remove shares and add a time limit on shares.
 
 2.  **Aggregates files from multiple cloud storages.** If Storj is only one part of your storage solution, Iconik makes it easy to aggregate your files from multiple storage providers.
 
-3.  **Cost Savings. **Adds editing and sharing features to your Storj data, creating feature-rich storage and while maintaining low costs for the storage itself.
+3.  **Cost Savings.** Adds editing and sharing features to your Storj data, creating feature-rich storage and while maintaining low costs for the storage itself.
 
 ## Integration
 
@@ -204,17 +204,17 @@ If you do not have an Iconik account, you must request a trial by clicking Reque
 
 A pop-up window confirms that your storage was created successfully with a green checkmark next to "Access credentials" and "Permissions on the storage".
 
-Click Close to exit, or Edit to make changes to your storage credentials.
+Click **Close** to exit, or **Edit** to make changes to your storage credentials.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/L6UuZmhowWvbhmmezzb5F_image.png)
 
 ### Editing Your Storage
 
-Clicking Edit takes you to the general settings page for the storage. From there, you can make any changes to the credentials and permissions you initially set.
+Clicking **Edit** takes you to the general settings page for the storage. From there, you can make any changes to the credentials and permissions you initially set.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/G9C1f9lpZDfLzCQUYVjja_image.png)
 
-Returning to the Storages section, you will see the new storage listed. Clicking on the storage row also takes you to the general settings page of that storage.
+Returning to the **_Storages_** section, you will see the new storage listed. Clicking on the storage row also takes you to the general settings page of that storage.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/masloLmwj8xPFE5-K-eCV_image.png)
 

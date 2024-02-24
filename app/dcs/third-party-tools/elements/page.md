@@ -118,7 +118,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 ## Connect ELEMENTS to Storj
 
-1\. Copy the **Access Key**,** Secret Key**, and** Endpoint **from Storj to the connection fields on ELEMENTS system (Requires ELEMENTS’ 3rd party storage licensing).
+1\. Copy the **Access Key**, **Secret Key**, and **Endpoint** from Storj to the connection fields on ELEMENTS system (Requires ELEMENTS’ 3rd party storage licensing).
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8R3ocB94DKFmSg7XD8rfj_image003.png)
 

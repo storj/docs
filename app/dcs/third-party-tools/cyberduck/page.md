@@ -14,13 +14,13 @@ metadata:
 
 ## Introduction
 
-Cyberduck is a free, open-source libre server - a small server system that enables you to run your own internet services independently - cloud storage browser for macOS, Windows, and Linux that supports FTP and SFTP, WebDAV, and cloud storage such as **Storj DCS** and other cloud storage providers.
+Cyberduck is a free, open-source libre server - a small server system that enables you to run your own internet services independently - cloud storage browser for macOS, Windows, and Linux that supports FTP and SFTP, WebDAV, and cloud storage such as **Storj** and other cloud storage providers.
 
 Users can leverage the Cyberduck services via the user interface (GUI) or CLI (for Linux), including file transfer by drag and drop and notifications via Growl. It is also able to open some files in external text editors.
 
-Users can choose **Storj DCS** to act as a decentralized cloud storage network target to send files to via the Cyberduck file manager interface, available via Storj's hosted multitenant gateway ([](docId:AsyYcUJFbO1JI8-Tu8tW3) that is backward compatible with S3. This means you’ll be able to integrate with the Storj network via HTTP, and you won’t have to run anything extra on your end.
+Users can choose **Storj** to act as a decentralized cloud storage network target to send files to via the Cyberduck file manager interface, available via Storj's hosted multitenant gateway ([](docId:AsyYcUJFbO1JI8-Tu8tW3) that is backward compatible with S3. This means you’ll be able to integrate with the Storj network via HTTP, and you won’t have to run anything extra on your end.
 
-In this brief tutorial, we'll go over downloading and setting up Cyberduck to integrate with Storj DCS, facilitating easy and intuitive drag-and-drop file transfer to Storj DCS.
+In this brief tutorial, we'll go over downloading and setting up Cyberduck to integrate with Storj, facilitating easy and intuitive drag-and-drop file transfer to Storj.
 
 ## Downloading Cyberduck
 
@@ -96,11 +96,11 @@ Once the download is complete, you'll be able to open the CyberDuck client. By s
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xOlk_1dXj-ODMpTIn-37o_image.png)
 
-To configure **Storj DCS** as the decentralized cloud storage network target, you’ll need to generate Storj credentials.
+To configure **Storj** as the decentralized cloud storage network target, you’ll need to generate Storj credentials.
 
 ### Using CyberDuck with Storj - macOS
 
-Once the download is complete, you'll be able to open the CyberDuck client. By selecting the **+** button in the bottom left-hand corner of the client, you'll be able to add a connection bookmark, facilitating the connection between CyberDuck and Storj DCS. Select **Storj DCS** from the drop-down.
+Once the download is complete, you'll be able to open the CyberDuck client. By selecting the **+** button in the bottom left-hand corner of the client, you'll be able to add a connection bookmark, facilitating the connection between CyberDuck and Storj. Select **Storj** from the drop-down.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MJ-vjelgQGnchg9zxFu7J_image.png)
 
@@ -108,11 +108,11 @@ This is where you will add **Server, Access Key ID, and the Secret Access Key** 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/aGFG9jmdtOm32wmk1dNKM_image.png)
 
-To configure **Storj DCS** as the decentralized cloud storage network target, you’ll need to generate Storj credentials.
+To configure **Storj** as the decentralized cloud storage network target, you’ll need to generate Storj credentials.
 
 ### Generate Credentials to the Gateway MT
 
-One of the most versatile ways to get up and running with **Storj DCS** is through the [](docId:EGM8O-1xt2Az03eBWT8Rf)
+One of the most versatile ways to get up and running with **Storj** is through the [](docId:EGM8O-1xt2Az03eBWT8Rf)
 
 **Gateway MT offers the following:**
 
@@ -183,7 +183,7 @@ As seen here:
 
 ### **For Mac OS**
 
-Back to the open connection in Cyberduck as we referenced above in [](docId:QQGzEDU8o-IodQWmr7xP3) you now have all the information you need to send files to your **Storj DCS** network.
+Back to the open connection in Cyberduck as we referenced above in [](docId:QQGzEDU8o-IodQWmr7xP3) you now have all the information you need to send files to your **Storj** network.
 
 - **Select your saved bookmark** Here, you'll see the Amazon S3 server window reopen. To move forward, you'll simply just add in your Storj Gateway S3 credentials that we previously configured.
 
@@ -195,4 +195,4 @@ Back to the open connection in Cyberduck as we referenced above in [](docId:QQGz
 
 Close the modal window and click the modified bookmark.
 
-If you’ve added your S3 Gateway Credentials properly, you’ll see your **Storj DCS** buckets, and you can now drag and drop files to your **Storj DCS** network seamlessly and easily via the Cyberduck GUI. Congrats!
+If you’ve added your S3 Gateway Credentials properly, you’ll see your **Storj** buckets, and you can now drag and drop files to your **Storj** network seamlessly and easily via the Cyberduck GUI. Congrats!

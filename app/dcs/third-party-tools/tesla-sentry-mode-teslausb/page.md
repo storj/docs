@@ -50,7 +50,7 @@ If you have not yet signed up, please [do so now](https://storj.io/signup).
 
 Using the software in the [teslausb](https://github.com/marcone/teslausb) project with Storj is a multipart process, we will accomplish the following:
 
-- Generate Credentials for Storj DSC
+- Generate Credentials for Storj
 
   - This occurs through the [storj.io]() website
 

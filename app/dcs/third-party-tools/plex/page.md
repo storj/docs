@@ -19,7 +19,7 @@ Managing a multimedia library can be tedious and time-consuming. Organizing your
 
 ## Video Playback from Anywhere
 
-With the Storj DCS decentralized video storage service, your multimedia objects are available anywhere, at any time. Decentralized video storage offers many advantages over traditional centralized storage. These include higher availability, better security, and a lower operating budget.
+With the Storj decentralized video storage service, your multimedia objects are available anywhere, at any time. Decentralized video storage offers many advantages over traditional centralized storage. These include higher availability, better security, and a lower operating budget.
 
 With decentralized storage, your videos are distributed across a global network of nodes. This ensures more reliable access with fewer single points of failure. For that same reason, your files are not vulnerable to the security measures that may or may not exist for one central data repository. Additionally, Storj's network eliminates many of the maintenance and engineering costs of centralized object storage services.
 
@@ -29,7 +29,7 @@ The ability to store and retrieve your video files from anywhere using Storj's g
 
 [Rclone](https://rclone.org) is a program that helps with the management of files on various cloud storage services. It provides a command called [`rclone mount`](https://rclone.org/commands/rclone_mount/) that allows files on cloud storage to be mounted as a local filesystem.
 
-For this guide, we are going to show how to set up Rclone to sync your local files with Storj DCS. This can then serve as your storage backend for a service like Plex.
+For this guide, we are going to show how to set up Rclone to sync your local files with Storj. This can then serve as your storage backend for a service like Plex.
 
 ## Getting Started
 
@@ -91,7 +91,7 @@ This recursively refreshes the root directory of the Rclone mount to pick up the
 
 ## Wrapping Up
 
-Now that you've set up Rclone to read and write to your Storj DCS buckets, you can configure Plex to use your mounted buckets as a storage location. Some tips for configuring Plex with this setup are:
+Now that you've set up Rclone to read and write to your Storj buckets, you can configure Plex to use your mounted buckets as a storage location. Some tips for configuring Plex with this setup are:
 
 - Under Settings > Library, uncheck "empty trash automatically after each scan"
 
@@ -99,4 +99,4 @@ Now that you've set up Rclone to read and write to your Storj DCS buckets, you c
 
 These, along with the other steps we took while setting up the mount, will help optimize Plex performance when reading from Storj.
 
-With Plex configured to use Storj DCS for storage, you now have a convenient streaming and organization platform backed by reliable, decentralized object storage.
+With Plex configured to use Storj for storage, you now have a convenient streaming and organization platform backed by reliable, decentralized object storage.

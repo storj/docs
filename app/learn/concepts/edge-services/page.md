@@ -25,7 +25,7 @@ The three components comprising the edge services are:
 
 **S3 Compatible Gateway**
 
-Storj DCS includes a globally distributed, multi-region cloud-hosted [](docId:yYCzPT8HHcbEZZMvfoCFa).
+Storj includes a globally distributed, multi-region cloud-hosted [](docId:yYCzPT8HHcbEZZMvfoCFa).
 
 **Linkshare Service**
 

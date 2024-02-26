@@ -42,7 +42,7 @@ system_prompt = [
     "You can reply with a title field that is different from the original if it's more SEO friendly.",
     "If the language is pt_BR, you must generate a summary and a title in Brazilian portuguese.",
     "The title field should be a string.",
-    "The title field should not include Storj or Storj DCS as a prefix",
+    "The title field should not include Storj or Storj as a prefix",
     "Don't refer to Storj DCS, just say Storj",
     "The title must not say 'in storj' or refer to Storj",
     "The summary field should be a string.",

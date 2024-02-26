@@ -20,7 +20,7 @@ metadata:
 
 See [https://github.com/s3fs-fuse/s3fs-fuse](https://github.com/s3fs-fuse/s3fs-fuse#installation) for installation instructions for your OS.
 
-## Configure s3fs to use Storj DCS S3 Gateway
+## Configure s3fs to use Storj S3 Gateway
 
 You can use either [](docId:EGM8O-1xt2Az03eBWT8Rf) or [](docId:yYCzPT8HHcbEZZMvfoCFa). You only need S3 compatible credentials and endpoint.
 
@@ -75,7 +75,7 @@ Check that it is working - The command:
 sudo mount -a
 ```
 
-should not return any error. Next, check that your Storj DCS bucket is mounted:
+should not return any error. Next, check that your Storj bucket is mounted:
 
 ```Text
 df -HT

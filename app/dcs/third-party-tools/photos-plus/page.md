@@ -12,7 +12,7 @@ metadata:
 
 ## Introduction
 
-**Photos+** is an iOS/Android App. It allows you to store and manage your photos and videos in your own cloud storage account. You can use **Photos+** with **Storj DCS** S3-compatible storage.
+**Photos+** is an iOS/Android App. It allows you to store and manage your photos and videos in your own cloud storage account. You can use **Photos+** with **Storj** S3-compatible storage.
 
 **Main site**: <https://photosplus.app/>
 
@@ -22,7 +22,7 @@ Mobile app download links:
 
 - Google Play Store: <https://play.google.com/store/apps/details?id=com.pixegram.photosplus>
 
-## Configure Photos+ to use Storj DCS
+## Configure Photos+ to use Storj
 
 1.  When starting **Photos+**, you will be shown an empty Library.
 
@@ -36,7 +36,7 @@ Mobile app download links:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/WTySRmSPRk7ew95G59r2C_imgedaea36c758c-1-2.jpeg)
 
-4\. Click **Configure** to begin setting up Storj DCS for Photos+.
+4\. Click **Configure** to begin setting up Storj for Photos+.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/yXxrIf3BXor9m9KsqPY6W_imgf65448a9a594-1.jpeg)
 
@@ -44,7 +44,7 @@ Mobile app download links:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zIpOoL3wJvmashUj-iHjB_img419569e7945f-1.jpeg)
 
-6\. Once you’ve completed configuring Storj DCS as your Cloud Storage Provider, to see Storj in action, you’ll need to click the icon in the lower right corner composed of four squares to return to your Library. From there, click the three-dot icon in the upper right corner.
+6\. Once you’ve completed configuring Storj as your Cloud Storage Provider, to see Storj in action, you’ll need to click the icon in the lower right corner composed of four squares to return to your Library. From there, click the three-dot icon in the upper right corner.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/UGNi_XIgzeXZMqdxT_e6Y_img2812.png)
 
@@ -64,6 +64,6 @@ Mobile app download links:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/TMipi78UFMC_XlLSWX_W1_img2806.png)
 
-11\. Click **Start** to begin synchronizing your library. You may check via the Storj DCS dashboard or use any of our command line tools to see if your library has been backed up to Storj.
+11\. Click **Start** to begin synchronizing your library. You may check via the Storj dashboard or use any of our command line tools to see if your library has been backed up to Storj.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/tEymuK4I_atEURjaPffbs_img2866.png)

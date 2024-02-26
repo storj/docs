@@ -11,7 +11,7 @@ metadata:
     related to encryption, erasure coding, and client-side technologies.
 ---
 
-The Storj DCS service uses an array of different technologies such as strong encryption and erasure codes to ensure a differentiated level of privacy and security across a network of peer classes. Some of the terms we use may be familiar and some may be new, but if you see a word you don't recognize or see a familiar word in a different context, you'll probably find a useful definition here:
+The Storj service uses an array of different technologies such as strong encryption and erasure codes to ensure a differentiated level of privacy and security across a network of peer classes. Some of the terms we use may be familiar and some may be new, but if you see a word you don't recognize or see a familiar word in a different context, you'll probably find a useful definition here:
 
 1.  **Peer Class** A cohesive collection of network services and responsibilities. There are three different peer classes that represent services in our network: storage nodes, Uplinks, and Satellites.
 
@@ -23,15 +23,15 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
     2.  **Gateway** A service which provides a compatibility layer between other object storage services such as Amazon S3 and libuplink exposing an Amazon S3-compatible API.
 
-        1.  **Gateway ST -** a single-tenant, self-hosted S3-compatible gateway service provided as part of the Storj DCS developer tools/SDK
+        1.  **Gateway ST -** a single-tenant, self-hosted S3-compatible gateway service provided as part of the Storj developer tools/SDK
 
-        2.  **Gateway MT** **-** a multi-tenant, multi-region, cloud-hosted S3-compatible gateway service provided as part of the Storj DCS service. We consider this service server-side encrypted instead of end-to-end encrypted because this service temporarily manages encryption for you. While more complex, this can be run on your own infrastructure.
+        2.  **Gateway MT** **-** a multi-tenant, multi-region, cloud-hosted S3-compatible gateway service provided as part of the Storj service. We consider this service server-side encrypted instead of end-to-end encrypted because this service temporarily manages encryption for you. While more complex, this can be run on your own infrastructure.
 
         3.  **Linksharing/webhosting -** a gateway for standard HTTP requests, so you can share objects with users via a web browser or even host full websites. This can also be run on your own infrastructure if preferred.
 
     3.  **Uplink** **CLI** A command line interface for uploading and downloading files from the network, managing permissions and sharing, and managing accounts.
 
-4.  **Satellite** - A peer class and one of the primary components of the Storj network. The satellite participates in the node discovery system, caches node address information, stores per-object metadata, maintains storage node reputation, aggregates billing data, pays storage nodes, performs audits and repair, and manages authorization and user accounts. Users have accounts on and trust specific Satellites. Any user can run their own Satellite, but we expect many users to elect to avoid the operational complexity and create an account on another Satellite hosted by a trusted third party such as Storj Labs, a friend, group, or workplace. Storj Labs satellites are operated under the Storj DCS brand. This component has a couple of main responsibilities:
+4.  **Satellite** - A peer class and one of the primary components of the Storj network. The satellite participates in the node discovery system, caches node address information, stores per-object metadata, maintains storage node reputation, aggregates billing data, pays storage nodes, performs audits and repair, and manages authorization and user accounts. Users have accounts on and trust specific Satellites. Any user can run their own Satellite, but we expect many users to elect to avoid the operational complexity and create an account on another Satellite hosted by a trusted third party such as Storj Labs, a friend, group, or workplace. Storj Labs satellites are operated under the Storj brand. This component has a couple of main responsibilities:
 
     1.  developer account registration & management,
 
@@ -43,7 +43,7 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
     5.  garbage collection & other chores.
 
-5.  **Satellite Developer Account** - Basic information about users is stored and used to allow users to access Storj DCS. User account data includes user name, email, password, and payment methods. User account data is not client-side encrypted so that it may be rendered in the satellite user interface.
+5.  **Satellite Developer Account** - Basic information about users is stored and used to allow users to access Storj. User account data includes user name, email, password, and payment methods. User account data is not client-side encrypted so that it may be rendered in the satellite user interface.
 
 6.  **Strong Encryption** - a strong encryption algorithm is one that can guarantee the confidentiality of sensitive data. The time and cost of the compute resources required to decrypt data encrypted via a strong encryption method is either not possible, feasible, or economically justifiable, within the usable lifespan of the data.
 
@@ -65,7 +65,7 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
     4.  **Object or file** - An object (or file) is the main data type in our system. An object is referred to by an object key, contains an arbitrary amount of bytes, and has no minimum or maximum size. An object is represented by an ordered collection of one or more segments. Segments have a fixed maximum size. An object also supports a limited amount of key/value user- defined fields in which to store user metadata. Like object keys, the object data is client-side encrypted.
 
-    5.  **Segment** - A segment represents a single array of bytes, between 0 and a system-configurable maximum segment size. The max Segment size on Storj DCS Satellites is 64MB. An object smaller than 64MB is stored as one segment. Objects larger than 64MB are stored in multiple 64MB Segments. Each Segment is stored as pieces on the network. Only a subset of pieces of the total are required to reconstitute a Segment. All Segments are required to reconstitute an Object. Segment data is client-side encrypted.
+    5.  **Segment** - A segment represents a single array of bytes, between 0 and a system-configurable maximum segment size. The max Segment size on Storj Satellites is 64MB. An object smaller than 64MB is stored as one segment. Objects larger than 64MB are stored in multiple 64MB Segments. Each Segment is stored as pieces on the network. Only a subset of pieces of the total are required to reconstitute a Segment. All Segments are required to reconstitute an Object. Segment data is client-side encrypted.
 
         1.  **Remote Segment** - A remote segment is a segment that will be erasure encoded and distributed across the network. A remote segment is larger than the metadata required to keep track of its bookkeeping, which includes information such as the IDs of the nodes that the data is stored on. Remote segment data is client-side encrypted.
 
@@ -99,7 +99,7 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
         4.  **_n_ = 130** – The number of pieces an Uplink attempts to upload to diverse Storage Nodes when uploading a Segment.
 
-13. **Multipart Upload** Multipart Upload is a function that allows large files to be broken up into smaller pieces for more efficient uploads. When an object is uploaded using Multipart Upload, a file is first broken into parts, each part of a Multipart Upload is also stored as one or more Segments. With Multipart Upload, a single object is uploaded as a set of parts. Each part is an integral portion of the data comprising the object. The object parts may be uploaded independently, in parallel, and in any order. Uploads may be paused and resumed by uploading an initial set of parts, then resuming and uploading the remaining parts. If the upload of any part fails, that part may be re-uploaded without impacting the upload of other parts. All of these parts are broken into one or more Segments by the Storj DCS Gateway based on whether the Part Size is smaller or larger than the default Segment size. While Multipart Upload is most appropriate for files larger than the 64MB default Segment size, the Part Size is configurable in applications that use Multipart Upload.
+13. **Multipart Upload** Multipart Upload is a function that allows large files to be broken up into smaller pieces for more efficient uploads. When an object is uploaded using Multipart Upload, a file is first broken into parts, each part of a Multipart Upload is also stored as one or more Segments. With Multipart Upload, a single object is uploaded as a set of parts. Each part is an integral portion of the data comprising the object. The object parts may be uploaded independently, in parallel, and in any order. Uploads may be paused and resumed by uploading an initial set of parts, then resuming and uploading the remaining parts. If the upload of any part fails, that part may be re-uploaded without impacting the upload of other parts. All of these parts are broken into one or more Segments by the Storj Gateway based on whether the Part Size is smaller or larger than the default Segment size. While Multipart Upload is most appropriate for files larger than the 64MB default Segment size, the Part Size is configurable in applications that use Multipart Upload.
 
     1.  **Part** - a single piece of an object that has been separated into multiple piece during a MultiPart Upload.
 
@@ -107,7 +107,7 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
 15. **Value Attribution** Through our partner program, we offer a variety of programs for partners who refer business to us. We track referrals using Value Attribution.
 
-    1.  **Value Attribution Code** Partners have a code that is passed by and to a User Agent to track Storj DCS usage associated with a partner's application.
+    1.  **Value Attribution Code** Partners have a code that is passed by and to a User Agent to track Storj usage associated with a partner's application.
 
 16. **Encryption-related Terms**
 
@@ -131,7 +131,7 @@ The Storj DCS service uses an array of different technologies such as strong enc
 
 17. **Access Management-related Terms**
 
-    1.  **Access Grant:** An encoded string that contains an API Key, an Encryption store, and the address of the Satellite storing the object metadata for the purpose of sharing access to objects stored on Storj DCS.
+    1.  **Access Grant:** An encoded string that contains an API Key, an Encryption store, and the address of the Satellite storing the object metadata for the purpose of sharing access to objects stored on Storj.
 
     2.  **API Key**: A string generated for a project to authorize access management to data on the service. The API key is an authorization token based on an implementation called macaroons and is sent to the Satellite in order to authorize requests.
 

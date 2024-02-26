@@ -13,7 +13,7 @@ metadata:
 
 ## Introduction
 
-This guide walks users through the process of setting up FileZilla to transfer files over Storj DCS.
+This guide walks users through the process of setting up FileZilla to transfer files over Storj.
 
 {% callout type="info"  %}
 The native integration uses [](docId:Pksf8d0TCLY2tBgXeT18d) for your object data, including metadata and path data.
@@ -27,11 +27,11 @@ The **_ FileZilla_** Client is a fast and reliable cross-platform (Windows, Linu
 
 It includes a site manager to store all your connection details and logins, as well as an Explorer-style interface that shows the local and remote folders and can be customized independently.
 
-With the launch of the native Storj DCS Integration into the FileZilla client, developers can use the client configured to transfer files point-to-point using the decentralized cloud.
+With the launch of the native Storj Integration into the FileZilla client, developers can use the client configured to transfer files point-to-point using the decentralized cloud.
 
 ## Getting Started
 
-![Getting Started Guide to Configure Storj DCS with Filezilla](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/A3axDH9IIHl-G8gI--gjT_fz.png)
+![Getting Started Guide to Configure Storj with Filezilla](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/A3axDH9IIHl-G8gI--gjT_fz.png)
 
 ## Create an Access Grant
 
@@ -63,7 +63,7 @@ Now enter the **Satellite** and **Access Grant** as shown below (Entering the po
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/QfVDo6-BAPCOq85iJqWEJ_image.png)
 
-After you enter the above information, hit the "Connect" button, and FileZilla will connect directly to the remote site. You should see a screen showing your local site vs. Storj DCS, like so:
+After you enter the above information, hit the "Connect" button, and FileZilla will connect directly to the remote site. You should see a screen showing your local site vs. Storj, like so:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LKG7hFgbpmSQUM5Ps8GIh_filezilla2.png)
 

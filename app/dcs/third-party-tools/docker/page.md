@@ -15,7 +15,7 @@ metadata:
 
 Containers are wonderful: Containers provide a powerful way to package and deploy an application and make the runtime environment immutable and reproducible. But using containers also requires more infrastructure - distributing containers requires a docker registry, either a public one (like Dockerhub) or a private instance.
 
-Under the hood, the container registry serves simple REST requests. As Storj DCS also can serve files via HTTP, it can be used as a container registry if the pieces are uploaded in the right order and mode.
+Under the hood, the container registry serves simple REST requests. As Storj also can serve files via HTTP, it can be used as a container registry if the pieces are uploaded in the right order and mode.
 
 ## The structure of a container registry
 
@@ -65,7 +65,7 @@ So let’s see an example. What is the publishing process, assuming we have a lo
 
 The process is simple:
 
-1.  Create/prepare all the JSON / blob files to upload to Storj DCS with uplink CLI (or UI)
+1.  Create/prepare all the JSON / blob files to upload to Storj with uplink CLI (or UI)
 
 2.  During the upload, define the custom HTTP header for the manifests
 

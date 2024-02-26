@@ -15,12 +15,12 @@ API Keys are based on Macaroons and include the capability to encode programmati
 The API Key encoded into an Access Grants is based on a type of token called a Macaroon. A Macaroon is essentially a cookie with an internal structure for encoding logic, in this case, access restrictions. A Macaroon embeds the logic for the access it allows and can be restricted, simply by embedding the path restrictions and any additional restrictions within the string that represents the Macaroon. Unlike a typical cookie, a Macaroon is not a random string of bytes, but rather is an envelope with access logic encoded in it.
 
 {% callout type="info"  %}
-Storj DCS make it easy to share access to objects securely and privately. You don't need to know how to construct an API Key, but understanding how they work and what the capabilities are provide you with a better understanding of the tools Storj DCS provides you to build more private and secure applications.
+Storj make it easy to share access to objects securely and privately. You don't need to know how to construct an API Key, but understanding how they work and what the capabilities are provide you with a better understanding of the tools Storj provides you to build more private and secure applications.
 {% /callout %}
 
 ## About API Keys
 
-For a more complete review of Macaroons, please check out [the Google paper](https://ai.google/research/pubs/pub41892). This documentation will provide enough information to effectively use the access management and object sharing functionality of Storj DCS, but is not intended to be an exhaustive explanation on the full functionality of Macaroons.
+For a more complete review of Macaroons, please check out [the Google paper](https://ai.google/research/pubs/pub41892). This documentation will provide enough information to effectively use the access management and object sharing functionality of Storj, but is not intended to be an exhaustive explanation on the full functionality of Macaroons.
 
 Although this documentation uses the terms “API Key” and “Macaroon” interchangeably, only the term “Access Grant” is referenced on the service, through the libraries, and in the documentation. The API Key is embedded inside of an Access Grant, and is not something you need to manage separately.
 

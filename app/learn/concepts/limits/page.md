@@ -12,7 +12,7 @@ metadata:
     increases.
 ---
 
-Usage Limits allow us to ensure a consistent level of service for all customers. We have limits for usage established per Project on all Storj DCS Satellites. All limits are set to default values as follows:
+Usage Limits allow us to ensure a consistent level of service for all customers. We have limits for usage established per Project on all Storj Satellites. All limits are set to default values as follows:
 
 ## PRO Account (Paid Tier)
 
@@ -60,11 +60,11 @@ Note that you could avoid having to wait for a manual project limit increase to 
 
 - 10,000 Segments
 
-If you would like to increase your limits to higher values and your only payment method is STORJ token, you may[ contact our support team through the Storj DCS support portal](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212).​
+If you would like to increase your limits to higher values and your only payment method is STORJ token, you may[ contact our support team through the Storj support portal](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212).​
 
 ## Rationales behind limits
 
-Storage and bandwidth limits are imposed by most cloud infrastructure providers as a normal part of capacity planning and to ensure achievement of SLAs. In distributed and decentralized storage systems they are equally important, if not more so. Just like any provider, the aggregate amount of available storage and bandwidth must be shared across all users. With a distributed and decentralized storage system like Storj DCS, the storage and bandwidth are provided by a network of third parties running storage node software. One of the key aspects to success is the balance of supply and demand. If there are too many users over-utilizing available resources, the user experience will be poor.
+Storage and bandwidth limits are imposed by most cloud infrastructure providers as a normal part of capacity planning and to ensure achievement of SLAs. In distributed and decentralized storage systems they are equally important, if not more so. Just like any provider, the aggregate amount of available storage and bandwidth must be shared across all users. With a distributed and decentralized storage system like Storj, the storage and bandwidth are provided by a network of third parties running storage node software. One of the key aspects to success is the balance of supply and demand. If there are too many users over-utilizing available resources, the user experience will be poor.
 
 If there are too many storage nodes, there won’t be enough use to provide a meaningful ROI for Storage Node Operators. This can lead to storage node churn, increasing load on the network, and potentially impacting durability. Usage limits are one of the tools that maintain the balance.
 
@@ -76,6 +76,6 @@ In addition, we limit the number of Projects per Developer Account to minimize c
 
 We have also set the default limit for the number of segments to a level that is healthy for the network. Note that increasing the Segment Project Limit may incur additional fees. Read more about [](docId:A4kUGYhfgGbVhlQ2ZHXVS).
 
-Customers can request a limit increase when needed by filling out the [limit increase request form](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212) on our Storj DCS support portal if their only payment method on file is STORJ token.
+Customers can request a limit increase when needed by filling out the [limit increase request form](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212) on our Storj support portal if their only payment method on file is STORJ token.
 
 An automatic limit increase to Pro Account can be accomplished by adding a credit card as payment method. Please only make such requests if your use case really requires more than the current default limits. Requests will be evaluated taking into account the intended use case and availability on the network.

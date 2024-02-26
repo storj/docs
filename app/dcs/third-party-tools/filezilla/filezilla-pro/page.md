@@ -11,25 +11,25 @@ metadata:
     file transfers.
 ---
 
-## How to Integrate Filezilla Pro with Storj DCS to Easily Find, Transfer and Download All Of Your Files
+## How to Integrate Filezilla Pro with Storj to Easily Find, Transfer and Download All Of Your Files
 
 At a quick glance, FileZilla provides a fast and reliable cross-platform (Windows, Linux and Mac OS X) FTP, FTPS and SFTP client that supports connections, file transfers and file structure browsing for many of today’s cloud data storage services, including Storj. This integration is beneficial for developers as it allows them to use the FileZilla Pro client to transfer files point-to-point using the decentralized cloud.
 
-However, there are some caveats around using FileZilla that Storj DCS users should take into consideration, namely what version of FileZilla supports integration with Storj.
+However, there are some caveats around using FileZilla that Storj users should take into consideration, namely what version of FileZilla supports integration with Storj.
 
 ## What Is the Difference Between FileZilla and FileZilla Pro and How Does This Influence Integration with Storj?
 
-FileZilla is available in a free version known as FileZilla Standard. It supports Storj DCS, FTP, and FTP over TLS (FTPS) and SFTP. It is open-source software distributed free of charge under the terms of the GNU General Public License.
+FileZilla is available in a free version known as FileZilla Standard. It supports Storj, FTP, and FTP over TLS (FTPS) and SFTP. It is open-source software distributed free of charge under the terms of the GNU General Public License.
 
-[**FileZillaPro**](https://filezillapro.com) is a paid upgrade that delivers all of the base functionality of [**FileZilla Standard**](https://filezilla-project.org), while adding additional support for many of today’s popular cloud data storage services like Amazon S3, OneDrive, Dropbox, WebDAV, Microsoft Azure, OneDrive for Business and SharePoint, Google Cloud, Backblaze and, of course, Storj DCS.
+[**FileZillaPro**](https://filezillapro.com) is a paid upgrade that delivers all of the base functionality of [**FileZilla Standard**](https://filezilla-project.org), while adding additional support for many of today’s popular cloud data storage services like Amazon S3, OneDrive, Dropbox, WebDAV, Microsoft Azure, OneDrive for Business and SharePoint, Google Cloud, Backblaze and, of course, Storj.
 
-You can use FileZilla Standard with the Storj DCS native connector—as long as you don’t use a package manager to [](docId:OkJongWeLGhPy4KKz34W4). To learn how to use the Storj integration with FileZilla Standard, check out this [](docId:OkJongWeLGhPy4KKz34W4). To leverage the FileZillaPro functionality, you can integrate it with Storj using a native connector or our backwards S3-compatible Gateway MT. Below we will focus on the integration between Storj and FileZilla Pro.
+You can use FileZilla Standard with the Storj native connector—as long as you don’t use a package manager to [](docId:OkJongWeLGhPy4KKz34W4). To learn how to use the Storj integration with FileZilla Standard, check out this [](docId:OkJongWeLGhPy4KKz34W4). To leverage the FileZillaPro functionality, you can integrate it with Storj using a native connector or our backwards S3-compatible Gateway MT. Below we will focus on the integration between Storj and FileZilla Pro.
 
 ## Storj + FileZilla Pro Integration
 
-FileZilla Pro gives users the option to send files to a Storj DCS account in two ways, either via native uplink or via [](docId:AsyYcUJFbO1JI8-Tu8tW3). Let’s take a look at some of the specs of both Native Uplink and Gateway MT, providing a clearer understanding of which integration method will work better for unique use cases.
+FileZilla Pro gives users the option to send files to a Storj account in two ways, either via native uplink or via [](docId:AsyYcUJFbO1JI8-Tu8tW3). Let’s take a look at some of the specs of both Native Uplink and Gateway MT, providing a clearer understanding of which integration method will work better for unique use cases.
 
-## Native Uplink specs regarding integration with Storj DCS:
+## Native Uplink specs regarding integration with Storj:
 
 - Native Integration (Fastest for downloading large files)
 
@@ -39,7 +39,7 @@ FileZilla Pro gives users the option to send files to a Storj DCS account in two
 
 - Has a 2.68x upload multiplier for uploads and does not support segment parallelism
 
-### GatewayMT specs regarding integration with Storj DCS:
+### GatewayMT specs regarding integration with Storj:
 
 - Gateway MT (Fastest for uploading large files)
 
@@ -49,7 +49,7 @@ FileZilla Pro gives users the option to send files to a Storj DCS account in two
 
 - A 1GB upload will result in 1GB of data being uploaded to storage nodes across the network, based on S3 standard
 
-There are benefits to each method of integration. To provide users with the best value as they look to make the most out of their Storj and FileZillaPro integration, we’ve put together dedicated sections on integrating Storj DCS with FileZillaPro via native uplink as well as through Gateway MT.
+There are benefits to each method of integration. To provide users with the best value as they look to make the most out of their Storj and FileZillaPro integration, we’ve put together dedicated sections on integrating Storj with FileZillaPro via native uplink as well as through Gateway MT.
 
 ### Storj + FileZilla Pro Via Native Uplink
 
@@ -103,11 +103,11 @@ Once the FileZilla Pro client is open, select the **Open the Site Manager** icon
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/TC3atYXb6YhXDZnjVm3Yy_fz7.png)
 
-Now, add the appropriate **Satellite** url (without adding `htpps://`) and simply copy your Access Grant that was previously generated within your Storj DCS account to the **Access Grant** field:
+Now, add the appropriate **Satellite** url (without adding `htpps://`) and simply copy your Access Grant that was previously generated within your Storj account to the **Access Grant** field:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5QStRWOti_3ADaWpg58Wp_fz8.png)
 
-Hit **Connect**, and access to your Storj DCS account should be established.
+Hit **Connect**, and access to your Storj account should be established.
 
 ### Storj + FileZilla Pro via Gateway MT
 
@@ -167,7 +167,7 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. s
 
 9\. Optionally, you can enter a description here.
 
-10\. Click on the **Endpoints** column of the new region row and enter the **_Endpoint address_** for Storj DCS, generated earlier during the creation of the Storj Gateway MT credentials (without adding `https://`).
+10\. Click on the **Endpoints** column of the new region row and enter the **_Endpoint address_** for Storj, generated earlier during the creation of the Storj Gateway MT credentials (without adding `https://`).
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xRQdlQ_6MrJmurhX_OuXF_fz15.png)
 

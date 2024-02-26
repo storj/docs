@@ -28,14 +28,14 @@ Velero lets you:
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jSTBcYDqE4MTLcq5GQr3o_kubernetes.jpeg)
 
 {% callout type="info"  %}
-The Storj DCS Velero plugin does not support volume snapshots for now.
+The Storj Velero plugin does not support volume snapshots for now.
 {% /callout %}
 
 ## Prerequisites
 
 - [Complete Velero Prerequisites and install the CLI](https://velero.io/docs/main/basic-install/)
 
-- [Create a Storj DCS account](https://storj.io/signup)
+- [Create a Storj account](https://storj.io/signup)
 
 - [](docId:OXSINcFRuVMBacPvswwNU) for the project or create an access grant with the [](docId:TbMdOGCAXNWyPpQmH6EOq)
 
@@ -79,7 +79,7 @@ The complete Velero documentation is [located here.](https://velero.io/docs/main
 
 ## Multicloud Architecture for Disaster Prevention and Migration
 
-Because Storj DCS is a globally distributed hot object store, you can store and recover your Kubernetes volumes from anywhere in the world, instantly, without having to replicate data across regions. For DevOps managers, this can mean better resilience for your cluster, reduced global RTO (recovery time objective), cost-savings, and improved native security over centralized alternatives.
+Because Storj is a globally distributed hot object store, you can store and recover your Kubernetes volumes from anywhere in the world, instantly, without having to replicate data across regions. For DevOps managers, this can mean better resilience for your cluster, reduced global RTO (recovery time objective), cost-savings, and improved native security over centralized alternatives.
 
 In the example below, we can see a Disaster Recovery scenario where we might need to migrate into a new cluster:
 

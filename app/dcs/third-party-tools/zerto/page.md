@@ -16,13 +16,13 @@ metadata:
 
 [**Zerto**](https://www.zerto.com) brings together disaster recovery and data protection. It provides a single, scalable solution that offers simple cloud data management and protection across on-premises, hybrid, and multi-cloud environments.
 
-- You can use **Zerto** with **Storj DCS** S3-compatible storage.
+- You can use **Zerto** with **Storj** S3-compatible storage.
 
 - You can download a free trial [here](https://www.zerto.com/try-or-buy/try-zerto-free/).
 
 - Demo site: [Zerto’s Hands on Labs](https://www.zerto.com/page/labs/?z_campaign=2020_Google_Ads_Training_Labs_On_demand&z_content=Labs&z_leadsource=Google_Adwords&z_referrer=Adwords&z_source=7012I000001hzgP&gclid=CjwKCAjwj42UBhAAEiwACIhADqQ1Xo-tUPvM5qy8Pe1U2IxOnx-KBzpTQAgevDJYc42LYIXwgLIJTRoCDkUQAvD_BwE)
 
-## Configure Zerto to use Storj DCS
+## Configure Zerto to use Storj
 
 Log into Zerto Virtual Manager (ZVM).
 
@@ -50,15 +50,15 @@ On the `New Repository` wizard screen:
 
   - Bucket Name: enter the name of your bucket, for example, ¨demo-bucket
 
-  - Access Key: provided in [](docId:AsyYcUJFbO1JI8-Tu8tW3) you generated with Storj DCS
+  - Access Key: provided in [](docId:AsyYcUJFbO1JI8-Tu8tW3) you generated with Storj
 
-  - Secret Access Key: provided in [](docId:AsyYcUJFbO1JI8-Tu8tW3) you generated with Storj DCS
+  - Secret Access Key: provided in [](docId:AsyYcUJFbO1JI8-Tu8tW3) you generated with Storj
 
 After populating all fields, click `Save`. You should now see the Storj Repo as part of your LTR repository list.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LTGvqT_kuVNQi-upd1i_w_image-128-2.png)
 
-You may optionally verify Zerto's connection via the Storj DCS website. To do so, please sign in to your Storj DCS account, click on `Buckets` on the left-hand side, then select your demo-bucket from the `Buckets` view, and provide the encryption passphrase. You will be taken to this bucket’s page, where you will see a _repository.config_ file, confirming the connection.
+You may optionally verify Zerto's connection via the Storj website. To do so, please sign in to your Storj account, click on `Buckets` on the left-hand side, then select your demo-bucket from the `Buckets` view, and provide the encryption passphrase. You will be taken to this bucket’s page, where you will see a _repository.config_ file, confirming the connection.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/159AagxGtKM2d-4Pa6ciu_image-132-1.png)
 
@@ -74,7 +74,7 @@ Returning to the VPG management page, click `Actions`, then `Run Retention Proce
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/NjjDzbSCkPTtwdQR9nVhv_image-150-1.png)
 
-You may return to the Storj DCS website to see a copy of the Windows File Server in the Storj demo-bucket.
+You may return to the Storj website to see a copy of the Windows File Server in the Storj demo-bucket.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/f2lF3e0pHov1aETDPaluE_image-167.png)
 

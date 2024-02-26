@@ -16,7 +16,7 @@ metadata:
 
 The Linksharing service provides an easy way to share an object via a web browser. Linkshare links may be shared with the following features:
 
-- **Storj DCS Linkshare web page** - displays a preview of the shared object, including a streaming player for multimedia files along with a map displaying the geolocation of the storage nodes storing the encrypted and erasure coded pieces of the object
+- **Storj Linkshare web page** - displays a preview of the shared object, including a streaming player for multimedia files along with a map displaying the geolocation of the storage nodes storing the encrypted and erasure coded pieces of the object
 
 - **Custom Domains** - Instead of using the default URL provided by linksharing, users can access their content using a custom domain: [](docId:RI4zz1sLvVEZ4ZcZbuT7l)
 
@@ -50,7 +50,7 @@ The [](docId:4oDAezF-FcfPr0WPl7knd) are included in that tutorial.
 
 ## Linkshare via CLI (Advanced)
 
-If you prefer a command line interface (CLI) or wish to programmatically integrate to Storj DCS we have our [uplink CLI](docId:tBnCSrmR1jbOewG38fIr4) in addition to our [](docId:2x_b4StTLjm2WoHEPx2Cm). You can also use a [](docId:GkgE6Egi02wRZtyryFyPz).
+If you prefer a command line interface (CLI) or wish to programmatically integrate to Storj we have our [uplink CLI](docId:tBnCSrmR1jbOewG38fIr4) in addition to our [](docId:2x_b4StTLjm2WoHEPx2Cm). You can also use a [](docId:GkgE6Egi02wRZtyryFyPz).
 
 ## Regions of availability
 

@@ -5,7 +5,7 @@ redirects:
   - /dcs/api-reference/uplink-cli/cp-command
 ---
 
-Copies a local file or Storj object to another location locally or in Storj DCS
+Copies a local file or Storj object to another location locally or in Storj
 
 ## Usage
 
@@ -46,7 +46,7 @@ The `cp` command is used to upload and download objects. The `cp` command abstra
 
 ## Copy a local file into an existing bucket
 
-When the `cp` command is used to copy a file to Storj DCS (upload), the CLI first encrypts the file client-side, then splits it into a minimum of x erasure-coded pieces, and finally, the x pieces are uploaded in parallel to x different storage nodes. x currently equals 80 but is subject to change depending on continuous optimization.
+When the `cp` command is used to copy a file to Storj (upload), the CLI first encrypts the file client-side, then splits it into a minimum of x erasure-coded pieces, and finally, the x pieces are uploaded in parallel to x different storage nodes. x currently equals 80 but is subject to change depending on continuous optimization.
 
 To copy `cheesecake.jpg` into the existing bucket `cakes`, use the following command:
 
@@ -76,7 +76,7 @@ Output:
 
 ### Copy a file from a bucket to a local drive
 
-When the `cp` command is used to copy a file from Storj DCS (download), the CLI first downloads the minimum number of pieces to reconstitute a file (typically 29 pieces), then re-encodes the pieces into a single file, and finally decrypts the file client-side.
+When the `cp` command is used to copy a file from Storj (download), the CLI first downloads the minimum number of pieces to reconstitute a file (typically 29 pieces), then re-encodes the pieces into a single file, and finally decrypts the file client-side.
 
 To copy a file from a project to a local drive, use:
 
@@ -179,11 +179,11 @@ upload /home/user/receipts/cheescake.jpg to sj://cakes/cheescake.jpg
 upload /home/user/receipts/pancake.jpg to sj://cakes/pancake.jpg
 ```
 
-### Copy an object from one location to another within Storj DCS
+### Copy an object from one location to another within Storj
 
-It is possible to copy a file from one Storj DCS location to another Storj DCS location within the same project.
+It is possible to copy a file from one Storj location to another Storj location within the same project.
 
-When the `cp` command is used to copy a file from one Storj DCS location to another Storj DCS location, the object will be copied entirely on the "server" side - **this will not count against your egress limits, as the object is not being downloaded**.
+When the `cp` command is used to copy a file from one Storj location to another Storj location, the object will be copied entirely on the "server" side - **this will not count against your egress limits, as the object is not being downloaded**.
 
 {% callout type="info"  %}
 You need to have at least version 1.54.1 of Uplink installed to support server-side copy
@@ -239,4 +239,4 @@ Sample Output:
 upload sj://cakes/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
 ```
 
-There is no progress bar shown since nothing was downloaded or uploaded, as the copying happens on the "server" side (within a Storj DCS project.)
+There is no progress bar shown since nothing was downloaded or uploaded, as the copying happens on the "server" side (within a Storj project.)

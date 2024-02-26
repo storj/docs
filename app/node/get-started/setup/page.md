@@ -41,4 +41,4 @@ Install the software that works best for you.
 
 ## Recommended step: [](docId:DVKqtMtnBdZ99gFRWCojP) {% anchor=false %}
 
-Understand how Node Operators are compensated for the resources used by Storj DCS Satellites every month.
+Understand how Node Operators are compensated for the resources used by Storj Satellites every month.

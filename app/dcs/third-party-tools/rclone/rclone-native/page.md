@@ -141,7 +141,7 @@ passphrase> your-secret-encryption-phrase
 ```
 
 {% callout type="info"  %}
-The passphrase is used for encrypting and decrypting the data stored on Storj DCS (formerly known as Tardigrade). If you have any data previously uploaded to this project, you must enter the same passphrase in order to download it successfully.
+The passphrase is used for encrypting and decrypting the data stored on Storj (formerly known as Tardigrade). If you have any data previously uploaded to this project, you must enter the same passphrase in order to download it successfully.
 {% /callout %}
 
 A summary of the remote configuration will prompt. Type `y`and hit `Enter` to confirm it.

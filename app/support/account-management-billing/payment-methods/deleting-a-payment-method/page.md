@@ -11,7 +11,7 @@ metadata:
     Access Grants.
 ---
 
-To use the Storj DCS Paid Tier, a user must have a valid payment method on their account. Users may delete payment methods:
+To use the Storj Paid Tier, a user must have a valid payment method on their account. Users may delete payment methods:
 
 - when substituting for another valid payment method; or
 

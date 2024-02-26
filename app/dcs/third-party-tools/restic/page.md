@@ -17,7 +17,7 @@ metadata:
 
 **Restic** is a backup client written in Go language, it is highly secure and efficient. Each **Restic** backup is a snapshot of the server/files/directory, deduplicated from what was stored before. Any restore to a given backup will restore the server/files/directories to the exact state they were at that time.
 
-This is a quick-start tutorial that covers [Restic](https://restic.net) usage with Storj DCS.
+This is a quick-start tutorial that covers [Restic](https://restic.net) usage with Storj.
 
 In this guide, we will cover only some of the basic features of the tool. The complete documentation for Restic is located here, at their [complete command reference](https://restic.readthedocs.io/en/latest/manual_rest.html).
 
@@ -27,7 +27,7 @@ This guide is experimental. The main functionality appears to work, but there ar
 
 ## Before you begin
 
-If you haven't yet, [create a Storj DCS account](https://storj.io/signup?partner=restic) before following the rest of the tutorial.
+If you haven't yet, [create a Storj account](https://storj.io/signup?partner=restic) before following the rest of the tutorial.
 
 You will need the following:
 

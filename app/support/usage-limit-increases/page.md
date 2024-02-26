@@ -11,7 +11,7 @@ metadata:
     components in Storj, and the associated costs.
 ---
 
-If the default Project Limits do not appear to be appropriate for your use case, you may request a [Project Limit Increase form](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212). Increases in Project Limits may result in increased costs associated with your usage of Storj DCS.
+If the default Project Limits do not appear to be appropriate for your use case, you may request a [Project Limit Increase form](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212). Increases in Project Limits may result in increased costs associated with your usage of Storj.
 
 ## Free Plan
 
@@ -19,11 +19,11 @@ The Free Tier is not eligible for Project Limit Increases.
 
 ## Object Storage
 
-When you request an increase to the Object Storage Project Limit, there is no additional fee beyond the cost for any incremental Object Storage utilized on Storj DCS.
+When you request an increase to the Object Storage Project Limit, there is no additional fee beyond the cost for any incremental Object Storage utilized on Storj.
 
 ## Egress Bandwidth
 
-When you request an increase to the Egress Bandwidth Project Limit, there is no additional fee beyond the cost for any incremental Egress Bandwidth utilized on Storj DCS.
+When you request an increase to the Egress Bandwidth Project Limit, there is no additional fee beyond the cost for any incremental Egress Bandwidth utilized on Storj.
 
 ## Project, Bucket, and API Rate Limits
 
@@ -35,4 +35,4 @@ When you request an increase to the Per Segment Project Limit, you may be charge
 
 Distributed object storage is optimized for large files (several MB or larger in size - the larger the better). Very small objects generate more overhead due to storage of the metadata for the file. This matters more than the actual size of the object stored when it comes to overhead. Consequently, we charge a nominal Per Segment Fee to account for that overhead. If a user is storing even large numbers of big files, the per segment fee will be inconsequential. If a user streams millions of small files, or configures an application to use Multipart Upload with a small part size, the Per Segment Fee will offset the cost associated with the greater metadata overhead and may significantly increase the overall fees charged.
 
-Data stored on Storj DCS ordinarily does not incur any additional fees other than fees for Static Object Storage and Download Bandwidth. If you receive an increase in your Segment Project Limit, a Per Segment Fee will be applied to data stored on Storj DCS for all Segments above the default Segment Limit.
+Data stored on Storj ordinarily does not incur any additional fees other than fees for Static Object Storage and Download Bandwidth. If you receive an increase in your Segment Project Limit, a Per Segment Fee will be applied to data stored on Storj for all Segments above the default Segment Limit.

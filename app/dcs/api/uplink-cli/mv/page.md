@@ -5,7 +5,7 @@ redirects:
   - /dcs/api-reference/uplink-cli/mv
 ---
 
-Moves a Storj object to another location in Storj DCS
+Moves a Storj object to another location in Storj
 
 ## Usage
 
@@ -25,7 +25,7 @@ uplink mv SOURCE DESTINATION [flags]
 
 {% /code-group %}
 
-The `mv` command is used to move or rename objects within the same Storj DCS project. The `mv` command uses a server-side move (rename) method, it does not incur a fee for downloading and will be performed with no delay.
+The `mv` command is used to move or rename objects within the same Storj project. The `mv` command uses a server-side move (rename) method, it does not incur a fee for downloading and will be performed with no delay.
 
 ## Flags
 
@@ -50,7 +50,7 @@ The `mv` command is used to move or rename objects within the same Storj DCS pro
 
 ### Move an object within an existing bucket
 
-When the `mv` command is used to move a file within Storj DCS, the CLI will move (rename) the object using the server-side method to rename the object.
+When the `mv` command is used to move a file within Storj, the CLI will move (rename) the object using the server-side method to rename the object.
 
 To move `cheesecake.jpg` within the existing bucket `cakes`, use the following command:
 
@@ -80,7 +80,7 @@ Sample Output:
 
 ### Move an object from a one bucket to another
 
-When the `mv` command is used to move an object from one Storj DCS bucket to another Storj DCS bucket, the CLI will use a server-side move method.
+When the `mv` command is used to move an object from one Storj bucket to another Storj bucket, the CLI will use a server-side move method.
 
 To create a new bucket, we will use the `mb` command, as a move is possible only to an existing bucket.
 

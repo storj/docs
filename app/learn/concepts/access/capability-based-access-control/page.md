@@ -27,8 +27,8 @@ Those coming from the Blockchain world will be very familiar with the capability
 
 This gives the client-user full insight into their privilege set, illustrating the core tenet of the Capability Mindset: “[don’t separate designation from authority.](https://crypto.stanford.edu/cs155old/cs155-spring09/papers/ConfusedDeputy.html)”.
 
-Similar to how in the Blockchain world, “your keys are your money,” with Storj DCS, your keys are your data, and access grants add additional capabilities that allow the owners of data to caveat it, or granularly delegate access for sharing, programmatically.
+Similar to how in the Blockchain world, “your keys are your money,” with Storj, your keys are your data, and access grants add additional capabilities that allow the owners of data to caveat it, or granularly delegate access for sharing, programmatically.
 
 Key-based ownership of object data will enable users to intuitively control their data as a first principle, and then delegate it as they see fit. The decentralized cloud eliminates the increasingly apparent risk of data loss/extortion due to holding data on one single provider (like Amazon, Google, or Microsoft).
 
-Storj DCS presents a better model where object data is encrypted, erasure-coded, and spread across thousands of nodes stratified by reputation whereby any and every computer can be the cloud.
+Storj presents a better model where object data is encrypted, erasure-coded, and spread across thousands of nodes stratified by reputation whereby any and every computer can be the cloud.

@@ -24,7 +24,7 @@ We will continue configuring the UpdraftPlus plugin after we have created the Ga
 
 ## Generate Gateway MT credentials
 
-Please sign in to your Storj DCS account **Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
+Please sign in to your Storj account **Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/BC_m93u0hx0LSTkrIlvAi_wordpress2.png)
 
@@ -50,7 +50,7 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or
 
 Now you are ready to configure **UpdraftPlus** plugin.
 
-## Configuring UpdraftPlus plugin to work with Storj DCS
+## Configuring UpdraftPlus plugin to work with Storj
 
 Now that we have finished generating the Gateway MT credentials, let´s go back to the UpdraftPlus configuration. Once the plugin has been activated, you should open its settings:
 
@@ -74,4 +74,4 @@ Now that we have finished generating the Gateway MT credentials, let´s go back 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ZpdW_kXCk-t9jZugb0sMU_wordpress12.png)
 
-After you successfully configured Storj DCS as your storage back end in the **UpdraftPlus** plugin and saved your configuration, you can return back to the **_Backup / Restore_** tab to start your backup manually right away.
+After you successfully configured Storj as your storage back end in the **UpdraftPlus** plugin and saved your configuration, you can return back to the **_Backup / Restore_** tab to start your backup manually right away.

@@ -16,7 +16,7 @@ Access restrictions are encoded into the API Key inside of an Access Grant via C
 
 ## Granular Access Control with Caveats
 
-Access restrictions are encoded into the API Key within and Access Grant automatically when creating an Access Grant via the Satellite Admin Console, via the CLI, or libuplink library, when using the Share command. While the possibilities for access controls that can be encoded in a Caveat are virtually unlimited, the specific Caveats supported on Storj DCS today are as follows:
+Access restrictions are encoded into the API Key within and Access Grant automatically when creating an Access Grant via the Satellite Admin Console, via the CLI, or libuplink library, when using the Share command. While the possibilities for access controls that can be encoded in a Caveat are virtually unlimited, the specific Caveats supported on Storj today are as follows:
 
 Specific Operations: Caveats can restrict whether an Access Grant can permit any of the following operations:
 

@@ -11,7 +11,7 @@ metadata:
     and web hosting.
 ---
 
-Frequently asked questions about Storj DCS.
+Frequently asked questions about Storj.
 
 ## How do I navigate to the binary location?
 
@@ -66,13 +66,13 @@ e.g. `https://link.ap1.storjshare.io/s/<access key>/my/path`
 Please, think twice before using the described method above - it exposes your access grant. If you would like to use this method anyway, then make sure to limit the access as much as possible. Ideally - read-only with time duration and only to one or two objects/paths, not to the whole bucket!
 {% /callout %}
 
-## Can I use Storj DCS for web hosting?
+## Can I use Storj for web hosting?
 
-The Storj DCS service allows you to **host static websites** along with multimedia streaming, large file distribution, and other web-delivered assets.
+The Storj service allows you to **host static websites** along with multimedia streaming, large file distribution, and other web-delivered assets.
 
-Since your webpages and assets are simply objects stored on the network and there is no server/database, Storj DCS does **not** support the hosting of **dynamic websites.** However, you can store all of your unchanging assets on Storj DCS and reference them from your dynamic site that is hosted on an external compute service of your choice.
+Since your webpages and assets are simply objects stored on the network and there is no server/database, Storj does **not** support the hosting of **dynamic websites.** However, you can store all of your unchanging assets on Storj and reference them from your dynamic site that is hosted on an external compute service of your choice.
 
-There are a few ways you can host your static site on Storj DCS. We recommend using the [](docId:GkgE6Egi02wRZtyryFyPz) but you may also use the [](docId:EGM8O-1xt2Az03eBWT8Rf) to host your site.
+There are a few ways you can host your static site on Storj. We recommend using the [](docId:GkgE6Egi02wRZtyryFyPz) but you may also use the [](docId:EGM8O-1xt2Az03eBWT8Rf) to host your site.
 
 {% callout type="info"  %}
 **Static websites** serve files, including HTML, CSS, and Javascript files, exactly as they are stored on the server. All visitors will be served the same files.
@@ -88,13 +88,13 @@ You can learn more under Concepts for [](docId:CBMEVO2vA2lDZ_BVuZ9aP) and [](doc
 
 ## How are encryption keys managed?
 
-Storj DCS is a secure and private object storage service. While there are several different ways to interact with the service, including an S3 compatible gateway, CLI, developer library and tools like FileZilla, Rclone, Restic, Duplicati and more, you are responsible for keeping your encryption keys safe.
+Storj is a secure and private object storage service. While there are several different ways to interact with the service, including an S3 compatible gateway, CLI, developer library and tools like FileZilla, Rclone, Restic, Duplicati and more, you are responsible for keeping your encryption keys safe.
 
 You can learn more under [](docId:yI4q9JDB3w01xEkFWA4_z) and [](docId:KEt1PX_a8sbmwGXI4IhT_)
 
 ## When do you create an Access Grant in Satellite UI and when do you use the CLI?
 
-You can generate an Access Grant in the [](docId:nGzxQBhV8nx5Pukj6O0zT), or you can use either our Go Library or the CLI. In general, you use the Satellite Admin Console web interface to create an Access Grant that you can then use to set up whatever client tool you are using. The CLI, client library or other client tool can then use that Access Grant to interact with the Storj DCS service, or create restricted Access Grants - child Access Grants of the parent created in the Satellite Admin Console.
+You can generate an Access Grant in the [](docId:nGzxQBhV8nx5Pukj6O0zT), or you can use either our Go Library or the CLI. In general, you use the Satellite Admin Console web interface to create an Access Grant that you can then use to set up whatever client tool you are using. The CLI, client library or other client tool can then use that Access Grant to interact with the Storj service, or create restricted Access Grants - child Access Grants of the parent created in the Satellite Admin Console.
 
 If you want to learn more, check out the [](docId:M-5oxBinC6J1D-qSNjKYS) section or read all about [](docId:bNywu7-9KLjYfk5LBQABx).
 
@@ -103,7 +103,7 @@ If you want to learn more, check out the [](docId:M-5oxBinC6J1D-qSNjKYS) section
 Access Grants created using the Satellite user interface my be deleted using the Remove button on the Access page. Check the box next to the Access Grant(s) you want to delete, then click the Remove Selected button and follow the prompts.
 
 {% callout type="success"  %}
-**Important:** If you delete an Access Grant from the Satellite user interface, that Access Grant will immediately cease to function, and all hierarchically derived child Access Grants will also cease to function. Any data uploaded with that Access Grant will persist on Storj DCS. If you didn't back up the encryption passphrase used with the Access Grant you are deleting, you will not be able to decrypt that data without that encryption passphrase, and it will be effectively unrecoverable.
+**Important:** If you delete an Access Grant from the Satellite user interface, that Access Grant will immediately cease to function, and all hierarchically derived child Access Grants will also cease to function. Any data uploaded with that Access Grant will persist on Storj. If you didn't back up the encryption passphrase used with the Access Grant you are deleting, you will not be able to decrypt that data without that encryption passphrase, and it will be effectively unrecoverable.
 {% /callout %}
 
 If you created a child Access Grant client-side, using the CLI, the client Go library, or any other client-side tool or implementation, you can't "delete" the access because, by design and for enhanced privacy and security, the Satellite is not aware of Access Grants created in a client. When presented with any Access Grant, the Satellite can only verify whether the Access Grant is valid for the resource being requested. For this reason, Access Grants that have been created client-side cannot be deleted, but must be revoked instead.
@@ -112,7 +112,7 @@ You can learn more under Concepts for [](docId:XKib9SzjtEXTXWvdyYWX6).
 
 ## How do I recover from having lost my encryption key associated with an access grant?
 
-Your encryption keys effectively are your data. If you've lost the encryption key associated with an Access Grant, but you still have the Access Grant, DO NOT DELETE OR REVOKE that Access Grant. An Access Grant will continue to work until revoked or deleted. An Access Grant contains a serialized API key, encryption key, and the Satellite that holds the metadata for an object, but what is serialized in the access grant is derived from the passphrase - the passphrase is not stored in the access grant directly. Of course, that encryption passphrase is not stored by any Storj DCS service.
+Your encryption keys effectively are your data. If you've lost the encryption key associated with an Access Grant, but you still have the Access Grant, DO NOT DELETE OR REVOKE that Access Grant. An Access Grant will continue to work until revoked or deleted. An Access Grant contains a serialized API key, encryption key, and the Satellite that holds the metadata for an object, but what is serialized in the access grant is derived from the passphrase - the passphrase is not stored in the access grant directly. Of course, that encryption passphrase is not stored by any Storj service.
 
 The safest approach would be to download your data with the working Access Grant, then create a new Access Grant with a new encryption passphrase and re-upload the data. Be sure to save that encryption passphrase in a secure location! As long as you have the encryption passphrase, you can generate new Access Grants that will work with pre-existing data.
 
@@ -120,13 +120,13 @@ If you've lost the Access Grant and you don't have a backup of the encryption pa
 
 ## How can I revoke an Access Grant I shared with someone?
 
-Access Grants can be created either in a browser or with the CLI or library, they can be further restricted, client-side creating additional hierarchically derived Access grants. Since these restricted Access Grants are managed client-side through delegated authorization, no server has any registry that these Access Grants even exist. While this gives developers a powerful tool kit to create more private and secure applications, shared access also needs to be revoked. The Storj DCS service has an API for revoking Access Grants via a revocation list.
+Access Grants can be created either in a browser or with the CLI or library, they can be further restricted, client-side creating additional hierarchically derived Access grants. Since these restricted Access Grants are managed client-side through delegated authorization, no server has any registry that these Access Grants even exist. While this gives developers a powerful tool kit to create more private and secure applications, shared access also needs to be revoked. The Storj service has an API for revoking Access Grants via a revocation list.
 
 You can learn more under Concepts for [](docId:k-qsdTq8rYcpbfhWIFLeR).
 
 ## What kind of restrictions can I put on an Access Grant?
 
-You can generate a restricted Access Grant from the Satellite user interface, using the CLI, or using the client Go Library. While the possibilities for access controls that can be encoded in a caveat are virtually unlimited, the specific caveats supported on Storj DCS are as follows:
+You can generate a restricted Access Grant from the Satellite user interface, using the CLI, or using the client Go Library. While the possibilities for access controls that can be encoded in a caveat are virtually unlimited, the specific caveats supported on Storj are as follows:
 
 - **Specific operations:** Caveats can restrict whether an API Key can perform any of the following operations: Read, Write, Delete, List
 
@@ -140,7 +140,7 @@ For some sample Go code around access-restriction, check out: <https://godoc.org
 
 ## How do I pay with Storj Token?
 
-When you decide to become a paid customer of Storj DCS, you can choose to pay with a credit card or using STORJ token. The process for adding a payment method is covered in [](docId:59T_2l7c1rvZVhI8p91VX).
+When you decide to become a paid customer of Storj, you can choose to pay with a credit card or using STORJ token. The process for adding a payment method is covered in [](docId:59T_2l7c1rvZVhI8p91VX).
 
 ## What are the current rate and usage limits?
 
@@ -158,15 +158,15 @@ Our support process is described under the [](docId:h0GeE0-z8ta1rOlKLL7lL) secti
 
 ## How am I billed for usage?
 
-For detailed information on how billing and payment work on Storj DCS, please see the [](docId:59T_2l7c1rvZVhI8p91VX) section of this documentation.
+For detailed information on how billing and payment work on Storj, please see the [](docId:59T_2l7c1rvZVhI8p91VX) section of this documentation.
 
 ## How can I remove my credit card from my account?
 
-For detailed information on how to remove a credit card from the Storj DCS service, please see [](docId:WMzdlxUZzKJ4TbNa8TETG) under the [](docId:7U4_uu6Pzg6u2N6FpV9VE) section of this documentation. Please note that a valid payment method must be maintained on a paid tier account. You may be required to submit a support request as part of the payment method removal process.
+For detailed information on how to remove a credit card from the Storj service, please see [](docId:WMzdlxUZzKJ4TbNa8TETG) under the [](docId:7U4_uu6Pzg6u2N6FpV9VE) section of this documentation. Please note that a valid payment method must be maintained on a paid tier account. You may be required to submit a support request as part of the payment method removal process.
 
 ## How can I delete a bucket?
 
-Buckets can be created and deleted using the S3-compatible gateway, CLI, or Go library. For detailed information on how deleting a bucket works on Storj DCS, please see the appropriate section of this documentation:
+Buckets can be created and deleted using the S3-compatible gateway, CLI, or Go library. For detailed information on how deleting a bucket works on Storj, please see the appropriate section of this documentation:
 
 - [](docId:4oDAezF-FcfPr0WPl7knd)
 
@@ -178,19 +178,19 @@ Buckets can be created and deleted using the S3-compatible gateway, CLI, or Go l
 
 ## How do I delete all my data?
 
-The easiest way to delete your data is to use the CLI. For detailed information on how to use the command for removing buckets on Storj DCS, please see the section of this documentation on how to [](docId:Wo5-shT0hZDNMeyM1kA12).
+The easiest way to delete your data is to use the CLI. For detailed information on how to use the command for removing buckets on Storj, please see the section of this documentation on how to [](docId:Wo5-shT0hZDNMeyM1kA12).
 
 ## How do I delete my account?
 
-We want all of our users to receive value when they choose the Storj DCS service for their storage needs, but it’s possible that a user may no longer need Storj DCS services. If a user wants to stop using their account and permanently delete it, the user may do so only after following the steps outlined in the Billing Documentation to eliminate service usage.
+We want all of our users to receive value when they choose the Storj service for their storage needs, but it’s possible that a user may no longer need Storj services. If a user wants to stop using their account and permanently delete it, the user may do so only after following the steps outlined in the Billing Documentation to eliminate service usage.
 
 The process to eliminate service usage starts with deleting all data from the service, including all objects and buckets. Next, all Access Grants should be deleted. Once this is done, the user should submit a support ticket to remove all payment methods and delete the account.
 
-For detailed information on how to close your account on Storj DCS, please see the [](docId:1AZ8BVkKsR3a2MTEKq85b) section of this documentation.
+For detailed information on how to close your account on Storj, please see the [](docId:1AZ8BVkKsR3a2MTEKq85b) section of this documentation.
 
-## Does Storj DCS provide tools for end-user identity management for applications that store data on the service?
+## Does Storj provide tools for end-user identity management for applications that store data on the service?
 
-The Storj DCS service is not designed to handle identity management for end users of applications that store data on the service. User authentication is expected to be handled by applications. Application developers may then make further design decisions related to use the authorization management functions of the service to enable secure and private sharing of data between users of an application or sharing data with a publicly available URL.
+The Storj service is not designed to handle identity management for end users of applications that store data on the service. User authentication is expected to be handled by applications. Application developers may then make further design decisions related to use the authorization management functions of the service to enable secure and private sharing of data between users of an application or sharing data with a publicly available URL.
 
 ---
 

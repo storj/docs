@@ -1,9 +1,10 @@
 ---
 title: Bunny CDN
 docId: pheaSeeSh5Eepee0ooth3
+tags:
+  - content-delivery
 metadata:
-  description:
-    Learn how to use Storj as the origin service for Bunny CDN.
+  description: Learn how to use Storj as the origin service for Bunny CDN.
   title: 'Using Storj with Bunny CDN'
 ---
 
@@ -13,21 +14,20 @@ CDNs leverage distributed caching to reduce latency and enhance website performa
 
 The following directions show how to set up static website hosting with Storj and Bunny CDN.
 
-
 ## Create a publicly shared bucket / prefix in Storj
 
 To work with Bunny CDN, you'll first need to share a bucket or prefix (folder) in Storj.
 
-This can be done by following Part 1 of our [](docId:GkgE6Egi02wRZtyryFyPz) directions, or using the Storj.io's 
+This can be done by following Part 1 of our [](docId:GkgE6Egi02wRZtyryFyPz) directions, or using the Storj.io's
 [](docId:4oDAezF-FcfPr0WPl7knd#share-a-bucket).
 
 If using our CLI tool, record the `storj-root` and `storj-access` values from the [](docId:GkgE6Egi02wRZtyryFyPz) directions.
 
 If using the Storj.io website, you'll need to determine the `storj-root` and `storj-access` values from the Shared Link.
 Visit the Shared Link in a browser, and copy the new, resulting URL.
-This URL will follow a known formula:  `https://link.storjshare.io/s/` + `storj-access` + `/` + `storj-root`.
+This URL will follow a known formula: `https://link.storjshare.io/s/` + `storj-access` + `/` + `storj-root`.
 
-In the example of `https://link.storjshare.io/s/jwm2j2juznpzcyl5kzgxzxvareoq/mybucket/myfolder/`, 
+In the example of `https://link.storjshare.io/s/jwm2j2juznpzcyl5kzgxzxvareoq/mybucket/myfolder/`,
 record `storj-root:jwm2j2juznpzcyl5kzgxzxvareoq` and `storj-access:/mybucket/myfolder/`
 
 {% callout type="info"  %}
@@ -35,7 +35,6 @@ The `storj-root` part of a Shared Link URL is "URL-encoded."
 URL-encoded values often have slash characters ('/') replaced with `%2F`.
 Visiting the URL in a browser is a convenient fix in most circumstances.
 {% /callout %}
-
 
 ## Configure Bunny CDN
 
@@ -45,7 +44,7 @@ Visiting the URL in a browser is a convenient fix in most circumstances.
 
 3. Click `Add Pull Zone` in the upper right.
 
-4. Enter any name in the Pull Zone Name section.  Record the full domain name (EG: `example.b-cdn.net`) for later use.
+4. Enter any name in the Pull Zone Name section. Record the full domain name (EG: `example.b-cdn.net`) for later use.
 
 5. Set `Origin URL` to `http://link.storjshare.io/`
 
@@ -55,7 +54,6 @@ Visiting the URL in a browser is a convenient fix in most circumstances.
 
 8. Click `Add Pull Zone`
 
-
 ## Configure Your Domain Registrar
 
 1. In your DNS provider, create a CNAME record on your hostname corresponding to your Bunny domain created above (EG: `example.b-cdn.net`).
@@ -64,7 +62,7 @@ Visiting the URL in a browser is a convenient fix in most circumstances.
 Ensure you include the trailing `.` at the end of your CNAME if your DNS providers allows.
 {% /callout %}
 
-2. Create two TXT records, prepending `txt-` to your hostname.  Set them equal to your `storj-root` and `storj-access` values.
+2. Create two TXT records, prepending `txt-` to your hostname. Set them equal to your `storj-root` and `storj-access` values.
 
 **Root Path:** the bucket or object prefix key that you want your root domain to resolve to (and that contains your index.html file).
 
@@ -79,7 +77,6 @@ Ensure you include the trailing `.` at the end of your CNAME if your DNS provide
 4. Optionally, if you create a page titled `404.html`in the root of your shared prefix, it will be served in 404 conditions.
 
 5. That's it! You should be all set to access your website! e.g.`http://www.example.test`
-
 
 {% callout type="info"  %}
 For more detailed information, refer to [Bunny's documentation for integrating Bunny CDN with Cloudflare](https://support.bunny.net/hc/en-us/articles/360001631951-How-to-set-up-BunnyCDN-with-a-custom-hostname-on-CloudFlare)

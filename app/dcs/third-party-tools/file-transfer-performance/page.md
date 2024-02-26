@@ -20,7 +20,7 @@ The exact optimal settings for parallel file transfers vary based on your own co
 
 ## Parallelism on Storj
 
-Storj DCS achieves decentralization by breaking files into chunks and distributing those chunks among nodes. First, files are broken into 64MB segments. Each segment is then distributed as 80 smaller pieces to different nodes. These chunks of segments and pieces are the fundamental ideas that form the basis for parallelism in file transfers with the Storj network.
+Storj achieves decentralization by breaking files into chunks and distributing those chunks among nodes. First, files are broken into 64MB segments. Each segment is then distributed as 80 smaller pieces to different nodes. These chunks of segments and pieces are the fundamental ideas that form the basis for parallelism in file transfers with the Storj network.
 
 When files are transferred between your local system and the Storj network, each segment of the file is usually sent to the network serially. However, within each segment, the individual pieces are transferred in parallel. This is Storj's Base Parallelism model for parallel transfer.
 
@@ -30,7 +30,7 @@ With these two concepts in mind, we can begin considering the available tools fo
 
 ## Tools
 
-The two main tools available to transfer files between a local system and Storj DCS are [](docId:TbMdOGCAXNWyPpQmH6EOq) and [](docId:LdrqSoECrAyE_LQMvj3aF)
+The two main tools available to transfer files between a local system and Storj are [](docId:TbMdOGCAXNWyPpQmH6EOq) and [](docId:LdrqSoECrAyE_LQMvj3aF)
 
 Uplink is Storj's command line tool for transferring directly with the Storj network. As a native CLI tool, Uplink is able to bypass the Storj network's edge service layer and connect directly to nodes on the network. This allows for more efficient transfers and higher throughput.
 

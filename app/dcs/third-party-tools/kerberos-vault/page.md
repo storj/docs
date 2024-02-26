@@ -17,13 +17,13 @@ metadata:
 
 The [Kerberos.io](https://kerberos.io) project (not to be confused with the authentication protocol of the same name) offers an open-source platform for video analytics and monitoring. With a modular system design focused on minimal startup requirements and additional components available to add later, Kerberos.io is built to work for everything from small, personal systems to complex enterprise configurations. This makes it a useful solution that is relevant at all scales.
 
-The modularity of Kerberos.io includes optional components that help integrate it into any cloud architecture. One of these components is [Kerberos Vault](https://kerberos.io/product/vault/), which provides a flexible and extensible storage solution for video files. Kerberos Vault is designed to work with several different cloud providers, including Storj DCS, to allow for customized storage options where users can bring their own providers.
+The modularity of Kerberos.io includes optional components that help integrate it into any cloud architecture. One of these components is [Kerberos Vault](https://kerberos.io/product/vault/), which provides a flexible and extensible storage solution for video files. Kerberos Vault is designed to work with several different cloud providers, including Storj, to allow for customized storage options where users can bring their own providers.
 
-## Storj DCS and Kerberos
+## Storj and Kerberos
 
-Storj's decentralized cloud storage platform offers a great video storage backend for integration with Kerberos.io and Kerberos Vault. This is because the distributed storage design that Storj DCS is built on offers both high availability access to video files (thanks to its network of nodes across multiple regions) and secure, reliable hosting with no single-point-of-failure.
+Storj's decentralized cloud storage platform offers a great video storage backend for integration with Kerberos.io and Kerberos Vault. This is because the distributed storage design that Storj is built on offers both high availability access to video files (thanks to its network of nodes across multiple regions) and secure, reliable hosting with no single-point-of-failure.
 
-Conveniently, it is fairly simple to configure Storj DCS to work with Kerberos Vault. This doc will show the steps necessary to do so.
+Conveniently, it is fairly simple to configure Storj to work with Kerberos Vault. This doc will show the steps necessary to do so.
 
 ### Prerequisites
 
@@ -39,13 +39,13 @@ With these prerequisites satisfied, we can begin configuring Kerberos Vault to u
 
 ### Creating a Storj Bucket and Access Credentials
 
-The first step in configuring Storj as the storage backend for Kerberos.io is to create a bucket in your Storj DCS account and [](docId:AsyYcUJFbO1JI8-Tu8tW3) for the bucket.
+The first step in configuring Storj as the storage backend for Kerberos.io is to create a bucket in your Storj account and [](docId:AsyYcUJFbO1JI8-Tu8tW3) for the bucket.
 
 Kerberos Vault will then use the bucket information and access grant to connect with Storj.
 
 For this, do the following steps:
 
-1\) Log in to your Storj DCS account
+1\) Log in to your Storj account
 
 2\) On the main dashboard, click [](docId:pxdnqsVDjCLZgeEXt2S6x) and **"New Bucket"**
 
@@ -133,6 +133,6 @@ Now it is time to tell Kerberos where to store videos (your Storj bucket) and ho
 
 ### Summary
 
-The flexibility of Kerberos.io and its components like Kerberos Vault are what make it a versatile platform for video monitoring and analytics. From single-camera setups to advanced cloud-based enterprise installations, the Kerberos.io video technology is adaptable to any configuration. This adaptability includes the option to customize your choice for video storage with the platform, which is where Storj DCS makes an excellent choice.
+The flexibility of Kerberos.io and its components like Kerberos Vault are what make it a versatile platform for video monitoring and analytics. From single-camera setups to advanced cloud-based enterprise installations, the Kerberos.io video technology is adaptable to any configuration. This adaptability includes the option to customize your choice for video storage with the platform, which is where Storj makes an excellent choice.
 
-In this tutorial, we demonstrated the steps to set up a Storj bucket and create access credentials for that bucket. We then showed how to update a Kerberos Vault installation to use Storj as a storage provider. Doing all of this allows Kerberos.io to leverage the distributed storage network provided by Storj DCS, taking advantage of all the benefits it provides. Your video monitoring and analytics solution is now enhanced with the power of decentralized media storage.
+In this tutorial, we demonstrated the steps to set up a Storj bucket and create access credentials for that bucket. We then showed how to update a Kerberos Vault installation to use Storj as a storage provider. Doing all of this allows Kerberos.io to leverage the distributed storage network provided by Storj, taking advantage of all the benefits it provides. Your video monitoring and analytics solution is now enhanced with the power of decentralized media storage.

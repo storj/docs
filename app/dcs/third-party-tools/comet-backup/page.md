@@ -129,7 +129,7 @@ To complete the integration, you will need the credentials (bucket name and pass
 
 ![This applies to both self-hosted and Comet-hosted servers](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/oDRf5aD6ICAw55-445ij9_comet-backup-storj-7.png)
 
-3\. Change the “Type” to Storj DCS and then fill in the fields as described below:
+3\. Change the “Type” to Storj and then fill in the fields as described below:
 
 1.  **Description:** What you will call the storage on the Comet Server
 

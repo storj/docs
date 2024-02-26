@@ -11,7 +11,7 @@ metadata:
     token for payments.
 ---
 
-Storj DCS accepts the following two payment methods:
+Storj accepts the following two payment methods:
 
 1.  Credit Card
 
@@ -21,7 +21,7 @@ Storj DCS accepts the following two payment methods:
 
 ## How To Add A Payment Method
 
-Once you have created a user account and a project, registered users are required to add a payment method before storing data on Storj DCS. Payment methods are added from the [](docId:Hurx0SirlRp_O5aUzew7_) section of the user interface.
+Once you have created a user account and a project, registered users are required to add a payment method before storing data on Storj. Payment methods are added from the [](docId:Hurx0SirlRp_O5aUzew7_) section of the user interface.
 
 Begin by selecting "Billiing" from the "My Account" dropdown menu at the left bottom corner of your dashboard.
 
@@ -49,7 +49,7 @@ You’ll be prompted to add your card information. Using a credit card is somewh
 
 ## Using STORJ Token
 
-In addition to credit cards, users may also pay for usage fees with STORJ token. Storj created the STORJ utility token as a medium of exchange on its decentralized cloud storage network. The STORJ utility token facilitates payments from people around the world for their use of the Storj DCS network to store their data, and Storj uses it to pay our community of Storage Node Operators that rent their unused hard drive capacity and bandwidth to the network.
+In addition to credit cards, users may also pay for usage fees with STORJ token. Storj created the STORJ utility token as a medium of exchange on its decentralized cloud storage network. The STORJ utility token facilitates payments from people around the world for their use of the Storj network to store their data, and Storj uses it to pay our community of Storage Node Operators that rent their unused hard drive capacity and bandwidth to the network.
 
 Making payments with STORJ token is a different process than using a credit card. When using STORJ as your payment method, you commit to using a pre-payment model, which means you must first deposit X amount of STORJ tokens, which will be automatically converted to Y amount of $USD based on the spot price of the token at the time of the payment transaction.
 
@@ -68,7 +68,7 @@ We realize the STORJ token price can fluctuate, so our billing system is designe
 To deposit STORJ tokens in an account, open a **_Payment Methods_** tab on the **Billing** page and click **Add STORJ tokens**, then use provided deposit address to deposit STORJ tokens via L1 (Ethereum).
 
 {% callout type="info"  %}
-Important: The deposit address generated for your account is a deposit-only address to prepay for usage on the Storj DCS Platform. Users are not able to remove or otherwise withdraw tokens from this address. Any request for a refund or return of an unused prepaid deposit must follow the support process [](docId:LX9pqXsAduR8LEaEiX_It).
+Important: The deposit address generated for your account is a deposit-only address to prepay for usage on the Storj Platform. Users are not able to remove or otherwise withdraw tokens from this address. Any request for a refund or return of an unused prepaid deposit must follow the support process [](docId:LX9pqXsAduR8LEaEiX_It).
 {% /callout %}
 
 If the STORJ token balance runs out, a user will receive a notification to the registered email on the account. However, if a new payment is not added within a reasonable amount of time, Storj reserves the right to reduce account usage limits to zero and/or reclaim the available storage and bandwidth resources and delete your data stored on the network pursuant to our data retention policy.

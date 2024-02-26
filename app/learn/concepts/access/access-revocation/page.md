@@ -11,11 +11,11 @@ metadata:
     adding it to the Revocation service.
 ---
 
-Storj DCS provides an easy way to revoke client-side delegated authorization with hierarchically deterministic API keys
+Storj provides an easy way to revoke client-side delegated authorization with hierarchically deterministic API keys
 
 While delegated authorization and the ability to generate Access Grants at the edge provides the opportunity to create more private and secure applications, there are design considerations to take into account when building applications with data sharing capabilities based on long-lived bearer tokens.
 
-While it is possible to create Access Grants with time-based restrictions and to required Access Grants be refreshed as they expire, applications must be able to revoke access to data. Access grant revocation is supported on Storj DCS in two ways:
+While it is possible to create Access Grants with time-based restrictions and to required Access Grants be refreshed as they expire, applications must be able to revoke access to data. Access grant revocation is supported on Storj in two ways:
 
 1.  Deleting a primary Access Grant - from the Satellite Admin Console, it is possible to delete a primary Access Grant. Deleting a primary Access Grant also immediately invalidates all child Restricted Access Grants derived from that primary Access Grant.
 

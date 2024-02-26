@@ -13,10 +13,10 @@ metadata:
 
 Choose a Satellite from one of the available metadata regions and register for a developer account.
 
-The first step in creating your developer account on Storj DCS is to select a Satellite. A Satellite is a set of hosted services that is responsible for a range of functions on the network, including the node discovery system, node address information caching, per-object metadata storage, storage node reputation management, billing data aggregation, storage node payment, data audit and repair, as well as user account and authorization management.
+The first step in creating your developer account on Storj is to select a Satellite. A Satellite is a set of hosted services that is responsible for a range of functions on the network, including the node discovery system, node address information caching, per-object metadata storage, storage node reputation management, billing data aggregation, storage node payment, data audit and repair, as well as user account and authorization management.
 
 {% callout type="info"  %}
-When selecting the Satellite for your project, you'll want to choose the geographic region where the majority of the end users of your service who will be interacting with the objects on Storj DCS will be located.
+When selecting the Satellite for your project, you'll want to choose the geographic region where the majority of the end users of your service who will be interacting with the objects on Storj will be located.
 
 Learn more about [](docId:v0b3GtAU4dDT_1qibwCxc) under Concepts.
 {% /callout %}
@@ -33,7 +33,7 @@ Choose your account type - Personal if you're an individual with a smaller proje
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ProKS3n1_rBPBj3PON-Em_account03.png)
 
-Or Professional if you are part of a business interested in leveraging Storj DCS in an application or service
+Or Professional if you are part of a business interested in leveraging Storj in an application or service
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/He52WhNreWbPyINWumw6-_account04.png)
 

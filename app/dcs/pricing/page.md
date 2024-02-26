@@ -30,7 +30,7 @@ The following section describes how the charges listed in the table above are ca
 
 ## Object Storage
 
-Object storage is priced per GB per month in increments of byte hours. The calculation of object storage fees is based on a standard 720-hour month. Actual storage is metered in bytes uploaded. Bytes uploaded include the bytes associated with actual objects plus any nominal overhead associated with encryption. Byte hours are calculated based on the number of hours bytes are stored on the Storj DCS Platform from when an object is uploaded to when it is deleted. The calculated number of bytes is then multiplied by the byte hour price. The byte hour price is derived from the GB month price divided by the standard 720-hour month and base 10 conversion of GB to bytes.
+Object storage is priced per GB per month in increments of byte hours. The calculation of object storage fees is based on a standard 720-hour month. Actual storage is metered in bytes uploaded. Bytes uploaded include the bytes associated with actual objects plus any nominal overhead associated with encryption. Byte hours are calculated based on the number of hours bytes are stored on the Storj Platform from when an object is uploaded to when it is deleted. The calculated number of bytes is then multiplied by the byte hour price. The byte hour price is derived from the GB month price divided by the standard 720-hour month and base 10 conversion of GB to bytes.
 
 **Example**
 
@@ -46,7 +46,7 @@ When an object is downloaded, there are a number of factors that can impact the 
 
 A user downloads one 1 TB file. Based on the long tail elimination, up to 1.3 TB of download bandwidth may be used. The 1.3 TB of download bandwidth is accounted for as 1,300,000,000 bytes. In this example, the price per GB is $0.007 and per byte is $0.000000045. The total amount charged for the egress is $9.10.
 
-Unlike other cloud object storage vendors, we don't use high egress fees to create vendor lock-in. If you discover that Storj DCS isn't a fit for your project or application and you transfer your data to another service, use our support portal to submit a ticket and let us know. As long as you follow the process, we won't charge you for that egress bandwidth.
+Unlike other cloud object storage vendors, we don't use high egress fees to create vendor lock-in. If you discover that Storj isn't a fit for your project or application and you transfer your data to another service, use our support portal to submit a ticket and let us know. As long as you follow the process, we won't charge you for that egress bandwidth.
 
 ## Per Segment Fee
 
@@ -56,13 +56,13 @@ Each Segment stored on the network in excess of the default Segment Project Limi
 
 The Paid Tier includes 50,000 Segments per month, which is represented as 36,000,000 Segment Hours. Any increase in Segment Limit will be billed at a rate of $0.0000088 per Segment per month, equivalent to a rate of $0.00000001222 per Segment Hour.
 
-The Storj DCS Platform distinguishes between two types of object storage: remote and inline. Remote objects are large enough to erasure code and store the pieces of the file on storage nodes. Inline objects are smaller than the metadata associated with the actual object. In the case of objects that are smaller than the associated metadata, it is more efficient to store the object inline in the satellite metadata database. When storing a large number of tiny files, the best practice is to employ a packing strategy to store larger blocks of small files as a single object.
+The Storj Platform distinguishes between two types of object storage: remote and inline. Remote objects are large enough to erasure code and store the pieces of the file on storage nodes. Inline objects are smaller than the metadata associated with the actual object. In the case of objects that are smaller than the associated metadata, it is more efficient to store the object inline in the satellite metadata database. When storing a large number of tiny files, the best practice is to employ a packing strategy to store larger blocks of small files as a single object.
 
-The Per Segment Fee is priced per Segment per month in increments of Segment hours. The calculation of per segment fees is based on a standard 720-hour month. Actual Per Segment Fees are metered in Segments uploaded. Per Segment Fee hours are calculated based on the number of hours Segments are stored on the Storj DCS Platform from when a Segment is uploaded to when it is deleted. The number of hours each Segment is stored on the platform during the month then is multiplied by the Segment hour price. The segment hour price is derived from the Segment month price divided by the standard 720-hour month.
+The Per Segment Fee is priced per Segment per month in increments of Segment hours. The calculation of per segment fees is based on a standard 720-hour month. Actual Per Segment Fees are metered in Segments uploaded. Per Segment Fee hours are calculated based on the number of hours Segments are stored on the Storj Platform from when a Segment is uploaded to when it is deleted. The number of hours each Segment is stored on the platform during the month then is multiplied by the Segment hour price. The segment hour price is derived from the Segment month price divided by the standard 720-hour month.
 
-As described elsewhere in this documentation, objects stored on Storj DCS are encrypted and erasure coded, with the encrypted, erasure coded pieces stored on various Storage Nodes on the distributed and decentralized network. Each object stored on the network is represented as at least one Segment.
+As described elsewhere in this documentation, objects stored on Storj are encrypted and erasure coded, with the encrypted, erasure coded pieces stored on various Storage Nodes on the distributed and decentralized network. Each object stored on the network is represented as at least one Segment.
 
-A Segment is a single array of bytes, between 0 and a user-configurable maximum segment size. The default Segment size on Storj DCS Satellites is 64MB. A File smaller than 64MB is stored as one segment. Files larger than 64MB are stored in multiple 64MB Segments. Each Segment is stored as pieces on the network. Only a subset of pieces of the total pieces (e.g. 29 of the 80) are required to reconstitute a Segment . All Segments are required to reconstitute a File.
+A Segment is a single array of bytes, between 0 and a user-configurable maximum segment size. The default Segment size on Storj Satellites is 64MB. A File smaller than 64MB is stored as one segment. Files larger than 64MB are stored in multiple 64MB Segments. Each Segment is stored as pieces on the network. Only a subset of pieces of the total pieces (e.g. 29 of the 80) are required to reconstitute a Segment . All Segments are required to reconstitute a File.
 
 **Examples:**
 
@@ -94,7 +94,7 @@ Note that the number of segments for 100TB of 1GB files and 1.6TB of 1MB files i
 
 ## Multipart Upload Impact on Segments
 
-When an object is uploaded using Multipart Upload, a file is first broken into parts, each part of a Multipart Upload is also stored as one or more Segments. With Multipart Upload, a single object is uploaded as a set of parts. Each part is an integral portion of the data comprising the object. The object parts may be uploaded independently, in parallel, and in any order. Uploads may be paused and resumed by uploading an initial set of parts, then resuming and uploading the remaining parts. If the upload of any part fails, that part may be re-uploaded without impacting the upload of other parts. All of these parts are broken into one or more Segments by the Storj DCS Gateway based on whether the Part Size is smaller or larger than the default Segment size. While Multipart Upload is most appropriate for files larger than the 64MB default Segment size, the Part Size is configurable in applications that use Multipart Upload.
+When an object is uploaded using Multipart Upload, a file is first broken into parts, each part of a Multipart Upload is also stored as one or more Segments. With Multipart Upload, a single object is uploaded as a set of parts. Each part is an integral portion of the data comprising the object. The object parts may be uploaded independently, in parallel, and in any order. Uploads may be paused and resumed by uploading an initial set of parts, then resuming and uploading the remaining parts. If the upload of any part fails, that part may be re-uploaded without impacting the upload of other parts. All of these parts are broken into one or more Segments by the Storj Gateway based on whether the Part Size is smaller or larger than the default Segment size. While Multipart Upload is most appropriate for files larger than the 64MB default Segment size, the Part Size is configurable in applications that use Multipart Upload.
 
 **Examples:**
 
@@ -102,7 +102,7 @@ A single 128MB file using a 64MB Part Size is uploaded as 2 parts, with each par
 
 A single 128MB file using a 5MB Part Size is uploaded as 26 Parts (25 5MB Parts and one 3MB Part), with each part stored as one Segment, for a total of 26 Segments.
 
-The default Part Size for Multipart Upload for some applications is 5MB. The difference between using the default 5MB Part Size instead of the default size of 64MB for Storj DCS is impactful.
+The default Part Size for Multipart Upload for some applications is 5MB. The difference between using the default 5MB Part Size instead of the default size of 64MB for Storj is impactful.
 
 Assuming a 1TB data set comprised of 1,000 1GB files is stored for an entire month, the difference between using 64MB Part Size vs. 5MB Part Size is described below:
 
@@ -121,11 +121,11 @@ A user uploads 1PB of one GB objects using multipart upload with a 5MB Part Size
 
 ## Project limits
 
-All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj DCS. To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGYhfgGbVhlQ2ZHXVS) sections of this Documentation.
+All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj. To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGYhfgGbVhlQ2ZHXVS) sections of this Documentation.
 
 ## Free tier
 
-Storj DCS currently offers a free level of access for developers to try out the service. When a customer creates a new account, the user automatically is able to use the Storj DCS service at no cost up to specified limits of service. The free level of service is limited to the level of service for a single project as described below:
+Storj currently offers a free level of access for developers to try out the service. When a customer creates a new account, the user automatically is able to use the Storj service at no cost up to specified limits of service. The free level of service is limited to the level of service for a single project as described below:
 
 - 25GB of static object storage for a single project.
 

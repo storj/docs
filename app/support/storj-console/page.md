@@ -24,7 +24,7 @@ The Storj Console is where you:
 
 3. View your [Project Dashboard](docId:k6QwBZM3hnzxkCuQxLOal) for summary data on usage, billing, and invoices.
 
-4. Use the [](docId:4oDAezF-FcfPr0WPl7knd) to drag and drop objects onto Storj DCS through the browser, see the map of storage nodes storing the pieces of your file, and create sharable links to your objects.
+4. Use the [](docId:4oDAezF-FcfPr0WPl7knd) to drag and drop objects onto Storj through the browser, see the map of storage nodes storing the pieces of your file, and create sharable links to your objects.
 
 5. [](docId:Ch4vLynsEqyT2-3qDEBiy) the all-in-one bearer token for access management and encryption for configuring client tools and applications such as the CLI, developer library, self-hosted gateway, client apps like [](docId:LdrqSoECrAyE_LQMvj3aF) and [](docId:3Vj_5zZ99c4mTMRhQjGFM), or using the [](docId:yYCzPT8HHcbEZZMvfoCFa).
 

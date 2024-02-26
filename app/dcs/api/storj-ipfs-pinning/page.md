@@ -26,7 +26,7 @@ Uploading content follows the [IPFS HTTP RPC for /api/v0/add](https://docs.ipfs.
 2.  You must specify the credentials given when invited to participate in the beta as _HTTP basic authentication._
 
 {% callout type="warning"  %}
-**_This is not the same as your Storj DCS username and password. Do not use your Storj DCS username and password to try and use the IPFS Pinning Service._**
+**_This is not the same as your Storj username and password. Do not use your Storj username and password to try and use the IPFS Pinning Service._**
 {% /callout %}
 
 ### Example for pinning a single file using cURL
@@ -288,7 +288,7 @@ For those applications that do not support IPFS natively, you can use any [publi
 
 ### HTTP via Storj IPFS Gateway
 
-For best performance, we have provided a Storj IPFS Gateway. This gateway will only host content pinned to Storj DCS, so it is not like other public IPFS gateways.
+For best performance, we have provided a Storj IPFS Gateway. This gateway will only host content pinned to Storj, so it is not like other public IPFS gateways.
 
 You can construct a link like this:
 
@@ -351,7 +351,7 @@ Listing pinned content follows the [IPFS HTTP RPC for /api/v0/pin/ls](https://do
 2.  You must specify the credentials given when invited to participate in the beta as _HTTP basic authentication._
 
 {% callout type="warning"  %}
-**_This is not the same as your Storj DCS username and password. Do not use your Storj DCS username and password to try and use the IPFS Pinning Service._**
+**_This is not the same as your Storj username and password. Do not use your Storj username and password to try and use the IPFS Pinning Service._**
 {% /callout %}
 
 ### Example for listing pins using cURL
@@ -371,7 +371,7 @@ Unpinning content follows the [IPFS HTTP RPC for /api/v0/pin/rm](https://docs.ip
 2.  You must specify the credentials given when invited to participate in the beta as _HTTP basic authentication._
 
 {% callout type="warning"  %}
-**_This is not the same as your Storj DCS username and password. Do not use your Storj DCS username and password to try and use the IPFS Pinning Service._**
+**_This is not the same as your Storj username and password. Do not use your Storj username and password to try and use the IPFS Pinning Service._**
 {% /callout %}
 
 {% callout type="info"  %}
@@ -409,7 +409,7 @@ Importing CAR content follows the [IPFS HTTP RPC for /api/v0/dag/import](https:/
 2.  You must specify the credentials given when invited to participate in the beta as _HTTP basic authentication._
 
 {% callout type="warning"  %}
-**_This is not the same as your Storj DCS username and password. Do not use your Storj DCS username and password to try and use the IPFS Pinning Service._**
+**_This is not the same as your Storj username and password. Do not use your Storj username and password to try and use the IPFS Pinning Service._**
 {% /callout %}
 
 ### Example for pinning a single file using cURL

@@ -29,7 +29,7 @@ The `uplink` command can take the following child commands:
 | [](docId:Df-CVmCCHmt6r3_c1PLn4) | list objects and prefixes or all buckets                         |
 | [](docId:F77kaGpjXx7w-JYv2rkhf) | make a new bucket                                                |
 | [](docId:kyMG3B16kKc3gpCxRNe1K) | metadata related commands                                        |
-| [](docId:PIfV271UghKvJecT-zQ4d) | moves a Storj object to another location in Storj DCS            |
+| [](docId:PIfV271UghKvJecT-zQ4d) | moves a Storj object to another location in Storj            |
 | [](docId:Wo5-shT0hZDNMeyM1kA12) | remove a bucket                                                  |
 | [](docId:eavv_906IH-39ylIXq30d) | remove a file from a Storj bucket                                |
 | [](docId:OuoKJl9KqbJVQB9Xkdy3g) | create an uplink config file                                     |

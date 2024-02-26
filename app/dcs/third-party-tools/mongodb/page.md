@@ -7,10 +7,10 @@ redirects:
   - /dcs/how-tos/mongodb-ops-manager-backup
   - /how-tos/mongodb-ops-manager-backup
 metadata:
-  title: Guide on Deploying MongoDB Ops Manager with Storj DCS
+  title: Guide on Deploying MongoDB Ops Manager with Storj
   description:
     Step-by-step tutorial on how to deploy, monitor, and scale MongoDB
-    using Ops Manager on your own infrastructure with Storj DCS.
+    using Ops Manager on your own infrastructure with Storj.
 ---
 
 ## Introduction
@@ -25,7 +25,7 @@ For the complete documentation for the service, see: <https://github.com/jasonmi
 
 ## Before you begin
 
-If you haven't yet, create a [Storj DCS account](https://www.storj.io/signup) before following the rest of the tutorial. Make sure to [](docId:Ch4vLynsEqyT2-3qDEBiy) and [](docId:pxdnqsVDjCLZgeEXt2S6x).
+If you haven't yet, create a [Storj account](https://www.storj.io/signup) before following the rest of the tutorial. Make sure to [](docId:Ch4vLynsEqyT2-3qDEBiy) and [](docId:pxdnqsVDjCLZgeEXt2S6x).
 
 ## Procure a Kubernetes cluster
 
@@ -96,7 +96,7 @@ You should see your MongoDB cluster once connected:
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5B3azwyWH9dHSdO9N-_qh_mongodb3.png)
 
-Finally, you can see the backup data blocks stored in the Storj DCS bucket. You can even use the local tardigrade-gateway with command s3 command line tools:
+Finally, you can see the backup data blocks stored in the Storj bucket. You can even use the local tardigrade-gateway with command s3 command line tools:
 
 ```Text
 $ kubectl port-forward tardigrade-gateway-tardigrade-gateway-75cfdb889-nz2n4 7777:7777 &
@@ -107,11 +107,11 @@ $ aws --endpoint-url http://localhost:7777 s3 ls test
 
 ## Conclusion
 
-We look forward to seeing what MongoDB users do with Storj DCS (formerly known as Tardigrade).
+We look forward to seeing what MongoDB users do with Storj (formerly known as Tardigrade).
 
 We regularly hear from users who would like cloud backup services that provide end-to-end encryption, multi-region redundancy, as well as lower and more predictable costs compared to centralized services.
 
-Storj DCS delivers on all of these needs, while still offering the same enterprise service level agreements users absolutely require.
+Storj delivers on all of these needs, while still offering the same enterprise service level agreements users absolutely require.
 
 **Learn more**
 

@@ -64,7 +64,7 @@ The network-attached storage location could work, but it is neither supported no
 
 There are plenty of options how to transfer the identity and data to the remote location, here are some examples:
 
-- [Storj DCS](https://www.storj.io/)
+- [Storj](https://www.storj.io/)
 
 - ftp service
 

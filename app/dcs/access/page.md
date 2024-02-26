@@ -17,7 +17,7 @@ An Access Grant is a security envelope that contains a satellite address, a rest
 Learn more about [](docId:bNywu7-9KLjYfk5LBQABx) and [](docId:XKib9SzjtEXTXWvdyYWX6) or check out the [](docId:4qPQxa8HlvDIO1Kgqa2No) and [](docId:DUfoyppOZA756jGFgj9qw).
 {% /callout %}
 
-The Access Grant screen allows you to create or delete Access Grants, generate credentials for the Storj DCS S3-compatible Gateway from an Access Grant, create an API key to generate an access grant in the CLI.
+The Access Grant screen allows you to create or delete Access Grants, generate credentials for the Storj S3-compatible Gateway from an Access Grant, create an API key to generate an access grant in the CLI.
 
 ---
 
@@ -116,7 +116,7 @@ Then confirm that you want to delete the Access Grant by typing its name and con
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/--lULF4MsGMwhbtfyIa5W_access11.png)
 
 {% callout type="danger"  %}
-**Important:** If you delete an Access Grant from the Satellite user interface, that Access Grant will immediately cease to function, and all hierarchically derived child Access Grants and Storj DCS gateway access credentials based on that Access Grant will also cease to function. Any data uploaded with that Access Grant will persist on Storj DCS. If you didn't back up the Encryption Passphrase used with the Access Grant you are deleting, you will not be able to decrypt that data without that Encryption Passphrase, and it will be effectively unrecoverable.
+**Important:** If you delete an Access Grant from the Satellite user interface, that Access Grant will immediately cease to function, and all hierarchically derived child Access Grants and Storj gateway access credentials based on that Access Grant will also cease to function. Any data uploaded with that Access Grant will persist on Storj. If you didn't back up the Encryption Passphrase used with the Access Grant you are deleting, you will not be able to decrypt that data without that Encryption Passphrase, and it will be effectively unrecoverable.
 {% /callout %}
 
 You don't need to know everything in the whitepaper about our Access Grants, macaroon-based API Keys or our encryption implementation, but if you understand the general principles, you'll find these are some very sophisticated (but easy to use) tools for creating more secure and private applications.

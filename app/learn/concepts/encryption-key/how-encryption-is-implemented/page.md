@@ -13,7 +13,7 @@ metadata:
 
 Strong encryption is essential when data is stored on a network of storage nodes operated by 3rd parties
 
-## Ensuring the Privacy and Security of Data on Storj DCS
+## Ensuring the Privacy and Security of Data on Storj
 
 All data stored on the distributed and decentralized network of storage nodes and all metadata stored on Satellites is encrypted.
 
@@ -65,7 +65,7 @@ Each segment has metadata associated with it on the Satellite. Segment metadata 
 
 The last segment’s metadata contains information in addition to the encrypted key and key nonce. The additional information is the metadata for the entire file. Some of this metadata is unencrypted, such as encryption type (AES-GCM or Secretbox) and encryption block size, since they are necessary to properly decrypt the file and metadata. The remainder of the metadata, which includes the number of segments, segment size, last segment size, and additional arbitrary metadata is encrypted with the last segment’s random content encryption key.
 
-In summary, encryption and security on decentralized cloud storage networks has been carefully thought out to enable the sharing of files without compromising entire buckets of data. Cloud storage platforms must have the ability to easily share data for deployments like CDNs, websites and other use-cases. By deriving keys hierarchically from file paths, and encrypting data with different keys, Storj DCS maintains data privacy without removing important features.
+In summary, encryption and security on decentralized cloud storage networks has been carefully thought out to enable the sharing of files without compromising entire buckets of data. Cloud storage platforms must have the ability to easily share data for deployments like CDNs, websites and other use-cases. By deriving keys hierarchically from file paths, and encrypting data with different keys, Storj maintains data privacy without removing important features.
 
 This description pulls heavily from Moby von Briesen's blog post, located here: <https://storj.io/blog/2018/11/security-and-encryption-on-the-v3-network/>
 

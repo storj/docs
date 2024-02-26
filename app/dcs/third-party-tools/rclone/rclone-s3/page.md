@@ -150,19 +150,19 @@ Since this can cause data loss, test first with the `--dry-run` flag to see exac
 rclone sync --progress ~/Videos/ waterbear:mybucket/videos/
 ```
 
-The sync can also be done from Storj DCS to the local file system.
+The sync can also be done from Storj to the local file system.
 
 ```bash
 rclone sync --progress waterbear:mybucket/videos/ ~/Videos/
 ```
 
-Or between two Storj DCS buckets.
+Or between two Storj buckets.
 
 ```bash
 rclone sync --progress waterbear-us:mybucket/videos/ waterbear-europe:mybucket/videos/
 ```
 
-Or even between another cloud storage and Storj DCS.
+Or even between another cloud storage and Storj.
 
 ```bash
 rclone sync --progress s3:mybucket/videos/ waterbear:mybucket/videos/

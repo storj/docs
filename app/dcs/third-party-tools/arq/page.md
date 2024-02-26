@@ -73,4 +73,4 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/snmPnsOGwsJ2aQ7Ub_wiy_screen-shot-2022-05-27-at-94712-am-1024x814.png)
 
-Congratulations, you have successfully configured Arq to back up your data to Storj DCS!
+Congratulations, you have successfully configured Arq to back up your data to Storj!

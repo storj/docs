@@ -15,7 +15,7 @@ metadata:
 
 Object storage is ideal for files that are written once and read many times (WORM - Write Once, Read Many data). Object storage has formed the backbone of many different applications and use cases. Distributed and decentralized object storage is optimized for larger files, especially where those files are accessed regularly from geographically diverse locations.
 
-Object storage, in general, has a wide range of use cases. The use cases that are the best fit for Storj DCS are outlined below. If you don't see your use case listed, don't worry - this will just give you a sense of how Storj DCS is meant to be used.
+Object storage, in general, has a wide range of use cases. The use cases that are the best fit for Storj are outlined below. If you don't see your use case listed, don't worry - this will just give you a sense of how Storj is meant to be used.
 
 ## Common Use Cases
 

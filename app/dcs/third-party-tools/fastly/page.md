@@ -164,4 +164,4 @@ if (req.method == "GET" && !req.backend.is_shield) {
 
 Note that, as mentioned above, if you have an **override host** specified in your Fastly service settings, that value will cause the `http.host` header to be overwritten which could be invalid for AWS authentication.
 
-See also [Storj DCS Object Storage on Fastly](https://docs.fastly.com/en/guides/storj-dcs-object-storage).
+See also [Storj Object Storage on Fastly](https://docs.fastly.com/en/guides/storj-dcs-object-storage).

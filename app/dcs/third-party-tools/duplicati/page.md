@@ -35,11 +35,11 @@ To restore a small file, Duplicati has to download the entire block it is contai
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/g6qLQzAnaSz4TJGLQXpGg_duplicati.png)
 
-2\. Enter a name for this backup. For this example, we'll call it "My Backup Job." The Storj DCS plugin will encrypt all files before they get uploaded. We don't want to encrypt each file twice. Disable the Duplicati encryption.
+2\. Enter a name for this backup. For this example, we'll call it "My Backup Job." The Storj plugin will encrypt all files before they get uploaded. We don't want to encrypt each file twice. Disable the Duplicati encryption.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ferela1Npve8771EbpzNc_duplicatinoencryption-1.png)
 
-3\. Click the storage type dropdown and select "Storj DCS (Decentralized Cloud Storage)." The authentication method should be Access Grant (Access Grant). Enter an Access Grant, see [](docId:OXSINcFRuVMBacPvswwNU), bucket, and, optionally, a folder.
+3\. Click the storage type dropdown and select "Storj (Decentralized Cloud Storage)." The authentication method should be Access Grant (Access Grant). Enter an Access Grant, see [](docId:OXSINcFRuVMBacPvswwNU), bucket, and, optionally, a folder.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/iya_7I3bOi2_y092qX4oy_screenshot-2023-07-17-at-74955-am.png)
 
@@ -67,7 +67,7 @@ To restore a small file, Duplicati has to download the entire block it is contai
 | backup-test-samples=0                  | The Storj protocol checks the hash at the end of every file upload. An additional test sample is not needed. Use list-verify-uploads instead.                                                                                                                                                                                       |
 | list-verify-uploads=true               | If a file upload fails for any reason, a final listing will catch it.                                                                                                                                                                                                                                                               |
 | no-auto-compact=true                   | If a large number of small files are detected during a backup, or wasted space is found after deleting backups, the remote data will be compacted. This will cause a lot of unnecessary and expensive download traffic.                                                                                                             |
-| threshold                              | As files are changed, some data stored at the remote destination may not be required. This option controls how much wasted space the destination can contain before being reclaimed. Depending on the use case, the threshold can be reduced to 0. Storj DCS doesn't charge you for the additional delete and re-upload operations. |
+| threshold                              | As files are changed, some data stored at the remote destination may not be required. This option controls how much wasted space the destination can contain before being reclaimed. Depending on the use case, the threshold can be reduced to 0. Storj doesn't charge you for the additional delete and re-upload operations. |
 | zip-compression-method                 | This option can be used to set up an alternative compression method, such as LZMA.                                                                                                                                                                                                                                                  |
 
 8\. Click "Save", and you should see the "My Backup Job" we created on the Duplicati homepage.
@@ -76,4 +76,4 @@ To restore a small file, Duplicati has to download the entire block it is contai
 
 9\. You can select "Run now" if you would like to do a backup instantly.
 
-Congrats, you've set up Duplicati Backup to Storj DCS! 🎉
+Congrats, you've set up Duplicati Backup to Storj! 🎉

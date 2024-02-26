@@ -13,7 +13,7 @@ metadata:
     instructions on how to get started with it.
 ---
 
-The Storj DCS globally distributed, multi-region cloud-hosted S3-compatible gateway
+The Storj globally distributed, multi-region cloud-hosted S3-compatible gateway
 
 ## S3 compatibility
 

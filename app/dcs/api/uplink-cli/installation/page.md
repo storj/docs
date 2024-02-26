@@ -8,7 +8,7 @@ metadata:
   title: Download and install uplink
 ---
 
-The native CLI tool for Storj DCS/OSP
+The native CLI tool for Storj/OSP
 
 First, [](docId:HeEf9wiMdlQx9ZdS_-oZS).
 

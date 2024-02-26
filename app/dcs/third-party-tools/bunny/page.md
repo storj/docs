@@ -7,8 +7,8 @@ metadata:
   title: 'Using Storj with Bunny CDN'
 ---
 
-Bunny CDN is a content delivery network that works well with Storj, providing a caching layer beyond Storj's already relaible global performance.
-Storj is great for distributing files around the work, but for some workloads a Content Delivery Network is the more appropriate choice.
+Bunny CDN is a content delivery network that works well with Storj, providing a caching layer beyond Storj's already reliable global performance.
+Storj is great for distributing files around the world, but for some workloads a Content Delivery Network combined with Storj is the more appropriate choice.
 CDNs leverage distributed caching to reduce latency and enhance website performance from servers located closer to the end-users.
 
 The following directions show how to set up static website hosting with Storj and Bunny CDN.

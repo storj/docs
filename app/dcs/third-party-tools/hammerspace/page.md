@@ -20,7 +20,7 @@ Contact Hammerspace for a [demo](https://hammerspace.com/hammerspace-software/).
 
 - **Universal data access layer**: read and write to data from anywhere worldwide.
 
-- **Unify your Storj data **with data residing in legacy DAS, NAS, SAN, object storage, and other cloud storage environments.
+- **Unify your Storj data** with data residing in legacy DAS, NAS, SAN, object storage, and other cloud storage environments.
 
 - **Multiple mechanisms to protect data from disasters and attacks**: snapshots, undelete, WORM (write once read many), and file versioning.
 
@@ -34,7 +34,7 @@ To integrate Storj with Hammerspace, you will need to create S3 credentials in S
 
 - To begin, you will need to create a Storj account.
 
-- Navigate to <https://us1.storj.io/signup?partner=hammerspace> to sign up, or log in <https://storj.io/login> if you already have an account.
+- Navigate to <https://storj.io/signup?partner=hammerspace> to sign up, or log in <https://storj.io/login> if you already have an account.
 
 - A bucket for Hammerspace in your Storj instance.
 
@@ -136,25 +136,25 @@ This integration guide assumes that you have access to an active Hammerspace env
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zmk4BGsFbIoEgu4SZF6tN_image-0.png)
 
-2\. Select the cloud and storage **Infrastructure **icon on the lefthand menu.
+2\. Select the cloud and storage **Infrastructure** icon on the lefthand menu.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YYJS4M3teSdgzEZ-ynw1V_image.png)
 
-3\. Select the **Storage Systems **tab, then the **Add Storage System **button.
+3\. Select the **Storage Systems** tab, then the **Add Storage System** button.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Y8gzE9G1KO63SNhXuvywJ_image.png)
 
-4\. In the **Add Storage System** window, enter something recognizable, such as "Storj," in the **Name** field. Then, in the **Type** drop-down, select the "Generic S3" option.
+4\. In the **Add Storage System** window, enter something recognizable, such as "Storj", in the **Name** field. Then, in the **Type** drop-down, select the "Generic S3" option.
 
 5\. Enter the S3 credentials you generated earlier in the tutorial:
 
-1.  Add the access key in the **Access Key **field.
+1.  Add the access key in the **Access Key** field.
 
-2.  Add the secret key in the **Secret Key **field.
+2.  Add the secret key in the **Secret Key** field.
 
-3.  Add the endpoint, which should be "https\://gateway.storjshare.io" or similar, in the **Endpoint** field.
+3.  Add the endpoint, which should be "https\://gateway.storjshare.io", in the **Endpoint** field.
 
-4.  Check the **Use V4 auth signing **box.
+4.  Check the **Use V4 auth signing** box.
 
 5.  Select **Add Storage System**.
 
@@ -186,4 +186,3 @@ This integration guide assumes that you have access to an active Hammerspace env
 
 **Note**: for more information on accessing data in your Storj volume, refer to Hammerspace's [documentation](https://hammerspace.com/resources/).
 
-##

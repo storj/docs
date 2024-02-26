@@ -81,7 +81,7 @@ Next create a Fastly [VCL snippet](https://docs.fastly.com/en/guides/about-vcl-s
 
 - **Type**: select **within subroutine**
 
-- In the dropdown box, select **miss.** Then, paste the following code into the **VCL** box. Update the variables where noted to the values from your access grant, bucket name, and bucket gateway:
+- In the dropdown box, select **miss**. Then, paste the following code into the **VCL** box. Update the variables where noted to the values from your access grant, bucket name, and bucket gateway:
 
 ```Text
 declare local var.accessKey STRING;

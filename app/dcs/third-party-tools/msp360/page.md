@@ -35,7 +35,7 @@ To integrate MSP360 with Storj, you will need to create S3 credentials for MSP36
 
 - An active Storj account
 
-  - Navigate to <https://us1.storj.io/signup?partner=MSP360> to sign up, or log in <https://storj.io/login> if you already have an account.
+  - Navigate to <https://storj.io/signup?partner=MSP360> to sign up, or log in <https://storj.io/login> if you already have an account.
 
 - A bucket for MSP360 in your Storj instance.
 
@@ -139,7 +139,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Dm7rMhpnZUnKLuwuEYeTo_image.png)
 
-3\. Select **Add Account **in the upper right.
+3\. Select **Add Account** in the upper right.
 
 4\. Choose "S3 Compatible" from the account options. Then select **Next**.
 
@@ -153,7 +153,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 3.  Under **Secret Key**, enter the secret key from the S3 credentials you generated for MSP360 in Storj.
 
-4.  Leave **Signature Version **at 4, if desired.
+4.  Leave **Signature Version** at 4, if desired.
 
 5.  Check **Use Native Multipart Upload**, if desired.
 
@@ -161,7 +161,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 7.  If desired, check the **Ignore certificate** checkbox.
 
-8.  If desired, check the **Do not check credentials **box.
+8.  If desired, check the **Do not check credentials** box.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/D1BDJtWFNk4hXu9JTz-pD_image.png)
 

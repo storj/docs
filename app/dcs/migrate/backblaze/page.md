@@ -20,7 +20,7 @@ Before starting the migration process, you'll need to have the following:
 
 1.  Access to both your Backblaze and Storj accounts.
 
-    - Navigate to <https://us1.storj.io/signup?partner=rclone> to sign up or log in to an existing Storj account.
+    - Navigate to <https://storj.io/signup?partner=rclone> to sign up or log in to an existing Storj account.
 
 2.  Installed and configured rclone on your machine.
 

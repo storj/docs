@@ -37,7 +37,7 @@ To integrate Miria with Storj, you must create S3 credentials for Miria in Storj
 
 ### Requirements
 
-- An active Storj account, or you can sign up here <https://us1.storj.io/signup?partner=atempo>
+- An active Storj account, or you can sign up here <https://storj.io/signup?partner=atempo>
 - A bucket for Miria in your Storj instance
 - An instance of Miria 2021 or newer
 - Access to the Miria Web UI

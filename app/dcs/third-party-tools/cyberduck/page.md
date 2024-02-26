@@ -150,7 +150,7 @@ Now click on the **Generate Credentials** button.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rONKodBVYoHRO6nTU7Kg0_screen-shot-2021-04-16-at-90408-am.png)
 
-Copy your **_Access Key_**, \*\* **\_**Secret Key**\*, and \*\* \*\*\***Endpoint\*\*\_ to a safe location.
+Copy your **_Access Key_**, **_Secret Key_**, and **_Endpoint_** to a safe location.
 
 ### Configuring Storj + Cyberduck
 
@@ -158,7 +158,7 @@ Whether using Windows or macOS, you’ll simply add the Storj Gateway S3 credent
 
 - First, start by selecting S3 from the drop-down menu
 
-- Enter your S3 Gateway Credentials Endpoint for the **Server** selection (**without **)
+- Enter your S3 Gateway Credentials Endpoint for the **Server** selection (**without `https://`**)
 
 - Enter your S3 Gateway Credentials Access Key into the **Access Key ID** selection
 
@@ -169,7 +169,7 @@ Whether using Windows or macOS, you’ll simply add the Storj Gateway S3 credent
 **Click Connect**
 
 {% callout type="info"  %}
-_Use endpoint without, i.e., \***\*gateway.us1.storjshare.io\*\*** in the Cyberduck \***\*Server\*\*** entry above. Otherwise, Cyberduck will revert to WEBDAV (HTTPS), causing a connection error._
+_Use endpoint without `https://`, i.e., **gateway.us1.storjshare.io** in the Cyberduck **Server** entry above. Otherwise, Cyberduck will revert to WEBDAV (HTTPS), causing a connection error._
 
 As seen here:
 

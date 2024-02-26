@@ -32,7 +32,7 @@ To integrate Storj with Unitrends, you will need to create S3 credentials in Sto
 
 ### Requirements
 
-- An active Storj account. Navigate to <https://us1.storj.io/signup?partner=unitrends> to sign up, or log in to <https://storj.io/login> if you already have an account.
+- An active Storj account. Navigate to <https://storj.io/signup?partner=unitrends> to sign up, or log in to <https://storj.io/login> if you already have an account.
 
 - A bucket for Unitrends in your Storj instance.
 

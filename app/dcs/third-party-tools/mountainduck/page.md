@@ -24,13 +24,13 @@ In this brief tutorial, we'll go over downloading and setting up Mountain Duck t
 
 - Storj account with [](docId:AsyYcUJFbO1JI8-Tu8tW3)
 
-- Storj S3 compatiable access and secret key (see [](docId:AsyYcUJFbO1JI8-Tu8tW3))
+- Storj S3 compatiable access and secret key (see [Create S3 Credentials](docId:_xWsamBjOsZYyu9xtQCm5#create-s3-credentials))
 
 
 
 ## Downloading Mountain Duck
 
-Users can download Mountain Duck by navigating to [](https://mountainduck.io/). Mountain Duck offers a free trial, so that you can evaluate the software before deciding if you'll purchase a license.
+Users can download Mountain Duck by navigating to [https://mountainduck.io/](https://mountainduck.io/). Mountain Duck offers a free trial, so that you can evaluate the software before deciding if you'll purchase a license.
 
 
 

@@ -220,7 +220,7 @@ HTTPS (Hypertext Transfer Protocol Secure) is a protocol for secure communicatio
 
 - **Linksharing**: A service provided by Storj for creating and managing shared links for files stored on the Storj network
 
-- **Uplink CLI**: A command line interface tool for the Storj Decentralized Cloud Storage (DCS) API that allows you to interact with the API from the terminal.
+- **Uplink CLI**: A command line interface tool for the Storj API that allows you to interact with the API from the terminal.
 
 - **Access Key ID**: A unique identifier used to grant access to a file sharing service
 

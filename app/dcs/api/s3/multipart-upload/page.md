@@ -56,7 +56,7 @@ If you decide to cancel the multipart operation, you must provide the object key
 
 ### Listing for multipart uploads
 
-During a multipart upload you can list active upload transactions or the parts that have been successfully uploaded. For a single list parts request, storage DCS will return information up to a maximum of 1000 parts. For objects with more than 1000 parts, multiple requests are required. Because of the distributed nature of Storj, you should not use the response from listing multipart uploads as input to complete in multipart upload operation. Be advised that part listing requests will only return completed part uploads - any active part uploads will not be returned.
+During a multipart upload you can list active upload transactions or the parts that have been successfully uploaded. For a single list parts request, Storj will return information up to a maximum of 1000 parts. For objects with more than 1000 parts, multiple requests are required. Because of the distributed nature of Storj, you should not use the response from listing multipart uploads as input to complete in multipart upload operation. Be advised that part listing requests will only return completed part uploads - any active part uploads will not be returned.
 
 ## Multipart upload for distributed systems
 
@@ -64,7 +64,7 @@ Depending on the behavior of your application it may be possible for multiple co
 
 ## Cost for Multipart upload
 
-When a multipart upload is initiated, storage DCS processes and makes available all constituent parts of the multipart object. Multipart object is either made available by completing the multipart upload process or cancelled by explicitly stopping the multipart upload process through API call. Storj will measure resource usage on multipart upload operations unless they are explicitly cancelled. only when a multipart upload is explicitly cancelled are the associated resources freed.
+When a multipart upload is initiated, Storj processes and makes available all constituent parts of the multipart object. Multipart object is either made available by completing the multipart upload process or cancelled by explicitly stopping the multipart upload process through API call. Storj will measure resource usage on multipart upload operations unless they are explicitly cancelled. only when a multipart upload is explicitly cancelled are the associated resources freed.
 
 ## Multipart upload limits
 

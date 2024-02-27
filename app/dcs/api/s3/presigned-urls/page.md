@@ -22,7 +22,7 @@ While we support this behavior via the S3-compatible pre-signed URL function, as
 
 ## Tutorial
 
-The goal of the following tutorial is to guide you in the creation of pre-signed URLs for storage DCS using a Python script and our multi-tenant hosted gateway.
+The goal of the following tutorial is to guide you in the creation of pre-signed URLs for Storj using a Python script and our multi-tenant hosted gateway.
 
 Our lab example took place on MacOSX and used BREW as a package manager. Depending on your host operating system, you will need to use the appropriate package manager to fetch the prerequisites listed below.
 

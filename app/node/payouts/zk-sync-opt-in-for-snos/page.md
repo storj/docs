@@ -34,7 +34,7 @@ To opt-in to [zkSync Lite](https://docs.zksync.io/userdocs/intro/) and/or [zkSyn
 
 ## Binary versions (include Windows/Linux GUI)
 
-Open your storage node's `config.yaml` (see [](docId:gDXZgLlP_rcSW8SuflgqS)) and add the line
+Open your storage node's `config.yaml` (see [](docId:gDXZgLlP_rcSW8SuflgqS)) and add/change the line
 
 ```yaml
 operator.wallet-features: ['zksync']
@@ -50,7 +50,7 @@ operator.wallet-features: ['zksync-era', 'zksync']
 Please enter everything in lowercase and double-check for spelling mistakes. This is a very basic implementation without any validations.
 {% /callout %}
 
-Once you have added the line to your config file, save it and restart your node.
+Once you have added/updated the line to your config file, save it and restart your node.
 
 ## Docker versions
 

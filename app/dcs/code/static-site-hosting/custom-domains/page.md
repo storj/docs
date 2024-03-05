@@ -67,31 +67,21 @@ The following placeholders should be replaced in the sample code provided below:
 - **_\<bucket>_**: The bucket you want to share
 - **_\<prefix>_** (optional): The path to the specific folder you want to share (this is known as a prefix)
 
-{% tabs %}
-{% tab label="Windows" %}
+{% code-group %}
 
-```powershell
+```powershell {% title="windows" %}
 ./uplink.exe share --dns <hostname> sj://<bucket>/<prefix>
 ```
 
-{% /tab %}
-
-{% tab label="Linux" %}
-
-```shell
+```shell {% title="Linux" %}
 uplink share --dns <hostname> sj://<bucket>/<prefix>
 ```
 
-{% /tab %}
-
-{% tab label="macOS" %}
-
-```shell
+```shell {% title="macOS" %}
 uplink share --dns <hostname> sj://<bucket>/<prefix>
 ```
 
-{% /tab %}
-{% /tabs %}
+{% /code-group %}
 
 Anything shared with `--dns` will be _readonly_ and available _publicly_ (no secret key needed).
 
@@ -110,33 +100,103 @@ txt-<hostname> 	IN	TXT  	storj-tls:true
 
 ## Setting up a custom domain
 
-1\. Purchase a domain name from a domain name registrar.
+1. Purchase a domain name from a domain name registrar.
 
-2\. Configure your DNS records to include the following
+2. Configure your DNS records to include the following
 
-- Create a CNAME record on your hostname using the CNAME from your generated zone file as the target name.
+   - Create a CNAME record on your hostname using the CNAME from your generated zone file as the target name.
 
-- Create two TXT records, prepending `txt-` to your hostname. The value of each of these should also be in the generated file above:
+   - Create two TXT records, prepending `txt-` to your hostname. The value of each of these should also be in the generated file above:
 
-  - `storj-root:<bucket>/<prefix>`
+     - `storj-root:<bucket>/<prefix>`
 
-  - `storj-access:<access key id>`
+     - `storj-access:<access key id>`
 
-Your final set of DNS entries should look like the following:
+   Your final set of DNS entries should look like the following:
 
-| Type  | Name                 | Content                              |
-| ----- | -------------------- | ------------------------------------ |
-| CNAME | www\.example.com     | link.storjshare.io.                  |
-| TXT   | txt-www\.example.com | storj-root:**_\<bucket>/\<prefix>_** |
-| TXT   | txt-www\.example.com | storj-access:**_\<access key id>_**  |
+   | Type  | Name                 | Content                              |
+   | ----- | -------------------- | ------------------------------------ |
+   | CNAME | www\.example.com     | link.storjshare.io.                  |
+   | TXT   | txt-www\.example.com | storj-root:**_\<bucket>/\<prefix>_** |
+   | TXT   | txt-www\.example.com | storj-access:**_\<access key id>_**  |
 
-To enable HTTPS for your custom domain (Pro Accounts Only) create one last TXT record:
+   To enable HTTPS for your custom domain (Pro Accounts Only) create one last TXT record:
 
-| Type | Name                 | Content         |
-| ---- | -------------------- | --------------- |
-| TXT  | txt-www\.example.com | storj-tls\:true |
+   | Type | Name                 | Content         |
+   | ---- | -------------------- | --------------- |
+   | TXT  | txt-www\.example.com | storj-tls\:true |
 
-3\. You should now be able to access your content using your custom domain! DNS propagation usually takes less than a few hours, but can take up to 48 hours in some cases.
+3. You should now be able to access your content using your custom domain! DNS propagation usually takes less than a few hours, but can take up to 48 hours in some cases.
+
+## Pro account example
+
+Here is an example the steps required to host a website on a custom domain (e.g. my-website.storj.dev) with a Pro Account. Replace `my-website.storj.dev` in the following example with your own domain.
+
+1.  Create a bucket
+
+    ```bash
+    # terminal
+    uplink mb sj://my-website
+    ```
+
+1.  Upload a website
+
+    ```bash
+    # terminal
+    echo '<div>Hello world!</div>' > index.html
+    # terminal
+    uplink cp index.html sj://my-website
+    ```
+
+1.  Create a DNS share
+
+    {% callout type="info"  %}
+    The following command will publically share all objects in the bucket.
+
+    If you'd rather restrict access to a prefix in the bucket (e.g. `public`), adjust the path accordingly before creating the share (e.g. `sj://my-website/public`). Also adjust the `storj-root` DNS txt record in the next step (e.g. `storj-root:my-website/public`).
+    {% /callout %}
+
+    The output will give the DNS records that need to be setup.
+
+    ```bash
+    # terminal
+    # focus
+    uplink share --dns my-website.storj.dev sj://my-website --tls --not-after=none
+    =========== DNS INFO =====================================================================
+    Remember to update the $ORIGIN with your domain name. You may also change the $TTL.
+    $ORIGIN example.com.
+    $TTL    3600
+    my-website.storj.dev            IN      CNAME   link.storjshare.io.
+    txt-my-website.storj.dev        IN      TXT     storj-root:my-website
+    txt-my-website.storj.dev        IN      TXT     storj-access:jut6dmkf3e25gumtobqrjlehb4wq
+    txt-my-website.storj.dev        IN      TXT     storj-tls:true
+    ```
+
+1.  Once DNS records from the previou command are set, double check they're set correctly with `dig`
+
+    ```bash
+    # terminal
+    # focus
+    dig cname my-website.storj.dev +short
+    link.storjshare.io.
+    ```
+
+    ```bash
+    # terminal
+    # focus
+    dig txt txt-my-website.storj.dev +short
+    "storj-root:my-website"
+    "storj-access:jxlyox27wuxye23ebhebzhmqqzfa"
+    "storj-tls:true"
+    ```
+
+    {% callout type="info"  %}
+    Adjusting the `storj-root` alone won't change public access. Access is tied to the original `uplink share` comand.
+
+    If you've already created a share at the root bucket, you must revoke that share to disallow access and recreate the share with the new restriction.
+    {% /callout %}
+
+1.  Navigate to your custom domain (e.g <https://my-website.storj.dev/>)
 
 ## Considerations if setting up DNS with a CDN like Cloudflare
 
@@ -152,9 +212,9 @@ Disabling the proxy will mean the requests are sent directly to the linksharing 
 
 If you still want to use Cloudflare as the proxy for your custom domain and use HTTPS, these steps should be followed:
 
-* Ensure the `storj-tls:true` DNS TXT record is removed.
-* Change the [TLS encryption mode](https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes) to "Flexible".
-* Enable [Always Use HTTPS](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/always-use-https).
+- Ensure the `storj-tls:true` DNS TXT record is removed.
+- Change the [TLS encryption mode](https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes) to "Flexible".
+- Enable [Always Use HTTPS](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/always-use-https).
 
 This is helpful if you require HTTPS, but don't have a Pro Account yet. Cloudflare will be managing the TLS certificate and provide HTTPS for your custom domain.
 

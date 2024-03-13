@@ -7,6 +7,7 @@ import { QuickLink, QuickLinks } from '@/components/QuickLinks'
 import { TagLinks } from '@/components/TagLinks'
 import PartnerIntegration from '@/components/PartnerIntegration'
 import YouTubeEmbed from '@/components/YouTubeEmbed'
+import { RegistrationToken } from '@/components/RegistrationToken'
 
 const tags = {
   callout: {
@@ -101,6 +102,9 @@ const tags = {
       'cloud-ops',
       'content-delivery',
     ],
+  },
+  'registration-token': {
+    render: RegistrationToken,
   },
   'quick-links': {
     render: QuickLinks,

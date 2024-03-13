@@ -3,6 +3,9 @@ title: Quickstart Node Setup
 docId: kjMiGo7HTr4v_qwD5Iqc7
 redirects:
   - /node/setup
+metadata:
+  description: Become part of the decentralized cloud and get paid for your extra bandwidth and storage capacity. Sign up to host a Node on the Storj network today.
+  title: 'Sign up and host a Node on Storj'
 ---
 
 ## Introduction

@@ -13,7 +13,7 @@ Storj is an S3-compatible platform and suite of decentralized applications that 
 ## Become a Storage Node Operator
 
 {% quick-links %}
-{% quick-link title="Host a node" href="https://www.storj.io/host-a-node" %}
+{% quick-link title="Host a node" href="docId:kjMiGo7HTr4v_qwD5Iqc7" %}
 
 Learn how to configure and run your Storage Node
 

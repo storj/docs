@@ -3,7 +3,6 @@ title: Pricing
 docId: 59T_2l7c1rvZVhI8p91VX
 redirects:
   - /dcs/billing-payment-and-accounts-1/pricing
-  - /dcs/billing-payment-and-accounts-1/pricing/free-tier
 metadata:
   title: Understanding Storj Pricing Structure
   description:
@@ -54,7 +53,7 @@ For most users and most usage patterns, we do not expect a Per Segment Fee to be
 
 Each Segment stored on the network in excess of the default Segment Project Limit is charged a nominal Per Segment fee. The Per Segment Fee is $0.0000088 Per Segment Per Month. Distributed object storage is optimized for large files (several MB or larger - the larger the better). Very small objects generate more overhead with the storage of the metadata for the file than the actual storage of the object. Consequently, we charge a small Per Segment Fee to account for that overhead. If a user is storing even large numbers of big files, the Per Segment Fee will be inconsequential. If a user streams millions of small files, the Per Segment Fee will offset the cost associated with the metadata overhead.
 
-The Paid Tier includes 50,000 Segments per month, which is represented as 36,000,000 Segment Hours. Any increase in Segment Limit will be billed at a rate of $0.0000088 per Segment per month, equivalent to a rate of $0.00000001222 per Segment Hour.
+Thd segment Limit will be billed at a rate of $0.0000088 per Segment per month, equivalent to a rate of $0.00000001222 per Segment Hour.
 
 The Storj Platform distinguishes between two types of object storage: remote and inline. Remote objects are large enough to erasure code and store the pieces of the file on storage nodes. Inline objects are smaller than the metadata associated with the actual object. In the case of objects that are smaller than the associated metadata, it is more efficient to store the object inline in the satellite metadata database. When storing a large number of tiny files, the best practice is to employ a packing strategy to store larger blocks of small files as a single object.
 
@@ -62,7 +61,7 @@ The Per Segment Fee is priced per Segment per month in increments of Segment hou
 
 As described elsewhere in this documentation, objects stored on Storj are encrypted and erasure coded, with the encrypted, erasure coded pieces stored on various Storage Nodes on the distributed and decentralized network. Each object stored on the network is represented as at least one Segment.
 
-A Segment is a single array of bytes, between 0 and a user-configurable maximum segment size. The default Segment size on Storj Satellites is 64MB. A File smaller than 64MB is stored as one segment. Files larger than 64MB are stored in multiple 64MB Segments. Each Segment is stored as pieces on the network. Only a subset of pieces of the total pieces (e.g. 29 of the 80) are required to reconstitute a Segment . All Segments are required to reconstitute a File.
+A Segment is a single array of bytes, between 0 and a user-configurable maximum segment size. The default Segment size on Storj Satellites is 64MB. A File smaller than 64MB is stored as one segment. Files larger than 64MB are stored in multiple 64MB Segments. Each Segment is stored as pieces on the network. Only a subset of pieces of the total pieces (e.g. 29 of the 80) are required to reconstitute a Segment. All Segments are required to reconstitute a File.
 
 **Examples:**
 
@@ -80,15 +79,15 @@ A Segment is a single array of bytes, between 0 and a user-configurable maximum 
 
 **Important:** Sixteen 1MB files use the same amount of metadata resources as a 1GB file.
 
-The Cost examples below assume a Segment Limit Increase has been applied to a project and the Segment Project Limit is sufficient to provide for the usage as described. There is no charge for the first 50,000 Segments per month.
+The Cost examples below assume a Segment Limit Increase has been applied to a project and the Segment Project Limit is sufficient to provide for the usage as described. 
 
 **Cost Example 1:**
 
-A user uploads 100,000 one GB files, a total of 100TB. Half way through the month, the user deletes the files. The 100,000 files are stored as 1,600,000 Segments. The files are stored for 360 hours. The files are stored for 576,000,000 Segment hours. The default 36,000,000 Segment Hours for the Paid Tier are subtracted, leaving 540,000,000 Segment Hours. The price per Segment month is $0.0000088. The price per Segment hour at 720 hours per month is $0.00000001222. The total amount charged for the monthly Per Segment Fee would be $5.40.
+A user uploads 100,000 one GB files, a total of 100TB. Half way through the month, the user deletes the files. The 100,000 files are stored as 1,600,000 Segments. The files are stored for 360 hours. The files are stored for 576,000,000 Segment hours. The price per Segment month is $0.0000088. The price per Segment hour at 720 hours per month is $0.00000001222. The total amount charged for the monthly Per Segment Fee would be $7.03.
 
 **Cost Example 2:**
 
-A user uploads 1,600,000 one MB files, a total of 1.6TB. Half way through the month, the user deletes the files. The 1,600,000 files are stored as 1,600,000 Segments. The files are stored for 360 hours. The files are stored for 576,000,000 Segment hours. The default 36,000,000 Segment Hours for the Paid Tier are subtracted, leaving 540,000,000 Segment Hours. The price per Segment month is $0.0000088. The price per Segment hour at 720 hours per month is $0.00000001222. The total amount charged for the per segment fee would be $5.40.
+A user uploads 1,600,000 one MB files, a total of 1.6TB. Half way through the month, the user deletes the files. The 1,600,000 files are stored as 1,600,000 Segments. The files are stored for 360 hours. The files are stored for 576,000,000 Segment hours.  The price per Segment month is $0.0000088. The price per Segment hour at 720 hours per month is $0.00000001222. The total amount charged for the per segment fee would be $7.03.
 
 Note that the number of segments for 100TB of 1GB files and 1.6TB of 1MB files is the same.
 
@@ -113,24 +112,12 @@ Assuming a 1TB data set comprised of 1,000 1GB files is stored for an entire mon
 
 **Multipart Cost Example 1:**
 
-A user uploads 100,000 one GB objects using multipart upload with a 64MB Part Size and 10,000 100MB objects using a 5MB Part Size. Half way through the month, the user deletes the files. The 100,000 one GB files are stored as 1,562,500 Segments. The 10,000 100MB files are stored as 200,000 Segments. The files are stored for 360 hours. The 100,000 one GB files in 64MB Segments are stored for 562,500,000 Segment hours. The 10,000 100 MB files in 5MB Segments are stored for 72,000,000 Segment hours. The total is 634,500,000 Segment Hours. The default 36,000,000 Segment Hours for the Paid Tier are subtracted, leaving 598,500,000 Segment Hours. The monthly Per Segment fee is $7.31.
+A user uploads 100,000 one GB objects using multipart upload with a 64MB Part Size and 10,000 100MB objects using a 5MB Part Size. Halfway through the month, the user deletes the files. The 100,000 one GB files are stored as 1,562,500 Segments. The 10,000 100MB files are stored as 200,000 Segments. The files are stored for 360 hours. The 100,000 one GB files in 64MB Segments are stored for 562,500,000 Segment hours. The 10,000 100 MB files in 5MB Segments are stored for 72,000,000 Segment hours. The total is 634,500,000 Segment Hours.  The monthly per-segment fee is $7.74.
 
 **Multipart Cost Example 2:**
 
-A user uploads 1PB of one GB objects using multipart upload with a 5MB Part Size . Half way through the month, the user deletes the files. The 1PB of one GB files (1 million files) are stored as 200,000,000 Segments. The files are stored for 360 hours. The data is stored for 72,000,000,000 Segment hours. The price per Segment month is $0.0000088. The price per Segment hour at 720 hours per month is $0.00000001222. The monthly Per Segment Fee in this example would be $879.40.
+A user uploads 1PB of one GB objects using multipart upload with a 5MB Part Size. Halfway through the month, the user deletes the files. The 1PB of one GB files (1 million files) are stored as 200,000,000 Segments. The files are stored for 360 hours. The data is stored for 72,000,000,000 Segment hours. The price per Segment month is $0.0000088. The price per-segment hour at 720 hours per month is $0.00000001222. The monthly per-segment fee in this example would be $879.40.
 
 ## Project limits
 
 All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj. To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGYhfgGbVhlQ2ZHXVS) sections of this Documentation.
-
-## Free tier
-
-Storj currently offers a free level of access for developers to try out the service. When a customer creates a new account, the user automatically is able to use the Storj service at no cost up to specified limits of service. The free level of service is limited to the level of service for a single project as described below:
-
-- 25GB of static object storage for a single project.
-
-- 25GB of download bandwidth per month for a single project.
-
-- 10,000 segments in total for all projects.
-
-Usage for Static Object Storage and Download Bandwidth is calculated in the same way for the Free Plan as for the Pro Plan. A credit against billing will be applied each month for the Free Plan usage for as long as the Free Plan is offered. Accounts using the Free Plan of service are subject to [](docId:Zrbz4XYhIOm99hhRShWHg).

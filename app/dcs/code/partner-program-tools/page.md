@@ -54,7 +54,7 @@ UserAgent can only be configured during setup:
 gateway setup --client.user-agent "MyCompany"
 ```
 
-or by adding or updating the following lines of the uplink configuration yaml (the default path for the `config.yaml` can be checked with `gateway setup --help` command, see default value for `--config-dir` option in the output):
+or by adding or updating the following lines of the gateway configuration yaml (the default path for the `config.yaml` can be checked with `gateway setup --help` command, see default value for `--config-dir` option in the output):
 
 ```yaml
 # User-Agent used for connecting to the satellite

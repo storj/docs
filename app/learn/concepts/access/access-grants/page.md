@@ -29,9 +29,9 @@ Access Grants can be imported easily into an Uplink client, whether it's the CLI
 
 Access Grants can be restricted both from the server side (at the Satellite) and from the client side using the CLI or libuplink library, a serialized, hierarchically derived structure. When creating restricted access grants, both the API Key and the encryption key are hierarchically derived automatically from the parent Access Grant.
 
-Learn how to create an Access Grant using the Satellite Admin Console in the[](docId:nGzxQBhV8nx5Pukj6O0zT).
+Learn how to create an Access Grant using the Satellite Admin Console in the [](docId:nGzxQBhV8nx5Pukj6O0zT).
 
-Learn how to [](docId:OXSINcFRuVMBacPvswwNU) in the[](docId:TbMdOGCAXNWyPpQmH6EOq).
+Learn how to [](docId:OXSINcFRuVMBacPvswwNU) in the [](docId:TbMdOGCAXNWyPpQmH6EOq).
 
 {% callout type="warning"  %}
 Storj satellites never come in contact with encryption keys. When you use an access grant with the CLI, libuplink library, or the self-hosted Gateway, encryption keys are managed client-side using a serialized, hierarchically derived structure for end-to-end encryption. With the cloud-hosted Gateway-MT, your data is server-side encrypted, since Storj is hosting the gateway.

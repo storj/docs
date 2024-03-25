@@ -38,7 +38,7 @@ Adding a credit card as a payment method will result in your per-project limits 
 
 ### STORJ token Payment method
 
-Adding STORJ tokens worth of $10 or more to your deposit address in the account will automatically upgrade the account to PRO.
+Adding $10 or more worth of STORJ tokens to your account deposit address will automatically upgrade your account to PRO and you will also receive a bonus of 10% of the deposit amount on your balance.
 
 {% callout type="info"  %}
 Please note: The deposit address currently only accepts ERC20 STORJ token transactions on the Ethereum mainnet.

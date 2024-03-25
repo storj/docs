@@ -38,13 +38,11 @@ Adding a credit card as a payment method will result in your per-project limits 
 
 ### STORJ token Payment method
 
-However, if your only payment method on file is STORJ token, you can submit a [](docId:A4kUGYhfgGbVhlQ2ZHXVS).
+Adding STORJ tokens worth of $10 or more to your deposit address in the account will automatically upgrade the account to PRO.
 
 {% callout type="info"  %}
-Note that you could avoid having to wait for a manual project limit increase to be applied by adding a credit card as a backup payment method. In this case, your usage would still get paid from your STORJ balance if it is sufficient to cover your outstanding charges. Only usage that exceeds what can be covered by your STORJ balance at the time of invoicing would get charged to the credit card.
+Please note: The deposit address currently only accepts ERC20 STORJ token transactions on the Ethereum mainnet.
 {% /callout %}
-
-If you would like to increase your limits to higher values and your only payment method is STORJ token, you may[ contact our support team through the Storj support portal](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212).​
 
 ## Rationales behind limits
 

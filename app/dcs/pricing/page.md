@@ -84,11 +84,11 @@ The Cost examples below assume a Segment Limit Increase has been applied to a pr
 
 **Cost Example 1:**
 
-A user uploads 100,000 one GB files, a total of 100TB. Half way through the month, the user deletes the files. The 100,000 files are stored as 1,600,000 Segments. The files are stored for 360 hours. The files are stored for 576,000,000 Segment hours. The price per Segment month is $0.0000088. The price per Segment hour at 720 hours per month is $0.00000001222. The total amount charged for the monthly Per Segment Fee would be $7.03.
+A user uploads 100,000 one GB files, a total of 100TB. Half way through the month, the user deletes the files. The 100,000 files are stored as 1,600,000 Segments. The files are stored for 360 hours. The files are stored for 576,000,000 Segment hours. The price per Segment month is $0.0000088. The price per Segment hour at 720 hours per month is $0.00000001222. The total amount charged for the monthly Per Segment Fee would be $7.04.
 
 **Cost Example 2:**
 
-A user uploads 1,600,000 one MB files, a total of 1.6TB. Half way through the month, the user deletes the files. The 1,600,000 files are stored as 1,600,000 Segments. The files are stored for 360 hours. The files are stored for 576,000,000 Segment hours.  The price per Segment month is $0.0000088. The price per Segment hour at 720 hours per month is $0.00000001222. The total amount charged for the per segment fee would be $7.03.
+A user uploads 1,600,000 one MB files, a total of 1.6TB. Half way through the month, the user deletes the files. The 1,600,000 files are stored as 1,600,000 Segments. The files are stored for 360 hours. The files are stored for 576,000,000 Segment hours.  The price per Segment month is $0.0000088. The price per Segment hour at 720 hours per month is $0.00000001222. The total amount charged for the per segment fee would be $7.04.
 
 Note that the number of segments for 100TB of 1GB files and 1.6TB of 1MB files is the same.
 
@@ -108,16 +108,16 @@ Assuming a 1TB data set comprised of 1,000 1GB files is stored for an entire mon
 
 | Part Size | Files | Parts/ S | Segment Hours | Chargeable Segment Hours | Monthly Cost of Per Segment Fee | Monthly cost of storage |
 | :-------- | :---- | :------- | :------------ | :----------------------- | :------------------------------ | :---------------------- |
-| 64MB      | 1,000 | 15,625   | 11.25M        | 0M                       | $0.00                           | $4.00                   |
+| 64MB      | 1,000 | 15,625   | 11.25M        | 11.25M                   | $0.14                           | $4.14                   |
 | 5MB       | 1,000 | 200,000  | 144.0M        | 108.0M                   | $1.32                           | $5.32                   |
 
 **Multipart Cost Example 1:**
 
-A user uploads 100,000 one GB objects using multipart upload with a 64MB Part Size and 10,000 100MB objects using a 5MB Part Size. Halfway through the month, the user deletes the files. The 100,000 one GB files are stored as 1,562,500 Segments. The 10,000 100MB files are stored as 200,000 Segments. The files are stored for 360 hours. The 100,000 one GB files in 64MB Segments are stored for 562,500,000 Segment hours. The 10,000 100 MB files in 5MB Segments are stored for 72,000,000 Segment hours. The total is 634,500,000 Segment Hours.  The monthly per-segment fee is $7.74.
+A user uploads 100,000 one GB objects using multipart upload with a 64MB Part Size and 10,000 100MB objects using a 5MB Part Size. Halfway through the month, the user deletes the files. The 100,000 one GB files are stored as 1,562,500 Segments. The 10,000 100MB files are stored as 200,000 Segments. The files are stored for 360 hours. The 100,000 one GB files in 64MB Segments are stored for 562,500,000 Segment hours. The 10,000 100 MB files in 5MB Segments are stored for 72,000,000 Segment hours. The total is 634,500,000 Segment Hours. The monthly per-segment fee is $7.75.
 
 **Multipart Cost Example 2:**
 
-A user uploads 1PB of one GB objects using multipart upload with a 5MB Part Size. Halfway through the month, the user deletes the files. The 1PB of one GB files (1 million files) are stored as 200,000,000 Segments. The files are stored for 360 hours. The data is stored for 72,000,000,000 Segment hours. The price per Segment month is $0.0000088. The price per-segment hour at 720 hours per month is $0.00000001222. The monthly per-segment fee in this example would be $879.40.
+A user uploads 1PB of one GB objects using multipart upload with a 5MB Part Size. Halfway through the month, the user deletes the files. The 1PB of one GB files (1 million files) are stored as 200,000,000 Segments. The files are stored for 360 hours. The data is stored for 72,000,000,000 Segment hours. The price per Segment month is $0.0000088. The price per-segment hour at 720 hours per month is $0.00000001222. The monthly per-segment fee in this example would be $879.84.
 
 ## Project limits
 

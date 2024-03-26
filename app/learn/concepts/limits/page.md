@@ -58,6 +58,6 @@ In addition, we limit the number of Projects per Developer Account to minimize c
 
 We have also set the default limit for the number of segments to a healthy level for the network. Note that increasing the Segment Project Limit may incur additional fees. Read more about [](docId:A4kUGYhfgGbVhlQ2ZHXVS).
 
-Customers can request a limit increase when needed by filling out the [limit increase request form](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212) on our Storj support portal if their only payment method on file is STORJ token.
+Customers can request a limit increase when needed by filling out the [limit increase request form](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212) on our Storj support portal.
 
-An automatic limit increase to Pro Account can be accomplished by adding a credit card as a payment method. Please only make such requests if your use case requires more than the current default limits. Requests will be evaluated considering the intended use case and availability on the network.
+An automatic limit increase to Pro Account can be accomplished by adding a credit card or STORJ tokens (more or equal to $10) as a payment method. Please only make such requests if your use case requires more than the current default limits.

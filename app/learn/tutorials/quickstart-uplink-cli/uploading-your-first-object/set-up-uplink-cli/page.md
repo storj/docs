@@ -9,7 +9,7 @@ weight: 5
 
 1\. You need to have a satellite account and installed Uplink CLI as described in [](docId:TbMdOGCAXNWyPpQmH6EOq)
 
-2\. **Save the **[](docId:b4-QgUOxVHDHSIWpAf3hG)** to a file.** The Access Grant that you created in the web interface (or [](docId:OXSINcFRuVMBacPvswwNU)) needs to be saved to disk in a plain text file for simplicity (_for example - Mac terminal would not allow you to paste the whole access grant directly due terminal limitations_). Specify the path to the saved access grant in the following command (`~/Downloads/accessgrant.txt` _for example_).
+2\. **[](docId:b4-QgUOxVHDHSIWpAf3hG)** and **save it to a file**. The Access Grant that you created in the web interface (or [](docId:OXSINcFRuVMBacPvswwNU)) needs to be saved to disk in a plain text file for simplicity (_for example - Mac terminal would not allow you to paste the whole access grant directly due terminal limitations_). Specify the path to the saved access grant in the following command (`~/Downloads/accessgrant.txt` _for example_).
 
 3\. **Import** Access Grant.
 

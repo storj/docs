@@ -64,7 +64,7 @@ One of the reasons our terms and conditions require you to share the same wallet
 
 For wallet addresses that have earned less than the threshold, the earned payout will be included the following month, as long as the aggregate amount of payouts owed meets the minimum threshold at the time payouts are sent. In the example above, all Node Operators that earn less than $50.00 would have their payouts rolled into their payout the following month.
 
-If a wallet address has no more active storage nodes associated with it (due to graceful exit, disqualification, etc), funds that did not clear previous thresholds will be dispersed.
+In case of a final payout when you gracefuly exited or shutdown all nodes but the Undistributed amount is not enough to clear a [Minimum Payout Threshold](#minimum-payment-thresholds) on Ethereum (L1), we recommend to [opt-in for zkSync (L2)](docId:6TX_ve1PyUrXuwax-mWWw), where fees are usually lower and thus the probability to clear the Minimum Payout Threshold is significantly higher. The alternative is to wait until fees on L1 would become lower or run a new node using the same wallet address to allow to collect enough funds to clear the Minimum Payout Threshold.
 
 ### Payment options
 

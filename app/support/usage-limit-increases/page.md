@@ -13,9 +13,9 @@ metadata:
 
 If the default Project Limits do not appear to be appropriate for your use case, you may request a [Project Limit Increase form](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212). Increases in Project Limits may result in increased costs associated with your usage of Storj.
 
-## Free Plan
+## Free Trial
 
-The Free Tier is not eligible for Project Limit Increases.
+The Free Trial is not eligible for Project Limit Increases.
 
 ## Object Storage
 

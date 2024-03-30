@@ -39,11 +39,10 @@ Before continuing, beware that partner value attribution is only possible if you
 
 ### Uplink CLI
 
-UserAgent can only be configured by adding or updating the following lines of the legacy uplink configuration yaml file (the default path for the `config.yaml` can be checked with `uplink setup --help --advanced` command, see the default value for `--legacy-config-dir` option in the output):
+UserAgent can only be configured by adding or updating the following line of the legacy uplink configuration ini file (the default path for the `config.ini` can be checked with `uplink setup --help --advanced` command, see the default value for `--legacy-config-dir` option in the output):
 
-```yaml
-# User-Agent used for connecting to the satellite
-client.user-agent: 'MyCompany'
+```ini
+client.user-agent = MyCompany
 ```
 
 ### S3 Gateway

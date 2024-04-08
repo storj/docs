@@ -1,7 +1,55 @@
 ---
-title: Object Versioning
+title: Object Versioning (Beta)
 docId: oogh5vaiGei6atohm5thi
 metadata:
   description: Detailed guide on enabling object versioning for buckets
   title: 'Object Versioning in Storj'
 ---
+
+Storj has released S3 Compatible Object Versioning in open beta. 
+
+## How do I opt in to the object versioning beta?
+
+You need to opt in to the object versioning beta per project. To opt in to the object versioning beta, you can follow these steps:
+
+1. Login to the Storj web console
+2. Navigate to the desired project
+3. You will be prompted to enable object versioning for the project
+
+{% callout type="warning"  %}
+Object versioning is currently in open beta and may not be suitable for all production environments.
+{% /callout %}
+
+## How does object versioning work?
+
+Object versioning enables you to preserve, retrieve, and restore every version of every object stored in a bucket. This feature adds an extra layer of data protection and recovery options, allowing you to safeguard against accidental deletions and overwrites.
+
+### Key Features of Object Versioning
+
+- **S3 Compatibility:** Storj's object versioning is designed to be compatible with the S3 API. This means you can use existing S3 SDKs and tools to manage versioned objects, making it easy to integrate into your current workflows.
+
+- **Version Preservation:** Every time an object is overwritten or deleted, a new version is created. This means that previous versions of the object are preserved, not replaced, ensuring that you can access historical data at any time.
+
+- **Recovery and Rollback:** In case of accidental deletion or if an object is overwritten with an undesired version, you can easily recover the previous version of the object.
+
+
+
+{% callout type="info" %}
+Note that enabling object versioning can increase storage costs since each version of an object is stored separately.
+{% /callout %}
+
+### Supported S3 API Methods for Object Versioning
+
+Storj's S3 Compatible Object Versioning supports a range of S3 API methods, allowing you to manage and interact with versioned objects. Below are the key S3 API methods supported by Storj's object versioning, along with a brief description of their use:
+
+#### Bucket Operations
+
+- **PUT Bucket versioning**: Enables or suspends versioning for a bucket.
+- **GET Bucket versioning**: Retrieves the versioning state of a bucket.
+
+#### Object Operations
+
+- **PUT Object**: Adds an object to a bucket. If versioning is enabled, a unique version ID is assigned to the object.
+- **GET Object**: Retrieves the current version of an object or a specific version if the version ID is specified.
+- **DELETE Object**: Permanently deletes a version of an object if the version ID is provided, or marks the current version as deleted by adding a delete marker.
+- **LIST Versions**: Lists all the versions of all objects in a bucket, including delete markers.

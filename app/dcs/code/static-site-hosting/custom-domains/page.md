@@ -172,7 +172,7 @@ Here is an example the steps required to host a website on a custom domain (e.g.
     txt-my-website.storj.dev        IN      TXT     storj-tls:true
     ```
 
-1.  Once DNS records from the previou command are set, double check they're set correctly with `dig`
+1.  Once DNS records from the previous command are set, double check they're set correctly with `dig`
 
     ```bash
     # terminal

@@ -12,15 +12,19 @@ metadata:
 
 ## Integration
 
-To integrate Storj with Commvault, you will need to create S3 credentials in Storj and add them within Commvault. Veeam uses a wizard to guide users in adding S3-compatible cloud storage.
+To integrate Storj with Commvault, you will need to create S3 credentials in Storj and add them within Commvault.
 
 ### Requirements
 
 - An active Storj account
-- A bucket for use with Commvault in your Storj instance.
-- An active Commvault account.
+- A bucket for use with Commvault in your Storj instance
+- An active Commvault account
+- Commvault MediaAgent installed and connected to CommCell server or Metallic.io
+
 
 Download a [free trial](https://www.commvault.com/free-trial-form) of Commvault or [sign up for a Demo](https://www.commvault.com/request-demo).
+
+Trial users using Metallic.io may obtain a MediaAgent by performing a File Server installation.
 
 ---
 
@@ -42,105 +46,40 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 ---
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xOlk_1dXj-ODMpTIn-37o_image.png)
+## Connecting Commvault to Storj
 
-To configure **Storj** as the decentralized cloud storage network target, you’ll need to generate Storj credentials.
+### Cloud Credentials Configuration
 
-### Using CyberDuck with Storj - macOS
+1. Log in to the Commvault Command Center or Metallic.io web console
 
-Once the download is complete, you'll be able to open the CyberDuck client. By selecting the **+** button in the bottom left-hand corner of the client, you'll be able to add a connection bookmark, facilitating the connection between CyberDuck and Storj. Select **Storj** from the drop-down.
+1. From the navigation pane on the left, click _Manage_ then _Security_
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MJ-vjelgQGnchg9zxFu7J_image.png)
+1. On the _Security_ page, click _Credential Vault_, then click _Add_
 
-This is where you will add **Server, Access Key ID, and the Secret Access Key** for Storj Gateway MT.
+1. On the resulting _Add credential_ page configure the following fields:
+   * _Account type_ : "Cloud Account"
+   * _Vendor type_ : "S3 Compatible Storage"
+   * _Credential name_ : Any name you choose
+   * _Access key ID_ : The Access Key ID you generated in Storj
+   * _Secret access key_ : The Secret Access Key you generated in Storj
+   * _Description_ : Any description you choose
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/aGFG9jmdtOm32wmk1dNKM_image.png)
+1.  Click _Save_
 
-To configure **Storj** as the decentralized cloud storage network target, you’ll need to generate Storj credentials.
 
-### Generate Credentials to the Gateway MT
+### Cloud Storage Configuration
 
-One of the most versatile ways to get up and running with **Storj** is through the [](docId:EGM8O-1xt2Az03eBWT8Rf)
+1. From the navigation pane on the left, click _Storage_ then _Cloud_
 
-**Gateway MT offers the following:**
+1. On the Cloud Storage page, in the upper right, click _Add_ 
 
-- Encryption, erasure coding, and upload to nodes occur server-side
+1. On the resulting _Add cloud storage_ page configure the following fields:
+   * _Type_ : "S3 Compatible Storage"
+   * _Name_ : Any name you choose
+   * _MediaAgent_ : The MediaAgent you wish to use for this storage
+   * _Service host_ : "gateway.storjshare.io"
+   * _Credentials_ : Select the credentials you created in the previous section
+   * _Bucket_ : The name of the bucket you created in Storj
+   * _Use deduplication_:  Unselect or configure as desired
 
-- Supports parallelism for upload and multi transfer for download
-
-- 1GB upload will result in 1GB of data being uploaded to storage nodes across the network
-
-- Based on S3 standard
-
-Navigate to the [](docId:bNywu7-9KLjYfk5LBQABx) page within your project and then click on **Create Access Grant**. A modal window will pop up where you should enter a name for this access grant.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/BcnCX2eZIgoKJSofci7la_screen-shot-2021-04-16-at-90250-am.png)
-
-Assign the permissions you want this access grant to have, then click on **Continue in Browser**:
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Ny23pe6zPwc2Y_wRzt3YM_screen-shot-2021-04-16-at-90315-am.png)
-
-{% callout type="info"  %}
-_If you do not feel comfortable entering this sensitive information into your browser, we understand. Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, please select “Continue in CLI” and follow _[](docId:AsyYcUJFbO1JI8-Tu8tW3) _instead._
-{% /callout %}
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Q_OxNbVD1vGCmLacrNcTT_screen-shot-2021-04-16-at-90334-am.png)
-
-**Generate and Save the Encryption Passphrase.** If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you if you choose "Generate Phrase.") You will need this passphrase later if you want to again access files uploaded with this encryption phrase.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/N6BqEH4bKainTDV7T_spV_screen-shot-2021-04-16-at-90350-am.png)
-
-Be sure to download the Access Grant to save it and then click on the **Generate S3 Gateway Credentials** link.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_1N0mondSjpRRtnlrLkrc_screen-shot-2021-04-16-at-90354-am.png)
-
-Now click on the **Generate Credentials** button.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rONKodBVYoHRO6nTU7Kg0_screen-shot-2021-04-16-at-90408-am.png)
-
-Copy your **_Access Key_**, **_Secret Key_**, and **_Endpoint_** to a safe location.
-
-### Configuring Storj + Cyberduck
-
-Whether using Windows or macOS, you’ll simply add the Storj Gateway S3 credentials into the CyberDuck client to establish the connection. Click the **Open Connection** button to create a new connection.
-
-- First, start by selecting S3 from the drop-down menu
-
-- Enter your S3 Gateway Credentials Endpoint for the **Server** selection (**without `https://`**)
-
-- Enter your S3 Gateway Credentials Access Key into the **Access Key ID** selection
-
-- Enter your S3 Gateway Credentials Secret Key into the **Secret Access Key** selection
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rAvBeUlBjTAhTZnsj_S7H_image.png)
-
-**Click Connect**
-
-{% callout type="info"  %}
-_Use endpoint without `https://`, i.e., **gateway.us1.storjshare.io** in the Cyberduck **Server** entry above. Otherwise, Cyberduck will revert to WEBDAV (HTTPS), causing a connection error._
-
-As seen here:
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/H428j0xiIhv_wp1Hfkq-l_pasted-image-0.png)
-
----
-
----
-
-{% /callout %}
-
-### **For Mac OS**
-
-Back to the open connection in Cyberduck as we referenced above in [](docId:QQGzEDU8o-IodQWmr7xP3) you now have all the information you need to send files to your **Storj** network.
-
-- **Select your saved bookmark** Here, you'll see the Amazon S3 server window reopen. To move forward, you'll simply just add in your Storj Gateway S3 credentials that we previously configured.
-
-- Enter your S3 Gateway Credentials Endpoint for the **Server** selection.
-
-- Enter your S3 Gateway Credentials Access Key into the **Access Key ID** selection.
-
-- Enter your S3 Gateway Credentials Secret Key into the **Secret Access Key** selection.
-
-Close the modal window and click the modified bookmark.
-
-If you’ve added your S3 Gateway Credentials properly, you’ll see your **Storj** buckets, and you can now drag and drop files to your **Storj** network seamlessly and easily via the Cyberduck GUI. Congrats!
+1.  Click _Save_

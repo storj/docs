@@ -6,7 +6,7 @@ tags:
 metadata:
   title: Guide for Commvault Integration
   description:
-    A guide on how to download, setup, and use the free, open-source Cyberduck
+    A guide on how to download, setup, and use the free, open-source Commvault
     file manager to integrate and transfer files easily with Storj.
 ---
 

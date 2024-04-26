@@ -6,8 +6,8 @@ tags:
 metadata:
   title: Guide for Commvault Integration
   description:
-    A guide on how to download, setup, and use the free, open-source Commvault
-    file manager to integrate and transfer files easily with Storj.
+    A guide on how to download, configure, and use Commvault's backup solutions
+    to integrate with Storj for fast and efficient backups.
 ---
 
 ## Integration
@@ -52,39 +52,39 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 1. Log in to the Commvault Command Center or Metallic.io web console
 
-1. From the navigation pane on the left, click _Manage_ then _Security_
+1. From the navigation pane on the left, click **Manage** then **Security**
 
-1. On the _Security_ page, click _Credential Vault_, then click _Add_
+1. On the **Security** page, click **Credential Vault**, then click **Add**
 
-1. On the resulting _Add credential_ page configure the following fields:
-   * _Account type_ : "Cloud Account"
-   * _Vendor type_ : "S3 Compatible Storage"
-   * _Credential name_ : Any name you choose
-   * _Access key ID_ : The Access Key ID you generated in Storj
-   * _Secret access key_ : The Secret Access Key you generated in Storj
-   * _Description_ : Any description you choose
+1. On the resulting **Add credential** page configure the following fields:
+   * **Account type** : "Cloud Account"
+   * **Vendor type** : "S3 Compatible Storage"
+   * **Credential name** : Any name you choose
+   * **Access key ID** : The Access Key ID you generated in Storj
+   * **Secret access key** : The Secret Access Key you generated in Storj
+   * **Description** : Any description you choose
 
-1.  Click _Save_
+1.  Click **Save**
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Commvault%20add%20credential.png)
 
 
 ### Cloud Storage Configuration
 
-1. From the navigation pane on the left, click _Storage_ then _Cloud_
+1. From the navigation pane on the left, click **Storage** then **Cloud**
 
-1. On the Cloud Storage page, in the upper right, click _Add_ 
+1. On the Cloud Storage page, in the upper right, click **Add** 
 
-1. On the resulting _Add cloud storage_ page configure the following fields:
-   * _Type_ : "S3 Compatible Storage"
-   * _Name_ : Any name you choose
-   * _MediaAgent_ : The MediaAgent you wish to use for this storage
-   * _Service host_ : "gateway.storjshare.io"
-   * _Credentials_ : Select the credentials you created in the previous section
-   * _Bucket_ : The name of the bucket you created in Storj
-   * _Use deduplication_:  Unselect or configure as desired
+1. On the resulting **Add cloud storage** page configure the following fields:
+   * **Type** : "S3 Compatible Storage"
+   * **Name** : Any name you choose
+   * **MediaAgent** : The MediaAgent you wish to use for this storage
+   * **Service host** : "gateway.storjshare.io"
+   * **Credentials** : Select the credentials you created in the previous section
+   * **Bucket** : The name of the bucket you created in Storj
+   * **Use deduplication**:  Unselect or configure as desired
 
-1.  Click _Save_
+1.  Click **Save**
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Commvault%20add%20cloud%20storage.png)
 

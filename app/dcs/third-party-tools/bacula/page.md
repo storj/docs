@@ -20,7 +20,7 @@ To integrate Storj with Bacula, you will need to create S3 credentials in Storj 
 - A bucket for use with Bacula in your Storj instance
 - Bacula Enterprise Edition
 
-Bacula Enterprise Edition also offers a [30-day trial](https://www.baculasystems.com/try/) for new users.
+Bacula Enterprise Edition offers a [30-day trial](https://www.baculasystems.com/try/) for new users.
 
 ---
 
@@ -55,7 +55,7 @@ Once you have your Storj account you can create a bucket for your data to be sto
 1. On the **Copy from existing Storage** dropdown, select **DiskAutoChanger**. The remaining fields automatically populate with information.  Click **Next**.
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bacula-config-2.png)
 
-1. Type **Storj** or a custom name for **Media Type**.  Then enter values under **Configure your Cloud resource**.
+1. Type "storj" or a custom name for **Media Type**.  Then enter values under **Configure your Cloud resource**.
    * **Driver** : "S3"
    * **Hostname** : "gateway.storjshare.io"
    * **Access Key** : The Access Key ID you generated in Storj
@@ -68,8 +68,7 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 1. Give this storage resource a name, then hit **Save**.
 
-1. If **Autocommit** is not enabled in your BWeb console, you will be displayed what changes will be committed to the Storage Director once you hit **Commit**.
-
+1. If Autocommit is not enabled in your BWeb console, you will be displayed what changes will be committed to the Storage Director once you hit **Commit**.
 
 1. The Storage Daemon must be restarted in order to see the newly created S3 target.  From the CLI of the Bacula server, type:
 

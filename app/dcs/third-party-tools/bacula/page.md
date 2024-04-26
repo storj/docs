@@ -19,6 +19,7 @@ To integrate Storj with Bacula, you will need to create S3 credentials in Storj 
 - An active Storj account
 - A bucket for use with Bacula in your Storj instance
 - Bacula Enterprise Edition
+- Installed [Bacula Cloud S3 plugin](https://docs.baculasystems.com/BEDedicatedBackupSolutions/StorageBackend/cloud/CloudInstallation/cloud-installation-s3amazon.html#installation-of-the-cloud-s3-amazon-plugin)
 
 Bacula Enterprise Edition offers a [30-day trial](https://www.baculasystems.com/try/) for new users.
 

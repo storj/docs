@@ -87,4 +87,4 @@ Now you can use the mounted bucket almost as any folder.
 
 We recommend having a look at [](docId:LdrqSoECrAyE_LQMvj3aF) and its [`rclone mount` command](https://rclone.org/commands/rclone_mount/) as well.
 
-Please note - you can configure a native connector in rclone, (see: [](docId:Mk51zylAE6xmqP7jUYAuX)) and use [](docId:Pksf8d0TCLY2tBgXeT18d), unlike [](docId:yYCzPT8HHcbEZZMvfoCFa) which uses[](docId:hf2uumViqYvS1oq8TYbeW) to provide a S3-compatible protocol (the S3 protocol does not use client side encryption by design).
+Please note - you can configure a native connector in rclone, (see: [](docId:Mk51zylAE6xmqP7jUYAuX)) and use [](docId:Pksf8d0TCLY2tBgXeT18d), unlike [](docId:yYCzPT8HHcbEZZMvfoCFa) which uses[](docId:hf2uumViqYvS1oq8TYbeW) to provide an S3-compatible protocol (the S3 protocol does not use client side encryption by design).

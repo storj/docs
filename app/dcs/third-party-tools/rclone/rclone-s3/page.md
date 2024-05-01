@@ -176,8 +176,12 @@ Use the `mount` command to mount a bucket to a folder (Mac and Linux only). When
 ```bash
 sudo mkdir /mnt/mybucket
 sudo chown $USER: /mnt/mybucket
-rclone mount waterbear:mybucket /mnt/mybucket
+rclone mount waterbear:mybucket /mnt/mybucket --vfs-cache-mode full
 ```
+
+{% callout type="info"  %}
+The `--vfs-cache-mode full` flag means that all reads and writes are cached to disk. Without it, reads and writes are done directly to the Storj bucket.
+{% /callout %}
 
 To unmount the bucket, use the `umount` command.
 

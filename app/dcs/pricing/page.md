@@ -14,7 +14,7 @@ metadata:
 
 {% youtube-embed videoId="9uhX0X3ZW2c" /%}
 
-The price for object storage is as low as $4.00 per TB per month with $7.00 per TB per month for egress.
+The price for object storage is as low as $4.00 per TB per month with $7.00 per TB for egress.
 
 The following table lists the types of metered services that appear in billing and usage user interfaces as well as invoices:
 

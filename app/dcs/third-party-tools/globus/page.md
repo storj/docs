@@ -155,7 +155,7 @@ Storage Gateway Created: 7187a9a0-68e4-48ea-b3b9-7fd06630f8ab
 
 If you forget the id of a storage gateway, use the command [**globus-connect-server storage-gateway list**](https://docs.globus.org/globus-connect-server/v5/reference/storage-gateway/list) to get a list of the storage gateways on the endpoint.
 
-### Create S3 user credential
+### Create S3 User Credential
 
 First register user credentials with the Globus storage gateway using `globus-connect-server user-credentials s3-create`. For more details see [here](https://docs.globus.org/globus-connect-server/v5/reference/user-credentials/s3-create/).
 
@@ -173,9 +173,9 @@ Created credential 9bb3d1d1-f506-41f1-b161-41c372b7da19 for
 <user@example.org>
 ```
 
-### Create collection
+### Create Collection
 
-Create a collection (addition details [here](https://docs.globus.org/premium-storage-connectors/v5/aws-s3/#collection))
+Create a collection (additional details [here](https://docs.globus.org/premium-storage-connectors/v5/aws-s3/#collection))
 
 The STORAGE_GATEWAY_ID is from the previous step of “Create S3 Gateway”
 
@@ -188,3 +188,11 @@ globus-connect-server collection create STORAGE_GATEWAY_ID  BASE_PATH DISPLAY_NA
 Enter the COLLECTION ID from the previous step
 
 To be able to view collection follow the instructions [here](https://docs.globus.org/how-to/get-started/#the_file_manager)
+
+### Optional - Increase Concurrency for Better Throughput
+
+The Globus Endpoint can be modified with the ["custom" network-use flag](https://docs.globus.org/globus-connect-server/v5.4/reference/endpoint/update/) to modify the number of files to transfer concurrently.  To make this modification, use the following command (replace N with an integer, not to exceed the number of CPU cores on your Globus Connect Server):
+
+```shell
+globus-connect-server endpoint update --network-use "custom" --max-concurrency N --preferred-concurrency N
+```

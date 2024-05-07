@@ -10,7 +10,7 @@ redirects:
 ✅ **One (1) processor core dedicated to each node service**
 
 ✅ **8 TB and a maximum of 24 TB of available space per node**
-Minimum of 550 GB with no maximum of available space per node
+Minimum of 550 GB with no maximum of available space per node.
 
 ✅ **16+ TB of unmetered bandwidth available per month; unlimited preferred**
 Minimum of 2 TB of bandwidth available per month
@@ -95,6 +95,8 @@ If you live in a location where power outages or brownouts are a frequent occurr
 
 We do not recommend purchasing anything specifically for use with Storj alone. It's better to use what you already own and have online.
 Node usage depends on customer activity, and not on the hardware or configuration options.  Node usage is not predictable.
+
+Please try to avoid using [SMR drives](https://forum.storj.io/t/psa-beware-of-hdd-manufacturers-submarining-smr-technology-in-hdds-without-any-public-mention/6003), they can work but may require additional tuning and additional hardware resources. If it's not avoidable, please use the [search function on our forum](https://forum.storj.io/search?q=smr) to find an appropriate solution.
 
 {% callout type="warning"  %}
 A network-attached storage location may work, but this is neither supported nor recommended!

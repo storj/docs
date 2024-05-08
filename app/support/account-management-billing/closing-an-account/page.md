@@ -13,6 +13,8 @@ metadata:
 
 We want all of our users to receive value when they choose the Storj Platform for their storage needs, but it’s possible that a user may no longer need Storj services. If a user wants to stop using an account and permanently delete the account, the user may submit a request for this only after following the steps outlined below to eliminate platform usage.
 
+If your free trial is expired and the account is frozen, all operations will be frozen too, include download and deletion, so, if you do not need your account anymore, you may do nothing, your frozen account will be added to the deletion queue and will be removed later automatically (the exact time interval is not determined though).
+
 The process to eliminate platform usage starts with deleting all data from the platform, including all objects and buckets. Next, all Access Grants should be deleted. Once this is done, the user should submit a support ticket to remove all payment methods and delete the account.
 
 Note that in order to verify the deletion request is legitimate, the user will need to confirm they control the email address used for the account in question. Therefore, the user should file their support ticket while signed in to their [Storj help desk](https://supportdcs.storj.io/hc/en-us) account. If the user does not yet have a help desk account, they should sign up first before filing their account deletion request. Support agents will be happy to remove the help desk account once the Storj account deletion has been completed.The account deletion request ticket should specify the following:

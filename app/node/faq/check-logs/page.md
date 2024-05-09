@@ -28,7 +28,7 @@ Get-Content "pathtologfile" -Tail 20 -Wait
 
 ```
 
-For CLI Dockef Linux and MacOS install, if you have redirected your logs to a file, please use your preferred editor to view the contents of the log file, or in your terminal (replace the path `/path/to/the/log/file.log` with the correct path):
+For CLI Docker Linux and MacOS install, if you have redirected your logs to a file, please use your preferred editor to view the contents of the log file, or in your terminal (replace the path `/path/to/the/log/file.log` with the correct path):
 
 ```linux
 cat /path/to/the/log/file.log

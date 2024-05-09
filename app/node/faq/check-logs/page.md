@@ -31,14 +31,13 @@ Get-Content "pathtologfile" -Tail 20 -Wait
 
 {% /tab %}
 
-{% tab label="Docker for Linux/macOS" %}
+{% tab label="Docker for Linux or macOS" %}
 
-For CLI Linux and MacOS install, if you have redirected your logs to a file, please use your preferred editor to view the contents of the log file.
-
-Or your terminal:
+For CLI Linux and MacOS install, if you have redirected your logs to a file, please use your preferred editor to view the contents of the log file, or in your terminal:
 
 ```linux
 cat /path/to/the/log/file.log
+
 ```
 
 {% /tab %}

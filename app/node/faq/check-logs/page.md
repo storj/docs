@@ -21,7 +21,6 @@ docker logs --tail 20 storagenode
 
 ```
 
-{% tabs %} {% tab label="Docker for Windows" %}
 For CLI Docker install on Windows, if you would like to copy your logs to a file you can follow this link [](docId:EeyBBKEeuNK5oqkB4EyU0) or you can execute the following command in PowerShell, inserting your actual path to your log file instead of “pathtologfile”
 
 ```powershell
@@ -29,19 +28,13 @@ Get-Content "pathtologfile" -Tail 20 -Wait
 
 ```
 
-{% /tab %}
-
-{% tab label="Docker for Linux or macOS" %}
-
-For CLI Linux and MacOS install, if you have redirected your logs to a file, please use your preferred editor to view the contents of the log file, or in your terminal:
+For CLI Dockef Linux and MacOS install, if you have redirected your logs to a file, please use your preferred editor to view the contents of the log file, or in your terminal (replace the path `/path/to/the/log/file.log` with the correct path):
 
 ```linux
 cat /path/to/the/log/file.log
 
 ```
 
-{% /tab %}
-{% /tabs %}
 {% /tab %}
 
 {% tab label="GUI Windows Install" %}

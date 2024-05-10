@@ -214,9 +214,9 @@ Also note that the URL uses the same Gateway MT access key, so if you have that 
 
 `https://link.storjshare.io/s/<access key>/<object path>`
 
-To download content directly, use `/raw/` in Linkshare URL ex: `https://link.storjshare.io/raw/ju34skavohcqezr6vlfgshg5nmjq/dwebdemo/isthataquestion.mp4`
+To download content directly, use `/raw/` in Linkshare URL ex: `https://link.storjshare.io/raw/jxkfryh6anmtrcfhtio4q5lszuza/media%2FBig%20Buck%20Bunny%20Demo.mp4`
 
-To view the object location map, use `/s/` in Linkshare URL ex: `https://link.storjshare.io/s/ju34skavohcqezr6vlfgshg5nmjq/dwebdemo/isthataquestion.mp4`
+To view the object location map, use `/s/` in Linkshare URL ex: `https://link.storjshare.io/s/jxkfryh6anmtrcfhtio4q5lszuza/media%2FBig%20Buck%20Bunny%20Demo.mp4`
 
 ### Webhosting
 

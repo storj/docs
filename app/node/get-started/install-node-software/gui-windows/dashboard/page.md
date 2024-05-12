@@ -14,7 +14,7 @@ How to monitor the activity of your storage node.
 
 ## Storage Node Operator Web Dashboard
 
-When you finish the Windows installation for your Storage Node, a Windows shortcut will automatically be created that will open the [Storage Node Operator Dashboard](https://storj.io/blog/2019/09/introducing-the-storage-node-operator-dashboard/) in your web browser.
+When you finish the Windows installation for your Storage Node, a Windows shortcut will automatically be created that will open the [Storage Node Operator Dashboard](https://www.storj.io/blog/introducing-the-storage-node-operator-dashboard) in your web browser.
 
 ![Storage Node operator dashboard shortcut](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/it9buKyErECErUKJsgp0K_pasted-image-0.png)
 

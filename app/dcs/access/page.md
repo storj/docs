@@ -43,7 +43,7 @@ The Access Grant screen allows you to create or delete Access Grants, generate c
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/NZGAlqeSEv-vuzJW1enUW_cli-keys2.png)
 
-5. Copy and save the **Satellite Address** and **API Key **in a safe place or download them as they will only appear once.
+5. Copy and save the **Satellite Address** and **API Key** in a safe place or download them as they will only appear once.
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/68ftNpbXKmJkroQyO2C9Q_cli-keys3.png)
 

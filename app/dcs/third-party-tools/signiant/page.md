@@ -67,8 +67,8 @@ Vultr’s [“Looking Glass”](https://lax-ca-us-ping.vultr.com/) ping test can
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/signiant/signiant-image1.png)
 
 
-1. Select a SDXC server, then enter in all of the S3 information:
-   - **Service Endpoint**: "gateway.storjshare.io"
+1. Select a SDCX server, then enter in all of the S3 information:
+   - **Service Endpoint**: gateway.storjshare.io
    - **Bucket**: your-bucket-name
    - **Subfolder**: your-prefix-name
    - **Access Key**: your-access-key

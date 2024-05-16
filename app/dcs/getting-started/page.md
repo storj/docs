@@ -110,11 +110,12 @@ However, some may already be familiar with AWS CLI which is also a suitable opti
      Default output format [None]:
    ```
 
-3. **Optional but strongly recommended**: Set the multipart threshold to 64 MB
+3. **Optional but strongly recommended**: Set the multipart threshold to 64 MB and increase concurrent requests
 
    ```shell
    aws configure set default.s3.multipart_threshold 64MB
    aws configure set default.s3.multipart_chunksize 64MB
+   aws configure set default.s3.max_concurrent_requests 40
    ```
 
 {% /tab %}

@@ -23,7 +23,7 @@ Storj delivers default multi-region CDN-like performance with zero-trust securit
 
 ## Before you begin
 
-To get started, create an account with Storj. You’ll automatically be on Storj's free plan that gives you access to try our storage with your [third-party tool](docId:REPde_t8MJMDaE2BU8RfQ) or project.
+To get started, create an account with Storj. You'll automatically begin a free trial that gives you access to try our storage with your [third-party tool](docId:REPde_t8MJMDaE2BU8RfQ) or project.
 
 {% quick-links %}
 {% quick-link title="Sign up" href="https://storj.io/signup"  %}

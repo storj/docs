@@ -5,6 +5,8 @@ redirects:
   - /node/before-you-begin/prerequisites
 ---
 
+You must read and accept terms and conditions from [Terms and conditions](https://www.storj.io/legal/supplier-terms-conditions) and if you continue, it will be treated as you accepted them. Please read carefuly before continue.
+
 ## Hardware Requirements (Recommended)
 
 ✅ **One (1) processor core dedicated to each node service**

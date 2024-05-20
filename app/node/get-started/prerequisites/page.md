@@ -5,7 +5,7 @@ redirects:
   - /node/before-you-begin/prerequisites
 ---
 
-You must read and accept terms and conditions from [Terms and conditions](https://www.storj.io/legal/supplier-terms-conditions) and if you continue, it will be treated as you accepted them. Please read carefuly before continue.
+Proceeding constitutes acceptance of our [Terms and conditions](https://www.storj.io/legal/supplier-terms-conditions). Please read carefully before continuing.
 
 ## Hardware Requirements (Recommended)
 

@@ -34,27 +34,19 @@ CentOS - A maintained version of CentOS 7
 
 Debian - 64-bit version of one of these Debian or Raspbian versions:
 
-- Buster 10
-
-- Stretch 9 (stable) / Raspbian Stretch
+- Stretch 9 (stable) / Raspbian Stretch or later
 
 Fedora - 64-bit version of one of these Fedora versions:
 
-- 28
-
-- 29
+- 28 or later
 
 Ubuntu - 64-bit version of one of these Ubuntu versions:
 
-- Cosmic 18.10
-
-- Bionic 18.04 (LTS)
-
-- Xenial 16.04 (LTS)
+- Bionic 18.04 (LTS) or later
 
 > **Make sure you use static mount for your hard drive via**
->
-> **/etc/fstab**
+> **/etc/fstab**:
+> See [](docId:nZeFxmawYPdgkwUPy6f9s).
 
 {% /tab %}
 

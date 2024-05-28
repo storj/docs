@@ -79,7 +79,11 @@ Storj backup is integrated with Veeam using Veeam's **New Object Repository** w
 
 1.  In the **Description** field, enter an optional description.
 
-1.  To limit the maximum number of tasks that can be processed at once, select the **Limit concurrent tasks to N** check box.
+1.  To change the maximum number of tasks that can be processed at once, select the **Limit concurrent tasks to N** check box.
+{% callout type="info"  %}
+In rare cases, there may be a benefit to creating a **S3ConcurrentTaskLimit** (DWORD) registry value under the `HKLM\SOFTWARE\Veeam\Veeam Backup and Replication` key on the backup server.
+This changes the maximum number of TCP connections used by Veeam tasks to upload data to any S3 compatible storage.  The default value is 64.
+{% /callout %}
 
     ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/XLfq1ljqWaRGqlyKujk7K_s3repository.png)
 
@@ -134,8 +138,15 @@ Use the New **Backup Job wizard** to configure the backup job. Follow the steps 
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam1.png)
 
-3. Upon opening Advanced - Storage, you will be presented with the option of selecting Storage Optimization. The ideal setting for object storage is **4MB** or **8MB**. The larger sizes provide faster backup/restores and lowers the [Storj segment cost](docId:59T_2l7c1rvZVhI8p91VX#per-segment-fee). Note: using 4MB or 8MB will result in larger incremental backups compared to 1MB (the Veeam default), but Storj's recommendation is to choose 4MB or 8MB to dramatically reduce your Storj costs while also providing better backup and restore times.
+3. Upon opening Advanced - Storage, you will be presented with the option of selecting Storage Optimization.
+Veeam recommends the default of 1MB because increasing the block size can result in larger incremental backups. 
+However, Storj's recommended setting for object storage is **4MB** or **8MB**. 
+Taking into account [Storj segment cost](docId:59T_2l7c1rvZVhI8p91VX#per-segment-fee), using larger block sizes both reduces overall Storj costs and provides better backup and restore times.
+{% callout type="info"  %}
+To enable **8MB** as a Storage Optimization option, create a **UIShowLegacyBlockSize** (DWORD, 1) registry value under the `HKLM\SOFTWARE\Veeam\Veeam Backup and Replication` key on the backup server. This requires Veeam 11a or newer.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam_advanced_settings.png)
+You may need to reboot or restart the Veeam services for the change to take effect in Veeam's user interface.
+{% /callout %}
 
-4. To enable **8MB** as a Storage Optimization option, create the UIShowLegacyBlockSize (DWORD, 1) registry value under the `HKLM\SOFTWARE\Veeam\Veeam Backup and Replication` key on the backup server. This requires Veeam 11a or newer.
+   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam_advanced_settings.png) 
+

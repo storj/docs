@@ -6,14 +6,14 @@ import sys
 import termios
 import tty
 import os
+import sys
 
 import backoff
 import frontmatter
 import openai
+from openai import OpenAI
 
-openai.api_key = os.getenv('OPENAI_API_KEY')
-openai.organization = os.getenv('OPENAI_ORG')
-
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'), organization=os.getenv('OPENAI_ORG'))
 
 def _getch():
     fd = sys.stdin.fileno()
@@ -26,9 +26,11 @@ def _getch():
     return ch
 
 
-@backoff.on_exception(backoff.expo, openai.error.RateLimitError)
+@backoff.on_exception(backoff.expo, openai.RateLimitError)
 def completions_with_backoff(**kwargs):
-    return openai.ChatCompletion.create(**kwargs)
+    print("hello")
+    return client.chat.completions.create(**kwargs)
+
 
 
 system_prompt = [
@@ -52,7 +54,8 @@ system_prompt = [
     "Don't reply with anything other than the JSON object."
 ]
 
-for fname in glob.glob("../../app/**/page.md", recursive=True):
+path = str(sys.argv[1]) if len(sys.argv) > 1 else "../../app/**/page.md"
+for fname in glob.glob(path, recursive=True):
     with open(fname, "r") as f:
         post = frontmatter.loads(f.read())
         title = post.get('metadata', {}).get('title', post.get('title'))
@@ -93,10 +96,10 @@ for fname in glob.glob("../../app/**/page.md", recursive=True):
 
         result = {}
         try:
-            result = json.loads(completion["choices"][0]["message"]["content"].strip())
+            result = json.loads(completion.choices[0].message.content.strip())
         except json.decoder.JSONDecodeError:
             try:
-                fields = completion["choices"][0]["message"]["content"].strip().split('\n')
+                fields = completion.choices[0].message.content.strip().split('\n')
                 for field in fields:
                     key = field.split(':')[0].strip()
                     value = ':'.join(field.split(':')[1:])

@@ -23,7 +23,7 @@ Storj delivers default multi-region CDN-like performance with zero-trust securit
 
 ## Before you begin
 
-To get started, create an account with Storj. You’ll automatically be on Storj's free plan that gives you access to try our storage with your [third-party tool](docId:REPde_t8MJMDaE2BU8RfQ) or project.
+To get started, create an account with Storj. You'll automatically begin a free trial that gives you access to try our storage with your [third-party tool](docId:REPde_t8MJMDaE2BU8RfQ) or project.
 
 {% quick-links %}
 {% quick-link title="Sign up" href="https://storj.io/signup"  %}
@@ -110,11 +110,12 @@ However, some may already be familiar with AWS CLI which is also a suitable opti
      Default output format [None]:
    ```
 
-3. **Optional but strongly recommended**: Set the multipart threshold to 64 MB
+3. **Optional but strongly recommended**: Set the multipart threshold to 64 MB and increase concurrent requests
 
    ```shell
    aws configure set default.s3.multipart_threshold 64MB
    aws configure set default.s3.multipart_chunksize 64MB
+   aws configure set default.s3.max_concurrent_requests 40
    ```
 
 {% /tab %}

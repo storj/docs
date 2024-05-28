@@ -1,6 +1,8 @@
 ---
-title: Comet Backup Integration Guide
+title: Comet Backup
 docId: ayERoOc0hFWpUG-cCjq1f
+tags:
+  - backup
 redirects:
   - /dcs/comet-backup-integration-guide
   - /dcs/how-tos/cometbackup-integration-guide

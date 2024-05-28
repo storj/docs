@@ -81,8 +81,10 @@ Storj backup is integrated with Veeam using Veeam's **New Object Repository** w
 
 1.  To change the maximum number of tasks that can be processed at once, select the **Limit concurrent tasks to N** check box.
 {% callout type="info"  %}
-In rare cases, there may be a benefit to creating a **S3ConcurrentTaskLimit** (DWORD) registry value under the `HKLM\SOFTWARE\Veeam\Veeam Backup and Replication` key on the backup server.
-This changes the maximum number of TCP connections used by Veeam tasks to upload data to any S3 compatible storage.  The default value is 64.
+In some instances, there may be a benefit to creating a **S3ConcurrentTaskLimit** (DWORD) registry value under the `HKLM\SOFTWARE\Veeam\Veeam Backup and Replication` key on the backup server.
+This changes the maximum number of TCP connections used by each Veeam task to upload data to any S3 compatible storage.
+Without this registry value present, the default number of TCP connections used by Veeam is 64.  
+Setting a value higher than 64 can increase throughput backing up (offloading) to Storj.
 {% /callout %}
 
     ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/XLfq1ljqWaRGqlyKujk7K_s3repository.png)

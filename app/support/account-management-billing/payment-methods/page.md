@@ -54,7 +54,7 @@ In addition to credit cards, users may also pay for usage fees with STORJ token.
 Making payments with STORJ token is a different process than using a credit card. When using STORJ as your payment method, you commit to using a pre-payment model, which means you must first deposit X amount of STORJ tokens, which will be automatically converted to Y amount of $USD based on the spot price of the token at the time of the payment transaction.
 
 {% callout type="info"  %}
-Please note that at the moment your deposit address in your account can accept only L1 (Ethereum) transactions.
+Please note that at the moment your deposit address in your account can accept only L1 (Ethereum) and zkSync Era (L2) transactions. zkSync Lite and any other blockchains are not supported
 {% /callout %}
 
 {% callout type="info"  %}

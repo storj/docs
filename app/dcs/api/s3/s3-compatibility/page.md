@@ -11,104 +11,104 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 
 ## Compatibility Table
 
-|                    Name                     | Support |                             Planned support                             |                       Caveats                       |
-| :-----------------------------------------: | :-----: | :---------------------------------------------------------------------: | :-------------------------------------------------: |
-|            AbortMultipartUpload             |  Full   |                                                                         |                                                     |
-|           CompleteMultipartUpload           |  Full   |                                                                         |                                                     |
-|                 CopyObject                  |  Full   |                                                                         |                                                     |
-|                CreateBucket                 |  Full   |                                                                         |                                                     |
-|            CreateMultipartUpload            |  Full   |                                                                         |                                                     |
-|                DeleteBucket                 |  Full   |                                                                         |                                                     |
-|     DeleteBucketAnalyticsConfiguration      |   No    |                                   No                                    |                                                     |
-|              DeleteBucketCors               |   No    |                                   No                                    |                                                     |
-|           DeleteBucketEncryption            |   No    |                                   No                                    |                                                     |
-| DeleteBucketIntelligentTieringConfiguration |   No    |                                   No                                    |                                                     |
-|     DeleteBucketInventoryConfiguration      |   No    |                                   No                                    |                                                     |
-|            DeleteBucketLifecycle            |   No    |                                   No                                    |                                                     |
-|      DeleteBucketMetricsConfiguration       |   No    |                                   No                                    |                                                     |
-|        DeleteBucketOwnershipControls        |   No    |                                   No                                    |                                                     |
-|             DeleteBucketPolicy              |   No    |                                   No                                    |                                                     |
-|           DeleteBucketReplication           |   No    |                                   No                                    |                                                     |
-|             DeleteBucketTagging             |   No    |                          We could support this                          |                                                     |
-|             DeleteBucketWebsite             |   No    |                                   No                                    |                                                     |
-|                DeleteObject                 |  Full   |                                                                         |                                                     |
-|             DeleteObjectTagging             |  Full   |                                                                         |  Tags can be modified outside of tagging endpoints  |
-|                DeleteObjects                |  Full   |                                                                         |                                                     |
-|           DeletePublicAccessBlock           |   No    |                                   No                                    |                                                     |
-|      GetBucketAccelerateConfiguration       |   No    |                                   No                                    |                                                     |
-|                GetBucketAcl                 |   No    |                                   No                                    |                                                     |
-|       GetBucketAnalyticsConfiguration       |   No    |                                   No                                    |                                                     |
-|                GetBucketCors                |   No    |                                   No                                    |                                                     |
-|             GetBucketEncryption             |   No    |                                   No                                    |                                                     |
-|  GetBucketIntelligentTieringConfiguration   |   No    |                                   No                                    |                                                     |
-|       GetBucketInventoryConfiguration       |   No    |                                   No                                    |                                                     |
-|       GetBucketLifecycle (deprecated)       |   No    |                     We could partially support this                     |                                                     |
-|       GetBucketLifecycleConfiguration       |   No    |                     We could partially support this                     |                                                     |
-|              GetBucketLocation              |  Full   |                                                                         |            See GetBucketLocation section            |
-|              GetBucketLogging               |   No    |                                   No                                    |                                                     |
-|        GetBucketMetricsConfiguration        |   No    |                                   No                                    |                                                     |
-|     GetBucketNotification (deprecated)      |   No    |                                   No                                    |                                                     |
-|     GetBucketNotificationConfiguration      |   No    |                                   No                                    |                                                     |
-|         GetBucketOwnershipControls          |   No    |                                   No                                    |                                                     |
-|               GetBucketPolicy               | Partial |                                                                         |          Only in Gateway-ST with --website          |
-|            GetBucketPolicyStatus            |   No    |                          We could support this                          |         Currently, it always returns false          |
-|            GetBucketReplication             |   No    |                                   No                                    |                                                     |
-|           GetBucketRequestPayment           |   No    |                                   No                                    |      Planned support status needs verification      |
-|              GetBucketTagging               |   No    |                          We could support this                          |                                                     |
-|             GetBucketVersioning             |   No    |         Planned. See https://github.com/storj/roadmap/issues/23         |                                                     |
-|              GetBucketWebsite               |   No    |                                   No                                    |                                                     |
-|                  GetObject                  | Partial |                                                                         | We need to add support for the partNumber parameter |
-|                GetObjectAcl                 |   No    |                                   No                                    |                                                     |
-|             GetObjectLegalHold              |   No    |                                   No                                    |                                                     |
-|         GetObjectLockConfiguration          |   No    |                                   No                                    |                                                     |
-|             GetObjectRetention              |   No    |                                   No                                    |                                                     |
-|              GetObjectTagging               |  Full   |                                                                         |  Tags can be modified outside of tagging endpoints  |
-|              GetObjectTorrent               |   No    |             With significant effort, we could support this              |                                                     |
-|            GetPublicAccessBlock             |   No    |                                   No                                    |                                                     |
-|                 HeadBucket                  |  Full   |                                                                         |                                                     |
-|                 HeadObject                  |  Full   |                                                                         |                                                     |
-|      ListBucketAnalyticsConfigurations      |   No    |                                   No                                    |                                                     |
-| ListBucketIntelligentTieringConfigurations  |   No    |                                   No                                    |                                                     |
-|      ListBucketInventoryConfigurations      |   No    |                                   No                                    |                                                     |
-|       ListBucketMetricsConfigurations       |   No    |                                   No                                    |                                                     |
-|                 ListBuckets                 |  Full   |                                                                         |                                                     |
-|            ListMultipartUploads             | Partial |          We may support lexicographical ordering in the future          |          See ListMultipartUploads section           |
-|             ListObjectVersions              |   No    |         Planned. See https://github.com/storj/roadmap/issues/23         |                                                     |
-|                 ListObjects                 | Partial |          We may support lexicographical ordering in the future          |               See ListObjects section               |
-|                ListObjectsV2                | Partial |          We may support lexicographical ordering in the future          |               See ListObjects section               |
-|                  ListParts                  |  Full   |                                                                         |                                                     |
-|      PutBucketAccelerateConfiguration       |   No    |                                   No                                    |                                                     |
-|                PutBucketAcl                 |   No    |                                   No                                    |                                                     |
-|       PutBucketAnalyticsConfiguration       |   No    |                                   No                                    |                                                     |
-|                PutBucketCors                |   No    |                                   No                                    |                                                     |
-|             PutBucketEncryption             |   No    |                                   No                                    |                                                     |
-|  PutBucketIntelligentTieringConfiguration   |   No    |                                   No                                    |                                                     |
-|       PutBucketInventoryConfiguration       |   No    |                                   No                                    |                                                     |
-|       PutBucketLifecycle (deprecated)       |   No    |                                   No                                    |                                                     |
-|       PutBucketLifecycleConfiguration       |   No    |                                   No                                    |                                                     |
-|              PutBucketLogging               |   No    |                                   No                                    |                                                     |
-|        PutBucketMetricsConfiguration        |   No    |                                   No                                    |                                                     |
-|     PutBucketNotification (deprecated)      |   No    |                                   No                                    |                                                     |
-|     PutBucketNotificationConfiguration      |   No    |                                   No                                    |                                                     |
-|         PutBucketOwnershipControls          |   No    |                                   No                                    |                                                     |
-|               PutBucketPolicy               |   No    |                                   No                                    |                                                     |
-|            PutBucketReplication             |   No    |                                   No                                    |                                                     |
-|           PutBucketRequestPayment           |   No    |                                   No                                    |      Planned support status needs verification      |
-|              PutBucketTagging               |   No    |                          We could support this                          |                                                     |
-|             PutBucketVersioning             |   No    |         Planned. See https://github.com/storj/roadmap/issues/23         |                                                     |
-|              PutBucketWebsite               |   No    |                                   No                                    |                                                     |
-|                  PutObject                  |  Full   |                                                                         |                                                     |
-|                PutObjectAcl                 |   No    |                                   No                                    |                                                     |
-|             PutObjectLegalHold              |   No    |                                   No                                    |                                                     |
-|         PutObjectLockConfiguration          |   No    |                                   No                                    |                                                     |
-|             PutObjectRetention              |   No    |                                   No                                    |                                                     |
-|              PutObjectTagging               |  Full   |                                                                         |  Tags can be modified outside of tagging endpoints  |
-|            PutPublicAccessBlock             |   No    |                                   No                                    |                                                     |
-|                RestoreObject                |   No    |                                   No                                    |                                                     |
-|             SelectObjectContent             |   No    |                                   No                                    |                                                     |
-|                 UploadPart                  |  Full   |                                                                         |                                                     |
-|               UploadPartCopy                |   No    | Partial support planned. See https://github.com/storj/roadmap/issues/76 |                                                     |
-|           WriteGetObjectResponse            |   No    |                                   No                                    |                                                     |
+| Name | Support | Caveats |
+|---|---|---|
+| AbortMultipartUpload | Full |  |
+| CompleteMultipartUpload | Full |  |
+| CopyObject | Full |  |
+| CreateBucket | Full |  |
+| CreateMultipartUpload | Full |  |
+| DeleteBucket | Full |  |
+| DeleteBucketAnalyticsConfiguration | No |  |
+| DeleteBucketCors | No |  |
+| DeleteBucketEncryption | No |  |
+| DeleteBucketIntelligentTieringConfiguration | No |  |
+| DeleteBucketInventoryConfiguration | No |  |
+| DeleteBucketLifecycle | No |  |
+| DeleteBucketMetricsConfiguration | No |  |
+| DeleteBucketOwnershipControls | No |  |
+| DeleteBucketPolicy | No |  |
+| DeleteBucketReplication | No |  |
+| DeleteBucketTagging | No |  |
+| DeleteBucketWebsite | No |  |
+| DeleteObject | Full |  |
+| DeleteObjectTagging | Full | Tags can be modified outside of tagging endpoints |
+| DeleteObjects | Full |  |
+| DeletePublicAccessBlock | No |  |
+| GetBucketAccelerateConfiguration | No |  |
+| GetBucketAcl | No |  |
+| GetBucketAnalyticsConfiguration | No |  |
+| GetBucketCors | No |  |
+| GetBucketEncryption | No |  |
+| GetBucketIntelligentTieringConfiguration | No |  |
+| GetBucketInventoryConfiguration | No |  |
+| GetBucketLifecycle (deprecated) | No |  |
+| GetBucketLifecycleConfiguration | No |  |
+| GetBucketLocation | Full | See GetBucketLocation section |
+| GetBucketLogging | No |  |
+| GetBucketMetricsConfiguration | No |  |
+| GetBucketNotification (deprecated) | No |  |
+| GetBucketNotificationConfiguration | No |  |
+| GetBucketOwnershipControls | No |  |
+| GetBucketPolicy | Partial | Only in Gateway-ST with --website |
+| GetBucketPolicyStatus | No | Currently, it always returns false |
+| GetBucketReplication | No |  |
+| GetBucketRequestPayment | No | Planned support status needs verification |
+| GetBucketTagging | No |  |
+| GetBucketVersioning | Yes (Beta) |  |
+| GetBucketWebsite | No |  |
+| GetObject | Partial | We need to add support for the partNumber parameter |
+| GetObjectAcl | No |  |
+| GetObjectLegalHold | No |  |
+| GetObjectLockConfiguration | No |  |
+| GetObjectRetention | No |  |
+| GetObjectTagging | Full | Tags can be modified outside of tagging endpoints |
+| GetObjectTorrent | No |  |
+| GetPublicAccessBlock | No |  |
+| HeadBucket | Full |  |
+| HeadObject | Full |  |
+| ListBucketAnalyticsConfigurations | No |  |
+| ListBucketIntelligentTieringConfigurations | No |  |
+| ListBucketInventoryConfigurations | No |  |
+| ListBucketMetricsConfigurations | No |  |
+| ListBuckets | Full |  |
+| ListMultipartUploads | Partial | See ListMultipartUploads section |
+| ListObjectVersions | Yes (Beta) |  |
+| ListObjects | Partial | See ListObjects section |
+| ListObjectsV2 | Partial | See ListObjects section |
+| ListParts | Full |  |
+| PutBucketAccelerateConfiguration | No |  |
+| PutBucketAcl | No |  |
+| PutBucketAnalyticsConfiguration | No |  |
+| PutBucketCors | No |  |
+| PutBucketEncryption | No |  |
+| PutBucketIntelligentTieringConfiguration | No |  |
+| PutBucketInventoryConfiguration | No |  |
+| PutBucketLifecycle (deprecated) | No |  |
+| PutBucketLifecycleConfiguration | No |  |
+| PutBucketLogging | No |  |
+| PutBucketMetricsConfiguration | No |  |
+| PutBucketNotification (deprecated) | No |  |
+| PutBucketNotificationConfiguration | No |  |
+| PutBucketOwnershipControls | No |  |
+| PutBucketPolicy | No |  |
+| PutBucketReplication | No |  |
+| PutBucketRequestPayment | No | Planned support status needs verification |
+| PutBucketTagging | No |  |
+| PutBucketVersioning | Yes (Beta) |  |
+| PutBucketWebsite | No |  |
+| PutObject | Full |  |
+| PutObjectAcl | No |  |
+| PutObjectLegalHold | No |  |
+| PutObjectLockConfiguration | No |  |
+| PutObjectRetention | No |  |
+| PutObjectTagging | Full | Tags can be modified outside of tagging endpoints |
+| PutPublicAccessBlock | No |  |
+| RestoreObject | No |  |
+| SelectObjectContent | No |  |
+| UploadPart | Full |  |
+| UploadPartCopy | No |  |
+| WriteGetObjectResponse | No |  |
 
 ## Compatibility Table Support/Caveats
 

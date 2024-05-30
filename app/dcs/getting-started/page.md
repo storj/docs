@@ -175,14 +175,10 @@ Copy the file to your bucket.
 {% tabs %}
 {% tab label="rclone" %}
 
-{% callout type="info"  %}
-Using `--disable-http2` with rclone for Storj is recommended for increased transfer speeds by avoiding HTTP/2 specific issues.
-{% /callout %}
-
 ```shell {% title="rclone" %}
 # link[8:11] https://rclone.org/commands/rclone_copy/
 # terminal
-rclone copy --disable-http2 ~/Downloads/storj-tree.png storj:my-bucket/
+rclone copy ~/Downloads/storj-tree.png storj:my-bucket/
 ```
 
 {% /tab %}
@@ -208,14 +204,10 @@ To retrieve the file, use the same command as upload but reverse the order of th
 {% tabs %}
 {% tab label="rclone" %}
 
-{% callout type="info"  %}
-Using `--disable-http2` with rclone for Storj is recommended for increased transfer speeds by avoiding HTTP/2 specific issues.
-{% /callout %}
-
 ```shell {% title="rclone" %}
 # terminal
 # link[8:11] https://rclone.org/commands/rclone_copy/
-rclone copy --disable-http2 storj:my-bucket/ ~/Downloads/storj-tree-2.png
+rclone copy storj:my-bucket/ ~/Downloads/storj-tree-2.png
 ```
 
 {% /tab %}

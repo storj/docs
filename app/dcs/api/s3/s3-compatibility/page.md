@@ -220,8 +220,7 @@ $ aws --profile storj --endpoint-url https://gateway.storjshare.io s3 cp 6TiB_fi
 
 It's possible to specify TTL for the object by sending the
 
-- `X-Amz-Meta-Object-Expires` or
-- `X-Minio-Meta-Object-Expires`
+- `X-Amz-Meta-Object-Expires`
 
 header (note: S3-compatible clients usually add the `X-Amz-Meta-` /
 `X-Minio-Meta-` prefix themselves) with one of the following values:

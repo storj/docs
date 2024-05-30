@@ -40,7 +40,7 @@ Visit <https://rclone.org/install/> for instructions on how to install rclone.
 
 Before using rclone, we'll need to create `keyID` and `applicationKey` for Backblaze and an access grant for Storj.
 
-{% callout type="warning" %} Creation of a new pair of `keyID` and `applicationKey` would create an another owner. So, if you plan to relink a HyperBackup to the bucket on Storj after migration, you need to use the same pair of `keyID` and `applicationKey`, as used by HyperBackup, otherwise the owner will be different and HyperBackup will not allow you to select the Storj bucket for relinking. {% /callout %}
+{% callout type="warning" %} Creation of a new pair of `keyID` and `applicationKey` on Backblaze would create an another owner. So, if you plan to relink a HyperBackup, for example, with a bucket on Storj after migration, you need to use the same pair of `keyID` and `applicationKey`, as used by HyperBackup, otherwise the owner will be different and HyperBackup will not allow you to select the Storj bucket to relink. {% /callout %}
 
 ### Backblaze Account and Key
 

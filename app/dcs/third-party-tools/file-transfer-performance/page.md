@@ -42,7 +42,7 @@ So, for the purposes of demonstrating uploads and downloads for many smaller fil
 
 When working with small and medium-sized files, the optimal parallelism is limited by the segment, or "chunk", size. With [](docId:WayQo-4CZXkITaHiGeQF_), this segmentation is referred to as "concurrency." So, for example, a 1GB file would be optimally uploaded to Storj with the following command:
 
-```Text
+```bash
 rclone copy --progress --s3-upload-concurrency 16 --s3-chunk-size 64M 1gb.zip remote:bucket
 ```
 
@@ -60,7 +60,7 @@ For example, a 10GB file could theoretically be transferred with 160 concurrency
 
 Rclone also offers the advantage of being able to transfer multiple files in parallel with the `--transfers` flag. For example, multiple 1GB files could be transferred simultaneously with this command, modified from the single file example above:
 
-```Text
+```bash
 rclone copy --progress --transfers 4 --s3-upload-concurrency 16 --s3-chunk-size 64M 1gb.zip remote:bucket
 ```
 
@@ -72,7 +72,7 @@ The relationship of constant chunk size to variable file size is the determining
 
 The same basic mathematical calculations for uploads are also relevant for downloads. However, since the Uplink CLI supports parallelism with downloads, it is often the better choice for performance. This can be achieved using the `--parallelism` flag, as shown below:
 
-```Text
+```bash
 uplink cp sj://bucket/bighugefile.zip ~/Downloads/bighugefile.zip --parallelism 4
 ```
 
@@ -82,7 +82,7 @@ Because Uplink bypasses the Storj edge network layer, this is the best option fo
 
 With small files, [](docId:Mk51zylAE6xmqP7jUYAuX) is still the best option to use for downloads as well. This is again thanks to the `--transfers` flag that allows Rclone to download multiple files in parallel, taking advantage of concurrency even when files are smaller than the Storj segment size. To download 10 small files at once with Rclone, the command would be:
 
-```Text
+```bash
 rclone copy --progress --transfers 10 remote:bucket /tmp
 ```
 

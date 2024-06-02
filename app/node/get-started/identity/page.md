@@ -153,10 +153,12 @@ identity authorize storagenode <email:characterstring>
 {% /tab %}
 
 {% tab label="Windows" %}
+Powershell:
 
 ```powershell
 ./identity.exe authorize storagenode <email:characterstring>
 ```
+Command Prompt:
 
 ```shell
 identity.exe authorize storagenode <email:characterstring>
@@ -191,6 +193,8 @@ grep -c BEGIN ~/.local/share/storj/identity/storagenode/identity.cert
 {% /tab %}
 
 {% tab label="Windows" %}
+
+Powershell:
 
 ```powershell
 (sls BEGIN "$env:AppData\Storj\Identity\storagenode\ca.cert").count

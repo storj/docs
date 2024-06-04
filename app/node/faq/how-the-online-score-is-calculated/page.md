@@ -15,4 +15,10 @@ So in one 12-hour window, if a storage node gets 1 offline audit and 10 total au
 
 The `online_score` is reported back to nodes not immediately but with some delay (up to 12 hours), so it may not drop until long after the downtime happened.
 
+You may see a [graphical explanation](https://forum.storj.io/t/online-score-not-updating-2-weeks/26444/9?u=alexey) on the forum:
+
+![](https://link.storjshare.io/raw/jvgdmqtyhgztaeyejjekh5dcywha/docs/images/34de4ae4675ad987b387f29be4342033e9b606bf.jpeg)
+
+You may use [these scripts](https://forum.storj.io/t/my-uptime-should-be-100-on-all-satellites-i-have-not-gotten-any-uptime-robot-notifications-of-downtime-in-months/14694/2?u=alexey) to find out when your node was offline.
+
 For a more detailed description of the downtime tracking calculations, please refer to this [blueprint](https://github.com/storj/storj/blob/c2a97aeb143791dd7edd8bea5bb43558a95b57de/docs/blueprints/storage-node-downtime-tracking-with-audits.md).

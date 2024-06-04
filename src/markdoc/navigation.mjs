@@ -170,13 +170,13 @@ export default function (nextConfig = {}) {
             let dir = path.resolve('./app')
             this.addContextDependency(dir)
 
-            let dcs = walkDir(`${dir}/dcs`, 'dcs')
+            let dcs = walkDir(`${dir}/\(docs\)/dcs`, 'dcs')
             sortByWeightThenTitle(dcs)
-            let node = walkDir(`${dir}/node`, 'node')
+            let node = walkDir(`${dir}/\(docs\)/node`, 'node')
             sortByWeightThenTitle(node)
-            let learn = walkDir(`${dir}/learn`, 'learn')
+            let learn = walkDir(`${dir}/\(docs\)/learn`, 'learn')
             sortByWeightThenTitle(learn)
-            let support = walkDir(`${dir}/support`, 'support')
+            let support = walkDir(`${dir}/\(docs\)/support`, 'support')
             sortByWeightThenTitle(support)
 
             let getRedirects = (space) => {

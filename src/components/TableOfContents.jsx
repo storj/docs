@@ -50,7 +50,7 @@ function useTableOfContents(tableOfContents) {
   return currentSection
 }
 
-export default function TableOfContents({ tableOfContents }) {
+export default function TableOfContents({ tableOfContents, routeGroup }) {
   const pathname = usePathname()
   let currentSection = useTableOfContents(tableOfContents)
 
@@ -120,7 +120,7 @@ export default function TableOfContents({ tableOfContents }) {
         target="_blank"
         rel="noreferrer"
         className="text-sm text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-        href={`${GITHUB_EDIT_URL}${pathname}/page.md`}
+        href={`${GITHUB_EDIT_URL}/${routeGroup}${pathname}/page.md`}
       >
         Edit this page on GitHub →
       </a>

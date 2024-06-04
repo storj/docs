@@ -79,7 +79,10 @@ export default function DocsLayout({
         </div>
       </main>
       <div className="hidden px-8 xl:sticky xl:top-[6rem] xl:block xl:h-[calc(100vh-6rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-14">
-        <TableOfContents tableOfContents={tableOfContents} />
+        <TableOfContents
+          tableOfContents={tableOfContents}
+          routeGroup="(docs)"
+        />
       </div>
     </>
   )

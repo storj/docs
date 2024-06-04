@@ -13,6 +13,7 @@ const nextConfig = {
   distDir: 'dist',
   env: {
     SITE_URL: 'https://docs.storj.io',
+    NEXT_PUBLIC_SITE_URL: 'https://docs.storj.io',
   },
   experimental: {
     scrollRestoration: true,

@@ -20,8 +20,8 @@ export function Tabs({ labels, children }) {
                   'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
                   'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
                   selected
-                    ? 'bg-white dark:bg-white/[0.85] shadow'
-                    : 'text-white hover:bg-white/[0.6] dark:hover:bg-white/[0.12] dark:text-white dark:hover:text-white'
+                    ? 'bg-white shadow dark:bg-white/[0.85]'
+                    : 'text-white hover:bg-white/[0.6] dark:text-white dark:hover:bg-white/[0.12] dark:hover:text-white'
                 )
               }
             >
@@ -29,7 +29,9 @@ export function Tabs({ labels, children }) {
             </HeadlessTab>
           ))}
         </HeadlessTab.List>
-        <HeadlessTab.Panels className="mt-3 bg-slate-100 dark:bg-slate-900 rounded-xl">{children}</HeadlessTab.Panels>
+        <HeadlessTab.Panels className="mt-3 rounded-xl bg-slate-100 dark:bg-slate-900">
+          {children}
+        </HeadlessTab.Panels>
       </HeadlessTab.Group>
       {/* <div className="flex flex-auto items-center rounded-tl border border-l-0 border-slate-500/30 bg-slate-700/50"></div> */}
     </div>

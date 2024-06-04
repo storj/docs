@@ -18,17 +18,12 @@ function TrafficLightsIcon(props) {
 
 export function Hero({ className }) {
   return (
-    <div
-      className={clsx(
-        'overflow-hidden',
-        className
-      )}
-    >
+    <div className={clsx('overflow-hidden', className)}>
       <div className="py-16 sm:px-2 lg:relative lg:px-0 lg:py-20">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 lg:max-w-8xl lg:grid-cols-2 lg:px-8 xl:gap-x-16 xl:px-12">
           <div className="relative z-10 md:text-center lg:text-left">
             <div className="relative">
-              <h1 className="inline font-semibold text-3xl tracking-tight">
+              <h1 className="inline text-3xl font-semibold tracking-tight">
                 Make the world your datacenter
               </h1>
               <p className="mt-3 text-xl tracking-tight text-slate-700 dark:text-slate-400">
@@ -42,7 +37,7 @@ export function Hero({ className }) {
           </div>
           <div className="relative lg:static xl:pl-10">
             <div className="absolute inset-x-[-50vw] -bottom-32 -top-32 [mask-image:linear-gradient(white,transparent)] md:[mask-image:linear-gradient(white,white,transparent)] lg:[mask-image:linear-gradient(white,transparent,white)]">
-              <HeroBackground className="dark:opacity-20 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-[-60%]" />
+              <HeroBackground className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 dark:opacity-20 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-[-60%]" />
             </div>
             <div className="relative">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10 blur-lg" />

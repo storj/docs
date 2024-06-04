@@ -81,3 +81,7 @@ Ensure you include the trailing `.` at the end of your CNAME if your DNS provide
 {% callout type="info"  %}
 For more detailed information, refer to [Bunny's documentation for integrating Bunny CDN with Cloudflare](https://support.bunny.net/hc/en-us/articles/360001631951-How-to-set-up-BunnyCDN-with-a-custom-hostname-on-CloudFlare)
 {% /callout %}
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes

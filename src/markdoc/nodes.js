@@ -44,6 +44,15 @@ const nodes = {
     render: MarkdownLayout,
     async transform(node, config) {
       documentSlugifyMap.set(config, slugifyWithCounter())
+      let frontmatter = yaml.load(node.attributes.frontmatter)
+
+      if (frontmatter.layout === 'blog') {
+        return new Tag(
+          'Blog',
+          { frontmatter, ast: node },
+          await node.transformChildren(config)
+        )
+      }
 
       return new Tag(
         this.render,

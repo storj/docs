@@ -35,6 +35,7 @@ module.exports = {
         'only-content': 'auto',
         'sidebar-content': '20rem auto',
         'sidebar-content-toc': '20rem auto 20rem',
+        'content-toc': 'auto 20rem',
       },
       colors: {
         'storj-blue': {

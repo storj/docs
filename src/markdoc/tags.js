@@ -8,8 +8,12 @@ import { TagLinks } from '@/components/TagLinks'
 import PartnerIntegration from '@/components/PartnerIntegration'
 import YouTubeEmbed from '@/components/YouTubeEmbed'
 import { RegistrationToken } from '@/components/RegistrationToken'
+import BlogLayout from '@/components/BlogLayout'
 
 const tags = {
+  blog: {
+    render: BlogLayout,
+  },
   callout: {
     attributes: {
       title: { type: String },

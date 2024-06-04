@@ -18,30 +18,30 @@ Practical step-by-step guides to help you achieve a specific goal. Most useful w
 
 ## Backups
 
-{% tag-links tag="backup" directory="./app/dcs/third-party-tools" %}
+{% tag-links tag="backup" directory="./app/(docs)/dcs/third-party-tools" %}
 {% /tag-links %}
 
 ## Large Files
 
-{% tag-links tag="large-file" directory="./app/dcs/third-party-tools" %}
+{% tag-links tag="large-file" directory="./app/(docs)/dcs/third-party-tools" %}
 {% /tag-links %}
 
 ## File Management
 
-{% tag-links tag="file-management" directory="./app/dcs/third-party-tools" %}
+{% tag-links tag="file-management" directory="./app/(docs)/dcs/third-party-tools" %}
 {% /tag-links %}
 
 ## Content Delivery
 
-{% tag-links tag="content-delivery" directory="./app/dcs/third-party-tools" %}
+{% tag-links tag="content-delivery" directory="./app/(docs)/dcs/third-party-tools" %}
 {% /tag-links %}
 
 ## Scientific
 
-{% tag-links tag="scientific" directory="./app/dcs/third-party-tools" %}
+{% tag-links tag="scientific" directory="./app/(docs)/dcs/third-party-tools" %}
 {% /tag-links %}
 
 ## Cloud Ops
 
-{% tag-links tag="cloud-ops" directory="./app/dcs/third-party-tools" %}
+{% tag-links tag="cloud-ops" directory="./app/(docs)/dcs/third-party-tools" %}
 {% /tag-links %}

@@ -9,19 +9,18 @@ Proceeding constitutes acceptance of our [Terms and conditions](https://www.stor
 
 ## Hardware Requirements (Recommended)
 
-✅ **One (1) processor core dedicated to each node service**
+✅ **One (1) processor core for each storage node instance**
 
 ✅ **8 TB and a maximum of 24 TB of available space per node**
 Minimum of 550 GB with no maximum of available space per node.
 
-✅ **16+ TB of unmetered bandwidth available per month; unlimited preferred**
-Minimum of 2 TB of bandwidth available per month
+✅ **1.5 TB of transit per TB of capacity; unlimited preferred**
 
-✅ **100 Mbps bandwidth upstream**
-Minimum of 5 Mbps bandwidth upstream
+✅ **3 Mbps bandwidth upload per TB of capacity (from storage node to the Internet)**
+Minimum of 1 Mbps bandwidth upload
 
-✅ **100 Mbps bandwidth downstream**
-Minimum of 25 Mbps bandwidth downstream
+✅ **5 Mbps bandwidth download per TB of capacity (from the Internet to the storage node)**
+Minimum of 3 Mbps bandwidth downstream
 
 ✅ **Uptime (online and operational) of 99.5% per month**
 Minimum uptime (online and operational) of 99.3% per month, max total downtime of 5 hours monthly

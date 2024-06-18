@@ -7,24 +7,27 @@ redirects:
 
 Proceeding constitutes acceptance of our [Terms and conditions](https://www.storj.io/legal/supplier-terms-conditions). Please read carefully before continuing.
 
-## Hardware Requirements (Recommended)
+## Hardware and Network Requirements
 
-✅ **One (1) processor core dedicated to each node service**
+### Recommended
 
-✅ **8 TB and a maximum of 24 TB of available space per node**
-Minimum of 550 GB with no maximum of available space per node.
+* One processor core for each storage node process
+* One hard drive (JBOD) per storage node process
+* 2 TB of available space per storage node process
+* 1.5 TB of transit per TB of storage node capacity; unlimited preferred
+* 3 Mbps upload bandwidth per TB of capacity
+* 5 Mbps download bandwidth per TB of capacity
+* Uptime (online and operational) of 99.5% per month
 
-✅ **16+ TB of unmetered bandwidth available per month; unlimited preferred**
-Minimum of 2 TB of bandwidth available per month
+### Minimum
 
-✅ **100 Mbps bandwidth upstream**
-Minimum of 5 Mbps bandwidth upstream
-
-✅ **100 Mbps bandwidth downstream**
-Minimum of 25 Mbps bandwidth downstream
-
-✅ **Uptime (online and operational) of 99.5% per month**
-Minimum uptime (online and operational) of 99.3% per month, max total downtime of 5 hours monthly
+* One processor core for each storage node process
+* One hard drive (JBOD) per storage node process
+* 500 GB of available space per storage node process
+* 1.5 TB of transit per TB of storage node capacity
+* 1 Mbps upload bandwidth per TB of capacity
+* 3 Mbps download bandwidth per TB of capacity
+* Uptime (online and operational) of 99.3% per month, max total downtime of 5 hours monthly
 
 ## System Requirements
 

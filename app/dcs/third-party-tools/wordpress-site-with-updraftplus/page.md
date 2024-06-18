@@ -66,9 +66,9 @@ Now that we have finished generating the Gateway MT credentials, let´s go back 
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/W-rtITn3IuYXGg8cRvscU_wordpress10.png)
 
-4\. Specify your **Access Key** from your GatewayMT credentials in the **S3 access key** field, your **Access Secret Key** from the GatewayMT credentials in the **S3 secret key** field, **Endpoint** from the GatewayMT credentials in the **S3 end-point** field (without `https://`), and your bucket access style in the **S3 location** field. Then click the **Test S3 settings** button below. If everything was specified correctly, you should see a successful message like this:
+4\. Specify your **Access Key** from your GatewayMT credentials in the **S3 access key** field, your **Access Secret Key** from the GatewayMT credentials in the **S3 secret key** field, **Endpoint** from the GatewayMT credentials in the **S3 end-point** field, and your bucket in the **S3 location** field, select `Path style` in the **Bucket access style** and `Sigv4` as a **Signature version**. Then click the **Test S3-Compatible (Generic) Settings** button below. If everything was specified correctly, you should see a successful message like this:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/kLAqW-KxvOGBG3l96mVe2_wordpress11.png)
+![](https://link.storjshare.io/raw/jw5zdliczgr7hwpyuulfqmjge2qa/docs/images/wordpress-UpdraftPlus-2024.png)
 
 5\. Please save the **UpdraftPlus** plugin settings with the **Save changes** button at the bottom of the page.
 

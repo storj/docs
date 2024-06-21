@@ -13,8 +13,8 @@ Storj is currently developing S3 Compatible Object Lock. As part of that develop
 
 ### FAQ
 - **When will Object Lock be in Beta? When will it be fully released?**
-	- We expect to begin an open beta of Object Lock sometime in July or August 2024.
-	- We tentatively plan to add Governance Mode and Legal Hold to the beta sometime in Q4, with the goal of rolling out Object Lock fully by the end of the year.
+	- We expect to begin an open beta of Object Lock in Q3 of calendar year 2024.
+	- We tentatively plan to add Governance Mode and Legal Hold to the beta in Q3 of calendar year 2024, with the goal of rolling out Object Lock fully by the end of calendar year 2024.
 - **Why would I test this Alpha version?**
 	- We used this particular Alpha version to do our own validation against key tools that implement S3's Object Lock, for example, Veeam.
 	- If your product or an integration uses Object Lock, you can use this Alpha to validate compatibility before we get into Beta.

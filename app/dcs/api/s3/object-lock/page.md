@@ -1,23 +1,30 @@
 ---
-title: Object Lock (Tech Preview)
+title: Object Lock (Technical Preview)
 docId: gjrGzPNnhpYrAGTTAUaj
 metadata:
   description: Detailed guide on the technical preview of object lock
-  title: 'Object Lock (Tech Preview)'
+  title: 'Object Lock (Technical Preview)'
 ---
+{% callout type="info" %}
+**Technical Preview Service Release**
+
+S3 Compatible Object Lock is in early development with restricted availability to invited customers for the purpose of testing or validating compatibility. Please refer to our [Terms of Service](https://www.storj.io/legal/terms-of-service) for more information on release definitions.
+{% /callout %}
 
 ## Summary
 
 ### Overview
-Storj is currently developing S3 Compatible Object Lock. As part of that development, we have an early version of the API that can be used to test compatibility. Note that any testing will not be representative of real-world performance, and there is no value in testing anything outside the correctness of the implementation.
+Storj is currently developing S3 Compatible Object Lock. As part of that development, we have an early Technical Preview Service Release that can be used to test compatibility. Note that any testing will not be representative of real-world performance, and there is no value in testing anything outside the correctness of the implementation.
 
 ### FAQ
 - **When will Object Lock be in Beta? When will it be fully released?**
 	- We expect to begin an open beta of Object Lock in Q3 of calendar year 2024.
 	- We tentatively plan to add Governance Mode and Legal Hold to the beta in Q3 of calendar year 2024, with the goal of rolling out Object Lock fully by the end of calendar year 2024.
-- **Why would I test this Alpha version?**
-	- We used this particular Alpha version to do our own validation against key tools that implement S3's Object Lock, for example, Veeam.
-	- If your product or an integration uses Object Lock, you can use this Alpha to validate compatibility before we get into Beta.
+- **Why would I test this Technical Preview?**
+	- We used this particular Technical Preview to do our own validation against key tools that implement S3's Object Lock, for example, Veeam.
+	- If your product or an integration uses Object Lock, you can use this Technical Preview to validate compatibility before we get into Beta.
+- **How do I test the Technical Preview?**
+    - We are only opening testing to select customers and partners. Feel free to indicate your interest in the upcoming beta by filling out the form below.
 - **How do I sign up to join the Beta when it arrives?**
 	- Fill out this form to be the first to know when the beta is arriving: [Sign Up Form](https://forms.gle/dkyqXjMkwQ34o7os6)
 - **Why doesn't the initial version support Governance Mode and Legal Hold?**
@@ -30,6 +37,7 @@ Storj is currently developing S3 Compatible Object Lock. As part of that develop
 
 ## Instructions
 1. Register on [https://satellite.qa.storj.io](https://satellite.qa.storj.io/)
+    1. This satellite is separate from our production satellites, so you will need to create a new account. You may use the same email you use on US1, EU1 or AP1.
 2. [Generate S3-compatible credentials](docId:AsyYcUJFbO1JI8-Tu8tW3#generate-s3-compatible-credentials)
 3. Use [https://gateway.staging.storjshare.io](https://gateway.staging.storjshare.io/) with generated credentials:
 	1. The Object Lock alpha implementation is enabled only using this specific endpoint.

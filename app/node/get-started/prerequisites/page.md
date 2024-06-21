@@ -12,7 +12,7 @@ Proceeding constitutes acceptance of our [Terms and conditions](https://www.stor
 ### Recommended
 
 * One processor core for each storage node process
-* One hard drive (JBOD) per storage node process
+* One hard drive, JBOD, per storage node process. NO SMR.
 * 2 TB of available space per storage node process
 * 1.5 TB of transit per TB of storage node capacity; unlimited preferred
 * 3 Mbps upload bandwidth per TB of capacity
@@ -22,7 +22,7 @@ Proceeding constitutes acceptance of our [Terms and conditions](https://www.stor
 ### Minimum
 
 * One processor core for each storage node process
-* One hard drive (JBOD) per storage node process
+* One hard drive, JBOD, per storage node process. NO SMR.
 * 500 GB of available space per storage node process
 * 1.5 TB of transit per TB of storage node capacity
 * 1 Mbps upload bandwidth per TB of capacity

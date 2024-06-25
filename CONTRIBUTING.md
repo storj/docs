@@ -36,7 +36,7 @@ The front matter is a section at the beginning of each Markdown file (page.md) t
 
 **title:** The title of the article or page. This is typically displayed at the top of the page.
 
-**docId:** A unique identifier for the document. This can be used for internal tracking and linking. See [Internal Linking](/CONTRIBUTING.md#internal-linking)
+**docId:** A unique identifier for the document. This can be used for internal tracking and linking. See [Internal Linking](/CONTRIBUTING.md#internal-linking). If you're making a new page, generate a new unique ID with `pwgen -1 16` or something similar. 
 
 **redirects:** A list of URLs that should redirect to this page. This is useful for maintaining links when a page's URL changes or for creating aliases for a page.
 

@@ -115,6 +115,12 @@ Setting a value higher than 64 can increase throughput backing up (offloading) t
 
 #### Specify the bucket settings
 
+{% callout type="info" %}
+**Information regarding Object Lock**
+
+S3 Compatible Object Lock is currently in development. For more information please refer to [](docId:gjrGzPNnhpYrAGTTAUaj).
+{% /callout %}
+
 1.  From the **Bucket** drop-down list, select the "veeam" bucket created earlier.
 
 1.  In the **Select Folder** field, select **Browse** and find the cloud folder in your "veeam" bucket to map your object storage repository, if it already exists. If not, you can select **New Folder** to make a new one.

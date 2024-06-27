@@ -41,7 +41,7 @@ Adding a credit card as a payment method will result in your per-project limits 
 Adding $10 or more worth of STORJ tokens to your account deposit address will automatically upgrade your account to PRO and you will also receive a bonus of 10% of the deposit amount on your balance.
 
 {% callout type="info"  %}
-Please note: The deposit address currently only accepts ERC20 STORJ token transactions on the Ethereum mainnet.
+Please note: The deposit address currently only accepts transactions with ERC20 STORJ tokens on Ethereum mainnet or zkSync Era (note that **zkSync Lite is not supported**).
 {% /callout %}
 
 ## Rationales behind limits

@@ -6,6 +6,7 @@ import { PrevNextLinks } from '@/components/PrevNextLinks'
 import clsx from 'clsx'
 import ShareButtons from '@/components/Share'
 import Bio from '@/components/bio'
+import LocalImage from '@/components/LocalImage'
 
 function getNodeText(node) {
   let text = ''
@@ -49,18 +50,24 @@ function collectHeadings(nodes, slugify = slugifyWithCounter()) {
   return sections
 }
 
-export default async function DocsLayout({ children, href, frontmatter, ast }) {
+export default async function BlogLayout({ children, href, frontmatter, ast }) {
   let tableOfContents = collectHeadings(ast.children)
   let {
     title,
     hideTitle,
     date,
     author: { name },
+    heroimage,
   } = frontmatter
   return (
     <div>
+      {heroimage && (
+        <div className="flex w-full justify-center">
+          <LocalImage src={heroimage} />
+        </div>
+      )}
       <div className="block lg:grid lg:grid-cols-content-toc">
-        <main className="isolate ml-auto min-w-0 justify-self-center px-5 pt-3.5 sm:px-12 lg:ml-[10rem] xl:ml-[20rem] xl:py-16 ">
+        <main className="isolate ml-auto min-w-0 justify-self-center px-5 pt-3.5 sm:px-12 lg:ml-[5rem] lg:max-w-3xl xl:ml-[20rem] xl:max-w-4xl xl:py-16 ">
           <div className="mx-auto max-w-7xl">
             <Prose>
               <article className="mx-auto ml-0 max-w-3xl">

@@ -87,17 +87,20 @@ function getFrontmatter(filepath) {
   }
 }
 
-function walkDir(dir, space, currentPath = '') {
-  const filepath =
-    space == 'dcs' ? dir + '/../page.md' : path.join(dir, 'page.md')
-  let fm = getFrontmatter(filepath)
-  let entry = {
-    ...fm,
-    links: [],
-    href: space == 'dcs' ? '/' : `/${space}`,
+function walkDir(dir, space, opts = { hasRoot: true }) {
+  if (opts.hasRoot) {
+    const filepath =
+      space == 'dcs' ? dir + '/../page.md' : path.join(dir, 'page.md')
+    let fm = getFrontmatter(filepath)
+    let entry = {
+      ...fm,
+      links: [],
+      href: space == 'dcs' ? '/' : `/${space}`,
+    }
+    return [entry, ...walkDirRec(dir, space, '')]
   }
 
-  return [entry, ...walkDirRec(dir, space, currentPath)]
+  return [...walkDirRec(dir, space, '')]
 }
 
 function walkDirRec(dir, space, currentPath) {
@@ -178,6 +181,10 @@ export default function (nextConfig = {}) {
             sortByWeightThenTitle(learn)
             let support = walkDir(`${dir}/\(docs\)/support`, 'support')
             sortByWeightThenTitle(support)
+            let blog = walkDir(`${dir}/\(blog\)/blog`, 'blog', {
+              hasRoot: false,
+            })
+            sortByWeightThenTitle(blog)
 
             let getRedirects = (space) => {
               let re = extractRedirects(space)
@@ -189,6 +196,7 @@ export default function (nextConfig = {}) {
               ...getRedirects(node),
               ...getRedirects(learn),
               ...getRedirects(support),
+              ...getRedirects(blog),
             ]
             let firebaseConfig = JSON.parse(
               fs.readFileSync('firebase.base.json', 'utf8')
@@ -208,6 +216,7 @@ export default function (nextConfig = {}) {
             let nodeBottomNav = extractHrefObjects(structuredClone(node))
             let learnBottomNav = extractHrefObjects(structuredClone(learn))
             let supportBottomNav = extractHrefObjects(structuredClone(support))
+            let blogBottomNav = extractHrefObjects(structuredClone(blog))
 
             // When this file is imported within the application
             // the following module is loaded:
@@ -216,12 +225,14 @@ export default function (nextConfig = {}) {
               export const nodeNavigation = ${JSON.stringify(node)}
               export const learnNavigation = ${JSON.stringify(learn)}
               export const supportNavigation = ${JSON.stringify(support)}
+              export const blogNavigation = ${JSON.stringify(blog)}
               export const dcsBottomNav = ${JSON.stringify(dcsBottomNav)}
               export const nodeBottomNav = ${JSON.stringify(nodeBottomNav)}
               export const learnBottomNav = ${JSON.stringify(learnBottomNav)}
               export const supportBottomNav = ${JSON.stringify(
                 supportBottomNav
               )}
+              export const blogBottomNav = ${JSON.stringify(blogBottomNav)}
             `
           }),
         ],

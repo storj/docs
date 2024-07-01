@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2018-09-05 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Hey everyone, we hope you were able to watch Ben Golub and Shawn Wilkinson\u2019\
     s keynote presentation at The Linux Foundation's Open Source Summit last week.\
     \ At the conference, we announced our new Open Source Partner Program! Through\
     \ this program, open-source projects can generate revenue when their..."
-  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 6
 title: Product Manager Development Update 6
 

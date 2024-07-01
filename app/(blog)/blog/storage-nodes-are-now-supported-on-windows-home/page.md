@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-10-09 00:00:00'
+heroimage: ./f732d96575e78699.jpeg
 layout: blog
 metadata:
   description: "Great news! If you\u2019re using Windows Home, you can now run a Storage\
     \ Node using our native Windows installer. The new installer includes an auto-updater\
     \ so you never have to worry about whether or not your Node is up to date and\
     \ it also includes our brand new Node Dashboard. The Node Dashboard can..."
-  heroimage: ./f732d96575e78699.jpeg
   title: Storage Nodes Are Now Supported on Windows Home
 title: Storage Nodes Are Now Supported on Windows Home
 

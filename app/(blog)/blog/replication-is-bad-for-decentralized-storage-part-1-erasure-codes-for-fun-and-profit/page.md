@@ -2,6 +2,7 @@
 author:
   name: JT Olio
 date: '2018-11-05 00:00:00'
+heroimage: ./2990137796909c31.png
 layout: blog
 metadata:
   description: "Hi! JT Olio here. We recently launched the white paper for our V3\
@@ -9,7 +10,6 @@ metadata:
     \ and are now working on for our near-term roadmap, and it\u2019s wonderful to\
     \ finally have it out!I would have loved to go into this amount of detail during\
     \ my conver..."
-  heroimage: ./2990137796909c31.png
   title: 'Replication is bad for decentralized storage, part 1: Erasure codes for
     fun and profit'
 title: 'Replication is bad for decentralized storage, part 1: Erasure codes for fun

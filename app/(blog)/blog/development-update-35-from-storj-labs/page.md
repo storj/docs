@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2020-03-27 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: Hello Storjlings! We took a little sabbatical from our normally scheduled
     bi-weekly development updates, but during that time we did a few small things.
     We launched Tardigrade into GA production! Ok, it was a BIG thing. What this means
     is that anyone can start utilizing our decentralized cloud st...
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 35 from Storj Labs
 title: Development Update 35 from Storj Labs
 

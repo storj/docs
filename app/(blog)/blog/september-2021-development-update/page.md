@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2021-09-08 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Hello Everyone! Summer is coming to an end, and we\u2019re looking\
@@ -9,7 +10,6 @@ metadata:
     \ Currently, we\u2019re hyper focused on the user experience for our Storj DCS\
     \ customers and we\u2019re continuing to focus on the performance, security, and\
     \ reliabil..."
-  heroimage: ./8855fa2f80969623.png
   title: September 2021 Development Update
 title: September 2021 Development Update
 

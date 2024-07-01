@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2018-12-14 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "All I want for Christmas is a\u2026 decentralized object storage network,\
     \ and that's not something you can find on Amazon so we are working hard to make\
     \ that happen! Our next major milestone is the Explorer release, which is scheduled\
     \ to be released in Q1 of 2019, so we have shifted our focus around e..."
-  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 13
 title: Product Manager Development Update 13
 

@@ -2,6 +2,7 @@
 author:
   name: Bill Thorp
 date: '2023-03-20 00:00:00'
+heroimage: ./5197073b00a85cfc.jpeg
 layout: blog
 metadata:
   description: "Storj provides a variety of ways to access and secure your content.\
@@ -10,7 +11,6 @@ metadata:
     \ that security model to support public sharing files via the web in our Link\
     \ Sharing service. Additionally, we offer S3-compatible services, including support\
     \ for S3-style presigned URLs."
-  heroimage: ./5197073b00a85cfc.jpeg
   title: How developers can easily connect Storj to compute for presigned URLs
 title: How developers can easily connect Storj to compute for presigned URLs
 

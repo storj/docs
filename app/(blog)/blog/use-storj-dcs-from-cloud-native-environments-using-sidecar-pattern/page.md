@@ -2,6 +2,7 @@
 author:
   name: Martin Elek
 date: '2022-03-07 00:00:00'
+heroimage: ./344a9e476aa2b1ea.png
 layout: blog
 metadata:
   description: "Data stored in Storj Decentralized Cloud Storage can be accessed in\
@@ -9,7 +10,6 @@ metadata:
     \ to the nodes where the data is storedWith using S3 compatible REST API, using\
     \ an S3 gateway:Either the hosted S3 gateway, operated by Storj LabsOr with running\
     \ ..."
-  heroimage: ./344a9e476aa2b1ea.png
   title: Use Storj DCS from Cloud-native Environments Using the Sidecar Pattern
 title: Use Storj DCS from Cloud-native Environments Using the Sidecar Pattern
 

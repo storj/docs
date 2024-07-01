@@ -182,10 +182,10 @@ def handleblog(url, parsed):
         "title": str(title),
         "date": str(date),
         "author": {"name": str(author)},
+        "heroimage": str(hero_image),
         "metadata": {
           "title": str(title),
           "description": str(description),
-          "heroimage": str(hero_image),
         },
       }),
       content=content).encode("utf8"))

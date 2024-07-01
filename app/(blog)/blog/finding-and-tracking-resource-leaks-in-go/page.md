@@ -2,13 +2,13 @@
 author:
   name: Egon Elbre
 date: '2022-10-13 00:00:00'
+heroimage: ./d2d97753e00bbc80.png
 layout: blog
 metadata:
   description: Forgetting to close a file, a connection, or some other resource is
     a rather common issue in Go. Usually you can spot them with good code review practices,
     but what if you wanted to automate it and you don't have a suitable linter at
     hand?
-  heroimage: ./d2d97753e00bbc80.png
   title: Finding and Tracking Resource Leaks in Go
 title: Finding and Tracking Resource Leaks in Go
 

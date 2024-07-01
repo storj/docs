@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2019-03-06 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "We are one month into our Explorer release and that means it\u2019\
@@ -9,7 +10,6 @@ metadata:
     \ soon be releasing payments for the month of February and will send communication\
     \ directly to the SNOs when they have been completed. If you are a V3 SNO and\
     \ ..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 18 from Storj Labs
 title: Development Update 18 from Storj Labs
 

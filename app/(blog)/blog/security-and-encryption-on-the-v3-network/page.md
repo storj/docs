@@ -2,13 +2,13 @@
 author:
   name: Moby Von Briesen
 date: '2018-11-08 00:00:00'
+heroimage: ''
 layout: blog
 metadata:
   description: "Data privacy and security are very important components of the Storj\
     \ network and are primarily\_maintained through client-side encryption of file\
     \ paths, content, and metadata. By encrypting client-side, we avoid the danger\
     \ of making this data available to attackers, and anyone else who is unable t..."
-  heroimage: ''
   title: Security and Encryption on the V3 Network
 title: Security and Encryption on the V3 Network
 

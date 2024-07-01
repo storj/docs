@@ -2,13 +2,13 @@
 author:
   name: JT Olio
 date: '2018-06-15 00:00:00'
+heroimage: ''
 layout: blog
 metadata:
   description: "In our recent town hall meeting, we took a quick look at our development\
     \ team\u2019s progress towards building V3 of the Storj Labs network. We kept\
     \ it short because we realized that not everyone is interested in the fine, technical\
     \ details of the platform\u2019s inner workings. However, we know that many ..."
-  heroimage: ''
   title: "A look at Storj Labs\u2019 decentralized cloud storage architecture with\
     \ JT Olio"
 title: "A look at Storj Labs\u2019 decentralized cloud storage architecture with JT\

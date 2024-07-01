@@ -2,10 +2,10 @@
 author:
   name: Brandon Iglesias
 date: '2021-11-04 00:00:00'
+heroimage: ./3a44980925b05d58.png
 layout: blog
 metadata:
   description: "November 2021 Product Update,\_By the Product Team @Storj"
-  heroimage: ./3a44980925b05d58.png
   title: November 2021 Storj Product Update
 title: November 2021 Storj Product Update
 

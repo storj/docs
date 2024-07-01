@@ -2,13 +2,13 @@
 author:
   name: JT Olio And Brandon Iglesias
 date: '2019-08-22 00:00:00'
+heroimage: ./48d94812c2adfd37.png
 layout: blog
 metadata:
   description: "After a lot of hard work, we couldn\u2019t be happier to announce\
     \ that Pioneer Beta for the V3 network has arrived. Now that V3 is here, we\u2019\
     re also ready to launch the beta for Tardigrade decentralized cloud object storage.\
     \ So, what changes are coming with the V3 network? V3 is more scalable, performa..."
-  heroimage: ./48d94812c2adfd37.png
   title: 'Announcing Beta: Pioneer 1 V3 and Tardigrade Are Here'
 title: 'Announcing Beta: Pioneer 1 V3 and Tardigrade Are Here'
 

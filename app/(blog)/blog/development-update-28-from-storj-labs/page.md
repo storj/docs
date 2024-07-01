@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-08-30 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Hello Storjlings,\_If you haven't heard, Pioneer 1 is a go! We launched\
     \ our first beta release last week while we were at Open Source Summit in San\
     \ Diego. Open Source Summit has a special place in our hard drives because we\
     \ love being a part of the incredibly talented, and diverse open source comm..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 28 from Storj Labs
 title: Development Update 28 from Storj Labs
 

@@ -2,6 +2,7 @@
 author:
   name: JT Olio and Jeff Wending
 date: '2021-04-27 00:00:00'
+heroimage: ./e2c929baac38fe20.png
 layout: blog
 metadata:
   description: In 2016, Google launched gRPC, which has overall taken the systems
@@ -17,7 +18,6 @@ metadata:
     we needed from gRPC (and most likely, everything you need) in under 3000 lines
     of Go. It now powers our full network of tens of thousands of servers and countless
     clients.
-  heroimage: ./e2c929baac38fe20.png
   title: 'Introducing DRPC: Our Replacement for gRPC'
 title: 'Introducing DRPC: Our Replacement for gRPC'
 

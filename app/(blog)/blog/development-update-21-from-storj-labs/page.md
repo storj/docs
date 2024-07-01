@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-04-17 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: Vanguard has launched and we are beyond thrilled to have Uplinks operated
     by community members and partners uploading and downloading data on our network!
     If you want to get access to the Vanguard release, make sure to sign up on the
     waitlist. If you were unable to tune into the Q1 town hall last...
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 21 from Storj Labs
 title: Development Update 21 from Storj Labs
 

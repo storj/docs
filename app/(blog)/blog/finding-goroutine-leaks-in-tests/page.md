@@ -2,13 +2,13 @@
 author:
   name: Egon Elbre
 date: '2022-03-07 00:00:00'
+heroimage: ./c1245dac8cff160d.jpeg
 layout: blog
 metadata:
   description: 'Finding Goroutine Leaks in TestsA leaked goroutine at the end of a
     test can indicate several problems. Let''s first, take a look at the most common
     ones before tackling an approach to finding them.Problem: DeadlockFirst, we can
     have a goroutine that is blocked. As an example:func LeakySumSquares(c...'
-  heroimage: ./c1245dac8cff160d.jpeg
   title: Finding Goroutine Leaks in Tests
 title: Finding Goroutine Leaks in Tests
 

@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-04-04 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: Hey Storjlings! Next week we will hold our quarterly town hall for
     Q1 of this year. Make sure to register for the event to reserve your spot! We
     are eager to share a synopsis of what we have accomplished this year and an overview
     of our 2019 plans. Our team has been burning the midnight oil to fi...
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 20 from Storj Labs
 title: Development Update 20 from Storj Labs
 

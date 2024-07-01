@@ -2,6 +2,7 @@
 author:
   name: JT Olio
 date: '2018-10-30 00:00:00'
+heroimage: ''
 layout: blog
 metadata:
   description: "Since Storj\u2019s humble inception at the Texas Bitcoin Hackathon\
@@ -9,7 +10,6 @@ metadata:
     \ first Storj prototype won the main prize - our team has been through a lot.\
     \ Our community has exploded, we released our production network and announced\
     \ pla..."
-  heroimage: ''
   title: Introducing the Storj V3 White Paper
 title: Introducing the Storj V3 White Paper
 

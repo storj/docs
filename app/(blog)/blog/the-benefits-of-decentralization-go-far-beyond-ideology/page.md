@@ -2,6 +2,7 @@
 author:
   name: Jennifer Johnson
 date: '2018-11-01 00:00:00'
+heroimage: ''
 layout: blog
 metadata:
   description: "The 1970s was an era of individualism and a decentralized internet.\
@@ -9,7 +10,6 @@ metadata:
     m looking at you, tie-dye t-shirts - decentralization is very much back in vogue,\
     \ and it\u2019s definitely not going the way of the 8-track. In a broad sense,\
     \ dece..."
-  heroimage: ''
   title: The Benefits of Decentralization Go Far Beyond Ideology
 title: The Benefits of Decentralization Go Far Beyond Ideology
 

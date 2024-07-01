@@ -2,13 +2,13 @@
 author:
   name: Moby Von Briesen
 date: '2021-11-26 00:00:00'
+heroimage: ./a3d28c91951b5f80.png
 layout: blog
 metadata:
   description: "In this post, we will compare Amazon S3 and Storj DCS across several\
     \ dimensions. Along the way, we\u2019ll touch on the performance and security\
     \ benefits distributed storage has by design, as well as the difference between\
     \ Amazon S3 and the storage tiers of Storj DCS."
-  heroimage: ./a3d28c91951b5f80.png
   title: The Complexity of Amazon S3 and the Simplicity of Decentralization
 title: The Complexity of Amazon S3 and the Simplicity of Decentralization
 

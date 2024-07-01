@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2019-07-02 00:00:00'
+heroimage: ./71dd92bdd263bc4c.jpeg
 layout: blog
 metadata:
   description: "Today we crossed another major milestone off our list on the road\
@@ -9,7 +10,6 @@ metadata:
     \ last update ahead of our Pioneer 1 (Beta), which we\u2019re planning to release\
     \ mid-July.\_Beacon is a huge milestone for several reasons. In addition to general\
     \ i..."
-  heroimage: ./71dd92bdd263bc4c.jpeg
   title: Announcing Beacon Alpha - File sharing, IP filtering, and increased performance
 title: Announcing Beacon Alpha - File sharing, IP filtering, and increased performance
 

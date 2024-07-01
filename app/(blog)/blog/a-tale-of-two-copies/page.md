@@ -2,13 +2,13 @@
 author:
   name: Jeff Wendling
 date: '2021-08-10 00:00:00'
+heroimage: ./a5d148aee871d9eb.png
 layout: blog
 metadata:
   description: It was the best of times, it was the worst of times. That's when I
     hit a performance mystery that sent me down a multi-day rabbit hole of adventure.
     I was writing some code to take some entries, append them into a fixed size in-memory
     buffer, and then flush that buffer to disk when it was full.
-  heroimage: ./a5d148aee871d9eb.png
   title: A Tale of Two Copies
 title: A Tale of Two Copies
 

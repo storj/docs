@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2019-07-18 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "As we get closer to launching Pioneer 1 (our first beta release),\
@@ -9,7 +10,6 @@ metadata:
     \ We expect we\u2019ll be launching this release in the next few weeks, so be\
     \ on the lookout. From V0.14.3 to V0.15.3 releases we had over 200 PRs get merged\
     \ into ..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 26 from Storj Labs
 title: Development Update 26 from Storj Labs
 

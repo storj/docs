@@ -2,13 +2,13 @@
 author:
   name: Simon Guindon
 date: '2019-05-30 00:00:00'
+heroimage: ./a7e04c245b685755.jpeg
 layout: blog
 metadata:
   description: "The demand for storage is growing rapidly every year, and businesses\
     \ and consumers are storing unprecedented amounts of data. IDC predicts worldwide\
     \ data will grow to 175 zettabytes by 2025, with as much data stored in the cloud\
     \ as in data centers\xB9.The Storj network introduces an economy around s..."
-  heroimage: ./a7e04c245b685755.jpeg
   title: Coordination Avoidance On The Storj Network
 title: Coordination Avoidance On The Storj Network
 

@@ -2,13 +2,13 @@
 author:
   name: Krista Spriggs And Jessica Grebenschikov
 date: '2020-08-11 00:00:00'
+heroimage: ./1f4faa49217ba74e.png
 layout: blog
 metadata:
   description: "Here at Storj Labs we just migrated our production databases from\
     \ PostgreSQL to CockroachDB. We want to share why we did this and what our experience\
     \ was.TL;DR Our experience has convinced us that CockroachDB is the best horizontally\
     \ scalable database choice in 2020.\_Why use a horizontally scalab..."
-  heroimage: ./1f4faa49217ba74e.png
   title: Choosing Cockroach DB for Horizontal Scalability
 title: Choosing Cockroach DB for Horizontal Scalability
 

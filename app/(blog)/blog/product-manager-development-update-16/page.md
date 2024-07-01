@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-02-06 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: If you haven't already heard, we launched the Explorer release! We
     are sending invitations out every day to our waitlist participants, so if you
     joined the list be on the lookout. We had an all company meeting in Atlanta mid-January
     where the entire team focused its efforts on completing the rele...
-  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 16
 title: Product Manager Development Update 16
 

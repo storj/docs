@@ -2,6 +2,7 @@
 author:
   name: Natalie Villasana
 date: '2018-12-12 00:00:00'
+heroimage: ./3a7cf88738fc1956.png
 layout: blog
 metadata:
   description: "Today we\u2019re going to learn about the Storj V3 auditing and repair\
@@ -9,7 +10,6 @@ metadata:
     \ don\u2019t! Yes it\u2019s true that auditing does the sort of drudge work of\
     \ the storage system, in that it\u2019s a continuously running process, randomly\
     \ trying to downlo..."
-  heroimage: ./3a7cf88738fc1956.png
   title: Decentralized Auditing and Repair! The Low-key Life of Data Resurrection
 title: Decentralized Auditing and Repair! The Low-key Life of Data Resurrection
 

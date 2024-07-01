@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2019-12-06 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "As we roll into the holidays our team is working hard getting our\
@@ -9,7 +10,6 @@ metadata:
     \ release and we\u2019re more excited about it than the holidays. We\u2019re still\
     \ looking for more Nodes to join ahead of our Voyager release, please sign up\
     \ o..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 33 from Storj Labs
 title: Development Update 33 from Storj Labs
 

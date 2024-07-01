@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2018-09-20 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Last week, we had our Q3 all hands meeting with the majority of our\
@@ -9,7 +10,6 @@ metadata:
     \ Labs and the energy of our team was through the roof. The theme for the week\
     \ was \u201CThe White Paper is Coming\u201D so we spent a lot of our time writing\
     \ and fi..."
-  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 7
 title: Product Manager Development Update 7
 

@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2019-05-31 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Greetings Storjlings, Our team has been making waves with everything\
@@ -9,7 +10,6 @@ metadata:
     \ in on our next major release Beacon, which will give our clients the ability\
     \ to share files with each other, among other things. As part of the Vanguard\
     \ re..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 24 from Storj Labs
 title: Development Update 24 from Storj Labs
 

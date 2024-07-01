@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2018-08-21 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "We are just one week away from the Linux Foundation\u2019s Open Source\
     \ Summit where Ben Golub and Shawn Wilkinson will be giving a keynote! They will\
     \ make some major announcements on stage so our team has been focusing on finishing\
     \ everything they need. The V3 network has made tremendous progress sinc..."
-  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 5
 title: Product Manager Development Update 5
 

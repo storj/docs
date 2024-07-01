@@ -2,11 +2,11 @@
 author:
   name: Brandon Iglesias
 date: '2021-12-08 00:00:00'
+heroimage: ./0b09f63c3c0fb3f7.png
 layout: blog
 metadata:
   description: A brief look into what our development team at Storj has been working
     on this month.
-  heroimage: ./0b09f63c3c0fb3f7.png
   title: December 2021 Storj Product Update
 title: December 2021 Storj Product Update
 

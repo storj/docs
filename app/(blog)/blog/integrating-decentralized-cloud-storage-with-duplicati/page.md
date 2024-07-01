@@ -2,6 +2,7 @@
 author:
   name: Tim Parth
 date: '2020-09-09 00:00:00'
+heroimage: ./75e382c46a1d2f4e.jpeg
 layout: blog
 metadata:
   description: "In this blog post I will share an overview of how I built the native\
@@ -9,7 +10,6 @@ metadata:
     \ to build a new back end for Duplicati\u2014although I do not know why there\
     \ should be the need for another back end next to Tardigrade. \U0001F60AFor those\
     \ who do n..."
-  heroimage: ./75e382c46a1d2f4e.jpeg
   title: Integrating Decentralized Cloud Storage with Duplicati
 title: Integrating Decentralized Cloud Storage with Duplicati
 

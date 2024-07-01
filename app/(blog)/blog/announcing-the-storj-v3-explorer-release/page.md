@@ -2,13 +2,13 @@
 author:
   name: JT Olio
 date: '2019-02-01 00:00:00'
+heroimage: ./c12f0143a9f81c8c.png
 layout: blog
 metadata:
   description: The wait is over for storage node operators! We have launched the Storj
     network V3 Explorer release, which is the alpha that allows storage node operators
     to join the network! We know many of you have been waiting to join the V3 network
     as storage node operators to start earning STORJ tokens by s...
-  heroimage: ./c12f0143a9f81c8c.png
   title: Announcing The Storj V3 Explorer Release
 title: Announcing The Storj V3 Explorer Release
 

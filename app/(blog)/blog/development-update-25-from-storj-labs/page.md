@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-06-28 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "It has been almost a month since we posted our last development update,\
     \ so strap in, this is a long one. Since our last update, we\u2019ve merged over\
     \ 250 PRs, which equates to about 30,000 lines of code added and 10,000 lines\
     \ deleted. This code is for the functionality we\u2019re building into the network..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 25 from Storj Labs
 title: Development Update 25 from Storj Labs
 

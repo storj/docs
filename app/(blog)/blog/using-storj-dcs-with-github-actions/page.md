@@ -2,13 +2,13 @@
 author:
   name: Kaloyan Raev
 date: '2021-08-31 00:00:00'
+heroimage: ./9ccdc75d22b6993e.png
 layout: blog
 metadata:
   description: GitHub Actions is their system to automate, customize, and execute
     software development workflows in the GitHub repository. This article will inform
     you how to upload files to a Storj DCS bucket from a GitHub Actions workflow.The
     Storj DCS Public Network Stats is one of the projects at Storj wher...
-  heroimage: ./9ccdc75d22b6993e.png
   title: Using Storj DCS with GitHub Actions
 title: Using Storj DCS with GitHub Actions
 

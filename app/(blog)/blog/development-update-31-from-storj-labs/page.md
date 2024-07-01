@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-11-01 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Hello Storjlings! It's finally feeling like winter, but our team is\
     \ only heating up as we get closer to our Pioneer 2 and Voyager launches. Over\
     \ the past couple of weeks, we\u2019ve been focused on finishing the final remaining\
     \ items before our Pioneer 2 release. Pioneer 2 is a major milestone because..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 31 from Storj Labs
 title: Development Update 31 from Storj Labs
 

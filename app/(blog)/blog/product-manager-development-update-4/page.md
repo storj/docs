@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2018-08-07 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Since our last development update, a lot has happened here at Storj\
     \ Labs. Two of our leaders, Ben Golub and Shawn Wilkinson, will be giving a keynote\
     \ at The Linux Foundation\u2019s Open Source Summit in Vancouver on August 29th-31st.\
     \ We have been spending a lot of time getting ready for some major ann..."
-  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 4
 title: Product Manager Development Update 4
 

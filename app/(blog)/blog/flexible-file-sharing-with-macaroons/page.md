@@ -2,13 +2,13 @@
 author:
   name: Paul Cannon
 date: '2019-05-03 00:00:00'
+heroimage: ./71499072b0db295f.jpeg
 layout: blog
 metadata:
   description: Sharing is a vital piece of any online storage system. Or, to be more
     precise, access control is a vital piece of such systems. When you store a file,
     you need to be able to designate whether other people or automated agents are
     allowed to retrieve the data, delete it, or put something else in it...
-  heroimage: ./71499072b0db295f.jpeg
   title: Flexible File Sharing With Macaroons
 title: Flexible File Sharing With Macaroons
 

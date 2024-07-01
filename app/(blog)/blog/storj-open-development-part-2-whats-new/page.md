@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2022-03-31 00:00:00'
+heroimage: ./69c628262ae22ee5.png
 layout: blog
 metadata:
   description: "In October 2021, Storj announced we were going to adopt an open development\
     \ strategy for the storage node development efforts. The goal was to enable our\
     \ community\u2014and the wider open source community\u2014to contribute to the\
     \ development of the network. We started this effort by moving all node issues..."
-  heroimage: ./69c628262ae22ee5.png
   title: Storj Open Development -Part 2
 title: Storj Open Development -Part 2
 

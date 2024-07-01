@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-03-21 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "It\u2019s the second day of spring, but here at Storj Labs we are\
     \ getting ready for the hottest summer we've ever had! Our team is on fire and\
     \ making great progress on our release roadmap. The Vanguard release is next,\
     \ so be on the lookout for more information about it. If you would like to participat..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 19 from Storj Labs
 title: Development Update 19 from Storj Labs
 

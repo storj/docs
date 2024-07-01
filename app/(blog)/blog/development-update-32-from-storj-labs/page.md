@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-11-14 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Hello Storjlings!\_We hope you are staying warm now that winter has\
     \ arrived. We were ranked #2 on Consensys Top 20 blockchain - Developer Activity\
     \ for October. Our team has been laser-focused and its showing as we finish features\
     \ for our Pioneer 2 release. The network is more stable, performant, a..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 32 from Storj Labs
 title: Development Update 32 from Storj Labs
 

@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2018-10-04 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: Development Update 8 from Storj LabsHey Storjlings! We hope everyone
     had a great summer. Even though summer has come to an end, the Storj team is still
     running HOT and making tons of progress on the V3 network. Below is a quick update
     from our engineering team.Recent development accomplishments:W...
-  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 8
 title: Product Manager Development Update 8
 

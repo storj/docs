@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2022-01-18 00:00:00'
+heroimage: ./3a44980925b05d58.png
 layout: blog
 metadata:
   description: "Hello Everyone,We hope you had a great New Year and a good bit of\
     \ downtime during the holiday season. 2021 was a big year for Storj as we launched\
     \ a brand new solution to store, stream and share data on the decentralized cloud\
     \ - \_Storj DCS! Over the year, we\u2019ve added lots of customer-requested fu..."
-  heroimage: ./3a44980925b05d58.png
   title: January 2021 Product Update
 title: January 2021 Product Update
 

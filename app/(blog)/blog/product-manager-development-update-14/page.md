@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2018-12-27 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: Happy holidays and happy New Year from the Storj family to yours! We
     are continuing to focus our efforts around the Explorer release, which is scheduled
     to be released in Q1 of 2019. We want to make sure all of our storage node operators
     are pleasantly surprised when they join the V3 network, so ...
-  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 14
 title: Product Manager Development Update 14
 

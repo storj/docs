@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-10-17 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Hello Storjlings,\_It has been just under a month since our last development\
     \ update, so strap in, we've got a lot to share! If you missed our September quarterly\
     \ town hall, don't worry, we recorded it for your viewing pleasure. We also just\
     \ announced a Storj IPFS integration that allows you to upl..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 30 from Storj Labs
 title: Development Update 30 from Storj Labs
 

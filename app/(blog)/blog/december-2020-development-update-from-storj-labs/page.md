@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2020-12-11 00:00:00'
+heroimage: ./909ca9dc52fc563a.png
 layout: blog
 metadata:
   description: "It's been a wild year for everyone around the world. As 2020 comes\
@@ -9,7 +10,6 @@ metadata:
     \ 2021. We just want to take a moment to thank our team, our users, and our community\
     \ for supporting us and still being excited about what we're doing. Here's to\
     \ a be..."
-  heroimage: ./909ca9dc52fc563a.png
   title: December 2020 Development Update from Storj Labs
 title: December 2020 Development Update from Storj Labs
 

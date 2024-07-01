@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-05-02 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: The Beacon release is within our sights! We are hitting our stride
     and continue to be listed as one of the top Ethereum projects by developer activity!
     The Beacon release will enable clients to share objects with others, and we have
     a hand full of features we need to implement to make that happen...
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 22 from Storj Labs
 title: Development Update 22 from Storj Labs
 

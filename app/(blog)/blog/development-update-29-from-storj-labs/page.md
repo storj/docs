@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-09-12 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Hello Storjlings!\_As the summer comes to an end, we've been working\
     \ hard on functionality for our next release, Pioneer 2. Pioneer 2 will contain\
     \ all of the functionality we need to launch our production service, so it\u2019\
     s a major milestone. Our town hall this quarter will be held on Wednesday, Sep..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 29 from Storj Labs
 title: Development Update 29 from Storj Labs
 

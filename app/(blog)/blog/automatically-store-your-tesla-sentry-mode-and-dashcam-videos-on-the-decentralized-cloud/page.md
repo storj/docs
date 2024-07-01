@@ -2,6 +2,7 @@
 author:
   name: Krista Spriggs
 date: '2021-06-15 00:00:00'
+heroimage: ./94ca9aa0a874a87b.png
 layout: blog
 metadata:
   description: You can automatically transfer Sentry Mode and Dashcam video clips
@@ -13,7 +14,6 @@ metadata:
     use the next day. This will also work for videos recorded in Track Mode if you
     have one of the performance models, making it easy to share any of the videos
     with your friends.
-  heroimage: ./94ca9aa0a874a87b.png
   title: Automatically Store Your Tesla Sentry Mode and Dashcam Videos on the Decentralized
     Cloud
 title: Automatically Store Your Tesla Sentry Mode and Dashcam Videos on the Decentralized

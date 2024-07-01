@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2020-06-29 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Hello Everyone! We hope you are enjoying your summer and staying safe.\
     \ As a company, we typically meet in person every quarter to fully immerse ourselves\
     \ into a specific topic or goal. Last week we had a virtual all company week where\
     \ we all participated in an internal hackathon. The theme was, \u201C..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 37 from Storj Labs
 title: Development Update 37 from Storj Labs
 

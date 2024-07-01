@@ -2,10 +2,10 @@
 author:
   name: Clement Sam
 date: '2021-10-01 00:00:00'
+heroimage: ./10fb6f750e522e1c.png
 layout: blog
 metadata:
   description: Storj Open Development Announcement
-  heroimage: ./10fb6f750e522e1c.png
   title: Storj Open Development Announcement
 title: Storj Open Development Announcement
 

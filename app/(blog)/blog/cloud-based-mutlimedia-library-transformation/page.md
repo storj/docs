@@ -2,13 +2,13 @@
 author:
   name: Dominick Marino and Josh Dougall
 date: '2022-03-03 00:00:00'
+heroimage: ./1bb0baa6b3e5f63c.png
 layout: blog
 metadata:
   description: In the modern world of entertainment, there are endless options for
     things to watch. Besides extensive lists of classic movies and TV shows, growing
     studios have contributed to a recent explosion in new popular series. These can't-miss
     titles have amassed viewerships in the millions and critical ...
-  heroimage: ./1bb0baa6b3e5f63c.png
   title: Use the Decentralized Cloud to Transform Your Multimedia Library Into Your
     Personal Netflix
 title: Use the Decentralized Cloud to Transform Your Multimedia Library Into Your

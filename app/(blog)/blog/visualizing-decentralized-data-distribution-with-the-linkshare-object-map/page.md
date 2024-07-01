@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2020-10-21 00:00:00'
+heroimage: ./6371747a59800613.jpeg
 layout: blog
 metadata:
   description: At Storj Labs we're distributed system junkies. We enjoy building highly
     distributed, ridiculously resilient software. The Storj Network is currently spread
     across over 10,000 uncorrelated endpoints, and that number is growing fast.The
     global substrate of diverse, uncorrelated endpoints across wh...
-  heroimage: ./6371747a59800613.jpeg
   title: Visualizing Decentralized Data Distribution with the Linkshare Object Map
 title: Visualizing Decentralized Data Distribution with the Linkshare Object Map
 

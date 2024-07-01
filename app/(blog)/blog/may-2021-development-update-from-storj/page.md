@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2021-05-03 00:00:00'
+heroimage: ./71d8a35b9b3f6042.png
 layout: blog
 metadata:
   description: "We\u2019ve been working hard to create product-changing features for\
     \ our customers and on April 20th, 2021 we officially launched Storj DCS; Decentralized\
     \ Cloud Storage for Developers. With this launch came a bunch of new features\
     \ you can start utilizing to build onto Storj DCS!"
-  heroimage: ./71d8a35b9b3f6042.png
   title: May 2021 Development Update from Storj
 title: May 2021 Development Update from Storj
 

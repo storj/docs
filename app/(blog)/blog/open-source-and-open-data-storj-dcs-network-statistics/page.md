@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2021-08-24 00:00:00'
+heroimage: ./20487c1035ee937f.jpeg
 layout: blog
 metadata:
   description: "We recently began publicly exposing more data about the network in\
@@ -10,7 +11,6 @@ metadata:
     \ on our new Storj DCS Public Network Statistics page. Now, if you\u2019re a non-technical\
     \ person, this may not be what you expected. Here\u2019s an explanation of why\
     \ we took this approach."
-  heroimage: ./20487c1035ee937f.jpeg
   title: 'Open Source and Open Data: Storj DCS Network Statistics'
 title: 'Open Source and Open Data: Storj DCS Network Statistics'
 

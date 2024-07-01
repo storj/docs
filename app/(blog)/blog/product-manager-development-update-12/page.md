@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2018-11-29 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: Instead of spending the week shopping for online holiday deals,  we
     have been busy making huge amounts of progress on the V3 network. Our next major
     milestone is the Explorer release, which will allow storage nodes to start joining
     the V3 alpha network. Most of our efforts have been focused aroun...
-  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 12
 title: Product Manager Development Update 12
 

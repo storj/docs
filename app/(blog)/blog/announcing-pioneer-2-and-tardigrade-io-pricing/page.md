@@ -2,6 +2,7 @@
 author:
   name: JT Olio And Brandon Iglesias
 date: '2019-11-19 00:00:00'
+heroimage: ./050b4597b2f44ed5.png
 layout: blog
 metadata:
   description: "Cloud storage prices haven\u2019t changed much in the past 5 years.\
@@ -9,7 +10,6 @@ metadata:
     \ Tardigrade Decentralized Cloud Storage Service. Since our founding, our goal\
     \ has been to achieve pricing that is half the price of centralized cloud storage\
     \ providers,..."
-  heroimage: ./050b4597b2f44ed5.png
   title: Announcing Pioneer 2 and Tardigrade.io Pricing
 title: Announcing Pioneer 2 and Tardigrade.io Pricing
 

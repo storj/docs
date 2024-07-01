@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2019-04-23 00:00:00'
+heroimage: ./0b83672fb222f6ad.jpeg
 layout: blog
 metadata:
   description: "When people first hear about how decentralized cloud storage works,\
@@ -9,7 +10,6 @@ metadata:
     \ store data on random computers around the world?\u201D  \u201CThat doesn't sound\
     \ secure\u2026. Is it?!?\u201D  \u201CIs this a real thing?\u201D Let me tell\
     \ you, it\u2019s real and it\u2019s specta..."
-  heroimage: ./0b83672fb222f6ad.jpeg
   title: What Happens When You Upload a File to a Decentralized Network
 title: What Happens When You Upload a File to a Decentralized Network
 

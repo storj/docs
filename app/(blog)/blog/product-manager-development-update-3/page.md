@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2018-07-24 00:00:00'
+heroimage: ''
 layout: blog
 metadata:
   description: We hope you are staying cool during these hot summer months, here at
     Storj we are just starting to heat up! We have continued to make great progress
     towards V3 and want to keep you in the loop on the latest updates.Recent development
     accomplishments:We created a wrapper around the object store in...
-  heroimage: ''
   title: Product Manager Development Update 3
 title: Product Manager Development Update 3
 

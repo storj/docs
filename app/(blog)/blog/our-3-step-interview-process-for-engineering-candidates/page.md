@@ -2,13 +2,13 @@
 author:
   name: JT Olio
 date: '2019-03-25 00:00:00'
+heroimage: ./14f72bac7573e10c.png
 layout: blog
 metadata:
   description: In case you hadn't heard, Storj Labs is building a decentralized cloud
     object storage service. Why would we do such a challenging thing? At a basic level,
     it's because we believe the internet can be better than it currently is and we
     see how to improve it. We believe your data is worse off being ...
-  heroimage: ./14f72bac7573e10c.png
   title: Our 3-Step Interview Process for Engineering Candidates
 title: Our 3-Step Interview Process for Engineering Candidates
 

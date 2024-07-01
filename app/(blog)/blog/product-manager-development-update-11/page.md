@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2018-11-19 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: Hey Storjlings! Now that we are in the Sputnik release (public alpha
     for developers), and our white paper has been published, we would love for the
     community to start contributing to the project. We have opened a number of GitHub
     issues for open source developers within the community to tackle, i...
-  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 11
 title: Product Manager Development Update 11
 

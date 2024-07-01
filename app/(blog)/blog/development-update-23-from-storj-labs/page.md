@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-05-16 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "We have been drinking lots of espresso and working hard to finish\
     \ the functionality needed for our next release, bacon\u2026 I mean Beacon. The\
     \ functionality in this release will allow clients to share encrypted files via\
     \ a cool technique called macaroons. As part of the Vanguard release, we are still..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 23 from Storj Labs
 title: Development Update 23 from Storj Labs
 

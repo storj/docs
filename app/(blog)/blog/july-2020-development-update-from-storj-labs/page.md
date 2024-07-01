@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2020-07-31 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "By Hello Everyone! We hope you had a great start to the summer. At\
     \ Storj Labs, we have been heating up just as much as the weather!\_ During the\
     \ month of July, our team spent a lot of time planning for the future. We want\
     \ to make our goals and roadmap are aligned with the features Storage Node Ope..."
-  heroimage: ./8855fa2f80969623.png
   title: July 2020 Development Update from Storj Labs
 title: July 2020 Development Update from Storj Labs
 

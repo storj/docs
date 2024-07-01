@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2021-09-16 00:00:00'
+heroimage: ./2c8582edba5fac76.png
 layout: blog
 metadata:
   description: "When people first hear about decentralized cloud storage, they usually\
     \ have questions about how it works and what benefits it can provide. In this\
     \ post, I\u2019ll answer some of these frequently asked questions regarding Storj\u2019\
     s Decentralized Cloud Storage (DCS) offering."
-  heroimage: ./2c8582edba5fac76.png
   title: The 10 most common questions about decentralized cloud storage
 title: The 10 most common questions about decentralized cloud storage
 

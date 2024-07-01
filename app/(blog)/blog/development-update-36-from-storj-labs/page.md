@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2020-05-01 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: We had our quarterly town hall on April 22. If you weren't able to
     attend, you can watch the video on YouTube. As with every town hall, we provided
     some great updates and this one included a live (well, it was live when it was
     recorded) demo using our Go library bindings for Tardigrade.Beyond the...
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 36 from Storj Labs
 title: Development Update 36 from Storj Labs
 

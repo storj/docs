@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2018-11-02 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Hey Storjlings! If you haven't heard yet, we\u2019ve released the\
@@ -9,7 +10,6 @@ metadata:
     \ what we are building and how it works.  Most of our time has been dedicated\
     \ to writing and publishing the white paper during the last several weeks, but\
     \ he..."
-  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 10
 title: Product Manager Development Update 10
 

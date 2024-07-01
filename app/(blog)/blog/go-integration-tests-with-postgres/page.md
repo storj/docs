@@ -2,13 +2,13 @@
 author:
   name: Egon Elbre
 date: '2023-03-20 00:00:00'
+heroimage: ./2aaa5a3adcf49612.jpeg
 layout: blog
 metadata:
   description: When writing server side projects in Go, at some point you will also
     need to test against a database. Let's take a look at different ways of using
     Postgres with different performance characteristics. The final approach shows
     how you can set up a clean database in 20ms (there are a few caveats).
-  heroimage: ./2aaa5a3adcf49612.jpeg
   title: Go Integration Tests with Postgres
 title: Go Integration Tests with Postgres
 

@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2020-11-05 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "Hello Everyone! As we head into the holiday season, our team is working\
     \ hard to finish building some special features for you. The product team also\
     \ wants to thank everyone who signed up for usertesting.com to help us test and\
     \ validate features we\u2019re building into the product and network. The num..."
-  heroimage: ./8855fa2f80969623.png
   title: November 2020 Development Update from Storj Labs
 title: November 2020 Development Update from Storj Labs
 

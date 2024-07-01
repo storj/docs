@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-08-01 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: "We\u2019re already approaching the end of summer, but things are still\
     \ heating up here at Storj Labs! We\u2019ve been on fire adding the final features\
     \ and improvements ahead of our Pioneer 1 beta launch in the next few weeks, and\
     \ iced coffee and nitro cold brew are the only two things keeping us cool.Rece..."
-  heroimage: ./8855fa2f80969623.png
   title: Development Update 27 from Storj Labs
 title: Development Update 27 from Storj Labs
 

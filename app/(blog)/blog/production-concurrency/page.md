@@ -2,12 +2,12 @@
 author:
   name: Egon Elbre
 date: '2022-07-29 00:00:00'
+heroimage: ./df0a3a1834547b61.jpeg
 layout: blog
 metadata:
   description: Concurrency is one of those things that's easy to get wrong, even with
     Go concurrency features. Let's review things you should consider while writing
     a concurrency production code.
-  heroimage: ./df0a3a1834547b61.jpeg
   title: Production Ready Go Concurrency
 title: Production Ready Go Concurrency
 

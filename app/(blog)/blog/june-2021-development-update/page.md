@@ -2,11 +2,11 @@
 author:
   name: Brandon Iglesias
 date: '2021-06-03 00:00:00'
+heroimage: ./71d8a35b9b3f6042.png
 layout: blog
 metadata:
   description: Read our June 2021 Development Update to learn what we've been up to
     here at Storj.
-  heroimage: ./71d8a35b9b3f6042.png
   title: June 2021 Development Update
 title: June 2021 Development Update
 

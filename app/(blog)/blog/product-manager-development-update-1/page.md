@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2018-06-27 00:00:00'
+heroimage: ''
 layout: blog
 metadata:
   description: Since our town hall earlier this month, our engineering team has made
     significant progress towards building V3 of the Storj network. To continue our
     goal of transparency, we will provide regular development updates to keep the
     community apprised of our progress and the milestones we meet. You can...
-  heroimage: ''
   title: Product Manager Development Update 1
 title: Product Manager Development Update 1
 

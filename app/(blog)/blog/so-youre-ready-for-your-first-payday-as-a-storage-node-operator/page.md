@@ -2,6 +2,7 @@
 author:
   name: Jennifer Johnson
 date: '2019-03-04 00:00:00'
+heroimage: ./f597592e440fac90.png
 layout: blog
 metadata:
   description: "At last, the moment you\u2019ve been waiting for. Storage node operators\
@@ -9,7 +10,6 @@ metadata:
     \ you get paid! \U0001F4B8\U0001F4B8\U0001F4B8By the time this blog post is published,\
     \ it will have been one month since we launched the V3 network Explorer release,\
     \ the public alpha for S..."
-  heroimage: ./f597592e440fac90.png
   title: "So You\u2019re Ready for Your First Payday as a Storage Node Operator"
 title: "So You\u2019re Ready for Your First Payday as a Storage Node Operator"
 

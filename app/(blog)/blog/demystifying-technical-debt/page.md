@@ -2,6 +2,7 @@
 author:
   name: Egon Elbre
 date: '2021-10-14 00:00:00'
+heroimage: ./dea5acde0e869ea5.png
 layout: blog
 metadata:
   description: "\u200D\u201CTechnical debt\u201D has been bothering me for a while.\
@@ -9,7 +10,6 @@ metadata:
     \ different design mistakes, code worsening over time, legacy codebases, and intentional\
     \ design mistakes due to time constraints. You can take a look at the list of\
     \ caus..."
-  heroimage: ./dea5acde0e869ea5.png
   title: Demystifying Technical Debt
 title: Demystifying Technical Debt
 

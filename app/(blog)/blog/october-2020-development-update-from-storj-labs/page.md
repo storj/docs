@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2020-10-01 00:00:00'
+heroimage: ./8855fa2f80969623.png
 layout: blog
 metadata:
   description: Hello Everyone! It's been two months since our last development update
     from our product team so we have a lot to share with you! The global pandemic
     has lasted longer than many of us thought and even under these circumstances it's
     amazing how much our team has been able to accomplish. We've also ...
-  heroimage: ./8855fa2f80969623.png
   title: October 2020 Development Update from Storj Labs
 title: October 2020 Development Update from Storj Labs
 

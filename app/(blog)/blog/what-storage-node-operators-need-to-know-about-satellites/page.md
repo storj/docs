@@ -2,13 +2,13 @@
 author:
   name: Jessica Grebenschikov
 date: '2019-04-26 00:00:00'
+heroimage: ./0a307b9d9d2384d3.jpeg
 layout: blog
 metadata:
   description: "The Storj network includes three main components: the storage node,\
     \ the Satellite, and the Uplink.The storage node\u2019s role is to store and return\
     \ data. The Uplink is the software or service that puts and gets data onto and\
     \ from the network. The role of Satellites is to act as the mediator between ..."
-  heroimage: ./0a307b9d9d2384d3.jpeg
   title: What Storage Node Operators Need to Know About Satellites
 title: What Storage Node Operators Need to Know About Satellites
 

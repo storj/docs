@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2019-04-10 00:00:00'
+heroimage: ./ca5800089403555a.png
 layout: blog
 metadata:
   description: The Vanguard 1 Satellite holds the record for being in space longer
     than any other man-made object. Launched by NASA in 1958, the satellite is expected
     to remain in orbit for more than 200 years into the future. Its durability and
     resilience has been the inspiration behind our Vanguard release. J...
-  heroimage: ./ca5800089403555a.png
   title: Developers and V3 Network Make First Contact with Vanguard Alpha
 title: Developers and V3 Network Make First Contact with Vanguard Alpha
 

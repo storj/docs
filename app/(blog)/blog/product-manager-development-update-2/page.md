@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2018-07-10 00:00:00'
+heroimage: ''
 layout: blog
 metadata:
   description: Since our last development update, our engineering team has completed
     several key pieces of the V3 platform. Here are some of the highlights; we hope
     you are as excited as we are about this new functionality!Recent development accomplishments:We
     finished adding pagination support to our pointer d...
-  heroimage: ''
   title: Product Manager Development Update 2
 title: Product Manager Development Update 2
 

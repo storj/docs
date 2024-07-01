@@ -2,13 +2,13 @@
 author:
   name: Brandon Iglesias
 date: '2022-02-22 00:00:00'
+heroimage: ./3a44980925b05d58.png
 layout: blog
 metadata:
   description: "We hope you are having a great start to the year!. We\u2019ve been\
     \ working hard to create new resources and communications to further elevate our\
     \ transparency with you. Part of these initiatives was creating a product roadmap\
     \ to give you and our community more insight into what our development team wi..."
-  heroimage: ./3a44980925b05d58.png
   title: February 2022 Product Update
 title: February 2022 Product Update
 

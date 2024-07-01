@@ -2,11 +2,11 @@
 author:
   name: Brandon Iglesias
 date: '2021-07-06 00:00:00'
+heroimage: ./71d8a35b9b3f6042.png
 layout: blog
 metadata:
   description: Read about what our engineering team worked on during the month of
     July and what we have planned for the coming month.
-  heroimage: ./71d8a35b9b3f6042.png
   title: July 2021 Development Update from Storj
 title: July 2021 Development Update from Storj
 

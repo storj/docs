@@ -2,6 +2,7 @@
 author:
   name: Brandon Iglesias
 date: '2021-08-02 00:00:00'
+heroimage: ./b42ec40b7e3c447d.png
 layout: blog
 metadata:
   description: We are particularly excited about August; our teams are working on
@@ -9,7 +10,6 @@ metadata:
     We want to thank everyone who participated in the surveys we recently sent out.
     Your responses and insights were very helpful as we continue to make our product
     better for our users.
-  heroimage: ./b42ec40b7e3c447d.png
   title: August 2021 Development Update from Storj
 title: August 2021 Development Update from Storj
 

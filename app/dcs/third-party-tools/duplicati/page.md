@@ -21,11 +21,7 @@ To restore a small file, Duplicati has to download the entire block it is contai
 
 ## Install
 
-{% callout type="info"  %}
-**Please note that the version used for writing this documentation is not yet released on the Duplicati homepage. Please download the canary version from** [**Duplicati Releases**](https://github.com/duplicati/duplicati/releases) **or use the canary** [docker container](https://hub.docker.com/r/duplicati/duplicati).
-{% /callout %}
-
-1.  [Download](https://github.com/duplicati/duplicati/releases) and install the Duplicati installer file for your OS or run the [docker container](https://hub.docker.com/r/duplicati/duplicati). Note **warning** above!
+1.  [Download](https://github.com/duplicati/duplicati/releases) and install the Duplicati installer file for your OS or run the [docker container](https://hub.docker.com/r/duplicati/duplicati).
 
 2.  Once installed, the software will open your browser to the local Duplicati dashboard. If not, it can be accessed at `http://localhost:8200/`
 

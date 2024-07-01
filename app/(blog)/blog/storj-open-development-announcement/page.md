@@ -5,7 +5,7 @@ date: '2021-10-01 00:00:00'
 layout: blog
 metadata:
   description: Storj Open Development Announcement
-  heroimage: /blog/storj-open-development-announcement/10fb6f750e522e1c.png
+  heroimage: ./10fb6f750e522e1c.png
   title: Storj Open Development Announcement
 title: Storj Open Development Announcement
 

@@ -8,7 +8,7 @@ metadata:
     need to test against a database. Let's take a look at different ways of using
     Postgres with different performance characteristics. The final approach shows
     how you can set up a clean database in 20ms (there are a few caveats).
-  heroimage: /blog/go-integration-tests-with-postgres/2aaa5a3adcf49612.jpeg
+  heroimage: ./2aaa5a3adcf49612.jpeg
   title: Go Integration Tests with Postgres
 title: Go Integration Tests with Postgres
 

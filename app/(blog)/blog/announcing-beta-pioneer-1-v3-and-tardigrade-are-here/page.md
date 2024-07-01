@@ -8,7 +8,7 @@ metadata:
     \ that Pioneer Beta for the V3 network has arrived. Now that V3 is here, we\u2019\
     re also ready to launch the beta for Tardigrade decentralized cloud object storage.\
     \ So, what changes are coming with the V3 network? V3 is more scalable, performa..."
-  heroimage: /blog/announcing-beta-pioneer-1-v3-and-tardigrade-are-here/48d94812c2adfd37.png
+  heroimage: ./48d94812c2adfd37.png
   title: 'Announcing Beta: Pioneer 1 V3 and Tardigrade Are Here'
 title: 'Announcing Beta: Pioneer 1 V3 and Tardigrade Are Here'
 

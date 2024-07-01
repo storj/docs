@@ -8,7 +8,7 @@ metadata:
     \ dimensions. Along the way, we\u2019ll touch on the performance and security\
     \ benefits distributed storage has by design, as well as the difference between\
     \ Amazon S3 and the storage tiers of Storj DCS."
-  heroimage: /blog/the-complexity-of-amazon-s3-and-the-simplicity-of-decentralization/a3d28c91951b5f80.png
+  heroimage: ./a3d28c91951b5f80.png
   title: The Complexity of Amazon S3 and the Simplicity of Decentralization
 title: The Complexity of Amazon S3 and the Simplicity of Decentralization
 

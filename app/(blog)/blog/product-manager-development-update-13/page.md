@@ -8,7 +8,7 @@ metadata:
     \ and that's not something you can find on Amazon so we are working hard to make\
     \ that happen! Our next major milestone is the Explorer release, which is scheduled\
     \ to be released in Q1 of 2019, so we have shifted our focus around e..."
-  heroimage: /blog/product-manager-development-update-13/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 13
 title: Product Manager Development Update 13
 

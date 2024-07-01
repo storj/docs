@@ -8,7 +8,7 @@ metadata:
     \ Summit where Ben Golub and Shawn Wilkinson will be giving a keynote! They will\
     \ make some major announcements on stage so our team has been focusing on finishing\
     \ everything they need. The V3 network has made tremendous progress sinc..."
-  heroimage: /blog/product-manager-development-update-5/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 5
 title: Product Manager Development Update 5
 

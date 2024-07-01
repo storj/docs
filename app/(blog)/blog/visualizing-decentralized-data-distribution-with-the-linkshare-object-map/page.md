@@ -8,7 +8,7 @@ metadata:
     distributed, ridiculously resilient software. The Storj Network is currently spread
     across over 10,000 uncorrelated endpoints, and that number is growing fast.The
     global substrate of diverse, uncorrelated endpoints across wh...
-  heroimage: /blog/visualizing-decentralized-data-distribution-with-the-linkshare-object-map/6371747a59800613.jpeg
+  heroimage: ./6371747a59800613.jpeg
   title: Visualizing Decentralized Data Distribution with the Linkshare Object Map
 title: Visualizing Decentralized Data Distribution with the Linkshare Object Map
 
@@ -28,7 +28,7 @@ Through this tool—which is called the Linkshare Object Map—our team and our 
 
 We set out to build the Linkshare Object Map Dashboard at the start of the two-day Storj Labs employee hackathon and quickly productized and completed the project.
 
-![](/blog/visualizing-decentralized-data-distribution-with-the-linkshare-object-map/29e62398803ba277.png)![](/blog/visualizing-decentralized-data-distribution-with-the-linkshare-object-map/47f263c59b58c3b7.jpeg)Try it out yourself by generating access for an object, and creating a link share for the URL, [like outlined in our documentation](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/view-distribution-of-an-object). This process will generate a link with a macaroon (embedded, [hash-based logic](https://storj.io/blog/2019/12/secure-access-control-in-the-decentralized-cloud/)) that controls how the object can be accessed.
+![](./29e62398803ba277.png)![](./47f263c59b58c3b7.jpeg)Try it out yourself by generating access for an object, and creating a link share for the URL, [like outlined in our documentation](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/view-distribution-of-an-object). This process will generate a link with a macaroon (embedded, [hash-based logic](https://storj.io/blog/2019/12/secure-access-control-in-the-decentralized-cloud/)) that controls how the object can be accessed.
 
 See an example of the Node map yourself, here: [Link share Object Map](https://bit.ly/31qVdyc)
 

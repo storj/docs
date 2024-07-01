@@ -9,7 +9,7 @@ metadata:
     \ soon be releasing payments for the month of February and will send communication\
     \ directly to the SNOs when they have been completed. If you are a V3 SNO and\
     \ ..."
-  heroimage: /blog/development-update-18-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 18 from Storj Labs
 title: Development Update 18 from Storj Labs
 

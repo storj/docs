@@ -10,7 +10,7 @@ metadata:
     \ on our new Storj DCS Public Network Statistics page. Now, if you\u2019re a non-technical\
     \ person, this may not be what you expected. Here\u2019s an explanation of why\
     \ we took this approach."
-  heroimage: /blog/open-source-and-open-data-storj-dcs-network-statistics/20487c1035ee937f.jpeg
+  heroimage: ./20487c1035ee937f.jpeg
   title: 'Open Source and Open Data: Storj DCS Network Statistics'
 title: 'Open Source and Open Data: Storj DCS Network Statistics'
 

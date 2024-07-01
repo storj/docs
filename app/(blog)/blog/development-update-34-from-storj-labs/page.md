@@ -8,7 +8,7 @@ metadata:
     for 2020 we could cry and scream at the same time. Our focus during the holiday
     season was finishing the final bits of functionality needed on the network ahead
     of the Tardigrade production launch. Our team has been onboarding our...
-  heroimage: /blog/development-update-34-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 34 from Storj Labs
 title: Development Update 34 from Storj Labs
 

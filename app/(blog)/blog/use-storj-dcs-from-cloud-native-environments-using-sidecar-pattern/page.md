@@ -9,7 +9,7 @@ metadata:
     \ to the nodes where the data is storedWith using S3 compatible REST API, using\
     \ an S3 gateway:Either the hosted S3 gateway, operated by Storj LabsOr with running\
     \ ..."
-  heroimage: /blog/use-storj-dcs-from-cloud-native-environments-using-sidecar-pattern/344a9e476aa2b1ea.png
+  heroimage: ./344a9e476aa2b1ea.png
   title: Use Storj DCS from Cloud-native Environments Using the Sidecar Pattern
 title: Use Storj DCS from Cloud-native Environments Using the Sidecar Pattern
 
@@ -40,19 +40,19 @@ The smallest deployable unit in Kubernetes is a pod. Pod is the definition of on
 
 As the network namespace is shared inside the pod the main container can access the features of the sidecar container.
 
-![](/blog/use-storj-dcs-from-cloud-native-environments-using-sidecar-pattern/6de1c07a519802ed.png)To follow this pattern, we should deploy a sidecar container to each of our application pods.  
+![](./6de1c07a519802ed.png)To follow this pattern, we should deploy a sidecar container to each of our application pods.  
 
 
 Instead of using the hosted, multi-tenant version of the S3 gateway:  
 
 
-![](/blog/use-storj-dcs-from-cloud-native-environments-using-sidecar-pattern/06a4d2d7af413c6a.png)  
+![](./06a4d2d7af413c6a.png)  
 
 
 We will start a single-tenant S3 gateway with each of the services:  
 
 
-![](/blog/use-storj-dcs-from-cloud-native-environments-using-sidecar-pattern/943dcd25f919a98b.png)## Getting Started
+![](./943dcd25f919a98b.png)## Getting Started
 
 Let’s start with a simple example: we will create a Jupyter notebook which reads data from a Storj bucket for following data science calculations.
 
@@ -76,7 +76,7 @@ To open the Jupyter web application we need the secret token which is printed ou
 And now we can create a new notebook where we use the Storj data:  
 
 
-![](/blog/use-storj-dcs-from-cloud-native-environments-using-sidecar-pattern/4b79f2e770056a31.png)To read data via S3 protocol, we need *boto*, the python S3 library, which can be added to the docker image or installed as a first step in the notebook:
+![](./4b79f2e770056a31.png)To read data via S3 protocol, we need *boto*, the python S3 library, which can be added to the docker image or installed as a first step in the notebook:
 
 ‍  
 Next, we can read/use files directly from Storj:
@@ -92,7 +92,7 @@ Let’s improve the previous example by using the sidecar pattern. First, we nee
   
 
 
-![](/blog/use-storj-dcs-from-cloud-native-environments-using-sidecar-pattern/c911680feffbe653.png)  
+![](./c911680feffbe653.png)  
 
 
 Let’s create a Kubernetes secret with all of these:
@@ -118,7 +118,7 @@ Note: http://localhost:7777 is the address of the single-tenant Storj gateway wh
 
 Sidecar pattern is an easy way to access our data from Storj Decentralized Cloud Storage using the power of the native protocol, even if our application is compatible only with the S3 Rest API.
 
-![](/blog/use-storj-dcs-from-cloud-native-environments-using-sidecar-pattern/e76c6da3bc2247e7.png)  
+![](./e76c6da3bc2247e7.png)  
   
   
 

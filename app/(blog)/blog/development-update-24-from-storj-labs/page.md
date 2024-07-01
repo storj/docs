@@ -9,7 +9,7 @@ metadata:
     \ in on our next major release Beacon, which will give our clients the ability\
     \ to share files with each other, among other things. As part of the Vanguard\
     \ re..."
-  heroimage: /blog/development-update-24-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 24 from Storj Labs
 title: Development Update 24 from Storj Labs
 

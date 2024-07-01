@@ -5,7 +5,7 @@ date: '2021-11-04 00:00:00'
 layout: blog
 metadata:
   description: "November 2021 Product Update,\_By the Product Team @Storj"
-  heroimage: /blog/november-2021-storj-product-update/3a44980925b05d58.png
+  heroimage: ./3a44980925b05d58.png
   title: November 2021 Storj Product Update
 title: November 2021 Storj Product Update
 

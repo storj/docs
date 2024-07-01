@@ -6,7 +6,7 @@ layout: blog
 metadata:
   description: A brief look into what our development team at Storj has been working
     on this month.
-  heroimage: /blog/december-2021-storj-product-update/0b09f63c3c0fb3f7.png
+  heroimage: ./0b09f63c3c0fb3f7.png
   title: December 2021 Storj Product Update
 title: December 2021 Storj Product Update
 

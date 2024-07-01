@@ -9,7 +9,7 @@ metadata:
     \ store data on random computers around the world?\u201D  \u201CThat doesn't sound\
     \ secure\u2026. Is it?!?\u201D  \u201CIs this a real thing?\u201D Let me tell\
     \ you, it\u2019s real and it\u2019s specta..."
-  heroimage: /blog/what-happens-when-you-upload-a-file-to-a-decentralized-network/0b83672fb222f6ad.jpeg
+  heroimage: ./0b83672fb222f6ad.jpeg
   title: What Happens When You Upload a File to a Decentralized Network
 title: What Happens When You Upload a File to a Decentralized Network
 
@@ -25,7 +25,7 @@ Let me tell you, it’s real and it’s spectacular!
 
 #### The Lifecycle of a File
 
-![](/blog/what-happens-when-you-upload-a-file-to-a-decentralized-network/666fd702bcf215bb.gif)When files are uploaded to the Storj network, the first thing that happens is the Uplink, which runs on the local machine uploading the files to the network, determines if the file is small enough to be stored as an inline segment. I will discuss the difference between inline and remote segments later in this post but for the rest of this section assume we are referring to a remote segment. The Uplink then sends an upload request to the Satellite, which includes the Uplink’s API key so that the Satellite can validate if that Uplink is authorized to upload data to the project and bucket that it requested. If there are no issues with the authorization, the Satellite then compiles some information to send back to the Uplink.
+![](./666fd702bcf215bb.gif)When files are uploaded to the Storj network, the first thing that happens is the Uplink, which runs on the local machine uploading the files to the network, determines if the file is small enough to be stored as an inline segment. I will discuss the difference between inline and remote segments later in this post but for the rest of this section assume we are referring to a remote segment. The Uplink then sends an upload request to the Satellite, which includes the Uplink’s API key so that the Satellite can validate if that Uplink is authorized to upload data to the project and bucket that it requested. If there are no issues with the authorization, the Satellite then compiles some information to send back to the Uplink.
 
 This information includes a list of storage nodes (where the data can be stored) and an order limit for the Uplink. The list of storage nodes will include nodes with varying levels of reputation, as well as the information that the Uplink needs in order to establish a connection with them such as IP/port. Check out [our blog about reputation](https://storj.io/blog/2019/01/reputation-matters-when-it-comes-to-storage-nodes/) to read more about what type of criteria determines whether a node is reliable or not, and how the network disqualifies poorly behaved nodes. The Uplink will use the order limit as proof that the Satellite authorized its uploads when the Uplink establishes connections with storage nodes. Order limits are like an empty tank that the Satellite gives the Uplink. As the Uplink uploads more data over time, that empty tank will begin to fill. Once it reaches its limit, the Uplink won't be able to upload any more, because it has reached the amount that was agreed upon with the Satellite. While this seems like a lot of back and forth, this all happens in microseconds. 
 

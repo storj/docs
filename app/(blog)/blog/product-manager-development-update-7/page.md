@@ -9,7 +9,7 @@ metadata:
     \ Labs and the energy of our team was through the roof. The theme for the week\
     \ was \u201CThe White Paper is Coming\u201D so we spent a lot of our time writing\
     \ and fi..."
-  heroimage: /blog/product-manager-development-update-7/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 7
 title: Product Manager Development Update 7
 

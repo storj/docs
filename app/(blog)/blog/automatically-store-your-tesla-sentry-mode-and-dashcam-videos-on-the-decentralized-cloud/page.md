@@ -13,7 +13,7 @@ metadata:
     use the next day. This will also work for videos recorded in Track Mode if you
     have one of the performance models, making it easy to share any of the videos
     with your friends.
-  heroimage: /blog/automatically-store-your-tesla-sentry-mode-and-dashcam-videos-on-the-decentralized-cloud/94ca9aa0a874a87b.png
+  heroimage: ./94ca9aa0a874a87b.png
   title: Automatically Store Your Tesla Sentry Mode and Dashcam Videos on the Decentralized
     Cloud
 title: Automatically Store Your Tesla Sentry Mode and Dashcam Videos on the Decentralized

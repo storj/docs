@@ -8,7 +8,7 @@ metadata:
     a rather common issue in Go. Usually you can spot them with good code review practices,
     but what if you wanted to automate it and you don't have a suitable linter at
     hand?
-  heroimage: /blog/finding-and-tracking-resource-leaks-in-go/d2d97753e00bbc80.png
+  heroimage: ./d2d97753e00bbc80.png
   title: Finding and Tracking Resource Leaks in Go
 title: Finding and Tracking Resource Leaks in Go
 

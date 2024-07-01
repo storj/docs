@@ -8,7 +8,7 @@ metadata:
     continues to grow every day! If you haven't received an invitation to become a
     V3 storage node operator, and you joined the waitlist, please be patient. We currently
     have about 10,000 people on the list. With so many new storage n...
-  heroimage: /blog/development-update-17-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 17 from Storj Labs
 title: Development Update 17 from Storj Labs
 

@@ -9,7 +9,7 @@ metadata:
     \ We expect we\u2019ll be launching this release in the next few weeks, so be\
     \ on the lookout. From V0.14.3 to V0.15.3 releases we had over 200 PRs get merged\
     \ into ..."
-  heroimage: /blog/development-update-26-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 26 from Storj Labs
 title: Development Update 26 from Storj Labs
 

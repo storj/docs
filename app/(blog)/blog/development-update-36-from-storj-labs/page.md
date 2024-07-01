@@ -8,7 +8,7 @@ metadata:
     attend, you can watch the video on YouTube. As with every town hall, we provided
     some great updates and this one included a live (well, it was live when it was
     recorded) demo using our Go library bindings for Tardigrade.Beyond the...
-  heroimage: /blog/development-update-36-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 36 from Storj Labs
 title: Development Update 36 from Storj Labs
 

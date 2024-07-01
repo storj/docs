@@ -8,7 +8,7 @@ metadata:
     \ hard to finish building some special features for you. The product team also\
     \ wants to thank everyone who signed up for usertesting.com to help us test and\
     \ validate features we\u2019re building into the product and network. The num..."
-  heroimage: /blog/november-2020-development-update-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: November 2020 Development Update from Storj Labs
 title: November 2020 Development Update from Storj Labs
 

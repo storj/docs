@@ -8,7 +8,7 @@ metadata:
     \ our customers and on April 20th, 2021 we officially launched Storj DCS; Decentralized\
     \ Cloud Storage for Developers. With this launch came a bunch of new features\
     \ you can start utilizing to build onto Storj DCS!"
-  heroimage: /blog/may-2021-development-update-from-storj/71d8a35b9b3f6042.png
+  heroimage: ./71d8a35b9b3f6042.png
   title: May 2021 Development Update from Storj
 title: May 2021 Development Update from Storj
 

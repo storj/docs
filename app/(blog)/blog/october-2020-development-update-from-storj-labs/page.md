@@ -8,7 +8,7 @@ metadata:
     from our product team so we have a lot to share with you! The global pandemic
     has lasted longer than many of us thought and even under these circumstances it's
     amazing how much our team has been able to accomplish. We've also ...
-  heroimage: /blog/october-2020-development-update-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: October 2020 Development Update from Storj Labs
 title: October 2020 Development Update from Storj Labs
 

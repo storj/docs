@@ -9,7 +9,7 @@ metadata:
     \ Tardigrade Decentralized Cloud Storage Service. Since our founding, our goal\
     \ has been to achieve pricing that is half the price of centralized cloud storage\
     \ providers,..."
-  heroimage: /blog/announcing-pioneer-2-and-tardigrade-io-pricing/050b4597b2f44ed5.png
+  heroimage: ./050b4597b2f44ed5.png
   title: Announcing Pioneer 2 and Tardigrade.io Pricing
 title: Announcing Pioneer 2 and Tardigrade.io Pricing
 

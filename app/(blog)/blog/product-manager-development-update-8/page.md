@@ -8,7 +8,7 @@ metadata:
     had a great summer. Even though summer has come to an end, the Storj team is still
     running HOT and making tons of progress on the V3 network. Below is a quick update
     from our engineering team.Recent development accomplishments:W...
-  heroimage: /blog/product-manager-development-update-8/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 8
 title: Product Manager Development Update 8
 

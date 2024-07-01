@@ -6,7 +6,7 @@ layout: blog
 metadata:
   description: Read our June 2021 Development Update to learn what we've been up to
     here at Storj.
-  heroimage: /blog/june-2021-development-update/71d8a35b9b3f6042.png
+  heroimage: ./71d8a35b9b3f6042.png
   title: June 2021 Development Update
 title: June 2021 Development Update
 

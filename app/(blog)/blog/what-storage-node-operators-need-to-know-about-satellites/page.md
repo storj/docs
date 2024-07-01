@@ -8,7 +8,7 @@ metadata:
     \ the Satellite, and the Uplink.The storage node\u2019s role is to store and return\
     \ data. The Uplink is the software or service that puts and gets data onto and\
     \ from the network. The role of Satellites is to act as the mediator between ..."
-  heroimage: /blog/what-storage-node-operators-need-to-know-about-satellites/0a307b9d9d2384d3.jpeg
+  heroimage: ./0a307b9d9d2384d3.jpeg
   title: What Storage Node Operators Need to Know About Satellites
 title: What Storage Node Operators Need to Know About Satellites
 
@@ -18,7 +18,7 @@ The Storj network includes three main components: the storage node, the Satellit
 
 The storage node’s role is to store and return data. The Uplink is the software or service that puts and gets data onto and from the network. The role of Satellites is to act as the mediator between Uplinks and storage nodes, facilitating the storage interaction, and deciding which storage nodes will store what files.
 
-![The Circle of Life on a decentralized cloud storage network](/blog/what-storage-node-operators-need-to-know-about-satellites/46d5d20f2cc7cf1f.png)The Satellite’s relationship with the storage node is an important one. The Satellite is responsible for paying the storage node for the storage and bandwidth utilized by the network. The storage node wants to store the most data it can for the network so it can make the most money and it’s heavily dependent on the Satellite for that.
+![The Circle of Life on a decentralized cloud storage network](./46d5d20f2cc7cf1f.png)The Satellite’s relationship with the storage node is an important one. The Satellite is responsible for paying the storage node for the storage and bandwidth utilized by the network. The storage node wants to store the most data it can for the network so it can make the most money and it’s heavily dependent on the Satellite for that.
 
 At beta launch, Storj will be operating all the Satellites on the network, but because the software we create is open source and the network is decentralized, in the future, anyone will be able to operate a Satellite. 
 

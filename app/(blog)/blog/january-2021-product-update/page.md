@@ -8,7 +8,7 @@ metadata:
     \ downtime during the holiday season. 2021 was a big year for Storj as we launched\
     \ a brand new solution to store, stream and share data on the decentralized cloud\
     \ - \_Storj DCS! Over the year, we\u2019ve added lots of customer-requested fu..."
-  heroimage: /blog/january-2021-product-update/3a44980925b05d58.png
+  heroimage: ./3a44980925b05d58.png
   title: January 2021 Product Update
 title: January 2021 Product Update
 

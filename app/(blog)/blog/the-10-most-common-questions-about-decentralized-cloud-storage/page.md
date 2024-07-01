@@ -8,7 +8,7 @@ metadata:
     \ have questions about how it works and what benefits it can provide. In this\
     \ post, I\u2019ll answer some of these frequently asked questions regarding Storj\u2019\
     s Decentralized Cloud Storage (DCS) offering."
-  heroimage: /blog/the-10-most-common-questions-about-decentralized-cloud-storage/2c8582edba5fac76.png
+  heroimage: ./2c8582edba5fac76.png
   title: The 10 most common questions about decentralized cloud storage
 title: The 10 most common questions about decentralized cloud storage
 

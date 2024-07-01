@@ -8,7 +8,7 @@ metadata:
     accomplished so much in just the past couple of weeks! We are still focusing the
     majority of our time and effort on the Explorer release, the public alpha for
     storage node operators. This release will be very important to the ne...
-  heroimage: /blog/product-manager-development-update-15/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 15
 title: Product Manager Development Update 15
 

@@ -8,7 +8,7 @@ metadata:
     \ strategy for the storage node development efforts. The goal was to enable our\
     \ community\u2014and the wider open source community\u2014to contribute to the\
     \ development of the network. We started this effort by moving all node issues..."
-  heroimage: /blog/storj-open-development-part-2-whats-new/69c628262ae22ee5.png
+  heroimage: ./69c628262ae22ee5.png
   title: Storj Open Development -Part 2
 title: Storj Open Development -Part 2
 
@@ -30,7 +30,7 @@ As a part of this open development initiative, before starting development the p
 
 ‍
 
-![](/blog/storj-open-development-part-2-whats-new/75072fcbffc78ed1.png)‍
+![](./75072fcbffc78ed1.png)‍
 
 Team boards
 

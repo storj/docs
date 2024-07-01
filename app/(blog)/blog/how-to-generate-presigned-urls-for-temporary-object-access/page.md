@@ -5,7 +5,7 @@ date: '2022-08-02 00:00:00'
 layout: blog
 metadata:
   description: A tutorial on how to generate presigned urls using Storj
-  heroimage: /blog/how-to-generate-presigned-urls-for-temporary-object-access/a3e14220ca97c1cf.jpeg
+  heroimage: ./a3e14220ca97c1cf.jpeg
   title: How to Generate Presigned URLs for Temporary Object Access
 title: How to Generate Presigned URLs for Temporary Object Access
 
@@ -35,7 +35,7 @@ Have you ever shared a photo from Google photos and inspected the link?
   
 
 
-![](/blog/how-to-generate-presigned-urls-for-temporary-object-access/a527a3c96bbd79f9.png)You’ll notice a series of seemingly random characters. Those are what make up the special key to the data. Anyone with the key is able to view it, and since it has plenty of random characters, it would be nearly impossible for someone to guess it.
+![](./a527a3c96bbd79f9.png)You’ll notice a series of seemingly random characters. Those are what make up the special key to the data. Anyone with the key is able to view it, and since it has plenty of random characters, it would be nearly impossible for someone to guess it.
 
 ‍
 
@@ -70,7 +70,7 @@ Here’s how to get started:
 * Click “Access” on the left navigation
 * Click “Create S3 Credentials” on the access management page
 
-![](/blog/how-to-generate-presigned-urls-for-temporary-object-access/97fa7f494b48be83.png)* Give the credentials a name, permissions, and generate a passphrase for your data.
+![](./97fa7f494b48be83.png)* Give the credentials a name, permissions, and generate a passphrase for your data.
 
   
   
@@ -82,11 +82,11 @@ In your terminal run:
 Copy the “Access Key” to “AWS Access Key ID”  
 
 
-![](/blog/how-to-generate-presigned-urls-for-temporary-object-access/973a4592863af763.png)  
+![](./973a4592863af763.png)  
 Copy the “Secret Key” to “AWS Secret Access Key”  
 
 
-![](/blog/how-to-generate-presigned-urls-for-temporary-object-access/9a75a2197ee11b52.png)  
+![](./9a75a2197ee11b52.png)  
 Finish the configuration by entering a region name and output format (default of “None” is okay). 
 
 ## Upload a file to share

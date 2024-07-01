@@ -8,7 +8,7 @@ metadata:
     \ our first beta release last week while we were at Open Source Summit in San\
     \ Diego. Open Source Summit has a special place in our hard drives because we\
     \ love being a part of the incredibly talented, and diverse open source comm..."
-  heroimage: /blog/development-update-28-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 28 from Storj Labs
 title: Development Update 28 from Storj Labs
 

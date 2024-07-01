@@ -8,7 +8,7 @@ metadata:
     are sending invitations out every day to our waitlist participants, so if you
     joined the list be on the lookout. We had an all company meeting in Atlanta mid-January
     where the entire team focused its efforts on completing the rele...
-  heroimage: /blog/product-manager-development-update-16/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 16
 title: Product Manager Development Update 16
 

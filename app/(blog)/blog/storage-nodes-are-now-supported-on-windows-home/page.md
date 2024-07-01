@@ -8,7 +8,7 @@ metadata:
     \ Node using our native Windows installer. The new installer includes an auto-updater\
     \ so you never have to worry about whether or not your Node is up to date and\
     \ it also includes our brand new Node Dashboard. The Node Dashboard can..."
-  heroimage: /blog/storage-nodes-are-now-supported-on-windows-home/f732d96575e78699.jpeg
+  heroimage: ./f732d96575e78699.jpeg
   title: Storage Nodes Are Now Supported on Windows Home
 title: Storage Nodes Are Now Supported on Windows Home
 

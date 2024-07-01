@@ -17,7 +17,7 @@ metadata:
     we needed from gRPC (and most likely, everything you need) in under 3000 lines
     of Go. It now powers our full network of tens of thousands of servers and countless
     clients.
-  heroimage: /blog/introducing-drpc-our-replacement-for-grpc/e2c929baac38fe20.png
+  heroimage: ./e2c929baac38fe20.png
   title: 'Introducing DRPC: Our Replacement for gRPC'
 title: 'Introducing DRPC: Our Replacement for gRPC'
 
@@ -61,7 +61,7 @@ On the other hand, DRPC’s core is under 3000 lines! It’s a reasonable task t
   
 
 
-![](/blog/introducing-drpc-our-replacement-for-grpc/26c69fe77df6e712.png)<https://twitter.com/ProgrammerDude/status/1193646924227854337>‍
+![](./26c69fe77df6e712.png)<https://twitter.com/ProgrammerDude/status/1193646924227854337>‍
 
 This tweet is from 2019, and as of today, in 2021, WithDefaultServiceConfig is still experimental, and WithBalancerName is still deprecated.
 

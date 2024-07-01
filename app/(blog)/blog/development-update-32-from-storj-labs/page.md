@@ -8,7 +8,7 @@ metadata:
     \ arrived. We were ranked #2 on Consensys Top 20 blockchain - Developer Activity\
     \ for October. Our team has been laser-focused and its showing as we finish features\
     \ for our Pioneer 2 release. The network is more stable, performant, a..."
-  heroimage: /blog/development-update-32-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 32 from Storj Labs
 title: Development Update 32 from Storj Labs
 

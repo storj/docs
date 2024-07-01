@@ -8,7 +8,7 @@ metadata:
     are continuing to focus our efforts around the Explorer release, which is scheduled
     to be released in Q1 of 2019. We want to make sure all of our storage node operators
     are pleasantly surprised when they join the V3 network, so ...
-  heroimage: /blog/product-manager-development-update-14/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 14
 title: Product Manager Development Update 14
 

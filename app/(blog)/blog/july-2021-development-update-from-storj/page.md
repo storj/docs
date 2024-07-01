@@ -6,7 +6,7 @@ layout: blog
 metadata:
   description: Read about what our engineering team worked on during the month of
     July and what we have planned for the coming month.
-  heroimage: /blog/july-2021-development-update-from-storj/71d8a35b9b3f6042.png
+  heroimage: ./71d8a35b9b3f6042.png
   title: July 2021 Development Update from Storj
 title: July 2021 Development Update from Storj
 

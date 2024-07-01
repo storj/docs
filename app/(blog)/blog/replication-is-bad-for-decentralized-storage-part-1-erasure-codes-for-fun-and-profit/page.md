@@ -9,7 +9,7 @@ metadata:
     \ and are now working on for our near-term roadmap, and it\u2019s wonderful to\
     \ finally have it out!I would have loved to go into this amount of detail during\
     \ my conver..."
-  heroimage: /blog/replication-is-bad-for-decentralized-storage-part-1-erasure-codes-for-fun-and-profit/2990137796909c31.png
+  heroimage: ./2990137796909c31.png
   title: 'Replication is bad for decentralized storage, part 1: Erasure codes for
     fun and profit'
 title: 'Replication is bad for decentralized storage, part 1: Erasure codes for fun
@@ -27,7 +27,7 @@ There are a number of potentially controversial claims our paper makes, and the 
 
 In a decentralized storage network, any storage node could go offline permanently at any time. A storage network’s redundancy strategy must store data in a way that provides access with high probability, even though any given number of individual nodes may be in anoffline state. To achieve a specific level of *durability* (defined as the probability that data remains available in the face of failures), many products in this space (Filecoin, MaidSafe, Siacoin, GFS, Ceph, IPFS, etc.) by default use replication, which means simply having multiple copies of the data stored on different nodes.
 
-![](/blog/replication-is-bad-for-decentralized-storage-part-1-erasure-codes-for-fun-and-profit/7c30dc9476d94f1a.png)Unfortunately, replication anchors durability to the network *expansion factor*, which is the storage overhead for reliably storing data. If you want more durability, you need more copies. For every increase of durability you desire, you must spend another multiple of the data size in bandwidth when storing or repairing the data, as nodes churn in and out of the network.
+![](./7c30dc9476d94f1a.png)Unfortunately, replication anchors durability to the network *expansion factor*, which is the storage overhead for reliably storing data. If you want more durability, you need more copies. For every increase of durability you desire, you must spend another multiple of the data size in bandwidth when storing or repairing the data, as nodes churn in and out of the network.
 
 For example, suppose your desired durability level requires a replication strategy that makes eight copies of the data. This yields an expansion factor of 8x, or 800%. This data then needs to be stored on the network, using bandwidth in the process. Thus, more replication results in more bandwidth usage for a fixed amount of data.
 
@@ -35,7 +35,7 @@ On the one hand, replication does make network maintenance simpler. If a node go
 
 ## Erasure Codes ?
 
-![](/blog/replication-is-bad-for-decentralized-storage-part-1-erasure-codes-for-fun-and-profit/7dc9788a4f752cd5.png)Erasure codes are another redundancy approach, and importantly, they do not tie durability to the expansion factor. You can tune your durability without increasing the overall network traffic!
+![](./7dc9788a4f752cd5.png)Erasure codes are another redundancy approach, and importantly, they do not tie durability to the expansion factor. You can tune your durability without increasing the overall network traffic!
 
 Erasure codes are widely used in both distributed and peer-to-peer storage systems. While they are more complicated and possess trade-offs of their own, the scheme we adopt, Reed-Solomon, has been around since 1960 and is used everywhere from CDs, deep space communication, barcodes, advanced RAID-like applications--you name it.
 
@@ -45,13 +45,13 @@ If a block of data is *s* bytes large, each of the *n* erasure shares are roughl
 
 Interestingly, the durability of a *k* = 20, *n* = 40 erasure code is better than a *k* = 10, *n* = 20 erasure code, even though the expansion factor (2x) is the same for both. This is because the risk is spread across more nodes in the *k* = 20, *n* = 40 case. To help drive this point home, we calculated the durability for various erasure code configuration choices in a network with a churn of 10%. We talked more about the math behind this table in section 3.4 of [our paper](https://storj.io/storjv3.pdf), and we’ll discuss more about churn in an upcoming blog post, but suffice it to say, we hope these calculated values are illustrative:
 
-![](/blog/replication-is-bad-for-decentralized-storage-part-1-erasure-codes-for-fun-and-profit/748c8849fba01372.png)Notice how increasing the amount of storage nodes involved increases the amount of durability significantly (each new 9 is 10x more durable), without a change in the expansion factor. We also put this data together in a graph:
+![](./748c8849fba01372.png)Notice how increasing the amount of storage nodes involved increases the amount of durability significantly (each new 9 is 10x more durable), without a change in the expansion factor. We also put this data together in a graph:
 
-![](/blog/replication-is-bad-for-decentralized-storage-part-1-erasure-codes-for-fun-and-profit/e463fccc00512f4d.png)Admittedly, this graph is a little disingenuous: the chances of you caring about having thirty-two 9s of durability is… low, to say the least. The National Weather Service [estimates](https://www.weather.gov/safety/lightning-odds) the likelihood of you not getting hit by lightning this year at only six 9s after all. But you should still be able to see that a *k* = 2, *n* = 4 is less durable than a *k* = 16, *n* = 32 configuration.
+![](./e463fccc00512f4d.png)Admittedly, this graph is a little disingenuous: the chances of you caring about having thirty-two 9s of durability is… low, to say the least. The National Weather Service [estimates](https://www.weather.gov/safety/lightning-odds) the likelihood of you not getting hit by lightning this year at only six 9s after all. But you should still be able to see that a *k* = 2, *n* = 4 is less durable than a *k* = 16, *n* = 32 configuration.
 
 In contrast, replication requires significantly higher expansion factors for the same durability. The following table shows durability with a replication scheme:
 
-![](/blog/replication-is-bad-for-decentralized-storage-part-1-erasure-codes-for-fun-and-profit/a50e169436e41d7e.png)Comparing the two tables, notice that replicating data at 10x can’t beat erasure codes with *k* = 16, *n* = 32, which is an expansion factor of only two. For durable storage, erasure codes simply require ridiculously less disk space than replication.
+![](./a50e169436e41d7e.png)Comparing the two tables, notice that replicating data at 10x can’t beat erasure codes with *k* = 16, *n* = 32, which is an expansion factor of only two. For durable storage, erasure codes simply require ridiculously less disk space than replication.
 
 If you want to learn more about how erasure codes work, you can read [this introductory tutorial I co-wrote last year.](https://innovation.vivint.com/introduction-to-reed-solomon-bc264d0794f8)
 
@@ -71,7 +71,7 @@ Erasure coding did require more CPU time, that’s true. Still, a reasonable era
 
 Erasure coding also required a designated node to do the repair. While this complicates architectures in untrusted environments, it is not an unsolvable problem. It simply requires the addition of hashes, signatures, and retries in a few new places. This is something we’ll talk about more down the road. We have a lot of blog posts to write!
 
-![](/blog/replication-is-bad-for-decentralized-storage-part-1-erasure-codes-for-fun-and-profit/c79081350d8d6e70.png)Notably, erasure coding does *not* complicate streaming. Remember how I said erasure codes are used for satellite communication and CDs? As long as erasure coding is batched into small operations, streaming continues to work just fine. See Figure 4.2 and sections 4.1.2 and 4.8 in [our white paper](https://storj.io/storjv3.pdf) for more details about how we can pull native video streaming off.
+![](./c79081350d8d6e70.png)Notably, erasure coding does *not* complicate streaming. Remember how I said erasure codes are used for satellite communication and CDs? As long as erasure coding is batched into small operations, streaming continues to work just fine. See Figure 4.2 and sections 4.1.2 and 4.8 in [our white paper](https://storj.io/storjv3.pdf) for more details about how we can pull native video streaming off.
 
 ## Upsides?
 

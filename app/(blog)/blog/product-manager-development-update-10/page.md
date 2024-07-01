@@ -9,7 +9,7 @@ metadata:
     \ what we are building and how it works.  Most of our time has been dedicated\
     \ to writing and publishing the white paper during the last several weeks, but\
     \ he..."
-  heroimage: /blog/product-manager-development-update-10/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 10
 title: Product Manager Development Update 10
 

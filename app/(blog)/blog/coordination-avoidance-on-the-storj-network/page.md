@@ -8,7 +8,7 @@ metadata:
     \ and consumers are storing unprecedented amounts of data. IDC predicts worldwide\
     \ data will grow to 175 zettabytes by 2025, with as much data stored in the cloud\
     \ as in data centers\xB9.The Storj network introduces an economy around s..."
-  heroimage: /blog/coordination-avoidance-on-the-storj-network/a7e04c245b685755.jpeg
+  heroimage: ./a7e04c245b685755.jpeg
   title: Coordination Avoidance On The Storj Network
 title: Coordination Avoidance On The Storj Network
 
@@ -33,7 +33,7 @@ We recently announced Tardigrade [[5](https://storj.io/blog/2019/04/introducing-
   
 
 
-![](/blog/coordination-avoidance-on-the-storj-network/0d31ccd75012f9a8.png)*Figure 1. Storj network architecture.*
+![](./0d31ccd75012f9a8.png)*Figure 1. Storj network architecture.*
 
 As shown in *Figure 1,* storage nodes and Satellites in the Storj network architecture are both capable of being decentralized. The Storj network can leverage the decentralized nature of storage nodes and Satellites to create partitions in the network to isolate users and file transfers from each other, which helps minimize coordination across the Storj network. For extremely high throughput demands, organizations can run their own Satellite. This avoids coordination overhead with the rest of the Tardigrade network and allows users to make their own decisions about what database infrastructure their Satellite will use and relax consistency guarantees if they wish.
 

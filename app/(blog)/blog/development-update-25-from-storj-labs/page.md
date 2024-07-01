@@ -8,7 +8,7 @@ metadata:
     \ so strap in, this is a long one. Since our last update, we\u2019ve merged over\
     \ 250 PRs, which equates to about 30,000 lines of code added and 10,000 lines\
     \ deleted. This code is for the functionality we\u2019re building into the network..."
-  heroimage: /blog/development-update-25-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 25 from Storj Labs
 title: Development Update 25 from Storj Labs
 
@@ -16,7 +16,7 @@ title: Development Update 25 from Storj Labs
 
 It has been almost a month since we posted our last development update, so strap in, this is a long one. Since our last update, we’ve merged over 250 PRs, which equates to about 30,000 lines of code added and 10,000 lines deleted. This code is for the functionality we’re building into the network for our Beacon and Pioneer releases. Part of our team has been focused on finishing out the last bits of functionality for Beacon, while the rest of our team has been focused on Pioneer.
 
-![null](/blog/development-update-25-from-storj-labs/ef6762a0cfb87e44.jpeg)**Recent development accomplishments:**
+![null](./ef6762a0cfb87e44.jpeg)**Recent development accomplishments:**
 
 * We finished the libuplink C library bindings. This means anyone who wants to use V3 as their data storage layer on a C application can integrate easily.
 * We added the ability to determine how much storage and egress (value attribution) is referred to the V3 network by our partners for our Open Source Partner Program. We are particularly proud of this because it reinforces our commitment to open source and is one way we’re trying to give back to the open source community we love.

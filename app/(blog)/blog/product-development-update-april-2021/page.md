@@ -6,7 +6,7 @@ layout: blog
 metadata:
   description: Read all about the latest features our engineering team has been working
     on.
-  heroimage: /blog/product-development-update-april-2021/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Development Update - April 2021
 title: Product Development Update - April 2021
 

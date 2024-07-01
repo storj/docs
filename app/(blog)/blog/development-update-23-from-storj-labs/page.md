@@ -8,7 +8,7 @@ metadata:
     \ the functionality needed for our next release, bacon\u2026 I mean Beacon. The\
     \ functionality in this release will allow clients to share encrypted files via\
     \ a cool technique called macaroons. As part of the Vanguard release, we are still..."
-  heroimage: /blog/development-update-23-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 23 from Storj Labs
 title: Development Update 23 from Storj Labs
 

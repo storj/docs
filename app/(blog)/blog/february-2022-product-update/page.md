@@ -8,7 +8,7 @@ metadata:
     \ working hard to create new resources and communications to further elevate our\
     \ transparency with you. Part of these initiatives was creating a product roadmap\
     \ to give you and our community more insight into what our development team wi..."
-  heroimage: /blog/february-2022-product-update/3a44980925b05d58.png
+  heroimage: ./3a44980925b05d58.png
   title: February 2022 Product Update
 title: February 2022 Product Update
 

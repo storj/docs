@@ -8,7 +8,7 @@ metadata:
     things to watch. Besides extensive lists of classic movies and TV shows, growing
     studios have contributed to a recent explosion in new popular series. These can't-miss
     titles have amassed viewerships in the millions and critical ...
-  heroimage: /blog/cloud-based-mutlimedia-library-transformation/1bb0baa6b3e5f63c.png
+  heroimage: ./1bb0baa6b3e5f63c.png
   title: Use the Decentralized Cloud to Transform Your Multimedia Library Into Your
     Personal Netflix
 title: Use the Decentralized Cloud to Transform Your Multimedia Library Into Your

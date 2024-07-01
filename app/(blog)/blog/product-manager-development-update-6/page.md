@@ -8,7 +8,7 @@ metadata:
     s keynote presentation at The Linux Foundation's Open Source Summit last week.\
     \ At the conference, we announced our new Open Source Partner Program! Through\
     \ this program, open-source projects can generate revenue when their..."
-  heroimage: /blog/product-manager-development-update-6/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 6
 title: Product Manager Development Update 6
 

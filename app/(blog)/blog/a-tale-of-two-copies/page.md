@@ -8,7 +8,7 @@ metadata:
     hit a performance mystery that sent me down a multi-day rabbit hole of adventure.
     I was writing some code to take some entries, append them into a fixed size in-memory
     buffer, and then flush that buffer to disk when it was full.
-  heroimage: /blog/a-tale-of-two-copies/a5d148aee871d9eb.png
+  heroimage: ./a5d148aee871d9eb.png
   title: A Tale of Two Copies
 title: A Tale of Two Copies
 
@@ -92,7 +92,7 @@ BenchmarkBuffer/32       436220 ns/op      196.0 flushes      4.362 ns/key
 
 That's right, a nearly 2x difference in performance where the benchmark writing to disk MORE is FASTER!
 
-![](/blog/a-tale-of-two-copies/51fb41f548601419.png)
+![](./51fb41f548601419.png)
 
 *Me too, Nick Young. Me, too.*
 
@@ -241,7 +241,7 @@ So that's saying that in the 32 byte version, the SHLQ ran on port 2 half the ti
 
 And for a while, this is what I thought was happening. In fact, a first draft of this very blog post had that as the conclusion, but the more I thought about it, the less good of an explanation it seemed.
 
-![](/blog/a-tale-of-two-copies/eb4b808e55daa547.png)
+![](./eb4b808e55daa547.png)
 
 *My first draft attempt*
 
@@ -266,7 +266,7 @@ If this were a movie, this would be the part where the main character is shown t
 
 A quick estimate shows that perf knows how to read over 700 different counters on my machine, and I feel like I looked at most of them. Take a look at [this huge table](https://perfmon-events.intel.com/skylake.html) if you're interested. I couldn't find any counters that could seem to explain the large difference in speed, and I was starting to get desparate.
 
-![](/blog/a-tale-of-two-copies/9b285294e5712e47.jpeg)
+![](./9b285294e5712e47.jpeg)
 
 *A picture of me wading through all of the perf counters*
 
@@ -439,7 +439,7 @@ Remember how CPUs are complex beasts? Well it gets even better. An optimization 
 
 So now it has this write buffer buffering all of the writes. What happens if a read comes in for one of those writes? It would slow everything down if had to wait for that write to actually happen before reading it back out, so instead it tries to service the read from the write buffer directly if possible, and no one is the wiser. You clever little CPU. This optimization is called [store forwarding](https://easyperf.net/blog/2018/03/09/Store-forwarding).
 
-![](/blog/a-tale-of-two-copies/07035c56befc8dc1.png)
+![](./07035c56befc8dc1.png)
 
 *My CPU buffering and reorganizing all of the writes*
 

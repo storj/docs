@@ -8,7 +8,7 @@ metadata:
     for developers), and our white paper has been published, we would love for the
     community to start contributing to the project. We have opened a number of GitHub
     issues for open source developers within the community to tackle, i...
-  heroimage: /blog/product-manager-development-update-11/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 11
 title: Product Manager Development Update 11
 

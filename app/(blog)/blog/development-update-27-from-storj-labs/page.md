@@ -8,7 +8,7 @@ metadata:
     \ heating up here at Storj Labs! We\u2019ve been on fire adding the final features\
     \ and improvements ahead of our Pioneer 1 beta launch in the next few weeks, and\
     \ iced coffee and nitro cold brew are the only two things keeping us cool.Rece..."
-  heroimage: /blog/development-update-27-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 27 from Storj Labs
 title: Development Update 27 from Storj Labs
 

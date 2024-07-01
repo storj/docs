@@ -9,7 +9,7 @@ metadata:
     \ 2021. We just want to take a moment to thank our team, our users, and our community\
     \ for supporting us and still being excited about what we're doing. Here's to\
     \ a be..."
-  heroimage: /blog/december-2020-development-update-from-storj-labs/909ca9dc52fc563a.png
+  heroimage: ./909ca9dc52fc563a.png
   title: December 2020 Development Update from Storj Labs
 title: December 2020 Development Update from Storj Labs
 

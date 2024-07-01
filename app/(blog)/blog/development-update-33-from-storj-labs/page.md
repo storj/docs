@@ -9,7 +9,7 @@ metadata:
     \ release and we\u2019re more excited about it than the holidays. We\u2019re still\
     \ looking for more Nodes to join ahead of our Voyager release, please sign up\
     \ o..."
-  heroimage: /blog/development-update-33-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 33 from Storj Labs
 title: Development Update 33 from Storj Labs
 

@@ -8,7 +8,7 @@ metadata:
     Q1 of this year. Make sure to register for the event to reserve your spot! We
     are eager to share a synopsis of what we have accomplished this year and an overview
     of our 2019 plans. Our team has been burning the midnight oil to fi...
-  heroimage: /blog/development-update-20-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 20 from Storj Labs
 title: Development Update 20 from Storj Labs
 

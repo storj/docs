@@ -8,7 +8,7 @@ metadata:
     \ getting ready for the hottest summer we've ever had! Our team is on fire and\
     \ making great progress on our release roadmap. The Vanguard release is next,\
     \ so be on the lookout for more information about it. If you would like to participat..."
-  heroimage: /blog/development-update-19-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 19 from Storj Labs
 title: Development Update 19 from Storj Labs
 

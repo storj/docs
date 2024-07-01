@@ -9,7 +9,7 @@ metadata:
     \ you get paid! \U0001F4B8\U0001F4B8\U0001F4B8By the time this blog post is published,\
     \ it will have been one month since we launched the V3 network Explorer release,\
     \ the public alpha for S..."
-  heroimage: /blog/so-youre-ready-for-your-first-payday-as-a-storage-node-operator/f597592e440fac90.png
+  heroimage: ./f597592e440fac90.png
   title: "So You\u2019re Ready for Your First Payday as a Storage Node Operator"
 title: "So You\u2019re Ready for Your First Payday as a Storage Node Operator"
 
@@ -39,11 +39,11 @@ Next, we look at the rollup service. Every 24 hours, rollup service sums the pre
 
 Every month, we generate a payment report that includes each NodeID, rollup data, operator wallet address, node creation date, and audit information. We use the node creation date to calculate [escrow withholdings](https://storj.io/blog/2019/01/sharing-storage-space-for-fun-and-profit/) and audit information to determine any disqualifications. In our example, our report for your node would show 1130.64TBh static data, 100GB\*28 days = 2.8TB egress and 10GB\*28 days = 0.28TB repair bandwidth for the month of February. Converting our static storage to TBM, we get 1130.64TBh/(24h\*28days) = 1.6825TBM. The chart below shows the data added to your node every hour, the total data on your node at the beginning of the hour, and the resulting gigabyte hours. Hour 0 represents midnight Feb 1. You can recreate the calculations in the last column using the [equation](https://bit.ly/2EtUjVk):
 
-![](/blog/so-youre-ready-for-your-first-payday-as-a-storage-node-operator/b6b8386771375187.png)where *b* = 5 and *n* = total hours.
+![](./b6b8386771375187.png)where *b* = 5 and *n* = total hours.
 
  \*\*Storage Node Static Data\*\* 
 
-![Storage Node Static Data](/blog/so-youre-ready-for-your-first-payday-as-a-storage-node-operator/2319262679a9c69e.png)Finally, it’s payday! Within 2 weeks after the end of each month, we will send STORJ tokens valued in USD to the wallet addresses provided by storage node operators. Make sure yours is correct, as there’s no way to re-send payments to an incorrect address after the fact. In our example, if you’ve been well behaved, you could expect the following payout for the month of Feb (before withholdings): 
+![Storage Node Static Data](./2319262679a9c69e.png)Finally, it’s payday! Within 2 weeks after the end of each month, we will send STORJ tokens valued in USD to the wallet addresses provided by storage node operators. Make sure yours is correct, as there’s no way to re-send payments to an incorrect address after the fact. In our example, if you’ve been well behaved, you could expect the following payout for the month of Feb (before withholdings): 
 
 * Static: 1.6825TBM \* $1.5 = $2.52
 * Egress: 2.8TB \* $20 = $56

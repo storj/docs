@@ -8,7 +8,7 @@ metadata:
     \ only heating up as we get closer to our Pioneer 2 and Voyager launches. Over\
     \ the past couple of weeks, we\u2019ve been focused on finishing the final remaining\
     \ items before our Pioneer 2 release. Pioneer 2 is a major milestone because..."
-  heroimage: /blog/development-update-31-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 31 from Storj Labs
 title: Development Update 31 from Storj Labs
 

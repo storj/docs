@@ -8,7 +8,7 @@ metadata:
     \ Labs. Two of our leaders, Ben Golub and Shawn Wilkinson, will be giving a keynote\
     \ at The Linux Foundation\u2019s Open Source Summit in Vancouver on August 29th-31st.\
     \ We have been spending a lot of time getting ready for some major ann..."
-  heroimage: /blog/product-manager-development-update-4/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 4
 title: Product Manager Development Update 4
 

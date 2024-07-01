@@ -9,7 +9,7 @@ metadata:
     \ Currently, we\u2019re hyper focused on the user experience for our Storj DCS\
     \ customers and we\u2019re continuing to focus on the performance, security, and\
     \ reliabil..."
-  heroimage: /blog/september-2021-development-update/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: September 2021 Development Update
 title: September 2021 Development Update
 

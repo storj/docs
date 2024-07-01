@@ -8,7 +8,7 @@ metadata:
     \ As a company, we typically meet in person every quarter to fully immerse ourselves\
     \ into a specific topic or goal. Last week we had a virtual all company week where\
     \ we all participated in an internal hackathon. The theme was, \u201C..."
-  heroimage: /blog/development-update-37-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 37 from Storj Labs
 title: Development Update 37 from Storj Labs
 

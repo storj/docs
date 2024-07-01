@@ -8,7 +8,7 @@ metadata:
     network V3 Explorer release, which is the alpha that allows storage node operators
     to join the network! We know many of you have been waiting to join the V3 network
     as storage node operators to start earning STORJ tokens by s...
-  heroimage: /blog/announcing-the-storj-v3-explorer-release/c12f0143a9f81c8c.png
+  heroimage: ./c12f0143a9f81c8c.png
   title: Announcing The Storj V3 Explorer Release
 title: Announcing The Storj V3 Explorer Release
 

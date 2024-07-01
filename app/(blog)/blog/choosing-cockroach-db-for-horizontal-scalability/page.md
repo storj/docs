@@ -8,7 +8,7 @@ metadata:
     \ PostgreSQL to CockroachDB. We want to share why we did this and what our experience\
     \ was.TL;DR Our experience has convinced us that CockroachDB is the best horizontally\
     \ scalable database choice in 2020.\_Why use a horizontally scalab..."
-  heroimage: /blog/choosing-cockroach-db-for-horizontal-scalability/1f4faa49217ba74e.png
+  heroimage: ./1f4faa49217ba74e.png
   title: Choosing Cockroach DB for Horizontal Scalability
 title: Choosing Cockroach DB for Horizontal Scalability
 

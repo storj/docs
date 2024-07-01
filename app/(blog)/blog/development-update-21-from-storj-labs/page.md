@@ -8,7 +8,7 @@ metadata:
     by community members and partners uploading and downloading data on our network!
     If you want to get access to the Vanguard release, make sure to sign up on the
     waitlist. If you were unable to tune into the Q1 town hall last...
-  heroimage: /blog/development-update-21-from-storj-labs/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Development Update 21 from Storj Labs
 title: Development Update 21 from Storj Labs
 

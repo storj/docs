@@ -157,7 +157,7 @@ def handleblog(url, parsed):
                 os.path.basename(url).split(".")[-1])
     with open(os.path.join("output", slug, filename), "wb") as fh:
       fh.write(image_data)
-    return "/blog/" + slug + "/" + filename
+    return "./" + filename
 
   date = dateparse(parsed.find_all("div", class_="blog-details")[0].string or "1970-01-01")
   author = parsed.find_all("div", class_="blog-author")[0].string or "No Author"

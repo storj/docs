@@ -9,7 +9,7 @@ metadata:
     \ different design mistakes, code worsening over time, legacy codebases, and intentional\
     \ design mistakes due to time constraints. You can take a look at the list of\
     \ caus..."
-  heroimage: /blog/demystifying-technical-debt/dea5acde0e869ea5.png
+  heroimage: ./dea5acde0e869ea5.png
   title: Demystifying Technical Debt
 title: Demystifying Technical Debt
 
@@ -17,19 +17,19 @@ title: Demystifying Technical Debt
 
 ‍
 
-![](/blog/demystifying-technical-debt/91daf91929515361.png)  
+![](./91daf91929515361.png)  
 
 
 “Technical debt” has been bothering me for a while. It looks like a scary monster in the closet. It seems somehow a catchall for different design mistakes, code worsening over time, legacy codebases, and intentional design mistakes due to time constraints. You can take a look at the list of causes in [Wikipedia](https://en.wikipedia.org/wiki/Technical_debt#Causes) if you don’t believe me. It makes you feel like the code is collecting dust when it’s not being maintained, but clearly, that cannot be correct since the code might be unchanged.
 
 Let’s take this piece of code from "Software Tools" by Kernighan and Plauger. It has been unchanged since 1976. Has the technical debt risen for this code? When we talk about things collecting dust, the book example would have more chance of being dusty than code stored digitally.
 
-![](/blog/demystifying-technical-debt/75c7c37ca0dd4c23.jpeg)  
+![](./75c7c37ca0dd4c23.jpeg)  
 
 
 To push the metaphor to the breaking point, how do you measure technical debt, and how large is the interest? How much code would I need to write to pay off all the debt? If I have a lot of code, can I give a technical loan to other people?
 
-![](/blog/demystifying-technical-debt/132d3b12bc22594e.png)But I digress; this unclear “technical debt” metaphor has caused bad decisions in codebases that don’t need fixing. On the other hand, not understanding it has caused people to overlook actual problems.
+![](./132d3b12bc22594e.png)But I digress; this unclear “technical debt” metaphor has caused bad decisions in codebases that don’t need fixing. On the other hand, not understanding it has caused people to overlook actual problems.
 
 Before we get to tackle ***technical debt***, we need to take a slight detour.
 
@@ -47,9 +47,9 @@ The first problem we need to tackle is ***quality***. When we are talking about 
 * Efficiency - how many trees we need to burn to run an operation
 * Maintainability - how many hours and lines of code do we need to modify to add, fix or remove a feature.
 
-![](/blog/demystifying-technical-debt/fc01c0ee8ce96871.png)When we talk about technical debt, usually, we are concerned about maintainability. There definitely are hints of the other aspects in there, but maintainability seems to be dominant.
+![](./fc01c0ee8ce96871.png)When we talk about technical debt, usually, we are concerned about maintainability. There definitely are hints of the other aspects in there, but maintainability seems to be dominant.
 
-![](/blog/demystifying-technical-debt/927230183b2dd4ce.png)One way to summarize ***maintainability*** is to treat it as “***effort needed to make a change***.” We can dissect this effort into several pieces or, in other words, places where we use up our energy:
+![](./927230183b2dd4ce.png)One way to summarize ***maintainability*** is to treat it as “***effort needed to make a change***.” We can dissect this effort into several pieces or, in other words, places where we use up our energy:
 
 The most visible part is "***effort in code modification***." We can modify many different aspects of the code:
 
@@ -88,25 +88,25 @@ It’s an obvious statement that this ***effort*** changes over time. The questi
 * the user interface is larger -> more things that can interact, hence more complexity;
 * features accumulate more cases -> which means more complex and more code.
 
-![](/blog/demystifying-technical-debt/4fc027a938f4b0a5.png)***Understanding effort*** roughly depends on the complexity of the mental model, project, and user needs. It also depends on how much we know the system already. We can similarly estimate that it increases over time:
+![](./4fc027a938f4b0a5.png)***Understanding effort*** roughly depends on the complexity of the mental model, project, and user needs. It also depends on how much we know the system already. We can similarly estimate that it increases over time:
 
 * larger number of features interact -> more complex mental model and cases to consider;
 * more business rules and concerns -> because we want to solve the user problems better;
 * knowledge of code, that isn’t being modified is forgotten -> it’s going to be harder to work with a system that you don’t know;
 * people come and go -> tacit knowledge is lost when a person leaves.
 
-![](/blog/demystifying-technical-debt/fed657d8659dbc29.png)***Communication effort*** roughly depends on the number of people you need to communicate with and clarity on organization structure. Here it’s harder to pinpoint clear tendencies, but we can estimate that:
+![](./fed657d8659dbc29.png)***Communication effort*** roughly depends on the number of people you need to communicate with and clarity on organization structure. Here it’s harder to pinpoint clear tendencies, but we can estimate that:
 
 * communication effort increases when a company grows
 * communication effort decreases when processes and company structure is clarified
 
-![](/blog/demystifying-technical-debt/7635f7e95616d794.png)Overall, we can estimate that:
+![](./7635f7e95616d794.png)Overall, we can estimate that:
 
 ***The effort to maintain a project increases without activities that actively reduce it.***
 
-![](/blog/demystifying-technical-debt/b06a6c08163bb49f.png)It would be easy to conclude that this “***increase in the effort***” is the “***technical debt***.” However, when we look back at the initial question about old code.
+![](./b06a6c08163bb49f.png)It would be easy to conclude that this “***increase in the effort***” is the “***technical debt***.” However, when we look back at the initial question about old code.
 
-![](/blog/demystifying-technical-debt/75c7c37ca0dd4c23.jpeg)This code has been years in a book without any new additions and no one communicating about it, but some still consider it technical debt.
+![](./75c7c37ca0dd4c23.jpeg)This code has been years in a book without any new additions and no one communicating about it, but some still consider it technical debt.
 
 There must be things that we don’t take into account when thinking about technical debt.
 
@@ -114,7 +114,7 @@ There must be things that we don’t take into account when thinking about techn
 
 One of the fundamental laws of software development is that you make mistakes. Technical debt is often associated with bad decisions in the past. Let’s get philosophical – how do we recognize mistakes?
 
-![](/blog/demystifying-technical-debt/e2acd2ec17692723.png)  
+![](./e2acd2ec17692723.png)  
 
 
 When we look at this equation, we have two parts in our head:
@@ -126,17 +126,17 @@ Or in other words, there’s something that we ***perceive*** and realize that i
 
 We can apply the same line of thinking to ***effort*** and ***maintainability***.
 
-![](/blog/demystifying-technical-debt/09f5df2707586cc9.png)Our ***ideal effort to modify*** decreases when we learn how things could be better. So, there’s a “potential improvement” that we evaluate. We could simplify this into an equation:
+![](./09f5df2707586cc9.png)Our ***ideal effort to modify*** decreases when we learn how things could be better. So, there’s a “potential improvement” that we evaluate. We could simplify this into an equation:
 
 **Technical Debt ~ Perceived Effort - Ideal Effort**
 
-![](/blog/demystifying-technical-debt/928390a574b36827.png)There are several interesting observations here.
+![](./928390a574b36827.png)There are several interesting observations here.
 
 When there’s a breakthrough in technology, people realize that there’s a much better way to do something. Hence, they feel that their project has technical debt and they should fix it. Although, the effort to maintain the project hasn’t changed. Only the expectation has changed. In principle, the technical debt is higher because people learned something new. *Note, that our "ideal" may have many problems that are being overlooked*.
 
-![](/blog/demystifying-technical-debt/afc5ffad22ef3dfa.png)Borrowing technical debt is also nicely explained with this way of thinking. Instead of perceived effort and ideal effort changing separately, they are changed together. Or in other words, we increase perceived effort while knowing that ideal effort would increase it less.
+![](./afc5ffad22ef3dfa.png)Borrowing technical debt is also nicely explained with this way of thinking. Instead of perceived effort and ideal effort changing separately, they are changed together. Or in other words, we increase perceived effort while knowing that ideal effort would increase it less.
 
-![](/blog/demystifying-technical-debt/4e80d123d00106b7.png)  
+![](./4e80d123d00106b7.png)  
 
 
 This model does seem to explain technical debt quite well and gives us a nice intuition about different situations.
@@ -153,7 +153,7 @@ The second question is, which changes? Is it about an arbitrary change in the co
 
 Finally, we need to consider the person evaluating because every person has some biases. Especially when dealing with “***perceived effort***” and “***ideal effort***.”
 
-![](/blog/demystifying-technical-debt/eafa151edb719f5b.png)  
+![](./eafa151edb719f5b.png)  
 
 
 For example, if the person is hyped about a language, framework, or works with a system they know well, they can easily underestimate the average effort. This is due to knowing how to solve common problems and knowing how to avoid the issues in the first place.
@@ -253,7 +253,7 @@ Technical debt is not “dust” that accumulates on your code, but rather it’
 
 **It’s just the realization that you could do better.**
 
-![](/blog/demystifying-technical-debt/adbf52a20f1b6129.png)  
+![](./adbf52a20f1b6129.png)  
   
 
 

@@ -8,7 +8,7 @@ metadata:
     V3 network and wanted to share a quick update. Our new white paper has also been
     sent out to a number of external people for peer review. Once we gather and incorporate
     their feedback, the next step is public release, so stay t...
-  heroimage: /blog/product-manager-development-update-9/8855fa2f80969623.png
+  heroimage: ./8855fa2f80969623.png
   title: Product Manager Development Update 9
 title: Product Manager Development Update 9
 

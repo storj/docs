@@ -8,7 +8,7 @@ metadata:
     object storage service. Why would we do such a challenging thing? At a basic level,
     it's because we believe the internet can be better than it currently is and we
     see how to improve it. We believe your data is worse off being ...
-  heroimage: /blog/our-3-step-interview-process-for-engineering-candidates/14f72bac7573e10c.png
+  heroimage: ./14f72bac7573e10c.png
   title: Our 3-Step Interview Process for Engineering Candidates
 title: Our 3-Step Interview Process for Engineering Candidates
 

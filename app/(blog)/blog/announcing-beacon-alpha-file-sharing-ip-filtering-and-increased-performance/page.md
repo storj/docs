@@ -9,7 +9,7 @@ metadata:
     \ last update ahead of our Pioneer 1 (Beta), which we\u2019re planning to release\
     \ mid-July.\_Beacon is a huge milestone for several reasons. In addition to general\
     \ i..."
-  heroimage: /blog/announcing-beacon-alpha-file-sharing-ip-filtering-and-increased-performance/71dd92bdd263bc4c.jpeg
+  heroimage: ./71dd92bdd263bc4c.jpeg
   title: Announcing Beacon Alpha - File sharing, IP filtering, and increased performance
 title: Announcing Beacon Alpha - File sharing, IP filtering, and increased performance
 

@@ -8,7 +8,7 @@ metadata:
     test can indicate several problems. Let''s first, take a look at the most common
     ones before tackling an approach to finding them.Problem: DeadlockFirst, we can
     have a goroutine that is blocked. As an example:func LeakySumSquares(c...'
-  heroimage: /blog/finding-goroutine-leaks-in-tests/c1245dac8cff160d.jpeg
+  heroimage: ./c1245dac8cff160d.jpeg
   title: Finding Goroutine Leaks in Tests
 title: Finding Goroutine Leaks in Tests
 

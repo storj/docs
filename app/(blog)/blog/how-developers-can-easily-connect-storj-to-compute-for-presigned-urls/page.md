@@ -10,7 +10,7 @@ metadata:
     \ that security model to support public sharing files via the web in our Link\
     \ Sharing service. Additionally, we offer S3-compatible services, including support\
     \ for S3-style presigned URLs."
-  heroimage: /blog/how-developers-can-easily-connect-storj-to-compute-for-presigned-urls/5197073b00a85cfc.jpeg
+  heroimage: ./5197073b00a85cfc.jpeg
   title: How developers can easily connect Storj to compute for presigned URLs
 title: How developers can easily connect Storj to compute for presigned URLs
 

@@ -10,31 +10,7 @@ import crypto from 'crypto'
 import imageSizeCache from '../../.image-size-cache.json'
 import { convertDocId } from './convertDocId'
 import { Heading } from '@/components/Heading'
-
-const ImageWrap = ({ src, alt, width, height }) => {
-  let imgStyle = 'xs:max-w-full sm:max-w-sm'
-  let newWidth = width
-  let newHeight = height
-  if (width > height) {
-    imgStyle = 'max-w-full h-auto'
-  }
-  if (height > 384) {
-    newHeight = 384
-    newWidth = (width * newHeight) / height
-  }
-
-  return (
-    <a target="_blank" rel="noreferrer" href={src}>
-      <img
-        className={`object-fit ${imgStyle}`}
-        width={newWidth}
-        height={newHeight}
-        src={src}
-        alt={alt}
-      />
-    </a>
-  )
-}
+import { ImageWrap, handleImageAsset } from '@/lib/image-tool'
 
 let documentSlugifyMap = new Map()
 
@@ -119,7 +95,26 @@ const nodes = {
     async transform(node, config) {
       const attributes = node.transformAttributes(config)
       const children = node.transformChildren(config)
-      if (!attributes.src.includes('http')) {
+      const src = attributes.src
+      if (!src.includes('http')) {
+        // if it's a local image, copy it to the public/images folder
+        if (src.startsWith('./')) {
+          let output = await handleImageAsset(src)
+          return new Tag(
+            'img',
+            {
+              className: 'rounded-lg border-2 border-gray-600',
+              src: output.src,
+              alt: attributes.alt,
+              loading: 'lazy',
+              decoding: 'async',
+              width: output.width,
+              height: output.height,
+            },
+            children
+          )
+        }
+
         return new Tag('img', attributes, children)
       }
       const hash = crypto.createHash('md5').update(attributes.src).digest('hex')

@@ -53,6 +53,6 @@
     "eslint-config-next": "^14.0.2",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.6",
-    "sharp": "^0.32.0"
+    "sharp": "^0.32.6"
   }
 }

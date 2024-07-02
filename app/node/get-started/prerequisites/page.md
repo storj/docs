@@ -14,7 +14,7 @@ Proceeding constitutes acceptance of our [Terms and conditions](https://www.stor
 * One processor core for each storage node process
 * One hard drive, JBOD, per storage node process. NO SMR.
 * 2 TB of available space per storage node process
-* 1.5 TB of transit per TB of storage node capacity; unlimited preferred
+* 1.5 TB per month of transit per TB of storage node capacity; unlimited preferred
 * 3 Mbps upload bandwidth per TB of capacity
 * 5 Mbps download bandwidth per TB of capacity
 * Uptime (online and operational) of 99.5% per month
@@ -24,7 +24,7 @@ Proceeding constitutes acceptance of our [Terms and conditions](https://www.stor
 * One processor core for each storage node process
 * One hard drive, JBOD, per storage node process. NO SMR.
 * 500 GB of available space per storage node process
-* 1.5 TB of transit per TB of storage node capacity
+* 1.5 TB per month of transit per TB of storage node capacity
 * 1 Mbps upload bandwidth per TB of capacity
 * 3 Mbps download bandwidth per TB of capacity
 * Uptime (online and operational) of 99.3% per month, max total downtime of 5 hours monthly

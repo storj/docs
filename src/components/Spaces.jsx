@@ -8,7 +8,7 @@ const spaces = [
   { name: 'Learn', href: '/learn' },
   { name: 'Node', href: '/node' },
   { name: 'Help Center', href: '/support' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Eng Blog', href: '/blog' },
 ]
 
 export function TopLevelLink({ href, className, current, children }) {

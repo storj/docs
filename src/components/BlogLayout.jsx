@@ -82,8 +82,8 @@ export default async function BlogLayout({ children, href, frontmatter, ast }) {
                       {title}
                     </h1>
                   )}
+                  <Bio name={name} />
                   <time dateTime={new Date(date).toISOString().slice(0, 10)}>
-                    {' '}
                     {new Date(date).toLocaleDateString()}
                   </time>
                 </header>
@@ -99,7 +99,6 @@ export default async function BlogLayout({ children, href, frontmatter, ast }) {
                   indiehackers={frontmatter.indiehackers}
                 />
               </article>
-              <Bio name={name} />
               <PrevNextLinks />
             </Prose>
           </div>

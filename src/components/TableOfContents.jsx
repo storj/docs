@@ -115,15 +115,19 @@ export default function TableOfContents({ tableOfContents, routeGroup }) {
           </ol>
         </>
       )}
-      <div className="mt-3 space-y-2 border-t border-gray-200 pt-5 text-sm text-gray-900 dark:border-gray-300" />
-      <a
-        target="_blank"
-        rel="noreferrer"
-        className="text-sm text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-        href={`${GITHUB_EDIT_URL}/${routeGroup}${pathname}/page.md`}
-      >
-        Edit this page on GitHub →
-      </a>
+      {routeGroup != "(blog)" ?
+        <div>
+          <div className="mt-3 space-y-2 border-t border-gray-200 pt-5 text-sm text-gray-900 dark:border-gray-300" />
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+            href={`${GITHUB_EDIT_URL}/${routeGroup}${pathname}/page.md`}
+          >
+            Edit this page on GitHub →
+          </a>
+        </div>
+      : ""}
     </nav>
   )
 }

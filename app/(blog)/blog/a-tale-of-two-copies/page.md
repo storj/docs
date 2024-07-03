@@ -17,7 +17,7 @@ title: A Tale of Two Copies
 It was the best of times, it was the worst of times. That's when I hit a performance mystery that sent me down a multi-day rabbit hole of adventure. I was writing some code to take some entries, append them into a fixed size in-memory buffer, and then flush that buffer to disk when it was full. The main bit of code looked a little something like this:
 
 
-```
+```go
 type Buffer struct {
 	fh  *os.File
 	n   uint
@@ -50,7 +50,7 @@ Even if I'm not relying on my intuition, I find it fun and useful to try to pred
 Maybe you thought something similar, or maybe something completely different. Or maybe you didn't sign up to do thinking right now and just want me to get on with it. And so, I ran the following benchmark:
 
 
-```
+```go
 func BenchmarkBuffer(b *testing.B) {
 	fh := tempFile(b)
 	defer fh.Close()
@@ -310,7 +310,7 @@ What was left to try?
 Sometimes when I have no idea why something is slow, I try writing the same code but in a different way. That may tickle the compiler just right to cause it to change which optimizations it can or can't apply, giving some clues as to what's going on. So in that spirit I changed the benchmark to this:
 
 
-```
+```go
 func BenchmarkBuffer(b *testing.B) {
 	// ... setup code
 

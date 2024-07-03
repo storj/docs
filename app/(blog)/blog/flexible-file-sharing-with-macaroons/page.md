@@ -39,6 +39,3 @@ Again, the Satellite will be able to verify this digital signature, verify that 
 This chain can be continued for many more steps, allowing Macaroons of significant complexity where necessary.
 
 We expect to bring you access control by way of Macaroons in one of the next few Alpha releases. Stay tuned for more details!
-
-\
-

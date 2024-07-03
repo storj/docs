@@ -9,8 +9,8 @@ metadata:
     distributed, ridiculously resilient software. The Storj Network is currently spread
     across over 10,000 uncorrelated endpoints, and that number is growing fast.The
     global substrate of diverse, uncorrelated endpoints across wh...
-  title: Visualizing Decentralized Data Distribution with the Linkshare Object Map
-title: Visualizing Decentralized Data Distribution with the Linkshare Object Map
+  title: Visualizing Decentralized Data Distribution with the Linksharing Object Map
+title: Visualizing Decentralized Data Distribution with the Linksharing Object Map
 
 ---
 
@@ -24,9 +24,9 @@ Now that we have Storage Nodes across the world, we decided to build a simple vi
 
 ### Distributed Storage, Visualized
 
-Through this tool—which is called the Linkshare Object Map—our team and our community can visualize the geographic distribution of data uploaded to our Tardigrade service. This showcases how resilient the network is, as well as the wide geographic distribution of Nodes holding each object.
+Through this tool—which is called the Linksharing Object Map—our team and our community can visualize the geographic distribution of data uploaded to our Tardigrade service. This showcases how resilient the network is, as well as the wide geographic distribution of Nodes holding each object.
 
-We set out to build the Linkshare Object Map Dashboard at the start of the two-day Storj Labs employee hackathon and quickly productized and completed the project.
+We set out to build the Linksharing Object Map Dashboard at the start of the two-day Storj Labs employee hackathon and quickly productized and completed the project.
 
 ![](./29e62398803ba277.png)![](./47f263c59b58c3b7.jpeg)Try it out yourself by generating access for an object, and creating a link share for the URL, [like outlined in our documentation](https://documentation.tardigrade.io/getting-started/uploading-your-first-object/view-distribution-of-an-object). This process will generate a link with a macaroon (embedded, [hash-based logic](https://storj.io/blog/2019/12/secure-access-control-in-the-decentralized-cloud/)) that controls how the object can be accessed.
 

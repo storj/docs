@@ -5,7 +5,7 @@ date: '2022-03-07 00:00:00'
 heroimage: ./c1245dac8cff160d.jpeg
 layout: blog
 metadata:
-  description: 'Finding Goroutine Leaks in TestsA leaked goroutine at the end of a
+  description: 'A leaked goroutine at the end of a
     test can indicate several problems. Let''s first, take a look at the most common
     ones before tackling an approach to finding them.Problem: DeadlockFirst, we can
     have a goroutine that is blocked. As an example:func LeakySumSquares(c...'
@@ -14,8 +14,6 @@ title: Finding Goroutine Leaks in Tests
 
 ---
 
-### Finding Goroutine Leaks in Tests
-
 A leaked goroutine at the end of a test can indicate several problems. Let's first, take a look at the most common ones before tackling an approach to finding them.
 
 ### Problem: Deadlock
@@ -23,7 +21,7 @@ A leaked goroutine at the end of a test can indicate several problems. Let's fir
 First, we can have a goroutine that is blocked. As an example:
 
 
-```
+```go
 func LeakySumSquares(ctx context.Context, data []int) (
   total int, err error) {
 
@@ -57,7 +55,7 @@ In this case, when the context is canceled, the goroutines might end up leaking.
 Many times different services, connections, or databases have an internal goroutine used for async processing. A leaked goroutine can show such leaks.
 
 
-```
+```go
 type Conn struct {
   messages chan Message
 
@@ -106,7 +104,7 @@ Even if all the goroutines terminate, there can still be order problems with reg
 Let's take a common case of the problem:
 
 
-```
+```go
 type Server struct {
   log Logger
   db  *sql.DB
@@ -176,7 +174,7 @@ To attach the label:
 
 
 
-```
+```go
 func Track(ctx context.Context, t *testing.T, fn func(context.Context)) {
   label := t.Name()
   pprof.Do(ctx, pprof.Labels("test", label), fn)
@@ -189,7 +187,7 @@ func Track(ctx context.Context, t *testing.T, fn func(context.Context)) {
 Unfortunately, currently, there's not an easy way to get the goroutines with a given label. But, we can use some of the profiling endpoints to extract the necessary information. Clearly, this is not very efficient.
 
 
-```
+```go
 import "github.com/google/pprof/profile"
 
 func CheckNoGoroutines(key, value string) error {
@@ -269,7 +267,7 @@ func matchesLabel(sample *profile.Sample, key, expectedValue string) bool {
 And a failing test might look like this:
 
 
-```
+```go
 func TestLeaking(t *testing.T) {
   t.Parallel()
   ctx, cancel := context.WithCancel(context.Background())

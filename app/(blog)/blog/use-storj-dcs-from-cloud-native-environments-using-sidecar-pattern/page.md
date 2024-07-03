@@ -125,10 +125,10 @@ df = pd.read_csv(StringIO(csv))
 df
 ```
 ‍
-The approach uses the shared S3 gateway and requires access key and secret credentials generated as documented [here](https://docs.storj.io/dcs/api-reference/s3-compatible-gateway).
+The approach uses the shared S3 gateway and requires access key and secret credentials generated as documented [here](docId:yYCzPT8HHcbEZZMvfoCFa).
 
 ## Activating the Sidecar
-Let’s improve the previous example by using the sidecar pattern. First, we need to generate an [*access grant*](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant) instead of the S3 credentials to access Storj data, and we should define any S3 credentials for our local, single-tenant S3 gateway:
+Let’s improve the previous example by using the sidecar pattern. First, we need to generate an [*access grant*](docId:b4-QgUOxVHDHSIWpAf3hG) instead of the S3 credentials to access Storj data, and we should define any S3 credentials for our local, single-tenant S3 gateway:
 
 
 ![](./c911680feffbe653.png)

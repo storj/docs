@@ -47,7 +47,7 @@ All in, you’re looking at right around $60 to get going. I’ll wait while you
 
 ### Okay, what’s next?
 
-Assuming you have everything you need, we’ve published the [detailed, step-by-step instructions in this tutorial](https://docs.storj.io/dcs/how-tos/tesla-sentry-mode-teslausb). In general, there are four main steps which we share in a brief overview below:
+Assuming you have everything you need, we’ve published the [detailed, step-by-step instructions in this tutorial](docId:XjYoGwaE6ncc3xTICXOOu). In general, there are four main steps which we share in a brief overview below:
 
 
 * Create your Storj DCS account

@@ -2,7 +2,7 @@
 author:
   name: Egon Elbre
 date: '2023-03-20 00:00:00'
-heroimage: ./2aaa5a3adcf49612.jpeg
+heroimage: ./hero.jpeg
 layout: blog
 metadata:
   description: When writing server side projects in Go, at some point you will also
@@ -57,8 +57,7 @@ func TestCreateTable(t *testing.T) {
 	})
 }
 
-func WithDatabase[TB testing.TB](ctx context.Context, tb TB,
-test func(t TB, db *pgx.Conn)) {
+func WithDatabase[TB testing.TB](ctx context.Context, tb TB, test func(t TB, db *pgx.Conn)) {
 	// < snip >
 }
 ```
@@ -96,9 +95,7 @@ A single table migration isn't indicative of a proper database layer, but it's s
 Let's get back on track and see how you can implement the first approach. It's should be trivial to convert one to the other:
 
 ```go
-func WithDatabase[TB testing.TB](ctx context.Context, tb TB,
-test func(t TB, db *pgx.Conn)) {
-
+func WithDatabase[TB testing.TB](ctx context.Context, tb TB, test func(t TB, db *pgx.Conn)) {
 	// First we need to specify the image we wish to use.
 	resource, err := dockerPool.RunWithOptions(&dockertest.RunOptions{
 		Repository: "postgres",
@@ -161,10 +158,11 @@ test func(t TB, db *pgx.Conn)) {
 Let's look at the performance:
 
 ```
-Environment                   Test        Time
-Windows Threadripper 2950X    Container   2.86s ± 6%
-MacOS M1 Pro                  Container   1.63s ± 16%
-Linux Xeon Gold 6226R         Container   2.24s ± 10%
+| Environment                  | Test       | Time         |
+| ---------------------------- | ---------- | ------------ |
+| Windows Threadripper 2950X   | Container  | 2.86s ± 6%   |
+| MacOS M1 Pro                 | Container  | 1.63s ± 16%  |
+| Linux Xeon Gold 6226R        | Container  | 2.24s ± 10%  |
 ```
 
 ## Using DATABASE
@@ -259,15 +257,14 @@ func sanitizeDatabaseName(schema string) string {
 
 The performance looks already significantly better:
 
-```
-Environment                   Test        Time
-Windows Threadripper 2950X    Container   2.86s ± 6%
-Windows Threadripper 2950X    Database    136ms ± 12%
-MacOS M1 Pro                  Container   1.63s ± 16%
-MacOS M1 Pro                  Database    136ms ± 12%
-Linux Xeon Gold 6226R         Container   2.24s ± 10%
-Linux Xeon Gold 6226R         Database    135ms ± 10%
-```
+| Environment                  | Test       | Time         |
+| ---------------------------- | ---------- | ------------ |
+| Windows Threadripper 2950X   | Container  | 2.86s ± 6%   |
+| Windows Threadripper 2950X   | Database   | 136ms ± 12%  |
+| MacOS M1 Pro                 | Container  | 1.63s ± 16%  |
+| MacOS M1 Pro                 | Database   | 136ms ± 12%  |
+| Linux Xeon Gold 6226R        | Container  | 2.24s ± 10%  |
+| Linux Xeon Gold 6226R        | Database   | 135ms ± 10%  |
 
 ## Using SCHEMA
 
@@ -331,8 +328,7 @@ func connstrWithSchema(connstr, schema string) (string, error) {
 
 // createSchema creates a new schema in the database.
 func createSchema(ctx context.Context, db *pgx.Conn, schema string) error {
-	_, err := db.Exec(ctx, `CREATE SCHEMA IF NOT EXISTS`
-+ sanitizeSchemaName(schema)+`;`)
+	_, err := db.Exec(ctx, `CREATE SCHEMA IF NOT EXISTS`+sanitizeSchemaName(schema)+`;`)
 	return err
 }
 
@@ -350,18 +346,17 @@ func sanitizeSchemaName(schema string) string {
 
 After running some benchmarks we can see that we've reached ~20ms:
 
-```
-Environment                   Test        Time
-Windows Threadripper 2950X    Container   2.86s ± 6%
-Windows Threadripper 2950X    Database    136ms ± 12%
-Windows Threadripper 2950X    Schema      26.7ms ± 3%
-MacOS M1 Pro                  Container   1.63s ± 16%
-MacOS M1 Pro                  Database    136ms ± 12%
-MacOS M1 Pro                  Schema      19.7ms ± 20%
-Linux Xeon Gold 6226R         Container   2.24s ± 10%
-Linux Xeon Gold 6226R         Database    135ms ± 10%
-Linux Xeon Gold 6226R         Schema      29.2ms ± 16%
-```
+| Environment                  | Test       | Time          |
+| ---------------------------- | ---------- | ------------- |
+| Windows Threadripper 2950X   | Container  | 2.86s ± 6%    |
+| Windows Threadripper 2950X   | Database   | 136ms ± 12%   |
+| Windows Threadripper 2950X   | Schema     | 26.7ms ± 3%   |
+| MacOS M1 Pro                 | Container  | 1.63s ± 16%   |
+| MacOS M1 Pro                 | Database   | 136ms ± 12%   |
+| MacOS M1 Pro                 | Schema     | 19.7ms ± 20%  |
+| Linux Xeon Gold 6226R        | Container  | 2.24s ± 10%   |
+| Linux Xeon Gold 6226R        | Database   | 135ms ± 10%   |
+| Linux Xeon Gold 6226R        | Schema     | 29.2ms ± 16%  |
 
 
 ## Final tweaks
@@ -370,27 +365,26 @@ There's one important flag that you can adjust in Postgres to make it run faster
 
 The final results of the comparison look like:
 
-```
-Environment                   Test        fsync   Time
-Windows Threadripper 2950X    Container   on      2.86s ± 6%
-Windows Threadripper 2950X    Container   off     2.82s ± 4%
-Windows Threadripper 2950X    Database    on      136ms ± 12%
-Windows Threadripper 2950X    Database    off     105ms ± 30%
-Windows Threadripper 2950X    Schema      on      26.7ms ± 3%
-Windows Threadripper 2950X    Schema      off     20.5ms ± 5%
-MacOS M1 Pro                  Container   on      1.63s ± 16%
-MacOS M1 Pro                  Container   off     1.64s ± 13%
-MacOS M1 Pro                  Database    on      136ms ± 12%
-MacOS M1 Pro                  Database    off     105ms ± 30%
-MacOS M1 Pro                  Schema      on      19.7ms ± 20%
-MacOS M1 Pro                  Schema      off     18.5ms ± 31%
-Linux Xeon Gold 6226R         Container   on      2.24s ± 10%
-Linux Xeon Gold 6226R         Container   off     1.97s ± 10%
-Linux Xeon Gold 6226R         Database    on      135ms ± 10%
-Linux Xeon Gold 6226R         Database    off     74.2ms ± 10%
-Linux Xeon Gold 6226R         Schema      on      29.2ms ± 16%
-Linux Xeon Gold 6226R         Schema      off     15.3ms ± 15%
-```
+| Environment                  | Test       | fsync  | Time            |
+| ---------------------------- | ---------- | ------ | --------------- |
+| Windows Threadripper 2950X   | Container  | on     | 2.86s ± 6%      |
+| Windows Threadripper 2950X   | Container  | off    | 2.82s ± 4%      |
+| Windows Threadripper 2950X   | Database   | on     | 136ms ± 12%     |
+| Windows Threadripper 2950X   | Database   | off    | 105ms ± 30%     |
+| Windows Threadripper 2950X   | Schema     | on     | 26.7ms ± 3%     |
+| Windows Threadripper 2950X   | Schema     | off    | 20.5ms ± 5%     |
+| MacOS M1 Pro                 | Container  | on     | 1.63s ± 16%     |
+| MacOS M1 Pro                 | Container  | off    | 1.64s ± 13%     |
+| MacOS M1 Pro                 | Database   | on     | 136ms ± 12%     |
+| MacOS M1 Pro                 | Database   | off    | 105ms ± 30%     |
+| MacOS M1 Pro                 | Schema     | on     | 19.7ms ± 20%    |
+| MacOS M1 Pro                 | Schema     | off    | 18.5ms ± 31%    |
+| Linux Xeon Gold 6226R        | Container  | on     | 2.24s ± 10%     |
+| Linux Xeon Gold 6226R        | Container  | off    | 1.97s ± 10%     |
+| Linux Xeon Gold 6226R        | Database   | on     | 135ms ± 10%     |
+| Linux Xeon Gold 6226R        | Database   | off    | 74.2ms ± 10%    |
+| Linux Xeon Gold 6226R        | Schema     | on     | 29.2ms ± 16%    |
+| Linux Xeon Gold 6226R        | Schema     | off    | 15.3ms ± 15%    |
 
 All the tests were run in a container that didn't have persistent disk mounted. The fsync=off would probably have a bigger impact with an actual disk.
 

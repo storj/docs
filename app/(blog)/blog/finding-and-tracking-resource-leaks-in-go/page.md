@@ -2,7 +2,7 @@
 author:
   name: Egon Elbre
 date: '2022-10-13 00:00:00'
-heroimage: ./d2d97753e00bbc80.png
+heroimage: ./hero.png
 layout: blog
 metadata:
   description: Forgetting to close a file, a connection, or some other resource is

@@ -2,7 +2,7 @@
 author:
   name: Egon Elbre
 date: '2022-03-07 00:00:00'
-heroimage: ./c1245dac8cff160d.jpeg
+heroimage: ./hero.jpeg
 layout: blog
 metadata:
   description: 'A leaked goroutine at the end of a

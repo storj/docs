@@ -188,7 +188,7 @@ Initially, when Ward Cunningham came up with the metaphor, he only had the "code
 
 > And that said that if we failed to make our program align with what we then understood to be the proper way to think about our financial objects, then we were gonna continually stumble over that disagreement and that would slow us down which was like paying interest on a loan.
 >
-> Ward Cunningham, [http://wiki.c2.com/?WardExplainsDebtMetaphor](http://wiki.c2.com/?WardExplainsDebtMetaphor)
+> Ward Cunningham, [wiki](http://wiki.c2.com/?WardExplainsDebtMetaphor)
 
 {% youtube-embed videoId="pqeJFYwnkjE" /%}
 
@@ -250,9 +250,9 @@ For maintenance, it's helpful to isolate problem areas. Some third-party package
 
 The final advice is about acceptance:
 
-*"Not all of a large system will be well designed…"*
-
-* *Eric Evans*
+> Not all of a large system will be well designed...
+>
+> Eric Evans
 
 While the inclination is to try to fix all the problems you notice, it might not make a significant difference to the needed effort to maintain the system. You don't have to rewrite your bash scripts in Haskell for the glory of purity. Your time to implement things is limited and try to figure out how you can make the most impact on the value stream.
 

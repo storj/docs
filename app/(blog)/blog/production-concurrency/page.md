@@ -2,7 +2,7 @@
 author:
   name: Egon Elbre
 date: '2022-07-29 00:00:00'
-heroimage: ./df0a3a1834547b61.jpeg
+heroimage: ./hero.jpeg
 layout: blog
 metadata:
   description: Concurrency is one of those things that's easy to get wrong, even with
@@ -23,7 +23,6 @@ Before we start, I should mention that many of these recommendations will have c
 
 I've seen many times people using concurrency where you should not use it. It should go without saying, don't add concurrency unless you have a good reason.
 
-
 ```go
 var wg sync.WaitGroup
 
@@ -31,12 +30,13 @@ wg.Add(1)
 go serve(&wg)
 wg.Wait()
 ```
-❯
 
+❯
 
 ```go
 serve()
 ```
+
 The concurrency here is entirely unnecessary, but I've seen this exact code in a repository. System without concurrency is much easier to debug, test and understand.
 
 People also add concurrency because they think it will speed up their program. In a production environment, you are handling many concurrent requests anyways, so making one part concurrent doesn't necessarily make the whole system faster.
@@ -51,12 +51,13 @@ server.Start(ctx)
 server.Stop()
 server.Wait()
 ```
-❯
 
+❯
 
 ```go
 server.Run(ctx)
 ```
+
 If you need concurrency when using something, it's relatively easy to make things concurrent. It's much more difficult to do the reverse.
 
 ### Use -race and t.Parallel()
@@ -66,7 +67,6 @@ There are two excellent Go features that help you shake out concurrency bugs fro
 First is -race, which enables the race detector to flag all the observed data races. It can be used with go test -race ./... or go build -race ./yourproject. See [Data Race Detector](https://go.dev/doc/articles/race_detector) for more details.
 
 Second mark your tests with t.Parallel():
-
 
 ```go
 func TestServer(t *testing.T) {
@@ -93,8 +93,8 @@ func TestBeta(t *testing.T) {
 	log.Println("Beta")
 }
 ```
-The output from go test -v will look like:
 
+The output from go test -v will look like:
 
 ```
 === RUN   TestAlpha
@@ -110,6 +110,7 @@ The output from go test -v will look like:
 PASS
 ok      test.test       0.213s
 ```
+
 Notice how the "Alpha" and "Beta" are out of place. The code under test should call t.Log for any testing needs; then, the log lines will appear in the correct location. There's no way to make it work with a global logger.
 
 ### Know when things stop
@@ -123,8 +124,8 @@ go ListenGRPC(ctx)
 go ListenDebugServer(ctx)
 select{}
 ```
-❯
 
+❯
 
 ```go
 g, ctx := errgroup.WithContext(ctx)
@@ -139,6 +140,7 @@ g.Go(func() error {
 }
 err := g.Wait()
 ```
+
 When you don't know when things stop, you don't know when to close your connections, databases, or log files. For example, some stray goroutine might use a closed database and cause panic.
 
 Similarly, when you wait for all goroutines to finish, you can detect scenarios when one of the goroutines has become indefinitely blocked.
@@ -151,8 +153,8 @@ The next common issue is not handling context cancellation. It usually won't be 
 ```go
 time.Sleep(time.Minute)
 ```
-❯
 
+❯
 
 ```go
 tick := time.NewTimer(time.Minute)
@@ -164,6 +166,7 @@ case <-ctx.Done():
 	return ctx.Err()
 }
 ```
+
 time.Sleep cannot react to any code, which means when you press Ctrl-C on your keyboard, it will stay on that line until it finishes. This can increase your test times due to some services shutting down slowly. Or, when doing upgrades on your servers, it can make them much slower to shut down.
 
 *The code for the waiting on the right is much longer, but we can write helpers to simplify it.*
@@ -177,8 +180,8 @@ for _, f := range files {
 	// ...
 }
 ```
-❯
 
+❯
 
 ```go
 for _, f := range files {
@@ -190,6 +193,7 @@ for _, f := range files {
 	// ...
 }
 ```
+
 Here we can introduce a ctx.Err() call to check whether the context has been cancelled. Note ctx.Err() call is guaranteed to be concurrency safe, and it's not necessary to check ctx.Done() separately.
 
 ### No worker pools
@@ -203,7 +207,6 @@ There are many reasons to not use worker pools:
 * They can be slower than spawning a new goroutine.
 
 You can replace your worker pools with a goroutine limiter -- something that disallows from creating more than N goroutines.
-
 
 ```go
 var wg sync.WaitGroup
@@ -224,8 +227,8 @@ for _, work := range items {
 }
 close(queue)
 ```
-❯
 
+❯
 
 ```go
 var wg sync.WaitGroup
@@ -249,7 +252,6 @@ We'll later show how to make a limiter primitive easier to use.
 
 Polling another system is rather wasteful of resources. It's usually better to use some channel or signal to message the other side:
 
-
 ```go
 lastKnown := 0
 for {
@@ -262,8 +264,8 @@ for {
 	t.mu.Unlock()
 }
 ```
-❯
 
+❯
 
 ```go
 lastKnown := 0
@@ -274,6 +276,7 @@ for newState := range t.updates {
 	}
 }
 ```
+
 Polling wastes resources when the update rates are slow. It also responds to changes slower compared to notifying directly. There are many ways to avoid polling, which could be a separate article altogether.
 
 *Of course, if you are making an external request and the external API is out of your control, you might not have any other choice than to poll.*
@@ -290,8 +293,8 @@ for _, item := range items {
 	service.mu.Unlock()
 }
 ```
-❯
 
+❯
 
 ```go
 for _, item := range items {
@@ -303,6 +306,7 @@ for _, item := range items {
 	}()
 }
 ```
+
 Even if your initial code is correct, then code modification can introduce a bug. For example, adding a return inside the loop after the mu.Lock() would leave the mutex locked.
 
 ### Don’t expose your locks
@@ -316,8 +320,8 @@ type Set[T any] struct {
 	Items []T
 }
 ```
-❯
 
+❯
 
 ```go
 type Set[T any] struct {
@@ -325,10 +329,10 @@ type Set[T any] struct {
 	items []T
 }
 ```
+
 ### Name your goroutines
 
 You can make your debugging and stack traces much nicer by adding names to your goroutines:
-
 
 ```go
 labels := pprof.Labels("server", "grpc")
@@ -337,6 +341,7 @@ pprof.Do(ctx, labels,
 		// ...
 	})
 ```
+
 There's an excellent article "[Profiler labels in Go](https://rakyll.org/profiler-labels/)", which explains how to use them.
 
 ## Concurrency Primitives
@@ -363,7 +368,6 @@ If you are surprised that chan and go func() { are so low on the list, we'll sho
 
 ### Common Mistake #1: go func()
 
-
 ```go
 func (server *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	...
@@ -385,6 +389,7 @@ func main() {
 	...
 }
 ```
+
 Notice there's no guarantee that the goroutine finishes before the database is closed. This can introduce weird test failure, where you try to insert into a closed database.
 
 Similarly, another bug, r.Context() could be cancelled prematurely. Of course, this depends on the problem specifics, but when you start a background operation from your handler, you don't want the user to cancel it.
@@ -415,10 +420,10 @@ func process(wg *sync.WaitGroup, item *Item) {
 	...
 }
 ```
+
 Here the problem is that the processConcurrently can return before wg.Add is called. This means that we don't wait for all the goroutines to finish.
 
 The other scenario comes up when people incrementally change code:
-
 
 ```go
 func processConcurrently(item []*Item) {
@@ -437,10 +442,10 @@ func processConcurrently(item []*Item) {
 	}
 }
 ```
+
 Notice how we moved the call to wg.Done outside of the process, making it easier to track the full concurrency. However, due to the extra if filepath.Ext statement, the code is wrong. That check was probably added by someone else at a later time. Similarly, it's one of those cases where tests might easily miss the problem.
 
 To fully fix the code, it should look like this:
-
 
 ```go
 func processConcurrently(item []*Item) {
@@ -459,8 +464,8 @@ func processConcurrently(item []*Item) {
 	}
 }
 ```
-If you don't see the following parts when someone is using sync.WaitGroup, then it probably has a subtle error somewhere:
 
+If you don't see the following parts when someone is using sync.WaitGroup, then it probably has a subtle error somewhere:
 
 ```go
 var wg sync.WaitGroup
@@ -471,10 +476,10 @@ for ... {
 	go func() {
 		defer wg.Done()
 ```
+
 ### Use golang.org/x/sync/errgroup
 
 Instead of sync.WaitGroup there's a better alternative that avoids many of these issues:
-
 
 ```go
 func processConcurrently(item []*Item) error {
@@ -491,8 +496,8 @@ func processConcurrently(item []*Item) error {
 	return g.Wait()
 }
 ```
-errgroup.Group can be used in two ways:
 
+errgroup.Group can be used in two ways:
 
 ```go
 // on failure, waits other goroutines
@@ -518,6 +523,7 @@ g.Go(func() error {
 })
 err := g.Wait()
 ```
+
 You can read [golang.org/x/sync/errgroup documentation](https://pkg.go.dev/golang.org/x/sync/errgroup#Group) for additional information. *Note, errgroup allows to limit the number of goroutines that can be started concurrently.*
 
 ### Primitive: sync.Mutex
@@ -537,10 +543,10 @@ func (cache *Cache) Add(ctx context.Context, key, value string) {
 	}
 }
 ```
+
 You might wonder, what's the problem here. It's appropriately locking and unlocking. The main problem is the call to cache.evictOldItemsand that it's not handling context cancellation. This means that requests could end up blocking behind cache.mu.Lock, and even if they are cancelled you would need to wait for it to get unlocked before you can return.
 
 Instead, you can use a chan \*state, which allows you to handle context cancellation properly:
-
 
 ```go
 type Cache struct {
@@ -570,6 +576,7 @@ func (cache *Cache) Add(ctx context.Context, key, value string) error {
 	}
 }
 ```
+
 Even though the evictOldItems call is still there, it won't prevent other callers to Add to cancel their request.
 
 Use sync.Mutex only for cases where you need to hold the lock for a short duration. Roughly it means that the code is O(N) or better, and N is small.
@@ -610,6 +617,7 @@ err := db.IterateItems(ctx, func(item *Item) {
 	workQueue <- item
 })
 ```
+
 This is probably one of the common ones... forgetting to close the channel. Channels also make the code harder to review compared to using higher-level primitives.
 
 Using chan for communicating between different "goroutine processes" in your application is fine; however, ensure that you handle context cancellations and shut down properly. Otherwise, it's easy to introduce a deadlock.
@@ -632,7 +640,6 @@ I told you to avoid many things in domain code, so what should you do instead?
 
 If you cannot find an appropriate primitive from golang.org/x/sync or other popular libraries... you can write your own.
 
-
 > Writing a separate concurrency primitive is easier to get right than writing ad hoc concurrency logic in domain code.
 
 There are many ways you can write such primitives. The following are merely examples of different ways how you can write them.
@@ -640,7 +647,6 @@ There are many ways you can write such primitives. The following are merely exam
 ### Sleeping
 
 Let's take a basic thing first, sleeping a bit:
-
 
 ```go
 func Sleep(ctx context.Context, duration time.Duration) error {
@@ -710,8 +716,8 @@ func (lim *Limiter) Wait() {
 	lim.working.Wait()
 }
 ```
-This primitive is used the same way as errgroup.Group:
 
+This primitive is used the same way as errgroup.Group:
 
 ```go
 lim := NewLimiter(8)
@@ -726,9 +732,10 @@ for _, item := range items {
 	}
 }
 ```
+
 Of course, if your limited goroutines are dependent on each other, then it can introduce a deadlock.
 
-*AlsonNote that there's a potential "bug" with using such a Limiter. You must not call limiter.Go after you have called limiter.Wait, otherwise the goroutine can be started after limiter.Wait has returned. This can also happen with sync.WaitGroup and errgroup.Group. One way to avoid this problem is to disallow starting goroutines after limiter.Wait has been called. It probably makes sense to rename it to "limiter.Close" in that case.*
+> Note that there's a potential "bug" with using such a Limiter. You must not call limiter.Go after you have called limiter.Wait, otherwise the goroutine can be started after limiter.Wait has returned. This can also happen with sync.WaitGroup and errgroup.Group. One way to avoid this problem is to disallow starting goroutines after limiter.Wait has been called. It probably makes sense to rename it to "limiter.Close" in that case.
 
 #### Batch processing a slice
 
@@ -770,8 +777,8 @@ func (p Parallel) Process(ctx context.Context,
 	}
 }
 ```
-This primitive allows to hide the "goroutine management" from our domain code:
 
+This primitive allows to hide the "goroutine management" from our domain code:
 
 ```go
 var mu sync.Mutex
@@ -791,6 +798,7 @@ err := Parallel{
 	total += price
 })
 ```
+
 ### Running a few things concurrently
 
 Sometimes for testing, you need to start multiple goroutines and wait for all of them to complete. You can use errgroup for it; however, we can write a utility that makes it shorter:
@@ -805,8 +813,8 @@ func Concurrently(fns ...func() error) error {
 	return g.Wait()
 }
 ```
-A test can use it this way:
 
+A test can use it this way:
 
 ```go
 err := Concurrently(
@@ -827,12 +835,12 @@ if err != nil {
 	t.Fatal(err)
 }
 ```
+
 There are many variations of this. Should the function take ctx as an argument and pass it to the child goroutines? Should it cancel all the other functions via context cancellations when one error occurs?
 
 ### Waiting for a thing
 
 Sometimes you want different goroutines to wait for one another:
-
 
 ```go
 type Fence struct {
@@ -875,8 +883,8 @@ func (f *Fence) Wait(ctx context.Context) error {
 	}
 }
 ```
-When we use it together with Concurrently we can write code that looks like:
 
+When we use it together with Concurrently we can write code that looks like:
 
 ```go
 var loaded Fence
@@ -902,6 +910,7 @@ err := Concurrently(
 	},
 )
 ```
+
 ### Protecting State
 
 Similarly, we quite often need to protect the state when concurrently modifying it. We've seen how sync.Mutex is sometimes error-prone and doesn't consider context cancellation. Let's write a helper for such a scenario.
@@ -933,8 +942,8 @@ func (s *Locked[T]) Modify(ctx context.Context, fn func(*T) error) error {
 	}
 }
 ```
-Then we can use it like:
 
+Then we can use it like:
 
 ```go
 state := NewLocked(&State{Value: 123})
@@ -943,12 +952,12 @@ err := state.Modify(ctx, func(state *State) error {
 	return nil
 })
 ```
+
 ### Async processes in a server
 
 Finally, let's take a scenario where we want to start background goroutines inside a server.
 
 Let's first write out the server code, how we would like to use it:
-
 
 ```go
 func (server *Server) Run(ctx context.Context) error {
@@ -978,8 +987,8 @@ func (server *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	...
 }
 ```
-Then let's write the primitive:
 
+Then let's write the primitive:
 
 ```go
 type Jobs struct {
@@ -1012,8 +1021,8 @@ func (jobs *Jobs) Go(requestCtx context.Context, fn func(ctx context.Context)) b
 	return true
 }
 ```
-Of course, we can add a limiter, to prevent too many background workers to be started:
 
+Of course, we can add a limiter, to prevent too many background workers to be started:
 
 ```go
 type Jobs struct {
@@ -1043,10 +1052,10 @@ func (jobs *Jobs) Go(requestCtx context.Context, fn func(ctx context.Context)) b
 	return true
 }
 ```
+
 ### Exercise: Retrying with backoff
 
 As a final exercise for the reader, you can try implementing a retry with backoff. The API for such a primitive can look like this:
-
 
 ```go
 const (
@@ -1063,8 +1072,8 @@ if retry.Err() != nil {
 	return retry.Err()
 }
 ```
-Alternatively, it can be callback based:
 
+Alternatively, it can be callback based:
 
 ```go
 err := Retry(ctx, maxRetries, minWait, maxWait,
@@ -1072,6 +1081,7 @@ err := Retry(ctx, maxRetries, minWait, maxWait,
 		...
 	})
 ```
+
 Additionally, consider where one would be better than the other.
 
 ## Additional resources
@@ -1085,6 +1095,3 @@ One of the best talks about Go concurrency is "[**Rethinking Classical Concurren
 When you struggle with understanding data-races, then "[**Little Book of Semaphores**](https://greenteapress.com/wp/semaphores/)" by **Allen B. Downey** is an excellent resource. It contains many classic problems and exercises to get your brain noticing them.
 
 There has been also some research on the topic "[**Real-World Concurrency Bugs in Go**](https://songlh.github.io/paper/go-study.pdf)" by **Tengfei Tu** et. al. It contains many additional issues not mentioned in this post.
-
-
-

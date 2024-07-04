@@ -29,7 +29,7 @@ In 2016, Google launched [gRPC](https://grpc.io/), which has overall taken the s
 Here at Storj, we’re pioneers in decentralized cloud storage. By early 2018, we built and scaled a 150 petabyte decentralized storage network. Of course, like every good scaling story, by the time we got to 150 petabytes, we discovered some fundamental architectural issues that needed to be reworked. Staring down the barrel of a few hundred thousand lines of untyped Javascript with... sort of decent test coverage, we made the [risky decision](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/) in March of 2018 to fix these architectural issues with a ground-up reimplementation in Go. We're calling this iteration our V3 network, which had its production launch in March of 2020. You can read all about our architecture in [our whitepaper](https://storj.io/storjv3.pdf), and you can [try out our live service](https://www.storj.io/).  
 
 
-*(Aside:* [*We’re hiring engineers!*](https://storj.io/careers/)*)*‍
+*(Aside:* [*We’re hiring engineers!*](https://storj.io/careers/)*)*
 
 Building a new decentralized storage platform from the ground up in Go, obviously, we considered using gRPC to simplify our development process in peer-to-peer remote procedure calling. In fact, I'm not even sure we really considered anything else. Using gRPC for us was a deliberate decision to [avoid using an innovation token](https://mcfunley.com/choose-boring-technology). How could gRPC be the wrong choice? It has impressive credentials and wide usage. We were always disappointed Google didn't release a standard RPC implementation with proto2. With an otherwise previously strongly positive experience with protocol buffers, we were excited to jump all in to the new protobuf RPC land.
 
@@ -61,7 +61,7 @@ On the other hand, DRPC’s core is under 3000 lines! It’s a reasonable task t
   
 
 
-![](./26c69fe77df6e712.png)<https://twitter.com/ProgrammerDude/status/1193646924227854337>‍
+![](./26c69fe77df6e712.png)<https://twitter.com/ProgrammerDude/status/1193646924227854337>
 
 This tweet is from 2019, and as of today, in 2021, WithDefaultServiceConfig is still experimental, and WithBalancerName is still deprecated.
 

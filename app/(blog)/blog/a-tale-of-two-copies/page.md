@@ -32,7 +32,6 @@ func (b *Buffer) Append(ent Entry) error {
 	}
 	return b.appendSlow(ent)
 }
-
 ```
 
 
@@ -478,5 +477,5 @@ I've put up the full code sample in [a gist](https://gist.github.com/zeebo/4c9e2
 
 Often, things are more about the journey than the destination, and I think that's true here, too. If you made it this far, thanks for coming along on the journey with me, and I hope you enjoyed it. Until next time.
 
-‍
+
 

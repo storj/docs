@@ -70,12 +70,12 @@ The data we are exposing include the following statistics: 
 
 * **registered\_accounts** - number of registered user accounts
 
-‍  
+  
 
 
 Since we launched this, one of our community members built this really cool [grafana dashboard](https://storjstats.info/d/storj/storj-network-statistics?orgId=1). Check it out. We’ll be sharing more about this and other community-built dashboards in the coming weeks, but we hope that exposing this data will continue to enable others to build amazing things like this!
 
-‍  
+  
 As we continue to expand on the data points we expose, we’ll be adding more of this data to our [website](http://storj.io) as well. If you have any ideas or suggestions on what else we should be exposing, please open a GitHub [issue](https://github.com/storj/stats/issues) in the [repository](https://github.com/storj/stats) for this project.  
 
 

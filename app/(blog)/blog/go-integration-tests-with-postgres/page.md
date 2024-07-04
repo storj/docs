@@ -396,5 +396,5 @@ All the tests were run in a container that didn't have persistent disk mounted. 
 
 So for the conclusion, we looked at three different approaches to creating a clean Postgres environment. The approaches aren't completely equivalent, but use the fastest one that you can.
 
-‍
+
 

@@ -15,28 +15,25 @@ title: Demystifying Technical Debt
 
 ---
 
-‍
-
-![](./91daf91929515361.png)  
-
+![](./91daf91929515361.png)
 
 “Technical debt” has been bothering me for a while. It looks like a scary monster in the closet. It seems somehow a catchall for different design mistakes, code worsening over time, legacy codebases, and intentional design mistakes due to time constraints. You can take a look at the list of causes in [Wikipedia](https://en.wikipedia.org/wiki/Technical_debt#Causes) if you don’t believe me. It makes you feel like the code is collecting dust when it’s not being maintained, but clearly, that cannot be correct since the code might be unchanged.
 
 Let’s take this piece of code from "Software Tools" by Kernighan and Plauger. It has been unchanged since 1976. Has the technical debt risen for this code? When we talk about things collecting dust, the book example would have more chance of being dusty than code stored digitally.
 
-![](./75c7c37ca0dd4c23.jpeg)  
+![](./75c7c37ca0dd4c23.jpeg)
 
 
 To push the metaphor to the breaking point, how do you measure technical debt, and how large is the interest? How much code would I need to write to pay off all the debt? If I have a lot of code, can I give a technical loan to other people?
 
-![](./132d3b12bc22594e.png)But I digress; this unclear “technical debt” metaphor has caused bad decisions in codebases that don’t need fixing. On the other hand, not understanding it has caused people to overlook actual problems.
+![](./132d3b12bc22594e.png)
+
+But I digress; this unclear “technical debt” metaphor has caused bad decisions in codebases that don’t need fixing. On the other hand, not understanding it has caused people to overlook actual problems.
 
 Before we get to tackle ***technical debt***, we need to take a slight detour.
 
-  
 
-
-# Quality and Effort
+## Quality and Effort
 
 The first problem we need to tackle is ***quality***. When we are talking about code quality, we usually have the following things in mind:
 
@@ -68,7 +65,7 @@ By no means is that list exhaustive. The less obvious part of the effort is "***
 * product - how should the product work
 * business value - how does the product give value to its users
 
-The last major category is about people. You rarely build a product alone. Even if you are the sole coder and owner of the company, you probably still need to com​​municate with your users. So, there’s "***effort in communication***":
+The last major category is about people. You rarely build a product alone. Even if you are the sole coder and owner of the company, you probably still need to communicate with your users. So, there’s "***effort in communication***":
 
 * other developers - asking for help and discussing code design;
 * code reviewers - giving and getting feedback on things that can be improved;
@@ -77,7 +74,7 @@ The last major category is about people. You rarely build a product alone. Even 
 
 We could dive deeper, but the main point is that ***effort*** is not one-dimensional and involves many human factors besides typing code.
 
-# Change in effort
+## Change in effort
 
 It’s an obvious statement that this ***effort*** changes over time. The question is, how?
 
@@ -110,11 +107,11 @@ It’s an obvious statement that this ***effort*** changes over time. The questi
 
 There must be things that we don’t take into account when thinking about technical debt.
 
-# Mistakes everywhere
+## Mistakes everywhere
 
 One of the fundamental laws of software development is that you make mistakes. Technical debt is often associated with bad decisions in the past. Let’s get philosophical – how do we recognize mistakes?
 
-![](./e2acd2ec17692723.png)  
+![](./e2acd2ec17692723.png)
 
 
 When we look at this equation, we have two parts in our head:
@@ -136,14 +133,14 @@ When there’s a breakthrough in technology, people realize that there’s a muc
 
 ![](./afc5ffad22ef3dfa.png)Borrowing technical debt is also nicely explained with this way of thinking. Instead of perceived effort and ideal effort changing separately, they are changed together. Or in other words, we increase perceived effort while knowing that ideal effort would increase it less.
 
-![](./4e80d123d00106b7.png)  
+![](./4e80d123d00106b7.png)
 
 
 This model does seem to explain technical debt quite well and gives us a nice intuition about different situations.
 
 As a side note, it is interesting to consider ***quality debt*** or ***security debt***. However, it’s essential to realize that improving ***quality*** can sometimes increase effort to maintain the software. For example, writing code is much easier if you don’t care about security or performance.
 
-# Pobody’s Nerfect
+## Pobody’s Nerfect
 
 It might seem that “***perceived effort***” and “***ideal effort***” are easy to measure, but they have many dimensions. Similarly, different people may come to different conclusions.
 
@@ -153,7 +150,7 @@ The second question is, which changes? Is it about an arbitrary change in the co
 
 Finally, we need to consider the person evaluating because every person has some biases. Especially when dealing with “***perceived effort***” and “***ideal effort***.”
 
-![](./eafa151edb719f5b.png)  
+![](./eafa151edb719f5b.png)
 
 
 For example, if the person is hyped about a language, framework, or works with a system they know well, they can easily underestimate the average effort. This is due to knowing how to solve common problems and knowing how to avoid the issues in the first place.
@@ -170,7 +167,7 @@ Beginner programmers seem to overestimate the “ideal effort” for newer frame
 
 Overall we can state that the less familiar you are with a codebase, system, tool, the higher your bias can be. The bias can be either positive or negative.
 
-# Technical Debt by Ward Cunningham
+## Technical Debt by Ward Cunningham
 
 Initially, when Ward Cunningham came up with the metaphor, he only had the “code mismatching business ideas” in mind. He was more precise in its formulation than people know.
 
@@ -180,11 +177,11 @@ Initially, when Ward Cunningham came up with the metaphor, he only had the “co
 
 In other words, we improve our “ideal mental model of the system,” and there’s a difference between our code and the ideal mental model. There was no concept of “borrowing,” and that would’ve been an error while developing.
 
-# What can you do about it?
+## What can you do about it?
 
 After all of this discussion, you might wonder how you deal with technical debt.
 
-## Rewrite???
+### Rewrite???
 
 The first inclination for people to get rid of “technical debt” is to rewrite the system. Rewriting carries considerable risk, and the larger the piece you are rewriting, the larger the chance of failure.
 
@@ -200,7 +197,7 @@ Overall, a [rewrite should be the last resort](https://www.joelonsoftware.com/20
 
 Prefer refactoring over rewriting and see "Working Effectively with Legacy Code" by Michael C. Feathers for more recommendations.
 
-## Continuous Learning
+### Continuous Learning
 
 One good way to prevent “technical debt” is to ensure that the developers have a scheduled time to learn about coding and the business. The more the developers know how to do things, the fewer surprises they get about their system. There are many ways to implement these in a company - 20% projects, hack weeks, book clubs, regular presentations by other people.
 
@@ -210,10 +207,7 @@ Finally, a good strategy is to ask for help and guidance. There are plenty of ex
 
 When we learn new things, it’ll actually end up increasing “technical debt” because it lowers the “ideal effort,”… but it will also mean that programmers are more likely to write code that is nearer to that “ideal effort.”
 
-  
-
-
-## Code Reviews
+### Code Reviews
 
 Code reviews significantly help disseminate understanding about the system and learn early about things that could be better.
 
@@ -227,7 +221,7 @@ Ideally, target less than 400 LOC per change. When the change is over 400 LOC, t
 
 While reviewing, always consider whether two similar commits would make it difficult to maintain? If yes, then the next PR should be preceded by an improvement to the structure.
 
-## Maintenance
+### Maintenance
 
 It’s easy to lose sight of the overall picture when implementing things one at a time. Hence, do regular architecture reviews. Think about whether everything feels right. Note down places where people waste their effort and discuss how you can improve these parts.
 
@@ -235,7 +229,7 @@ As programmers, the first inclination is to fix “maintenance effort” with fi
 
 For maintenance, it’s helpful to isolate problem areas. Some third-party packages and libraries are pervasive and can seriously affect the rest of the codebase. By creating a nice wrapper for those systems, they can be made less benign.
 
-## Acceptance
+### Acceptance
 
 The final advice is about acceptance:
 
@@ -245,7 +239,7 @@ The final advice is about acceptance:
 
 While the inclination is to try to fix all the problems you notice, it might not make a significant difference to the needed effort to maintain the system. You don’t have to rewrite your bash scripts in Haskell for the glory of purity. Your time to implement things is limited and try to figure out how you can make the most impact on the value stream.
 
-# Conclusion
+## Conclusion
 
 Technical debt is not “dust” that accumulates on your code, but rather it’s an inherent part of code. Over time you learn and notice mistakes in your systems. Using “technical debt accumulates” is the wrong mentality; instead, it should be considered “discovering technical debt.”
 
@@ -253,7 +247,7 @@ Technical debt is not “dust” that accumulates on your code, but rather it’
 
 **It’s just the realization that you could do better.**
 
-![](./adbf52a20f1b6129.png)  
+![](./adbf52a20f1b6129.png)
   
 
 

@@ -38,11 +38,11 @@ Ok, so most Tesla owners tend to be pretty technical, so, if that describes you,
 * [Raspberry Pi Zero W : ID 3400 : $10.00](https://www.adafruit.com/product/3400) - we used a different model, but this is better.
 * [Adafruit Raspberry Pi Zero Case : ID 3252 : $4.75](https://www.adafruit.com/product/3252) - it should look good - you can 3d print your own for extra credit.
 * Y [Video microSDXC Card](https://www.amazon.com/SanDisk-Endurance-microSDXC-Adapter-Monitoring/dp/B07P4HBRMV) $37 - it’s very important to have high quality storage with high write endurance. This gives you room for a few days in case you don’t connect to WiFi and won't wear out too quickly.
-* [USB A to Micro-B - 3 foot long](https://www.adafruit.com/product/592) - A USB Cable to plug into the car. [‍](https://www.storj.io/)
+* [USB A to Micro-B - 3 foot long](https://www.adafruit.com/product/592) - A USB Cable to plug into the car.
 * [Storj DCS cloud storage](https://www.storj.io/) - Storj provides 25 GB for free and it’s only $0.004 per GB after that! Secure, private, and decentralized.
 * Optional Items for easier setup - A [Mini HDMI to HDMI Cable - 5 feet : ID 2775 : $5.95](https://www.adafruit.com/product/2775) will make it easier to set everything up by connecting the Pi to a monitor.
 
-All in, you’re looking at right around $60 to get going. I’ll wait while you get everything ordered...  
+All in, you’re looking at right around $60 to get going. I’ll wait while you get everything ordered...
 
 
 ### Okay, what’s next?

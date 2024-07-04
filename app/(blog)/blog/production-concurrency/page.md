@@ -1086,5 +1086,5 @@ When you struggle with understanding data-races, then "[**Little Book of Semapho
 
 There has been also some research on the topic "[**Real-World Concurrency Bugs in Go**](https://songlh.github.io/paper/go-study.pdf)" by **Tengfei Tu** et. al. It contains many additional issues not mentioned in this post.
 
-‍
+
 

@@ -69,7 +69,7 @@ spec:
 ```
 
 (Please note that we use **hostPort** here. In a real cluster, service (load balanced, nodeIp) or ingress definition would be required, depending on the environment.)
-‍
+
 
 After deploying this definition to a Kubernetes cluster, we can access the Jupyter notebook application and write our own notebooks.
 
@@ -92,7 +92,7 @@ kubectl logs -l app=jupyter -c jupyter --tail=-1
     	http://jupyter-7546dc9f8c-ww4hb:8888/?token=32bc4f4617fcad6001895c966ce8df539f5f71a243197d5d
  	or http://127.0.0.1:8888/?token=32bc4f4617fcad6001895c966ce8df539f5f71a243197d5d
 ```
-‍
+
 And now we can create a new notebook where we use the Storj data:
 
 ![](./4b79f2e770056a31.png)
@@ -103,7 +103,7 @@ To read data via S3 protocol, we need *boto*, the python S3 library, which can b
 import subprocess
 subprocess.run(["pip", "install","boto3", "pandas"])
 ```
-‍
+
 Next, we can read/use files directly from Storj:
 
 ```python
@@ -124,7 +124,7 @@ df = pd.read_csv(StringIO(csv))
 
 df
 ```
-‍
+
 The approach uses the shared S3 gateway and requires access key and secret credentials generated as documented [here](docId:yYCzPT8HHcbEZZMvfoCFa).
 
 ## Activating the Sidecar
@@ -143,7 +143,7 @@ kubectl create secret generic storj-gateway \
 --from-literal=storj-gateway-secret=$(pwgen -n 18) \
 --from-literal=storj-access-grant=$ACCESS_GRANT
 ```
-‍
+
 Now we can enhance our Kubernetes deployment by adding one more container (put it under spec/template/spec/containers):
 
 ```yaml
@@ -168,7 +168,7 @@ Now we can enhance our Kubernetes deployment by adding one more container (put i
              name: storj-gateway
              key: storj-access-grant
 ```
-‍
+
 This container is configured to access the Storj API (using the STORJ\_ACCESS environment variable) and secured by STORJ\_MINIO\_ACCESS\_KEY and STORJ\_MINIO\_SECRET\_KEY.
 
 Now we can access any Storj object from our Storj bucket, but we can also make it more secure without hard-coding credentials during the initialization of the python S3 client. We should add two more environment variables to the existing Jupyter container to make it available for the client:

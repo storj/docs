@@ -33,7 +33,7 @@ Proceeding constitutes acceptance of our [Terms and conditions](https://www.stor
 
 {% tabs %}
 {% tab label="Linux (Preferred)" %}
-CentOS - A maintained version of CentOS 7
+CentOS - A maintained version of CentOS
 
 Debian - 64-bit version of one of these Debian or Raspbian versions:
 
@@ -64,7 +64,7 @@ VirtualBox is supported (version 4.3.30 and up)
 {% /tab %}
 
 {% tab label="Windows" %}
-Windows 8, Windows Server 2012 or later.
+Windows 10, Windows Server 2016 or later.
 
 **If you are currently running a storage node on Windows using the Docker desktop, it will require monitoring. If you are still running a node with Docker, your node may go offline randomly and require restarting your node, so it is recommended you switch to the** [](docId:5shJebpS3baWj6LDV5ANQ).
 [](docId:jA6Jl8XzCR1nc4_WyJj1a)

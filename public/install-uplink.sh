@@ -15,7 +15,7 @@ os_type_arg=""
 output=false
 output_path=""
 
-usage() { echo "Usage: sudo -v ; curl https://docs.storj.io/install-uplink.sh | sudo bash [-s <os> -t <os-type> -o <output directory>]" 1>&2; exit 1; }
+usage() { echo "Usage: sudo -v ; curl https://storj.dev/install-uplink.sh | sudo bash [-s <os> -t <os-type> -o <output directory>]" 1>&2; exit 1; }
 
 # Option parsing
 while getopts "s:t:o::" opt; do

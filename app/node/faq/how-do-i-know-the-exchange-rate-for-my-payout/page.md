@@ -12,4 +12,4 @@ redirects:
 
 If you want to know the amount of USD a particular storage node payment transaction was considered denominated in, please check out our cost basis tool. You’ll need to enter your payment transaction:
 
-https://costbasis.storj.tools/
+[https://costbasis.storj.tools/](https://costbasis.storj.tools/)

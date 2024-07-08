@@ -15,7 +15,7 @@ Storj currently has community contributed bindings for Python, Swift, .Net, PHP,
 
 Below are Storj's provided bindings:
 
-- [GO](https://github.com/storj/uplink)
+- [Go](https://github.com/storj/uplink)
 
 - [C](https://github.com/storj/uplink-c)
 

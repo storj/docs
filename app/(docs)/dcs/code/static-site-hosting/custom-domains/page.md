@@ -196,7 +196,7 @@ Here is an example the steps required to host a website on a custom domain (e.g.
     If you've already created a share at the root bucket, you must revoke that share to disallow access and recreate the share with the new restriction.
     {% /callout %}
 
-1.  Navigate to your custom domain (e.g <https://my-website.storj.dev/>)
+1.  Navigate to your custom domain (e.g https://my-website.storj.dev/)
 
 ## Considerations if setting up DNS with a CDN like Cloudflare
 

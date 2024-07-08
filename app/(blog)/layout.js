@@ -5,7 +5,8 @@ export const metadata = {
     template: '%s | Storj blog',
     default: 'Storj blog',
   },
-  description: 'Make the world your data center',
+  description:
+    'Learn about the latest developments in the Storj network and the technology that powers it.',
 }
 
 export default function RootLayout({

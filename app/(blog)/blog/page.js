@@ -6,6 +6,12 @@ import Markdoc from '@markdoc/markdoc'
 import yaml from 'js-yaml'
 import LocalImage from '@/components/LocalImage'
 
+export const metadata = {
+  title: 'Storj Engineering Blog',
+  description:
+    'Learn about the latest developments in the Storj network and the technology that powers it.',
+}
+
 function getFrontmatter(filepath) {
   const md = fs.readFileSync(filepath, 'utf8')
   const ast = Markdoc.parse(md)

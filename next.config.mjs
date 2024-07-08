@@ -30,6 +30,8 @@ const nextConfig = {
           let cleanedPath = relativePath
             .replace('app', '')
             .replace('/page.md', '')
+            .replace('(docs)', '')
+            .replace('(blog)', '')
 
           if (cleanedPath === '') {
             cleanedPath = '/'

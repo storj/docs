@@ -39,7 +39,7 @@ Storage Node Fees will not be paid for the following Storage Node usage:
 The following table includes the current Storj Satellite payout rates.
 
 | **Payment Category**       | **Rates as of Dec 1st, 2023** |
-| ---------------------      | ----------------------------- |
+| -------------------------- | ----------------------------- |
 | Storage (per TB per Month) | $1.50                         |
 | Egress (per TB)            | $2.00                         |
 | Audit/Repair (per TB)      | $2.00                         |

@@ -1,9 +1,9 @@
 ---
 title: >-
   How do I know the exchange rate for my payout?
+docId: 6xwcyBYTMDNojI58mxXSd
 metadata:
   description: How to check the exchange rate for your payout
-docId: 6xwcyBYTMDNojI58mxXSd
 redirects:
   - >-
     /node/resources/faq/how-do-i-know-the-exchange-rate-for-my-payout

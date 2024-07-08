@@ -54,6 +54,8 @@ For a detailed understanding of how TB is defined, please see [](docId:59T_2l7c1
 
 [How do I estimate my potential earnings for a given amount of space and bandwidth?](docId:bG8Q88XbTvEPkzsuc02T8)
 
+[](docId:6xwcyBYTMDNojI58mxXSd)
+
 ## Minimum payment thresholds
 
 All Storage Node payouts are subject to a per-wallet minimum threshold. We will not send a transaction where the fee for the transaction is more than 25% of the value of the transaction. The minimum threshold is calculated based on the average transaction fee value in USD from the previous 12 hours at the beginning of the payout process. For example, if the average transaction fee is the equivalent of $12.50, we’ll pay out all wallet addresses that have earned $50.00 and above.

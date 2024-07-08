@@ -12,7 +12,8 @@ const nextConfig = {
   output: 'export',
   distDir: 'dist',
   env: {
-    SITE_URL: 'https://docs.storj.io',
+    SITE_URL: 'https://storj.dev',
+    NEXT_PUBLIC_SITE_URL: 'https://storj.dev',
   },
   experimental: {
     scrollRestoration: true,

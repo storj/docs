@@ -42,3 +42,5 @@ firebase.json
 # next-sitemap
 sitemap*.xml
 robots.txt
+
+public/images/

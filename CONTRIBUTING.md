@@ -26,7 +26,7 @@ Storj's documentation is written using Markdown. See Github's [basic markdown gu
 
 The directory structure of the documentation follows Next.js [app directory routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) conventions. This means that the URL path for a page corresponds to its location in the directory structure.
 
-For example, a page located at `dcs/guide/page.md` would be accessible at `https://docs.storj.io/docs/guide`.
+For example, a page located at `dcs/guide/page.md` would be accessible at `https://storj.dev/docs/guide`.
 
 Every documentation page must be named `page.md`.
 

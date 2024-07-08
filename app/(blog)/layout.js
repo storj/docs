@@ -2,8 +2,8 @@ import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s | Storj blog',
-    default: 'Storj blog',
+    template: '%s | Storj Engineering Blog',
+    default: 'Storj Engineering Blog',
   },
   description:
     'Learn about the latest developments in the Storj network and the technology that powers it.',

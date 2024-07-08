@@ -84,6 +84,7 @@ function getFrontmatter(filepath) {
     redirects: frontmatter.redirects,
     docId: frontmatter.docId,
     weight: frontmatter.weight,
+    date: frontmatter.date,
   }
 }
 
@@ -161,6 +162,16 @@ function sortByWeightThenTitle(arr) {
   })
 }
 
+function sortByDateThenTitle(arr) {
+  arr.sort((a, b) => {
+    if (a.date !== b.date) {
+      return new Date(b.date) - new Date(a.date)
+    } else {
+      return a.title.localeCompare(b.title)
+    }
+  })
+}
+
 export default function (nextConfig = {}) {
   let cache = new Map()
 
@@ -184,7 +195,7 @@ export default function (nextConfig = {}) {
             let blog = walkDir(`${dir}/\(blog\)/blog`, 'blog', {
               hasRoot: false,
             })
-            sortByWeightThenTitle(blog)
+            sortByDateThenTitle(blog)
 
             let getRedirects = (space) => {
               let re = extractRedirects(space)

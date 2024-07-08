@@ -488,13 +488,13 @@ If you use`localhost` or `127.0.0.1` as your `local_IP,` you will not be able to
 
 You can use the [Minio caching technology](https://docs.min.io/docs/minio-disk-cache-guide.html) in conjunction with the hosting of a static website.
 
-> The following example uses `/mnt/drive1`, `/mnt/drive2` ,`/mnt/cache1` ... `/mnt/cache3` for caching, while excluding all objects under bucket `mybucket` and all objects with '.pdf' extensions on a S3 Gateway setup. Objects are cached if they have been accessed three times or more. Cache max usage is restricted to 80% of disk capacity in this example. Garbage collection is triggered when the high watermark is reached (i.e. at 72% of cache disk usage) and will clear the least recently accessed entries until the disk usage drops to the low watermark - i.e. cache disk usage drops to 56% (70% of 80% quota).
+> The following example uses `/mnt/drive1`, `/mnt/drive2` ,`/mnt/cache1` ... `/mnt/cache3` for caching, while excluding all objects under bucket `mybucket` and all objects with '.pdf' extensions on an S3 Gateway setup. Objects are cached if they have been accessed three times or more. Cache max usage is restricted to 80% of disk capacity in this example. Garbage collection is triggered when the high watermark is reached (i.e. at 72% of cache disk usage) and will clear the least recently accessed entries until the disk usage drops to the low watermark - i.e. cache disk usage drops to 56% (70% of 80% quota).
 
 Export the environment variables before running the Gateway:
 
 {% tabs %}
 {% tab label="Windows" %}
-Cache disks are not supported, because caching requires the [`atime`](http://kerolasa.github.io/filetimes.html) function to be enabled.
+Cache disks are not supported, because caching requires the [`atime`](https://kerolasa.github.io/filetimes.html) function to be enabled.
 
 ```Text
 $env:MINIO_CACHE="on"

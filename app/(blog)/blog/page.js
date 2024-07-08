@@ -10,6 +10,9 @@ export const metadata = {
   title: 'Storj Engineering Blog',
   description:
     'Learn about the latest developments in the Storj network and the technology that powers it.',
+  alternates: {
+    canonical: '/blog',
+  },
 }
 
 function getFrontmatter(filepath) {

@@ -71,7 +71,7 @@ If you decided to specify the `zksync-era` wallet feature as an option, you need
 1. Opt-in for zkSync Era payouts for STORJ payments
 
 1. Navigate to [zkSync Bridges](https://zksync.io/explore#bridges).
-   See also [How to add STORJ token to my Wallet](See https://forum.storj.io/t/zksync-era-to-transfer-storj-in-binance-wallet/26119/10?u=alexey).
+   See also [How to add STORJ token to my Wallet](https://forum.storj.io/t/zksync-era-to-transfer-storj-in-binance-wallet/26119/10?u=alexey).
 
 1. Connect your L1 Ethereum wallet
 
@@ -84,7 +84,7 @@ If you decided to specify the `zksync-era` wallet feature as an option, you need
    - software wallets like Metamask, MEW, Fortmatic, Portis, Oper, Dapper, Lattice, Torus and many other.
    - see also https://docs.zksync.io/build/tooling/wallets.html
 
-zkSync Era enables our Storage Node Operators to more easily interact directly with the world of DeFi through solutions like ZigZag, Curve, Uniswap V3, and others.
+zkSync Era enables our Storage Node Operators to more easily interact directly with the world of DeFi through solutions like ZigZag (zkSync Lite only), Uniswap V3, Binance, ByBit and [others](https://zksync.io/explore#exchanges).
 
 We are excited to share this update around payment scaling with our community of operators. If you have any questions about using zkSync Era, check out our documentation.
 

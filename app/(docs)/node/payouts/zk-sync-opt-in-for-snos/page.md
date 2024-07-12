@@ -77,8 +77,6 @@ If you decided to specify the `zksync-era` wallet feature as an option, you need
 
    If you have problems accessing your wallet, you might want to change your payout address to an address that you can access (for which you control the private keys).
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/RjsNN11_jBcPfwXP7FLsU_image.png)
-
    zkSync Era supported wallets:
 
    - WalletConnect, an open source protocol for connecting decentralized applications to mobile wallets.

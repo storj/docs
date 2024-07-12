@@ -53,3 +53,14 @@ Storj's S3 Compatible Object Versioning supports a range of S3 API methods, allo
 - **GET Object**: Retrieves the current version of an object or a specific version if the version ID is specified.
 - **DELETE Object**: Permanently deletes a version of an object if the version ID is provided, or marks the current version as deleted by adding a delete marker.
 - **LIST Versions**: Lists all the versions of all objects in a bucket, including delete markers.
+
+### Bucket Versioning Status
+
+The following are the possible versioning statuses a bucket can be in:
+
+| Status       | Description                                                                                     |
+| ------------ | ----------------------------------------------------------------------------------------------- |
+| Not Supported| The bucket was created prior to the release of object versioning, and versioning cannot be enabled. Create a new bucket to enable versioning. |
+| Unversioned  | Versioning has not been set on the bucket.                                                      |
+| Enabled      | Versioning is enabled for the bucket.                                                           |
+| Suspended    | Versioning was previously enabled, but is currently suspended. You may re-enable versioning at any time. |

@@ -14,7 +14,7 @@ metadata:
 
 [**Hammerspace**](https://hammerspace.com/) is a software solution that creates a global data environment mimicking the experience of local access to globally distributed data. Data connected under Hammerspace can include different, typically incompatible storage types, such as data centers and cloud storage, as well as locations. Hammerspace provides a unified view and control over all connected data as a single, easily accessible dataset.
 
-Contact Hammerspace for a [demo](https://hammerspace.com/hammerspace-software/).
+For more information [contact Hammerspace](https://hammerspace.com/contact-us/)
 
 ## Advantages of Hammerspace with Storj
 

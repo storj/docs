@@ -155,4 +155,4 @@ STORAGE_USERS_S3NG_SECRET_KEY=secret_key # REPLACE ME
 STORAGE_USERS_S3NG_BUCKET=my-bucket # REPLACE ME
 ```
 
-For more information visit <https://owncloud.dev/ocis/deployment/ocis_s3/>
+For more information visit <https://owncloud.dev/services/storage-users/configuration/>

@@ -33,7 +33,7 @@ To add a [](docId:7U4_uu6Pzg6u2N6FpV9VE) you can switch to the **Payment Methods
 
 Please read the [](docId:59T_2l7c1rvZVhI8p91VX) section for details.
 
-## Adding STORJ tokens
+### Adding STORJ tokens
 
 You can select to **Add STORJ Tokens** on the **_Billing - Payment Methods_** screen, the deposit address will be automatically generated for you.
 
@@ -53,7 +53,7 @@ This deposit address supports only L1 ERC20 STORJ transactions on the Ethereum n
 Please note, the payment will be accounted only after some amount of confirmations on the Ethereum network and then StorjScan will send them to your balance. This could take from minutes and up to 4 hours. If it took longer, please [contact support](https://supportdcs.storj.io).
 {% /callout %}
 
-### Viewing transactions
+#### Viewing transactions
 
 You can click the **See transactions** button in the **Billing - Payment Methods** section to see your transactions:
 

@@ -46,7 +46,7 @@ If you click **Add funds** button, you will see a screen with QR code and your d
 When you will pay the needed amount of STORJ, they will be added automatically to your **Available Balance** in USD value.
 
 {% callout type="warning"  %}
-This deposit address supports only L1 ERC20 STORJ transactions on the Ethereum network. zkSync, zkSync-era. polygon and other Layer 2 protocols are not supported at this time.
+This deposit address supports only L1 ERC20 STORJ transactions on the Ethereum network and L2 ERC20 STORJ transactions on the zkSync Era network. zkSync Lite, Polygon and other Layer 2 protocols are not supported at this time.
 {% /callout %}
 
 {% callout type="info"  %}

@@ -33,7 +33,7 @@ To add a [](docId:7U4_uu6Pzg6u2N6FpV9VE) you can switch to the **Payment Methods
 
 Please read the [](docId:59T_2l7c1rvZVhI8p91VX) section for details.
 
-## Adding STORJ tokens
+### Adding STORJ tokens
 
 You can select to **Add STORJ Tokens** on the **_Billing - Payment Methods_** screen, the deposit address will be automatically generated for you.
 
@@ -46,14 +46,14 @@ If you click **Add funds** button, you will see a screen with QR code and your d
 When you will pay the needed amount of STORJ, they will be added automatically to your **Available Balance** in USD value.
 
 {% callout type="warning"  %}
-This deposit address supports only L1 ERC20 STORJ transactions on the Ethereum network. zkSync, zkSync-era. polygon and other Layer 2 protocols are not supported at this time.
+This deposit address supports only L1 ERC20 STORJ transactions on the Ethereum network and L2 ERC20 STORJ transactions on the zkSync Era network. zkSync Lite, Polygon and other Layer 2 protocols are not supported at this time.
 {% /callout %}
 
 {% callout type="info"  %}
 Please note, the payment will be accounted only after some amount of confirmations on the Ethereum network and then StorjScan will send them to your balance. This could take from minutes and up to 4 hours. If it took longer, please [contact support](https://supportdcs.storj.io).
 {% /callout %}
 
-### Viewing transactions
+#### Viewing transactions
 
 You can click the **See transactions** button in the **Billing - Payment Methods** section to see your transactions:
 

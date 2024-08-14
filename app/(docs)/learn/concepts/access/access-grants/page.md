@@ -11,7 +11,7 @@ metadata:
     and encryption or decryption.
 ---
 
-An Access Grant is a bearer token that enables applications to interact with Storj to access objects stored on the service and decrypt them client-side.
+An [Access Grant](docId:M-5oxBinC6J1D-qSNjKYS#access-grant) is a bearer token that enables applications to interact with Storj to access objects stored on the service and decrypt them client-side.
 
 An Access Grant is a security envelope that contains a satellite address, a restricted API Key, and a set of one or more restricted prefix-based encryption keys—everything an application needs to locate an object on the network, access that object, and decrypt it.
 

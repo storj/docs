@@ -11,7 +11,7 @@ metadata:
     and encryption or decryption.
 ---
 
-An Access Grant is a bearer token that enables applications to interact with Storj to access objects stored on the service and decrypt them client-side.
+An [Access Grant](docId:M-5oxBinC6J1D-qSNjKYS#access-grant) is a bearer token that enables applications to interact with Storj to access objects stored on the service and decrypt them client-side.
 
 An Access Grant is a security envelope that contains a satellite address, a restricted API Key, and a set of one or more restricted prefix-based encryption keys—everything an application needs to locate an object on the network, access that object, and decrypt it.
 
@@ -23,7 +23,7 @@ Access Grants coordinate two parallel constructs—encryption and authorization 
 Access Grants are used for access management for client applications using the libuplink library, the CLI, as well as for generating credentials for the S3 compatible gateway (both the hosted GatewayMT and the self-hosted GatewayST).
 {% /callout %}
 
-To make the implementation of these constructs as easy as possible for developers, the Storj developer tools abstract the complexity of encoding objects for access management and encryption/decryption. A simple share command encapsulates an encryption key, an [](docId:XOtletuYWGeA2Om86yvwA) ( a bearer token), and the appropriate Satellite address into an encoded string called an Access Grant.
+To make the implementation of these constructs as easy as possible for developers, the Storj developer tools abstract the complexity of encoding objects for access management and encryption/decryption. A simple share command encapsulates an [encryption key](docId:yI4q9JDB3w01xEkFWA4_z), an [](docId:XOtletuYWGeA2Om86yvwA) (a bearer token), and the appropriate Satellite address into an encoded string called an Access Grant.
 
 Access Grants can be imported easily into an Uplink client, whether it's the CLI, developer library, or a client application. Imported Access Grants are managed client-side and may be leveraged in applications via the uplink client library.
 

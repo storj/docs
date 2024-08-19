@@ -23,24 +23,6 @@ Learn more about [](docId:v0b3GtAU4dDT_1qibwCxc) under Concepts.
 
 To register for an Account, go to Storj.io and choose Start for Free
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/KUG4mPsNpzLXMkulWZJ4W_account01.png)
+Next, select your [](docId:v0b3GtAU4dDT_1qibwCxc), fill out the form and sign up. You'll receive an email asking you to verify your email address with a 6-digit one time verification code.
 
-Next, select your [](docId:v0b3GtAU4dDT_1qibwCxc) in this example, the Americas region:
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/E3ie6SDBodo6Xz1t32IeN_account02.png)
-
-Choose your account type - Personal if you're an individual with a smaller project
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ProKS3n1_rBPBj3PON-Em_account03.png)
-
-Or Professional if you are part of a business interested in leveraging Storj in an application or service
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/He52WhNreWbPyINWumw6-_account04.png)
-
-Fill out the form and sign up. You'll receive an email asking you to verify your email address:
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/by3ZW3r_m_fHXyCGOgml8_account05.png)
-
-Click confirm to verify your email, then log into the Satellite Admin Console with your username and password.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5rma6dFXWcIYqmvAAAitf_account06.png)
+Enter the 6-digit code to verify your email, then log into the Storj Console with your username and password.

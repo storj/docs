@@ -23,8 +23,6 @@ Learn more about Projects in [](docId:M-5oxBinC6J1D-qSNjKYS) under Concepts.
 
 On the Project Dashboard, there are a number of navigational elements and information displays:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ciTyxd2Es4DaozorgD9wQ_dashboardpro1-projectactive.png)
-
 1. **Projects management** - This element allows you to add Projects and switch between different Projects. There you also have a [](docId:jwCUqpDCk8CUuUqFuykFx) setting.
 
 2. **Project Navigation** - This element allows you to move between the different functions related to the project you have selected, to view the [](docId:k6QwBZM3hnzxkCuQxLOal), use the [](docId:4oDAezF-FcfPr0WPl7knd) to interact with data stored on Storj through a web browser interface, create [](docId:XKib9SzjtEXTXWvdyYWX6) for native integrations and credentials for the [](docId:yYCzPT8HHcbEZZMvfoCFa), invite other developers to collaborate with you on your project in [](docId:0_4hY4Dp5ju9B8Ec6OTf3), see [](docId:Hurx0SirlRp_O5aUzew7_), and **Quick Start**, and manage your Account in **My Account**.

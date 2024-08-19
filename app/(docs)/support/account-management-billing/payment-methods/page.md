@@ -27,9 +27,7 @@ Begin by selecting "Billiing" from the "My Account" dropdown menu at the left bo
 
 ## Using a Credit Card
 
-You can select to **Add New Payment Method** to add a Card to your account on the **_Billing - Payment Methods_** screen. You will be prompted to specify Card details.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/C4o1JavxukxpIrcIEGW-B_image.png)
+You can select to **Add New Card** to add a Card to your account on the **_Billing - Payment Methods_** screen. You will be prompted to specify Card details.
 
 You’ll be prompted to add your card information. Using a credit card is somewhat self-explanatory, but there are some key points users should understand:
 

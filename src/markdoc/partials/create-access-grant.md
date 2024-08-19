@@ -2,21 +2,16 @@ A Storj access grant is a serialized, self-contained credential that allows user
 
 Create Access Grant in the Storj Console:
 
-1. Navigate to **Access** on the left side menu.
+1. Navigate to **Access Keys** on the left side menu.
 
-2. Click **Create Access Grant** under the Access Grant block
+2. Click the **New Access Key** button.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/I0a-_XJBVJRkWobIDMI6P_screenshot-2023-07-05-at-22016-pm.png)
-
-3. When the Create Access screen comes up, set specifications according to the following guidelines:
-
-   - **Type:** Access Grant
+3. When the New Access dialog comes up, set specifications according to the following guidelines:
 
    - **Name:** The name of the credentials (e.g. my-access-grant)
+   - **Type:** Access Grant
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ezY2HJuPFEsgyH4p13ebP_screenshot-2023-07-05-at-22057-pm.png)
-
-4. Click **Continue** to provide permissions
+4. Click **Next** to provide permissions, either Full Access or Advanced:
 
    - **Permissions:** All
 
@@ -24,9 +19,7 @@ Create Access Grant in the Storj Console:
 
    - **End date**: provide an expiration date for these credentials (optional)
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
-
-5. Click **Continue** to provide Access encryption Information
+5. Click **Next** to provide Access encryption Information
 
    {% callout type="warning"  %}
    In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
@@ -40,9 +33,6 @@ Create Access Grant in the Storj Console:
 
      - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
-
-
 {% callout type="warning"  %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
 
@@ -51,12 +41,8 @@ Importantly, if you want two access grants to have access to the same data, **th
 Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
 {% /callout %}
 
-6. Click **Create Access** to finish creation of your S3 credentials
+6. Click **Create Access** to finish creation of your Access key.
 
 7. Click **Confirm** the Confirm details pop-up message
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/WAgyNSbTLK8aR3W8btpMg_screenshot-2023-07-05-at-22143-pm.png)
-
-8. Your Access Grant is created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
-
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5c73MkTyjkYBJkkQ42yUF_screenshot-2023-07-05-at-22152-pm.png)
+8. Your Access Grant is created. Write it down and store it, or click the **Download** button. You will need the Access Grant for the following steps.

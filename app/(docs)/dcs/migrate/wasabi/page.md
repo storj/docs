@@ -142,5 +142,3 @@ rclone check wasabi:my-wasabi-bucket storj:my-wasabi-bucket
 This command will compare the source (Wasabi) and destination (Storj) and report any discrepancies.
 
 You can also see the contents of your Wasabi bucket in the Storj Web Console.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/k_hZRrlzb3x4CqXweWmoD_screenshot-2023-07-05-at-30729-pm.png)

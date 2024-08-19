@@ -143,5 +143,3 @@ rclone check backblaze:my-backblaze-bucket storj:my-backblaze-bucket
 This command will compare the source (Backblaze) and destination (Storj) and report any discrepancies.
 
 You can also see the contents of your Backblaze bucket in the Storj Web Console.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b2_bucket_on_storj.png)

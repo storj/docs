@@ -12,7 +12,7 @@ Proceeding constitutes acceptance of our [Terms and conditions](https://www.stor
 ### Recommended
 
 * One processor core for each storage node process
-* One hard drive, JBOD, per storage node process. NO SMR.
+* One hard drive per storage node process. NO SMR. Connect drives without RAID controllers OR configure the RAID controller to passthrough/IT mode.
 * 2 TB of available space per storage node process
 * 1.5 TB per month of transit per TB of storage node capacity; unlimited preferred
 * 3 Mbps upload bandwidth per TB of capacity
@@ -22,7 +22,7 @@ Proceeding constitutes acceptance of our [Terms and conditions](https://www.stor
 ### Minimum
 
 * One processor core for each storage node process
-* One hard drive, JBOD, per storage node process. NO SMR.
+* One hard drive per storage node process. NO SMR. Connect drives without RAID controllers OR configure the RAID controller to passthrough/IT mode.
 * 500 GB of available space per storage node process
 * 1.5 TB per month of transit per TB of storage node capacity
 * 1 Mbps upload bandwidth per TB of capacity

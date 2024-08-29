@@ -31,21 +31,15 @@ The Access Grant screen allows you to create or delete Access Grants, generate c
 
 ## Create Keys for CLI
 
-1. You need to have a satellite account and Uplink CLI installed. See [](docId:HeEf9wiMdlQx9ZdS_-oZS)
+1. You need to have a Storj account and Uplink CLI installed. See [](docId:HeEf9wiMdlQx9ZdS_-oZS)
 
 2. To start, proceed through the initial steps of creating a new Access Grant.
 
-3. Navigate to "Access" page and click the **Create Keys for CLI** link (rightmost option).
+3. Navigate to "Access Keys" page and click the **New Access Key** button, then type an access name and choose **API Key** as an Access type.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/dBMRUSzPsBClfxJaXwk7S_cli-keys.png)
+4. On the next step, select either **Full Access** or **Advanced** if you want to choose the permissions, buckets, and set an expiry date for this access key.
 
-4. Provide name, permissions and optionally buckets, select **Create Keys**.
-
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/NZGAlqeSEv-vuzJW1enUW_cli-keys2.png)
-
-5. Copy and save the **Satellite Address** and **API Key **in a safe place or download them as they will only appear once.
-
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/68ftNpbXKmJkroQyO2C9Q_cli-keys3.png)
+5. Once you create the access key, copy and save the **Satellite Address** and **API Key** in a safe place, or download them as they will only appear once.
 
 6. Make sure you've already [](docId:hFL-goCWqrQMJPcTN82NB) and run `uplink setup`.
 
@@ -108,12 +102,6 @@ The alternative for using the uplink setup command and then uplink share is to u
 # Delete Access Grant
 
 To Delete an Access Grant, select three dots on the right side of the Access Grant and choose **Delete Access**:
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8DjOwU27KCkISKOJs9T3O_access10.png)
-
-Then confirm that you want to delete the Access Grant by typing its name and confirming with **Delete Access** button.
-
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/--lULF4MsGMwhbtfyIa5W_access11.png)
 
 {% callout type="danger"  %}
 **Important:** If you delete an Access Grant from the Satellite user interface, that Access Grant will immediately cease to function, and all hierarchically derived child Access Grants and Storj gateway access credentials based on that Access Grant will also cease to function. Any data uploaded with that Access Grant will persist on Storj. If you didn't back up the Encryption Passphrase used with the Access Grant you are deleting, you will not be able to decrypt that data without that Encryption Passphrase, and it will be effectively unrecoverable.

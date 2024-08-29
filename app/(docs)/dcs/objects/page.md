@@ -50,13 +50,11 @@ uplink cp ~/Downloads/storj-tree.png sj://my-bucket
 
 {% tab label="Storj Console" %}
 
-1. Navigate to **Buckets** on the left side menu
+1. Navigate to **Browse** on the left side menu
 
-1. Select your bucket from the list
+2. Open your bucket from the list
 
-1. Select **Upload**
-
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-console-upload.png)
+3. Click **Upload**
 
 {% /tab %}
 
@@ -98,15 +96,11 @@ uplink cp sj://my-bucket ~/Downloads/storj-tree.png
 
 {% tab label="Storj Console" %}
 
-1. Navigate to **Buckets** on the left side menu
+1. Navigate to **Browse** on the left side menu
 
-1. Select your bucket from the list
+2. Open your bucket from the list
 
-1. Click the 3-dots to show the additonal options menu
-
-1. Select **Download**
-
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-console-download.png)
+3. Click on the Download button on your file.
 
 {% /tab %}
 

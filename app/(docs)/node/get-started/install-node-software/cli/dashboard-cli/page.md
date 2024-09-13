@@ -38,7 +38,7 @@ http://<your-nodes-local-ip>:14002/
 Run the following command to monitor the activity of your node with the CLI dashboard:
 
 ```bash
-docker exec -it storagenode /app/dashboard.sh
+docker exec -it storagenode /app/config/bin/dashboard.sh
 ```
 
 {% callout type="info"  %}

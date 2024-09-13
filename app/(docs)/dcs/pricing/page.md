@@ -52,9 +52,9 @@ Unlike other cloud object storage vendors, we don't use high egress fees to crea
 
 For most users and most usage patterns, we do not expect a Per Segment Fee to be charged. Only when large numbers of segments are stored relative to a disproportionately small amount of data do we expect there to be a Per Segment Fee. Only use cases with large numbers of very small files or large numbers of very small Multipart Upload Parts are expected to be subject to the Per Segment Fee.
 
-Each Segment stored on the network in excess of the default Segment Project Limit is charged a nominal Per Segment fee. The Per Segment Fee is $0.0000088 Per Segment Per Month. Distributed object storage is optimized for large files (several MB or larger - the larger the better). Very small objects generate more overhead with the storage of the metadata for the file than the actual storage of the object. Consequently, we charge a small Per Segment Fee to account for that overhead. If a user is storing even large numbers of big files, the Per Segment Fee will be inconsequential. If a user streams millions of small files, the Per Segment Fee will offset the cost associated with the metadata overhead.
+Each Segment stored on the network is charged a nominal Per Segment fee. The Per Segment Fee is $0.0000088 Per Segment Per Month. Distributed object storage is optimized for large files (several MB or larger - the larger the better). Very small objects generate more overhead with the storage of the metadata for the file than the actual storage of the object. Consequently, we charge a small Per Segment Fee to account for that overhead. If a user is storing even large numbers of big files, the Per Segment Fee will be inconsequential. If a user streams millions of small files, the Per Segment Fee will offset the cost associated with the metadata overhead.
 
-Thd segment Limit will be billed at a rate of $0.0000088 per Segment per month, equivalent to a rate of $0.00000001222 per Segment Hour.
+The segment Limit will be billed at a rate of $0.0000088 per Segment per month, equivalent to a rate of $0.00000001222 per Segment Hour.
 
 The Storj Platform distinguishes between two types of object storage: remote and inline. Remote objects are large enough to erasure code and store the pieces of the file on storage nodes. Inline objects are smaller than the metadata associated with the actual object. In the case of objects that are smaller than the associated metadata, it is more efficient to store the object inline in the satellite metadata database. When storing a large number of tiny files, the best practice is to employ a packing strategy to store larger blocks of small files as a single object.
 
@@ -109,7 +109,7 @@ Assuming a 1TB data set comprised of 1,000 1GB files is stored for an entire mon
 | Part Size | Files | Parts/ S | Segment Hours | Chargeable Segment Hours | Monthly Cost of Per Segment Fee | Monthly cost of storage |
 | :-------- | :---- | :------- | :------------ | :----------------------- | :------------------------------ | :---------------------- |
 | 64MB      | 1,000 | 15,625   | 11.25M        | 11.25M                   | $0.14                           | $4.14                   |
-| 5MB       | 1,000 | 200,000  | 144.0M        | 108.0M                   | $1.32                           | $5.32                   |
+| 5MB       | 1,000 | 200,000  | 144.0M        | 144.0M                   | $1.76                           | $5.76                   |
 
 **Multipart Cost Example 1:**
 

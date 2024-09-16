@@ -45,7 +45,7 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | GetBucketLifecycle (deprecated) | No |  |
 | GetBucketLifecycleConfiguration | No |  |
 | GetBucketLocation | Full | See GetBucketLocation section |
-| GetBucketLogging | No |  |
+| GetBucketLogging | No | Available upon request; see Bucket Logging section below |
 | GetBucketMetricsConfiguration | No |  |
 | GetBucketNotification (deprecated) | No |  |
 | GetBucketNotificationConfiguration | No |  |
@@ -86,7 +86,7 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | PutBucketInventoryConfiguration | No |  |
 | PutBucketLifecycle (deprecated) | No |  |
 | PutBucketLifecycleConfiguration | No |  |
-| PutBucketLogging | No |  |
+| PutBucketLogging | No | Available upon request; see Bucket Logging section below |
 | PutBucketMetricsConfiguration | No |  |
 | PutBucketNotification (deprecated) | No |  |
 | PutBucketNotificationConfiguration | No |  |
@@ -119,6 +119,9 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 Full compatibility means that we support all features of a specific action
 except for features that rely on other actions that we haven't fully
 implemented.
+
+### Bucket Logging
+Bucket Logging is available upon request. Please refer to [](docId:0191fc71-e031-761c-a16b-aa8ca9e44413).
 
 ### GetBucketLocation
 

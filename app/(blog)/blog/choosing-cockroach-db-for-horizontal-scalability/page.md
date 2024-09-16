@@ -32,7 +32,7 @@ When considering a database that will horizontally scale there are three main ca
 2. Use a NoSQL key-value database, like Cassandra or BigTable.
 3. Use a NewSQL relational database, like Spanner or CockroachDB.
 
-Before the 2000s there weren’t any horizontally scaling database options. The only way to scale a database was to manually shard it yourself. Which is typically very tedious and kind of a nightmare. For example, it took Google over two years to shard some of their MySQL instances<sup>1</sup>. Quite the undertaking! No wonder Google came up with the first “NewSQL” horizontally scalable relational database, Spanner.
+Before the 2000s there weren’t any horizontally scaling database options. The only way to scale a database was to manually shard it yourself. Which is typically very tedious and kind of a nightmare. For example, it took Google over two years to shard some of their MySQL instances (1). Quite the undertaking! No wonder Google came up with the first “NewSQL” horizontally scalable relational database, Spanner.
 
 In the early 2000s, NoSQL became all the rage since they were the first horizontally scaling options. However, NoSQL has some tradeoffs, mainly weaker consistency guarantees, and no relational models. And here we are in the 2020s, finally what we always wanted, which is the rise of the strongly consistent, relational, horizontally scaling database.
 
@@ -83,7 +83,7 @@ Took 4m53.3s for 1000,000 records
 Took 1h48m25.1s for 10,000,000 records
 ```
 
-Another awesome feature of CockroachDB is prefix compression. CockroachDB data is stored in sorted order by the primary key and any prefix shared with the previous record is dropped<sup>2</sup>. This saved a lot more space than we expected. While the data stored in CockroachDB is replicated three times (by default), the additional bytes on disk was just a little over two times Postgres since the prefix compression saved quite a bit of space.
+Another awesome feature of CockroachDB is prefix compression. CockroachDB data is stored in sorted order by the primary key and any prefix shared with the previous record is dropped (2). This saved a lot more space than we expected. While the data stored in CockroachDB is replicated three times (by default), the additional bytes on disk was just a little over two times Postgres since the prefix compression saved quite a bit of space.
 
 ```
 Prefix compression:

@@ -9,11 +9,12 @@ metadata:
 The `GetBucketLogging` and `PutBucketLogging` actions are not available, however, you can get the same functionality by following the steps below.
 
 {% callout type="info" %}
-**Request Bucket Logging:** This feature is currently provided upon request - please submit your request here: 
+**Request Bucket Logging:** This feature is currently provided upon request - please submit your request here, and include "Enable Bucket Logging" as the subject: 
 
 [Submit a support request](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000379291)
 
-Please use "Enable Bucket Logging" as the subject.
+_Note: It may take up to two weeks to process your request._
+
 {% /callout %}
 
 ## Enabling Bucket Logging

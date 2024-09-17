@@ -22,10 +22,11 @@ To enable bucket logging, you will be asked to provide us with the following inf
 
 ### Information Needed to Enable Logging
 
-| **Item**           | **Details**          |
-|--------------------|----------------------|
-| **Project Name**   | Your project's name  |
-| **Bucket Name(s)** | The bucket(s) to log |
+| **Item**           | **Details**                                        |
+|--------------------|----------------------------------------------------|
+| **Satellite**      | The Satellite your project is on: AP1, EU1, or US1 |
+| **Project Name**   | Your project's name                                |
+| **Bucket Name(s)** | The bucket(s) to log                               |
 
 ### Information About the Destination for Logs
 
@@ -37,6 +38,10 @@ To enable bucket logging, you will be asked to provide us with the following inf
 | **Write-only Access Grant**  | Access grant with write-only permissions (see steps below) |
 
 ### Steps to Create a Write-Only Access Grant for Logging Destination
+
+{% callout type="info" %}
+**Important:** Access grants used to access the watched bucket need to be created after June 25th 2024.
+{% /callout %}
 
 1. **Generate a New Access Grant:**
 

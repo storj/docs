@@ -74,15 +74,15 @@ The Access Grant screen allows you to create or delete Access Grants, generate c
    {% code-group %}
 
    ```windows
-   ./uplink.exe share --readonly=false
+   ./uplink.exe access restrict --readonly=false
    ```
 
    ```linux
-   uplink share --readonly=false
+   uplink access restrict --readonly=false
    ```
 
    ```macos
-   uplink share --readonly=false
+   uplink access restrict --readonly=false
    ```
 
    {% /code-group %}
@@ -94,7 +94,7 @@ The Access Grant screen allows you to create or delete Access Grants, generate c
 9. Your Access Grant should have been output.
 
 {% callout type="success"  %}
-The alternative for using the uplink setup command and then uplink share is to use the `uplink access create` command instead, it will print the Access Grant right away.
+The alternative for using the `uplink setup` command and then `uplink access restrict` is to use the `uplink access create` command instead, it will print the Access Grant right away.
 {% /callout %}
 
 ---

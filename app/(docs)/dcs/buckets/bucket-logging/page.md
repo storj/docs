@@ -9,11 +9,11 @@ metadata:
 The `GetBucketLogging` and `PutBucketLogging` actions are not available, however, you can get the same functionality by following the steps below.
 
 {% callout type="info" %}
-**Request Bucket Logging:** This feature is currently provided upon request - please submit your request here: 
+**Request Bucket Logging:** This feature is currently provided upon request - please submit your request here, and include "Enable Bucket Logging" as the subject: 
 
 [Submit a support request](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000379291)
 
-Please use "Enable Bucket Logging" as the subject.
+_Note: It may take up to two weeks to process your request._
 {% /callout %}
 
 ## Enabling Bucket Logging
@@ -22,10 +22,11 @@ To enable bucket logging, you will be asked to provide us with the following inf
 
 ### Information Needed to Enable Logging
 
-| **Item**           | **Details**          |
-|--------------------|----------------------|
-| **Project Name**   | Your project's name  |
-| **Bucket Name(s)** | The bucket(s) to log |
+| **Item**           | **Details**                                        |
+|--------------------|----------------------------------------------------|
+| **Satellite**      | The Satellite your project is on: AP1, EU1, or US1 |
+| **Project Name**   | Your project's name                                |
+| **Bucket Name(s)** | The bucket(s) to log                               |
 
 ### Information About the Destination for Logs
 
@@ -37,6 +38,10 @@ To enable bucket logging, you will be asked to provide us with the following inf
 | **Write-only Access Grant**  | Access grant with write-only permissions (see steps below) |
 
 ### Steps to Create a Write-Only Access Grant for Logging Destination
+
+{% callout type="info" %}
+**Important:** Access grants used to access the watched bucket need to be created after June 25th 2024.
+{% /callout %}
 
 1. **Generate a New Access Grant:**
 

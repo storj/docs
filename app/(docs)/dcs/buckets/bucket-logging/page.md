@@ -14,7 +14,6 @@ The `GetBucketLogging` and `PutBucketLogging` actions are not available, however
 [Submit a support request](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000379291)
 
 _Note: It may take up to two weeks to process your request._
-
 {% /callout %}
 
 ## Enabling Bucket Logging

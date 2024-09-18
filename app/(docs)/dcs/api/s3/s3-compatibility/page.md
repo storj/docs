@@ -59,9 +59,9 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | GetBucketWebsite | No |  |
 | GetObject | Partial | We need to add support for the partNumber parameter |
 | GetObjectAcl | No |  |
-| GetObjectLegalHold | No |  |
-| GetObjectLockConfiguration | No |  |
-| GetObjectRetention | No |  |
+| GetObjectLegalHold | No | Currently in active development. See [](docId:gjrGzPNnhpYrAGTTAUaj) |
+| GetObjectLockConfiguration | No | Currently in active development. See [](docId:gjrGzPNnhpYrAGTTAUaj) |
+| GetObjectRetention | Yes (Beta) | [](docId:gjrGzPNnhpYrAGTTAUaj) |
 | GetObjectTagging | Full | Tags can be modified outside of tagging endpoints |
 | GetObjectTorrent | No |  |
 | GetPublicAccessBlock | No |  |
@@ -73,7 +73,7 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | ListBucketMetricsConfigurations | No |  |
 | ListBuckets | Full |  |
 | ListMultipartUploads | Partial | See ListMultipartUploads section |
-| ListObjectVersions | Yes (Beta) |  |
+| ListObjectVersions | Yes (Beta) | [](docId:gjrGzPNnhpYrAGTTAUaj) |
 | ListObjects | Partial | See ListObjects section |
 | ListObjectsV2 | Partial | See ListObjects section |
 | ListParts | Full |  |
@@ -95,13 +95,13 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | PutBucketReplication | No |  |
 | PutBucketRequestPayment | No | Planned support status needs verification |
 | PutBucketTagging | No |  |
-| PutBucketVersioning | Yes (Beta) |  |
+| PutBucketVersioning | Yes (Beta) | [](docId:gjrGzPNnhpYrAGTTAUaj) |
 | PutBucketWebsite | No |  |
 | PutObject | Full |  |
 | PutObjectAcl | No |  |
 | PutObjectLegalHold | No |  |
-| PutObjectLockConfiguration | No |  |
-| PutObjectRetention | No |  |
+| PutObjectLockConfiguration | No | Currently in active development. See [](docId:gjrGzPNnhpYrAGTTAUaj) |
+| PutObjectRetention | Yes (Beta) | [](docId:gjrGzPNnhpYrAGTTAUaj) |
 | PutObjectTagging | Full | Tags can be modified outside of tagging endpoints |
 | PutPublicAccessBlock | No |  |
 | RestoreObject | No |  |

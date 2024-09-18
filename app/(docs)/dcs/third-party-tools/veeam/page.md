@@ -126,6 +126,13 @@ S3 Compatible Object Lock is currently in development. For more information plea
 1.  In the **Select Folder** field, select **Browse** and find the cloud folder in your "veeam" bucket to map your object storage repository, if it already exists. If not, you can select **New Folder** to make a new one.
 
 1.  If desired, select the **Limit object storage consumption to** check box to define a soft limit that can be exceeded temporarily for your object storage consumption. Enter a limit value in terabytes or petabytes.
+
+1. If desired, select the **Make recent backups immutable for** check box to define a retention period. Enter a retention period in days.
+    {% callout type="info" %}
+      **Immutability Requirements**
+
+      Veeam's immutability setting uses S3-Compatible Object Lock, which is currently in Beta. For more information and instructions on setting up your bucket with Object Lock, please refer to our documentation here: [](docId:gjrGzPNnhpYrAGTTAUaj).
+    {% /callout %}
     ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YOE-le-vX4D0wfn7tnrey_archiverepositorys3cbucket.png)
 
 1.  Select **Next**.

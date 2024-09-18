@@ -6,7 +6,14 @@ metadata:
   title: 'Object Versioning in Storj'
 ---
 
-Storj has released S3 Compatible Object Versioning in open beta. 
+{% callout type="info" %}
+**Beta Service Release**
+
+S3-Compatible Object Versioning is currently available as pre-production beta and may not be suitable for all production environments.
+
+Please refer to our [Terms of Service](https://www.storj.io/legal/terms-of-service) for more information on release definitions.
+{% /callout %}
+
 
 ## How do I opt in to the object versioning beta?
 
@@ -15,10 +22,6 @@ You need to opt in to the object versioning beta per project. To opt in to the o
 1. Login to the Storj web console
 2. Navigate to the desired project
 3. You will be prompted to enable object versioning for the project
-
-{% callout type="warning"  %}
-Object versioning is currently in open beta and may not be suitable for all production environments.
-{% /callout %}
 
 ## How does object versioning work?
 
@@ -32,7 +35,7 @@ Object versioning enables you to preserve, retrieve, and restore every version o
 
 - **Recovery and Rollback:** In case of accidental deletion or if an object is overwritten with an undesired version, you can easily recover the previous version of the object.
 
-
+- **Object Lock:** For more details on Object Lock support see [](docId:gjrGzPNnhpYrAGTTAUaj).
 
 {% callout type="info" %}
 Note that enabling object versioning can increase storage costs since each version of an object is stored separately.
@@ -40,7 +43,7 @@ Note that enabling object versioning can increase storage costs since each versi
 
 ### Supported S3 API Methods for Object Versioning
 
-Storj's S3 Compatible Object Versioning supports a range of S3 API methods, allowing you to manage and interact with versioned objects. Below are the key S3 API methods supported by Storj's object versioning, along with a brief description of their use:
+Storj's S3-Compatible Object Versioning supports a range of S3 API methods, allowing you to manage and interact with versioned objects. Below are the key S3 API methods supported by Storj's object versioning, along with a brief description of their use:
 
 #### Bucket Operations
 

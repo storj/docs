@@ -8,7 +8,7 @@ metadata:
 {% callout type="info" %}
 **Beta Service Release**
 
-S3 Compatible Object Lock is currently available as pre-production beta and may not be suitable for all production environments.
+S3-Compatible Object Lock is currently available as pre-production beta and may not be suitable for all production environments.
 
 Please refer to our [Terms of Service](https://www.storj.io/legal/terms-of-service) for more information on release definitions.
 {% /callout %}
@@ -16,18 +16,27 @@ Please refer to our [Terms of Service](https://www.storj.io/legal/terms-of-servi
 ## Summary
 
 ### Overview
-Storj is currently developing S3 Compatible Object Lock. As part of that development, we have released an early Beta Service Release that can be used to evaluate the functionality.
+Storj is currently developing [](docId:oogh5vaiGei6atohm5thi). As part of that development, we have released an early Beta Service Release, which includes **S3-Compatible Object Lock**, that can be used to evaluate the functionality.
 
-## Instructions
-1. Login to the Storj web console
+## Beta Opt-In Instructions
+1. Login to the [Storj web console](https://redirects.storj.io/login)
 2. Navigate to the desired project
 3. You will be prompted to enable the Object Versioning beta for the project which includes the Object Lock feature
     - If you have already joined the Object Versioning beta, you already have access to the Object Lock actions
 	- If you do not see the prompt you can navigate to the project settings, where you will see information about the beta
 
+## Enabling Object Lock on a Bucket
+{% callout type="info" %}
+Object Lock is not backwards compatible with existing buckets—a new bucket must be created to enable Object Lock.
+
+Additionally, PutObjectLockConfiguration is not supported yet, so Object Lock can only be enabled during bucket creation and cannot be added afterward.
+{% /callout %}
+
+{% partial file="create-bucket.md" /%}
+
 ### FAQ
 - **When will Object Lock be fully released?**
-	- We are actively working onGovernance Mode and Legal Hold and plan to add them to the beta by as soon as they are ready.
+	- We are actively working on Governance Mode and Legal Hold and plan to add them to the beta by as soon as they are ready.
 	- The full feature set will be released as generally available some time after the beta is feature complete
 - **Why would I test this Beta?**
 	- If you plan to conduct a proof of concept or want to test a a pre-production instance of an integration that utilizes object lock. 

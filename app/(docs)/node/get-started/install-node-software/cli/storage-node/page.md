@@ -37,7 +37,7 @@ The writeability and readability checks are performed on the storage location, n
 **Linux Users:** You **must** static mount via /etc/fstab. Failure to do so will put you in high risk of failing audits and getting disqualified. Here's how to do that: [](docId:nZeFxmawYPdgkwUPy6f9s)
 {% /callout %}
 
-{% callout type="warning"  %}
+{% callout type="info"  %}
 You need to allow an execution for the `bin` subfolder in your storage location
 Replace the `<storage-dir>` with your parameter.
 
@@ -61,7 +61,7 @@ docker run --rm -e SETUP="true" \
 
 {% tab label="macOS" %}
 
-{% callout type="warning"  %}
+{% callout type="info"  %}
 You need to allow an execution for the `bin` subfolder in your storage location. 
 Replace the `<storage-dir>` with your parameter.
 

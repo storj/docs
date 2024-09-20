@@ -41,7 +41,7 @@ The writeability and readability checks are performed on the storage location, n
 You need to allow an execution for the `bin` subfolder in your storage location
 Replace the `<storage-dir>` with your parameter.
 
-```
+```shell
 mkdir -p <storage-dir>/bin
 chmod +x <storage-dir>/bin
 ```
@@ -65,7 +65,7 @@ docker run --rm -e SETUP="true" \
 You need to allow an execution for the `bin` subfolder in your storage location. 
 Replace the `<storage-dir>` with your parameter.
 
-```
+```shell
 mkdir -p <storage-dir>/bin
 chmod +x <storage-dir>/bin
 ```

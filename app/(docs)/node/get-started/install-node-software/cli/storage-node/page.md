@@ -34,11 +34,11 @@ The writeability and readability checks are performed on the storage location, n
 {% tabs %}
 {% tab label="Linux" %}
 {% callout type="danger"  %}
-**Linux Users:** You **must** static mount via /etc/fstab. Failure to do so will put you in high risk of failing audits and getting disqualified. Here's how to do that: [](docId:nZeFxmawYPdgkwUPy6f9s)
+**Linux Users:** You **must** static mount via /etc/fstab. Failure to do so will put you in high risk of failing audits and getting disqualified. The mount options must include `exec` permission. Here's how to do that: [](docId:nZeFxmawYPdgkwUPy6f9s)
 {% /callout %}
 
 {% callout type="info"  %}
-You need to allow an execution for the `bin` subfolder in your storage location
+You need to allow an execution for the `bin` subfolder in your storage location. The disk mount options must include `exec` permission.
 Replace the `<storage-dir>` with your parameter.
 
 ```shell

@@ -48,7 +48,7 @@ Ubuntu - 64-bit version of one of these Ubuntu versions:
 - Bionic 18.04 (LTS) or later
 
 > **Make sure you use static mount for your hard drive via**
-> **/etc/fstab**:
+> **/etc/fstab and drive is mounted with `exec` permission**:
 > See [](docId:nZeFxmawYPdgkwUPy6f9s).
 
 {% /tab %}

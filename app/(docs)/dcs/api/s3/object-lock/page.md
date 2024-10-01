@@ -19,11 +19,8 @@ Please refer to our [Terms of Service](https://www.storj.io/legal/terms-of-servi
 Storj is currently developing [](docId:oogh5vaiGei6atohm5thi). As part of that development, we have released an early Beta Service Release, which includes **S3-Compatible Object Lock**, that can be used to evaluate the functionality.
 
 ## Beta Opt-In Instructions
-1. Login to the [Storj web console](https://redirects.storj.io/login)
-2. Navigate to the desired project
-3. You will be prompted to enable the Object Versioning beta for the project which includes the Object Lock feature
-    - If you have already joined the Object Versioning beta, you already have access to the Object Lock actions
-	- If you do not see the prompt you can navigate to the project settings, where you will see information about the beta
+To gain access to S3-compatible Object Lock, you'll need to opt into the **Object Versioning Beta** following the steps below:
+{% partial file="versioning-opt-in.md" /%}
 
 ## Enabling Object Lock on a Bucket
 {% callout type="info" %}

@@ -19,11 +19,9 @@ Please refer to our [Terms of Service](https://www.storj.io/legal/terms-of-servi
 
 ## How do I opt in to the object versioning beta?
 
-You need to opt in to the object versioning beta per project. To opt in to the object versioning beta, you can follow these steps:
+To opt in to the object versioning beta, you can follow these steps:
 
-1. Login to the Storj web console
-2. Navigate to the desired project
-3. You will be prompted to enable object versioning for the project
+{% partial file="versioning-opt-in.md" /%}
 
 ## How does object versioning work?
 

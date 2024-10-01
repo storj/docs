@@ -33,7 +33,7 @@ To integrate Storj with Veeam, you will need to create S3 credentials in Storj a
 - A bucket for Veeam in your Storj instance.
 - An installation of Veeam.
 
-{% callout %} Important Note: Please be sure to use at least **large** and ideally **extra large blocks** as demonstrated in the Job Creation Wizard below. {% /callout %}
+{% callout %} Important Note: Please be sure to use at least **4MB** as demonstrated in the Job Creation Wizard below. {% /callout %}
 
 Download a [free trial](https://www.veeam.com/vm-backup-recovery-replication-software.html) of Veeam or [create a Veeam account](https://www.veeam.com/signin.html?client_id=my-veeam-com).
 
@@ -97,7 +97,7 @@ Setting a value higher than 64 can increase throughput backing up (offloading) t
 
 1. In the **Service point** field, specify an endpoint address of your S3 Compatible object storage. This will be the endpoint from the S3 credentials that you downloaded, and should be the following or similar: **https\://gateway.storjshare.io**
 
-1. In the **Region** field, specify a region, such as **us-east-1**.
+1. In the **Region** field, enter **storj**.
 
 1. To add the Storj credentials, selecy the **Add...** button next to the **Credentials** drop-down list. Enter the access key and session key in their corresponding fields. Add an optional description in the **Description** field, if desired.
    {% callout type="info" %}
@@ -115,9 +115,9 @@ Setting a value higher than 64 can increase throughput backing up (offloading) t
 
 #### Specify the bucket settings
 
-1.  From the **Bucket** drop-down list, select the "veeam" bucket created earlier.
+1.  From the **Bucket** drop-down list, select the bucket name created earlier.
 
-1.  In the **Select Folder** field, select **Browse** and find the cloud folder in your "veeam" bucket to map your object storage repository, if it already exists. If not, you can select **New Folder** to make a new one.
+1.  In the **Select Folder** field, select **Browse** and find the cloud folder in your bucket to map your object storage repository, if it already exists. If not, you can select **New Folder** to make a new one.
 
 1.  If desired, select the **Limit object storage consumption to** check box to define a soft limit that can be exceeded temporarily for your object storage consumption. Enter a limit value in terabytes or petabytes.
 
@@ -149,13 +149,7 @@ Use the New **Backup Job wizard** to configure the backup job. Follow the steps 
 
 3. Upon opening Advanced - Storage, you will be presented with the option of selecting Storage Optimization.
 Veeam recommends the default of 1MB because increasing the block size can result in larger incremental backups. 
-However, Storj's recommended setting for object storage is **4MB** or **8MB**. 
+However, Storj's recommended setting for object storage is **4MB**. 
 Taking into account [Storj segment cost](docId:59T_2l7c1rvZVhI8p91VX#per-segment-fee), using larger block sizes both reduces overall Storj costs and provides better backup and restore times.
-{% callout type="info"  %}
-To enable **8MB** as a Storage Optimization option, create a **UIShowLegacyBlockSize** (DWORD, 1) registry value under the `HKLM\SOFTWARE\Veeam\Veeam Backup and Replication` key on the backup server. This requires Veeam 11a or newer.
-
-You may need to reboot or restart the Veeam services for the change to take effect in Veeam's user interface.
-{% /callout %}
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam_advanced_settings.png) 
-

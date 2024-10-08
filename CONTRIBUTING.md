@@ -26,7 +26,7 @@ Storj's documentation is written using Markdown. See Github's [basic markdown gu
 
 The directory structure of the documentation follows Next.js [app directory routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) conventions. This means that the URL path for a page corresponds to its location in the directory structure.
 
-For example, a page located at `dcs/guide/page.md` would be accessible at `https://docs.storj.io/docs/guide`.
+For example, a page located at `dcs/guide/page.md` would be accessible at `https://storj.dev/docs/guide`.
 
 Every documentation page must be named `page.md`.
 
@@ -36,7 +36,7 @@ The front matter is a section at the beginning of each Markdown file (page.md) t
 
 **title:** The title of the article or page. This is typically displayed at the top of the page.
 
-**docId:** A unique identifier for the document. This can be used for internal tracking and linking. See [Internal Linking](/CONTRIBUTING.md#internal-linking)
+**docId:** A unique identifier for the document. This can be used for internal tracking and linking. See [Internal Linking](/CONTRIBUTING.md#internal-linking). If you're making a new page, generate a new unique ID with `pwgen -1 16` or something similar. 
 
 **redirects:** A list of URLs that should redirect to this page. This is useful for maintaining links when a page's URL changes or for creating aliases for a page.
 

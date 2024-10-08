@@ -18,7 +18,7 @@ function TrafficLightsIcon(props) {
 
 export function Hero({ className }) {
   return (
-    <div className={clsx('overflow-hidden', className)}>
+    <div className={clsx('overflow-hidden border-b-2 border-slate-100 dark:border-slate-900', className)}>
       <div className="py-16 sm:px-2 lg:relative lg:px-0 lg:py-20">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 lg:max-w-8xl lg:grid-cols-2 lg:px-8 xl:gap-x-16 xl:px-12">
           <div className="relative z-10 md:text-center lg:text-left">

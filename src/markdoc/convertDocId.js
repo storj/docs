@@ -7,6 +7,7 @@ import {
   dcsBottomNav,
   learnBottomNav,
   supportBottomNav,
+  blogBottomNav,
 } from '@/markdoc/navigation.mjs'
 
 function getFrontmatter(filePath) {
@@ -50,6 +51,9 @@ export function convertDocId(href) {
   }
   if (!entry) {
     entry = learnBottomNav.find((o) => o.docId === docId)
+  }
+  if (!entry) {
+    entry = blogBottomNav.find((o) => o.docId === docId)
   }
 
   if (!entry) {

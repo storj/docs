@@ -9,6 +9,7 @@ import {
   nodeBottomNav,
   learnBottomNav,
   supportBottomNav,
+  blogBottomNav,
 } from '@/markdoc/navigation.mjs'
 
 function ArrowIcon(props) {
@@ -25,7 +26,7 @@ function PageLink({ dir = 'next', title, href, ...props }) {
       <dt className="font-display text-sm font-medium text-slate-900 dark:text-white">
         {dir === 'next' ? 'Next' : 'Previous'}
       </dt>
-      <dd className="mt-1">
+      <dd className="not-prose mt-1">
         <Link
           href={href}
           className={clsx(
@@ -55,6 +56,8 @@ export function PrevNextLinks() {
     allLinks = learnBottomNav
   } else if (pathname.startsWith('/support')) {
     allLinks = supportBottomNav
+  } else if (pathname.startsWith('/blog')) {
+    allLinks = blogBottomNav
   }
 
   let linkIndex = allLinks.findIndex((link) => link.href === pathname)

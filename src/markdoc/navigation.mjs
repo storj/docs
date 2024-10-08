@@ -84,20 +84,24 @@ function getFrontmatter(filepath) {
     redirects: frontmatter.redirects,
     docId: frontmatter.docId,
     weight: frontmatter.weight,
+    date: frontmatter.date,
   }
 }
 
-function walkDir(dir, space, currentPath = '') {
-  const filepath =
-    space == 'dcs' ? dir + '/../page.md' : path.join(dir, 'page.md')
-  let fm = getFrontmatter(filepath)
-  let entry = {
-    ...fm,
-    links: [],
-    href: space == 'dcs' ? '/' : `/${space}`,
+function walkDir(dir, space, opts = { hasRoot: true }) {
+  if (opts.hasRoot) {
+    const filepath =
+      space == 'dcs' ? dir + '/../page.md' : path.join(dir, 'page.md')
+    let fm = getFrontmatter(filepath)
+    let entry = {
+      ...fm,
+      links: [],
+      href: space == 'dcs' ? '/' : `/${space}`,
+    }
+    return [entry, ...walkDirRec(dir, space, '')]
   }
 
-  return [entry, ...walkDirRec(dir, space, currentPath)]
+  return [...walkDirRec(dir, space, '')]
 }
 
 function walkDirRec(dir, space, currentPath) {
@@ -158,6 +162,16 @@ function sortByWeightThenTitle(arr) {
   })
 }
 
+function sortByDateThenTitle(arr) {
+  arr.sort((a, b) => {
+    if (a.date !== b.date) {
+      return new Date(b.date) - new Date(a.date)
+    } else {
+      return a.title.localeCompare(b.title)
+    }
+  })
+}
+
 export default function (nextConfig = {}) {
   let cache = new Map()
 
@@ -170,14 +184,18 @@ export default function (nextConfig = {}) {
             let dir = path.resolve('./app')
             this.addContextDependency(dir)
 
-            let dcs = walkDir(`${dir}/dcs`, 'dcs')
+            let dcs = walkDir(`${dir}/\(docs\)/dcs`, 'dcs')
             sortByWeightThenTitle(dcs)
-            let node = walkDir(`${dir}/node`, 'node')
+            let node = walkDir(`${dir}/\(docs\)/node`, 'node')
             sortByWeightThenTitle(node)
-            let learn = walkDir(`${dir}/learn`, 'learn')
+            let learn = walkDir(`${dir}/\(docs\)/learn`, 'learn')
             sortByWeightThenTitle(learn)
-            let support = walkDir(`${dir}/support`, 'support')
+            let support = walkDir(`${dir}/\(docs\)/support`, 'support')
             sortByWeightThenTitle(support)
+            let blog = walkDir(`${dir}/\(blog\)/blog`, 'blog', {
+              hasRoot: false,
+            })
+            sortByDateThenTitle(blog)
 
             let getRedirects = (space) => {
               let re = extractRedirects(space)
@@ -189,6 +207,7 @@ export default function (nextConfig = {}) {
               ...getRedirects(node),
               ...getRedirects(learn),
               ...getRedirects(support),
+              ...getRedirects(blog),
             ]
             let firebaseConfig = JSON.parse(
               fs.readFileSync('firebase.base.json', 'utf8')
@@ -208,6 +227,7 @@ export default function (nextConfig = {}) {
             let nodeBottomNav = extractHrefObjects(structuredClone(node))
             let learnBottomNav = extractHrefObjects(structuredClone(learn))
             let supportBottomNav = extractHrefObjects(structuredClone(support))
+            let blogBottomNav = extractHrefObjects(structuredClone(blog))
 
             // When this file is imported within the application
             // the following module is loaded:
@@ -216,12 +236,14 @@ export default function (nextConfig = {}) {
               export const nodeNavigation = ${JSON.stringify(node)}
               export const learnNavigation = ${JSON.stringify(learn)}
               export const supportNavigation = ${JSON.stringify(support)}
+              export const blogNavigation = ${JSON.stringify(blog)}
               export const dcsBottomNav = ${JSON.stringify(dcsBottomNav)}
               export const nodeBottomNav = ${JSON.stringify(nodeBottomNav)}
               export const learnBottomNav = ${JSON.stringify(learnBottomNav)}
               export const supportBottomNav = ${JSON.stringify(
                 supportBottomNav
               )}
+              export const blogBottomNav = ${JSON.stringify(blogBottomNav)}
             `
           }),
         ],

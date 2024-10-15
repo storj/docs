@@ -129,5 +129,11 @@ The network-attached storage location could work, but it is neither supported no
 {% /callout %}
 
 {% callout type="warning"  %}
-Please, note - we intentionally specified`/mnt/storj2/storagenode-new` as the data source in the `--mount` parameter and not `/mnt/storj2/storagenode-new/storage` because the `storagenode` docker container will add a subfolder called`storage` to the path automatically. So please, make sure that your data folder contains a `storage` subfolder with all the data inside (`blobs` folder, database files, etc.), otherwise the node will start from scratch since it can't find the data in the right subfolder and will be disqualified in a few hours.
+Please, note - we intentionally specified`/mnt/storj2/storagenode-new` as the data source in the `--mount` parameter and not `/mnt/storj2/storagenode-new/storage` because the `storagenode` docker container will add a subfolder called `storage` to the path automatically. So please, make sure that your data folder contains a `storage` subfolder with all the data inside (`blobs` folder, database files, etc.), otherwise the node will start from scratch since it can't find the data in the right subfolder and will be disqualified in a few hours.
+{% /callout %}
+
+{% callout type="warning"  %}
+If you migrating across platforms (x86-64 -> x86-32, x86 -> ARM, etc.), please remove binaries from the `bin` subfolder in the storage location to allow the container to download binaries for your new platform.
+
+Related to these changes: https://github.com/storj/storagenode-docker/issues/23
 {% /callout %}

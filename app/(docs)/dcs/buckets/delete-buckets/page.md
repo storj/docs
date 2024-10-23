@@ -86,7 +86,7 @@ uplink rm --recursive --encrypted --parallelism 30 sj://my-bucket
 {% callout type="warning"  %}
 If there are millions of objects, it could timeout. In that case it's highly recommended to use [`rclone purge`](https://rclone.org/commands/rclone_purge/),
 [`uplink rb --force`](docId:Wo5-shT0hZDNMeyM1kA12), [`aws s3 rb --force`](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html),
-[](docId:QQGzEDU8o-IodQWmr7xP3) even if the encryption phrase is lost or [](docId:3Vj_5zZ99c4mTMRhQjGFM) (_[**FileZilla Free**](docId:OkJongWeLGhPy4KKz34W4) or [**FileZilla PRO with a Storj Native integration**](docId:APk9353kCNcg5PKRPQ06u#storj-file-zilla-pro-via-native-uplink) wouldn't work if the encryption phrase is lost, you need to use [**FileZilla PRO with Storj S3 integration**](docId:APk9353kCNcg5PKRPQ06u#storj-file-zilla-pro-via-gateway-mt) in that case_)
+[](docId:QQGzEDU8o-IodQWmr7xP3) even if the encryption phrase is lost or [](docId:3Vj_5zZ99c4mTMRhQjGFM) (_Please note, [**FileZilla Free**](docId:OkJongWeLGhPy4KKz34W4) or [**FileZilla PRO with a Storj Native integration**](docId:APk9353kCNcg5PKRPQ06u#storj-file-zilla-pro-via-native-uplink) wouldn't work if the encryption phrase is lost, you need to use [**FileZilla PRO with Storj S3 integration**](docId:APk9353kCNcg5PKRPQ06u#storj-file-zilla-pro-via-gateway-mt) in that case_)
 {% /callout %}
 
 {% /tab %}

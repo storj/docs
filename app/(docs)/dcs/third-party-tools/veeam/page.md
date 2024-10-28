@@ -14,7 +14,7 @@ metadata:
 
 **Veeam Backup & Replication** is an all-in-one backup, recovery, and data security solution that serves both on-premises and cloud storage. It is the foundation of the Veeam Platform and delivers simple, flexible, reliable, and powerful data protection.
 
-For more information, visit [veeam.com](). You can also [download a free trial](https://www.veeam.com/vm-backup-recovery-replication-software.html) for 30 days.
+For more information, visit [veeam.com](https://www.veeam.com/). You can also [download a free trial](https://www.veeam.com/vm-backup-recovery-replication-software.html) for 30 days.
 
 ## Advantages of Veeam with Storj
 

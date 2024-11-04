@@ -14,6 +14,9 @@ To integrate Storj with Aspera, you will need to create S3 credentials in Storj 
 
 This document is written for IBM Aspera HSTS version 4.4.4 on Redhat Linux.
 
+Refer to Aspera's [Setup and Configuration in Amazon S3](https://www.ibm.com/docs/en/ahts/4.4.x?topic=sutos-setup-configuration-in-amazon-s3-1) 
+documentation for more detailed configuration.
+
 ### Requirements
 
 - An active Storj account
@@ -44,6 +47,7 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 These instructions are designed for IBM Aspera HSTS on Redhat.
 
+
 ### Creating a Document Root for Storj in Aspera
 
 Aspera user interfaces allow dynamic connections to Amazon S3, but not to S3 compatible endpoints such as Storj.
@@ -52,29 +56,21 @@ This document root will allow Aspera users to connect to Storj transparently wit
 
 ```
 # vi /opt/aspera/etc/aspera.conf
+# asconfigurator -x "set_user_data;user_name,[account];absolute,s3://[s3_account_id]:[s3_secret_key]]@gateway.storjshare.io/[bucket]"
 ```
 
+
+### Install the Aspera Trapd Service
+
+The Aspera Trapd service enables Aspera to write to object storage.  
+If you have not previously enabled it, run the following command.
+
 ```
-<?xml version='1.0' encoding='UTF-8'?>
-<CONF version="2">
-...
-    <default>
-        <file_system>
-            <access>
-                <paths>
-                    <path>
-                        <absolute>s3://[access_key_id]:[secret_key]@gateway.storjshare.io/[bucket]</absolute>
-                        <dir_allowed>true</dir_allowed>
-                        <read_allowed>true</read_allowed>
-                        <write_allowed>true</write_allowed>
-                    </path>
-                </paths>
-            </access>
-        </file_system>
-    </default>
-...
-</CONF>
+dnf install initscripts chkconfig
+/opt/aspera/bin/astrap-config.sh enable
 ```
+
+You may alternatively create a similar `file_system` node beneath the `default` tag to enable Storj for all accounts.
 
 
 ### Edit Aspera S3 Properties to Require HTTPS
@@ -93,16 +89,12 @@ Update Aspera's `s3.properties` file to require HTTPS.
 s3service.https-only=true
 ```
 
+
 ### Testing Storj + Aspera Integration Locally
 
-You may test these settings on the HSTS server itself by running the `ascp` command:
+After restarting the Aspera service, you should be able to test local transfers to Storj using the following command:
 
 ```
-# ascp -P 33001 -v [testfile] localhost:/
-```
-
-If you're not testing under an account authorized for use with Aspera, you can use the following format:
-
-```
+# systemctl restart asperanoded
 # ascp -P 33001 -v [testfile] [account]@localhost:/
 ```

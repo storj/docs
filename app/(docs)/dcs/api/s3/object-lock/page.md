@@ -63,7 +63,7 @@ Additionally, PutObjectLockConfiguration is not supported yet, so Object Lock ca
 ---
 * PutObjectRetention
 * Places an object retention configuration on an object.
-* The only value supported for `Mode` is `COMPLIANCE` as Governance Mode is initially out of scope. 
+* 
 ---
 * GetObjectRetention
 * Retrieves an object's retention settings. 
@@ -84,13 +84,13 @@ Additionally, PutObjectLockConfiguration is not supported yet, so Object Lock ca
 * HeadObject
 * Retrieves metadata from an object without returning the object itself.
 * HeadObject will now return:
-  * Mode (only Compliance is supported initially) that is currently in place for the requested object
+  * Mode that is currently in place for the requested object
   * Date/time that the object's lock will expire
 ---
 * GetObject
 * Retrieves an object from a bucket.
 * GetObject will now return:
-  * Mode (only Compliance is supported initially) that is currently in place for the requested object
+  * Mode that is currently in place for the requested object
   * Date/time that the object's lock will expire
 ---
 * PutObject
@@ -99,19 +99,19 @@ Additionally, PutObjectLockConfiguration is not supported yet, so Object Lock ca
   * Prevent locked object versions from being overwritten
   
   PutObject will now accept the following request parameters:
-  * `x-amz-object-lock-mode` (only Compliance is supported initially)
+  * `x-amz-object-lock-mode`
   * `x-amz-object-lock-retain-until-date`
 ---
 * CopyObject
 * Creates a copy of an object that is already stored on Storj.
 * CopyObject will now accept the following request parameters:
-  * `x-amz-object-lock-mode` (only Compliance is supported initially)
+  * `x-amz-object-lock-mode`
   * `x-amz-object-lock-retain-until-date`
 ---
 * CreateMultipartUpload
 * This action initiates a multipart upload and returns an upload ID.
 * CreateMultipartUpload will now accept the following request parameters:
-  * `x-amz-object-lock-mode` (only Compliance is supported initially)
+  * `x-amz-object-lock-mode`
   * `x-amz-object-lock-retain-until-date`
   
   Storj has a unique object level TTL. Any request that has both a TTL and a retention period will be rejected to prevent TTL's from conflicting with object lock retention periods.
@@ -123,6 +123,14 @@ Additionally, PutObjectLockConfiguration is not supported yet, so Object Lock ca
 * DeleteObject
 * Removes an object from a bucket.
 * Deletion of an object with a retention set will be prevented.
+---
+* GetObjectLegalHold
+* Retrieves the Legal Hold status of an object.
+* 
+---
+* PutObjectLegalHold
+* Applies a Legal Hold to the specified object.
+* 
 {% /table %}
 
 ### Actions not yet available (currently in active development)
@@ -137,11 +145,4 @@ Additionally, PutObjectLockConfiguration is not supported yet, so Object Lock ca
 
   **Rule**: Specifies the Object Lock rule (mode and period) for the bucket. The period can be either `Days` or `Years`.
 ---
-* GetObjectLegalHold
-* Retrieves the Legal Hold status of an object.
-* 
----
-* PutObjectLegalHold
-* Applies a Legal Hold to the specified object.
-* 
 {% /table %}

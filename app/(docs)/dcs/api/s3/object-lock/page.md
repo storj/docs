@@ -25,23 +25,17 @@ To gain access to S3-compatible Object Lock, you'll need to opt into the **Objec
 ## Enabling Object Lock on a Bucket
 {% callout type="info" %}
 Object Lock is not backwards compatible with existing buckets—a new bucket must be created to enable Object Lock.
-
-Additionally, PutObjectLockConfiguration is not supported yet, so Object Lock can only be enabled during bucket creation and cannot be added afterward.
 {% /callout %}
 
 {% partial file="create-bucket.md" /%}
 
 ### FAQ
 - **When will Object Lock be fully released?**
-	- We are actively working on Governance Mode and Legal Hold and plan to add them to the beta by as soon as they are ready.
-	- The full feature set will be released as generally available some time after the beta is feature complete
+	- Object lock will be released soon - the target is December 2024 or January 2025
 - **Why would I test this Beta?**
 	- If you plan to conduct a proof of concept or want to test a a pre-production instance of an integration that utilizes object lock. 
 - **How do I test the Beta?**
     - See instructions above
-- **Why doesn't the initial version support Governance Mode and Legal Hold?**
-	- Our initial goal was to implement the most common S3 features regarding immutability and deliver them as quickly as possible, which led us to focus on the strictest form of object lock: Compliance Mode.
-	- We are actively working on Governance Mode, Legal Hold, and the `PutObjectLockConfiguration` action and will add them to the beta as soon as they are ready
 - **How do I give feedback or request features related to Object Lock?**
 	- Our roadmap is public. Here are the relevant roadmap items:
 		- [S3 Object Lock: Compliance Mode](https://github.com/storj/roadmap/issues/47)

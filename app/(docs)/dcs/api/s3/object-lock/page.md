@@ -67,6 +67,13 @@ Object Lock is not backwards compatible with existing buckets—a new bucket mus
 ---
 * GetObjectRetention
 * Retrieves an object's retention settings. 
+---
+* GetObjectLegalHold
+* Retrieves the Legal Hold status of an object.
+* 
+---
+* PutObjectLegalHold
+* Applies a Legal Hold to the specified object.
 * 
 {% /table %}
 
@@ -123,12 +130,4 @@ Object Lock is not backwards compatible with existing buckets—a new bucket mus
 * DeleteObject
 * Removes an object from a bucket.
 * Deletion of an object with a retention set will be prevented.
----
-* GetObjectLegalHold
-* Retrieves the Legal Hold status of an object.
-* 
----
-* PutObjectLegalHold
-* Applies a Legal Hold to the specified object.
-* 
 {% /table %}

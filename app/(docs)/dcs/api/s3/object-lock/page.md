@@ -61,6 +61,12 @@ Additionally, PutObjectLockConfiguration is not supported yet, so Object Lock ca
   
   `Rule` will not be included as a response element as specifying a bucket-level object Lock rule is initially out of scope.
 ---
+* PutObjectLockConfiguration
+* Enables Object Lock configuration on a bucket.
+* **ObjectLockEnabled**: Indicates if Object Lock is enabled on the bucket.
+
+  **Rule** (Optional): Specifies the Object Lock rule (mode and period) for the bucket. The period can be either `Days` or `Years`.
+---
 * PutObjectRetention
 * Places an object retention configuration on an object.
 * 
@@ -131,18 +137,4 @@ Additionally, PutObjectLockConfiguration is not supported yet, so Object Lock ca
 * PutObjectLegalHold
 * Applies a Legal Hold to the specified object.
 * 
-{% /table %}
-
-### Actions not yet available (currently in active development)
-{% table %}
-* Action
-* API Description
-* Description of Change(s)
----
-* PutObjectLockConfiguration
-* Enables Object Lock configuration on a bucket.
-* **ObjectLockEnabled**: Indicates if Object Lock is enabled on the bucket.
-
-  **Rule**: Specifies the Object Lock rule (mode and period) for the bucket. The period can be either `Days` or `Years`.
----
 {% /table %}

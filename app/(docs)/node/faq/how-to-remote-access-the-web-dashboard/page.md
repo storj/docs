@@ -5,6 +5,7 @@ redirects:
   - /node/resources/faq/how-to-remote-access-the-web-dashboard
 ---
 
+# Access the Single Node Dashboard Using ssh
 ## Enable the web dashboard for your setup
 
 {% tabs %}
@@ -422,3 +423,6 @@ Now check your connection: try to connect from your ssh client again, it should 
 To add more security you can install applications such as `fail2ban` to your Linux or macOS server.
 
 Now, you can make a port forwarding rule on your router for the `22` TCP port (default ssh port) to your ssh server. For more security we recommend to forward an unusual port to the 22 port of the PC with ssh.
+
+# Access nodes stat using Multinode Dashboard
+See [Multinode Dashboard (Preview)](https://forum.storj.io/t/tech-preview-multinode-dashboard-binaries/14572) for details.

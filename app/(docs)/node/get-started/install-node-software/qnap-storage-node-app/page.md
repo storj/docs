@@ -5,6 +5,7 @@ redirects:
   - /node/sno-applications/qnap-storage-node-app
 ---
 
+
 ## Introduction
 
 In this guide, we are going to walk through the installation process for the Storage Node QNAP application for your QNAP NAS Device – enabling you to:
@@ -21,7 +22,7 @@ For a video walkthrough of this process, please see below:
 
 - [](docId:aT6VAB297OWLd4vqeXxf5)
 
-- Download the [QNAP Binary](https://github.com/storj-thirdparty/qnap-storagenode-app/releases/latest)
+- Download the [QNAP Binary](https://github.com/storj-thirdparty/qnap-storagenode-app/releases/latest)  - NOTE: This version(V1.1.4) is not compatible with any QTS version higher than 5.0
 
 ## Sharing Capacity Prerequisites
 

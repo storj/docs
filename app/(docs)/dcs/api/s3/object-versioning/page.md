@@ -1,5 +1,5 @@
 ---
-title: Object Versioning (Beta)
+title: Object Versioning
 docId: oogh5vaiGei6atohm5thi
 metadata:
   description: Detailed guide on enabling object versioning for buckets
@@ -7,23 +7,6 @@ metadata:
 redirects:
   - /dcs/buckets/object-versioning
 ---
-
-{% callout type="info" %}
-**Beta Service Release**
-
-S3-Compatible Object Versioning is currently available as pre-production beta and may not be suitable for all production environments.
-
-Please refer to our [Terms of Service](https://www.storj.io/legal/terms-of-service) for more information on release definitions.
-{% /callout %}
-
-
-## How do I opt in to the object versioning beta?
-
-To opt in to the object versioning beta, you can follow these steps:
-
-{% partial file="versioning-opt-in.md" /%}
-
-## How does object versioning work?
 
 Object versioning enables you to preserve, retrieve, and restore every version of every object stored in a bucket. This feature adds an extra layer of data protection and recovery options, allowing you to safeguard against accidental deletions and overwrites.
 

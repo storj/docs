@@ -1,46 +1,21 @@
 ---
-title: Object Lock (Beta)
+title: Object Lock
 docId: gjrGzPNnhpYrAGTTAUaj
 metadata:
-  description: Detailed guide on the Beta of object lock
-  title: 'Object Lock (Beta)'
+  description: S3 Guide to Object Lock
+  title: 'Object Lock'
 ---
-{% callout type="info" %}
-**Beta Service Release**
+Object Lock allows you to protect objects from being deleted or overwritten for a specified period or indefinitely. Object Lock operates in three modes:
 
-S3-Compatible Object Lock is currently available as pre-production beta and may not be suitable for all production environments.
+- **Governance Mode**: Protects objects against accidental deletion but allows authorized users to bypass the lock.
+- **Compliance Mode**: Provides immutable protection; no user can delete or modify the object until the retention period expires.
+- **Legal Hold**: Prevents an object from being deleted until the legal hold is explicitly removed, regardless of retention settings.
 
-Please refer to our [Terms of Service](https://www.storj.io/legal/terms-of-service) for more information on release definitions.
-{% /callout %}
+{% partial file="override-governance-mode-callout.md" /%}
 
-## Summary
-
-### Overview
-Storj is currently developing [](docId:oogh5vaiGei6atohm5thi). As part of that development, we have released an early Beta Service Release, which includes **S3-Compatible Object Lock**, that can be used to evaluate the functionality.
-
-## Beta Opt-In Instructions
-To gain access to S3-compatible Object Lock, you'll need to opt into the **Object Versioning Beta** following the steps below:
-{% partial file="versioning-opt-in.md" /%}
-
-## Enabling Object Lock on a Bucket
-{% callout type="info" %}
-Object Lock is not backwards compatible with existing buckets—a new bucket must be created to enable Object Lock.
-{% /callout %}
-
-{% partial file="create-bucket.md" /%}
-
-### FAQ
-- **When will Object Lock be fully released?**
-	- Object lock will be released soon - the target is December 2024 or January 2025
-- **Why would I test this Beta?**
-	- If you plan to conduct a proof of concept or want to test a a pre-production instance of an integration that utilizes object lock. 
-- **How do I test the Beta?**
-    - See instructions above
-- **How do I give feedback or request features related to Object Lock?**
-	- Our roadmap is public. Here are the relevant roadmap items:
-		- [S3 Object Lock: Compliance Mode](https://github.com/storj/roadmap/issues/47)
-		- [S3 Object Lock: Add Governance Mode and Legal Hold](https://github.com/storj/roadmap/issues/98)
-	- You may also submit a support request here: [https://support.storj.io/hc/en-us/requests/new](https://support.storj.io/hc/en-us/requests/new)
+## Using Object Lock
+- For enabling object lock, and setting bucket level defaults please see [](docId:e94a86fc-3deb-42f0-b7fe-1f80c675930a)
+- For object lock related object operations please see [](docId:uyuWpwchZx29f28UGAILP)
 
 ## Technical Details
 ### New S3 Actions Supported:

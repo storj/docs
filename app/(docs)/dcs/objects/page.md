@@ -105,3 +105,109 @@ uplink cp sj://my-bucket ~/Downloads/storj-tree.png
 {% /tab %}
 
 {% /tabs %}
+
+## Locking an Object
+
+### Locking a New Object Upon Upload
+
+{% tabs %}
+
+{% tab label="aws cli" %}
+
+```shell {% title="aws cli" %}
+aws s3api put-object \
+  --bucket my-object-lock-bucket \
+  --key my-file.txt \
+  --body my-file.txt \
+  --object-lock-mode COMPLIANCE \
+  --object-lock-retain-until-date 2025-01-01T00:00:00Z \
+  --endpoint-url https://gateway.storjshare.io
+```
+
+{% /tab %}
+
+{% tab label="Storj Console" %}
+
+You cannot lock an object on upload via the Storj Console. You must first upload then lock the object version OR have default retention settings on the bucket.
+
+{% /tab %}
+
+{% /tabs %}
+
+### Locking an Existing Object
+
+{% tabs %}
+
+{% tab label="aws cli" %}
+
+```shell {% title="aws cli" %}
+aws s3api put-object-retention \
+  --bucket my-object-lock-bucket \
+  --key my-file.txt \
+  --version-id <version-id> \
+  --retention "Mode=COMPLIANCE,RetainUntilDate=2025-06-01T00:00:00Z" \
+  --endpoint-url https://gateway.storjshare.io
+```
+
+{% /tab %}
+
+{% tab label="Storj Console" %}
+
+1. Navigate to **Browse** on the left side menu
+
+2. Open your bucket from the list
+
+3. Toggle "Show Versions"
+
+4. Locate the object you want to modify and open the quick action menu.
+
+5. Select "Legal Hold" to add a legal hold
+
+6. Select "Lock" to add a retention period in Compliance or Governance Mode
+
+7. Select a Lock Type and Retention Priod
+
+8. Click "Set Lock" to save
+
+{% /tab %}
+
+{% /tabs %}
+
+### Extending Retention Period
+
+Retention periods can only be extended, not reduced or removed.
+
+{% tabs %}
+
+{% tab label="aws cli" %}
+
+```shell {% title="aws cli" %}
+aws s3api put-object-retention \
+  --bucket my-object-lock-bucket \
+  --key my-file.txt \
+  --version-id <version-id> \
+  --retention "Mode=COMPLIANCE,RetainUntilDate=2025-07-01T00:00:00Z" \
+  --endpoint-url https://gateway.storjshare.io
+```
+
+{% /tab %}
+
+{% tab label="Storj Console" %}
+
+1. Navigate to **Browse** on the left side menu
+
+2. Open your bucket from the list
+
+3. Toggle "Show Versions"
+
+4. Locate the object you want to modify and open the quick action menu.
+
+5. Select "Lock" to extend a retention period in Compliance or Governance Mode
+
+6. Select a Lock Type and Retention Priod
+
+7. Click "Set Lock" to save
+
+{% /tab %}
+
+{% /tabs %}

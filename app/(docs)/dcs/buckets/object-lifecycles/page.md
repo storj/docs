@@ -1,11 +1,18 @@
 ---
 title: Object Lifecycles
+docId: 55e7ac9b-cf21-41fa-be19-087f55de1066
 weight: 10
 metadata:
   title: Setting Object Lifecycles
   description: Explaining how to specify Time to Live for an object in Storj
     using different tools like rclone, aws cli, and uplink.
 ---
+{% callout type="info" %}
+**Object Lock and TTL are Mutually Exclusive**
+
+You cannot apply a TTL to a locked object, and you cannot lock an object that already has an active TTL. Attempting to combine these features will result in an error. For more information on Object Lock, see the [Object Lock documentation](docId:e94a86fc-3deb-42f0-b7fe-1f80c675930a).
+{% /callout %}
+
 
 ## Setting Object TTL with Custom HTTP Header
 

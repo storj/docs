@@ -125,7 +125,7 @@ Setting a value higher than 64 can increase throughput backing up (offloading) t
     {% callout type="info" %}
       **Immutability Requirements**
 
-      Veeam's immutability setting uses S3-Compatible Object Lock, which is currently in Beta. For more information and instructions on setting up your bucket with Object Lock, please refer to our documentation here: [](docId:gjrGzPNnhpYrAGTTAUaj).
+      Veeam's immutability setting uses S3-Compatible Object Lock. For more information and instructions on setting up your bucket with Object Lock, please refer to our documentation here: [](docId:e94a86fc-3deb-42f0-b7fe-1f80c675930a).
     {% /callout %}
     ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YOE-le-vX4D0wfn7tnrey_archiverepositorys3cbucket.png)
 

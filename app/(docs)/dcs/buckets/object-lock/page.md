@@ -1,5 +1,5 @@
 ---
-title: Object Lock (Beta)
+title: Object Lock
 docId: e94a86fc-3deb-42f0-b7fe-1f80c675930a
 weight: 1
 metadata:

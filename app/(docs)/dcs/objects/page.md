@@ -175,7 +175,7 @@ aws s3api put-object-retention \
 
 ### Extending Retention Period
 
-Retention periods can only be extended, not reduced. Storj Console currently doesn't allow to remove it.
+Retention periods can only be extended, not reduced. The Storj Console currently doesn't allow to remove it.
 
 {% tabs %}
 

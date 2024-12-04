@@ -175,7 +175,7 @@ aws s3api put-object-retention \
 
 ### Extending Retention Period
 
-Retention periods can only be extended, not reduced or removed.
+Retention periods can only be extended, not reduced. Storj Console currently doesn't allow to remove it.
 
 {% tabs %}
 
@@ -207,6 +207,30 @@ aws s3api put-object-retention \
 6. Select a Lock Type and Retention Priod
 
 7. Click "Set Lock" to save
+
+{% /tab %}
+
+{% /tabs %}
+
+### Bypassing Governance Mode
+The Storj User with enough permissions may also remove the retention period for the Governance Mode Object Lock using AWS SDK or AWS CLI.
+The Storj Console currently doesn't support this feature.
+
+{% partial file="override-governance-mode-callout.md" /%}
+
+{% tabs %}
+
+{% tab label="aws cli" %}
+
+```shell {% title="aws cli" %}
+aws s3api put-object-retention \
+  --bucket my-object-lock-bucket \
+  --key my-file.txt \
+  --version-id <version-id> \
+  --retention "{}" \
+  --bypass-governance-retention \
+  --endpoint-url https://gateway.storjshare.io
+```
 
 {% /tab %}
 

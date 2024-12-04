@@ -1,11 +1,12 @@
 ---
-title: TrueNAS - iXsystems
+title: TrueNAS
 docId: ygezxeTPxu9ysDNPxY-WM
 tags:
   - backup
 redirects:
   - /dcs/how-tos/ix-systems-truenas-integration
   - /dcs/ix-systems-truenas-integration
+  - /dcs/third-party-tools/ix-systems-truenas
 metadata:
   title: TrueNAS Integration with Storj for Secure Data Storage
   description:
@@ -40,7 +41,7 @@ To integrate TrueNAS with Storj, you will need:
 
 - A TrueNAS storage device connected to your network.
 
-For more information about the iX Storj integration, visit <https://www.truenas.com/ix-storj>.
+For more information about the TrueNAS Storj integration, visit <https://www.truenas.com/ix-storj>.
 
 ---
 
@@ -48,10 +49,10 @@ For more information about the iX Storj integration, visit <https://www.truenas.
 
 ### Sign up for an account
 
-Navigate to <https://storj.io/signup?partner=ix-storj-1> to sign up iX-Storj account. Enter your full name, email address, and a password, as shown below:
+Navigate to <https://storj.io/signup?partner=ix-storj-1> to sign up for TrueNAS Storj account. Enter your full name, email address, and a password, as shown below:
 
 {% callout type="warning"  %}
-If you have an existing Storj account, you will need to contact support to have it linked to the iX Storj integration. See [here](https://forum.storj.io/t/truenas-backups-and-differences-between-storj-and-storj-ix/20044/7) for more information
+If you have an existing Storj account, you will need to contact support to have it linked to the TrueNAS Storj integration. See [here](https://forum.storj.io/t/truenas-backups-and-differences-between-storj-and-storj-ix/20044/7) for more information
 {% /callout %}
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PnQ7D7Z6fU0RPKZpOCRXJ_image.png)

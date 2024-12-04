@@ -192,6 +192,8 @@ export default function (nextConfig = {}) {
             sortByWeightThenTitle(learn)
             let support = walkDir(`${dir}/\(docs\)/support`, 'support')
             sortByWeightThenTitle(support)
+            let cunofs = walkDir(`${dir}/\(docs\)/cunofs`, 'cunofs')
+            sortByWeightThenTitle(cunofs)
             let blog = walkDir(`${dir}/\(blog\)/blog`, 'blog', {
               hasRoot: false,
             })
@@ -207,6 +209,7 @@ export default function (nextConfig = {}) {
               ...getRedirects(node),
               ...getRedirects(learn),
               ...getRedirects(support),
+              ...getRedirects(cunofs),
               ...getRedirects(blog),
             ]
             let firebaseConfig = JSON.parse(
@@ -227,6 +230,7 @@ export default function (nextConfig = {}) {
             let nodeBottomNav = extractHrefObjects(structuredClone(node))
             let learnBottomNav = extractHrefObjects(structuredClone(learn))
             let supportBottomNav = extractHrefObjects(structuredClone(support))
+            let cunofsBottomNav = extractHrefObjects(structuredClone(cunofs))
             let blogBottomNav = extractHrefObjects(structuredClone(blog))
 
             // When this file is imported within the application
@@ -237,6 +241,8 @@ export default function (nextConfig = {}) {
               export const learnNavigation = ${JSON.stringify(learn)}
               export const supportNavigation = ${JSON.stringify(support)}
               export const blogNavigation = ${JSON.stringify(blog)}
+              export const cunofsNavigation = ${JSON.stringify(cunofs)}
+              export const cunofsBottomNav = ${JSON.stringify(cunofsBottomNav)}
               export const dcsBottomNav = ${JSON.stringify(dcsBottomNav)}
               export const nodeBottomNav = ${JSON.stringify(nodeBottomNav)}
               export const learnBottomNav = ${JSON.stringify(learnBottomNav)}

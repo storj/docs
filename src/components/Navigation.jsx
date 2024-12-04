@@ -9,6 +9,7 @@ import {
   nodeNavigation,
   learnNavigation,
   supportNavigation,
+  cunofsNavigation,
 } from '@/markdoc/navigation.mjs'
 
 function NavLink({ title, href, current, root, disclosure, className }) {
@@ -148,6 +149,8 @@ export function Navigation({ className }) {
     sideNavigation = learnNavigation
   } else if (pathname.startsWith('/support')) {
     sideNavigation = supportNavigation
+  } else if (pathname.startsWith('/cunofs')) {
+    sideNavigation = cunofsNavigation
   }
 
   return (

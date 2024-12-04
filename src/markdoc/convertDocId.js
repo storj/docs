@@ -8,6 +8,7 @@ import {
   learnBottomNav,
   supportBottomNav,
   blogBottomNav,
+  cunofsBottomNav,
 } from '@/markdoc/navigation.mjs'
 
 function getFrontmatter(filePath) {
@@ -54,6 +55,9 @@ export function convertDocId(href) {
   }
   if (!entry) {
     entry = blogBottomNav.find((o) => o.docId === docId)
+  }
+  if (!entry) {
+    entry = cunofsBottomNav.find((o) => o.docId === docId)
   }
 
   if (!entry) {

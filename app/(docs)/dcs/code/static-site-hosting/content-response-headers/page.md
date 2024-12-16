@@ -6,8 +6,6 @@ metadata:
   description: Linksharing will respond with certain headers if they are set on an object's metadata.
 ---
 
-## Introduction
-
 Linksharing will respond with certain headers if they are set on an object's metadata.
 
 This metadata can be set when uploading a file using either native Storj upload using Uplink, or using an S3 gateway.

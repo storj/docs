@@ -25,10 +25,10 @@ All of this analysis of Storage Nodes is fed into the data science engine which 
 
 There are a number of great blog posts on the math behind the redundancy model using erasure codes and how the repair system works. Probably the most important takeaway is that erasure codes are an alternative to replication that deliver much higher durability at a much lower expansion factor. As a result, an approach whereby objects are erasure coded and distributed over dozens, hundreds, or thousands of endpoints will provide superior durability to making multiple replications in a small number of endpoint locations or using erasure codes in a single location. If you want the details, check out:
 
-- [Replication is bad for decentralized storage, part 1: Erasure codes for fun and profit](https://storj.io/blog/2018/11/replication-is-bad-for-decentralized-storage-part-1-erasure-codes-for-fun-and-profit/)
+- [Replication is bad for decentralized storage, part 1: Erasure codes for fun and profit](https://storj.io/blog/replication-is-bad-for-decentralized-storage-part-1-erasure-codes-for-fun-and-profit/)
 
-- [Why (Proof-of-) Replication is Bad for Decentralized Storage, Part 2: Churn and Burn](https://storj.io/blog/2019/01/why-proof-of-replication-is-bad-for-decentralized-storage-part-2-churn-and-burn/)
+- [Why (Proof-of-) Replication is Bad for Decentralized Storage, Part 2: Churn and Burn](https://storj.io/blog/why-proof-of-replication-is-bad-for-decentralized-storage-part-2-churn-and-burn/)
 
-- [Reputation Matters When it Comes to Storage Nodes](https://storj.io/blog/2019/01/reputation-matters-when-it-comes-to-storage-nodes/)
+- [Reputation Matters When it Comes to Storage Nodes](https://storj.io/blog/reputation-matters-when-it-comes-to-storage-nodes/)
 
-- [Decentralized Auditing and Repair! The Low-key Life of Data Resurrection](https://storj.io/blog/2018/12/decentralized-auditing-and-repair-the-low-key-life-of-data-resurrection/)
+- [Decentralized Auditing and Repair! The Low-key Life of Data Resurrection](https://storj.io/blog/decentralized-auditing-and-repair-the-low-key-life-of-data-resurrection/)

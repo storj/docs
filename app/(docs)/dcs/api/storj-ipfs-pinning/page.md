@@ -12,8 +12,8 @@ You should have received an email that you have been invited to the beta which w
 {% /callout %}
 
 {% callout type="warning" %}
-Thank you for your interest in the IPFS Pinning Beta. We are no longer accepting additional beta users, however, here's a Github link should you choose to run this on your own:
-https://github.com/storj/ipfs-go-ds-storj 
+Thank you for your interest in the IPFS Pinning Beta.
+We are no longer accepting additional beta users, however, here's a Github link should you choose to run this on your own: [https://github.com/storj/ipfs-go-ds-storj](https://github.com/storj/ipfs-go-ds-storj) 
 {% /callout %}
 
 The Storj IPFS Pinning service consists of an HTTP endpoint for uploading and pinning content, and an IPFS Gateway that serves the pinned content over IPFS and HTTP. Details on smart contract pinning will be made available in the future.

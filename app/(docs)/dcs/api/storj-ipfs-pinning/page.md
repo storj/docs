@@ -7,10 +7,6 @@ redirects:
 
 ## Prerequisites
 
-{% callout type="info"  %}
-You should have received an email that you have been invited to the beta which will include credentials to access the service. If you have not signed up yet, you can [Join the beta](https://landing.storj.io/permanently-pin-with-storj-dcs).
-{% /callout %}
-
 {% callout type="warning" %}
 Thank you for your interest in the IPFS Pinning Beta.
 We are no longer accepting additional beta users, however, here's a Github link should you choose to run this on your own: [https://github.com/storj/ipfs-go-ds-storj](https://github.com/storj/ipfs-go-ds-storj) 

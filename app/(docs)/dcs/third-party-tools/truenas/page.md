@@ -173,7 +173,7 @@ If you use TrueNAS 24.10 (Electric Eel) or later, you would be able to setup a T
 
 This is a cost-efficient solution in comparison with a Cloud Sync Task. It's available starting with TrueNAS 24.10 (Electric Eel).
 
-The TrueCloud Backup Task allows to create [restic](docId:5_zxVAqCUku5pVX0OTwSW) snapshots and upload them to the Storj bucket. Each snapshot contains only a difference, it also packs smaller objects to a bigger chunks, which effectively reduce your [storage](docId:59T_2l7c1rvZVhI8p91VX#object-storage) and [segments usage](docId:59T_2l7c1rvZVhI8p91VX#per-segment-fee] in the bucket.
+The TrueCloud Backup Task allows to create [restic](docId:5_zxVAqCUku5pVX0OTwSW) snapshots and upload them to the Storj bucket. Each snapshot contains only a difference, it also packs smaller objects to a bigger chunks, which effectively reduce your [storage](docId:59T_2l7c1rvZVhI8p91VX#object-storage) and [segments usage](docId:59T_2l7c1rvZVhI8p91VX#per-segment-fee) in the bucket.
 The restic snapshots allows you to restore a specific version of any object or the entire dataset.
 
 Please follow the [TrueNAS documentation to setup a TrueCloud Backup Task](https://www.truenas.com/docs/scale/24.10/scaletutorials/dataprotection/truecloudtasks/)

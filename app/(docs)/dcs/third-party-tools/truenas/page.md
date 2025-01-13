@@ -135,7 +135,7 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 To complete the integration, you will need the S3 credentials created in the previous steps and a TrueNAS login.
 
-If you use TrueNAS 24.10 (Electric Eel) or later, you would be able to setup a TrueCloud Backup Task, it's a preferred method, because it has several advantages above the Cloud Sync Task: [https://www.truenas.com/docs/scale/24.10/scaletutorials/dataprotection/truecloudtasks/](https://www.truenas.com/docs/scale/24.10/scaletutorials/dataprotection/truecloudtasks/)
+If you use TrueNAS 24.10 (Electric Eel) or later, you would be able to setup a [TrueCloud Backup Task](#create-a-truecloud-backup-task), it's a preferred method, because it has several advantages above the [Cloud Sync Task](#create-a-cloud-sync-task): [https://www.truenas.com/docs/scale/24.10/scaletutorials/dataprotection/truecloudtasks/](https://www.truenas.com/docs/scale/24.10/scaletutorials/dataprotection/truecloudtasks/)
 
 ### Create a Cloud Credential in TrueNAS
 
@@ -213,7 +213,7 @@ You may consider to enable [Object versioning](docId:oogh5vaiGei6atohm5thi) for 
 
 **Please note, the automatic deletion of expired objects can delete the last version too, so be careful with that feature**
 
-**If you want to have a normal backup tool consider to use a [TrueCloud Backup Task](#create-a-truecloud-backup-task) instead.**
+**If you want to have a normal backup tool, consider to use a [TrueCloud Backup Task](#create-a-truecloud-backup-task) instead.**
 
 {% /callout %}
 

@@ -208,7 +208,7 @@ Please follow the [TrueNAS documentation to setup a TrueCloud Backup Task](https
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/FAbFNiNGpHfycYMgE_1ZJ_run.png)
 
-{% callout type="information" %}
+{% callout type="info" %}
 You may consider to enable [Object versioning](docId:oogh5vaiGei6atohm5thi) for the bucket and you may also [generate S3 credentials with TTL](docId:55e7ac9b-cf21-41fa-be19-087f55de1066#setting-object-ttl-in-the-access-grant--s3-credentials) to automatically delete expired versions.
 
 **Please note, the automatic deletion of expired objects can delete the last version too, so be careful with that feature**

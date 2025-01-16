@@ -50,8 +50,6 @@ Unlike other cloud object storage vendors, we don't use high egress fees to crea
 
 ## Per Segment Fee
 
-For most users and most usage patterns, we do not expect a Per Segment Fee to be charged. Only when large numbers of segments are stored relative to a disproportionately small amount of data do we expect there to be a Per Segment Fee. Only use cases with large numbers of very small files or large numbers of very small Multipart Upload Parts are expected to be subject to the Per Segment Fee.
-
 Each Segment stored on the network is charged a nominal Per Segment fee. The Per Segment Fee is $0.0000088 Per Segment Per Month. Distributed object storage is optimized for large files (several MB or larger - the larger the better). Very small objects generate more overhead with the storage of the metadata for the file than the actual storage of the object. Consequently, we charge a small Per Segment Fee to account for that overhead. If a user is storing even large numbers of big files, the Per Segment Fee will be inconsequential. If a user streams millions of small files, the Per Segment Fee will offset the cost associated with the metadata overhead.
 
 The segment Limit will be billed at a rate of $0.0000088 per Segment per month, equivalent to a rate of $0.00000001222 per Segment Hour.

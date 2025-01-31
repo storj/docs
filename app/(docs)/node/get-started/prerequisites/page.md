@@ -54,7 +54,7 @@ Ubuntu - 64-bit version of one of these Ubuntu versions:
 {% /tab %}
 
 {% tab label="MacOs" %}
-macOS Sierra 10.12 and newer macOS releases are supported
+macOS 10.15 Catalina and newer macOS releases are supported
 
 Mac hardware must be a 2010 or newer model
 

@@ -1,6 +1,8 @@
 ---
 title: Is an account required to rent out drive space ?
 docId: 82991d9a-a306-4ffb-a314-6ead39c8cfee
+redirects:
+  - /hc/en-us/articles/360026892091-Is-an-account-required-to-rent-out-drive-space
 ---
 
 **No**. You do not need to create an account to start earning STORJ tokens by renting your drive space.

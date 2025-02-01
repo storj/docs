@@ -1,6 +1,8 @@
 ---
 title: Can Storj use a different blockchain for payments?
 docId: 3a5981b3-588a-49ca-98d0-3eb7a2421af7
+redirects:
+  - /hc/en-us/articles/360060646012-Can-Storj-use-a-different-blockchain-for-payments
 ---
 Currently, none of the blockchains really solve the issue of high transaction costs. While there is a small user base, transaction fees on any blockchain may be low, but once they become more popular, they will face the same issue of scaling. There is a lot of discussion about how to address high fees for Layer 1 transactions on the Ethereum blockchain, which is currently one used by many popular projects. And for good reason. No other developer community can match ETH, which comes with a lot of upsides. Storj is committed to the Ethereum platform to take advantage of its many opportunities and great developer community.
 

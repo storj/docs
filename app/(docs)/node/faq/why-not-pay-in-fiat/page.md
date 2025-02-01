@@ -1,6 +1,8 @@
 ---
 title: Why does Storj Labs not pay Storage Node Operators directly in USD?
 docId: 37344d79-8559-46e3-95c8-5848a9f2ddbd
+redirects:
+  - /hc/en-us/articles/360061043591-Why-does-Storj-Labs-not-pay-Storage-Node-Operators-directly-in-USD
 ---
 In many countries, receiving foreign currency as a payment may be prohibited by local laws unless you are a legal entity. There are a lot of restrictions around fiat.
 

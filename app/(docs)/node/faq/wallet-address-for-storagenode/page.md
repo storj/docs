@@ -4,6 +4,8 @@ docId: 66d6c295-53e4-4308-9cde-1c6193155f52
 metadata:
   title: ERC20-compatible wallet address for STORJ tokens
   description: Learn what is valid wallet address to receive STORJ ERC20 tokens.
+redirects:
+  - /hc/en-us/articles/360029700972-Wallet-address-for-storagenode
 ---
 Here is walkthrough for one of the popular software wallet - [https://MyEtherWallet.com](https://MyEtherWallet.com) . The following step will let you create a valid STORJ token address if you do not already have one. If you already have a compatible STORJ payout address, or an address made with another ERC20 compatible wallet such as Metamask, Parity or Mist, you can skip this article.
 

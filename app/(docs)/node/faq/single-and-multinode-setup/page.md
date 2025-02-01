@@ -1,6 +1,8 @@
 ---
 title: Single and multi-node Port forwarding setup
 docId: 52ea9ae6-74e2-41b4-88f1-4b1230ec27da
+redirects:
+  - /hc/en-us/articles/360042343052-Single-and-multi-node-Port-forwarding-setup
 ---
 
 When the outside world is trying to reach a specific node, it basically has to go through a few steps. We are going to include the Docker setup steps in case you want to use it on the other system or in case someone else with a docker setup has the same question.

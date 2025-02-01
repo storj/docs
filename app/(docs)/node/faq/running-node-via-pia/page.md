@@ -4,6 +4,8 @@ docId: 1a788e13-f8d1-4ff7-a2af-578d4eefefed
 metadata:
   title: Running a V3 Storage Node with VPN
   description: Learn how to connect your node to the network through CGNAT.
+redirects:
+  - /hc/en-us/articles/360026892971-Running-a-V3-Storage-Node-with-PIA-VPN
 ---
 
 *Can't connect to the network via TCP directly?, try this guide.*

@@ -110,7 +110,7 @@ If you [requested an authorization token](docId:v-fUvPqySvUwTMF-od6hD), you shou
 
 ## 3.5. Wallet address
 
-The article [](docId:66d6c295-53e4-4308-9cde-1c6193155f52) will let you create a valid STORJ token address if you do not already have one. If you already have a compatible STORJ payout address, or an address made with another ERC20 compatible wallet, you can continue with the steps below.
+The article [](docId:66d6c295-53e4-4308-9cde-1c6193155f52) will let you create a valid STORJ token address if you do not already have one. If you already have a compatible STORJ payout address, or an address made with another [ERC20 compatible wallet](docId:a045be02-e05a-11ef-9338-6045bd1fa4e3), you can continue with the steps below.
 
 ## 3.6. Storage Location
 

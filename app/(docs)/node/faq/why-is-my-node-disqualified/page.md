@@ -1,5 +1,6 @@
 ---
 title: Why is my node disqualified?
+docId: 2832eccf-8c63-4563-abd7-92ede9dece83
 redirects:
   - /hc/en-us/articles/4403035941780-Why-is-my-node-disqualified
   - /hc/en-us/articles/4403035941780

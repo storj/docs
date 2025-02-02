@@ -18,13 +18,13 @@ We will use Docker instead of direct installation (this option is available only
 3. Check each database for errors. We will use `bandwidth.db` as an example in this guide.
 
 {% tabs %}
-{% tab label="Docker (CLI)" %}
+{% tab label="Docker version of sqlite3" %}
 replace ${PWD} with an absolute path to the databases location, or simple switch the current location to there
 ```
 docker run --rm -it --mount type=bind,source=${PWD},destination=/data sstc/sqlite3 find . -maxdepth 1 -iname "*.db" -print0 -exec sqlite3 '{}' 'PRAGMA integrity_check;' ';'
 ```
 {% /tab %}
-{% tab label="Direct installation" %}
+{% tab label="Direct installation of sqlite3" %}
 {% tabs %}
 {% tab label="Linux" %}
 ```
@@ -62,10 +62,10 @@ Get-ChildItem X:\storagenode\storage\*.db -File | %{$_.Name + " " + $(sqlite3.ex
 {% /tab %}
 {% /tabs %}
 
-6. If you see errors in the output, then the check did not pass. We will unload all uncorrupted data and then load it back. But this could sometimes fail, too. If no errors occur here, you can skip all the following steps and start the storagenode again.
-7. If you were not lucky and the check failed, then please try to fix the corrupted database(s) as shown below.
+4. If you see errors in the output, then the check did not pass. We will unload all uncorrupted data and then load it back. But this could sometimes fail, too. If no errors occur here, you can skip all the following steps and start the storagenode again.
+5. If you were not lucky and the check failed, then please try to fix the corrupted database(s) as shown below.
 
-8. Open a shell
+6. Open a shell
 {% tabs %}
 {% tab label="Docker version of sqlite3" %}
 Open a shell Inside the container:
@@ -76,20 +76,20 @@ docker run --rm -it --mount type=bind,source=x:\storagenode\storage,destination=
 Tip. You can use tmpfs to restore your databases. It uses memory instead of disk and should take a lot less time than on HDD (you can read more about usage of tmpfs with Docker in the Use tmpfs mounts guide or this forum comment). For Windows or MacOS you must increase the allocated RAM for the docker's VM via Docker desktop application to fit a double size of the greatest corrupted database file in case of usage of tmpfs.
 {% /callout %}
 {% /tab %}
-{% tab label="locally installed sqlite3" %}
+{% tab label="Direct installation of sqlite3" %}
 You could use your shell directly if you have sqlite3 installed. In that case, use the path to your storage instead of `"/storage/"` across this guide below.
 
 For Windows with local sqlite3 installed, we recommend to use a PowerShell to execute the commands below. Don't forget to replace the `"/storage/"` folder with your local path to the folder where the databases are stored. If the `sqlite3.exe` executable is not in the system variable `PATH`, then you should specify the full path to it or run from the location of the executable.
 {% /tab %}
 {% /tabs %}
 
-9. Now run the following commands in the shell. You need to repeat steps 9 to 14 for each corrupted sqlite3 database:
+7. Now run the following commands in the shell. You need to repeat steps 7 to 12 for each corrupted sqlite3 database:
 ```
 cp /storage/bandwidth.db /storage/bandwidth.db.bak
 sqlite3 /storage/bandwidth.db
 ```
 
-10. You will see a prompt from sqlite3. Run this SQL script:
+8. You will see a prompt from sqlite3. Run this SQL script:
 ```
 .mode insert
 .output /storage/dump_all.sql
@@ -97,7 +97,7 @@ sqlite3 /storage/bandwidth.db
 .exit
 ```
 
-11. We will edit the SQL file dump_all.sql
+9. We will edit the SQL file dump_all.sql
 {% tabs %}
 {% tab label="Linux or docker version" %}
 ```
@@ -111,17 +111,17 @@ $(echo "PRAGMA synchronous = OFF ;"; Get-Content dump_all.sql) | Select-String -
 {% /tab %}
 {% /tabs %}
 
-12. Remove the corrupted database (make sure that you have a backup!)
+10. Remove the corrupted database (make sure that you have a backup!)
 ```
 rm /storage/bandwidth.db
 ```
 
-13. Now we will load the unloaded data into the new database
+11. Now we will load the unloaded data into the new database
 ```
 sqlite3 /storage/bandwidth.db ".read /storage/dump_all_notrans.sql"
 ```
 
-14. Check that the new database (bandwidth.db in our example) has a size larger than 0:
+12. Check that the new database (bandwidth.db in our example) has a size larger than 0:
 
 {% tabs %}
 {% tab label="Linux or docker version" %}
@@ -135,11 +135,11 @@ ls /storage/bandwidth.db
 ```
 {% /tab %}
 {% /tabs %}
-15. Exit from the container (skip this step, if you use a directly installed sqlite3)
+13. Exit from the container (skip this step, if you use a directly installed sqlite3)
 ```
 exit
 ```
-16. If you are lucky and all corrupted `sqlite3` databases are fixed, then you can start the storagenode again.
+14. If you are lucky and all corrupted `sqlite3` databases are fixed, then you can start the storagenode again.
 
 {% callout type="warning" %}
 Warning. If you were not successful with the fix of the database, then your stat is lost.
@@ -152,7 +152,7 @@ On Windows: disable the write cache. Consider migrating to the [Windows GUI](doc
 
 On Unraid: update to the latest version of the platform (the bug is fixed in the 6.8.0-rc5 as seen in [this comment](https://forums.unraid.net/bug-reports/prereleases/sqlite-data-corruption-testing-r664/page/4/?tab=comments#comment-6650)) or rollback to version [6.6.7](https://forums.unraid.net/topic/80439-downgraded-back-to-667-due-to-sqlite-corruption/).
 
-On Docker: use the updated docker run command from the documentation: [](docId:EW9B_0fJujL3Z5aTLUW7d)
+On Docker: use the updated docker run command from the documentation: [](docId:HaDkV_0aWg9OJoBe53o-J)
 
 ## Common Problems
 Make sure that you are not using NFS or SMB to connect to the storage, they are not compatible with SQLite. The only working network protocol is iSCSI.

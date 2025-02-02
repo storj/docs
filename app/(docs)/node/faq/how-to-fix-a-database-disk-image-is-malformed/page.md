@@ -55,7 +55,7 @@ find /path/to/storage/ -maxdepth 1 -iname "*.db" -print0 -exec sqlite3 '{}' 'PRA
 ```
 {% /tab %}
 {% tab label="Windows" %}
-```PowerShell
+```powershell
 Get-ChildItem X:\storagenode\storage\*.db -File | %{$_.Name + " " + $(sqlite3.exe $_.FullName "PRAGMA integrity_check;")}
 ```
 {% /tab %}
@@ -131,7 +131,7 @@ ls -l /storage/bandwidth.db
 ```
 {% /tab %}
 {% tab label="PowerShell (Windows) with a local sqlite3 version" %}
-```PowerShell
+```powershell
 ls /storage/bandwidth.db
 ```
 {% /tab %}

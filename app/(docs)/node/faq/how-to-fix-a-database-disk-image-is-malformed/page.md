@@ -11,14 +11,15 @@ Sometimes a Storage Node Operator may encounter the "database disk image is malf
 # Solution
 Firstly, we should try to verify the database with an embedded SQLite3 command. So, we need to have `sqlite3` installed (v3.25.2 or later). The installation steps depend on the OS.
 
-We will use Docker instead of direct installation (this option is available only for x86_64 CPUs, for arm-based boards you will need to install sqlite3 via the package manager of your OS).
 
-1. Stop the storagenode
+1. [Stop the storagenode]()
 2. Make a backup of all the sqlite3 databases. They are located in the storage folder for your data storage. For example `x:\storagenode\storage\bandwidth.db`, where `x:\storagenode` is the data folder you had specified in the `--mount type=bind,source=x:\storagenode,destination=/app/config` option of the `docker run` command for your storagenode, or `x:\storagenode\storage` in case of using the Windows GUI, in the `storage.path:` option of the [config.yaml](docId:gDXZgLlP_rcSW8SuflgqS) file.
 3. Check each database for errors. We will use `bandwidth.db` as an example in this guide.
 
 {% tabs %}
 {% tab label="Docker version of sqlite3" %}
+We will use Docker instead of direct installation (this option is available only for x86_64 CPUs, for arm-based boards you will need to install sqlite3 via the package manager of your OS). See the next tab.
+
 replace ${PWD} with an absolute path to the databases location, or simple switch the current location to there
 ```
 docker run --rm -it --mount type=bind,source=${PWD},destination=/data sstc/sqlite3 find . -maxdepth 1 -iname "*.db" -print0 -exec sqlite3 '{}' 'PRAGMA integrity_check;' ';'
@@ -33,7 +34,7 @@ sudo apt update && sudo apt install sqlite3 -y
 {% /tab %}
 {% tab label="Windows" %}
 
-https://www.sqlitetutorial.net/download-install-sqlite/
+[https://www.sqlitetutorial.net/download-install-sqlite/](https://www.sqlitetutorial.net/download-install-sqlite/)
 {% /tab %}
 {% /tabs %}
 
@@ -41,12 +42,15 @@ Make sure that the version is v3.25.2 or later, otherwise the check will not wor
 ```
 sqlite3 --version
 ```
-perform the integrity check for each database, for example for `bandwidth.db`:
+{% /tab %}
+{% /tabs %}
+
+4. perform the integrity check for each database, for example for `bandwidth.db`:
 ```
 sqlite3 /path/to/storage/bandwidth.db "PRAGMA integrity_check;"
 ```
 
-Or check all databases with help of shell commands:
+5. Or check all databases with help of shell commands:
 {% tabs %}
 {% tab label="bash (Linux)" %}
 ```
@@ -59,13 +63,11 @@ Get-ChildItem X:\storagenode\storage\*.db -File | %{$_.Name + " " + $(sqlite3.ex
 ```
 {% /tab %}
 {% /tabs %}
-{% /tab %}
-{% /tabs %}
 
-4. If you see errors in the output, then the check did not pass. We will unload all uncorrupted data and then load it back. But this could sometimes fail, too. If no errors occur here, you can skip all the following steps and start the storagenode again.
-5. If you were not lucky and the check failed, then please try to fix the corrupted database(s) as shown below.
+6. If you see errors in the output, then the check did not pass. We will unload all uncorrupted data and then load it back. But this could sometimes fail, too. If no errors occur here, you can skip all the following steps and start the storagenode again.
+7. If you were not lucky and the check failed, then please try to fix the corrupted database(s) as shown below.
 
-6. Open a shell
+8. Open a shell
 {% tabs %}
 {% tab label="Docker version of sqlite3" %}
 Open a shell Inside the container:
@@ -83,13 +85,13 @@ For Windows with local sqlite3 installed, we recommend to use a PowerShell to ex
 {% /tab %}
 {% /tabs %}
 
-7. Now run the following commands in the shell. You need to repeat steps 7 to 12 for each corrupted sqlite3 database:
+9. Now run the following commands in the shell. You need to repeat steps 9 to 14 for each corrupted sqlite3 database:
 ```
 cp /storage/bandwidth.db /storage/bandwidth.db.bak
 sqlite3 /storage/bandwidth.db
 ```
 
-8. You will see a prompt from sqlite3. Run this SQL script:
+10. You will see a prompt from sqlite3. Run this SQL script:
 ```
 .mode insert
 .output /storage/dump_all.sql
@@ -97,7 +99,7 @@ sqlite3 /storage/bandwidth.db
 .exit
 ```
 
-9. We will edit the SQL file dump_all.sql
+11. We will edit the SQL file dump_all.sql
 {% tabs %}
 {% tab label="Linux or docker version" %}
 ```
@@ -111,17 +113,17 @@ $(echo "PRAGMA synchronous = OFF ;"; Get-Content dump_all.sql) | Select-String -
 {% /tab %}
 {% /tabs %}
 
-10. Remove the corrupted database (make sure that you have a backup!)
+12. Remove the corrupted database (make sure that you have a backup!)
 ```
 rm /storage/bandwidth.db
 ```
 
-11. Now we will load the unloaded data into the new database
+13. Now we will load the unloaded data into the new database
 ```
 sqlite3 /storage/bandwidth.db ".read /storage/dump_all_notrans.sql"
 ```
 
-12. Check that the new database (bandwidth.db in our example) has a size larger than 0:
+14. Check that the new database (bandwidth.db in our example) has a size larger than 0:
 
 {% tabs %}
 {% tab label="Linux or docker version" %}
@@ -135,11 +137,11 @@ ls /storage/bandwidth.db
 ```
 {% /tab %}
 {% /tabs %}
-13. Exit from the container (skip this step, if you use a directly installed sqlite3)
+15. Exit from the container (skip this step, if you use a directly installed sqlite3)
 ```
 exit
 ```
-14. If you are lucky and all corrupted `sqlite3` databases are fixed, then you can start the storagenode again.
+16. If you are lucky and all corrupted `sqlite3` databases are fixed, then you can start the storagenode again.
 
 {% callout type="warning" %}
 Warning. If you were not successful with the fix of the database, then your stat is lost.

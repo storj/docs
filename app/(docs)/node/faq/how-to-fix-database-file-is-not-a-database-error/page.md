@@ -1,5 +1,5 @@
 ---
-title: How to fix database: file is not a database error
+title: "How to fix database: file is not a database error"
 docId: f8bed9a6-755f-4860-a5bb-ce2b1a51f8b0
 redirects:
   - /hc/en-us/articles/4403032417044-How-to-fix-database-file-is-not-a-database-error

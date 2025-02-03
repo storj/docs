@@ -28,7 +28,7 @@ weight: 0
 
    ![Identity folder selection screen](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LL0TW17fdolT5vFvZa0OX_pasted-image-0.png)
 
-6. Enter your [ERC-20 compatible wallet address](https://support.storj.io/hc/en-us/articles/360026611692-How-do-I-hold-STORJ-What-is-a-valid-address-or-compatible-wallet-) where you want to receive your STORJ token payouts.
+6. Enter your [ERC-20 compatible wallet address](docId:a045be02-e05a-11ef-9338-6045bd1fa4e3) where you want to receive your STORJ token payouts.
 
    ![Operator information - Ethereum wallet](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/85j1PrZepUeQGCYMGFKJw_pasted-image-0.png)
 

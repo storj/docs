@@ -46,6 +46,20 @@ metadata:
 
 [](docId:6xwcyBYTMDNojI58mxXSd)
 
+### Wallet address
+
+[](docId:66d6c295-53e4-4308-9cde-1c6193155f52)
+
+[](docId:3a5981b3-588a-49ca-98d0-3eb7a2421af7)
+
+[](docId:37344d79-8559-46e3-95c8-5848a9f2ddbd)
+
+[](docId:a045be02-e05a-11ef-9338-6045bd1fa4e3)
+
+[](docId:857f3c8c-43ca-476a-9b2f-4883c415bcbf)
+
+[](docId:65905400-c86d-40f3-a078-b476a522c4c5)
+
 ### Remote access
 
 [](docId:pueo_P_wgMERT0DdEn2pr)
@@ -81,6 +95,12 @@ metadata:
 ### Troubleshooting
 
 [](docId:M-Yv2DFc-OFZ4r9Q8b8HY)
+
+[](docId:52ea9ae6-74e2-41b4-88f1-4b1230ec27da)
+
+[](docId:2832eccf-8c63-4563-abd7-92ede9dece83)
+
+[](docId:6514f956-dfeb-44a6-81a6-7f8a245af97b)
 
 ### Updates
 

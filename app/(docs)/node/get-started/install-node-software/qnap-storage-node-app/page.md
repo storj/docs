@@ -50,7 +50,7 @@ Go to **Control Panel** -> **Privileges**, double click the storage node app and
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/kfnmhfsVG_k61weJPvi4a_image.png)
 
-1. Add your [ERC-20 Token Compatible Wallet Address](https://support.storj.io/hc/en-us/articles/360026611692-How-do-I-hold-STORJ-What-is-a-valid-address-or-compatible-wallet-) for payouts.
+1. Add your [ERC-20 Token Compatible Wallet Address](docId:a045be02-e05a-11ef-9338-6045bd1fa4e3) for payouts.
 
    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4nmAYwFJUzivgihR-NruY_image.png)
 

@@ -1,6 +1,6 @@
 ---
 author:
-  name: @Odmin
+  name: "@Odmin"
 title: Getting started with Storj Testnet on FreeNAS (freeBSD)
 docId: c1df00c3-9e22-43fe-9590-6157c88d2f20
 metadata:

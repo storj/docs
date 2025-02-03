@@ -17,6 +17,6 @@ In case of using the Windows GUI, the service will not restart automatically and
 
 Such failures should be attended to immediately as they can lead to the node getting disqualified.
 
-[Here are instructions on how to fix a malformed database disk image](https://support.storj.io/hc/en-us/articles/360029309111-How-to-fix-a-database-disk-image-is-malformed-). If the database is not recognized ("file is not a database"), recovery of this database will be impossible, and you will need to [recreate it](https://support.storj.io/hc/en-us/articles/4403032417044-How-to-fix-database-file-is-not-a-database-error).
+[Here are instructions on how to fix a malformed database disk image](docId:b75703c5-1484-4a1d-88fe-eb489dfc5554). If the database is not recognized ("file is not a database"), recovery of this database will be impossible, and you will need to [recreate it](docId:f8bed9a6-755f-4860-a5bb-ce2b1a51f8b0).
 
 If you need assistance, please ask on our [forum](https://forum.storj.io/c/sno-category).

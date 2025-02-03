@@ -6,6 +6,8 @@ metadata:
   description: Learn how you can hold STORJ tokens and what is valid address or a compatible wallet
 redirects:
   - /hc/en-us/articles/360026611692-How-do-I-hold-STORJ-What-is-a-valid-address-or-compatible-wallet
+  - /hc/en-us/articles/360026611692-How-do-I-hold-STORJ-What-is-a-valid-address-or-compatible-wallet-
+  - /hc/en-us/articles/360026611692
 ---
 STORJ is an ERC-20 token running on the Ethereum platform. In order to receive and hold your STORJ token payouts, you should use an ERC-20 compatible wallet to which you hold the private key yourself. Several options are available:
 * [mycrypto](https://mycrypto.com/)

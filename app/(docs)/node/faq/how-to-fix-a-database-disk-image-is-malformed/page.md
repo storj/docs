@@ -3,6 +3,7 @@ title: How to fix a "database disk image is malformed"
 docId: b75703c5-1484-4a1d-88fe-eb489dfc5554
 redirects:
   - /hc/en-us/articles/360029309111-How-to-fix-a-database-disk-image-is-malformed
+  - /hc/en-us/articles/360029309111-How-to-fix-a-database-disk-image-is-malformed-
   - /hc/en-us/articles/360029309111
 ---
 # Problem

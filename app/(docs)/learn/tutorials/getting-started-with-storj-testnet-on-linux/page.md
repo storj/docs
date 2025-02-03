@@ -8,4 +8,4 @@ redirects:
   - /hc/en-us/articles/360031331031-Getting-started-with-Storj-Testnet-on-Linux
   - /hc/en-us/articles/360031331031
 ---
-See https://github.com/storj/storj/wiki/Test-network
+See [https://github.com/storj/storj/wiki/Test-network](https://github.com/storj/storj/wiki/Test-network)

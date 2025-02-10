@@ -16,7 +16,7 @@ metadata:
 
 [](docId:Zh_lD6UPciHT53wOWuAoD)
 
-### Migration
+## Migration
 
 [](docId:jEntWNvi2M6Eo74NICIJg)
 
@@ -26,13 +26,13 @@ metadata:
 
 [](docId:NGHe10jmn-kdgzTf3FUz0)
 
-### Monitoring
+## Monitoring
 
 [](docId:O68S24Iww4ZEnVk8yO7Mv)
 
 [](docId:EeyBBKEeuNK5oqkB4EyU0)
 
-### Payouts
+## Payouts
 
 [](docId:bG8Q88XbTvEPkzsuc02T8)
 
@@ -46,7 +46,9 @@ metadata:
 
 [](docId:6xwcyBYTMDNojI58mxXSd)
 
-### Wallet address
+[](docId:65fec929-92c0-49f6-8054-a52ddab230ed)
+
+## Wallet address
 
 [](docId:66d6c295-53e4-4308-9cde-1c6193155f52)
 
@@ -60,7 +62,7 @@ metadata:
 
 [](docId:65905400-c86d-40f3-a078-b476a522c4c5)
 
-### Remote access
+## Remote access
 
 [](docId:pueo_P_wgMERT0DdEn2pr)
 
@@ -68,13 +70,13 @@ metadata:
 
 [](docId:mZulkrp1H1Igv1BBTPsTC)
 
-### Reputation
+## Reputation
 
 [](docId:p7qPegEKWZtjlC0fKCRB7)
 
 [](docId:83d85755-010d-4ace-9b44-5ff5df4097a3)
 
-### Settings
+## Settings
 
 [](docId:NX30Zzpr870-px_UDpHvu)
 
@@ -90,13 +92,13 @@ metadata:
 
 [](docId:gDXZgLlP_rcSW8SuflgqS)
 
-### Storage
+## Storage
 
 [](docId:nANEIimWey3FXPFuGrJdN)
 
 [](docId:nIbn-DMd7221Ozj7MJhV-)
 
-### Troubleshooting
+## Troubleshooting
 
 [](docId:M-Yv2DFc-OFZ4r9Q8b8HY)
 
@@ -106,7 +108,7 @@ metadata:
 
 [](docId:6514f956-dfeb-44a6-81a6-7f8a245af97b)
 
-### Updates
+## Updates
 
 [](docId:CfmXIRjM5X5Sh8KDGC1qF)
 

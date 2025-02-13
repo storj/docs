@@ -48,7 +48,7 @@ Visiting the URL in a browser is a convenient fix in most circumstances.
 
 5. Make a new [linkshare to the bucket or path](docId:cie0gae7voob2Weigh3c) of your choice
 
-6. Your linkshare URL needs the `/s` replaced with `/raw` and the trailing `/` removed, should look like this if at bucket level: `https://link.storjshare.io/raw/jw2hankj3if4asqxl77ye2ojwrhq/bucket`
+6. Your linkshare URL needs the `/s` replaced with `/raw` and the trailing `/` removed, should look like this if at bucket level: `https://link.storjshare.io/raw/jwm2j2juznpzcyl5kzgxzxvareoq/mybucket/myfolder`
 
 7. Set `Origin URL` to your modified linkshare URL
 

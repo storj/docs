@@ -351,7 +351,7 @@ Currently only `boto3` version up to 1.35.99 is working normally. Since AWS CLI 
 
 You can find the explanation of this breaking change in boto3 in this [github issue](https://github.com/boto/boto3/issues/4392).
 
-{% callout type=warning %}
+{% callout type="warning" %}
 Specifically, please note:
 
 > Disclaimer: The AWS SDKs and CLI are designed for usage with official AWS services. We may introduce and enable new features by default, such as these new default integrity protections prior to them being supported or handled by third-party service implementations. You can disable the new behavior with the `WHEN_REQUIRED` value for the request_checksum_calculation and response_checksum_validation configuration options covered in Data Integrity Protections for Amazon S3.

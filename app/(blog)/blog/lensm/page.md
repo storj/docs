@@ -2,6 +2,7 @@
 author:
   name: Egon Elbre
 date: '2022-07-18 00:00:00'
+docId: 'lensm'
 heroimage: ./hero.jpeg
 layout: blog
 metadata:

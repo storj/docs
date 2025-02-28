@@ -345,3 +345,18 @@ func main() {
 	fmt.Println(awsutil.Prettify(output))
 }
 ```
+
+## Compatibility with Python SDK (`boto3`) and `aws` CLI
+Currently only `boto3` version up to 1.35.99 is working normally. Since AWS CLI uses `boto3` under the hood, it's affected too.
+
+You can find the explanation of this breaking change in boto3 in this [github issue](https://github.com/boto/boto3/issues/4392).
+
+{% callout type=warning %}
+Specifically, please note:
+
+> Disclaimer: The AWS SDKs and CLI are designed for usage with official AWS services. We may introduce and enable new features by default, such as these new default integrity protections prior to them being supported or handled by third-party service implementations. You can disable the new behavior with the `WHEN_REQUIRED` value for the request_checksum_calculation and response_checksum_validation configuration options covered in Data Integrity Protections for Amazon S3.
+{% /callout %}
+
+It is preferable to downgrade rather than disabling the new behavior with `WHEN_REQUIRED`, and this may not even work with Storj anyway.
+
+You may track [this issue](https://github.com/storj/gateway-st/issues/89) to be notified, when this new behavior would be supported by [Gateway-ST](docId:EGM8O-1xt2Az03eBWT8Rf) and [Gateway-MT](docId:yYCzPT8HHcbEZZMvfoCFa).

@@ -354,7 +354,7 @@ You can find the explanation of this breaking change in boto3 in this [github is
 {% callout type="warning" %}
 Specifically, please note:
 
-> Disclaimer: The AWS SDKs and CLI are designed for usage with official AWS services. We may introduce and enable new features by default, such as these new default integrity protections prior to them being supported or handled by third-party service implementations. You can disable the new behavior with the `WHEN_REQUIRED` value for the request_checksum_calculation and response_checksum_validation configuration options covered in Data Integrity Protections for Amazon S3.
+> Disclaimer: The AWS SDKs and CLI are designed for usage with official AWS services. We may introduce and enable new features by default, such as these new [default integrity protections](https://aws.amazon.com/blogs/aws/introducing-default-data-integrity-protections-for-new-objects-in-amazon-s3/) prior to them being supported or handled by third-party service implementations. You can disable the new behavior with the `WHEN_REQUIRED` value for the `request_checksum_calculation` and `response_checksum_validation` configuration options covered in [Data Integrity Protections for Amazon S3](https://docs.aws.amazon.com/sdkref/latest/guide/feature-dataintegrity.html).
 {% /callout %}
 
 It is preferable to downgrade rather than disabling the new behavior with `WHEN_REQUIRED`, and this may not even work with Storj anyway.

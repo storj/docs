@@ -85,6 +85,7 @@ function getFrontmatter(filepath) {
     docId: frontmatter.docId,
     weight: frontmatter.weight,
     date: frontmatter.date,
+    path: filepath,
   }
 }
 

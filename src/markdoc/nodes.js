@@ -95,11 +95,12 @@ const nodes = {
     async transform(node, config) {
       const attributes = node.transformAttributes(config)
       const children = node.transformChildren(config)
+
       const src = attributes.src
       if (!src.includes('http')) {
         // if it's a local image, copy it to the public/images folder
         if (src.startsWith('./')) {
-          let output = await handleImageAsset(src)
+          let output = await handleImageAsset(null, null, src)
           return new Tag(
             'img',
             {
@@ -117,6 +118,7 @@ const nodes = {
 
         return new Tag('img', attributes, children)
       }
+
       const hash = crypto.createHash('md5').update(attributes.src).digest('hex')
       let result = imageSizeCache[hash]
       if (!result) {

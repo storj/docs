@@ -15,7 +15,7 @@ export const metadata = {
   },
 }
 
-function getFrontmatter(filepath) {
+function getFrontmatter(root, filepath) {
   const md = fs.readFileSync(filepath, 'utf8')
   const ast = Markdoc.parse(md)
   const frontmatter = ast.attributes.frontmatter
@@ -27,6 +27,8 @@ function getFrontmatter(filepath) {
     redirects: frontmatter.redirects,
     docId: frontmatter.docId,
     weight: frontmatter.weight,
+    root: root,
+    path: filepath,
   }
 }
 
@@ -40,7 +42,7 @@ function sortByDateThenTitle(arr) {
   })
 }
 
-let dir = path.resolve('./app/(blog)')
+let root = path.resolve('./app/(blog)')
 function walkDirRec(dir, space) {
   let results = []
   const list = fs.readdirSync(dir)
@@ -56,7 +58,7 @@ function walkDirRec(dir, space) {
       let title = file.charAt(0).toUpperCase() + file.slice(1)
       let fm = null
       if (fs.existsSync(pageFilepath)) {
-        fm = getFrontmatter(pageFilepath)
+        fm = getFrontmatter(root, pageFilepath)
         let entry = {
           type: file,
           title,
@@ -77,7 +79,7 @@ function walkDirRec(dir, space) {
   return results
 }
 
-let posts = walkDirRec(`${dir}/blog`, 'blog')
+let posts = walkDirRec(`${root}/blog`, 'blog')
 sortByDateThenTitle(posts)
 
 export default function BlogIndex() {
@@ -106,6 +108,8 @@ export default function BlogIndex() {
                         <div className="relative w-full">
                           <LocalImage
                             noLink
+                            root={post.root}
+                            dir={path.dirname(post.path)}
                             src={frontmatter.heroimage}
                             layout="fullWidth"
                             alt=""

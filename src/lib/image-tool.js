@@ -34,7 +34,23 @@ export function ImageWrap({ src, alt, width, height, noLink }) {
   )
 }
 
-export async function handleImageAsset(src) {
+export async function handleImageAsset(root, dir, src) {
+  if(root && dir) {
+    let inputPath = path.join(dir, src);
+    let relativeImagePath = path.relative(root, inputPath);
+    let publicPath = path.resolve('./public')
+    let outputPath = path.join(publicPath, 'images', relativeImagePath);
+
+    if(!fs.existsSync(outputPath)) {
+      fs.mkdirSync(path.dirname(outputPath), {recursive: true});
+      fs.copyFileSync(inputPath, outputPath);
+    }
+
+    const { width, height } = await sharp(outputPath).metadata()
+
+    return {src: `/images/${relativeImagePath}`, width, height}
+  }
+
   let filename = path.basename(src)
   // TODO this is pretty fragile and ignores the fact that there could be multiple files with the same name
   let files = glob.sync(`app/\\\(blog\\\)/blog/**/${filename}`, {

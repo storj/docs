@@ -2,7 +2,7 @@
 author:
   name: Egon Elbre
 date: '2021-10-14 00:00:00'
-heroimage: ./hero.png
+heroimage: ./hero-tech-debt.png
 layout: blog
 metadata:
   description: "Technical debt has been bothering me for a while.\

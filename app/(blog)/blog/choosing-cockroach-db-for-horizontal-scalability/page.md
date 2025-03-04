@@ -2,7 +2,7 @@
 author:
   name: Krista Spriggs and Jessica Grebenschikov
 date: '2020-08-11 00:00:00'
-heroimage: ./hero.png
+heroimage: ./hero-crdb-scale.png
 layout: blog
 metadata:
   description: Here at Storj Labs we just migrated our production databases from

@@ -2,7 +2,7 @@
 author:
   name: Egon Elbre
 date: '2022-07-29 00:00:00'
-heroimage: ./hero.jpeg
+heroimage: ./hero-production-concurrency.jpeg
 layout: blog
 metadata:
   description: Concurrency is one of those things that's easy to get wrong, even with

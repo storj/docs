@@ -60,7 +60,7 @@ You should make sure that the credentials file is available for the root on boot
 
 ```Text
 sudo echo ACCESS_KEY_ID:SECRET_ACCESS_KEY > /etc/passwd-s3fs
-sudo chmod 600 /etc/passwd-s3fs
+sudo chmod 0640 /etc/passwd-s3fs
 ```
 
 Then add the following to `/etc/fstab`:

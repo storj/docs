@@ -59,7 +59,7 @@ s3fs my-bucket /mnt/my-bucket -o passwd_file=${HOME}/.passwd-s3fs -o url=https:/
 You should make sure that the credentials file is available for the root on boot time. You can create it in the `/etc/` folder:
 
 ```Text
-sudo echo ACCESS_KEY_ID:SECRET_ACCESS_KEY > /etc/passwd-s3fs
+echo ACCESS_KEY_ID:SECRET_ACCESS_KEY | sudo tee /etc/passwd-s3fs
 sudo chmod 0640 /etc/passwd-s3fs
 ```
 

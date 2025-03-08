@@ -25,6 +25,10 @@ uplink rm sj://BUCKET/KEY [flags]
 
 {% /code-group %}
 
+{% callout type="info" %}
+Please note, the command `uplink rm --recursive` for the [versioned bucket](docId:oogh5vaiGei6atohm5thi) will put a deletion marker instead of the object deletion.
+{% /callout %}
+
 ## Flags
 
 | Flag                        | Description                                                  |

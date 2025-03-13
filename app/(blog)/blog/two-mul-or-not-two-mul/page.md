@@ -248,7 +248,7 @@ RPi4:
     Mul19shift-4   175.1µ ± 3%
 ```
 
-Which is annoying. On one arm, machine multiplication is faster and on the other,
+Which is annoying. On one ARM device, multiplication is faster and on the other,
 shifting and adding. And there isn't a really nice way to conditionalize
 per target CPU in the `gc` compiler.
 
@@ -266,11 +266,11 @@ This got me thinking about: how many instructions can you do in parallel.
 
 _One amazing collection of suggestions for low-level optimizations are [Agner Fog's resources](https://www.agner.org/optimize/)._
 
-There are three main considerations on how many instructions we can do in parallel.
+There are three main considerations on how many instructions we can do in parallel:
 
-A. Are we waiting for data from RAM or caches to arrive.
-B. Whether there are dependency chains.
-C. Which instructions can be done in parallel.
+* Are we waiting for data from RAM or caches to arrive.
+* Whether there are dependency chains.
+* Which instructions can be done in parallel.
 
 Waiting data from RAM is the obvious thing. If we don't have data, we cannot
 calculate things.
@@ -303,7 +303,7 @@ floating-point addition, and a floating-point multiplication at the same time. O
 the internal details of cores can vary wildly. See more details in
 [Optimizing C++ by Agner Fog](https://www.agner.org/optimize/optimizing_cpp.pdf).
 
-I didn't measure exactly which execution units were overwhelmed and which ones;
+I didn't measure exactly which execution units were overwhelmed and which ones weren't;
 either way -- we got a performance improvement.
 
 ## Back to the original plan
@@ -314,6 +314,6 @@ I redid my optimizations and benchmarked on different platforms. And roughly
 ended up with ~20% total improvement on ARM64 and ~8% amd64. Of course your results
 may vary depending on your CPU.
 
-_For future work, there are additional optimizations possible. For example, there are also AVX2 and AVX512 implementations that perform better._
-
 These improvements will be coming to you soon; in Go 1.25.
+
+_For future work, there are additional optimizations possible. For example, there are also AVX2 and AVX512 implementations that perform better._

@@ -187,7 +187,7 @@ Then the multiplication can be rewritten as:
     x = x + x<<N; x = x + x<<M
 
 This can be checked with:
-    (c-1)&1 == 0 && bits.OnesCount(c - 1) == 3 && highbit - lowbit = midbit
+    (c-1)&1 == 0 && bits.OnesCount(c - 1) == 3 && highbit - lowbit == midbit
 
 Which holds for numbers like:
     15, 23, 27, 29, 39, 43, 51, 53, 57, 71, 75, 83, 89, 99, 101, 135, 139, 147, 163, 169, 177, 195...

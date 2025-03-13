@@ -8,7 +8,7 @@ import {
   LinkedinShareButton,
   LinkedinIcon,
   TwitterShareButton,
-  TwitterIcon,
+  XIcon,
   RedditIcon,
 } from 'react-share'
 
@@ -43,7 +43,7 @@ const ShareButtons = ({
           via={twitterHandle}
           hashtags={tags}
         >
-          <TwitterIcon size={40} round={true} />
+          <XIcon size={40} round={true} />
         </TwitterShareButton>
         <LinkedinShareButton url={url} className="mr-2">
           <LinkedinIcon size={40} round={true} />

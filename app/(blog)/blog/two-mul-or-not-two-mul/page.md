@@ -7,8 +7,8 @@ layout: blog
 metadata:
  description: "Low level optimizations are tricky and sometimes unintuitive.
  We'll take a look at a story of optimizing ed25519 signing and verification."
- title: "Two mul or not two mul: how I found a 20% improvement in ed21559 in golang"
-title: "Two mul or not two mul: how I found a 20% improvement in ed21559 in golang"
+ title: "Two mul or not two mul: how I found a 20% improvement in ed25519 in golang"
+title: "Two mul or not two mul: how I found a 20% improvement in ed25519 in golang"
 ---
 
 One of the heavy CPU uses in the Storj network is Edwards 25519 signature scheme.

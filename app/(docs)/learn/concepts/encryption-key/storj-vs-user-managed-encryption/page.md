@@ -11,7 +11,7 @@ When creating a new Storj project, users can choose between **Storj-Managed Encr
 
 This page explains the differences between these options to help users determine which approach best suits their needs.
 
-## Overivew
+## Overview
 
 **Storj Managed Encryption** is ideal for:
 * Users who want a streamlined web-based experience similar to other cloud storage providers.
@@ -37,3 +37,11 @@ This page explains the differences between these options to help users determine
 
 ## Choosing the Right Option
 Storj offers both passphrase management methods to balance security, usability, and flexibility. Users prioritizing convenience and collaboration may prefer Storj-Managed Encryption, while those needing full control over encryption should opt for Self-Managed Encryption.
+
+## How to Select an Encryption Method
+When creating a new project, you will be presented with two options for managing the encryption for your data:
+
+* Automatic (Storj-managed encryption): Storj securely manages the encryption and decryption of your project automatically.
+* Self-Managed: You are responsible for securely managing your own data encryption passphrase.
+
+This selection is **final** for the project and cannot be changed later.

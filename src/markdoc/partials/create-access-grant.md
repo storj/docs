@@ -19,7 +19,7 @@ Create Access Grant in the Storj Console:
 
    - **End date**: provide an expiration date for these credentials (optional)
 
-5. Click **Next** to provide Access encryption Information
+5. Click **Next** to provide Access encryption Information (Skip this section if you have opted into [Storj-managed passphrases](docId:aitie6rohXai9uuv) for the project)
 
    {% callout type="warning"  %}
    In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.

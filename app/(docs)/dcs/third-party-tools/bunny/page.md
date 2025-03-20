@@ -46,13 +46,21 @@ Visiting the URL in a browser is a convenient fix in most circumstances.
 
 4. Enter any name in the Pull Zone Name section. Record the full domain name (EG: `example.b-cdn.net`) for later use.
 
-5. Set `Origin URL` to `http://link.storjshare.io/`
+5. Make a new [linkshare to the bucket or path](docId:cie0gae7voob2Weigh3c) of your choice
 
-6. Set `Host Header` to the URL to the desired final hostname (EG: `www.example.test`).
+6. Your linkshare URL needs the `/s` replaced with `/raw` and the trailing `/` removed, should look like this if at path level: `https://link.storjshare.io/raw/jwm2j2juznpzcyl5kzgxzxvareoq/mybucket/myfolder`
 
-7. Chose your tier and pricing zones.
+7. Set `Origin URL` to your modified linkshare URL
 
-8. Click `Add Pull Zone`
+8. Set `Host Header` to the URL to the desired final hostname (EG: `www.example.test`).
+
+9. Chose your tier and pricing zones.
+
+10. Click `Add Pull Zone`
+
+11. Bunny will then give you a new url, for example `https://example.b-cdn.net`.
+
+12. The cache at Bunny will hydrate via storj and will only need to rehydrate when the bunny cache expires.
 
 ## Configure Your Domain Registrar
 
@@ -81,7 +89,3 @@ Ensure you include the trailing `.` at the end of your CNAME if your DNS provide
 {% callout type="info"  %}
 For more detailed information, refer to [Bunny's documentation for integrating Bunny CDN with Cloudflare](https://support.bunny.net/hc/en-us/articles/360001631951-How-to-set-up-BunnyCDN-with-a-custom-hostname-on-CloudFlare)
 {% /callout %}
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes

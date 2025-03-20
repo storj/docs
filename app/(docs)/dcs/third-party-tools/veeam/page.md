@@ -14,7 +14,7 @@ metadata:
 
 **Veeam Backup & Replication** is an all-in-one backup, recovery, and data security solution that serves both on-premises and cloud storage. It is the foundation of the Veeam Platform and delivers simple, flexible, reliable, and powerful data protection.
 
-For more information, visit [veeam.com](). You can also [download a free trial](https://www.veeam.com/vm-backup-recovery-replication-software.html) for 30 days.
+For more information, visit [veeam.com](https://www.veeam.com/). You can also [download a free trial](https://www.veeam.com/vm-backup-recovery-replication-software.html) for 30 days.
 
 ## Advantages of Veeam with Storj
 
@@ -125,7 +125,7 @@ Setting a value higher than 64 can increase throughput backing up (offloading) t
     {% callout type="info" %}
       **Immutability Requirements**
 
-      Veeam's immutability setting uses S3-Compatible Object Lock, which is currently in Beta. For more information and instructions on setting up your bucket with Object Lock, please refer to our documentation here: [](docId:gjrGzPNnhpYrAGTTAUaj).
+      Veeam's immutability setting uses S3-Compatible Object Lock. For more information and instructions on setting up your bucket with Object Lock, please refer to our documentation here: [](docId:e94a86fc-3deb-42f0-b7fe-1f80c675930a).
     {% /callout %}
     ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YOE-le-vX4D0wfn7tnrey_archiverepositorys3cbucket.png)
 

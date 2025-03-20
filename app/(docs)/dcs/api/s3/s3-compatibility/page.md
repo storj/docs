@@ -55,13 +55,13 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | GetBucketReplication | No |  |
 | GetBucketRequestPayment | No | Planned support status needs verification |
 | GetBucketTagging | No |  |
-| GetBucketVersioning | Yes (Beta) |  |
+| GetBucketVersioning | Yes | [](docId:oogh5vaiGei6atohm5thi) |
 | GetBucketWebsite | No |  |
 | GetObject | Partial | We need to add support for the partNumber parameter |
 | GetObjectAcl | No |  |
-| GetObjectLegalHold | No | Currently in active development. See [](docId:gjrGzPNnhpYrAGTTAUaj) |
-| GetObjectLockConfiguration | No | Currently in active development. See [](docId:gjrGzPNnhpYrAGTTAUaj) |
-| GetObjectRetention | Yes (Beta) | [](docId:gjrGzPNnhpYrAGTTAUaj) |
+| GetObjectLegalHold | Yes | [](docId:gjrGzPNnhpYrAGTTAUaj) |
+| GetObjectLockConfiguration | Yes | [](docId:gjrGzPNnhpYrAGTTAUaj) |
+| GetObjectRetention | Yes | [](docId:gjrGzPNnhpYrAGTTAUaj) |
 | GetObjectTagging | Full | Tags can be modified outside of tagging endpoints |
 | GetObjectTorrent | No |  |
 | GetPublicAccessBlock | No |  |
@@ -73,7 +73,7 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | ListBucketMetricsConfigurations | No |  |
 | ListBuckets | Full |  |
 | ListMultipartUploads | Partial | See ListMultipartUploads section |
-| ListObjectVersions | Yes (Beta) | [](docId:gjrGzPNnhpYrAGTTAUaj) |
+| ListObjectVersions | Yes | [](docId:oogh5vaiGei6atohm5thi) |
 | ListObjects | Partial | See ListObjects section |
 | ListObjectsV2 | Partial | See ListObjects section |
 | ListParts | Full |  |
@@ -95,13 +95,13 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | PutBucketReplication | No |  |
 | PutBucketRequestPayment | No | Planned support status needs verification |
 | PutBucketTagging | No |  |
-| PutBucketVersioning | Yes (Beta) | [](docId:gjrGzPNnhpYrAGTTAUaj) |
+| PutBucketVersioning | Yes | [](docId:oogh5vaiGei6atohm5thi) |
 | PutBucketWebsite | No |  |
 | PutObject | Full |  |
 | PutObjectAcl | No |  |
-| PutObjectLegalHold | No |  |
-| PutObjectLockConfiguration | No | Currently in active development. See [](docId:gjrGzPNnhpYrAGTTAUaj) |
-| PutObjectRetention | Yes (Beta) | [](docId:gjrGzPNnhpYrAGTTAUaj) |
+| PutObjectLegalHold | Yes | [](docId:gjrGzPNnhpYrAGTTAUaj) |
+| PutObjectLockConfiguration | Yes | [](docId:gjrGzPNnhpYrAGTTAUaj) |
+| PutObjectRetention | Yes | [](docId:gjrGzPNnhpYrAGTTAUaj) |
 | PutObjectTagging | Full | Tags can be modified outside of tagging endpoints |
 | PutPublicAccessBlock | No |  |
 | RestoreObject | No |  |
@@ -345,3 +345,18 @@ func main() {
 	fmt.Println(awsutil.Prettify(output))
 }
 ```
+
+## Compatibility with Python SDK (`boto3`) and `aws` CLI
+Currently only `boto3` version up to 1.35.99 is working normally. Since AWS CLI uses `boto3` under the hood, it's affected too.
+
+You can find the explanation of this breaking change in boto3 in this [github issue](https://github.com/boto/boto3/issues/4392).
+
+{% callout type="warning" %}
+Specifically, please note:
+
+> Disclaimer: The AWS SDKs and CLI are designed for usage with official AWS services. We may introduce and enable new features by default, such as these new [default integrity protections](https://aws.amazon.com/blogs/aws/introducing-default-data-integrity-protections-for-new-objects-in-amazon-s3/) prior to them being supported or handled by third-party service implementations. You can disable the new behavior with the `WHEN_REQUIRED` value for the `request_checksum_calculation` and `response_checksum_validation` configuration options covered in [Data Integrity Protections for Amazon S3](https://docs.aws.amazon.com/sdkref/latest/guide/feature-dataintegrity.html).
+{% /callout %}
+
+It is preferable to downgrade rather than disabling the new behavior with `WHEN_REQUIRED`, and this may not even work with Storj anyway.
+
+You may track [this issue](https://github.com/storj/gateway-st/issues/89) to be notified, when this new behavior would be supported by [Gateway-ST](docId:EGM8O-1xt2Az03eBWT8Rf) and [Gateway-MT](docId:yYCzPT8HHcbEZZMvfoCFa).

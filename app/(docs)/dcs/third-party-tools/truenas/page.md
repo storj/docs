@@ -1,11 +1,12 @@
 ---
-title: TrueNAS - iXsystems
+title: TrueNAS
 docId: ygezxeTPxu9ysDNPxY-WM
 tags:
   - backup
 redirects:
   - /dcs/how-tos/ix-systems-truenas-integration
   - /dcs/ix-systems-truenas-integration
+  - /dcs/third-party-tools/ix-systems-truenas
 metadata:
   title: TrueNAS Integration with Storj for Secure Data Storage
   description:
@@ -40,7 +41,7 @@ To integrate TrueNAS with Storj, you will need:
 
 - A TrueNAS storage device connected to your network.
 
-For more information about the iX Storj integration, visit <https://www.truenas.com/ix-storj>.
+For more information about the TrueNAS Storj integration, visit <https://www.truenas.com/ix-storj>.
 
 ---
 
@@ -48,10 +49,10 @@ For more information about the iX Storj integration, visit <https://www.truenas.
 
 ### Sign up for an account
 
-Navigate to <https://storj.io/signup?partner=ix-storj-1> to sign up iX-Storj account. Enter your full name, email address, and a password, as shown below:
+Navigate to <https://storj.io/signup?partner=ix-storj-1> to sign up for TrueNAS Storj account. Enter your full name, email address, and a password, as shown below:
 
 {% callout type="warning"  %}
-If you have an existing Storj account, you will need to contact support to have it linked to the iX Storj integration. See [here](https://forum.storj.io/t/truenas-backups-and-differences-between-storj-and-storj-ix/20044/7) for more information
+If you have an existing Storj account, you will need to contact support to have it linked to the TrueNAS Storj integration. See [here](https://forum.storj.io/t/truenas-backups-and-differences-between-storj-and-storj-ix/20044/7) for more information
 {% /callout %}
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PnQ7D7Z6fU0RPKZpOCRXJ_image.png)
@@ -134,6 +135,8 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 To complete the integration, you will need the S3 credentials created in the previous steps and a TrueNAS login.
 
+If you use TrueNAS 24.10 (Electric Eel) or later, you would be able to setup a [TrueCloud Backup Task](#create-a-truecloud-backup-task), it's a preferred method, because it has several advantages above the [Cloud Sync Task](#create-a-cloud-sync-task): [https://www.truenas.com/docs/scale/24.10/scaletutorials/dataprotection/truecloudtasks/](https://www.truenas.com/docs/scale/24.10/scaletutorials/dataprotection/truecloudtasks/)
+
 ### Create a Cloud Credential in TrueNAS
 
 1\. Log into TrueNAS on your network.
@@ -166,6 +169,15 @@ To complete the integration, you will need the S3 credentials created in the pre
 
 6\. Click **Save**.
 
+### Create a TrueCloud Backup Task
+
+This is a cost-efficient solution in comparison with a Cloud Sync Task. It's available starting with TrueNAS 24.10 (Electric Eel).
+
+The TrueCloud Backup Task allows to create [restic](docId:5_zxVAqCUku5pVX0OTwSW) snapshots and upload them to the Storj bucket. Each snapshot contains only a difference, it also packs smaller objects to a bigger chunks, which effectively reduce your [storage](docId:59T_2l7c1rvZVhI8p91VX#object-storage) and [segments usage](docId:59T_2l7c1rvZVhI8p91VX#per-segment-fee) in the bucket.
+The restic snapshots allows you to restore a specific version of any object or the entire dataset.
+
+Please follow the [TrueNAS documentation to setup a TrueCloud Backup Task](https://www.truenas.com/docs/scale/24.10/scaletutorials/dataprotection/truecloudtasks/)
+
 ### Create a Cloud Sync Task
 
 1\. On the left-hand menu, click **Data Protection**, navigate to **_Cloud Sync Tasks_**, and click **Add**.
@@ -195,6 +207,15 @@ To complete the integration, you will need the S3 credentials created in the pre
 4\. To test whether the sync has been successful, click the **Run Now** arrow in the task entry.
 
 ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/FAbFNiNGpHfycYMgE_1ZJ_run.png)
+
+{% callout type="info" %}
+You may consider to enable [Object versioning](docId:oogh5vaiGei6atohm5thi) for the bucket and you may also [generate S3 credentials with TTL](docId:55e7ac9b-cf21-41fa-be19-087f55de1066#setting-object-ttl-in-the-access-grant--s3-credentials) to automatically delete expired versions.
+
+**Please note, the automatic deletion of expired objects can delete the last version too, so be careful with that feature**
+
+**If you want to have a normal backup tool, consider to use a [TrueCloud Backup Task](#create-a-truecloud-backup-task) instead.**
+
+{% /callout %}
 
 ## Success!
 

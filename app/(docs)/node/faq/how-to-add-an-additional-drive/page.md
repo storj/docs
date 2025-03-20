@@ -86,7 +86,7 @@ In summary:
 3.  if the second node is running on the same device as the first one, you need to forward `28968` to `28968`, change the `server.address:` option in the `config.yaml` (in case of binary or `docker run` with `--network host`) or `-p 28968:28967` parameter in `docker run` command (in case of docker without `--network host`).
 
 {% callout type="info"  %}
-See KB article [Single and multi-node Port forwarding setup](https://support.storj.io/hc/en-us/articles/360042343052-Single-and-multi-node-Port-forwarding-setup) for details.
+See KB article [Single and multi-node Port forwarding setup](docId:52ea9ae6-74e2-41b4-88f1-4b1230ec27da) for details.
 
 See [](docId:y0jltT-HzKPmDefi532sd) section for general port forwarding configuration.
 {% /callout %}

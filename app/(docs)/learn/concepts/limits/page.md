@@ -16,9 +16,7 @@ Usage Limits allow us to ensure a consistent level of service for all customers.
 
 ## PRO Account (Paid Tier)
 
-## Credit Card Payment method
-
-Adding a credit card as a payment method will result in your per-project limits being automatically raised to Pro Account limits:
+Adding a valid Payment method will result in your per-project limits being automatically raised to Pro Account limits:
 
 - 3 projects
 
@@ -36,6 +34,12 @@ Adding a credit card as a payment method will result in your per-project limits 
 
 - Secure Custom Domains (HTTPS) for Linksharing
 
+### Credit Card Payment method
+
+{% callout type="warning"  %}
+Please note: some Debit cards maybe accepted too, but prepaid cards are not supported.
+{% /callout %}
+
 ### STORJ token Payment method
 
 Adding $10 or more worth of STORJ tokens to your account deposit address will automatically upgrade your account to PRO and you will also receive a bonus of 10% of the deposit amount on your balance.
@@ -43,6 +47,18 @@ Adding $10 or more worth of STORJ tokens to your account deposit address will au
 {% callout type="info"  %}
 Please note: The deposit address currently only accepts transactions with ERC20 STORJ tokens on Ethereum mainnet or zkSync Era (note that **zkSync Lite is not supported**).
 {% /callout %}
+
+### Google Pay Payment method
+You can also add Google Pay as a payment method, it's available when you select **Add Card** on the _**Payment Methods**_ tab of the [**Billing**](docId:Hurx0SirlRp_O5aUzew7_) page in the desktop or mobile Chrome browsers logged in to the Google Account with enabled Google Pay.
+
+### Apple Pay Payment method
+You can aslo add Apple Pay as a payment method, it's available when you select **Add Card** on the _**Payment Methods**_ tab of the [**Billing**](docId:Hurx0SirlRp_O5aUzew7_) page in the desktop or mobile Safary browsers.
+
+### Bank account Payment method
+Available banks depending on the used region. Use the **Add Card** button on the _**Payment Methods**_ tab of the [**Billing**](docId:Hurx0SirlRp_O5aUzew7_) page.
+
+### Online Payment Link in the invoice
+You can also use a payment link in the Open invoices (invoices are available on [_**Billiing History**_](docId:Hurx0SirlRp_O5aUzew7_) tab)
 
 ## Rationales behind limits
 

@@ -48,13 +48,13 @@ Ubuntu - 64-bit version of one of these Ubuntu versions:
 - Bionic 18.04 (LTS) or later
 
 > **Make sure you use static mount for your hard drive via**
-> **/etc/fstab and drive is mounted with `exec` permission**:
+> **/etc/fstab**:
 > See [](docId:nZeFxmawYPdgkwUPy6f9s).
 
 {% /tab %}
 
 {% tab label="MacOs" %}
-macOS Sierra 10.12 and newer macOS releases are supported
+macOS 10.15 Catalina and newer macOS releases are supported
 
 Mac hardware must be a 2010 or newer model
 

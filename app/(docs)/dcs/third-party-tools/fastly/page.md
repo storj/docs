@@ -28,7 +28,7 @@ To do that, you must first [create a Fastly service](https://docs.fastly.com/en/
 
 - For the new Fastly domain and host, set the **Domain Name** field to the hostname you will be using for your URL. For example, `cdn.example.com`
 
-- When you get to the **Hosts** section on the **Origins** page, enter the address of the Storj gateway endpoint ([](docId:yYCzPT8HHcbEZZMvfoCFa)) you would like to use for this service. Include the name of your bucket, for example: `mybucket.gateway.us1.storjshare.io`
+- When you get to the **Hosts** section on the **Origins** page, enter the address of the Storj gateway endpoint ([](docId:yYCzPT8HHcbEZZMvfoCFa)) you would like to use for this service. Include the name of your bucket, for example: `mybucket.gateway.storjshare.io`
 
 - After adding the host, click the pencil icon to **Edit this host** and check that the following are correctly filled out:
 

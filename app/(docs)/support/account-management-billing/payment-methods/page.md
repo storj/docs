@@ -11,11 +11,19 @@ metadata:
     token for payments.
 ---
 
-Storj accepts the following two payment methods:
+Storj accepts the following several payment methods:
 
 1.  Credit Card
 
 2.  STORJ Token - ERC20 compatible utility token that leverages the Ethereum blockchain
+
+3.  Google Pay (available only in the browser logged in to your Google Account with enabled Google Pay)
+
+4. Apple Pay (available only in the Safary browser)
+
+5.  Bank payment method (availability varies by region)
+
+6.  Online payment link in the Open invoice
 
 ---
 
@@ -28,6 +36,12 @@ Begin by selecting "Billiing" from the "My Account" dropdown menu at the left bo
 ## Using a Credit Card
 
 You can select to **Add New Card** to add a Card to your account on the **_Billing - Payment Methods_** screen. You will be prompted to specify Card details.
+
+On this screen you can also use a Google Pay payment method, it become available if you use a browser logged in to a Google Account with enabled Google Pay.
+
+The Apple Pay payment method is available only in the Safary browser.
+
+Bank payment method may also be available here (availability varies by region).
 
 You’ll be prompted to add your card information. Using a credit card is somewhat self-explanatory, but there are some key points users should understand:
 
@@ -70,3 +84,7 @@ Important: The deposit address generated for your account is a deposit-only addr
 {% /callout %}
 
 If the STORJ token balance runs out, a user will receive a notification to the registered email on the account. However, if a new payment is not added within a reasonable amount of time, Storj reserves the right to reduce account usage limits to zero and/or reclaim the available storage and bandwidth resources and delete your data stored on the network pursuant to our data retention policy.
+
+## Using Online payment link in the Open invoice
+This option is available only in the Opened unpaid invoices. 
+There you could also use a different Card, a Wire bank transfer, Google Pay, Apple Pay and Amazon Pay.

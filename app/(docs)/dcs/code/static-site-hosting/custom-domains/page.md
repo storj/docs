@@ -230,7 +230,7 @@ To use a custom domain with linksharing, you must have a valid domain name, acce
 
 ### Why is my browser telling me that my connection is not secure?
 
-While Linksharing links are secure, when you use a custom domain the browser is expecting a TLS certificate for your domain to be present on the Storj servers hosting the link. We do not have this certificate by default, so you will need to upgrade to a [](docId:Zrbz4XYhIOm99hhRShWHg) and follow the relevant steps above to enable TLS (HTTPS) in the browser.
+While Linksharing links are secure, when you use a custom domain the browser is expecting a TLS certificate for your domain to be present on the Storj servers hosting the link. We do not have this certificate by default, so you will need to upgrade to a [Pro Account (Paid Tier)](docId:Zrbz4XYhIOm99hhRShWHg#pro-account-paid-tier) and follow the relevant steps above to enable TLS (HTTPS) in the browser.
 
 ### Why am I seeing an "Invalid SSL certificate" error from Cloudflare?
 

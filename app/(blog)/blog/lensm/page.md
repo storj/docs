@@ -2,7 +2,8 @@
 author:
   name: Egon Elbre
 date: '2022-07-18 00:00:00'
-heroimage: ./hero.jpeg
+docId: 'lensm'
+heroimage: ./hero-lensm.jpeg
 layout: blog
 metadata:
   description: "I couldn\u2019t find a great tool for viewing disassembly, so I wrote\

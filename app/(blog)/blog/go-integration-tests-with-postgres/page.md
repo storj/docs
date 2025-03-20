@@ -2,7 +2,7 @@
 author:
   name: Egon Elbre
 date: '2023-03-20 00:00:00'
-heroimage: ./hero.jpeg
+heroimage: ./hero-integration-tests.jpeg
 layout: blog
 metadata:
   description: When writing server side projects in Go, at some point you will also

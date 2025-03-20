@@ -5,7 +5,7 @@ redirects:
   - /node/resources/faq/estimate-payouts
 ---
 
-If you would like to estimate how much you can expect to get paid for running your Node during a given month, please follow the instructions [here](https://support.storj.io/hc/en-us/articles/360029053531-Calculate-the-current-earnings-for-v3).
+If you would like to estimate how much you can expect to get paid for running your Node during a given month, please follow the instructions [here](https://forum.storj.io/t/earnings-calculator-update-2024-07-28-v14-1-0-now-shows-garbage-collection-progress-detailed-earnings-info-and-health-status-of-your-node-including-vetting-progress-and-garbage-collection-status/1794).
 
 This information is also available on the [](docId:3k4V1HFunDWHVso9b1Xt9) (docker) or [](docId:gH4m4hVZ0BkMVAoW_jA2t)
 

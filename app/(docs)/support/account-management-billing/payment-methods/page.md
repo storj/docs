@@ -19,7 +19,7 @@ Storj accepts the following several payment methods:
 
 3.  Google Pay (available only in the browser logged in to your Google Account with enabled Google Pay)
 
-4. Apple Pay (available only in the Safary browser)
+4.  Apple Pay (available only in the Safary browser)
 
 5.  Bank payment method (availability varies by region)
 

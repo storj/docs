@@ -4,7 +4,6 @@ docId: 5cf2882d-1d07-4509-97eb-1376d35920f1
 redirects:
   - /hc/en-us/articles/360032221151-2017-Token-Sale-Terms
   - /hc/en-us/articles/360032221151
-
 ---
 # STORJ LABS (BVI) LTD. TERMS OF TOKEN SALE
 

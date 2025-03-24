@@ -226,6 +226,7 @@ export default function (nextConfig = {}) {
             let dcsBottomNav = extractHrefObjects(structuredClone(dcs))
             let nodeBottomNav = extractHrefObjects(structuredClone(node))
             let learnBottomNav = extractHrefObjects(structuredClone(learn))
+            let objectMountBottomNav = extractHrefObjects(structuredClone(om))
             let supportBottomNav = extractHrefObjects(structuredClone(support))
             let blogBottomNav = extractHrefObjects(structuredClone(blog))
 
@@ -240,9 +241,8 @@ export default function (nextConfig = {}) {
               export const dcsBottomNav = ${JSON.stringify(dcsBottomNav)}
               export const nodeBottomNav = ${JSON.stringify(nodeBottomNav)}
               export const learnBottomNav = ${JSON.stringify(learnBottomNav)}
-              export const supportBottomNav = ${JSON.stringify(
-                supportBottomNav
-              )}
+              export const objectMountBottomNav = ${JSON.stringify(objectMountBottomNav)}
+              export const supportBottomNav = ${JSON.stringify(supportBottomNav)}
               export const blogBottomNav = ${JSON.stringify(blogBottomNav)}
             `
           }),

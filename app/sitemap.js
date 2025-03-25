@@ -4,7 +4,7 @@ import {
   learnBottomNav,
   supportBottomNav,
   blogBottomNav,
-  objectMountBottomNav,
+  oMountBottomNav,
 } from '@/markdoc/navigation.mjs'
 
 export default function sitemap() {
@@ -14,7 +14,7 @@ export default function sitemap() {
     nodeBottomNav,
     supportBottomNav,
     blogBottomNav,
-    objectMountBottomNav,
+    oMountBottomNav,
   ]
     .flat()
     .map(({ href }) => ({ url: `${process.env.SITE_URL}${href}` }))

@@ -8,6 +8,7 @@ import {
   dcsNavigation,
   nodeNavigation,
   learnNavigation,
+  oMountNavigation,
   supportNavigation,
 } from '@/markdoc/navigation.mjs'
 
@@ -148,7 +149,10 @@ export function Navigation({ className }) {
     sideNavigation = learnNavigation
   } else if (pathname.startsWith('/support')) {
     sideNavigation = supportNavigation
+  } else if (pathname.startsWith('/object-mount')) {
+    sideNavigation = oMountNavigation
   }
+
 
   return (
     <nav

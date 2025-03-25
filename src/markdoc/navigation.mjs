@@ -190,6 +190,8 @@ export default function (nextConfig = {}) {
             sortByWeightThenTitle(node)
             let learn = walkDir(`${dir}/\(docs\)/learn`, 'learn')
             sortByWeightThenTitle(learn)
+            let oMount = walkDir(`${dir}/\(docs\)/object-mount`, 'object-mount')
+            sortByWeightThenTitle(oMount)
             let support = walkDir(`${dir}/\(docs\)/support`, 'support')
             sortByWeightThenTitle(support)
             let blog = walkDir(`${dir}/\(blog\)/blog`, 'blog', {
@@ -206,6 +208,7 @@ export default function (nextConfig = {}) {
               ...getRedirects(dcs),
               ...getRedirects(node),
               ...getRedirects(learn),
+              ...getRedirects(oMount),
               ...getRedirects(support),
               ...getRedirects(blog),
             ]
@@ -226,7 +229,7 @@ export default function (nextConfig = {}) {
             let dcsBottomNav = extractHrefObjects(structuredClone(dcs))
             let nodeBottomNav = extractHrefObjects(structuredClone(node))
             let learnBottomNav = extractHrefObjects(structuredClone(learn))
-            let objectMountBottomNav = extractHrefObjects(structuredClone(om))
+            let oMountBottomNav = extractHrefObjects(structuredClone(oMount))
             let supportBottomNav = extractHrefObjects(structuredClone(support))
             let blogBottomNav = extractHrefObjects(structuredClone(blog))
 
@@ -237,11 +240,12 @@ export default function (nextConfig = {}) {
               export const nodeNavigation = ${JSON.stringify(node)}
               export const learnNavigation = ${JSON.stringify(learn)}
               export const supportNavigation = ${JSON.stringify(support)}
+              export const oMountNavigation = ${JSON.stringify(oMount)}
               export const blogNavigation = ${JSON.stringify(blog)}
               export const dcsBottomNav = ${JSON.stringify(dcsBottomNav)}
               export const nodeBottomNav = ${JSON.stringify(nodeBottomNav)}
               export const learnBottomNav = ${JSON.stringify(learnBottomNav)}
-              export const objectMountBottomNav = ${JSON.stringify(objectMountBottomNav)}
+              export const oMountBottomNav = ${JSON.stringify(oMountBottomNav)}
               export const supportBottomNav = ${JSON.stringify(supportBottomNav)}
               export const blogBottomNav = ${JSON.stringify(blogBottomNav)}
             `

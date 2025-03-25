@@ -10,7 +10,7 @@ import {
   learnBottomNav,
   supportBottomNav,
   blogBottomNav,
-  objectMountBottomNav,
+  oMountBottomNav,
 } from '@/markdoc/navigation.mjs'
 
 function ArrowIcon(props) {
@@ -59,8 +59,8 @@ export function PrevNextLinks() {
     allLinks = supportBottomNav
   } else if (pathname.startsWith('/blog')) {
     allLinks = blogBottomNav
-  } else if (pathname.startsWith('/om')) {
-    allLinks = objectMountBottomNav
+  } else if (pathname.startsWith('/object-mount')) {
+    allLinks = oMountBottomNav
   }
 
   let linkIndex = allLinks.findIndex((link) => link.href === pathname)

@@ -9,7 +9,7 @@ metadata:
 
 weight: 0
 ---
-# Authentication
+## Authentication
 
 Object Mount can connect to any of the major cloud storage providers using the native storage credentials.
 

@@ -440,4 +440,4 @@ Check that access, modification and migration are working as expected. We recomm
 
 NB: You can set the ``CUNO_DEBUG`` environment variable to ``trace``, or ``debug`` at the time of mounting.
 
-Not seeing what you expect? Get in touch on our public [discourse forum](https://forum.storj.io/) or get in touch privately at [support@storj.io](mailto:support@storj.io).
+Not seeing what you expect? Get in touch on our public [discourse forum](https://forum.storj.io/) or get in touch privately at [supportdcs@storj.io](mailto:supportdcs@storj.io).

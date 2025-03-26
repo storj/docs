@@ -27,7 +27,7 @@ To continue using Object Mount beyond the trial period, you must [register onlin
 {% callout type="note"  %}
 Trials are only to be used once per user/organisation. If installing inside a cloud instance or container, you should register and activate an appropriate license manually.
 
-Register [online](https://cuno.io/register) for a free personal-use license or Professional, Educational or Enterprise evaluation. Contact [sales@cuno.io](mailto:sales@storj.io) when you're ready for a quote.
+Register [online](https://cuno.io/register) for a free personal-use license or Professional, Educational or Enterprise evaluation. Contact [sales@storj.io](mailto:sales@storj.io) when you're ready for a quote.
 
 All free licenses (including evaluations) let you use Professional-tier features for 14 days, and thereafter you will be limited to the [Personal](https://cuno.io/pricing) tier of usage. 
 See the [pricing page](https://cuno.io/pricing) for more information about pricing, licenses and the available features on each tier.

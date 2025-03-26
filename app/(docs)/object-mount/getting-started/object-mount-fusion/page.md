@@ -21,9 +21,11 @@ It is a **cheaper** and **faster** solution compared to using EFS alone.
 Object Mount Fusion takes an attached storage filesystem and an initially empty object storage bucket/directory and exposes a single interface for both. 
 Object Mount Fusion will migrate files between object storage and local filesystem depending on where they are best for performance/cost.
 
-**Note:**
-This feature is available only to [Professional and Enterprise Tier](TODO https://cuno.io/pricing/) customers. 
-If you have any questions, please feel free to [contact us](TODO https://cuno.io/contact-us/).
+
+{% callout type="note"  %}
+This feature is available only to [Professional and Enterprise Tier](https://cuno.io/pricing/) customers. 
+If you have any questions, please feel free to [contact us](https://cuno.io/contact-us/).
+{% /callout %}
 
 ## How it works
 
@@ -33,7 +35,7 @@ Object Mount Fusion automatically migrates files between the two according to ap
 New files may be written in either tier, depending on predicted and observed access properties. 
 Object Mount Fusion supports multiple users simultaneously accessing files on multiple nodes by sharing the attached storage and mount location.
 
-More information can be found in the full explanation of :ref:`Object Mount Fusion < TODO user-guide-Object Mount-fusion>`.
+More information can be found in the full explanation of [Object Mount Fusion](user-guide-Object-Mount-fusion).
 
 ## Setting up Object Mount Fusion
 
@@ -41,7 +43,7 @@ Object Mount Fusion is expected to be used within the same high-speed LAN as you
 [AWS Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/) as the bucket to accessed. If you are using an S3-compatible on-premises object storage solution, 
 then Object Mount Fusion should be set up on a computer on the same high-speed local network.
 
-If you're already set up and using an attached storage system, such as EFS, you may skip ahead to {TODO ref}`Object Mount-fusion-guide-mount`.
+If you're already set up and using an attached storage system, such as EFS, you may skip ahead to [Object Mount-fusion-guide-mount](todo).
 
 ### Set up an empty bucket or directory on object storage
 
@@ -54,13 +56,13 @@ This can either be an entirely empty bucket, or an empty directory on an existin
     TODO
 {% /tab %}
 {% tab label="AWS S3" %}
-    For a new empty bucket, follow the instructions for `setting up a new bucket <https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html>`_.
+    For a new empty bucket, follow the instructions for [setting up a new bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html)
 {% /tab %}
 {% tab label="Microsoft Azure" %}
-    For a new empty container, follow the instructions for `setting up a new storage container <https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container>`_.
+    For a new empty container, follow the instructions for [setting up a new storage container](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 {% /tab %}
 {% tab label="Google Cloud Storage" %}
-    For a new empty bucket, follow the instructions for `setting up a new GCS bucket <https://cloud.google.com/storage/docs/creating-buckets>`_.
+    For a new empty bucket, follow the instructions for [setting up a new GCS bucket](https://cloud.google.com/storage/docs/creating-buckets).
 {% /tab %}
 {% tab label="S3-compatible" %}
     For a new empty bucket, follow your storage provider's instructions for setting up a new bucket.
@@ -81,13 +83,13 @@ To set up a compute node in the same region as your bucket, follow the relevant 
     TODO
 {% /tab %}
 {% tab label="AWS S3" %}
-    Follow the guide `Tutorial: Get started with Amazon EC2 Linux instances <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html>`_.
+    Follow the guide [Tutorial: Get started with Amazon EC2 Linux instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html).
 {% /tab %}
 {% tab label="Microsoft Azure" %}
-    Follow the guide `Quickstart: Create a Linux virtual machine in the Azure portal <https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu>`_.
+    Follow the guide [Quickstart: Create a Linux virtual machine in the Azure portal](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal?tabs=ubuntu).
 {% /tab %}
 {% tab label="Google Cloud Storage" %}
-    Follow the instructions for creating `Instance templates <https://cloud.google.com/compute/docs/instance-templates>`_.
+    Follow the instructions for creating [Instance templates](https://cloud.google.com/compute/docs/instance-templates).
 {% /tab %}
 {% tab label="S3-compatible" %}
     Typically, you will need a computer connected to the same LAN as your object storage and your file storage device.
@@ -104,15 +106,15 @@ You will need an empty directory on your attached file storage that is writable 
     TODO
 {% /tab %}
 {% tab label="AWS S3" %}
-    Follow the guide `Getting started with Amazon Elastic File System (EFS) <https://docs.aws.amazon.com/efs/latest/ug/getting-started.html>`_.
+    Follow the guide [Getting started with Amazon Elastic File System (EFS)](https://docs.aws.amazon.com/efs/latest/ug/getting-started.html).
 {% /tab %}
 {% tab label="Microsoft Azure" %}
-    Follow the documentation to `Use the portal to attach a data disk to a linux VM <https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal>`_.
-    Follow the Microsoft documentation for `setting up Azure Files <https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction>`_.
+    Follow the documentation to [Use the portal to attach a data disk to a linux VM](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal).
+    Follow the Microsoft documentation for [setting up Azure Files](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction).
 {% /tab %}
 {% tab label="Google Cloud Storage" %}
-    Use the information available on the `Storage options <https://cloud.google.com/compute/docs/disks>`_ to choose an appropriate attached disk option. Then, attach your instance to it using the relevant guide.
-    Follow the instructions for `setting up Filestore <https://cloud.google.com/filestore/docs/install>`_.
+    Use the information available on the [Storage options](https://cloud.google.com/compute/docs/disks) to choose an appropriate attached disk option. Then, attach your instance to it using the relevant guide.
+    Follow the instructions for [setting up Filestore](https://cloud.google.com/filestore/docs/install)
 {% /tab %}
 {% tab label="S3-compatible" %}
     You can use local storage, or attach an NFS/SMB mount to a file storage device in the same LAN.
@@ -121,12 +123,11 @@ You will need an empty directory on your attached file storage that is writable 
 
 ## Mounting a Object Mount Fusion filesystem
 
-To set up Object Mount Fusion, you need Object Mount {ref TODO}`installed <getting-started-download-install>` on the compute node, and you need to set up {ref}`credentials <getting-started-credentials>` so that the bucket/container is accessible.
+To set up Object Mount Fusion, you need Object Mount [installed](../getting-started/download-install) on the compute node, and you need to set up [credentials](../getting-started/configuring-credentials) so that the bucket/container is accessible.
 
 Your next steps depend on the filesystem you are using and the options used when mounting/attaching it. Please see the relevant section below:
-TODO
-- [Filesystems without extended attribute support (e.g. EFS)](Object Mount-fusion-mount-efs)
-- [Filesystems with extended attribute support (e.g. NFSv4 with Linux Kernel 5.9+)](Object Mount-fusion-mount-nfsv4-xattr)
+- [Filesystems without extended attribute support (e.g. EFS)](Object-Mount-fusion-mount-efs)
+- [Filesystems with extended attribute support (e.g. NFSv4 with Linux Kernel 5.9+)](Object-Mount-fusion-mount-nfsv4-xattr)
 
 ### Filesystems without extended attribute support (e.g. EFS)
 
@@ -159,56 +160,90 @@ By running the above command, the `<mount location>` becomes the way to access t
 {% tab label="AWS S3" %}
 If the bucket is not empty, create a new empty directory on your bucket:
 
-`cuno run mkdir "/cuno/s3/<bucket>/fusion-store"`
+```shell
+#terminal
+cuno run mkdir "/cuno/s3/<bucket>/fusion-store"
+```
 
 Create a directory on the attached-storage device (assuming you've mounted it at ``/dev/sdf``) to use for this purpose: 
 
-`mkdir "/dev/sdf/fusion-store"`
+```shell
+#terminal
+mkdir "/dev/sdf/fusion-store"
+```
 
 Create the Object Mount Fusion mount:
 
-`cuno mount --fusion "/dev/sdf/fusion-store" --root "/cuno/s3/<bucket>/fusion-store" "~/my-fusion-filesystem"`
-
+```shell
+#terminal
+cuno mount --fusion "/dev/sdf/fusion-store" --root "/cuno/s3/<bucket>/fusion-store" "~/my-fusion-filesystem"
+```
 {% /tab %}
 {% tab label="Microsoft Azure" %}
 If the bucket is not empty, create a new empty directory on your bucket:
 
-`cuno run mkdir "/cuno/az/<account-name>/<bucket>/fusion-store"`
+```shell
+#terminal
+cuno run mkdir "/cuno/az/<account-name>/<bucket>/fusion-store"
+```
 
 Create a directory on the attached-storage device (assuming you've mounted it at ``/mnt/fast``) to use for this purpose:
 
-`mkdir "/mnt/fast/fusion-store"`
+```shell
+#terminal
+mkdir "/mnt/fast/fusion-store"
+```
 
 Create the Object Mount Fusion mount:
 
-`cuno mount --fusion "/mnt/fast/fusion-store" --root "/cuno/az/<account-name>/<bucket>/fusion-store" "~/my-fusion-filesystem"`
+```shell
+#terminal
+cuno mount --fusion "/mnt/fast/fusion-store" --root "/cuno/az/<account-name>/<bucket>/fusion-store" "~/my-fusion-filesystem"
+```
 {% /tab %}
 {% tab label="Google Cloud Storage" %}
 If the bucket is not empty, create a new empty directory on your bucket:
 
-`cuno run mkdir "/cuno/gs/<bucket>/fusion-store"`
+```shell
+#terminal
+cuno run mkdir "/cuno/gs/<bucket>/fusion-store"
+```
 
 Create a directory on the attached-storage device (assuming you've mounted it at ``/mnt/fast``) to use for this purpose:
 
-`mkdir "/mnt/fast/fusion-store"`
+```shell
+#terminal
+mkdir "/mnt/fast/fusion-store"
+```
 
 Create the Object Mount Fusion mount:
 
-`cuno mount --fusion "/mnt/fast/fusion-store" --root "/cuno/gs/<bucket>/fusion-store" "~/my-fusion-filesystem"`
-
+```shell
+#terminal
+cuno mount --fusion "/mnt/fast/fusion-store" --root "/cuno/gs/<bucket>/fusion-store" "~/my-fusion-filesystem"
+```
 {% /tab %}
 {% tab label="S3-compatible" %}
 If the bucket is not empty, create a new empty directory on your bucket:
 
-`cuno run mkdir "/cuno/s3/<bucket>/fusion-store"`
+```shell
+#terminal
+cuno run mkdir "/cuno/s3/<bucket>/fusion-store"
+```
 
 Create a directory on the attached-storage device (assuming you've mounted it at ``/mnt/fast``) to use for this purpose:
 
-`mkdir "/mnt/fast/fusion-store"`
+```shell
+#terminal
+mkdir "/mnt/fast/fusion-store"
+```
 
 Create the Object Mount Fusion mount:
 
-`cuno mount --fusion "/mnt/fast/fusion-store" --root "/cuno/s3/<bucket>/fusion-store" "~/my-fusion-filesystem"`
+```shell
+#terminal
+cuno mount --fusion "/mnt/fast/fusion-store" --root "/cuno/s3/<bucket>/fusion-store" "~/my-fusion-filesystem"
+```
 {% /tab %}
 {% /tabs %}
 
@@ -223,7 +258,8 @@ To bind a local Fusion directory to a cloud location, use `cuno fusion`.
 This command will make a note locally of where the mount we make later will point to.
 It will also save any relevant options used at this stage as metadata, to be used by default by any mounts that use this fusion binding.
 
-```sh
+```shell
+#terminal
 cuno fusion "<path to attached storage backing directory>" "<path to object storage backing directory>"
 ```
 
@@ -254,11 +290,12 @@ Example: `cuno fusion /dev/sdf/fusion-store s3://bucket/fusion-store`
 
 #### Mount the Object Mount Fusion filesystem after binding
 
-Object Mount Fusion is set up and accessed through a Object Mount Mount. To do this, additional options must be used when creating a {ref}`Object Mount Mount <user-guide-Object Mount-mount>`.
+Object Mount Fusion is set up and accessed through a Object Mount Mount. To do this, additional options must be used when creating a [Object Mount Mount](user-guide-Object Mount-mount).
 
 If you have already bound a directory to a cloud location, you only need to use the `--root` option to specify the path to the attached-storage backing directory in order to use the mount as a Fusion mount:
 
-```sh
+```shell
+# terminal
 cuno mount \
     --root "<path to attached-storage backing directory>" \
     "<mount location>"
@@ -277,70 +314,92 @@ cuno mount \
 {% /tab %}
 {% tab label="AWS S3" %}
     If the bucket is not empty, create a new empty directory on your bucket: 
-    
-    `cuno run mkdir "s3://<bucket>/fusion-store"`
+```shell
+# terminal
+cuno run mkdir "s3://<bucket>/fusion-store"
+```
 
     Create a directory on the attached-storage device (assuming you've mounted it at ``/dev/sdf``) to use for this purpose:
-
-    `mkdir "/dev/sdf/fusion-store"`
+```shell
+#terminal
+mkdir "/dev/sdf/fusion-store"
+```
 
     Create the Object Mount Fusion mount:
-    
-    `cuno fusion "/dev/sdf/fusion-store" "s3://<bucket>/fusion-store"`
-    
-    `cuno mount --root "/dev/sdf/fusion-store" "$HOME/my-fusion-filesystem"`
-
+```shell
+#terminal  
+cuno fusion "/dev/sdf/fusion-store" "s3://<bucket>/fusion-store"
+#terminal  
+cuno mount --root "/dev/sdf/fusion-store" "$HOME/my-fusion-filesystem"
+```
 {% /tab %}
 {% tab label="Microsoft Azure" %}
     If the bucket is not empty, create a new empty directory on your bucket:
-    
-    `cuno run mkdir "az:///<account-name>/<bucket>/fusion-store"`
+```shell
+#terminal
+cuno run mkdir "az:///<account-name>/<bucket>/fusion-store"
+```
+Create a directory on the attached-storage device (assuming you've mounted it at ``/mnt/fast``) to use for this purpose:
 
-    Create a directory on the attached-storage device (assuming you've mounted it at ``/mnt/fast``) to use for this purpose:
-    
-    `mkdir "/mnt/fast/fusion-store"`
-    
+```shell
+#terminal
+mkdir "/mnt/fast/fusion-store"
+```
+
     Create the Object Mount Fusion mount:
-
-    `cuno fusion "/mnt/fast/fusion-store" "az:///<account-name>/<bucket>/fusion-store"`
-    
-    `cuno mount --root "/mnt/fast/fusion-store" "$HOME/my-fusion-filesystem"`
-
+```shell
+#terminal  
+cuno fusion "/mnt/fast/fusion-store" "az:///<account-name>/<bucket>/fusion-store"
+#terminal  
+cuno mount --root "/mnt/fast/fusion-store" "$HOME/my-fusion-filesystem"
+```
 {% /tab %}
 {% tab label="Google Cloud Storage" %}
     If the bucket is not empty, create a new empty directory on your bucket:
-    
-    `cuno run mkdir "gs:///<bucket>/fusion-store"`
+```shell
+#terminal
+cuno run mkdir "gs:///<bucket>/fusion-store"
+```
 
     Create a directory on the attached-storage device (assuming you've mounted it at ``/mnt/fast``) to use for this purpose:
-
-    `mkdir "/mnt/fast/fusion-store"`
+```shell
+#terminal
+mkdir "/mnt/fast/fusion-store"
+```
 
     Create the Object Mount Fusion mount:
     
-    `cuno fusion "/mnt/fast/fusion-store" "gs:///<bucket>/fusion-store"`
-
-    `cuno mount --root "/mnt/fast/fusion-store" "$HOME/my-fusion-filesystem"`
+```shell
+#terminal  
+cuno fusion "/mnt/fast/fusion-store" "gs:///<bucket>/fusion-store"
+#terminal  
+cuno mount --root "/mnt/fast/fusion-store" "$HOME/my-fusion-filesystem"
+```
 {% /tab %}
 {% tab label="S3-compatible" %}
     If the bucket is not empty, create a new empty directory on your bucket:
-    
-    `cuno run mkdir "s3://<bucket>/fusion-store"`
+```shell
+#terminal
+cuno run mkdir "s3://<bucket>/fusion-store"
+```
 
     Create a directory on the attached-storage device (assuming you've mounted it at ``/mnt/fast``) to use for this purpose:
-
-    `mkdir "/mnt/fast/fusion-store" 
-
+```shell
+#terminal
+mkdir "/mnt/fast/fusion-store" 
+```
     Create the Object Mount Fusion mount:
-    
-    `cuno fusion "/mnt/fast/fusion-store" "s3://<bucket>/fusion-store"`
-    
-    `cuno mount --root "/mnt/fast/fusion-store" "$HOME/my-fusion-filesystem"`
+```shell
+#terminal    
+cuno fusion "/mnt/fast/fusion-store" "s3://<bucket>/fusion-store"
+#terminal
+cuno mount --root "/mnt/fast/fusion-store" "$HOME/my-fusion-filesystem"
+```
     
 {% /tab %}
 {% /tabs %}
 
-For instructions on unmounting, see {ref}`user-guide-unmount`.
+For instructions on unmounting, see [user-guide-unmount](todo).
 
 ## Using the Object Mount Fusion filesystem
 
@@ -352,21 +411,26 @@ The following examples assume you have mounted a Fusion filesystem at `$HOME/my-
 
 - Download data from the web into the Fusion filesystem:
 
-  ```sh
+  ```shell
+  #terminal
   cd $HOME/my-fusion-filesystem
+  #terminal
   wget http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar
   ```
 
 - List the files in the Fusion filesystem:
 
-  ```sh
+  ```shell
+  #terminal
   ls $HOME/my-fusion-filesystem/
   ```
 
 - Unpack a tar archive:
 
-  ```sh
+  ```shell
+  #terminal
   cd $HOME/my-fusion-filesystem
+  #terminal
   tar -xf images.tar
   ```
 

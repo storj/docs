@@ -1,5 +1,5 @@
 ---
-title: Setting up Enforced POSIX Access
+title: 2.6 Setting up Enforced POSIX Access
 docId: Eegoo1teiJ8eerae
 
 metadata:

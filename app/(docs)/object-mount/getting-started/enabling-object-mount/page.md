@@ -1,5 +1,5 @@
 ---
-title: Enabling Object Mount
+title: 2.5 Enabling Object Mount
 docId: ooceeNge9iig6uSe
 
 metadata:
@@ -10,7 +10,7 @@ metadata:
 weight: 0
 ---
 
-# How to use Object Mount
+## How to use Object Mount
 
 By default, Object Mount is configured for [Core File Access](getting-started-core-file-access) which does not write additional Object Mount metadata to your buckets. Once you’re up and running, you can change the mode of operation to better suit your requirements.
 

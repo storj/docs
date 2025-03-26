@@ -1,5 +1,5 @@
 ---
-title: Download, Installation and Activation
+title: 2.2 Download, Installation and Activation
 docId: iethahkeeX5EiJoh
 
 metadata:

@@ -1,5 +1,5 @@
 ---
-title: Configure Object Mount
+title: 2.3 Configure Object Mount
 docId: hoeSh4ieSh6Ees9v
 
 metadata:

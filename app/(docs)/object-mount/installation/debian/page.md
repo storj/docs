@@ -1,9 +1,9 @@
 ---
-title: Debian Installation Instructions
+title: Debian
 docId: aemie9zeiP9Nie2k
 
 metadata:
-  title: Debian Installation Instructions
+  title: Debian
   description:
     Debian Installation Instructions
 

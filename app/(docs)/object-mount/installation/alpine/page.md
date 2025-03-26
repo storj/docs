@@ -1,9 +1,9 @@
 ---
-title: Alpine Installation Instructions
+title: Alpine
 docId: MeiPie8EDuo7eise
 
 metadata:
-  title: Alpine Installation Instructions
+  title: Alpine
   description:
     Alpine Installation Instructions
 

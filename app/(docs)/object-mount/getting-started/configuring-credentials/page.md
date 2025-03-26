@@ -1,5 +1,5 @@
 ---
-title: Configuring Credentials
+title: 2.4 Configuring Credentials
 docId: heefureS2iubahpi
 
 metadata:

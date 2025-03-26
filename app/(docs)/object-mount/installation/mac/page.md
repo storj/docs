@@ -1,11 +1,11 @@
 ---
-title: Mac Installation Instructions
+title: MacOS
 docId: yoopieyewevei1Eo
 
 metadata:
-  title: Mac Installation Instructions
+  title: MacOS
   description:
-    Mac Installation Instructions
+    MacOS Installation Instructions
 
 
 weight: 0

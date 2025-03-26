@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Object Mount Fusion
+title: 2.7 Getting Started with Object Mount Fusion
 docId: duac8aixa9oPiw4u
 
 metadata:

@@ -1,30 +1,23 @@
 ---
 title: Object Mount Overview
-docId: kieboh9mae8quo0O
+docId: okai0aiJei9No1Sh
 
 metadata:
   title: Object Mount Overview
   description:
-    Object Mount is a scalable, high-performance POSIX compatibility layer that lets you interact with files stored on object storage such as Storj, Amazon S3, 
-    Azure Blob Storage, Google Cloud Storage, or any S3-compatible object store hosted in the cloud or locally.
+    Object Mount lets you interact with object storage as if it were a fast native file system with POSIX compatibility that can run any new or existing applications.
+
 
 weight: 0
 ---
 
-Object Mount is a scalable, high-performance POSIX compatibility layer that lets you interact with files stored on object storage such as Storj, Amazon S3, Azure Blob Storage, Google Cloud Storage, or any S3-compatible object store hosted in the cloud or locally.
+Object Mount lets you interact with object storage as if it were a fast native file system with POSIX compatibility that can run any new or existing applications.
 
-Once set up, you’ll be able to operate on your objects as if they are files with your existing tools and applications.
+New to Object Mount and want to try it out? Check out our [Getting Started](/getting-started/intro) guide.
 
-This guide contains step-by-step instructions for:
+Find us on [storj.io] for product information, benchmarks and case studies. Contact us on [sales@storj.io] for product related queries.
 
-- Installing Object Mount
-- Setting up access to your object storage
-- Using Object Mount
+Questions? Need help trouble-shooting? Check out our [discourse forum](https://forum.storj.io/). If you have a bug to report, help us help you by reporting it on our [issue tracker](TODO). 
+If you are on the Professional or Enterprise tiers, you can message us directly at [supportdcs@storj.io](mailto:supportdcs@storj.io).
 
-This getting started guide assumes you already have an object storage system set up and is intended to get you set up and using Object Mount quickly. 
-The <full user guide> contains additional details including alternative installation methods, a full list of available configuration options and additional use-cases and examples.
-
-## Core Concepts
-The ideas presented here are intended to familiarise you with our approach to object storage. If you're already familiar, feel free to skip to the [next section](../getting-started/download-install).
-
-[Core Concepts](TODO common-core-concepts)
+The [User Guide](user-guide-overview) is also available with all options and details about how Object Mount works and all available options.

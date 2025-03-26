@@ -9,73 +9,71 @@ metadata:
 weight: 0
 ---
 
-This guide represents the general process for setting up enforced POSIX access. The specific steps may vary depending on your object storage provider. Please contact us at [support@cuno.io](mailto:support@cuno.io) if this is a use-case that you are interested in and these instructions don't match your expectations or preferences.
+This guide represents the general process for setting up enforced POSIX access. The specific steps may vary depending on your object storage provider. Please contact us at [supportdcs@storj.io](mailto:supportdcs@storj.io) if this is a use-case that you are interested in and these instructions don't match your expectations or preferences.
 
 This mode will maintain POSIX metadata for your objects, and will enforce POSIX access controls on those objects. Use this when you want to manage what users have access to based on the UID/GID of their UNIX user and the corresponding POSIX metadata (owner, group, mode) on files.
 
 Users will encounter `access denied` errors if they try to read or write to a file/directory they haven't been given permission to (by a suitably privileged user doing `chown`, `chgrp` or `chmod`). Note that this is client-side rather than server-side enforcement, and is not enforced using server-side IAM roles or ACL lists.
 
-``` 
-.. include:: common-posix-metadata-warning.rst
-```
+[common-posix-metadata-warning](todo)
 
-:::{note}
-We can also provide a hybrid-approach, which does both client-side access management and server-side access management through ACLs. If you need server-side ACL policies to reflect POSIX access controls, [contact us](mailto:support@cuno.io).
-:::
+
+{% callout type="note"  %}
+We can also provide a hybrid-approach, which does both client-side access management and server-side access management through ACLs. If you need server-side ACL policies to reflect POSIX access controls, [contact us](mailto:supportdcs@storj.io).
+{% /callout %}
 
 ## Key steps
 
-1. Through your object storage provider, generate access credentials with the highest level of permissions that any user or admin could need, including permissions to  ref`edit bucket tags <user-guide-using-a-bucket-tag>`. On a public cloud supporting IAM, you set up an `admin` IAM user with such credentials.
+1. Through your object storage provider, generate access credentials with the highest level of permissions that any user or admin could need, including permissions to [edit bucket tags](user-guide-using-a-bucket-tag). On a public cloud supporting IAM, you set up an `admin` IAM user with such credentials.
 2. The admin credentials are stored privately and are used to set up a Object Mount Mount in an accessible location.
 3. Users are only told the path to the mount; they are not given access to `cuno` nor to the admin credentials.
 
-:::{warning}
-The approach given here is not suitable if users have the ability to create their own VMs/instances where they can set any POSIX uid/gid. In that case, consider using server-side IAM roles or ACL lists to enforce access controls, and contacting us at [support@cuno.io](mailto:support@cuno.io) for advice on how this integrates with Object Mount.
-:::
+{% callout type="warning"  %}
+The approach given here is not suitable if users have the ability to create their own VMs/instances where they can set any POSIX uid/gid. In that case, consider using server-side IAM roles or ACL lists to enforce access controls, and contacting us at [supportdcs@storj.io](mailto:supportdcs@storj.io) for advice on how this integrates with Object Mount.
+{% /callout %}
 
 ## Key considerations
 
-- If multiple machines or locations are being used, it is important that user and group IDs are controlled and consistent across all machines. This is because the POSIX metadata is stored in the object storage, and Object Mount will use the same user and group IDs to present the files on all machines. If you require assistance with managing user and group IDs across multiple machines, [contact us](mailto:support@cuno.io).
+- If multiple machines or locations are being used, it is important that user and group IDs are controlled and consistent across all machines. This is because the POSIX metadata is stored in the object storage, and Object Mount will use the same user and group IDs to present the files on all machines. If you require assistance with managing user and group IDs across multiple machines, [contact us](mailto:supportdcs@storj.io).
 - Independent IAM roles or credentials for each user are not required. The admin credentials are used to set up the mount, and the users are only given access to the mount. If the user has access to object storage credentials with server-side privileges beyond this, then the user can potentially access or modify objects outside of these POSIX access controls.
 - This guide assumes that the bucket to use is empty initially. If you are switching from an ACL-based approach to access management, then you will need to map existing rules to POSIX uids/gids and "apply" those ACLs through POSIX commands like `chown` and `chmod`.
 
-:::{note}
-We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us at [support@cuno.io](mailto:support@cuno.io) if you need these features.
-:::
+{% callout type="note"  %}
+We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us at [supportdcs@storj.io](mailto:supportdcs@storj.io) if you need these features.
+{% /callout %}
 
 ## How to set up enforced POSIX access
 
-Assuming you have already  ref`installed <getting-started-download-install>` Object Mount, the following steps will guide you through setting up enforced POSIX access for the users in a generic POSIX-based system.
+Assuming you have already [installed](../getting-started/download-install) Object Mount, the following steps will guide you through setting up enforced POSIX access for the users in a generic POSIX-based system.
 
 ### Import your admin credentials
 
-Follow the steps in  ref`user-guide-import-credentials` to import your admin credentials.
+Follow the steps in [user-guide-import-credentials](todo) to import your admin credentials.
 
 You will need to have run `cuno creds import <file containing admin credentials>`. After importing, you should ensure that any credentials files have been created (usually in `${XDG_CONFIG_HOME}"/cuno/creds` or `~/.config/cuno/creds`) with appropriately strict permissions so that non-admin cannot read them.
 
 ### Tag the bucket
 
-We check a  ref`bucket tag <user-guide-using-a-bucket-tag>` when Object Mount tries to access a bucket to check the POSIX enforcement settings. If your bucket or object storage provider does not support tags on buckets, you can skip this step and proceed to  ref`enforced-posix-mounting`.
+We check a [bucket tag](user-guide-using-a-bucket-tag) when Object Mount tries to access a bucket to check the POSIX enforcement settings. If your bucket or object storage provider does not support tags on buckets, you can skip this step and proceed to [enforced-posix-mounting](todo).
 
-% but you will need to set the ``--posix`` flag every time you run ``cuno mount``.
+NB: You will need to set the ``--posix`` flag every time you run ``cuno mount``.
 
 Use `cuno creds setposix <uri of bucket> true` to set the bucket tag which will automatically enable POSIX File Access whenever this bucket is accessed by any Object Mount installation. This will affect everyone using the bucket and force all Object Mount users of that bucket into enforced POSIX compatability mode. Example:
 
-```console
-$ cuno creds setposix s3://mybucket true
+```shell
+# terminal
+cuno creds setposix s3://mybucket true
 ```
 
 On the `true` setting, this mode stores hidden subdirectories inside your object storage directories describing the POSIX metadata (owner/group permissions, change/modify times, etc.) for each file in the directory. This allows Object Mount to present the files in a way that is compatible with POSIX file access semantics.
 
-If you are on S3, to additionally store the POSIX metadata as object metadata on each individual file in the bucket, use `cuno creds setposix <uri of bucket> metadata`. We don't normally recommend this, as it will slow down Object Mount. For more information, see  ref`user-guide-posix-file-access`
+If you are on S3, to additionally store the POSIX metadata as object metadata on each individual file in the bucket, use `cuno creds setposix <uri of bucket> metadata`. We don't normally recommend this, as it will slow down Object Mount. For more information, see [user-guide-posix-file-access](todo)
 
-:::{note}
-% When a bucket tag enabling POSIX File Access is set, Object Mount Direct Interception, along with any Object Mount Mounts, FlexMounts, or Fusion Mounts, are compelled to operate in POSIX mode while accessing the bucket. Regardless of the access mechanism, Object Mount strives to enforce POSIX user and group settings, preventing unprivileged users from altering these settings or files they don't have rights to.
-
+{% callout type="note"  %}
 When a bucket tag enabling POSIX File Access is set, Object Mount Direct Interception, along with any Object Mount Mounts/FlexMounts are compelled to operate in POSIX mode while accessing the bucket. However, the mounts will not be able to enfroce POSIX access without the additional `--posix` flag at mount time.
 
 However, Object Mount Direct Interception necessitates read access to object storage credentials, or some other user-accessible way to authenticate with the object storage (e.g. an IAM role on EC2). This implies that Direct Interception is not appropriate for enforcing POSIX, as users can easily circumvent this by using the accessible credentials or IAM role with a tool other than Object Mount (such as awscli or directly through an S3 API library). Since FlexMounts are dependent on Object Mount Direct Interception, they are also unsuitable for use-cases that require POSIX enforcement.
-:::
+{% /callout %}
 
 ### Mount the bucket
 
@@ -91,7 +89,7 @@ Users will now be able to see the files in the bucket at `/mnt/cloud/bucket`, an
 
 ## Common patterns
 
-Below are some common behaviours and patterns that you might want to implement when using enforced POSIX access. For more examples, see  ref`user-guide-posix-examples`.
+Below are some common behaviours and patterns that you might want to implement when using enforced POSIX access. For more examples, see [user-guide-posix-examples](todo).
 
 ### Setting default permissions for new files
 
@@ -110,7 +108,7 @@ If you want to set the umask for all users, you can set it in the system-wide pr
 
 ### Converting a bucket to POSIX enforced mode
 
-If you have an existing storage location, for which you now need to implement POSIX-based access controls, you can simply set the bucket tag as in  ref`enforced-posix-guide-tag-bucket`. This will not affect any existing files until they or their directories are accessed, and will ensure that any new files are stored with POSIX metadata.
+If you have an existing storage location, for which you now need to implement POSIX-based access controls, you can simply set the bucket tag as in [enforced-posix-guide-tag-bucket](todo). This will not affect any existing files until they or their directories are accessed, and will ensure that any new files are stored with POSIX metadata.
 
 To control access to any particular files or directories, proceed with `chown`, `chgrp` and `chmod` as you would on a POSIX file system. For example, to limit access to `/mnt/cloud/bucket/directory` to only allow `user1`, you could do:
 
@@ -140,9 +138,10 @@ Change: 2022-03-01 12:00:00.000000000 +0000
 
 ### Setting inherited permissions on a directory
 
-:::{warning}
-Support for POSIX ACLs is coming soon. If this is a feature you need, please contact us at [support@cuno.io](mailto:support@cuno.io).
-:::
+{% callout type="warning"  %}
+Support for POSIX ACLs is coming soon. If this is a feature you need, please contact us at [supportdcs@storj.io](mailto:supportdcs@storj.io).
+{% /callout %}
+
 
 Use [setfacl](https://linux.die.net/man/1/setfacl) to define additional default permissions to be applied to files in a directory when they are created.
 

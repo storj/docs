@@ -19,7 +19,7 @@ It is available for our Professional and Enterprise customers.
 
 ## Requirements
 
-Python 3.7+ is required to use the Object Mount Machine Learning Accelerator (Object Mount MLA). If you require lower versions of Python 3, please contact us at [support@cuno.io](mailto:support@cuno.io).
+Python 3.7+ is required to use the Object Mount Machine Learning Accelerator (Object Mount MLA). If you require lower versions of Python 3, please contact us at [supportdcs@storj.io](mailto:supportdcs@storj.io).
 
 ### Supported functions
 
@@ -32,7 +32,7 @@ The Object Mount MLA has been tested with the following data loading functions:
 - `PIL.Image.open`
 - `torchaudio.load`
 
-It may also work with additional data loading functions, and support is available at [support@cuno.io](mailto:support@cuno.io) if you need assistance to enable additional functions.
+It may also work with additional data loading functions, and support is available at [supportdcs@storj.io](mailto:supportdcs@storj.io) if you need assistance to enable additional functions.
 
 ## Usage
 

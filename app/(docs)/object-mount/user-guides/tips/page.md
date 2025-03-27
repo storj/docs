@@ -15,7 +15,7 @@ weight: 12
 
 There are some general ideas presented in {ref}`user-guide-core-concepts` that should help inform usage of object storage with your software. For example, object storage is not very good for high IOPS work loads, so prefer to use {ref}`Object Mount Fusion <Object Mount-fusion-guide>` for that use-case.
 
-The following are some applications for which we have additional guidance when using then in combination with Object Mount. If you have more to add to the list, let us and the community know on our [discourse](https://discourse.cuno.io) forum.
+The following are some applications for which we have additional guidance when using then in combination with Object Mount. If you have more to add to the list, let us and the community know on our [forum](https://forum.storj.io).
 
 ## Applications
 
@@ -43,7 +43,7 @@ To use rsync options that preserve permissions (`-p`) and modification times (`-
 
 % * Writing to object storage, if the task requires many randomly-placed writes during an upload. For example, for a large mp4 file being written with the flags ``-movflags +faststart``.
 
-% * Reading from object storage, a complex filterchain where multiple subtitle streams are being read from the same input file. (This will be improved soon! Be the first to find out by contacting `support@cuno.io <mailto:support@cuno.io>`_)
+% * Reading from object storage, a complex filterchain where multiple subtitle streams are being read from the same input file. (This will be improved soon! Be the first to find out by contacting `supportdcs@storj.io <mailto:supportdcs@storj.io>`_)
 
 % * Reading from object storage, files that contain title screen and extra credit scenes can be slow to start.
 

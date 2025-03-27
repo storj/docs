@@ -174,7 +174,7 @@ From: rockylinux:8
 %labels
     Name cuno
     URL cuno.io
-    Email support@cuno.io
+    Email supportdcs@storj.io
 ```
 
 The above will require that the Object Mount software package is available at the paths starting {code}`/home/admin/downloads` as listed in the {code}`%files` section.

@@ -9,32 +9,27 @@ metadata:
 weight: 5    
 ---
 
-(user-guide-credentials-management)=
-
-# Credential management
-
+## Overview 
 Users will need to specify their credentials for their cloud storage accounts in order to fully use Object Mount.
-{code}`cuno creds` allows users to import and manage their credentials for supported cloud providers.
-Credentials are stored in {code}`"${XDG_CONFIG_HOME}"/cuno/creds` by default (or {code}`~/.config/cuno/creds` if {code}`XDG_CONFIG_HOME` is not set).
+`cuno creds` allows users to import and manage their credentials for supported cloud providers.
+Credentials are stored in `"${XDG_CONFIG_HOME}"/cuno/creds` by default (or `~/.config/cuno/creds` if `XDG_CONFIG_HOME` is not set).
 
-Override the defaults by setting the {code}`CUNO_CREDENTIALS` environment variable.
+Override the defaults by setting the `CUNO_CREDENTIALS` environment variable.
 
-:::{note}
-{code}`cuno creds` will determine the presence of the following paths to store credentials, in {emphasis}`descending` order of precedence:
+{% callout type="note"  %}
+`cuno creds` will determine the presence of the following paths to store credentials, in {emphasis}`descending` order of precedence:
 
-1. {code}`$CUNO_CREDENTIALS`
-2. {code}`"${XDG_CONFIG_HOME}"/cuno/creds`
-3. {code}`~/.config/cuno/creds`
-4. {code}`"${CUNO_ROOT}"/cuno-config/creds`
-:::
+1. `$CUNO_CREDENTIALS`
+2. `"${XDG_CONFIG_HOME}"/cuno/creds`
+3. `~/.config/cuno/creds`
+4. `"${CUNO_ROOT}"/cuno-config/creds`
+{% /callout %}
 
 ## Create and retrieve credentials
 
 ### Credential file formats
 
 Credential files are {strong}`plain-text`, with a specific format for each cloud provider.
-
-(user-guide-s3-credentials)=
 
 ### Amazon Web Services S3
 
@@ -56,8 +51,6 @@ More information on S3 access keys is available in {ref}`user-guide-getting-s3-c
 
 Object Mount can also use an AWS S3 Access Point instead of a container; see {ref}`user-guide-s3-access-points` for more details.
 
-(user-guide-s3-compatible-credentials)=
-
 ### S3-compatible solutions
 
 To define a custom endpoint for S3-compatible storage solutions, create a file containing at least the following:
@@ -68,7 +61,7 @@ To define a custom endpoint for S3-compatible storage solutions, create a file c
 > endpoint=http://127.0.0.1:8080
 > ```
 
-Endpoints could be IP addresses or domain URIs (optionally with port numbers). Note that a schema is required (e.g. {code}`http://` or {code}`https://`).
+Endpoints could be IP addresses or domain URIs (optionally with port numbers). Note that a schema is required (e.g. `http://` or `https://`).
 The following are examples of valid endpoint key-value pairs:
 
 ```
@@ -78,7 +71,6 @@ endpoint = https://s3objectstorage.example.com
 
 Depending on the capabilities and behaviours of your object storage provider's S3 API, you may find the additional keys useful:
 
-(user-guide-credentials-options)=
 
 ``` 
 .. list-table::
@@ -123,16 +115,16 @@ Depending on the capabilities and behaviours of your object storage provider's S
        This option takes precedence over the POSIX mode runtime environment variable, but may be overridden by a bucket-wide POSIX setting (set via :code:`cuno creds`).
 ```
 
-::::{note}
-Some of the above options can be automatically detected and populated by running {code}`cuno creds detectfeatures <URI> <credential file name>` (e.g. {code}`cuno creds detectfeatures s3://test-bucket test_credentials.s3c`).
+:{% callout type="note"  %}
+Some of the above options can be automatically detected and populated by running `cuno creds detectfeatures <URI> <credential file name>` (e.g. `cuno creds detectfeatures s3://test-bucket test_credentials.s3c`).
 This command needs a bucket to be specified that it can write temporary files to for testing purposes. The commmand will run a series of tests against the specified bucket, checking the availability of S3 features that Object Mount uses and updating the credentials file accordingly.
 
-:::{warning}
+{% callout type="warning"  %}
 Running feature detection will use up to a few gigabytes of bandwidth and may take a few minutes to complete depending on the machine's connection speed and the S3-compatible storage provider.
-:::
-::::
+{% /callout %}
+{% /callout %}:
 
-### Microsoft Azure Blob Storage
+## Microsoft Azure Blob Storage
 
 Azure Blob Storage credential files have the following format:
 
@@ -146,7 +138,7 @@ If you need the access key, see [View account access keys](https://learn.microso
 Object Mount also supports using Shared Access Signatures (SAS) to access remote containers in Azure.
 Refer to {ref}`user-guide-azure-sas` to configure SAS.
 
-### Google Cloud Storage
+## Google Cloud Storage
 
 You will need key-based access to be associated with your [Google Cloud service account](https://developers.google.com/workspace/guides/create-credentials#service-account).
 
@@ -154,7 +146,6 @@ If you need to set this up, you can have Google generate a new key by following 
 
 If you've generated a new key, store the JSON file you have downloaded in a safe place with appropriate access permissions, ready for the next steps.
 
-(user-guide-import-credentials)=
 
 ## Import credentials
 
@@ -171,16 +162,14 @@ Object Mount performs the following actions when importing a credential file:
 2. Discover all possible containers that can be accessed using the provided credentials.
 3. Create pairings between the imported credential file and remote containers.
 
-:::{note}
+{% callout type="note"  %}
 Discovery only completes when the provided credentials include bucket listing permissions.
-If listing permissions cannot be provided, manually pair the imported credential file to remote buckets using {code}`cuno creds pair` (refer to {ref}`user-guide-pair-containers`).
-:::
-
-(user-guide-pair-containers)=
+If listing permissions cannot be provided, manually pair the imported credential file to remote buckets using `cuno creds pair` (refer to {ref}`user-guide-pair-containers`).
+{% /callout %}
 
 ## Pair containers and credentials
 
-Manually pair additional containers with previously-imported credential files using {code}`pair`:
+Manually pair additional containers with previously-imported credential files using `pair`:
 
 ```console
 cuno creds pair <container_remote_uri> [imported_credential_file]
@@ -190,14 +179,12 @@ cuno creds pair <container_remote_uri> [imported_credential_file]
 `[imported_credential_file]` is optional and corresponds to the credential file that has already been imported.
 If the latter is not provided, all imported credential files are listed.
 
-To re-associate a previously paired remote container with a different credential file, use {code}`pair` with the same remote URI and a different credential file.
+To re-associate a previously paired remote container with a different credential file, use `pair` with the same remote URI and a different credential file.
 
-:::{note}
+{% callout type="note"  %}
 Object Mount verifies that a remote container is accessible when pairing it with a credential file.
 Object Mount auto-detects an AWS region if it is not specified, or is invalid.
-:::
-
-(user-guide-azure-sas)=
+{% /callout %}
 
 ### Microsoft Azure Blob Storage with Shared Access Signatures
 
@@ -210,9 +197,9 @@ Provide an SAS to Object Mount using the following command:
 cuno creds pair <container_remote_uri> "?<SAS>"
 ```
 
-:::{note}
-The question mark {code}`?` prefix and quotation marks {code}`"` are {strong}`required`.
-:::
+{% callout type="note"  %}
+The question mark `?` prefix and quotation marks `"` are {strong}`required`.
+{% /callout %}
 
 ### Public Access buckets
 
@@ -222,9 +209,7 @@ To pair a remote URI that has public access, use the following command:
 cuno creds pair <bucket_remote_uri> public
 ```
 
-Notice {code}`public` is used in the place of the imported credential file name.
-
-(user-guide-requester-pays)=
+Notice `public` is used in the place of the imported credential file name.
 
 ### Requester Pays buckets
 
@@ -238,7 +223,7 @@ To enable access to such containers with a previously-imported credential file, 
 cuno creds --interactive pair <bucket_remote_uri>
 ```
 
-The {code}`--interactive`/{code}`-i` option will prompt the user to select from credentials in Object Mount's database.
+The `--interactive`/`-i` option will prompt the user to select from credentials in Object Mount's database.
 
 #### Amazon AWS S3
 
@@ -261,7 +246,7 @@ cuno creds pair --billing <billing_project_ID> <bucket_remote_uri> <imported_cre
 
 ## List credentials
 
-{code}`list` displays information about imported credential files and paired buckets.
+`list` displays information about imported credential files and paired buckets.
 The command accepts additional options:
 
 ``` 
@@ -281,12 +266,12 @@ The command accepts additional options:
     +---------------------------------------------+-----------------------------------------------------------------------------------------------------+
 ```
 
-{code}`pairings <provider>` accepts a comma-separated list of providers.
-For example, {code}`cuno creds list pairings gs,s3` will display information about all paired buckets in Google Cloud Storage and AWS S3.
+`pairings <provider>` accepts a comma-separated list of providers.
+For example, `cuno creds list pairings gs,s3` will display information about all paired buckets in Google Cloud Storage and AWS S3.
 
 ## Unpair and purge credentials
 
-To dissociate a container from a credential file, use {code}`unpair`:
+To dissociate a container from a credential file, use `unpair`:
 
 ```console
 cuno creds unpair [bucket_remote_uri]
@@ -294,7 +279,7 @@ cuno creds unpair [bucket_remote_uri]
 
 If the second argument is missing, then existing pairings are listed.
 
-To completely remove a credential file and delete all its associations with remote containers, use {code}`purge`:
+To completely remove a credential file and delete all its associations with remote containers, use `purge`:
 
 ```
 cuno creds purge [imported_credential_file]
@@ -328,9 +313,9 @@ These flags are described in the following table:
 
 ## Alternative methods of authenticating
 
-:::{note}
+{% callout type="note"  %}
 Prefer using the built-in credential management to administer credentials; only use the following methods if additional flexibility is required.
-:::
+{% /callout %}
 
 ### Amazon AWS S3 using native credentials
 
@@ -366,36 +351,32 @@ These credentials can be used for accessing AWS S3. Refer to the [Amazon AWS EC2
 
 Object Mount will automatically detect IAM roles on an EC2 instance, so no further configuration is necessary.
 
-:::{note}
+{% callout type="note"  %}
 Combined use of Object Mount managed credentials with IAM Roles in EC2 is {strong}`not currently supported`.
-:::
-
-(user-guide-gcs-native-credentials)=
+{% /callout %}
 
 ### Google Cloud Storage using environment variable
 
-Object Mount can directly use service account credentials, which are commonly used by applications to access Google Cloud Storage. To use a service account credential file (in JSON or PKCS12 format), specify a value for the {code}`GOOGLE_APPLICATION_CREDENTIALS` environment variable.
-For example, a credential file located in {code}`/home/user/gckey.json` can be loaded to Object Mount by using:
+Object Mount can directly use service account credentials, which are commonly used by applications to access Google Cloud Storage. To use a service account credential file (in JSON or PKCS12 format), specify a value for the `GOOGLE_APPLICATION_CREDENTIALS` environment variable.
+For example, a credential file located in `/home/user/gckey.json` can be loaded to Object Mount by using:
 
 ```
 export GOOGLE_APPLICATION_CREDENTIALS="/home/user/gckey.json"
 ```
 
-(user-guide-azure-native-credentials)=
-
 ### Azure Storage using environment variables
 
 To access Azure Storage without using Object Mount credentials management, provide a storage access key associated with a Microsoft Azure Storage account.
-To enable this access scheme, set the {code}`AZURE_STORAGE_ACCOUNT` and {code}`AZURE_STORAGE_ACCESS_KEY` environment variables:
+To enable this access scheme, set the `AZURE_STORAGE_ACCOUNT` and `AZURE_STORAGE_ACCESS_KEY` environment variables:
 
 ```console
 export AZURE_STORAGE_ACCOUNT="<account-name>"
 export AZURE_STORAGE_ACCESS_KEY="<account-key>"
 ```
 
-:::{warning}
+{% callout type="warning"  %}
 Microsoft recommends that storage access keys are not shared with anyone else.
 To permit access to storage resources without sharing access keys, use a Shared Access Signature (SAS).
 An SAS gives users access to a container for only specified time period with a fixed set of permissions.
 Refer to {ref}`user-guide-azure-sas` for more information.
-:::
+{% /callout %}

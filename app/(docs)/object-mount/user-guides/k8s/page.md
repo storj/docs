@@ -9,11 +9,8 @@ metadata:
 weight: 10
 ---
 
-(user-guide-kubernetes-csi-driver)=
 
-# Kubernetes CSI Driver
-
-The Object Mount CSI Driver facilitates seamless integration of your cloud storage services (Amazon S3, Google Cloud, and Azure Cloud) within a Kubernetes cluster. The driver is available through [Helm](https://helm.sh) under {code}`oci://registry-1.docker.io/cunofs/Object Mount-csi-chart`. More information can be found [on docker hub](https://hub.docker.com/r/cunofs/cunofs-csi-chart).
+The Object Mount CSI Driver facilitates seamless integration of your cloud storage services (Amazon S3, Google Cloud, and Azure Cloud) within a Kubernetes cluster. The driver is available through [Helm](https://helm.sh) under `oci://registry-1.docker.io/cunofs/Object Mount-csi-chart`. More information can be found [on docker hub](https://hub.docker.com/r/cunofs/cunofs-csi-chart).
 
 ## Install
 
@@ -35,7 +32,7 @@ helm install Object Mount-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi
 kubectl get all -l app.kubernetes.io/name=Object Mount-csi-driver
 ```
 
-:::{note}
+{% callout type="note"  %}
 For security reasons, helm doesn't allow access to files via paths.
 Therefore, you need to provide the credential file contents in `credsToImport`, and not the paths.
 To ensure that the cloud credentials are passed correctly, please provide them in `base64` encoding. For example:
@@ -43,7 +40,7 @@ To ensure that the cloud credentials are passed correctly, please provide them i
 ```shell
 --set credsToImport="{$(cat creds-1.txt | base64), $(cat creds-2.json | base64)}"
 ```
-:::
+{% /callout %}
 
 ## Update
 
@@ -67,8 +64,6 @@ The Object Mount CSI Driver support the following strategies:
 
 - {ref}`Static storage provisioning <static_provisioning>`
 - {ref}`Dynamic storage provisioning <dynamic_provisioning>`
-
-(static-provisioning)=
 
 ## Static provisioning
 
@@ -140,8 +135,6 @@ spec:
       persistentVolumeClaim:
         claimName: cunofs-pvc # PVC metadata.name
 ```
-
-(dynamic-provisioning)=
 
 ## Dynamic provisioning
 
@@ -243,11 +236,10 @@ spec:
                 storage: 16Ei # ignored but required
 ```
 
-:::{note}
+{% callout type="note"  %}
 The current version of Object Mount CSI Driver does not support [CSI inline volumes](https://kubernetes.io/blog/2020/01/21/csi-ephemeral-inline-volumes/)
-:::
+{% /callout %}
 
-(configuration-section)=
 
 # Configuration
 
@@ -320,10 +312,10 @@ Available options:
 
 ## PersistentVolume options
 
-:::{warning}
+{% callout type="warning"  %}
 Note that due to K8s parameter passing design decisions, the boolean parameters require strings and not yaml booleans.
 For this reason, please use `"true"` and `"false"` instead of `true` and `false`.
-:::
+{% /callout %}
 
 ``` 
 .. list-table::
@@ -444,11 +436,11 @@ spec:
       fusion_pvc: "backing-pvc" # gets the name of the pvc to try and mount to it
 ```
 
-:::{warning}
+{% callout type="warning"  %}
 Please ensure that the `PV`/`PVC` pair you create has the same access mode as the Object Mount `PV`/`PVC` pair and compatible parameters (readonly, etc...).
 
 If you have any issues deploying the Object Mount Fusion `PV`/`PVC` pair, pelase first ensure that the backing pair is correctly set up.
-:::
+{% /callout %}
 
 ## Dynamic Allocation
 
@@ -478,10 +470,10 @@ parameters:
   fusionStorageClass: "backing-sc" # Refer to the backing StorageClass
 ```
 
-:::{warning}
+{% callout type="warning"  %}
 Please ensure that the deployed `StorageClass` can create `PVs` that bind to `PVCs` with `ReadWriteMany` of size `8Gi`.
 In a future release, you will be able to parameterise it.
-:::
+{% /callout %}
 
 # RBAC Support
 

@@ -9,11 +9,7 @@ metadata:
 weight: 13    
 ---
 
-(user-guide-uninstall)=
-
-# Uninstallation
-
-Remove the directory pointed to by {code}`CUNO_ROOT`.
+Remove the directory pointed to by `CUNO_ROOT`.
 Refer to {ref}`user-guide-install-locations` for more information.
 
 ## User-local uninstallation
@@ -44,7 +40,7 @@ Remove the following additional files:
 
 ## User-specific settings
 
-User-specific configuration is stored in {code}`~/.config/cuno`.
+User-specific configuration is stored in `~/.config/cuno`.
 Remove this directory to remove all user-specific settings.
 
 % .. only:: dev
@@ -61,11 +57,11 @@ Remove this directory to remove all user-specific settings.
 
 % sh <path_to_cuno>/bin/uninstall-cuno.sh
 
-:::{note}
-Remove any customisations made to shell initialisation scripts such as {code}`~/.bashrc`, {code}`~/.profile`, {code}`.zshrc`, {code}`/etc/profile.d`, etc.
-:::
+{% callout type="note"  %}
+Remove any customisations made to shell initialisation scripts such as `~/.bashrc`, `~/.profile`, `.zshrc`, `/etc/profile.d`, etc.
+{% /callout %}
 
-Please also remember to remove any customizations you might have made to your shell's runtime initialization command scripts, {code}`.bashrc`, etc.
+Please also remember to remove any customizations you might have made to your shell's runtime initialization command scripts, `.bashrc`, etc.
 
 ## Package manager uninstallation
 

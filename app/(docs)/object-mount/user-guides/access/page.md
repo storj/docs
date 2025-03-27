@@ -8,10 +8,7 @@ metadata:
 
 weight: 9   
 ---
-
-(user-guide-cloud-paths)=
-
-# Transparent access to object storage
+## Transparent access to object storage
 
 Object Mount provides transparent access to remote cloud objects.
 Users can continue using their favorite software tools, pipelines and filesystem commands without any modifications.
@@ -22,27 +19,27 @@ Object Mount also supports random access reads and writes of any length, minimiz
 
 There are two ways of interacting with the remote files and directories:
 
-- the URI format, e.g. {code}`s3://my-bucket/dir/file.txt`
-- the directory format, e.g. {code}`/cuno/s3/my-bucket/dir/file.txt`
+- the URI format, e.g. `s3://my-bucket/dir/file.txt`
+- the directory format, e.g. `/cuno/s3/my-bucket/dir/file.txt`
 
 The following table describes URI prefixes for supported cloud providers.
 
 | Cloud provider       | URI format                                   |
 | -------------------- | -------------------------------------------- |
-| AWS S3               | {code}`s3://<bucket_name>`                   |
-| Google Cloud Storage | {code}`gs://<bucket_name>`                   |
-| Azure Blob Storage   | {code}`az://<account_name>/<container_name>` |
+| AWS S3               | `s3://<bucket_name>`                   |
+| Google Cloud Storage | `gs://<bucket_name>`                   |
+| Azure Blob Storage   | `az://<account_name>/<container_name>` |
 
-:::{warning}
+{% callout type="warning"  %}
 Some software tools cannot process the URI format.
 Use the directory format instead in such cases.
-:::
+{% /callout %}
 
 ### Examples
 
 Some examples of using Object Mount are given below.
 
-1. List the contents of a remote container {code}`my-bucket` on AWS S3:
+1. List the contents of a remote container `my-bucket` on AWS S3:
 
    ```console
    ls s3://my-bucket
@@ -54,7 +51,7 @@ Some examples of using Object Mount are given below.
    ls /cuno/s3/my-bucket
    ```
 
-2. Move a text file {code}`sample.txt` from the local filesystem to a remote Google Cloud Storage container {code}`my-bucket`:
+2. Move a text file `sample.txt` from the local filesystem to a remote Google Cloud Storage container `my-bucket`:
 
    ```console
    mv ./sample.txt gs://my-bucket/dir/sample.txt
@@ -66,7 +63,7 @@ Some examples of using Object Mount are given below.
    mv ./sample.txt /cuno/gs/my-bucket/dir/sample.txt
    ```
 
-3. List the contents of a subdirectory {code}`dir` in a remote Google Cloud Storage container {code}`my-bucket`:
+3. List the contents of a subdirectory `dir` in a remote Google Cloud Storage container `my-bucket`:
 
    ```console
    ls gs://my-bucket/dir
@@ -78,7 +75,7 @@ Some examples of using Object Mount are given below.
    ls /cuno/gs/my-bucket/dir
    ```
 
-4. Use UNIX coreutils (e.g. {code}`head`) on a remote file {code}`sample.txt` on AWS S3:
+4. Use UNIX coreutils (e.g. `head`) on a remote file `sample.txt` on AWS S3:
 
    ```console
    head s3://my-bucket/dir/sample.txt
@@ -98,8 +95,6 @@ or, equally:
 ls /cuno/az/my-account-name/my-container
 ```
 
-(user-guide-s3-access-points)=
-
 ## AWS S3 Access Point support
 
 Object Mount supports using an AWS S3 Access Point instead of a bucket as an endpoint. Access points are unique addresses that customers can create to enforce distinct permissions and network controls for any request made specifically through that access point.
@@ -110,7 +105,7 @@ To use an Access Point instead of a container, provide the full Amazon Resource 
 s3://arn:aws:s3:us-east-1:999999999999:accesspoint:my-access-point-name
 ```
 
-This applies to all places a container can be specified, such as within {code}`cuno creds`, or on the command line:
+This applies to all places a container can be specified, such as within `cuno creds`, or on the command line:
 
 ```console
 $ cuno creds -i pair s3://arn:aws:s3:us-east-1:999999999999:accesspoint:my-access-point-name
@@ -123,28 +118,28 @@ $ ls s3://arn:aws:s3:us-east-1:999999999999:accesspoint:my-access-point-name/<re
 
 ### Symbolic links
 
-By default, symbolic links can {strong}`only` be created (using {code}`ln --symbolic` or {code}`ln -s`) to point {strong}`from` a local system {strong}`to` a cloud location using either the URI or directory format.
+By default, symbolic links can {strong}`only` be created (using `ln --symbolic` or `ln -s`) to point {strong}`from` a local system {strong}`to` a cloud location using either the URI or directory format.
 
 ### Hard links and Server-side copy
 
 Hard links cannot be created from the local system to a remote cloud location.
 
 Use hard-linking to trigger a more efficient cloud-only copy mechanism within a cloud region.
-{code}`mv` or {code}`cp` within a single cloud vendor will trigger a server-side copy, which is more efficient than a download and upload.
+`mv` or `cp` within a single cloud vendor will trigger a server-side copy, which is more efficient than a download and upload.
 
 ### POSIX mode
 
-Symbolic links can be created (using {code}`ln --symbolic` or {code}`ln -s`) between local and cloud objects in either direction under POSIX mode (see {ref}`user-guide-Object Mount-mount`).
+Symbolic links can be created (using `ln --symbolic` or `ln -s`) between local and cloud objects in either direction under POSIX mode (see {ref}`user-guide-Object Mount-mount`).
 
-Hard links can be created (using {code}`ln`) between cloud objects in the {strong}`same` bucket under POSIX mode.
+Hard links can be created (using `ln`) between cloud objects in the {strong}`same` bucket under POSIX mode.
 
-:::{warning}
+{% callout type="warning"  %}
 If the target is deleted or moved, then both symbolic and hard links will break.
-:::
+{% /callout %}
 
 ### File metadata
 
-{code}`ls --long` (or {code}`ls -l`) will list the current user as the owner of the remote objects, and the permissions will be {code}`777`.
+`ls --long` (or `ls -l`) will list the current user as the owner of the remote objects, and the permissions will be `777`.
 The creation date of a remote directory is not always available to system calls.
 
 ### Performance
@@ -153,6 +148,6 @@ Object Mount uses multiple concurrent connections to remote objects to achieve t
 It can also execute operations on objects entirely remotely where possible.
 Some optimised operations are listed below.
 
-- {code}`mv` between locations within the same object storage provider uses remote-copy operations to avoid streaming through the client.
-- {code}`ln` hard links between locations within the same object storage provider use remote-copy operations to avoid streaming through the client.
+- `mv` between locations within the same object storage provider uses remote-copy operations to avoid streaming through the client.
+- `ln` hard links between locations within the same object storage provider use remote-copy operations to avoid streaming through the client.
   : Hard links between objects in the same bucket will work like local hard links when in POSIX mode.

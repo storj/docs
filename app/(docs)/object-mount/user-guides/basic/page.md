@@ -8,11 +8,6 @@ metadata:
 
 weight: 6    
 ---
-
-(user-guide-basic-loading)=
-
-# Basic loading
-
 Object Mount may be loaded in a number of ways, depending on user requirements and environment.
 
 For program calls to be routed through Object Mount, they must use
@@ -22,21 +17,19 @@ For program calls to be routed through Object Mount, they must use
 
 There is also {ref}`Object Mount FlexMount <user-guide-Object Mount-flexmount>`, which makes use of both Direct Interception and a Object Mount Mount as a fallback.
 
-(user-guide-direct-interception)=
-
 ## Direct Interception with Object Mount CLI
 
 When running in Direct Interception mode, Object Mount will insert itself between your applications and the operating system. It will dynamically redirect relevant filesystem calls made by the application through the API of your object storage solution. As a result, our mapping between filesystem concepts and object storage gives any application instant access to objects as files.
 
-:::{note}
+{% callout type="note"  %}
 This includes applications you've written yourself - just treat the paths to object storage as local filesystem paths, and Object Mount handles the rest.
-:::
+{% /callout %}
 
 Direct Interception offers the highest performance access to object storage that Object Mount provides.
 
-:::{warning}
+{% callout type="warning"  %}
 Direct interception does not currently support SUID binaries, or certain packaged apps like [Snap](https://ubuntu.com/core/services/guide/snaps-intro), [AppImage](https://appimage.org/), or [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications. Future updates are planned to address this.
-:::
+{% /callout %}
 
 This mode is best suited for situations in which installed app compatibility is not a concern - for example, when setting up a fixed workflow with Object Mount that can be tested and verified before putting it into production.
 
@@ -48,9 +41,9 @@ cuno
 
 This will launch a new interactive "wrapped" shell with Object Mount acting in Direct Interception mode. The shell itself has Object Mount intercepting its calls, so every application launched from within it can be intercepted as well as the command line arguments being used.
 
-:::{note}
+{% callout type="note"  %}
 When the Object Mount CLI is used to launch a new shell, the primary purpose is to start a new shell (whether that's bash, zsh, or whatever else) with `LD_PRELOAD` set to point at `cuno.so`. There is no Object Mount shell binary - it only wraps existing shells with Object Mount pre-loaded.
-:::
+{% /callout %}
 
 To enable direct interception of a single command, use:
 
@@ -58,19 +51,15 @@ To enable direct interception of a single command, use:
 cuno run bash -c "<your command and arguments>"
 ```
 
-:::{note}
-Always execute one-time commands this way to maintain support for wildcard expansion ({code}`*`) .
-:::
+{% callout type="note"  %}
+Always execute one-time commands this way to maintain support for wildcard expansion (`*`) .
+{% /callout %}
 
-(user-guide-direct-interception-how-it-works)=
-
-:::{note}
+{% callout type="note"  %}
 How it works
 
 Direct interception uses the `LD_PRELOAD` environment variable so that Object Mount can capture and redirect storage access library and system calls through object storage APIs. If a static binary is intercepted, a JIT ELF binary translator will redirect relevant calls when the binary is loaded into memory.
-:::
-
-(user-guide-direct-interception-advantages-disadvantages)=
+{% /callout %}
 
 ### Advantages and Disadvantages
 
@@ -108,40 +97,38 @@ See {ref}`user-guide-cloud-paths` for more information, options and examples of 
 
 #### Fully supported shells
 
-{code}`bash` and {code}`zsh` are fully supported when using Object Mount CLI.
+`bash` and `zsh` are fully supported when using Object Mount CLI.
 This includes support for:
 
 - tab auto-completion of remote paths;
-- wildcard expansion ({code}`*`) of filesystem and remote paths.
+- wildcard expansion (`*`) of filesystem and remote paths.
 
-In either of these fully-supported shells, the prompt will be prefixed with {code}`(cuno)` to indicate that Direct Interception is enabled and that you are using a Object Mount CLI shell, like so:
+In either of these fully-supported shells, the prompt will be prefixed with `(cuno)` to indicate that Direct Interception is enabled and that you are using a Object Mount CLI shell, like so:
 
 ```console
 (cuno) user@host:~$
 ```
 
-:::{note}
+{% callout type="note"  %}
 To select between the two shells, Object Mount detects if either is present in one of the following, {emphasis}`in order`:
 
 1. the shell used to launch Object Mount;
 2. the user's preferred login shell;
 3. all installed shells.
 
-If neither {code}`bash` nor {code}`zsh` are found, then the first shell in this list is used.
-If no shell is set, then {code}`/bin/sh` is used.
+If neither `bash` nor `zsh` are found, then the first shell in this list is used.
+If no shell is set, then `/bin/sh` is used.
 
 % warning:
 %
 % The behaviour described here relies on ``ps``. If you installed with the :ref:`Scripted Installer <user-guide-scripted-install>`, you may need to install `ps` manually (RHEL derivatives install package ``procps``).
-:::
+{% /callout %}
 
-To launch a specific shell with Object Mount enabled, use {code}`cuno run`:
+To launch a specific shell with Object Mount enabled, use `cuno run`:
 
 ```console
 cuno run <shell>
 ```
-
-(user-guide-Object Mount-mount)=
 
 ## Object Mount Mount
 
@@ -150,9 +137,9 @@ Object Mount Mount allows you to mount an object storage path in a directory wit
 Object Mount Mount uses Linux FUSE (Filesystem in Userspace) v3 to mount an object storage path in a directory within the file system hierarchy.
 Due to the nature of FUSE file systems, Object Mount Mount is usually less performant than Direct Interception using Object Mount CLI. Consider using Object Mount CLI or the userspace library (described in {ref}`user-guide-ldpreload`) if speed is the primary objective.
 
-:::{note}
-The {code}`--posix` option requires that a FUSE package be installed on the system.
-:::
+{% callout type="note"  %}
+The `--posix` option requires that a FUSE package be installed on the system.
+{% /callout %}
 
 ### Advantages
 
@@ -164,8 +151,6 @@ The {code}`--posix` option requires that a FUSE package be installed on the syst
 ### Disadvantages
 
 1. You cannot use URI paths like "s3://bucket1/foo" directly when using a Object Mount mount. To convert such a path to be usable, you need to replace the URI prefix (`s3://`) with the path to your mount.
-
-(user-guide-cuno-mount-options)=
 
 ### Usage and options
 
@@ -179,8 +164,6 @@ There are various options that can be specified, including
 - {ref}`Object Mount options for the mount's Object Mount subsystem <user-guide-cuno-mount-subsystem-options>`
 - {ref}`FUSE options <user-guide-cuno-mount-fuse-options>`
 
-(user-guide-cuno-mount-operation-options)=
-
 #### Mount options
 
 On the right hand-side of the `mount` verb, you can specify options that are specific to the mount operation.
@@ -189,9 +172,9 @@ On the right hand-side of the `mount` verb, you can specify options that are spe
 cuno mount [option] ...
 ```
 
-:::{note}
+{% callout type="note"  %}
 These options must come AFTER the verb `mount`.
-:::
+{% /callout %}
 
 ``` 
 .. list-table:: Object Mount Mount options
@@ -222,8 +205,6 @@ These options must come AFTER the verb `mount`.
      - Enables verbose output.
 ```
 
-(user-guide-cuno-mount-subsystem-options)=
-
 #### Options to configure the mount's Object Mount subsystem
 
 On the left hand-side of the `mount` verb, you can specify options that are specific to the Object Mount subsystem.
@@ -238,9 +219,9 @@ export CUNO_OPTIONS="<Object Mount option>"
 
 Some relevant Object Mount options are given below. Refer to {ref}`user-guide-config-options` for more information.
 
-:::{note}
+{% callout type="note"  %}
 These options must come BEFORE the verb `mount`.
-:::
+{% /callout %}
 
 ``` 
 .. list-table:: Object Mount options relevant to mount
@@ -301,8 +282,6 @@ These options must come BEFORE the verb `mount`.
 
 ```
 
-(user-guide-cuno-mount-fuse-options)=
-
 #### FUSE options
 
 On the right hand-side of the `mount` verb, you can also specify options that are specific to the FUSE mount operation. These options are passed on to `fum` ( [fusermount3](https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html)).
@@ -311,11 +290,11 @@ On the right hand-side of the `mount` verb, you can also specify options that ar
 cuno mount [FUSE option] ...
 ```
 
-:::{note}
+{% callout type="note"  %}
 These options must come AFTER the verb `mount`.
 
 Some of these are provided using the same `-o` syntax as the `cuno -o` options, but they are not the same.
-:::
+{% /callout %}
 
 ``` 
 .. list-table:: FUSE mount options
@@ -398,8 +377,6 @@ Some of these are provided using the same `-o` syntax as the `cuno -o` options, 
 
 % - Use direct I/O.
 
-(user-guide-unmount)=
-
 #### Object Mount Mount commands
 
 Once a Object Mount Mount is set up, you can use the following commands to manage it.
@@ -437,13 +414,9 @@ Once a Object Mount Mount is set up, you can use the following commands to manag
           cuno mount --unmount-kill <path to mount>
 ```
 
-(user-guide-mount-on-boot)=
-
 #### Mount on boot
 
 You can add mount commands to `/etc/fstab` to automount on start up.
-
-(user-guide-Object Mount-flexmount)=
 
 ## Object Mount FlexMount
 
@@ -469,9 +442,9 @@ A FlexMount is set up as follows:
    (cuno) $ ls $HOME/object_storage_mount/s3/<bucket>/<path>
    ```
 
-   :::{warning}
+   {% callout type="warning"  %}
    You cannot use a tilde `~` in your `CUNO_OPTIONS` or `cuno -o` CLI options when setting up a FlexMount as this is something that the shell needs to resolve. You may still use it for your `cuno mount` commands, and subsequent FlexMount operations (such as `ls ~/my-object-storage`).
-   :::
+   {% /callout %}
 
 The same FlexMount can be re-used across multiple Object Mount wrapped shells.
 

@@ -55,7 +55,7 @@ metadata:
 
 5. Please follow the interactive steps, read the displayed end-user licence agreement ([EULA](https://cuno.io/cunoFS-EULA)) and agree to the terms to continue with the extraction. To automate this, you can set the environment variable `CUNO_INSTALL_ACCEPT_EULA="yes"` (this is equivalent to accepting the EULA).
 
-6. The archive and its contents will be unpacked into a directory named {code}`cuno_{FULL-VERSION}_x86_64_musl` containing the package itself and additional documents:
+6. The archive and its contents will be unpacked into a directory named `cuno_{FULL-VERSION}_x86_64_musl` containing the package itself and additional documents:
 
    ```console
    $ ls cuno_{FULL-VERSION}_x86_64_musl
@@ -71,4 +71,4 @@ metadata:
 
 8. The installation will prompt you to activate Object Mount by starting a trial or entering a license key. Follow the steps interactively, or automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
 
-9. The installation will prompt you to set the {code}`CUNO_ROOT` environment variable to the installation directory. This is not always necessary when using Object Mount, but it will make it easier to follow the steps in this guide.
+9. The installation will prompt you to set the `CUNO_ROOT` environment variable to the installation directory. This is not always necessary when using Object Mount, but it will make it easier to follow the steps in this guide.

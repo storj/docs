@@ -9,12 +9,6 @@ metadata:
 weight: 14   
 ---
 
-(user-guide-appendix)=
-
-# Appendix
-
-(user-guide-getting-s3-credentials)=
-
 ## Getting S3 credentials using the AWS console
 
 1. **Visit** <https://s3.console.aws.amazon.com>
@@ -39,8 +33,6 @@ weight: 14
 
 7. **Use** the Access key ID and Secret Access key as described in {ref}`user-guide-import-credentials`
 
-(cuno-get-azure-creds)=
-
 ## Getting Azure credentials using Azure portal
 
 1. **Visit** <https://portal.azure.com/>
@@ -49,8 +41,6 @@ weight: 14
 4. **In the** *Security + networking* section **click** *Access keys*
 5. **Click on the** *Show keys* button
 6. **Use** the *Storage account name* and *Key* as described in {ref}`user-guide-azure-native-credentials`
-
-(cuno-get-gcs-creds)=
 
 ## Getting Google Cloud credentials using the console
 

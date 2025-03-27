@@ -9,8 +9,6 @@ metadata:
 weight: 8    
 ---
 
-(user-guide-additional-options)=
-
 # Additional Options
 
 ## Server-side encryption
@@ -25,8 +23,8 @@ As a result, users have to provide custom keys to Object Mount.
 Object Mount fully supports the default behavior in AWS to always encrypt the user data on the server side, before it is written to disk.
 Object Mount also supports customer-supplied encryption using AES-256 keys. For more information see the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html).
 
-In AWS S3, users specify their encryption options by setting the {code}`AWS_S3OPTIONS` environment variable.
-The available encryption options are the same as those provided by {code}`awscli`.
+In AWS S3, users specify their encryption options by setting the `AWS_S3OPTIONS` environment variable.
+The available encryption options are the same as those provided by `awscli`.
 For example, the following:
 
 ```console
@@ -66,7 +64,7 @@ All available options follow:
 +-----------------------------------+------------------------------------------------------------------------------------------------------------+
 ```
 
-Note that AWS KMS keys are required only for writing encrypted objects. Reading of encrypted objects does not require the corresponding KMS key to be specified. Furthermore, only one of {code}`--sse-write-c-key` and {code}`--sse-kms-key-id` options can be enabled at a time. To use encryption with alternate paths the corresponding {code}`ALT_AWS_S3OPTIONS` environment variable must be set.
+Note that AWS KMS keys are required only for writing encrypted objects. Reading of encrypted objects does not require the corresponding KMS key to be specified. Furthermore, only one of `--sse-write-c-key` and `--sse-kms-key-id` options can be enabled at a time. To use encryption with alternate paths the corresponding `ALT_AWS_S3OPTIONS` environment variable must be set.
 
 ### SSE in Google Cloud Storage
 
@@ -74,7 +72,7 @@ Object Mount fully supports the default behavior in Google Cloud Storage to alwa
 
 > [https://cloud.google.com/storage/docs/encryption/customer-supplied-keys](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
 
-To enable the SSE-C option the user must set the {code}`GS_ENCRYPTION` environment variable. For example:
+To enable the SSE-C option the user must set the `GS_ENCRYPTION` environment variable. For example:
 
 ```
 export GS_ENCRYPTION="--sse-write-c-key xxxxxxxxxxxxxxxxxx"

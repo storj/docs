@@ -9,34 +9,28 @@ metadata:
 weight: 7    
 ---
 
-(user-guide-advanced-loading)=
-
-# Advanced loading
-
 This section describes advanced usage of Object Mount, including the user-mode library, scripting, containerisation, and high-performance computing (HPC) integration.
-
-(user-guide-ldpreload)=
 
 ## User-mode library
 
-:::{note}
+{% callout type="note"  %}
 The `$CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is: `/opt/cuno` for a system-wide installation, and usually `$HOME/.local/opt/cuno` for a user-local installation. See {ref}`user-guide-install-locations` for more information on installation locations.
-:::
+{% /callout %}
 
-As mentioned in {ref}`user-guide-overview`, Object Mount provides {code}`cuno.so` which may be loaded into a running process using {code}`LD_PRELOAD`.
-Set the environment variable {code}`LD_PRELOAD="$CUNO_ROOT"/cuno.so` before executing a command, and Object Mount will be enabled for that command.
-To start a {code}`bash` instance with Object Mount loaded, run:
+As mentioned in {ref}`user-guide-overview`, Object Mount provides `cuno.so` which may be loaded into a running process using `LD_PRELOAD`.
+Set the environment variable `LD_PRELOAD="$CUNO_ROOT"/cuno.so` before executing a command, and Object Mount will be enabled for that command.
+To start a `bash` instance with Object Mount loaded, run:
 
 ```console
 LD_PRELOAD="$CUNO_ROOT"/cuno.so bash
 ```
 
-{code}`bash` and any command executed from within this instance will run with Object Mount enabled.
+`bash` and any command executed from within this instance will run with Object Mount enabled.
 However, other processes are not affected; this could be useful for unattended scripts.
 
-:::{note}
-Loading the library in this manner will {emphasis}`not` apply the {code}`(cuno)` prefix to the prompt.
-:::
+{% callout type="note"  %}
+Loading the library in this manner will {emphasis}`not` apply the `(cuno)` prefix to the prompt.
+{% /callout %}
 
 ## Environment variables
 
@@ -59,15 +53,15 @@ If Object Mount was not installed to a default location, first set the `CUNO_ROO
 
 ## Shell profiles
 
-To always load Object Mount when starting a new interactive shell, append the following line to {code}`~/.bashrc` or {code}`~/.zshrc`:
+To always load Object Mount when starting a new interactive shell, append the following line to `~/.bashrc` or `~/.zshrc`:
 
 ```console
 export LD_PRELOAD="${CUNO_ROOT}"/lib/cuno.so`
 ```
 
-{code}`/etc/profile.d` contains application-specific startup scripts, which are executed at user login by their respective login shells.
-A sample script is provided in {code}`${CUNO_ROOT}/etc/profile.d/cunorc.sh`.
-Copy this to {code}`/etc/profile.d/` to enable Object Mount for all users.
+`/etc/profile.d` contains application-specific startup scripts, which are executed at user login by their respective login shells.
+A sample script is provided in `${CUNO_ROOT}/etc/profile.d/cunorc.sh`.
+Copy this to `/etc/profile.d/` to enable Object Mount for all users.
 
 % TODO: test if this works with wildcards and tab-completion
 
@@ -79,13 +73,13 @@ There are multiple methods to use Object Mount from within Docker containers.
 
 #### Automatic interception
 
-:::{note}
+{% callout type="note"  %}
 Support for automatic Docker interception is currently **experimental**.
 For ways of running Docker with Object Mount interception manually, see {ref}`user-guide-manual-docker-interception`.
-:::
+{% /callout %}
 
-To enable automatic Docker interception, set the environment variable {code}`CUNO_INTERCEPT_DOCKER=1` and load Object Mount.
-Launching a Docker container via {code}`docker run …` will make Object Mount available inside the container.
+To enable automatic Docker interception, set the environment variable `CUNO_INTERCEPT_DOCKER=1` and load Object Mount.
+Launching a Docker container via `docker run …` will make Object Mount available inside the container.
 For instance, the following code will run a command inside an Ubuntu container with Object Mount enabled with the host's Object Mount credentials:
 
 ```console
@@ -94,9 +88,7 @@ cuno run docker run --rm ubuntu:latest ls -l s3://bucket
 ```
 
 Object Mount options will be forwarded into the container.
-To override Object Mount options just for Docker containers, use the {code}`CUNO_DOCKER_OPTIONS` environment variable: if set, its value overrides that of {code}`CUNO_OPTIONS` inside Docker containers.
-
-(user-guide-manual-docker-interception)=
+To override Object Mount options just for Docker containers, use the `CUNO_DOCKER_OPTIONS` environment variable: if set, its value overrides that of `CUNO_OPTIONS` inside Docker containers.
 
 #### Manual interception
 
@@ -107,10 +99,10 @@ Besides automatic interception, the following methods can be used to enable Obje
 
 To inject Object Mount into a Docker container when it is launched:
 
-1. Set {code}`CUNO_CREDENTIALS` outside the container; see {ref}`user-guide-credentials-management` for details.
-2. Optionally, the {code}`CUNO_OPTIONS` environment variable can be set using the `--env` [option](https://docs.docker.com/engine/reference/commandline/run/#env) of `docker run`.
+1. Set `CUNO_CREDENTIALS` outside the container; see {ref}`user-guide-credentials-management` for details.
+2. Optionally, the `CUNO_OPTIONS` environment variable can be set using the `--env` [option](https://docs.docker.com/engine/reference/commandline/run/#env) of `docker run`.
 3. Use the following options when using `docker run`:
-   : ```console
+    ```console
      docker run                                               \
          --tmpfs /cunodb                                      \
          -v $CUNO_ROOT:/opt/cuno:ro                           \
@@ -119,17 +111,17 @@ To inject Object Mount into a Docker container when it is launched:
          <image> [container-commands]
      ```
 
-     :::{note}
-     This uses the volume mount option ({code}`-v`) to make Object Mount and other directories available to the container.
+     {% callout type="note"  %}
+     This uses the volume mount option (`-v`) to make Object Mount and other directories available to the container.
 
      This command requires Object Mount to already be installed and {ref}`activated <user-guide-activate-licence>` on the host system.
 
      The `$CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is: `/opt/cuno` for a system-wide installation, and usually `$HOME/.local/opt/cuno` for a user-local installation. See {ref}`user-guide-install-locations` for more information on installation locations.
-     :::
+     {% /callout %}
 
 The Object Mount credentials directory is only readable by the current user for security reasons.
 However, credentials may need to be accessed by processes run by other users (e.g. NGINX worker processes) within the Docker container.
-To enable this, bind mount the nested {code}`bindpoint` directory instead of the credentials directory:
+To enable this, bind mount the nested `bindpoint` directory instead of the credentials directory:
 
 ```console
 docker run                                                             \
@@ -177,9 +169,9 @@ From: rockylinux:8
     Email supportdcs@storj.io
 ```
 
-The above will require that the Object Mount software package is available at the paths starting {code}`/home/admin/downloads` as listed in the {code}`%files` section.
+The above will require that the Object Mount software package is available at the paths starting `/home/admin/downloads` as listed in the `%files` section.
 
-Rather than modifying an existing Singularity image, another option is to pass-through the Object Mount library and binaries making them available inside the image. Optionally, the {code}`CUNO_OPTIONS` environment variable can also be set for a particular mode of operation.
+Rather than modifying an existing Singularity image, another option is to pass-through the Object Mount library and binaries making them available inside the image. Optionally, the `CUNO_OPTIONS` environment variable can also be set for a particular mode of operation.
 
 The following commands demonstrate injecting Object Mount into a Singularity image:
 
@@ -195,19 +187,19 @@ contrib    crawl-analysis  index2012      parse-output       robots.txt
 crawl-001  crawl-data      mapred-temp    parse-output-test  stats-output
 ```
 
-:::{note}
+{% callout type="note"  %}
 This method requires Object Mount be installed and {ref}`activated <user-guide-activate-licence>` on the system that is used to execute the Singularity images.
 
 The `$CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is: usually `/opt/cuno` for a system-wide installation, and usually `$HOME/.local/opt/cuno` for user-local installion. See {ref}`user-guide-install-locations` for more information on installation locations.
-:::
+{% /callout %}
 
-Alternatively, rather than using command options, the {code}`--bind` parameters can be specified as environment variables before the {code}`singularity` binary is called, making it easier to modify existing pipelines without changing the command line call, like so:
+Alternatively, rather than using command options, the `--bind` parameters can be specified as environment variables before the `singularity` binary is called, making it easier to modify existing pipelines without changing the command line call, like so:
 
 ```
 export SINGULARITY_BIND="$CUNO_ROOT:/opt/cuno,$CUNO_CREDENTIALS:/opt/cuno-config/creds"
 ```
 
-As another alternative, Object Mount can be used via a FUSE mount inside Singularity with the {code}`--fusemount` parameter:
+As another alternative, Object Mount can be used via a FUSE mount inside Singularity with the `--fusemount` parameter:
 
 ```
 $ singularity exec \
@@ -217,29 +209,29 @@ $ singularity exec \
     ./singularity_image.sif /cuno/s3/commoncrawl
 ```
 
-This will allow software inside the container to access cloud buckets via the {code}`/cuno` path prefix.
+This will allow software inside the container to access cloud buckets via the `/cuno` path prefix.
 
 ## Lmod
 
 The Environment Modules system is a tool to help users manage shell environments, by allowing groups of related environment variable settings to be made or removed dynamically.
 
-Many HPC environments incorporate {code}`module` as one of the means by which software can be loaded by their users.
+Many HPC environments incorporate `module` as one of the means by which software can be loaded by their users.
 
-A sample script has been provided within your Object Mount installation directory here: {code}`${CUNO_ROOT}/share/modulefiles/cuno/{FULL-VERSION}.lua`, it is built specifically for the Lmod implementation in Lua, and uses values set to example paths (see the {code}`base` variable in particular) and default options that you might want to append to, modify or remove to suit your environment and your installation choices.
+A sample script has been provided within your Object Mount installation directory here: `${CUNO_ROOT}/share/modulefiles/cuno/{FULL-VERSION}.lua`, it is built specifically for the Lmod implementation in Lua, and uses values set to example paths (see the `base` variable in particular) and default options that you might want to append to, modify or remove to suit your environment and your installation choices.
 
-After adding the parent directory of the file to the {code}`MODULEPATH` with {code}`module use "${CUNO_ROOT}/share/modulefiles/cuno"`, a user should be able to run {code}`module load cuno` to add Object Mount to their environment.
+After adding the parent directory of the file to the `MODULEPATH` with `module use "${CUNO_ROOT}/share/modulefiles/cuno"`, a user should be able to run `module load cuno` to add Object Mount to their environment.
 
 ## Spectrum LSF
 
 Depending on the exact requirements and setup, there are multiple ways of using Spectrum LSF with Object Mount.
 
-First, assuming that Object Mount is installed on all compute nodes, that the {code}`cuno` executable is available in the {code}`PATH`, and that Object Mount credentials are configured for all nodes, jobs can be submitted by prefixing the submitted command with {code}`cuno run` (without quotes!), e.g.:
+First, assuming that Object Mount is installed on all compute nodes, that the `cuno` executable is available in the `PATH`, and that Object Mount credentials are configured for all nodes, jobs can be submitted by prefixing the submitted command with `cuno run` (without quotes!), e.g.:
 
 ```
 bsub -Is cuno run ls -l s3://bucket
 ```
 
-If further configuration of Object Mount is required, an LSF job starter can be created. The script should be created at the location {code}`$LSF_ENVDIR/cuno-starter.sh`, or some other location that is common to all LSF nodes (however, the queue template that ships with Object Mount assumes this location). The following script can be used as an outline for the job starter:
+If further configuration of Object Mount is required, an LSF job starter can be created. The script should be created at the location `$LSF_ENVDIR/cuno-starter.sh`, or some other location that is common to all LSF nodes (however, the queue template that ships with Object Mount assumes this location). The following script can be used as an outline for the job starter:
 
 ```shell
 #!/bin/sh
@@ -261,7 +253,7 @@ Make the job starter executable:
 chmod +x "$LSF_ENVDIR"/cuno-starter.sh
 ```
 
-To configure a new LSF queue for Object Mount enabled jobs, fill in and append the LSF configuration template for Object Mount to {code}`lsb.queues`.
+To configure a new LSF queue for Object Mount enabled jobs, fill in and append the LSF configuration template for Object Mount to `lsb.queues`.
 Use the following command:
 
 ```
@@ -284,14 +276,14 @@ To check that the queue was set up correctly, run:
 bqueues -l cuno
 ```
 
-Regardless of whether an LSF queue was set up, the job starter can be used with the {code}`lsrun` command (but not {code}`bsub`!), e.g.:
+Regardless of whether an LSF queue was set up, the job starter can be used with the `lsrun` command (but not `bsub`!), e.g.:
 
 ```console
 export LSF_JOB_STARTER=$LSF_ENVDIR/cuno-starter.sh
 lsrun ls -l s3://bucket
 ```
 
-To use the dedicated queue, specify it when invoking {code}`bsub`, e.g.:
+To use the dedicated queue, specify it when invoking `bsub`, e.g.:
 
 ```console
 bsub -q cuno -Is ls -l s3://demo

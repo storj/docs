@@ -8,28 +8,20 @@ metadata:
 
 weight: 2    
 ---
-
-(user-guide-download-and-install)=
-
-# Download and installation
-
 There are multiple ways to install Object Mount:
 
 - an installation script, which allows users to install Object Mount without root privileges ({ref}`user-guide-scripted-install`);
 - standard packages for various Linux distributions ({ref}`user-guide-package-manager-install`).
-
-(user-guide-install-locations)=
 
 ## Install locations
 
 When Object Mount is installed via the Scripted Installer, it gets installed to different locations depending on whether it was installed by root, or by a non-root user.
 Hereafter, root installations are called 'system-wide', and non-root installations are called 'user-local'.
 
-:::{note}
+{% callout type="note"  %}
 A package manager install of Object Mount is always system-wide, regardless of the privileges of the user installing it.
-:::
+{% /callout %}
 
-(cuno-install-locations)=
 
 ``` 
 .. table:: Object Mount installation locations for per-user and systemwide installations
@@ -50,7 +42,6 @@ A package manager install of Object Mount is always system-wide, regardless of t
    =================== =============================== =======================================
 ```
 
-(user-guide-scripted-install)=
 
 ## Scripted installer
 
@@ -70,11 +61,10 @@ Some Linux distributions (Alpine) use the musl C standard library. This installe
 .. include:: common-scripted-installer-musl-instructions.rst
 ```
 
-(user-guide-package-manager-install)=
+
 
 ## Package manager installation
 
-(user-guide-debian-derivative-install)=
 
 ### Debian and derivatives (e.g. Ubuntu)
 
@@ -90,9 +80,9 @@ Some Linux distributions (Alpine) use the musl C standard library. This installe
 
 ### Alpine Linux
 
-:::{warning}
+{% callout type="warning"  %}
 Object Mount APK packages for Alpine will be available soon.
-:::
+{% /callout %}
 
 ```console
 sudo apk add --allow-untrusted ./cuno_{FULL-VERSION}_amd64_musl/cuno_{FULL-VERSION}_amd64_musl.apk
@@ -105,20 +95,18 @@ However, there are still ways to use Object Mount.
 
 ### macOS using Docker
 
-:::{note}
+{% callout type="note"  %}
 Alternatives to Docker on Mac are available, some recommended alternatives are:
 
 - [Rancher Desktop](https://rancherdesktop.io/) (free) - If you're on Apple Silicon, enable Rosetta (Settings > Virtual Machine > VZ: Enable Rosetta support) and VirtioFS (Settings > Virtual Machine > Volumes: virtiofs)
 - [OrbStack for Mac](https://orbstack.dev/) (may be faster) - OrbStack works out of the box.
 
 Unfortunately, [colima](https://github.com/abiosoft/colima) is not currently supported.
-:::
+{% /callout %}
 
 ``` 
 .. include:: common-mac-install-instructions.rst
 ```
-
-(user-guide-cuno-mac)=
 
 ### Additional instructions for cuno-mac users
 
@@ -144,9 +132,9 @@ To return to macOS, run `exit` until the `(cuno)` prefix is removed. You may onl
 .. include:: common-windows-install-instructions.rst
 ```
 
-:::{note}
+{% callout type="note"  %}
 Refer to the [Microsoft documentation on installing WSL](https://docs.microsoft.com/en-gb/windows/wsl/install) for more information.
-:::
+{% /callout %}
 
 ### Exposing mounted object storage to the Host OS
 

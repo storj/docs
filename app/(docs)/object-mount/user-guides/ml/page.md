@@ -9,10 +9,6 @@ metadata:
 weight: 11
 ---
 
-(Object Mount-machine-learning-accelerator)=
-
-# Object Mount Machine Learning Accelerator
-
 The Object Mount Machine Learning Accelerator (Object Mount MLA) is a software library that accelerates your existing machine learning models by advanced leveraging of our data retrieval and storage technology.
 
 It is available for our Professional and Enterprise customers.

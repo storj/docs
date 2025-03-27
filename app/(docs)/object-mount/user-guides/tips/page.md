@@ -9,10 +9,6 @@ metadata:
 weight: 12    
 ---
 
-(user-guide-tips-for-apps)=
-
-# Usage tips for some applications
-
 There are some general ideas presented in {ref}`user-guide-core-concepts` that should help inform usage of object storage with your software. For example, object storage is not very good for high IOPS work loads, so prefer to use {ref}`Object Mount Fusion <Object Mount-fusion-guide>` for that use-case.
 
 The following are some applications for which we have additional guidance when using then in combination with Object Mount. If you have more to add to the list, let us and the community know on our [forum](https://forum.storj.io).
@@ -21,7 +17,7 @@ The following are some applications for which we have additional guidance when u
 
 ### Python
 
-Python's {code}`os.path.realpath(path)` is not supported for URI-based access like {code}`xx://`. Use path-format instead (e.g. `/cuno/s3/bucket/path`).
+Python's `os.path.realpath(path)` is not supported for URI-based access like `xx://`. Use path-format instead (e.g. `/cuno/s3/bucket/path`).
 
 ### Rsync
 
@@ -46,8 +42,6 @@ To use rsync options that preserve permissions (`-p`) and modification times (`-
 % * Reading from object storage, a complex filterchain where multiple subtitle streams are being read from the same input file. (This will be improved soon! Be the first to find out by contacting `supportdcs@storj.io <mailto:supportdcs@storj.io>`_)
 
 % * Reading from object storage, files that contain title screen and extra credit scenes can be slow to start.
-
-(user-guide-limitations-sudo)=
 
 ### sudo with Direct Interception
 

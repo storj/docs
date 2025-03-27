@@ -9,19 +9,14 @@ metadata:
 weight: 13    
 ---
 
-(user-guide-limitations)=
-
-# Limitations
-
-:::{note}
+{% callout type="note"  %}
 Object Mount imposes no restrictions on local file accesses. The limitations listed in this section only apply to data stored on object-storage.
-:::
+{% /callout %}
 
-:::{note}
+{% callout type="note"  %}
 This document contains technical limitations applying to all Object Mount users. There are additional limitations dictated by your licence tier, see [Pricing](https://cuno.io/pricing).
-:::
+{% /callout %}
 
-(user-guide-limitations-direct-interception)=
 
 ## Direct interception
 
@@ -45,17 +40,17 @@ Depending on the solution provider, Object Mount has a limitation on the maximum
 
 % The creation date of a remote directory is not always available to the system calls.
 
-In Core File Access mode, the owner of the remote objects is by default always reported as the current user, and remote file permissions are always {code}`777`. Also, the creation time of directories is always displayed as the Unix Epoch (00:00:00 UTC on 1 January 1970). These can be overridden using {code}`CUNO_OPTIONS` ({ref}`user-guide-ownership-and-permissions`).
+In Core File Access mode, the owner of the remote objects is by default always reported as the current user, and remote file permissions are always `777`. Also, the creation time of directories is always displayed as the Unix Epoch (00:00:00 UTC on 1 January 1970). These can be overridden using `CUNO_OPTIONS` ({ref}`user-guide-ownership-and-permissions`).
 
 ### Directories in Azure
 
-Creating a directory in Azure Storage (using {code}`mkdir`) will result in a remote blob called \<no name> to be displayed inside the created directory when the user is using the GUI/file explorer that Azure portal provides. However, {code}`ls` and all CLI commands will behave as expected.
+Creating a directory in Azure Storage (using `mkdir`) will result in a remote blob called \<no name> to be displayed inside the created directory when the user is using the GUI/file explorer that Azure portal provides. However, `ls` and all CLI commands will behave as expected.
 
 ### Auto-completion
 
-Auto-completion and wildcard characters are fully supported on a Object Mount active shell. This can be created either using the {code}`cuno` command or using {code}`LD_PRELOAD` (e.g. {code}`LD_PRELOAD=/usr/lib/cuno.so bash`). In the latter, paths containing colons such as {code}`s3://bucket` on cloud paths will only succeed if `:` is removed from the separator list variable {code}`COMP_WORDBREAKS`. For example:
+Auto-completion and wildcard characters are fully supported on a Object Mount active shell. This can be created either using the `cuno` command or using `LD_PRELOAD` (e.g. `LD_PRELOAD=/usr/lib/cuno.so bash`). In the latter, paths containing colons such as `s3://bucket` on cloud paths will only succeed if `:` is removed from the separator list variable `COMP_WORDBREAKS`. For example:
 
-> {code}`[[ "$LD_PRELOAD" =~ cuno ]] && export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}`
+> `[[ "$LD_PRELOAD" =~ cuno ]] && export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}`
 
 ### Memory-mapping
 

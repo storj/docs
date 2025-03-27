@@ -9,8 +9,6 @@ metadata:
 weight: 1    
 ---
 
-(user-guide-core-concepts)=
-
 # Core Concepts
 
 The ideas presented here are intended to familiarise you with our approach to object storage.

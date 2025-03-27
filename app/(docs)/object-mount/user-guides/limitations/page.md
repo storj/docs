@@ -1,26 +1,37 @@
+---
+title: Limitations
+docId: Chiec3aS2eizieng
+
+metadata:
+  title: Limitations
+  description: Limitations
+
+weight: 13    
+---
+
 (user-guide-limitations)=
 
 # Limitations
 
 :::{note}
-cunoFS imposes no restrictions on local file accesses. The limitations listed in this section only apply to data stored on object-storage.
+Object Mount imposes no restrictions on local file accesses. The limitations listed in this section only apply to data stored on object-storage.
 :::
 
 :::{note}
-This document contains technical limitations applying to all cunoFS users. There are additional limitations dictated by your licence tier, see [Pricing](https://cuno.io/pricing).
+This document contains technical limitations applying to all Object Mount users. There are additional limitations dictated by your licence tier, see [Pricing](https://cuno.io/pricing).
 :::
 
 (user-guide-limitations-direct-interception)=
 
 ## Direct interception
 
-Direct interception (using cunoFS CLI or `LD_PRELOAD`) does not currently support SUID binaries, or certain packaged apps like [Snap](https://ubuntu.com/core/services/guide/snaps-intro), [AppImage](https://appimage.org/), or [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications. Future updates are planned to address this.
+Direct interception (using Object Mount CLI or `LD_PRELOAD`) does not currently support SUID binaries, or certain packaged apps like [Snap](https://ubuntu.com/core/services/guide/snaps-intro), [AppImage](https://appimage.org/), or [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications. Future updates are planned to address this.
 
-If you need to use such apps, prefer to use {ref}`user-guide-cunofs-mount` or {ref}`user-guide-cunofs-flexmount`.
+If you need to use such apps, prefer to use {ref}`user-guide-Object Mount-mount` or {ref}`user-guide-Object Mount-flexmount`.
 
 ## Maximum object size
 
-Depending on the solution provider, cunoFS has a limitation on the maximum file size it can store on a remote location. The following table indicates the maximum file sizes per provider.
+Depending on the solution provider, Object Mount has a limitation on the maximum file size it can store on a remote location. The following table indicates the maximum file sizes per provider.
 
 | Cloud provider       | Maximum file size |
 | -------------------- | ----------------- |
@@ -42,7 +53,7 @@ Creating a directory in Azure Storage (using {code}`mkdir`) will result in a rem
 
 ### Auto-completion
 
-Auto-completion and wildcard characters are fully supported on a cunoFS active shell. This can be created either using the {code}`cuno` command or using {code}`LD_PRELOAD` (e.g. {code}`LD_PRELOAD=/usr/lib/cuno.so bash`). In the latter, paths containing colons such as {code}`s3://bucket` on cloud paths will only succeed if `:` is removed from the separator list variable {code}`COMP_WORDBREAKS`. For example:
+Auto-completion and wildcard characters are fully supported on a Object Mount active shell. This can be created either using the {code}`cuno` command or using {code}`LD_PRELOAD` (e.g. {code}`LD_PRELOAD=/usr/lib/cuno.so bash`). In the latter, paths containing colons such as {code}`s3://bucket` on cloud paths will only succeed if `:` is removed from the separator list variable {code}`COMP_WORDBREAKS`. For example:
 
 > {code}`[[ "$LD_PRELOAD" =~ cuno ]] && export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}`
 

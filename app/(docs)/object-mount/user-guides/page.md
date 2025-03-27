@@ -1,37 +1,35 @@
 ---
-title: 4. User Guides
+title: User Guides
 docId: ohs0ailohSh0Vie3
 
 metadata:
   title: User Guides
   description:
     User Guides Overview
-
-
-weight: 0
+weight: 4
 ---
 
-cunoFS is a scalable, high-performance POSIX compatibility layer that lets you interact with files stored on object storage such as Amazon S3, Azure Blob Storage, Google Cloud Storage, or any S3-compatible object store hosted in the cloud or locally.
+Object Mount is a scalable, high-performance POSIX compatibility layer that lets you interact with files stored on object storage such as Amazon S3, Azure Blob Storage, Google Cloud Storage, or any S3-compatible object store hosted in the cloud or locally.
 
 ## The package
 
-cunoFS is Linux software: there's a cunoFS Command Line Interface (cunoFS CLI), {code}`cuno`, providing the highest performance and most straightforward way to interact with object storage. This works through a user-mode library, {code}`cuno.so`, which intercepts (both dynamic and static) applications using [LD_PRELOAD] functionality and fast dynamic binary instrumentation.
+Object Mount is Linux software: there's a Object Mount Command Line Interface (Object Mount CLI), {code}`cuno`, providing the highest performance and most straightforward way to interact with object storage. This works through a user-mode library, {code}`cuno.so`, which intercepts (both dynamic and static) applications using [LD_PRELOAD] functionality and fast dynamic binary instrumentation.
 
-cunoFS can also be used with our modified [FUSE] mount solution, {ref}`cunoFS Mount <user-guide-cunofs-mount>`, providing wider support for applications where the {ref}`cunoFS CLI cannot be used <user-guide-limitations-direct-interception>`.
+Object Mount can also be used with our modified [FUSE] mount solution, {ref}`Object Mount Mount <user-guide-Object Mount-mount>`, providing wider support for applications where the {ref}`Object Mount CLI cannot be used <user-guide-limitations-direct-interception>`.
 
-To match the best performance with the widest support, consider the hybrid solution: {ref}`cunoFS FlexMount <user-guide-cunofs-flexmount>`.
+To match the best performance with the widest support, consider the hybrid solution: {ref}`Object Mount FlexMount <user-guide-Object Mount-flexmount>`.
 
-Access credentials can also be optionally managed by cunoFS.
+Access credentials can also be optionally managed by Object Mount.
 
 ## Wide support for object storage providers
 
-cunoFS has native support for:
+Object Mount has native support for:
 
 - [Amazon Web Services S3](https://aws.amazon.com/s3/)
 - [Microsoft Azure Blob Storage](https://azure.microsoft.com/en-gb/services/storage/blobs/)
 - [Google Cloud Storage](https://cloud.google.com/storage/) (however for best performance we currently recommend using S3 with their [S3 accesspoint](https://cloud.google.com/storage/docs/interoperability))
 
-In theory, cunoFS supports any S3-compatible object storage provider. In practice, the "S3 API" implementation can have differences in behaviour between providers, so some additional configuration is sometimes necessary. cunoFS has been tested on:
+In theory, Object Mount supports any S3-compatible object storage provider. In practice, the "S3 API" implementation can have differences in behaviour between providers, so some additional configuration is sometimes necessary. Object Mount has been tested on:
 
 % TODO: make this a table, with links to additional config sections for each of these providers (if any is necessary)
 

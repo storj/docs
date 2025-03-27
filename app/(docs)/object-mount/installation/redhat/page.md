@@ -7,7 +7,6 @@ metadata:
   description:
     Redhat Installation Instructions
 
-weight: 0
 ---
 
 1. Donwload the installer. By downloading you are agreeing to the terms of the [End User License Agreement](https://cuno.io/cunoFS-EULA). Click to download the latest version of the [self-extracting package for RHEL](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_glibc_rpm.run) from your browser, or run the command:
@@ -32,13 +31,13 @@ weight: 0
    CUNO-Installation-and-User-Guide.pdf
    ```
 
-5. Install cunoFS and its dependencies using `yum`:
+5. Install Object Mount and its dependencies using `yum`:
 
    ```console
    sudo yum makecache
    sudo yum install ./cuno_{FULL-VERSION}_x86_64_glibc/cuno_{FULL-VERSION}_x86_64_glibc.rpm
    ```
 
-6. The installation will prompt you to activate cunoFS by starting a trial or entering a license key. Follow the steps interactively, or automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
+6. The installation will prompt you to activate Object Mount by starting a trial or entering a license key. Follow the steps interactively, or automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
 
-7. The installation will prompt you to set the {code}`CUNO_ROOT` environment variable to the installation directory. This is not always necessary when using cunoFS, but it will make it easier to follow the steps in this guide.
+7. The installation will prompt you to set the {code}`CUNO_ROOT` environment variable to the installation directory. This is not always necessary when using Object Mount, but it will make it easier to follow the steps in this guide.

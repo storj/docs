@@ -1,13 +1,10 @@
 ---
-title: 2.7 Getting Started with Object Mount Fusion
+title: Object Mount Fusion
 docId: duac8aixa9oPiw4u
-
+weight: 7
 metadata:
-  title: Getting started with Object Mount Fusion
-  description:
-    Object Mount Fusion is way to upgrade high-performance attached storage solutions like Amazon Elastic File System (EFS) with the throughput of object storage. 
-
-weight: 0
+  title: Object Mount Fusion
+  description: Getting started with Object Mount Fusion
 ---
 
 ## Overview

@@ -1,27 +1,38 @@
+---
+title: Kubernetes CSI Driver
+docId: zohm4zeXohpae9ga
+
+metadata:
+  title: Kubernetes CSI Driver
+  description: Kubernetes CSI Driver Guide
+    
+weight: 10
+---
+
 (user-guide-kubernetes-csi-driver)=
 
 # Kubernetes CSI Driver
 
-The cunoFS CSI Driver facilitates seamless integration of your cloud storage services (Amazon S3, Google Cloud, and Azure Cloud) within a Kubernetes cluster. The driver is available through [Helm](https://helm.sh) under {code}`oci://registry-1.docker.io/cunofs/cunofs-csi-chart`. More information can be found [on docker hub](https://hub.docker.com/r/cunofs/cunofs-csi-chart).
+The Object Mount CSI Driver facilitates seamless integration of your cloud storage services (Amazon S3, Google Cloud, and Azure Cloud) within a Kubernetes cluster. The driver is available through [Helm](https://helm.sh) under {code}`oci://registry-1.docker.io/cunofs/Object Mount-csi-chart`. More information can be found [on docker hub](https://hub.docker.com/r/cunofs/cunofs-csi-chart).
 
 ## Install
 
 1. Ensure that Helm is installed. If not, follow the [Helm installation guide](https://helm.sh/docs/intro/install/)
-2. Deploy the cunoFS CSI Driver:
+2. Deploy the Object Mount CSI Driver:
 
 ```shell
-helm install cunofs-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi-chart \
-  --set cunofsLicense.license="<license-text>"                                   \
+helm install Object Mount-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi-chart \
+  --set Object MountLicense.license="<license-text>"                                   \
   --set credsToImport="{<credentials-1>,<credential-2>, ... ,<credentials-N>}"
 ```
 
-- `--set cunofsLicense.license`: (required) cunoFS license \[[more details](https://cuno.io/pricing/)\]
+- `--set Object MountLicense.license`: (required) Object Mount license \[[more details](https://cuno.io/pricing/)\]
 - `--set credsToImport`: (optional) cloud credentials \[{ref}`more details <getting-started-credentials>`\]
 
-3. Display the status of the cunoFS CSI Driver resources:
+3. Display the status of the Object Mount CSI Driver resources:
 
 ```shell
-kubectl get all -l app.kubernetes.io/name=cunofs-csi-driver
+kubectl get all -l app.kubernetes.io/name=Object Mount-csi-driver
 ```
 
 :::{note}
@@ -39,7 +50,7 @@ To ensure that the cloud credentials are passed correctly, please provide them i
 Upgrade to the latest version:
 
 ```shell
-helm upgrade --reuse-values cunofs-csi-chart 'oci://registry-1.docker.io/cunofs/cunofs-csi-chart'
+helm upgrade --reuse-values Object Mount-csi-chart 'oci://registry-1.docker.io/cunofs/cunofs-csi-chart'
 ```
 
 You can append the `--version <version>` to upgrade to a specific version.
@@ -52,7 +63,7 @@ helm uninstall cunofs-csi-chart
 
 # Storage allocation
 
-The cunoFS CSI Driver support the following strategies:
+The Object Mount CSI Driver support the following strategies:
 
 - {ref}`Static storage provisioning <static_provisioning>`
 - {ref}`Dynamic storage provisioning <dynamic_provisioning>`
@@ -233,14 +244,14 @@ spec:
 ```
 
 :::{note}
-The current version of cunoFS CSI Driver does not support [CSI inline volumes](https://kubernetes.io/blog/2020/01/21/csi-ephemeral-inline-volumes/)
+The current version of Object Mount CSI Driver does not support [CSI inline volumes](https://kubernetes.io/blog/2020/01/21/csi-ephemeral-inline-volumes/)
 :::
 
 (configuration-section)=
 
 # Configuration
 
-This section offers additional details about the configuration options for the cunoFS CSI driver.
+This section offers additional details about the configuration options for the Object Mount CSI driver.
 
 ## Helm chart
 
@@ -252,11 +263,11 @@ Download the chart manually:
 helm pull --untar oci://registry-1.docker.io/cunofs/cunofs-csi-chart
 ```
 
-Set the `cunofsLicense.license` variable and import the cloud credentials:
+Set the `Object MountLicense.license` variable and import the cloud credentials:
 
 ```yaml
 # values.yaml file
-cunofsLicense:
+Object MountLicense:
   license: "<your license key>"
 credsToImport:
   - "<credential-1>"
@@ -273,7 +284,7 @@ helm install cunofs-csi-chart <path-to-chart>
 
 Available options:
 
-```{eval-rst}
+``` 
 .. list-table::
     :widths: 30 50 20
     :header-rows: 1
@@ -288,13 +299,13 @@ Available options:
       - Specifies how the docker image is deployed onto the Node and Controller. Only useful to change if self-hosting the docker image.
       - ``Always``
     * - ``cunofsCSIimage.name``
-      - Specifies the cunoFS CSI docker image. Only useful to change if self-hosting the docker image under a different name (Note: do not include the version here).
+      - Specifies the Object Mount CSI docker image. Only useful to change if self-hosting the docker image under a different name (Note: do not include the version here).
       - ``cunofs/cunofs_csi``
     * - ``cunofsCSIimage.version``
       - Specifies the docker image's version. No need to change it unless you have a good reason to.
       - <equal to chart version>
     * - ``cunofsLicense.license``
-      - The license used for activating cunoFS on the Driver. It needs to be a valid Professional or Enterprise license.
+      - The license used for activating Object Mount on the Driver. It needs to be a valid Professional or Enterprise license.
       - <empty>
     * - ``credsToImport``
       - Yaml array that you can populate with your s3/az/gs credential files.
@@ -314,7 +325,7 @@ Note that due to K8s parameter passing design decisions, the boolean parameters 
 For this reason, please use `"true"` and `"false"` instead of `true` and `false`.
 :::
 
-```{eval-rst}
+``` 
 .. list-table::
     :widths: 50 50
     :header-rows: 1
@@ -330,17 +341,17 @@ For this reason, please use `"true"` and `"false"` instead of `true` and `false`
     * - ``spec.csi.volumeHandle``
       - Name of the volume, needs to be unique
     * - ``spec.accessModes``
-      - We support ``ReadWriteOncePod``, ``ReadWriteOnce``, ``ReadOnlyMany``, ``ReadWriteMany``. ``ReadWriteMany`` requires cunoFS Fusion for write consistency, but works in any mode
+      - We support ``ReadWriteOncePod``, ``ReadWriteOnce``, ``ReadOnlyMany``, ``ReadWriteMany``. ``ReadWriteMany`` requires Object Mount Fusion for write consistency, but works in any mode
     * - ``spec.csi.volumeAttributes.root``
       - This is the cloud URI tht will be mounted to the target mountpath. If not specified, you can access s3, az and gz through the target + ``/az`` or ``/gs`` or ``/s3`` directories
     * - ``spec.csi.volumeAttributes.posix``
-      - Set it to ``"true"`` to enforce strict posix mode for cunoFS
+      - Set it to ``"true"`` to enforce strict posix mode for Object Mount
     * - ``spec.csi.volumeAttributes.allow_root``
       - Set it to ``"true"`` to allow *only* the root user to access the mount. Overrides ``allow_other``
     * - ``spec.csi.volumeAttributes.allow_other``
       - Set it to ``"true"`` to allow all users to use the mount (recommended)
     * - ``spec.csi.volumeAttributes.auto_restart``
-      - Set it to ``"true"`` to automatically restart the cunoFS mount if an error occurs
+      - Set it to ``"true"`` to automatically restart the Object Mount mount if an error occurs
     * - ``spec.csi.volumeAttributes.readonly``
       - Set it to ``"true"`` to mount the volume as read only
     * - ``spec.csi.volumeAttributes.CUNO_OPTIONS``
@@ -348,12 +359,12 @@ For this reason, please use `"true"` and `"false"` instead of `true` and `false`
     * - ``spec.csi.volumeAttributes.CUNO_LOG``
       - Sets the ``CUNO_LOG`` of the ``cuno mount``
     * - ``spec.csi.volumeAttributes.fusion_pvc``
-      - Enables cunoFS Fusion on the ``PV`` with the input as the backing ``PVC``
+      - Enables Object Mount Fusion on the ``PV`` with the input as the backing ``PVC``
 ```
 
 ## StorageClass options
 
-```{eval-rst}
+``` 
 .. list-table::
     :widths: 50 50
     :header-rows: 1
@@ -375,28 +386,28 @@ For this reason, please use `"true"` and `"false"` instead of `true` and `false`
     * - ``parameters.{posix, allow_root, allow_other, auto_restart, readonly, CUNO_OPTIONS, CUNO_LOG}``
       - These options will be passed down to the generated ``PV`` and behave the same way as described in the ``PV`` options
     * - ``parameters.fusionStorageClass``
-      - Tells cunoFS Fusion to use the given ``StorageClass`` to allocate backing ``PVs``
+      - Tells Object Mount Fusion to use the given ``StorageClass`` to allocate backing ``PVs``
 ```
 
 % _fusion_csi_support
 
-# cunoFS Fusion Support
+# Object Mount Fusion Support
 
-The cunoFS CSI Driver, as of version `v1.0.2`, supports all access modes.
+The Object Mount CSI Driver, as of version `v1.0.2`, supports all access modes.
 However, using a single `PV` on multiple pods at once with the `ReadWriteMany` access mode, on the same node or not, does not guarantee write consistency to the same file.
-We offer a way around this limitation by using cunoFS Fusion.
+We offer a way around this limitation by using Object Mount Fusion.
 
-cunoFS Fusion enables users to get the best out of object storage and traditional shared filesystems at the same time.
-In the case of the cunoFS CSI Driver, it gives you the ability of writing to a `PV` with `ReadWriteMany` without potential issues with multiple writers.
-cunoFS Fusion uses object storage with a supporting backing filesystem and will intelligently use the filesystem that has the best performance for large or small files, while ensuring that read and writes remain ordered.
-For more information, please refer to {ref}`the cunoFS Fusion documentation <cunofs-fusion-guide>`.
+Object Mount Fusion enables users to get the best out of object storage and traditional shared filesystems at the same time.
+In the case of the Object Mount CSI Driver, it gives you the ability of writing to a `PV` with `ReadWriteMany` without potential issues with multiple writers.
+Object Mount Fusion uses object storage with a supporting backing filesystem and will intelligently use the filesystem that has the best performance for large or small files, while ensuring that read and writes remain ordered.
+For more information, please refer to {ref}`the Object Mount Fusion documentation <Object Mount-fusion-guide>`.
 
 ## Static Allocation
 
-For static allocation, you need to deploy two `PVs`: one for cunoFS, and one for the backing mount.
+For static allocation, you need to deploy two `PVs`: one for Object Mount, and one for the backing mount.
 Choose a backing mount that offers write consistency (Amazon EFS, Amazon EBS, a local NFS server, etc...), and deploy it with a `PV` and `PVC`, as if it was used by a `Pod`.
-Then, refer to the `PVC`'s name in the `spec.csi.volumeAttributes.fusion_pvc` parameter of the cunoFS `PV`.
-The cunoFS CSI Driver will mount the `PV` to itself and bind the two filesystems.
+Then, refer to the `PVC`'s name in the `spec.csi.volumeAttributes.fusion_pvc` parameter of the Object Mount `PV`.
+The Object Mount CSI Driver will mount the `PV` to itself and bind the two filesystems.
 
 ```{code-block} yaml
 :caption: '``PV``/``PVC`` pairs defined by cluster admin'
@@ -434,16 +445,16 @@ spec:
 ```
 
 :::{warning}
-Please ensure that the `PV`/`PVC` pair you create has the same access mode as the cunoFS `PV`/`PVC` pair and compatible parameters (readonly, etc...).
+Please ensure that the `PV`/`PVC` pair you create has the same access mode as the Object Mount `PV`/`PVC` pair and compatible parameters (readonly, etc...).
 
-If you have any issues deploying the cunoFS Fusion `PV`/`PVC` pair, pelase first ensure that the backing pair is correctly set up.
+If you have any issues deploying the Object Mount Fusion `PV`/`PVC` pair, pelase first ensure that the backing pair is correctly set up.
 :::
 
 ## Dynamic Allocation
 
-The cunoFS CSI Driver supports dynamic provisioning of Fusion `PV` pairs.
-Simply deploy a backing `StorageClass` and refer to it in the cunoFS `StorageClasse's` `parameters.fusionStorageClass` parameter.
-The cunoFS CSI Driver will use it to generate and delete backing `PVs` alongside cunoFS `PVs` and bind them as needed.
+The Object Mount CSI Driver supports dynamic provisioning of Fusion `PV` pairs.
+Simply deploy a backing `StorageClass` and refer to it in the Object Mount `StorageClasse's` `parameters.fusionStorageClass` parameter.
+The Object Mount CSI Driver will use it to generate and delete backing `PVs` alongside Object Mount `PVs` and bind them as needed.
 
 ```{code-block} yaml
 :caption: '``StorageClass`` manifests defined by cluster admin'
@@ -474,11 +485,11 @@ In a future release, you will be able to parameterise it.
 
 # RBAC Support
 
-By default, the cunoFS CSI Driver deploys a `ServiceAccount`, `ClusterRole` and `ClusterRoleBinding` to support Role-Based Access Control (RBAC) out of the box.
+By default, the Object Mount CSI Driver deploys a `ServiceAccount`, `ClusterRole` and `ClusterRoleBinding` to support Role-Based Access Control (RBAC) out of the box.
 
 They are respectively deployed under the following names: `<release name>-serviceaccount`, `<release name>-clusterrole` and `<release name>-clusterrolebinding`.
 
-This also means that the cunoFS CSI Driver supports Amazon EKS clusters out-of-the-box.
+This also means that the Object Mount CSI Driver supports Amazon EKS clusters out-of-the-box.
 
 You can choose not to deploy the `ClusterRole` and `ClusterRoleBinding` by setting the `rbac.useRBAC` property to `false` in the `values.yaml` file:
 
@@ -495,7 +506,7 @@ helm install cunofs-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi-chart
 
 % #############
 
-% The cunoFS CSI Driver supports importing buckets through IAM roles on Amazon EKS.
+% The Object Mount CSI Driver supports importing buckets through IAM roles on Amazon EKS.
 
 % Simply define the IAM role's ARN by setting the ``eks.iam_arn`` property in the ``values.yaml`` file or by passing it to helm through ``--set`` while deploying it:
 
@@ -515,7 +526,7 @@ helm install cunofs-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi-chart
 
 # Technical Details
 
-The cunoFS CSI Driver abides by the [Kubernetes Container Storage Interace standard](https://github.com/container-storage-interface/spec/blob/master/spec.md).
+The Object Mount CSI Driver abides by the [Kubernetes Container Storage Interace standard](https://github.com/container-storage-interface/spec/blob/master/spec.md).
 
 It implements the `Node`, `Controller` and `Identity` plugins and uses sidecar containers for simplifying its deployment and maintenance.
 
@@ -546,17 +557,17 @@ The `Node` and the `Controller` need to handle logic at different levels:
 
   : This sidecar container helps the driver interacting with the K8s API by listening to volume provisioning-related calls.
 
-During the deployment, the cunoFS CSI Driver deploys the cunoFS license and cloud credentials as [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
+During the deployment, the Object Mount CSI Driver deploys the Object Mount license and cloud credentials as [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 The license `Secret` is imported by the `Node` and the `Controller` through an environment variable.
 
-The credential `Secret` is mounted to the `Node` and the `Controller` through a [Projected Volume](https://kubernetes.io/docs/concepts/storage/projected-volumes/) and sequentially imported by cunoFS.
+The credential `Secret` is mounted to the `Node` and the `Controller` through a [Projected Volume](https://kubernetes.io/docs/concepts/storage/projected-volumes/) and sequentially imported by Object Mount.
 
 # Limitations
 
 Not every existing `K8s` optional feature is currently implemented in this driver.
 Please contact [support@cuno.io](mailto:support@cuno.io) for specific feature inquiries.
 
-- Due to the internals of K8s, the cunoFS CSI Driver makes use of `cunoFS mount` as a backend instead of regular `cunoFS`. This means that performance will be high, but not always as high as a regular `cunoFS` installation.
-- Not every `cunoFS` option is currently available for use in the driver. Please refer to the {ref}`configuration section <configuration-section>` for the available options.
-- The `ReadWriteMany` access mode doesn't guarantee write consistency without cunoFS Fusion
-- The `cunoFS` CSI Driver currently doesn't support CSI Ephemeral Volumes, raw block volumes, volume snapshotting, volume expansion, volume cloning and volume topology options.
+- Due to the internals of K8s, the Object Mount CSI Driver makes use of `Object Mount mount` as a backend instead of regular `Object Mount`. This means that performance will be high, but not always as high as a regular `Object Mount` installation.
+- Not every `Object Mount` option is currently available for use in the driver. Please refer to the {ref}`configuration section <configuration-section>` for the available options.
+- The `ReadWriteMany` access mode doesn't guarantee write consistency without Object Mount Fusion
+- The `Object Mount` CSI Driver currently doesn't support CSI Ephemeral Volumes, raw block volumes, volume snapshotting, volume expansion, volume cloning and volume topology options.

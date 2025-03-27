@@ -1,14 +1,11 @@
 ---
-title: 1. Object Mount Overview
+title: Object Mount Overview
 docId: okai0aiJei9No1Sh
-
+weight: 0
 metadata:
   title: Object Mount Overview
   description:
     Object Mount lets you interact with object storage as if it were a fast native file system with POSIX compatibility that can run any new or existing applications.
-
-
-weight: 0
 ---
 
 Object Mount lets you interact with object storage as if it were a fast native file system with POSIX compatibility that can run any new or existing applications.

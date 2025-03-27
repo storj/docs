@@ -1,3 +1,14 @@
+---
+title: Uninstallation
+docId: Oochi9lee7ookaih
+
+metadata:
+  title: Uninstallation
+  description: Uninstallation Guide
+
+weight: 14    
+---
+
 (user-guide-uninstall)=
 
 # Uninstallation
@@ -46,7 +57,7 @@ Remove this directory to remove all user-specific settings.
 %
 % Also, remove above subsections after uninstall.sh is created
 
-% As an alternative, you can also run the uninstallation script to remove cunoFS::
+% As an alternative, you can also run the uninstallation script to remove Object Mount::
 
 % sh <path_to_cuno>/bin/uninstall-cuno.sh
 
@@ -58,7 +69,7 @@ Please also remember to remove any customizations you might have made to your sh
 
 ## Package manager uninstallation
 
-Use the commands in the following sections to uninstall cunoFS for specific Linux distributions.
+Use the commands in the following sections to uninstall Object Mount for specific Linux distributions.
 
 ### Debian derivatives (e.g. Ubuntu)
 

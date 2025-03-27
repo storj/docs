@@ -7,8 +7,6 @@ metadata:
   description:
     MacOS Installation Instructions
 
-
-weight: 0
 ---
 A fully native Mac client is coming soon!
 

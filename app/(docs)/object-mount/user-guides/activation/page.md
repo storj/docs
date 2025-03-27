@@ -1,8 +1,19 @@
+---
+title: Activate License
+docId: Yee3Kun6axeeFeuh
+
+metadata:
+  title: Activate License
+  description: Activate License
+
+weight: 4    
+---
+
 (user-guide-activate-licence)=
 
 # Licenses and activation
 
-When installing, you will have the option for a 14-day trial of cunoFS Professional. You don't need to register or activate cunoFS during the trial period. To continue using cunoFS beyond the trial period, you must [register online](https://cuno.io/register) and activate your license.
+When installing, you will have the option for a 14-day trial of Object Mount Professional. You don't need to register or activate Object Mount during the trial period. To continue using Object Mount beyond the trial period, you must [register online](https://cuno.io/register) and activate your license.
 
 :::{note}
 Trials are only to be used once per user/organisation. If installing inside a cloud instance or container, you should register and activate an appropriate license manually.
@@ -25,7 +36,7 @@ cuno creds activate
 ```
 
 :::{note}
-Normally, activation means that access to cunoFS is limited to the user who runs `cuno creds activate`.
+Normally, activation means that access to Object Mount is limited to the user who runs `cuno creds activate`.
 However, if the user that runs `cuno creds activate` is `root`, then access can be optionally given to other users.
 :::
 

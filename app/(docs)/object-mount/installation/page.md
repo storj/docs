@@ -1,13 +1,11 @@
 ---
-title: 3. Installation Instructions
+title: Installation Instructions
 docId: doh9ma3vidoo4Eef
-
+weight: 3
 metadata:
   title: Installation
   description:
     Object Mount Installation Instructions
-
-weight: 0
 ---
 ## Linux - Scripted Installer for distros using glibc (most)
 

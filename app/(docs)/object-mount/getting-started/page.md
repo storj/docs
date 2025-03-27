@@ -1,13 +1,11 @@
 ---
-title: 2. Getting Started
+title: Getting Started
 docId: ueDah3xoo4xah5ae
-
+weight: 2
 metadata:
   title: Getting Started
   description:
     Getting Started
-
-weight: 0
 ---
 
 Object Mount is a scalable, high-performance POSIX compatibility layer that lets you interact with files stored on object storage such as Storj, Amazon S3, Azure Blob Storage, Google Cloud Storage, or any S3-compatible object store hosted in the cloud or locally.

@@ -1,13 +1,11 @@
 ---
-title: 2.4 Configuring Credentials
+title: Configuring Credentials
 docId: heefureS2iubahpi
-
+weight: 4
 metadata:
   title: Configuring Credentials
   description:
    Object Mount can connect to any of the major cloud storage providers using the native storage credentials.
-
-weight: 0
 ---
 ## Authentication
 

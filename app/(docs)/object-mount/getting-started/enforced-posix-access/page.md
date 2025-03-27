@@ -1,12 +1,11 @@
 ---
-title: 2.6 Setting up Enforced POSIX Access
+title: Setting up Enforced POSIX Access
 docId: Eegoo1teiJ8eerae
-
+weight: 6
 metadata:
   title: Setting up Enforced POSIX Access
   description:
     This guide represents the general process for setting up enforced POSIX access. The specific steps may vary depending on your object storage provider.
-weight: 0
 ---
 
 This guide represents the general process for setting up enforced POSIX access. The specific steps may vary depending on your object storage provider. Please contact us at [supportdcs@storj.io](mailto:supportdcs@storj.io) if this is a use-case that you are interested in and these instructions don't match your expectations or preferences.

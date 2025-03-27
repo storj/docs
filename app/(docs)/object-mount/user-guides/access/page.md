@@ -1,11 +1,22 @@
+---
+title: Cloud Paths
+docId: jieteeYeyievui9k
+
+metadata:
+  title: Cloud Paths
+  description: Cloud Paths Guide
+
+weight: 9   
+---
+
 (user-guide-cloud-paths)=
 
 # Transparent access to object storage
 
-cunoFS provides transparent access to remote cloud objects.
+Object Mount provides transparent access to remote cloud objects.
 Users can continue using their favorite software tools, pipelines and filesystem commands without any modifications.
-cunoFS offers virtual versions of the original files that are streamed in real-time.
-cunoFS also supports random access reads and writes of any length, minimizing network bandwidth usage and processing time.
+Object Mount offers virtual versions of the original files that are streamed in real-time.
+Object Mount also supports random access reads and writes of any length, minimizing network bandwidth usage and processing time.
 
 ## Specifying cloud paths
 
@@ -29,7 +40,7 @@ Use the directory format instead in such cases.
 
 ### Examples
 
-Some examples of using cunoFS are given below.
+Some examples of using Object Mount are given below.
 
 1. List the contents of a remote container {code}`my-bucket` on AWS S3:
 
@@ -91,7 +102,7 @@ ls /cuno/az/my-account-name/my-container
 
 ## AWS S3 Access Point support
 
-cunoFS supports using an AWS S3 Access Point instead of a bucket as an endpoint. Access points are unique addresses that customers can create to enforce distinct permissions and network controls for any request made specifically through that access point.
+Object Mount supports using an AWS S3 Access Point instead of a bucket as an endpoint. Access points are unique addresses that customers can create to enforce distinct permissions and network controls for any request made specifically through that access point.
 
 To use an Access Point instead of a container, provide the full Amazon Resource Name (ARN) in place of the bucket name:
 
@@ -106,7 +117,7 @@ $ cuno creds -i pair s3://arn:aws:s3:us-east-1:999999999999:accesspoint:my-acces
 $ ls s3://arn:aws:s3:us-east-1:999999999999:accesspoint:my-access-point-name/<remote-path>
 ```
 
-## File system behaviours when using cunoFS
+## File system behaviours when using Object Mount
 
 % TODO: the behaviours need to be clarified, maybe another table of posix / not-posix / mount
 
@@ -123,7 +134,7 @@ Use hard-linking to trigger a more efficient cloud-only copy mechanism within a 
 
 ### POSIX mode
 
-Symbolic links can be created (using {code}`ln --symbolic` or {code}`ln -s`) between local and cloud objects in either direction under POSIX mode (see {ref}`user-guide-cunofs-mount`).
+Symbolic links can be created (using {code}`ln --symbolic` or {code}`ln -s`) between local and cloud objects in either direction under POSIX mode (see {ref}`user-guide-Object Mount-mount`).
 
 Hard links can be created (using {code}`ln`) between cloud objects in the {strong}`same` bucket under POSIX mode.
 
@@ -138,7 +149,7 @@ The creation date of a remote directory is not always available to system calls.
 
 ### Performance
 
-cunoFS uses multiple concurrent connections to remote objects to achieve the highest performance.
+Object Mount uses multiple concurrent connections to remote objects to achieve the highest performance.
 It can also execute operations on objects entirely remotely where possible.
 Some optimised operations are listed below.
 

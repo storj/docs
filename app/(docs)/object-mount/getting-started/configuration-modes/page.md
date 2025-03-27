@@ -1,12 +1,11 @@
 ---
-title: 2.3 Configure Object Mount
+title: Configure Object Mount
 docId: hoeSh4ieSh6Ees9v
-
+weight: 3
 metadata:
   title: Configure Object Mount
   description:
     Each time you set up Object Mount in a new compute environment, you will need to assess the requirements of your workloads and your end goals.
-weight: 0
 ---
 ## Overview
 

@@ -1,8 +1,19 @@
+---
+title: Credential Management
+docId: aish4shuiheeZaig
+
+metadata:
+  title: Credential Management
+  description: Credential Management
+
+weight: 5    
+---
+
 (user-guide-credentials-management)=
 
 # Credential management
 
-Users will need to specify their credentials for their cloud storage accounts in order to fully use cunoFS.
+Users will need to specify their credentials for their cloud storage accounts in order to fully use Object Mount.
 {code}`cuno creds` allows users to import and manage their credentials for supported cloud providers.
 Credentials are stored in {code}`"${XDG_CONFIG_HOME}"/cuno/creds` by default (or {code}`~/.config/cuno/creds` if {code}`XDG_CONFIG_HOME` is not set).
 
@@ -43,7 +54,7 @@ region         = <region> [optional]
 
 More information on S3 access keys is available in {ref}`user-guide-getting-s3-credentials`.
 
-cunoFS can also use an AWS S3 Access Point instead of a container; see {ref}`user-guide-s3-access-points` for more details.
+Object Mount can also use an AWS S3 Access Point instead of a container; see {ref}`user-guide-s3-access-points` for more details.
 
 (user-guide-s3-compatible-credentials)=
 
@@ -69,7 +80,7 @@ Depending on the capabilities and behaviours of your object storage provider's S
 
 (user-guide-credentials-options)=
 
-```{eval-rst}
+``` 
 .. list-table::
    :widths: auto
    :header-rows: 1
@@ -114,7 +125,7 @@ Depending on the capabilities and behaviours of your object storage provider's S
 
 ::::{note}
 Some of the above options can be automatically detected and populated by running {code}`cuno creds detectfeatures <URI> <credential file name>` (e.g. {code}`cuno creds detectfeatures s3://test-bucket test_credentials.s3c`).
-This command needs a bucket to be specified that it can write temporary files to for testing purposes. The commmand will run a series of tests against the specified bucket, checking the availability of S3 features that cunoFS uses and updating the credentials file accordingly.
+This command needs a bucket to be specified that it can write temporary files to for testing purposes. The commmand will run a series of tests against the specified bucket, checking the availability of S3 features that Object Mount uses and updating the credentials file accordingly.
 
 :::{warning}
 Running feature detection will use up to a few gigabytes of bandwidth and may take a few minutes to complete depending on the machine's connection speed and the S3-compatible storage provider.
@@ -132,7 +143,7 @@ AZURE_STORAGE_ACCESS_KEY = <access_key>
 
 If you need the access key, see [View account access keys](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
-cunoFS also supports using Shared Access Signatures (SAS) to access remote containers in Azure.
+Object Mount also supports using Shared Access Signatures (SAS) to access remote containers in Azure.
 Refer to {ref}`user-guide-azure-sas` to configure SAS.
 
 ### Google Cloud Storage
@@ -148,13 +159,13 @@ If you've generated a new key, store the JSON file you have downloaded in a safe
 ## Import credentials
 
 Every cloud account requires a unique credential file.
-Import a credential file into cunoFS using the following command:
+Import a credential file into Object Mount using the following command:
 
 ```console
 cuno creds import <credential_file>
 ```
 
-cunoFS performs the following actions when importing a credential file:
+Object Mount performs the following actions when importing a credential file:
 
 1. Detect the credential file format, and connect to the remote server.
 2. Discover all possible containers that can be accessed using the provided credentials.
@@ -182,8 +193,8 @@ If the latter is not provided, all imported credential files are listed.
 To re-associate a previously paired remote container with a different credential file, use {code}`pair` with the same remote URI and a different credential file.
 
 :::{note}
-cunoFS verifies that a remote container is accessible when pairing it with a credential file.
-cunoFS auto-detects an AWS region if it is not specified, or is invalid.
+Object Mount verifies that a remote container is accessible when pairing it with a credential file.
+Object Mount auto-detects an AWS region if it is not specified, or is invalid.
 :::
 
 (user-guide-azure-sas)=
@@ -193,7 +204,7 @@ cunoFS auto-detects an AWS region if it is not specified, or is invalid.
 To permit access to storage resources without sharing access keys, use a Shared Access Signature (SAS).
 An SAS gives users access to a container for only specified intervals and with specified permissions.
 A remote Microsoft Azure Blob Storage container can be accessed using a Shared Access Signature (SAS).
-Provide an SAS to cunoFS using the following command:
+Provide an SAS to Object Mount using the following command:
 
 ```
 cuno creds pair <container_remote_uri> "?<SAS>"
@@ -220,14 +231,14 @@ Notice {code}`public` is used in the place of the imported credential file name.
 Amazon AWS S3 and Google Cloud Storage offer 'Requester Pays' features for containers.
 In this case, requesters—and {strong}`not` bucket owners—are billed when remote objects are accessed.
 
-By default, cunoFS skips 'Requester Pays' containers when importing a credential file to avoid unexpected charges.
+By default, Object Mount skips 'Requester Pays' containers when importing a credential file to avoid unexpected charges.
 To enable access to such containers with a previously-imported credential file, run the following command:
 
 ```
 cuno creds --interactive pair <bucket_remote_uri>
 ```
 
-The {code}`--interactive`/{code}`-i` option will prompt the user to select from credentials in cunoFS's database.
+The {code}`--interactive`/{code}`-i` option will prompt the user to select from credentials in Object Mount's database.
 
 #### Amazon AWS S3
 
@@ -253,7 +264,7 @@ cuno creds pair --billing <billing_project_ID> <bucket_remote_uri> <imported_cre
 {code}`list` displays information about imported credential files and paired buckets.
 The command accepts additional options:
 
-```{eval-rst}
+``` 
 .. table::
     :widths: auto
 
@@ -293,7 +304,7 @@ If the second argument is missing, then existing credential files are listed.
 
 ## Additional flags
 
-cunoFS accepts additional flags:
+Object Mount accepts additional flags:
 
 ```
 cuno creds [flags] <rest_of_command>
@@ -301,11 +312,11 @@ cuno creds [flags] <rest_of_command>
 
 These flags are described in the following table:
 
-```{eval-rst}
+``` 
 .. cssclass:: shorttable::
 ```
 
-```{eval-rst}
+``` 
 +-----------------------------+-----------------------------------------------------------------------------------+
 | :code:`--interactive/-i`    | Asks for permission to replace existing credential files, pairings, SAS etc.      |
 +-----------------------------+-----------------------------------------------------------------------------------+
@@ -323,7 +334,7 @@ Prefer using the built-in credential management to administer credentials; only 
 
 ### Amazon AWS S3 using native credentials
 
-cunoFS can also use the file supplied by Amazon AWS S3:
+Object Mount can also use the file supplied by Amazon AWS S3:
 
 ```
 ~/.aws/credentials
@@ -341,7 +352,7 @@ Set the AWS region with the environment variable:
 AWS_REGION
 ```
 
-Alternatively, directly set the following two environment variables before launching cunoFS:
+Alternatively, directly set the following two environment variables before launching Object Mount:
 
 ```
 AWS_ACCESS_KEY_ID
@@ -353,18 +364,18 @@ AWS_SECRET_ACCESS_KEY
 IAM Roles provide an alternative method to securely distribute AWS credentials across EC2 instances.
 These credentials can be used for accessing AWS S3. Refer to the [Amazon AWS EC2 documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) for more information.
 
-cunoFS will automatically detect IAM roles on an EC2 instance, so no further configuration is necessary.
+Object Mount will automatically detect IAM roles on an EC2 instance, so no further configuration is necessary.
 
 :::{note}
-Combined use of cunoFS managed credentials with IAM Roles in EC2 is {strong}`not currently supported`.
+Combined use of Object Mount managed credentials with IAM Roles in EC2 is {strong}`not currently supported`.
 :::
 
 (user-guide-gcs-native-credentials)=
 
 ### Google Cloud Storage using environment variable
 
-cunoFS can directly use service account credentials, which are commonly used by applications to access Google Cloud Storage. To use a service account credential file (in JSON or PKCS12 format), specify a value for the {code}`GOOGLE_APPLICATION_CREDENTIALS` environment variable.
-For example, a credential file located in {code}`/home/user/gckey.json` can be loaded to cunoFS by using:
+Object Mount can directly use service account credentials, which are commonly used by applications to access Google Cloud Storage. To use a service account credential file (in JSON or PKCS12 format), specify a value for the {code}`GOOGLE_APPLICATION_CREDENTIALS` environment variable.
+For example, a credential file located in {code}`/home/user/gckey.json` can be loaded to Object Mount by using:
 
 ```
 export GOOGLE_APPLICATION_CREDENTIALS="/home/user/gckey.json"
@@ -374,7 +385,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/home/user/gckey.json"
 
 ### Azure Storage using environment variables
 
-To access Azure Storage without using cunoFS credentials management, provide a storage access key associated with a Microsoft Azure Storage account.
+To access Azure Storage without using Object Mount credentials management, provide a storage access key associated with a Microsoft Azure Storage account.
 To enable this access scheme, set the {code}`AZURE_STORAGE_ACCOUNT` and {code}`AZURE_STORAGE_ACCESS_KEY` environment variables:
 
 ```console

@@ -1,13 +1,11 @@
 ---
-title: 2.2 Download, Installation and Activation
+title: Download, Installation and Activation
 docId: iethahkeeX5EiJoh
-
+weight: 2
 metadata:
   title: Download, Installation and Activation
   description:
    Object Mount supports the Linux operating system, and can run inside Docker and other virtual environments such as Hyper-V and Virtualbox.
-
-weight: 0
 ---
 Object Mount supports the Linux operating system, and can run inside Docker and other virtual environments such as Hyper-V and Virtualbox.
 

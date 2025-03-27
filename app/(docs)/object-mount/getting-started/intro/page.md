@@ -1,13 +1,11 @@
 ---
-title: 2.1 Core Concepts
+title: Core Concepts
 docId: Xaegoh6iedietahf
-
+weight: 1
 metadata:
   title: Core Concepts
   description:
     The ideas presented here are intended to familiarise you with our approach to object storage.
-
-weight: 0
 ---
 The ideas presented here are intended to familiarise you with our approach to object storage. If you're already familiar, feel free to skip to the [next section](../getting-started/download-install).
 

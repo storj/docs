@@ -7,11 +7,10 @@ metadata:
   description:
     Musl Installation Instructions
 
-weight: 0
 ---
 
 
-The Scripted Installer allows you to install cunoFS without root privileges (no sudo).
+The Scripted Installer allows you to install Object Mount without root privileges (no sudo).
 
 :::{note}
 This installation method assumes you have the `libgcc` package installed (due to a dependency on `libgcc_s.so`). On Alpine you can do (may require `sudo`):
@@ -45,6 +44,6 @@ For full details about user privileges for installation, see the {ref}`user guid
 
 3. The installation will prompt you to read the displayed end-user licence agreement (EULA) and agree to the terms to continue with the installation. To automate this, you can set the environment variable `CUNO_INSTALL_ACCEPT_EULA="yes"` (this is equivalent to accepting the EULA).
 
-4. The installation will prompt you to activate cunoFS by starting a trial or entering a license key. Follow the steps interactively, or automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
+4. The installation will prompt you to activate Object Mount by starting a trial or entering a license key. Follow the steps interactively, or automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
 
-5. The installation will prompt you to set the {code}`CUNO_ROOT` environment variable to the installation directory. This is not always necessary when using cunoFS, but it will make it easier to follow the steps in this guide.
+5. The installation will prompt you to set the {code}`CUNO_ROOT` environment variable to the installation directory. This is not always necessary when using Object Mount, but it will make it easier to follow the steps in this guide.

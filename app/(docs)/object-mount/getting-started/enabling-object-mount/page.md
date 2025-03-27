@@ -1,13 +1,11 @@
 ---
-title: 2.5 Enabling Object Mount
+title: Enabling Object Mount
 docId: ooceeNge9iig6uSe
-
+weight: 5
 metadata:
   title: Enabling Object Mount
   description:
     Object Mount Fusion is way to upgrade high-performance attached storage solutions like Amazon Elastic File System (EFS) with the throughput of object storage. It is a **cheaper** and **faster** solution compared to using EFS alone.
-
-weight: 0
 ---
 
 ## How to use Object Mount

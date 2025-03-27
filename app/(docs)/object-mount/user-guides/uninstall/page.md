@@ -6,7 +6,7 @@ metadata:
   title: Uninstallation
   description: Uninstallation Guide
 
-weight: 14    
+weight: 13    
 ---
 
 (user-guide-uninstall)=

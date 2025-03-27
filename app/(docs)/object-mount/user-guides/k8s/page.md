@@ -74,7 +74,7 @@ The Object Mount CSI Driver support the following strategies:
 
 To allocate storage statically, define one or more `PV` ([PersistentVolume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)) providing the bucket details and options:
 
-```{code-block} yaml
+```yaml
 :caption: '``PV`` manifest defined by cluster admin'
 
 apiVersion: v1
@@ -100,7 +100,7 @@ spec:
 
 Then, define a `PVC` ([PersistentVolumeClaim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)):
 
-```{code-block} yaml
+```yaml
 :caption: '``PVC`` manifest defined by cluster admin'
 
 apiVersion: v1
@@ -119,7 +119,7 @@ spec:
 
 Finally, cluster users can mount the `PVC`:
 
-```{code-block} yaml
+```yaml
 :caption: '``Pod`` manifest defined by cluster user'
 
 apiVersion: v1
@@ -147,7 +147,7 @@ spec:
 
 To allocate storage dynamically, define a [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) providing the bucket details and options:
 
-```{code-block} yaml
+```yaml
 :caption: '``StorageClass`` manifest defined by cluster admin'
 
 apiVersion: storage.K8s.io/v1
@@ -170,7 +170,7 @@ provisioner: cunofs.csi.com
 
 Then, define a `PVC` which has a reference to the `StorageClass`:
 
-```{code-block} yaml
+```yaml
 :caption: '``PVC`` manifest defined by cluster admin'
 
 apiVersion: v1
@@ -188,7 +188,7 @@ spec:
 
 Cluster users can mount the `PVC` similarly to the static allocation case:
 
-```{code-block} yaml
+```yaml
 :caption: '``Pod`` manifest defined by cluster user'
 
 apiVersion: v1
@@ -212,7 +212,7 @@ spec:
 
 Alternatively, cluster users can create a generic inline volume which doesn't require a `PVC`:
 
-```{code-block} yaml
+```yaml
 :caption: '``Pod`` manifest defined by cluster user'
 
 apiVersion: v1
@@ -409,7 +409,7 @@ Choose a backing mount that offers write consistency (Amazon EFS, Amazon EBS, a 
 Then, refer to the `PVC`'s name in the `spec.csi.volumeAttributes.fusion_pvc` parameter of the Object Mount `PV`.
 The Object Mount CSI Driver will mount the `PV` to itself and bind the two filesystems.
 
-```{code-block} yaml
+```yaml
 :caption: '``PV``/``PVC`` pairs defined by cluster admin'
 
 ---
@@ -456,7 +456,7 @@ The Object Mount CSI Driver supports dynamic provisioning of Fusion `PV` pairs.
 Simply deploy a backing `StorageClass` and refer to it in the Object Mount `StorageClasse's` `parameters.fusionStorageClass` parameter.
 The Object Mount CSI Driver will use it to generate and delete backing `PVs` alongside Object Mount `PVs` and bind them as needed.
 
-```{code-block} yaml
+```yaml
 :caption: '``StorageClass`` manifests defined by cluster admin'
 
 ---

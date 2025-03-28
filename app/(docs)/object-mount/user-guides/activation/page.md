@@ -20,7 +20,7 @@ To avoid automatic trial registration, set the environment variable `CUNO_NO_TRI
 
 Register [online](https://cuno.io/register) for a free personal-use license or Professional, Educational or Enterprise evaluation. Contact [sales@storj.io](mailto:sales@storj.io) when you're ready for a quote.
 
-All free licenses (including evaluations) let you use Professional-tier features for 14 days, and thereafter you will be limited to the [Personal](https://cuno.io/pricing) tier of usage. See the [pricing page](https://cuno.io/pricing) for more information about pricing, licenses and the available features on each tier.
+All free licenses (including evaluations) let you use Professional-tier features for 14 days, and thereafter you will be limited to the [Personal](mailto:sales@storj.io) tier of usage. See the [pricing page](mailto:sales@storj.io) for more information about pricing, licenses and the available features on each tier.
 {% /callout %}
 
 ## Activating your license

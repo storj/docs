@@ -23,8 +23,8 @@ helm install Object Mount-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi
   --set credsToImport="{<credentials-1>,<credential-2>, ... ,<credentials-N>}"
 ```
 
-- `--set Object MountLicense.license`: (required) Object Mount license \[[more details](https://cuno.io/pricing/)\]
-- `--set credsToImport`: (optional) cloud credentials \[{ref}`more details <getting-started-credentials>`\]
+- `--set Object MountLicense.license`: (required) Object Mount license \[[more details](mailto:sales@storj.io/)\]
+- `--set credsToImport`: (optional) cloud credentials \[[more details](getting-started-credentials)\]
 
 3. Display the status of the Object Mount CSI Driver resources:
 
@@ -62,8 +62,8 @@ helm uninstall cunofs-csi-chart
 
 The Object Mount CSI Driver support the following strategies:
 
-- {ref}`Static storage provisioning <static_provisioning>`
-- {ref}`Dynamic storage provisioning <dynamic_provisioning>`
+- [Static storage provisioning](#static_provisioning)
+- [Dynamic storage provisioning](#dynamic_provisioning)
 
 ## Static provisioning
 
@@ -392,7 +392,7 @@ We offer a way around this limitation by using Object Mount Fusion.
 Object Mount Fusion enables users to get the best out of object storage and traditional shared filesystems at the same time.
 In the case of the Object Mount CSI Driver, it gives you the ability of writing to a `PV` with `ReadWriteMany` without potential issues with multiple writers.
 Object Mount Fusion uses object storage with a supporting backing filesystem and will intelligently use the filesystem that has the best performance for large or small files, while ensuring that read and writes remain ordered.
-For more information, please refer to {ref}`the Object Mount Fusion documentation <Object Mount-fusion-guide>`.
+For more information, please refer to [the Object Mount Fusion documentation](cunofs-fusion-guide).
 
 ## Static Allocation
 
@@ -560,6 +560,6 @@ Not every existing `K8s` optional feature is currently implemented in this drive
 Please contact [supportdcs@storj.io](mailto:supportdcs@storj.io) for specific feature inquiries.
 
 - Due to the internals of K8s, the Object Mount CSI Driver makes use of `Object Mount mount` as a backend instead of regular `Object Mount`. This means that performance will be high, but not always as high as a regular `Object Mount` installation.
-- Not every `Object Mount` option is currently available for use in the driver. Please refer to the {ref}`configuration section <configuration-section>` for the available options.
+- Not every `Object Mount` option is currently available for use in the driver. Please refer to the [configuration section](#configuration-section) for the available options.
 - The `ReadWriteMany` access mode doesn't guarantee write consistency without Object Mount Fusion
 - The `Object Mount` CSI Driver currently doesn't support CSI Ephemeral Volumes, raw block volumes, volume snapshotting, volume expansion, volume cloning and volume topology options.

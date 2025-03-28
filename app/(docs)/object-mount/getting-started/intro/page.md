@@ -19,7 +19,8 @@ However, object storage technology significantly differs from conventional block
 
 Object Mount is intended to enable the usage of object storage as "hot storage" or as "first-class" storage. Whilst it is possible to use Object Mount to stage data from object storage locally, then run the task, and then upload the result back to object storage - Object Mount' performance and POSIX-compliance mean that you can now just *run the task* directly on object storage.
 
-Due to the "write-once-read-many" model of object storage, it does not always allow *efficient* partial modification in remote files or appending of new content. For many cases, our prediction engines, partial writes, client-side write-caching and other optimizations are enough to keep things running with great performance. For truly random, repeated writes our solution is {ref}`Object Mount Fusion <Object Mount-fusion-guide>`: combining the best of high-speed attached storage and object storage.
+Due to the "write-once-read-many" model of object storage, it does not always allow *efficient* partial modification in remote files or appending of new content. For many cases, our prediction engines, partial writes, client-side write-caching and other optimizations are enough to keep things running with great performance. 
+For truly random, repeated writes our solution is [Object Mount Fusion](../getting-started/object-mount-fusion): combining the best of high-speed attached storage and object storage.
 
 ## Interception
 
@@ -38,7 +39,7 @@ As a result, any applications that can access file storage (including ones youâ€
 - Provides any POSIX-compliant application high-speed access to object storage.
 - Allows you to use filesystem operations to list, copy, move, add, remove, and modify files stored on object storage.
 - Supports rich POSIX metadata including: users, groups, permissions, symbolic/hard links.
-- Preserves POSIX consistency guarantees equivalent to NFS. ({ref}`Object Mount Fusion <Object Mount-fusion-guide>` can provide even stronger consistency guarantees if needed)
+- Preserves POSIX consistency guarantees equivalent to NFS. [Object Mount Fusion](../getting-started/object-mount-fusion) can provide even stronger consistency guarantees if needed)
 
 ## What Object Mount does not do
 

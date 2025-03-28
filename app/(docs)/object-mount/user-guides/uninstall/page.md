@@ -10,7 +10,7 @@ weight: 13
 ---
 
 Remove the directory pointed to by `CUNO_ROOT`.
-Refer to {ref}`user-guide-install-locations` for more information.
+Refer to [user-guide-install-locations]() for more information.
 
 ## User-local uninstallation
 

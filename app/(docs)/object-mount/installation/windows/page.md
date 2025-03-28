@@ -14,8 +14,5 @@ Windows clients require Windows Subsystem for Linux 2 (WSL2): [Install WSL on Wi
 
 WSL installs Ubuntu by default, so the installation instructions for Debian can then be followed. You will be able to use Object Mount with any Linux applications also installed in the Linux subsystem.
 
-% We are not offering further instructions at this stage.
+We are not offering further instructions at this stage.
 
-% To expose Object Mount running within WSL to native Windows apps, follow the `Accessing Object Storage from Windows Apps`_.
-
-% TODO: _Accessing Object Storage from Windows Apps: https://cuno.io/docs/windows-apps

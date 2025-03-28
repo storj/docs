@@ -14,13 +14,14 @@ Object Mount can connect to any of the major cloud storage providers using the n
 If you have an S3-compatible object storage solution from another provider, you will first need to configure S3 API access.
 
 {% callout type="note"  %}
-If you are trying to access S3 through an EC2 instance configured with an IAM role, no further configuration is needed and Object Mount will automatically authenticate using the AWS-managed configuration. You can skip to [getting-started-how-to-use](TODO getting-started-how-to-use).
+If you are trying to access S3 through an EC2 instance configured with an IAM role, no further configuration is needed and Object Mount will automatically authenticate using the AWS-managed configuration. 
+You can skip to [Enabling Object Mount](./enabling-object-mount).
 {% /callout %}
 
 ## Getting your credentials
 
 {% callout type="warning"  %}
-Any credentials you use need to have sufficient permissions in order for Object Mount to discover and manage your data. This needs to include permission to list buckets. If this is not possible or desired, you must use the `cuno creds pair` options, for which instructions can be found [here](TODO user-guide-pair-containers)`.
+Any credentials you use need to have sufficient permissions in order for Object Mount to discover and manage your data. This needs to include permission to list buckets. If this is not possible or desired, you must use the `cuno creds pair` options, for which instructions can be found [here](user-guide-pair-containers)`.
 {% /callout %}
 
 {% tabs %}
@@ -31,7 +32,7 @@ Any credentials you use need to have sufficient permissions in order for Object 
     You will need the Access Key ID and Access Key Secret for an AWS IAM user with permission to access the S3 buckets you want to use. You will have stored these credentials somewhere when first creating the IAM user.
 
     Alternatively, create a new IAM user with "programmatic access" (access using keys), by following the AWS User Guide: [Creating an IAM user in your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)`.
-    For further options and alternatives, consult our full guide on [accessing S3 object storage](TODO user-guide-s3-credentials).
+    For further options and alternatives, consult our full guide on [accessing S3 object storage](user-guide-s3-credentials).
 {% /tab %}
 {% tab label="Microsoft Azure" %}
     You will need the account name, and the associated access key.
@@ -40,7 +41,7 @@ Any credentials you use need to have sufficient permissions in order for Object 
 
     If you already have an account and need the access key, see [View account access keys](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
-    Alternatively, Object Mount supports using Shared Access Signatures (SAS) to Azure containers. To do this, see [Accessing Azure containers using SAS](TODO user-guide-azure-sas).
+    Alternatively, Object Mount supports using Shared Access Signatures (SAS) to Azure containers. To do this, see [Accessing Azure containers using SAS](user-guide-azure-sas).
 {% /tab %}
 {% tab label="Google Cloud Storage" %}
     You will need key-based access to be associated with your [Google Cloud service account](https://developers.google.com/workspace/guides/create-credentials#service-account).
@@ -132,7 +133,7 @@ Any credentials you use need to have sufficient permissions in order for Object 
    endpoint=http://127.0.0.1:8080
    ```
 
-   For more information on endpoint formatting, and additional options, consult the full user guide section for [Authenticating with S3-compatible solutions](TODO user-guide-s3-compatible-credentials).
+   For more information on endpoint formatting, and additional options, consult the full user guide section for [Authenticating with S3-compatible solutions](user-guide-s3-compatible-credentials).
 
    You can use any text editor to create the file, just remember to change the permissions on the file when you're done to prevent other users from reading it:
 

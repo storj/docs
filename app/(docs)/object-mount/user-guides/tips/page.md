@@ -9,7 +9,7 @@ metadata:
 weight: 12    
 ---
 
-There are some general ideas presented in {ref}`user-guide-core-concepts` that should help inform usage of object storage with your software. For example, object storage is not very good for high IOPS work loads, so prefer to use {ref}`Object Mount Fusion <Object Mount-fusion-guide>` for that use-case.
+There are some general ideas presented in [user-guide-core-concepts]() that should help inform usage of object storage with your software. For example, object storage is not very good for high IOPS work loads, so prefer to use [Object Mount Fusion](Object Mount-fusion-guide) for that use-case.
 
 The following are some applications for which we have additional guidance when using then in combination with Object Mount. If you have more to add to the list, let us and the community know on our [forum](https://forum.storj.io).
 
@@ -23,13 +23,13 @@ Python's `os.path.realpath(path)` is not supported for URI-based access like `xx
 
 We strongly recommend running `rsync` with the options `--inplace -W`. This makes rsync work more efficiently with object storage.
 
-To use rsync options that preserve permissions (`-p`) and modification times (`-t`), such as when you want to update files only when the source has been updated, you must enable {ref}`POSIX File Access <getting-started-posix-file-access>`.
+To use rsync options that preserve permissions (`-p`) and modification times (`-t`), such as when you want to update files only when the source has been updated, you must enable [POSIX File Access](getting-started-posix-file-access).
 
 ### Fpsync
 
 When using `fpysync`, use the `-o` option to pass the options recommended for rsync down to the worker processes, e.g. `-o "--inplace -W"`. Further, because Object Mount is already parallelised, we recommend limiting the number of Fpsync worker processes using the `-n` option.
 
-To use rsync options that preserve permissions (`-p`) and modification times (`-t`), such as when you want to update files only when the source has been updated, you must enable {ref}`POSIX File Access <getting-started-posix-file-access>`.
+To use rsync options that preserve permissions (`-p`) and modification times (`-t`), such as when you want to update files only when the source has been updated, you must enable [POSIX File Access](getting-started-posix-file-access).
 
 % FFmpeg
 
@@ -39,13 +39,13 @@ To use rsync options that preserve permissions (`-p`) and modification times (`-
 
 % * Writing to object storage, if the task requires many randomly-placed writes during an upload. For example, for a large mp4 file being written with the flags ``-movflags +faststart``.
 
-% * Reading from object storage, a complex filterchain where multiple subtitle streams are being read from the same input file. (This will be improved soon! Be the first to find out by contacting `supportdcs@storj.io <mailto:supportdcs@storj.io>`_)
+% * Reading from object storage, a complex filterchain where multiple subtitle streams are being read from the same input file. (This will be improved soon! Be the first to find out by contacting [supportdcs@storj.io](mailto:supportdcs@storj.io>)
 
 % * Reading from object storage, files that contain title screen and extra credit scenes can be slow to start.
 
 ### sudo with Direct Interception
 
-Using {ref}`Direct Interception <user-guide-direct-interception>` (including when using the Object Mount CLI) requires the `LD_PRELOAD` environment variable to be set and maintained for all executed child processes. Since `sudo` usage by default does not preserve the environment variables set, the following requirements apply:
+Using [Direct Interception](user-guide-direct-interception) (including when using the Object Mount CLI) requires the `LD_PRELOAD` environment variable to be set and maintained for all executed child processes. Since `sudo` usage by default does not preserve the environment variables set, the following requirements apply:
 
 - `sudo` needs to be run with `--preserve-env` to preserve `CUNO_OPTIONS`
 - `sudo` needs to launch a child shell that will then run the command, so that the `LD_PRELOAD` environment variable can be set before running the command to be intercepted.
@@ -63,13 +63,13 @@ To use `sudo` with Direct Interception, please do the following:
 
 ### Locate
 
-The `locate` application requires some heightened privileges to create the database, and also has some incompatibilities with Object Mount {ref}`Direct Interception <user-guide-direct-interception>`.
+The `locate` application requires some heightened privileges to create the database, and also has some incompatibilities with Object Mount [Direct Interception](user-guide-direct-interception).
 
 #### Issues with Direct Interception
 
-When using {ref}`Direct Interception <user-guide-direct-interception>`, note that `locate` and `updatedb` do not work with URI-style paths. Please use directory-style paths of the form `/cuno/xx/<bucket>`.
+When using [Direct Interception](user-guide-direct-interception), note that `locate` and `updatedb` do not work with URI-style paths. Please use directory-style paths of the form `/cuno/xx/<bucket>`.
 
-Furthermore, Direct Interception (even when using the Object Mount CLI) requires the `LD_PRELOAD` environment variable to be set and maintained for all executed child processes. Since `updatedb` typically needs to be run with `sudo`, the limitations specifed in {ref}`user-guide-limitations-sudo` apply here.
+Furthermore, Direct Interception (even when using the Object Mount CLI) requires the `LD_PRELOAD` environment variable to be set and maintained for all executed child processes. Since `updatedb` typically needs to be run with `sudo`, the limitations specifed in [user-guide-limitations-sudo]() apply here.
 
 #### Instructions for using Locate
 

@@ -35,7 +35,7 @@ To specify any applications to be patched, specify them as a colon-separated lis
 +uricompat=<executable 1>:<exectuable 2>:< ... >
 ```
 
-To limit the cases in which this patching occurs, you can filter interceptions to only occur when certain command-line arguments match specified keywords. This may be useful for certain code interpreters/executors (see the {ref}`example <user-guide-uricompat-java>` below). To do this, in place of an executable name, use a slash-separated list of the name, a 1-based index of the argument to be matched (or any using `*`), and a value to match against:
+To limit the cases in which this patching occurs, you can filter interceptions to only occur when certain command-line arguments match specified keywords. This may be useful for certain code interpreters/executors (see the [example](user-guide-uricompat-java) below). To do this, in place of an executable name, use a slash-separated list of the name, a 1-based index of the argument to be matched (or any using `*`), and a value to match against:
 
 ```console
 +uricompat=<name of binary>/<index of argument to be matched>/<argument value to match>
@@ -44,7 +44,7 @@ To limit the cases in which this patching occurs, you can filter interceptions t
 {% callout type="note"  %}
 The `+uricompat` option only works on URIs that have been paired.
 
-If you are working with a public access bucket, you will need to run the `cuno creds pair` command (see {ref}`user-guide-pair-containers`) against it for the `+uricompat` to take effect.
+If you are working with a public access bucket, you will need to run the `cuno creds pair` command (see [user-guide-pair-containers]()) against it for the `+uricompat` to take effect.
 {% /callout %}
 
 #### Applications with patched URI handling
@@ -61,7 +61,7 @@ And some genomics tools:
 - `igv`
 - `fastQC`
 
-This means that when a URI-style path (corresponding to a {ref}`paired bucket or container <user-guide-pair-containers>`) is passed to any of the applications above, Object Mount will prevent the application from handling the path in a special way.
+This means that when a URI-style path (corresponding to a [paired bucket or container](<user-guide-pair-containers)) is passed to any of the applications above, Object Mount will prevent the application from handling the path in a special way.
 
 For example, `fmpeg` has special handling for some [protocols](http://ffmpeg.org/ffmpeg-protocols.html#Protocols) which they specify in a similar URI format to Object Mount URI cloud paths (e.g. `ftp://example.foo`). As a result, Object Mount needs to prevent `ffmpeg` from failing (when given a path like `s3://bucket/file`) because `s3`, `az` and `gs` are not protocols it supports.
 
@@ -129,7 +129,7 @@ Object Mount behaviour will be broken and dangerous if you do not set the correc
 
 ### Core File Access
 
-In {ref}`Core File Access <getting-started-core-file-access>` mode, and for files in object storage uploaded using tools other than Object Mount, we have some dynamic defaults set for ownership and permissions. In these circumstances, the owner of cloud objects is always reported to be the current user, the directory mode is reported as `0777`, and the file mode is reported as `0666`.
+In [Core File Access](getting-started-core-file-access) mode, and for files in object storage uploaded using tools other than Object Mount, we have some dynamic defaults set for ownership and permissions. In these circumstances, the owner of cloud objects is always reported to be the current user, the directory mode is reported as `0777`, and the file mode is reported as `0666`.
 
 The defaults can be overridden by using the `uid`, `gid`, `filemode` and `dirmode` options within the `CUNO_OPTIONS` environment variable. By doing so, an administrator can set the default UID/GID and access mode permissions that apply to all files and directories of cloud storage accessed by Object Mount. This might be considered in circumstances where an application starts as one user, but mid-process switches context to run as another; services like web-servers often function in this way.
 
@@ -148,7 +148,7 @@ While the default UID/GID and access mode permissions can be set ahead of time, 
 
 ### POSIX File Access
 
-To persist and modify file system metadata, {ref}`POSIX File Access <getting-started-posix-file-access>` must be enabled. This allows the virtual files presented by Object Mount to have their system metadata modified by tools such as `chown`, `chmod`, and `touch`.
+To persist and modify file system metadata, [POSIX File Access](../getting-started/enforced-posix-access) must be enabled. This allows the virtual files presented by Object Mount to have their system metadata modified by tools such as `chown`, `chmod`, and `touch`.
 
 {% callout type="note"  %}
 The system metadata is stored as objects within your object storage system within hidden subdirectories where the data resides. The name of that subdirectory is a period followed by a unicode U+FBF80 `󻾀` character.
@@ -160,7 +160,7 @@ Non-Object Mount access which renames, moves or copies objects with Object Mount
 
 #### Enabling for Direct Interception
 
-There are two ways to enable POSIX File Access when using {ref}`Direct Interception via Object Mount CLI <user-guide-direct-interception>`:
+There are two ways to enable POSIX File Access when using [Direct Interception via Object Mount CLI](user-guide-direct-interception):
 
 ##### Using a bucket tag
 
@@ -218,7 +218,7 @@ This is not "secure" in the sense that Direct Interception mode requires the use
 
 #### Enabling POSIX for a Object Mount Mount
 
-If a bucket doesn't have POSIX mode already set, you can use the option `--posix` when mounting a {ref}`Object Mount Mount <user-guide-Object Mount-mount>` to enable fine-grained control over ownership and permissions and have them enforced. If a bucket's POSIX mode tag is set, but the `--posix` flag is not, the bucket's setting will apply but the permissions will not be enforced by the mount.
+If a bucket doesn't have POSIX mode already set, you can use the option `--posix` when mounting a [Object Mount Mount](user-guide-Object Mount-mount) to enable fine-grained control over ownership and permissions and have them enforced. If a bucket's POSIX mode tag is set, but the `--posix` flag is not, the bucket's setting will apply but the permissions will not be enforced by the mount.
 
 If you are mounting for yourself and others, mount the bucket in a location that is accessible to the users who need access to the files. This can be a shared location, or a location that is only accessible to the user who needs access.
 
@@ -342,7 +342,7 @@ PageBreak oneColumn
 
 ### CUNO_CREDENTIALS
 
-The environment variable `CUNO_CREDENTIALS` allows you to customise the location of the Object Mount credentials store, and is elaborated upon in {ref}`user-guide-credentials-management`.
+The environment variable `CUNO_CREDENTIALS` allows you to customise the location of the Object Mount credentials store, and is elaborated upon in [user-guide-credentials-management]().
 
 ### Proxy server tunneling
 

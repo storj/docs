@@ -10,7 +10,7 @@ metadata:
 Object Mount supports the Linux operating system, and can run inside Docker and other virtual environments such as Hyper-V and Virtualbox.
 
 Object Mount offers a "Scripted Installer" which does not *require* root privileges to install. We also offer distributions that can be installed using popular Linux package managers. 
-All of our releases are [available on GitHub](https://github.com/Object Mount/Object Mount/releases).
+All of our releases are [available on GitHub](https://github.com/cunoFS/cunoFS/releases).
 
 ## Downloading and installing
 
@@ -27,8 +27,8 @@ Trials are only to be used once per user/organisation. If installing inside a cl
 
 Register [online](https://cuno.io/register) for a free personal-use license or Professional, Educational or Enterprise evaluation. Contact [sales@storj.io](mailto:sales@storj.io) when you're ready for a quote.
 
-All free licenses (including evaluations) let you use Professional-tier features for 14 days, and thereafter you will be limited to the [Personal](https://cuno.io/pricing) tier of usage. 
-See the [pricing page](https://cuno.io/pricing) for more information about pricing, licenses and the available features on each tier.
+All free licenses (including evaluations) let you use Professional-tier features for 14 days, and thereafter you will be limited to the [Personal](mailto:sales@storj.io) tier of usage. 
+See the [pricing page](mailto:sales@storj.io) for more information about pricing, licenses and the available features on each tier.
 {% /callout %}
 
 ### Activating your license

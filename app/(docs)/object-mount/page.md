@@ -17,4 +17,4 @@ Find us on [storj.io] for product information, benchmarks and case studies. Cont
 Questions? Need help trouble-shooting? Check out our [discourse forum](https://forum.storj.io/). If you have a bug to report, help us help you by reporting it on our [issue tracker](TODO). 
 If you are on the Professional or Enterprise tiers, you can message us directly at [supportdcs@storj.io](mailto:supportdcs@storj.io).
 
-The [User Guide](user-guide-overview) is also available with all options and details about how Object Mount works and all available options.
+The [User Guide](./user-guides) is also available with all options and details about how Object Mount works and all available options.

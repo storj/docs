@@ -14,10 +14,10 @@ This section describes advanced usage of Object Mount, including the user-mode l
 ## User-mode library
 
 {% callout type="note"  %}
-The `$CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is: `/opt/cuno` for a system-wide installation, and usually `$HOME/.local/opt/cuno` for a user-local installation. See {ref}`user-guide-install-locations` for more information on installation locations.
+The `$CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is: `/opt/cuno` for a system-wide installation, and usually `$HOME/.local/opt/cuno` for a user-local installation. See [user-guide-install-locations](user-guide-install-locations) for more information on installation locations.
 {% /callout %}
 
-As mentioned in {ref}`user-guide-overview`, Object Mount provides `cuno.so` which may be loaded into a running process using `LD_PRELOAD`.
+As mentioned in [user-guide-overview](user-guide-overview), Object Mount provides `cuno.so` which may be loaded into a running process using `LD_PRELOAD`.
 Set the environment variable `LD_PRELOAD="$CUNO_ROOT"/cuno.so` before executing a command, and Object Mount will be enabled for that command.
 To start a `bash` instance with Object Mount loaded, run:
 
@@ -34,7 +34,7 @@ Loading the library in this manner will {emphasis}`not` apply the `(cuno)` prefi
 
 ## Environment variables
 
-If Object Mount was not installed to a default location, first set the `CUNO_ROOT` environment variable as described in {ref}`user-guide-install-locations`. Then, set the following environment variables for convenience:
+If Object Mount was not installed to a default location, first set the `CUNO_ROOT` environment variable as described in [user-guide-install-locations](user-guide-install-locations). Then, set the following environment variables for convenience:
 
 ``` 
 .. table::
@@ -75,7 +75,7 @@ There are multiple methods to use Object Mount from within Docker containers.
 
 {% callout type="note"  %}
 Support for automatic Docker interception is currently **experimental**.
-For ways of running Docker with Object Mount interception manually, see {ref}`user-guide-manual-docker-interception`.
+For ways of running Docker with Object Mount interception manually, see [user-guide-manual-docker-interception](user-guide-manual-docker-interception).
 {% /callout %}
 
 To enable automatic Docker interception, set the environment variable `CUNO_INTERCEPT_DOCKER=1` and load Object Mount.
@@ -94,12 +94,12 @@ To override Object Mount options just for Docker containers, use the `CUNO_DOCKE
 
 Besides automatic interception, the following methods can be used to enable Object Mount in Docker containers:
 
-- Install Object Mount as part of the creation of the Docker image (see {ref}`user-guide-download-and-install`);
+- Install Object Mount as part of the creation of the Docker image (see [user-guide-download-and-install](user-guide-download-and-install));
 - Inject Object Mount at launch into an existing Docker image.
 
 To inject Object Mount into a Docker container when it is launched:
 
-1. Set `CUNO_CREDENTIALS` outside the container; see {ref}`user-guide-credentials-management` for details.
+1. Set `CUNO_CREDENTIALS` outside the container; see [user-guide-credentials-management](user-guide-credentials-management) for details.
 2. Optionally, the `CUNO_OPTIONS` environment variable can be set using the `--env` [option](https://docs.docker.com/engine/reference/commandline/run/#env) of `docker run`.
 3. Use the following options when using `docker run`:
     ```console
@@ -114,9 +114,9 @@ To inject Object Mount into a Docker container when it is launched:
      {% callout type="note"  %}
      This uses the volume mount option (`-v`) to make Object Mount and other directories available to the container.
 
-     This command requires Object Mount to already be installed and {ref}`activated <user-guide-activate-licence>` on the host system.
+     This command requires Object Mount to already be installed and [activated](user-guide-activate-licence) on the host system.
 
-     The `$CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is: `/opt/cuno` for a system-wide installation, and usually `$HOME/.local/opt/cuno` for a user-local installation. See {ref}`user-guide-install-locations` for more information on installation locations.
+     The `$CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is: `/opt/cuno` for a system-wide installation, and usually `$HOME/.local/opt/cuno` for a user-local installation. See [user-guide-install-locations](user-guide-install-locations) for more information on installation locations.
      {% /callout %}
 
 The Object Mount credentials directory is only readable by the current user for security reasons.
@@ -135,7 +135,7 @@ docker run                                                             \
 ## Kubernetes
 
 You can use Object Mount on Kubernetes clusters with the Object Mount Kubernetes CSI Driver.
-Please refer to {ref}`the Object Mount K8s CSI Driver page <user-guide-kubernetes-csi-driver>`.
+Please refer to [the Object Mount K8s CSI Driver page](user-guide-kubernetes-csi-driver).
 
 ## Singularity
 
@@ -188,9 +188,9 @@ crawl-001  crawl-data      mapred-temp    parse-output-test  stats-output
 ```
 
 {% callout type="note"  %}
-This method requires Object Mount be installed and {ref}`activated <user-guide-activate-licence>` on the system that is used to execute the Singularity images.
+This method requires Object Mount be installed and [activated](user-guide-activate-licence) on the system that is used to execute the Singularity images.
 
-The `$CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is: usually `/opt/cuno` for a system-wide installation, and usually `$HOME/.local/opt/cuno` for user-local installion. See {ref}`user-guide-install-locations` for more information on installation locations.
+The `$CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is: usually `/opt/cuno` for a system-wide installation, and usually `$HOME/.local/opt/cuno` for user-local installion. See [user-guide-install-locations](user-guide-install-locations) for more information on installation locations.
 {% /callout %}
 
 Alternatively, rather than using command options, the `--bind` parameters can be specified as environment variables before the `singularity` binary is called, making it easier to modify existing pipelines without changing the command line call, like so:

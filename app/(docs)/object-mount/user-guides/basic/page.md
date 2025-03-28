@@ -12,10 +12,10 @@ Object Mount may be loaded in a number of ways, depending on user requirements a
 
 For program calls to be routed through Object Mount, they must use
 
-- {ref}`Directly Intercepted <user-guide-direct-interception>` using the `cuno` command line or `LD_PRELOAD` environment variable;
-- or the program must be pointed to a {ref}`Object Mount Mount <user-guide-Object Mount-mount>` (a custom FUSE mount) set up using `cuno mount`.
+- [Directly Intercepted](user-guide-direct-interception) using the `cuno` command line or `LD_PRELOAD` environment variable;
+- or the program must be pointed to a [Object Mount Mount](user-guide-Object Mount-mount) (a custom FUSE mount) set up using `cuno mount`.
 
-There is also {ref}`Object Mount FlexMount <user-guide-Object Mount-flexmount>`, which makes use of both Direct Interception and a Object Mount Mount as a fallback.
+There is also [Object Mount FlexMount](user-guide-Object-Mount-flexmount), which makes use of both Direct Interception and a Object Mount Mount as a fallback.
 
 ## Direct Interception with Object Mount CLI
 
@@ -93,7 +93,7 @@ $ cuno
 (cuno) $ ls /cuno/s3/<bucket>/<path>
 ```
 
-See {ref}`user-guide-cloud-paths` for more information, options and examples of using Direct Interception with the Object Mount CLI.
+See [user-guide-cloud-paths]() for more information, options and examples of using Direct Interception with the Object Mount CLI.
 
 #### Fully supported shells
 
@@ -121,7 +121,7 @@ If no shell is set, then `/bin/sh` is used.
 
 % warning:
 %
-% The behaviour described here relies on ``ps``. If you installed with the :ref:`Scripted Installer <user-guide-scripted-install>`, you may need to install `ps` manually (RHEL derivatives install package ``procps``).
+% The behaviour described here relies on ``ps``. If you installed with the [user guide](../installation/page.md#scripted-installation), you may need to install `ps` manually (RHEL derivatives install package ``procps``).
 {% /callout %}
 
 To launch a specific shell with Object Mount enabled, use `cuno run`:
@@ -135,7 +135,7 @@ cuno run <shell>
 Object Mount Mount allows you to mount an object storage path in a directory within the local file system hierarchy. This allows you and any other user of the mount to access object storage as if it were just another directory.
 
 Object Mount Mount uses Linux FUSE (Filesystem in Userspace) v3 to mount an object storage path in a directory within the file system hierarchy.
-Due to the nature of FUSE file systems, Object Mount Mount is usually less performant than Direct Interception using Object Mount CLI. Consider using Object Mount CLI or the userspace library (described in {ref}`user-guide-ldpreload`) if speed is the primary objective.
+Due to the nature of FUSE file systems, Object Mount Mount is usually less performant than Direct Interception using Object Mount CLI. Consider using Object Mount CLI or the userspace library (described in [user-guide-ldpreload]()) if speed is the primary objective.
 
 {% callout type="note"  %}
 The `--posix` option requires that a FUSE package be installed on the system.
@@ -160,9 +160,9 @@ cuno [cuno-options] mount [mount-options] <mount-path>
 
 There are various options that can be specified, including
 
-- {ref}`Object Mount Mount options <user-guide-cuno-mount-operation-options>`
-- {ref}`Object Mount options for the mount's Object Mount subsystem <user-guide-cuno-mount-subsystem-options>`
-- {ref}`FUSE options <user-guide-cuno-mount-fuse-options>`
+- [Object Mount Mount options](user-guide-cuno-mount-operation-options)
+- [Object Mount options for the mount's Object Mount subsystem](user-guide-cuno-mount-subsystem-options)
+- [FUSE options](user-guide-cuno-mount-fuse-options)
 
 #### Mount options
 
@@ -217,7 +217,7 @@ cuno -o <Object Mount option> mount ...
 export CUNO_OPTIONS="<Object Mount option>"
 ```
 
-Some relevant Object Mount options are given below. Refer to {ref}`user-guide-config-options` for more information.
+Some relevant Object Mount options are given below. Refer to [user-guide-config-options](user-guide-config-options) for more information.
 
 {% callout type="note"  %}
 These options must come BEFORE the verb `mount`.
@@ -488,5 +488,5 @@ When using Object Mount Direct Inteception in FlexMount mode, most "local" paths
 
 ### Disadvantages
 
-1. Set up time: a Object Mount Mount needs to be set up. Consider {ref}`setting up the mount at boot <user-guide-mount-on-boot>`.
+1. Set up time: a Object Mount Mount needs to be set up. Consider [setting up the mount at boot](user-guide-mount-on-boot).
 2. Launch is more complicated: each time a Object Mount shell is launched it must be configured to use the mount. This can be worked around by setting up a Object Mount mount on boot, and setting an alias to launch a Object Mount shell with the correct parameters.

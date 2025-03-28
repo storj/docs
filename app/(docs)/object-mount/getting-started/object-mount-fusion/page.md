@@ -20,7 +20,7 @@ Object Mount Fusion will migrate files between object storage and local filesyst
 
 
 {% callout type="note"  %}
-This feature is available only to [Professional and Enterprise Tier](https://cuno.io/pricing/) customers. 
+This feature is available only to [Professional and Enterprise Tier](mailto:sales@storj.io/) customers. 
 If you have any questions, please feel free to [contact us](https://cuno.io/contact-us/).
 {% /callout %}
 

@@ -47,9 +47,9 @@ AWSSecretKey   = <secret_access_key>
 region         = <region> [optional]
 ```
 
-More information on S3 access keys is available in {ref}`user-guide-getting-s3-credentials`.
+More information on S3 access keys is available in (user-guide-getting-s3-credentials)[user-guide-getting-s3-credentials].
 
-Object Mount can also use an AWS S3 Access Point instead of a container; see {ref}`user-guide-s3-access-points` for more details.
+Object Mount can also use an AWS S3 Access Point instead of a container; see [user-guide-s3-access-points](user-guide-s3-access-points) for more details.
 
 ### S3-compatible solutions
 
@@ -136,7 +136,7 @@ AZURE_STORAGE_ACCESS_KEY = <access_key>
 If you need the access key, see [View account access keys](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
 Object Mount also supports using Shared Access Signatures (SAS) to access remote containers in Azure.
-Refer to {ref}`user-guide-azure-sas` to configure SAS.
+Refer to [user-guide-azure-sas]() to configure SAS.
 
 ## Google Cloud Storage
 
@@ -164,7 +164,7 @@ Object Mount performs the following actions when importing a credential file:
 
 {% callout type="note"  %}
 Discovery only completes when the provided credentials include bucket listing permissions.
-If listing permissions cannot be provided, manually pair the imported credential file to remote buckets using `cuno creds pair` (refer to {ref}`user-guide-pair-containers`).
+If listing permissions cannot be provided, manually pair the imported credential file to remote buckets using `cuno creds pair` (refer to [user-guide-pair-containers]()`).
 {% /callout %}
 
 ## Pair containers and credentials
@@ -235,7 +235,7 @@ cuno creds --force pair <bucket_remote_uri> <imported_credential_file>
 
 #### Google Cloud Storage
 
-Run the command in {ref}`user-guide-requester-pays`; this will list all available project IDs associated with the selected credential file and available for billing.
+Run the command in [user-guide-requester-pays](); this will list all available project IDs associated with the selected credential file and available for billing.
 Then, select and confirm a 'Requester Pays' container to pair as prompted.
 
 To run the command non-interactively:
@@ -378,5 +378,5 @@ export AZURE_STORAGE_ACCESS_KEY="<account-key>"
 Microsoft recommends that storage access keys are not shared with anyone else.
 To permit access to storage resources without sharing access keys, use a Shared Access Signature (SAS).
 An SAS gives users access to a container for only specified time period with a fixed set of permissions.
-Refer to {ref}`user-guide-azure-sas` for more information.
+Refer to [user-guide-azure-sas]() for more information.
 {% /callout %}

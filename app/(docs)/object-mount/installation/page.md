@@ -7,6 +7,8 @@ metadata:
   description:
     Object Mount Installation Instructions
 ---
+
+## Scripted Installation
 ## Linux - Scripted Installer for distros using glibc (most)
 
 Most Linux distributions (including Debian/Ubuntu, RedHat and its derivatives) use the GNU Project's C standard library (glibc). This installer/version is compatible with all such Linux distributions.

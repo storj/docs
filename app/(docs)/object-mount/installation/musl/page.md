@@ -20,10 +20,6 @@ apk add libgcc
 ```
 {% /callout %}
 
-{% callout type="note"  %}
-For full details about user privileges for installation, see the {ref}`user guide <user-guide-scripted-install>`.
-{% /callout %}
-
 1. Download the installer. By downloading you are agreeing to the terms of the [End User License Agreement](https://cuno.io/cunoFS-EULA). Click to download the [latest musl version](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno-musl-installer.run) from your browser, or run the command:
 
    ```console

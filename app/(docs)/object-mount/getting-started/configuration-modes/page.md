@@ -66,7 +66,7 @@ This is the default mode.
 
 This mode will maintain POSIX metadata for your objects, but it won't enforce any permissions or modes set on the objects. That means any user can use Object Mount to read or write any file that their object storage credentials give them access to.
 
-See [common-enforced-posix-intro](TODO common-posix-metadata-warning)
+See [enforced posix](../installation/enforced-posix).
 
 #### Example use-cases
 
@@ -83,7 +83,7 @@ There are two main ways to enable this. If the object storage provider supports 
 
 ### POSIX Enforced File Access
 
-See [common-enforced-posix-intro](TODO common-enforced-posix-intro)
+See [enforced posix](../installation/enforced-posix)
 
 #### Example use-cases
 

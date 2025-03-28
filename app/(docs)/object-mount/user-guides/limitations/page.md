@@ -14,15 +14,14 @@ Object Mount imposes no restrictions on local file accesses. The limitations lis
 {% /callout %}
 
 {% callout type="note"  %}
-This document contains technical limitations applying to all Object Mount users. There are additional limitations dictated by your licence tier, see [Pricing](https://cuno.io/pricing).
+This document contains technical limitations applying to all Object Mount users. There are additional limitations dictated by your licence tier, see [Pricing](mailto:sales@storj.io).
 {% /callout %}
 
 
 ## Direct interception
 
 Direct interception (using Object Mount CLI or `LD_PRELOAD`) does not currently support SUID binaries, or certain packaged apps like [Snap](https://ubuntu.com/core/services/guide/snaps-intro), [AppImage](https://appimage.org/), or [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications. Future updates are planned to address this.
-
-If you need to use such apps, prefer to use {ref}`user-guide-Object Mount-mount` or {ref}`user-guide-Object Mount-flexmount`.
+If you need to use such apps, prefer to use [user-guide-Object Mount-mount]() or [user-guide-Object Mount-flexmount]().
 
 ## Maximum object size
 
@@ -40,7 +39,7 @@ Depending on the solution provider, Object Mount has a limitation on the maximum
 
 % The creation date of a remote directory is not always available to the system calls.
 
-In Core File Access mode, the owner of the remote objects is by default always reported as the current user, and remote file permissions are always `777`. Also, the creation time of directories is always displayed as the Unix Epoch (00:00:00 UTC on 1 January 1970). These can be overridden using `CUNO_OPTIONS` ({ref}`user-guide-ownership-and-permissions`).
+In Core File Access mode, the owner of the remote objects is by default always reported as the current user, and remote file permissions are always `777`. Also, the creation time of directories is always displayed as the Unix Epoch (00:00:00 UTC on 1 January 1970). These can be overridden using `CUNO_OPTIONS` ([user-guide-ownership-and-permissions]()).
 
 ### Directories in Azure
 
@@ -58,7 +57,7 @@ Currently, only read-only private file memory mapping is supported.
 
 ### Applications
 
-You may want to check the secton {ref}`user-guide-tips-for-apps`.
+You may want to check the secton [user-guide-tips-for-apps]().
 
 % MinIO
 

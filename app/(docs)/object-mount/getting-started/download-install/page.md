@@ -14,7 +14,7 @@ All of our releases are [available on GitHub](https://github.com/cunoFS/cunoFS/r
 
 ## Downloading and installing
 
-[Download and Install Instructions](COMMON_DOWNLOAD_INSTALL_INSTRUCTIONS)
+[Download and Install Instructions](./installation)
 
 ## Licenses and activation
 
@@ -81,7 +81,7 @@ You should now be able to run Object Mount from the command line, which you can 
 
     To return to macOS, run ``exit``.
 
-    See [user-guide-cuno-mac](TODO) for more information.
+    See [user-guide-cuno-mac](../installation/mac) for more information.
     
     If you have already started a ``cuno-mac`` session:
     
@@ -113,8 +113,8 @@ To test that Object Mount is fully working before connecting your own object sto
    ... [truncated]
    ```                
    Note that ``cuno run`` is a way to run a single command within a Object Mount context. Most of the time, and for interactive usage, 
-   we recommend starting a "wrapped" shell using the command ``cuno`` - see the [Loading Object Mount](getting-started-direct-interception) section of this guide for more information, 
-   or the [equivalent section](user-guide-direct-interception) from the full user guide for extra detail.
+   we recommend starting a "wrapped" shell using the command ``cuno`` - see the [Loading Object Mount](../getting-started/enabling-object-mount#direct-interception-with-object-mount-cli) section of this guide for more information, 
+   or the [equivalent section](../user-guides/basic#direct-interception-with-object-mount-cli) from the full user guide for extra detail.
 {% /tab %}
 {% tab label="Mac" %} 
    ```shell
@@ -132,7 +132,7 @@ To test that Object Mount is fully working before connecting your own object sto
    ... [truncated]
    ```
    Note that ``cuno-mac run`` is a way to run a single command within a Object Mount context. Most of the time, and for interactive usage, we recommend starting a container using the 
-   command ``cuno-mac`` and running your commands directly inside it - see the [Loading Object Mount](getting-started-direct-interception) section of this guide for more information, or the [equivalent section](user-guide-direct-interception) from the full user guide for extra detail.
+   command ``cuno-mac`` and running your commands directly inside it - see the [Loading Object Mount](../getting-started/enabling-object-mount#direct-interception-with-object-mount-cli) section of this guide for more information, or the [equivalent section](../user-guides/basic#direct-interception-with-object-mount-cli) from the full user guide for extra detail.
 
 {% /tab %}
 {% /tabs %}

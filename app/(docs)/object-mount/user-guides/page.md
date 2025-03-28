@@ -31,8 +31,6 @@ Object Mount has native support for:
 
 In theory, Object Mount supports any S3-compatible object storage provider. In practice, the "S3 API" implementation can have differences in behaviour between providers, so some additional configuration is sometimes necessary. Object Mount has been tested on:
 
-% TODO: make this a table, with links to additional config sections for each of these providers (if any is necessary)
-
 - [Oracle Cloud Infrastructure Object Storage](https://www.oracle.com/cloud/storage/object-storage.html)
 - [Storj](https://storj.io/)
 - [Wasabi](https://wasabi.com/)

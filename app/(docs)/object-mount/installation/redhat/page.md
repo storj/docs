@@ -1,11 +1,11 @@
 ---
-title: Redhat
+title: Red Hat
 docId: woosaugaiNohree9
 
 metadata:
-  title: Redhat
+  title: Red Hat
   description:
-    Redhat Installation Instructions
+    Red Hat Installation Instructions
 
 ---
 

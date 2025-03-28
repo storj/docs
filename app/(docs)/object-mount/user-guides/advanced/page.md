@@ -63,8 +63,6 @@ export LD_PRELOAD="${CUNO_ROOT}"/lib/cuno.so`
 A sample script is provided in `${CUNO_ROOT}/etc/profile.d/cunorc.sh`.
 Copy this to `/etc/profile.d/` to enable Object Mount for all users.
 
-% TODO: test if this works with wildcards and tab-completion
-
 ## Containerisation and HPC
 
 ### Docker

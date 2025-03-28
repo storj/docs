@@ -10,10 +10,10 @@ metadata:
 
 ## How to use Object Mount
 
-By default, Object Mount is configured for [Core File Access](getting-started-core-file-access) which does not write additional Object Mount metadata to your buckets. Once you’re up and running, you can change the mode of operation to better suit your requirements.
+By default, Object Mount is configured for [Core File Access](../getting-started/configuration-modes#core-file-access) which does not write additional Object Mount metadata to your buckets. Once you’re up and running, you can change the mode of operation to better suit your requirements.
 
-For program calls to be routed through Object Mount, they must be either [directly intercepted](getting-started-direct-interception) using the `cuno` command line; or pointed at a [Object Mount Mount](getting-started-mount) (a custom FUSE mount) set up using `cuno mount`. 
-There is also [Object Mount FlexMount](getting-started-flexmount), which makes use of both Direct Interception and a Object Mount Mount as a fallback.
+For program calls to be routed through Object Mount, they must be either [directly intercepted](#direct-interception-with-object-mount-cli) using the `cuno` command line; or pointed at a [Object Mount Mount](#object-mount-mount) (a custom FUSE mount) set up using `cuno mount`. 
+There is also [Object Mount FlexMount](#object-mount-flex-mount), which makes use of both Direct Interception and a Object Mount Mount as a fallback.
 
 {% callout type="note"  %}
 If you have a specialised use case, follow the relevant quick start guide:
@@ -60,9 +60,6 @@ When the Object Mount CLI is used to launch a new shell, the primary purpose is 
 Inside the shell, object storage is accessed either in path or URI formats:
 
 {% tabs %}
-{% tab label="Storj" %}
-    TODO
-{% /tab %}
 {% tab label="AWS S3" %}
    ```shell
     # focus(1)
@@ -101,10 +98,10 @@ Inside the shell, object storage is accessed either in path or URI formats:
 {% /tab %}
 {% /tabs %}
 
-See [user-guide-cloud-paths](user-guide-cloud-paths) for more information, options and examples of specfiying cloud paths using Object Mount CLI.
+See [user-guide-cloud-paths](../user-guides/access) for more information, options and examples of specfiying cloud paths using Object Mount CLI.
 
-See [User Guide: Direct Interception with Object Mount CLI](user-guide-direct-interception) for additional information, including [how it works](user-guide-direct-interception-how-it-works), 
-as well as the [benefits and drawbacks](user-guide-direct-interception-advantages-disadvantages) of using Object Mount in this way.
+See [User Guide: Direct Interception with Object Mount CLI](../user-guides/basic#direct-interception-with-object-mount-cli) for additional information, including [how it works](../user-guides/basic#how-it-works), 
+as well as the [benefits and drawbacks](../user-guides/basic#advantages-and-disadvantages) of using Object Mount in this way.
 
 ## Object Mount Mount
 
@@ -159,7 +156,7 @@ ls ~/my-object-storage/s3/<bucket>/<path>
 {% /tabs %}
 
 
-For directions on unmounting, configuration options and further information, see the [user guide section on Object Mount Mount](user-guide-Object-Mount-mount).
+For directions on unmounting, configuration options and further information, see the [user guide section on Object Mount Mount](../user-guides/basic#object-mount-mount).
 
 ## Object Mount FlexMount
 
@@ -198,8 +195,8 @@ The `--flex` option can also be used with `cuno run` to run a single command/scr
 cuno run --flex "$HOME/my-object-storage" bash -c "touch $HOME/object_storage_mount/s3/<bucket>/newfile"
 ```
 
-For more information and configuration options, see the [user guide section on Object Mount FlexMount](user-guide-cunofs-flexmount).
+For more information and configuration options, see the [user guide section on Object Mount FlexMount](../user-guides/basic#object-mount-flex-mount).
 
 ## Enabling Object Mount in other environments
 
-For information on setting up Docker containers with Object Mount pre-loaded, automatically setting up a Object Mount Mount at boot, and other containerisation and HPC use-cases, see [Advanced Loading](user-guide-advanced-loading).
+For information on setting up Docker containers with Object Mount pre-loaded, automatically setting up a Object Mount Mount at boot, and other containerisation and HPC use-cases, see [Advanced Loading](../user-guides/advanced).

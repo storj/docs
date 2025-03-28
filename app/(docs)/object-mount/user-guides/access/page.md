@@ -114,8 +114,6 @@ $ ls s3://arn:aws:s3:us-east-1:999999999999:accesspoint:my-access-point-name/<re
 
 ## File system behaviours when using Object Mount
 
-% TODO: the behaviours need to be clarified, maybe another table of posix / not-posix / mount
-
 ### Symbolic links
 
 By default, symbolic links can {strong}`only` be created (using `ln --symbolic` or `ln -s`) to point {strong}`from` a local system {strong}`to` a cloud location using either the URI or directory format.
@@ -129,7 +127,7 @@ Use hard-linking to trigger a more efficient cloud-only copy mechanism within a 
 
 ### POSIX mode
 
-Symbolic links can be created (using `ln --symbolic` or `ln -s`) between local and cloud objects in either direction under POSIX mode (see [user-guide-Object-Mount-mount](user-guide-Object-Mount-mount).
+Symbolic links can be created (using `ln --symbolic` or `ln -s`) between local and cloud objects in either direction under POSIX mode (see [user-guide-Object-Mount-mount](../user-guides/basic#object-mount-mount)).
 
 Hard links can be created (using `ln`) between cloud objects in the {strong}`same` bucket under POSIX mode.
 

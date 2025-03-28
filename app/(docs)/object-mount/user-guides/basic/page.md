@@ -55,11 +55,9 @@ cuno run bash -c "<your command and arguments>"
 Always execute one-time commands this way to maintain support for wildcard expansion (`*`) .
 {% /callout %}
 
-{% callout type="note"  %}
-How it works
+### How it works
 
 Direct interception uses the `LD_PRELOAD` environment variable so that Object Mount can capture and redirect storage access library and system calls through object storage APIs. If a static binary is intercepted, a JIT ELF binary translator will redirect relevant calls when the binary is loaded into memory.
-{% /callout %}
 
 ### Advantages and Disadvantages
 
@@ -120,8 +118,8 @@ If neither `bash` nor `zsh` are found, then the first shell in this list is used
 If no shell is set, then `/bin/sh` is used.
 
 % warning:
-%
-% The behaviour described here relies on ``ps``. If you installed with the [user guide](../installation/page.md#scripted-installation), you may need to install `ps` manually (RHEL derivatives install package ``procps``).
+
+% The behaviour described here relies on ``ps``. If you installed with the [user guide](../user-guides/install/scripted-installer), you may need to install `ps` manually (RHEL derivatives install package ``procps``).
 {% /callout %}
 
 To launch a specific shell with Object Mount enabled, use `cuno run`:

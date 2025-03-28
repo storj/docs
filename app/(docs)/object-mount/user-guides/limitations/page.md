@@ -21,7 +21,7 @@ This document contains technical limitations applying to all Object Mount users.
 ## Direct interception
 
 Direct interception (using Object Mount CLI or `LD_PRELOAD`) does not currently support SUID binaries, or certain packaged apps like [Snap](https://ubuntu.com/core/services/guide/snaps-intro), [AppImage](https://appimage.org/), or [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications. Future updates are planned to address this.
-If you need to use such apps, prefer to use [user-guide-Object Mount-mount]() or [user-guide-Object Mount-flexmount]().
+If you need to use such apps, prefer to use [user-guide-object-mount-mount](../user-guides/configuration#ownership-and-permissions) or [user-guide-object-mount-flexmount](../user-guides/basic#object-mount-flex-mount).
 
 ## Maximum object size
 
@@ -39,7 +39,7 @@ Depending on the solution provider, Object Mount has a limitation on the maximum
 
 % The creation date of a remote directory is not always available to the system calls.
 
-In Core File Access mode, the owner of the remote objects is by default always reported as the current user, and remote file permissions are always `777`. Also, the creation time of directories is always displayed as the Unix Epoch (00:00:00 UTC on 1 January 1970). These can be overridden using `CUNO_OPTIONS` ([user-guide-ownership-and-permissions]()).
+In Core File Access mode, the owner of the remote objects is by default always reported as the current user, and remote file permissions are always `777`. Also, the creation time of directories is always displayed as the Unix Epoch (00:00:00 UTC on 1 January 1970). These can be overridden using `CUNO_OPTIONS` ([user-guide-ownership-and-permissions](../user-guides/configuration#ownership-and-permissions)).
 
 ### Directories in Azure
 
@@ -57,14 +57,4 @@ Currently, only read-only private file memory mapping is supported.
 
 ### Applications
 
-You may want to check the secton [user-guide-tips-for-apps]().
-
-% MinIO
-
-% -----
-
-% We have discovered an incompatibility with MinIO; when using the remote move S3 API functionality to achieve server-side object copying MinIO can become unresponsive. This feature works for relatively small files (for example, 5GB) but it fails for larger (16GB) files.
-
-% These operations are S3-compatible, and work as expected against the AWS implementation, but can fail against MinIO.
-
-% This affects :code:`mv` operations, where both the source and target are a single MinIO system.
+You may want to check the secton [user-guide-tips-for-apps](../user-guides/tips).

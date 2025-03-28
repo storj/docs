@@ -25,14 +25,11 @@ Any credentials you use need to have sufficient permissions in order for Object 
 {% /callout %}
 
 {% tabs %}
-{% tab label="Storj" %}
-    TODO
-{% /tab %}
 {% tab label="AWS S3" %}
     You will need the Access Key ID and Access Key Secret for an AWS IAM user with permission to access the S3 buckets you want to use. You will have stored these credentials somewhere when first creating the IAM user.
 
     Alternatively, create a new IAM user with "programmatic access" (access using keys), by following the AWS User Guide: [Creating an IAM user in your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)`.
-    For further options and alternatives, consult our full guide on [accessing S3 object storage](user-guide-s3-credentials).
+    For further options and alternatives, consult our full guide on [accessing S3 object storage](../user-guides/credentials#amazon-web-services-s3).
 {% /tab %}
 {% tab label="Microsoft Azure" %}
     You will need the account name, and the associated access key.
@@ -41,7 +38,7 @@ Any credentials you use need to have sufficient permissions in order for Object 
 
     If you already have an account and need the access key, see [View account access keys](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
-    Alternatively, Object Mount supports using Shared Access Signatures (SAS) to Azure containers. To do this, see [Accessing Azure containers using SAS](user-guide-azure-sas).
+    Alternatively, Object Mount supports using Shared Access Signatures (SAS) to Azure containers. To do this, see [Accessing Azure containers using SAS](../user-guides/credentials#microsoft-azure-blob-storage-with-shared-access-signatures).
 {% /tab %}
 {% tab label="Google Cloud Storage" %}
     You will need key-based access to be associated with your [Google Cloud service account](https://developers.google.com/workspace/guides/create-credentials#service-account).
@@ -58,9 +55,6 @@ Any credentials you use need to have sufficient permissions in order for Object 
 
 ## Saving credentials as a file
 {% tabs %}
-{% tab label="Storj" %}
-    TODO
-{% /tab %}
 {% tab label="AWS S3" %}
    The file needs to be of the form:
 
@@ -133,7 +127,7 @@ Any credentials you use need to have sufficient permissions in order for Object 
    endpoint=http://127.0.0.1:8080
    ```
 
-   For more information on endpoint formatting, and additional options, consult the full user guide section for [Authenticating with S3-compatible solutions](user-guide-s3-compatible-credentials).
+   For more information on endpoint formatting, and additional options, consult the full user guide section for [Authenticating with S3-compatible solutions](../user-guides/credentials#s3-compatible-solutions).
 
    You can use any text editor to create the file, just remember to change the permissions on the file when you're done to prevent other users from reading it:
 
@@ -191,9 +185,6 @@ Optional: after each command, you can confirm that the changes are reflect in yo
 {% /callout %}
 
 {% tabs %}
-{% tab label="Storj" %}
-    TODO
-{% /tab %}
 {% tab label="AWS S3" %}
    First, ensure that Object Mount is enabled by calling ``cuno``. If you are using a ``bash`` or ``zsh`` terminal, this will prefix your prompt with ``(cuno)``. Otherwise, run ``cuno`` again to see if Object Mount has been successfully enabled (if it has, you will see the output ``INFO: CUNO already loaded``).
 

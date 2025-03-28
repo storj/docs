@@ -31,7 +31,7 @@ weight: 14
 
 6. **Download** the CSV file by pressing the corresponding button
 
-7. **Use** the Access key ID and Secret Access key as described in [user-guide-import-credentials]()
+7. **Use** the Access key ID and Secret Access key as described in [user-guide-import-credentials](../user-guides/credentials#import-credentials)
 
 ## Getting Azure credentials using Azure portal
 
@@ -40,7 +40,7 @@ weight: 14
 3. **Click on the** *Storage Account* **you want the key for**
 4. **In the** *Security + networking* section **click** *Access keys*
 5. **Click on the** *Show keys* button
-6. **Use** the *Storage account name* and *Key* as described in [user-guide-azure-native-credentials]()
+6. **Use** the *Storage account name* and *Key* as described in [user-guide-azure-native-credentials](../user-guides/credentials#azure-storage-using-environment-variables)
 
 ## Getting Google Cloud credentials using the console
 
@@ -51,4 +51,4 @@ weight: 14
 5. **Click the** *Keys* tab
 6. **Click the** *Add key* **drop-down menu, then select** *Create new key*
 7. **Select** *JSON* **as the** *Key type* **and click** *Create*
-8. **Use** the *downloaded JSON file* as described in [user-guide-gcs-native-credentials]()
+8. **Use** the *downloaded JSON file* as described in [user-guide-gcs-native-credentials](../user-guides/credentials#google-cloud-storage-using-environment-variable)

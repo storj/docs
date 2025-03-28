@@ -19,4 +19,4 @@ This guide contains step-by-step instructions for:
 - Using Object Mount
 
 This getting started guide assumes you already have an object storage system set up and is intended to get you set up and using Object Mount quickly. 
-The <full user guide> contains additional details including alternative installation methods, a full list of available configuration options and additional use-cases and examples.
+The [user guide](./user-guides) contains additional details including alternative installation methods, a full list of available configuration options and additional use-cases and examples.

@@ -9,7 +9,7 @@ metadata:
 
 ## Overview
 {% callout type="warning"  %}
-Object Mount Fusion is currently in `BETA`. Your [feedback](https://forum.storj.io/) and [bug reports](TODO) will help us improve it.
+Object Mount Fusion is currently in `BETA`. Your [feedback](https://forum.storj.io/) and [bug reports](https://github.com/storj/storj) will help us improve it.
 {% /callout %}
 
 Object Mount Fusion is way to upgrade high-performance attached storage solutions like Amazon Elastic File System (EFS) with the throughput of object storage. 
@@ -21,7 +21,7 @@ Object Mount Fusion will migrate files between object storage and local filesyst
 
 {% callout type="note"  %}
 This feature is available only to [Professional and Enterprise Tier](mailto:sales@storj.io/) customers. 
-If you have any questions, please feel free to [contact us](https://cuno.io/contact-us/).
+If you have any questions, please feel free to [contact us](mailto:sales@storj.io/).
 {% /callout %}
 
 ## How it works
@@ -32,7 +32,6 @@ Object Mount Fusion automatically migrates files between the two according to ap
 New files may be written in either tier, depending on predicted and observed access properties. 
 Object Mount Fusion supports multiple users simultaneously accessing files on multiple nodes by sharing the attached storage and mount location.
 
-More information can be found in the full explanation of [Object Mount Fusion](user-guide-Object-Mount-fusion).
 
 ## Setting up Object Mount Fusion
 
@@ -40,7 +39,7 @@ Object Mount Fusion is expected to be used within the same high-speed LAN as you
 [AWS Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/) as the bucket to accessed. If you are using an S3-compatible on-premises object storage solution, 
 then Object Mount Fusion should be set up on a computer on the same high-speed local network.
 
-If you're already set up and using an attached storage system, such as EFS, you may skip ahead to [Object Mount-fusion-guide-mount](todo).
+If you're already set up and using an attached storage system, such as EFS, you may skip ahead to [Mounting a Object Mount Fusion filesystem](#mounting-a-object-mount-fusion-filesystem).
 
 ### Set up an empty bucket or directory on object storage
 
@@ -49,9 +48,6 @@ This will be used as the location that the Fusion filesystem will migrate data t
 This can either be an entirely empty bucket, or an empty directory on an existing bucket. This location must not be modified by anything but Object Mount Fusion filesystems.
 
 {% tabs %}
-{% tab label="Storj" %}
-    TODO
-{% /tab %}
 {% tab label="AWS S3" %}
     For a new empty bucket, follow the instructions for [setting up a new bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html)
 {% /tab %}
@@ -76,9 +72,6 @@ You will also need to attach a high-speed file storage solution to the instance.
 To set up a compute node in the same region as your bucket, follow the relevant steps:
 
 {% tabs %}
-{% tab label="Storj" %}
-    TODO
-{% /tab %}
 {% tab label="AWS S3" %}
     Follow the guide [Tutorial: Get started with Amazon EC2 Linux instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html).
 {% /tab %}
@@ -99,9 +92,6 @@ You will need an empty directory on your attached file storage that is writable 
 
 
 {% tabs %}
-{% tab label="Storj" %}
-    TODO
-{% /tab %}
 {% tab label="AWS S3" %}
     Follow the guide [Getting started with Amazon Elastic File System (EFS)](https://docs.aws.amazon.com/efs/latest/ug/getting-started.html).
 {% /tab %}
@@ -123,8 +113,8 @@ You will need an empty directory on your attached file storage that is writable 
 To set up Object Mount Fusion, you need Object Mount [installed](../getting-started/download-install) on the compute node, and you need to set up [credentials](../getting-started/configuring-credentials) so that the bucket/container is accessible.
 
 Your next steps depend on the filesystem you are using and the options used when mounting/attaching it. Please see the relevant section below:
-- [Filesystems without extended attribute support (e.g. EFS)](Object-Mount-fusion-mount-efs)
-- [Filesystems with extended attribute support (e.g. NFSv4 with Linux Kernel 5.9+)](Object-Mount-fusion-mount-nfsv4-xattr)
+- [Filesystems without extended attribute support (e.g. EFS)](#filesystems-without-extended-attribute-support-e-g-efs)
+- [Filesystems with extended attribute support (e.g. NFSv4 with Linux Kernel 5.9+)](#filesystems-without-extended-attribute-support-e-g-efs)
 
 ### Filesystems without extended attribute support (e.g. EFS)
 
@@ -151,9 +141,6 @@ By running the above command, the `<mount location>` becomes the way to access t
 | ``--fusion-age-threshold <age: default 1h>`` (optional) | Defines the minimum age requirement for files to be considered for migration from file storage to object storage. The age is measured as the time since the most recent of the POSIX creation time, modify time, access time, and change time - in other words, the time since each of these must be greater than the set threshold. The argument value is of the form  ``<INTEGER>[UNIT]``. If no unit is given, the value is assumed to be in seconds. Valid units are ``s`` (seconds), ``m`` (minutes), ``h`` (hours), ``d`` (days). | |
 
 {% tabs %}
-{% tab label="Storj" %}
-    TODO
-{% /tab %}
 {% tab label="AWS S3" %}
 If the bucket is not empty, create a new empty directory on your bucket:
 
@@ -287,7 +274,7 @@ Example: `cuno fusion /dev/sdf/fusion-store s3://bucket/fusion-store`
 
 #### Mount the Object Mount Fusion filesystem after binding
 
-Object Mount Fusion is set up and accessed through a Object Mount Mount. To do this, additional options must be used when creating a [Object Mount Mount](user-guide-Object Mount-mount).
+Object Mount Fusion is set up and accessed through a Object Mount Mount. To do this, additional options must be used when creating a [Object Mount Mount](../user-guides/basic#object-mount-mount).
 
 If you have already bound a directory to a cloud location, you only need to use the `--root` option to specify the path to the attached-storage backing directory in order to use the mount as a Fusion mount:
 
@@ -306,9 +293,6 @@ cuno mount \
 
 
 {% tabs %}
-{% tab label="Storj" %}
-    TODO
-{% /tab %}
 {% tab label="AWS S3" %}
     If the bucket is not empty, create a new empty directory on your bucket: 
 ```shell
@@ -396,7 +380,7 @@ cuno mount --root "/mnt/fast/fusion-store" "$HOME/my-fusion-filesystem"
 {% /tab %}
 {% /tabs %}
 
-For instructions on unmounting, see [user-guide-unmount](todo).
+For instructions on unmounting, see [user-guide-unmount](../user-guides/basic#object-mount-mount-commands).
 
 ## Using the Object Mount Fusion filesystem
 

@@ -392,7 +392,7 @@ We offer a way around this limitation by using Object Mount Fusion.
 Object Mount Fusion enables users to get the best out of object storage and traditional shared filesystems at the same time.
 In the case of the Object Mount CSI Driver, it gives you the ability of writing to a `PV` with `ReadWriteMany` without potential issues with multiple writers.
 Object Mount Fusion uses object storage with a supporting backing filesystem and will intelligently use the filesystem that has the best performance for large or small files, while ensuring that read and writes remain ordered.
-For more information, please refer to [the Object Mount Fusion documentation](cunofs-fusion-guide).
+For more information, please refer to [the Object Mount Fusion documentation](../getting-started/object-mount-fusion).
 
 ## Static Allocation
 
@@ -491,30 +491,6 @@ helm install cunofs-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi-chart
   --set credsToImport="{<credentials-1>,<credential-2>, ... ,<credentials-N>}"   \
   --set rbac.useRBAC=false
 ```
-
-% TODO Update this, we kinda support it but not for importing buckets
-
-% EKS IAM roles
-
-% #############
-
-% The Object Mount CSI Driver supports importing buckets through IAM roles on Amazon EKS.
-
-% Simply define the IAM role's ARN by setting the ``eks.iam_arn`` property in the ``values.yaml`` file or by passing it to helm through ``--set`` while deploying it:
-
-% .. code-block:: shell
-
-% helm install cunofs-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi-chart \
-
-% --set cunofsLicense.license="<license-text>"                                   \
-
-% --set eks.iam_arn="<your IAM role's ARN>"
-
-% You should be able to access any buckets that is permitted to the IAM role without extra credentials.
-
-% .. note::
-
-% Make sure that the IAM role you provide has the correct permissions, including listing S3 buckets and accessing them.
 
 # Technical Details
 

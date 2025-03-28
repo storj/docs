@@ -10,7 +10,7 @@ weight: 13
 ---
 
 Remove the directory pointed to by `CUNO_ROOT`.
-Refer to [user-guide-install-locations]() for more information.
+Refer to [user-guide-install-locations](../user-guides/install#install-locations) for more information.
 
 ## User-local uninstallation
 
@@ -42,20 +42,6 @@ Remove the following additional files:
 
 User-specific configuration is stored in `~/.config/cuno`.
 Remove this directory to remove all user-specific settings.
-
-% .. only:: dev
-
-% .. cssclass:: devnote
-
-% .. note::
-
-% TODO: create a uninstall-cuno.sh script
-%
-% Also, remove above subsections after uninstall.sh is created
-
-% As an alternative, you can also run the uninstallation script to remove Object Mount::
-
-% sh <path_to_cuno>/bin/uninstall-cuno.sh
 
 {% callout type="note"  %}
 Remove any customisations made to shell initialisation scripts such as `~/.bashrc`, `~/.profile`, `.zshrc`, `/etc/profile.d`, etc.

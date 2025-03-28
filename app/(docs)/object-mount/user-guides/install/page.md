@@ -10,7 +10,7 @@ weight: 2
 ---
 There are multiple ways to install Object Mount:
 
-- an installation script, which allows users to install Object Mount without root privileges [user guide](../../installation/page.md#scripted-installation);
+- an installation script, which allows users to install Object Mount without root privileges [user guide](../user-guides/install/scripted-installer);
 - standard packages for various Linux distributions[user-guide-package-manager-install](user-guide-package-manager-install).
 
 ## Install locations

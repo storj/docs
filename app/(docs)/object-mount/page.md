@@ -12,7 +12,7 @@ Object Mount lets you interact with object storage as if it were a fast native f
 
 New to Object Mount and want to try it out? Check out our [Getting Started](object-mount/getting-started/intro) guide.
 
-Find us on [storj.io](https://storj.io) for product information, benchmarks and case studies. Contact us on sales@storj.io for product related queries.
+Find us on [storj.io](https://storj.io) for product information, benchmarks and case studies. Contact us on [sales@storj.io](mailto:sales@storj.io) for product related queries.
 
 Questions? Need help trouble-shooting? Check out our [Community forum](https://forum.storj.io/). If you have a bug to report, help us help you by reporting it on our [GitHub](https://github.com/storj/storj). 
 If you are on the Professional or Enterprise tiers, you can message us directly at [supportdcs@storj.io](mailto:supportdcs@storj.io).

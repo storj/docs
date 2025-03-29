@@ -10,8 +10,8 @@ weight: 2
 ---
 There are multiple ways to install Object Mount:
 
-- an installation script, which allows users to install Object Mount without root privileges [user guide](../user-guides/install/scripted-installer);
-- standard packages for various Linux distributions[user-guide-package-manager-install](user-guide-package-manager-install).
+- an installation script, which allows users to install Object Mount without root privileges [user guide](../user-guides/install/scripted-installer).
+- standard packages for various Linux distributions [user-guide-package-manager-install](../user-guides/install#package-manager-installation).
 
 ## Install locations
 
@@ -23,24 +23,14 @@ A package manager install of Object Mount is always system-wide, regardless of t
 {% /callout %}
 
 
-``` 
-.. table:: Object Mount installation locations for per-user and systemwide installations
-
-   =================== =============================== =======================================
-    Install type        Location (:code:`CUNO_ROOT`)    Symlinks created in
-   =================== =============================== =======================================
-    User-local          :code:`~/.local/opt/cuno/`      :code:`~/.local/bin/`
-
-                                                        :code:`~/.local/lib/x86_64-linux-gnu`
-
-                                                        :code:`~/.local/share/man/`
-    System-wide         :code:`/opt/cuno/`              :code:`/usr/bin/`
-
-                                                        :code:`/usr/lib/`
-
-                                                        :code:`/usr/share/man/`
-   =================== =============================== =======================================
-```
+| Install type  | Location (:code:`CUNO_ROOT`) | Symlinks created in |
+| ------------- | ------------- | ------------- |
+| User-local | `~/.local/opt/cuno/`| `~/.local/bin/`
+|||`~/.local/lib/x86_64-linux-gnu`
+|||`~/.local/share/man/`|
+| System-wide| `/opt/cuno/` | `/usr/bin/` 
+|||`/usr/lib/`
+|||`/usr/share/man/`|
 
 
 ## Scripted installer
@@ -49,18 +39,13 @@ A package manager install of Object Mount is always system-wide, regardless of t
 
 Most Linux distributions (including Debian/Ubuntu, RedHat and its derivatives) use the GNU Project's C standard library (glibc). This installer/version is compatible with all such Linux distributions.
 
-``` 
-.. include:: common-scripted-installer-glibc-instructions.rst
-```
+See [glibc](../installation/glibc)
 
 ### Distros using musl (Alpine)
 
 Some Linux distributions (Alpine) use the musl C standard library. This installer/version is compatible with all such Linux distributions.
 
-``` 
-.. include:: common-scripted-installer-musl-instructions.rst
-```
-
+See [musl](../installation/musl)
 
 
 ## Package manager installation
@@ -68,15 +53,11 @@ Some Linux distributions (Alpine) use the musl C standard library. This installe
 
 ### Debian and derivatives (e.g. Ubuntu)
 
-``` 
-.. include:: common-debian-install-instructions.rst
-```
+See [debian](../installation/debian)
 
-### RedHat and derivatives
+### Red Hat and derivatives
 
-``` 
-.. include:: common-redhat-install-instructions.rst
-```
+See [Red Hat](../installation/redhat)
 
 ### Alpine Linux
 
@@ -128,9 +109,7 @@ To return to macOS, run `exit` until the `(cuno)` prefix is removed. You may onl
 
 ### Windows using WSL2
 
-``` 
-.. include:: common-windows-install-instructions.rst
-```
+See [Windows](../installation/windows)
 
 {% callout type="note"  %}
 Refer to the [Microsoft documentation on installing WSL](https://docs.microsoft.com/en-gb/windows/wsl/install) for more information.

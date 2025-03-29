@@ -47,9 +47,9 @@ AWSSecretKey   = <secret_access_key>
 region         = <region> [optional]
 ```
 
-More information on S3 access keys is available in (user-guide-getting-s3-credentials)[user-guide-getting-s3-credentials].
+More information on S3 access keys is available in (user-guide-getting-s3-credentials)[../user-guides/appendix#getting-s3-credentials-using-the-aws-console].
 
-Object Mount can also use an AWS S3 Access Point instead of a container; see [user-guide-s3-access-points](user-guide-s3-access-points) for more details.
+Object Mount can also use an AWS S3 Access Point instead of a container; see [user-guide-s3-access-points](../user-guides/access#aws-s3-access-point-support) for more details.
 
 ### S3-compatible solutions
 
@@ -71,58 +71,32 @@ endpoint = https://s3objectstorage.example.com
 
 Depending on the capabilities and behaviours of your object storage provider's S3 API, you may find the additional keys useful:
 
+| Option | Description |
+|--------|-------------|
+| `skipssl` | Skip SSL certificate verification. Useful for private storage solutions with self-signed certificates. |
+| `nossl` | Use HTTP protocol instead of HTTPS. Use when the endpoint starts with `http://`. |
+| `pathstyle` | Switch from virtual host style to path style syntax for S3-compatible storage solutions. Enable for private storage solutions supporting only path style syntax (e.g. MinIO, Ceph). |
+| `no-delete-objects` | Do not use `DeleteObjects` to remove multiple objects. Instead, use `DeleteObject` for single object removal. |
+| `no-remote-copy` | Do not copy objects within the same bucket via the server; download and upload instead. |
+| `no-object-tagging` | Do not attempt to get/put object tags. |
+| `no-object-acl` | Do not attempt to get/put object ACLs. |
+| `no-multipart-upload` | Do not attempt to use [multipart upload](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html). |
+| `no-copy-part` | Do not attempt to use [UploadPartCopy](https://docs.aws.amazon.com/AmazonS3/latest/API/API_UploadPartCopy.html). |
+| `no-range-download` | Do not attempt to use [Byte-Range Fetches](https://docs.aws.amazon.com/whitepapers/latest/s3-optimizing-performance-best-practices/use-byte-range-fetches.html); use a single request to download the whole object instead. |
+| `no-delete-objects` | Do not attempt to use [DeleteObjects](https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObjects.html) when deleting multiple objects; use [DeleteObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObject.html) for each object to delete. |
+| `directory-marker` | Create a placeholder object when creating an empty prefix (e.g., `mkdir`). Remove the placeholder object when removing an empty directory. |
+| `ignore-empty-prefixes` | Ignore directories that were removed but still reported as existing prefixes by the server. |
+| `posix=<true/false>` | Set POSIX mode for all buckets associated with this credential. This option takes precedence over the POSIX mode runtime environment variable, but may be overridden by a bucket-wide POSIX setting (set via `cuno creds`). |
 
-``` 
-.. list-table::
-   :widths: auto
-   :header-rows: 1
 
-   * - Option
-     - Description
-   * - ``skipssl``
-     - Skip SSL certificate verification.
-       Useful for private storage solutions with self-signed certificates.
-   * - :code:`nossl`
-     - Use HTTP protocol instead of HTTPS.
-       Use when the endpoint starts with :code:`http://`.
-   * - :code:`pathstyle`
-     - Switch from virtual host style to path style syntax for S3-compatible storage solutions.
-       Enable for private storage solutions supporting only path style syntax (e.g. MinIO, Ceph).
-   * - :code:`no-delete-objects`
-     - Do not use :code:`DeleteObjects` to remove multiple objects.
-       Instead, use :code:`DeleteObject` for single object removal.
-   * - :code:`no-remote-copy`
-     - Do not copy objects within the same bucket via the server; download and upload instead.
-   * - :code:`no-object-tagging`
-     - Do not attempt to get/put object tags.
-   * - :code:`no-object-acl`
-     - Do not attempt to get/put object ACLs.
-   * - :code:`no-multipart-upload`
-     - Do not attempt to use `multipart upload <https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html>`.
-   * - :code:`no-copy-part`
-     - Do not attempt to use `UploadPartCopy <https://docs.aws.amazon.com/AmazonS3/latest/API/API_UploadPartCopy.html>`.
-   * - :code:`no-range-download`
-     - Do not attempt to use `Byte-Range Fetches <https://docs.aws.amazon.com/whitepapers/latest/s3-optimizing-performance-best-practices/use-byte-range-fetches.html>`; use a single request to download the whole object instead.
-   * - :code:`no-delete-objects`
-     - Do not attempt to use `DeleteObjects <https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObjects.html>` when deleting multiple objects; use `DeleteObject <https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObject.html>` for each object to delete.
-   * - :code:`directory-marker`
-     - Create a placeholder object when creating an empty prefix (e.g., :code:`mkdir`).
-       Remove the placeholder object when removing an empty directory.
-   * - :code:`ignore-empty-prefixes`
-     - Ignore directories that were removed but still reported as existing prefixes by the server.
-   * - :code:`posix=<true/false>`
-     - Set POSIX mode for all buckets associated with this credential.
-       This option takes precedence over the POSIX mode runtime environment variable, but may be overridden by a bucket-wide POSIX setting (set via :code:`cuno creds`).
-```
-
-:{% callout type="note"  %}
+{% callout type="note"  %}
 Some of the above options can be automatically detected and populated by running `cuno creds detectfeatures <URI> <credential file name>` (e.g. `cuno creds detectfeatures s3://test-bucket test_credentials.s3c`).
 This command needs a bucket to be specified that it can write temporary files to for testing purposes. The commmand will run a series of tests against the specified bucket, checking the availability of S3 features that Object Mount uses and updating the credentials file accordingly.
+{% /callout %}
 
 {% callout type="warning"  %}
 Running feature detection will use up to a few gigabytes of bandwidth and may take a few minutes to complete depending on the machine's connection speed and the S3-compatible storage provider.
 {% /callout %}
-{% /callout %}:
 
 ## Microsoft Azure Blob Storage
 
@@ -164,7 +138,7 @@ Object Mount performs the following actions when importing a credential file:
 
 {% callout type="note"  %}
 Discovery only completes when the provided credentials include bucket listing permissions.
-If listing permissions cannot be provided, manually pair the imported credential file to remote buckets using `cuno creds pair` (refer to [user-guide-pair-containers]()`).
+If listing permissions cannot be provided, manually pair the imported credential file to remote buckets using `cuno creds pair` (refer to [#pair-containers-and-credentials]()`).
 {% /callout %}
 
 ## Pair containers and credentials
@@ -235,7 +209,7 @@ cuno creds --force pair <bucket_remote_uri> <imported_credential_file>
 
 #### Google Cloud Storage
 
-Run the command in [user-guide-requester-pays](); this will list all available project IDs associated with the selected credential file and available for billing.
+Run the command in [#requester-pays-buckets](); this will list all available project IDs associated with the selected credential file and available for billing.
 Then, select and confirm a 'Requester Pays' container to pair as prompted.
 
 To run the command non-interactively:
@@ -249,22 +223,12 @@ cuno creds pair --billing <billing_project_ID> <bucket_remote_uri> <imported_cre
 `list` displays information about imported credential files and paired buckets.
 The command accepts additional options:
 
-``` 
-.. table::
-    :widths: auto
-
-    +---------------------------------------------+-----------------------------------------------------------------------------------------------------+
-    | Command                                     | Description                                                                                         |
-    +=============================================+=====================================================================================================+
-    | :code:`cuno creds list`                     | Display all imported credential files and all paired buckets                                        |
-    +---------------------------------------------+-----------------------------------------------------------------------------------------------------+
-    | :code:`cuno creds list creds`               | Display all imported credential files :strong:`only`                                                |
-    +---------------------------------------------+-----------------------------------------------------------------------------------------------------+
-    | :code:`cuno creds list pairings`            | Display all paired buckets :strong:`only`                                                           |
-    +---------------------------------------------+-----------------------------------------------------------------------------------------------------+
-    | :code:`cuno creds list pairings <provider>` | Display all paired buckets for the specified provider :strong:`only`                                |
-    +---------------------------------------------+-----------------------------------------------------------------------------------------------------+
-```
+| Command | Description |
+|---------|-------------|
+| `cuno creds list` | Display all imported credential files and all paired buckets |
+| `cuno creds list creds` | Display all imported credential files **only** |
+| `cuno creds list pairings` | Display all paired buckets **only** |
+| `cuno creds list pairings <provider>` | Display all paired buckets for the specified provider **only** |
 
 `pairings <provider>` accepts a comma-separated list of providers.
 For example, `cuno creds list pairings gs,s3` will display information about all paired buckets in Google Cloud Storage and AWS S3.
@@ -297,19 +261,12 @@ cuno creds [flags] <rest_of_command>
 
 These flags are described in the following table:
 
-``` 
-.. cssclass:: shorttable::
-```
+| Flag | Description |
+|---------|-------------|
+| `--interactive/-i` | Asks for permission to replace existing credential files, pairings, SAS etc. |
+| `--force/-f` | Always replaces existing credential files, pairings, SAS etc. |
+| `--color/-c` | Displays coloured output. |
 
-``` 
-+-----------------------------+-----------------------------------------------------------------------------------+
-| :code:`--interactive/-i`    | Asks for permission to replace existing credential files, pairings, SAS etc.      |
-+-----------------------------+-----------------------------------------------------------------------------------+
-| :code:`--force/-f`          | Always replaces existing credential files, pairings, SAS etc.                     |
-+-----------------------------+-----------------------------------------------------------------------------------+
-| :code:`--color/-c`          | Displays coloured output.                                                         |
-+-----------------------------+-----------------------------------------------------------------------------------+
-```
 
 ## Alternative methods of authenticating
 
@@ -378,5 +335,5 @@ export AZURE_STORAGE_ACCESS_KEY="<account-key>"
 Microsoft recommends that storage access keys are not shared with anyone else.
 To permit access to storage resources without sharing access keys, use a Shared Access Signature (SAS).
 An SAS gives users access to a container for only specified time period with a fixed set of permissions.
-Refer to [user-guide-azure-sas]() for more information.
+Refer to [user-guide-azure-sas](#microsoft-azure-blob-storage-with-shared-access-signatures) for more information.
 {% /callout %}

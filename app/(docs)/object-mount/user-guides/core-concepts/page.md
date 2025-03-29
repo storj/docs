@@ -9,10 +9,6 @@ metadata:
 weight: 1    
 ---
 
-# Core Concepts
-
 The ideas presented here are intended to familiarise you with our approach to object storage.
 
-``` 
-.. include:: common-core-concepts.rst
-```
+See [Getting Stared Core Concepts](../getting-started/intro)

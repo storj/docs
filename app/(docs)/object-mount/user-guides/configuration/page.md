@@ -13,8 +13,6 @@ Setting the environment variable `CUNO_OPTIONS` can be used to further configure
 
 Options available for `CUNO_OPTIONS`:
 
-@CUNO_OPTIONS@
-
 {% callout type="note"  %}
 Individual options must be separated by spaces. Don't forget to enclose multiple options in quotes (`"` or `'`), or to escape spaces.
 {% /callout %}
@@ -35,7 +33,7 @@ To specify any applications to be patched, specify them as a colon-separated lis
 +uricompat=<executable 1>:<exectuable 2>:< ... >
 ```
 
-To limit the cases in which this patching occurs, you can filter interceptions to only occur when certain command-line arguments match specified keywords. This may be useful for certain code interpreters/executors (see the [example](user-guide-uricompat-java) below). To do this, in place of an executable name, use a slash-separated list of the name, a 1-based index of the argument to be matched (or any using `*`), and a value to match against:
+To limit the cases in which this patching occurs, you can filter interceptions to only occur when certain command-line arguments match specified keywords. This may be useful for certain code interpreters/executors (see the [example](../user-guides/configuration#example) below). To do this, in place of an executable name, use a slash-separated list of the name, a 1-based index of the argument to be matched (or any using `*`), and a value to match against:
 
 ```console
 +uricompat=<name of binary>/<index of argument to be matched>/<argument value to match>
@@ -44,7 +42,7 @@ To limit the cases in which this patching occurs, you can filter interceptions t
 {% callout type="note"  %}
 The `+uricompat` option only works on URIs that have been paired.
 
-If you are working with a public access bucket, you will need to run the `cuno creds pair` command (see [user-guide-pair-containers]()) against it for the `+uricompat` to take effect.
+If you are working with a public access bucket, you will need to run the `cuno creds pair` command (see [user-guide-pair-containers](../user-guides/credentials#pair-containers-and-credentials)) against it for the `+uricompat` to take effect.
 {% /callout %}
 
 #### Applications with patched URI handling
@@ -61,7 +59,7 @@ And some genomics tools:
 - `igv`
 - `fastQC`
 
-This means that when a URI-style path (corresponding to a [paired bucket or container](<user-guide-pair-containers)) is passed to any of the applications above, Object Mount will prevent the application from handling the path in a special way.
+This means that when a URI-style path (corresponding to a [paired bucket or container](../user-guides/credentials#pair-containers-and-credentials)) is passed to any of the applications above, Object Mount will prevent the application from handling the path in a special way.
 
 For example, `fmpeg` has special handling for some [protocols](http://ffmpeg.org/ffmpeg-protocols.html#Protocols) which they specify in a similar URI format to Object Mount URI cloud paths (e.g. `ftp://example.foo`). As a result, Object Mount needs to prevent `ffmpeg` from failing (when given a path like `s3://bucket/file`) because `s3`, `az` and `gs` are not protocols it supports.
 
@@ -129,7 +127,7 @@ Object Mount behaviour will be broken and dangerous if you do not set the correc
 
 ### Core File Access
 
-In [Core File Access](getting-started-core-file-access) mode, and for files in object storage uploaded using tools other than Object Mount, we have some dynamic defaults set for ownership and permissions. In these circumstances, the owner of cloud objects is always reported to be the current user, the directory mode is reported as `0777`, and the file mode is reported as `0666`.
+In [Core File Access](../getting-started/configuration-modes#core-file-access) mode, and for files in object storage uploaded using tools other than Object Mount, we have some dynamic defaults set for ownership and permissions. In these circumstances, the owner of cloud objects is always reported to be the current user, the directory mode is reported as `0777`, and the file mode is reported as `0666`.
 
 The defaults can be overridden by using the `uid`, `gid`, `filemode` and `dirmode` options within the `CUNO_OPTIONS` environment variable. By doing so, an administrator can set the default UID/GID and access mode permissions that apply to all files and directories of cloud storage accessed by Object Mount. This might be considered in circumstances where an application starts as one user, but mid-process switches context to run as another; services like web-servers often function in this way.
 
@@ -218,7 +216,7 @@ This is not "secure" in the sense that Direct Interception mode requires the use
 
 #### Enabling POSIX for a Object Mount Mount
 
-If a bucket doesn't have POSIX mode already set, you can use the option `--posix` when mounting a [Object Mount Mount](user-guide-Object Mount-mount) to enable fine-grained control over ownership and permissions and have them enforced. If a bucket's POSIX mode tag is set, but the `--posix` flag is not, the bucket's setting will apply but the permissions will not be enforced by the mount.
+If a bucket doesn't have POSIX mode already set, you can use the option `--posix` when mounting a [Object Mount Mount](../user-guides/basic#object-mount-mount) to enable fine-grained control over ownership and permissions and have them enforced. If a bucket's POSIX mode tag is set, but the `--posix` flag is not, the bucket's setting will apply but the permissions will not be enforced by the mount.
 
 If you are mounting for yourself and others, mount the bucket in a location that is accessible to the users who need access to the files. This can be a shared location, or a location that is only accessible to the user who needs access.
 
@@ -250,32 +248,6 @@ Assuming a mount location of `/mnt/s3-bucket`:
   -rwxrwx---  1 alice root 0 Nov 10 11:16 file
   ```
 
-% #. Add an additional access control entry to the object:
-
-% .. code-block:: console
-
-% $ setfacl --modify bob:rwx /mnt/s3-bucket/file
-
-% $ ls -l /mnt/s3-bucket/file
-
-% -rwxrwx---+ 1 alice root 0 Nov 10 11:16 file
-
-% $ getfacl /mnt/s3-bucket/file
-
-% # file: file
-
-% # owner: alice
-
-% # group: root
-
-% user::rwx
-
-% user:bob:rwx
-
-% group::rwx
-
-% other::---
-
 - Alter the modify time:
 
   ```console
@@ -298,51 +270,11 @@ Assuming a mount location of `/mnt/s3-bucket`:
   Change: 2021-11-10 11:47:21.846000000 +0000
   ```
 
-``` pdf
-PageBreak oneColumn
-```
-
-{% /callout %}{only} dev
-``` 
-.. cssclass:: devnote
-
-    Hardlink Options
-
-    .. note::
-
-      Currently the feature is disabled at startup.
-
-      The feature is enabled by :code:`CUNO_OPTIONS=+hardlink` which enables local-local and local-cloud features for virtualized genomic file types.
-
-    The following options allow more fine-grained control:
-
-    .. cssclass:: listtable43mm
-
-      .. list-table::
-        :header-rows: 0
-
-        * - :code:`-hardlink` / :code:`+hardlink=off`
-          - Turns off the feature.
-        * - :code:`+hardlink=virtual`
-          - Attempts to hardlink local drive virtual files are supported by creating hard links to the backing files that echo the request.
-        * - :code:`+hardlink=copyvirt`
-          - Performs as :code:`+hardlink=virtual` and in addition virtual files instanced on a different device (e.g. NAS) will be copied if the hardlink fails. Symlink targets are reinstanced.
-        * - :code:`+hardlink=symcloudvirt` (default)
-          - Performs as :code:`+hardlink=copyvirt` and in addition attempts to hardlink virtual file from local to assets on the cloud are implemented as softlinks.
-        * - :code:`+hardlink=symcloudall`
-          - Performs as :code:`+hardlink=symcloudvirt` and in addition attempts to hardlink any other file from local to cloud will be implemented as softlinks even if the type is not recognised.
-        * - :code:`+hardlink=copycloudvirt`
-          - Performs as :code:`+hardlink=symcloudall` and in addition attempts to hardlink virtual file from a cloud location to another cloud location (on the same device) cause a copy of the backing files to be made.
-        * - :code:`+hardlink=copycloudall`
-          - Performs as :code:`+hardlink=copycloudvirt` and in addition attempts to hardlink any other file from a cloud location to another cloud location (on the same device) cause a copy to be made.
-```
-{% /callout %}
-
 ## Other Environment Variables
 
 ### CUNO_CREDENTIALS
 
-The environment variable `CUNO_CREDENTIALS` allows you to customise the location of the Object Mount credentials store, and is elaborated upon in [user-guide-credentials-management]().
+The environment variable `CUNO_CREDENTIALS` allows you to customise the location of the Object Mount credentials store, and is elaborated upon in [user-guide-credentials-management](../user-guides/credentials).
 
 ### Proxy server tunneling
 
@@ -395,8 +327,4 @@ $ CUNO_LOG=trace,access ls s3://example-bucket
 cuno: [DEBUG][07/17/23 13:59:03.287][P/T: 296181:2897806400] Not On EC2
 cuno: [DEBUG][07/17/23 13:59:03.287][P/T: 296181:2897806400] Using Certs: /etc/ssl/certs/ca-certificates.crt
 cuno: [ACCESS][07/17/23 13:59:03.355][P/T: 296181:2897806400] s3://example-bucket/file write() 12 @ 0
-```
-
-``` pdf
-PageBreak oneColumn
 ```

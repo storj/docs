@@ -21,7 +21,7 @@ You can skip to [Enabling Object Mount](./enabling-object-mount).
 ## Getting your credentials
 
 {% callout type="warning"  %}
-Any credentials you use need to have sufficient permissions in order for Object Mount to discover and manage your data. This needs to include permission to list buckets. If this is not possible or desired, you must use the `cuno creds pair` options, for which instructions can be found [here](user-guide-pair-containers)`.
+Any credentials you use need to have sufficient permissions in order for Object Mount to discover and manage your data. This needs to include permission to list buckets. If this is not possible or desired, you must use the `cuno creds pair` options, for which instructions can be found [here](user-guide-pair-containers).
 {% /callout %}
 
 {% tabs %}

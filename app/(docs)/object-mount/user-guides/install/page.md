@@ -85,9 +85,9 @@ Alternatives to Docker on Mac are available, some recommended alternatives are:
 Unfortunately, [colima](https://github.com/abiosoft/colima) is not currently supported.
 {% /callout %}
 
-``` 
-.. include:: common-mac-install-instructions.rst
-```
+<!-- .. include:: common-mac-install-instructions.rst -->
+See [](docId:yoopieyewevei1Eo) for more details.
+
 
 ### Additional instructions for cuno-mac users
 

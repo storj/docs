@@ -35,9 +35,9 @@ Depending on the solution provider, Object Mount has a limitation on the maximum
 
 ## Ownership, permissions and file metadata
 
-% In the results of the command :code:`ls` the owner of the remote objects is always the current user. Furthermore, remote file permissions are always set to :code:`777`.
+* In the results of the command `ls` the owner of the remote objects is always the current user. Furthermore, remote file permissions are always set to `777`.
 
-% The creation date of a remote directory is not always available to the system calls.
+* The creation date of a remote directory is not always available to the system calls.
 
 In Core File Access mode, the owner of the remote objects is by default always reported as the current user, and remote file permissions are always `777`. Also, the creation time of directories is always displayed as the Unix Epoch (00:00:00 UTC on 1 January 1970). These can be overridden using `CUNO_OPTIONS` ([user-guide-ownership-and-permissions](../user-guides/configuration#ownership-and-permissions)).
 
@@ -49,7 +49,9 @@ Creating a directory in Azure Storage (using `mkdir`) will result in a remote bl
 
 Auto-completion and wildcard characters are fully supported on a Object Mount active shell. This can be created either using the `cuno` command or using `LD_PRELOAD` (e.g. `LD_PRELOAD=/usr/lib/cuno.so bash`). In the latter, paths containing colons such as `s3://bucket` on cloud paths will only succeed if `:` is removed from the separator list variable `COMP_WORDBREAKS`. For example:
 
-> `[[ "$LD_PRELOAD" =~ cuno ]] && export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}`
+```bash
+[[ "$LD_PRELOAD" =~ cuno ]] && export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}
+```
 
 ### Memory-mapping
 

@@ -8,7 +8,7 @@ metadata:
     Alpine Installation Instructions
 ---
 
-1. Download the installer. By downloading you are agreeing to the terms of the [End User License Agreement](https://cuno.io/cunoFS-EULA). Click to download the latest version of the [self-extracting package for Alpine](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_musl_apk.run) from your browser, or run the command:
+1. Download the installer. By downloading you are agreeing to the terms of the [End User License Agreement](https://www.storj.io/legal/terms-of-use). Click to download the latest version of the [self-extracting package for Alpine](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_musl_apk.run) from your browser, or run the command:
 
    ```console
    wget https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_musl_apk.run
@@ -53,7 +53,7 @@ metadata:
    sh cuno_x86_64_musl_apk.run
    ```
 
-5. Please follow the interactive steps, read the displayed end-user licence agreement ([EULA](https://cuno.io/cunoFS-EULA)) and agree to the terms to continue with the extraction. To automate this, you can set the environment variable `CUNO_INSTALL_ACCEPT_EULA="yes"` (this is equivalent to accepting the EULA).
+5. Please follow the interactive steps, read the displayed end-user licence agreement ([EULA](https://www.storj.io/legal/terms-of-use)) and agree to the terms to continue with the extraction. To automate this, you can set the environment variable `CUNO_INSTALL_ACCEPT_EULA="yes"` (this is equivalent to accepting the EULA).
 
 6. The archive and its contents will be unpacked into a directory named `cuno_{FULL-VERSION}_x86_64_musl` containing the package itself and additional documents:
 

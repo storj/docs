@@ -12,10 +12,10 @@ Object Mount may be loaded in a number of ways, depending on user requirements a
 
 For program calls to be routed through Object Mount, they must use
 
-- [Directly Intercepted](user-guide-direct-interception) using the `cuno` command line or `LD_PRELOAD` environment variable;
-- or the program must be pointed to a [Object Mount Mount](user-guide-Object Mount-mount) (a custom FUSE mount) set up using `cuno mount`.
+- [Directly Intercepted](#direct-interception-with-object-mount-cli) using the `cuno` command line or `LD_PRELOAD` environment variable;
+- or the program must be pointed to a [Object Mount Mount](#object-mount-mount) (a custom FUSE mount) set up using `cuno mount`.
 
-There is also [Object Mount FlexMount](user-guide-Object-Mount-flexmount), which makes use of both Direct Interception and a Object Mount Mount as a fallback.
+There is also [Object Mount FlexMount](#object-mount-flex-mount), which makes use of both Direct Interception and a Object Mount Mount as a fallback.
 
 ## Direct Interception with Object Mount CLI
 
@@ -61,25 +61,11 @@ Direct interception uses the `LD_PRELOAD` environment variable so that Object Mo
 
 ### Advantages and Disadvantages
 
-``` 
-.. list-table:: Direct Interception - Advantages and Disadvantages
-    :header-rows: 1
-    :widths: 1 1
-
-   * - Advantages
-     - Disadvantages
-   * - **Speed**: Dynamic interception offers the best performance.
-
-     - **Compatibility**: Direct interception does not currently support SUID binaries, `Snaps <https://ubuntu.com/core/services/guide/snaps-intro>`_, `AppArmor <https://ubuntu.com/server/docs/security-apparmor>`_, or `Flatpak <https://docs.flatpak.org/en/latest/introduction.html>`_ applications.
-
-   * - **Set up time**: This is the default; all you have to do is launch a Object Mount shell with the ``cuno`` command line utility. No FUSE mount set up is required.
-
-     - **Activation**: In some cases, it is difficult to enable direct interception or keep it enabled (because of environment variable clobbering or lack of privileges to set use LD_PRELOAD).
-
-   * - _
-
-     - **Non-technical users**: If Object Mount is being used by many people in an organization, teaching people how to use the Object Mount shell and diagnose if it's working correctly may be less desirable than setting up a Object Mount Mount on their behalf.
-```
+| Advantages | Disadvantages |
+|------------|---------------|
+| **Speed**: Dynamic interception offers the best performance. | **Compatibility**: Direct interception does not currently support SUID binaries, [Snaps](https://ubuntu.com/core/services/guide/snaps-intro), [AppArmor](https://ubuntu.com/server/docs/security-apparmor), or [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications. |
+| **Set up time**: This is the default; all you have to do is launch a Object Mount shell with the `cuno` command line utility. No FUSE mount set up is required. | **Activation**: In some cases, it is difficult to enable direct interception or keep it enabled (because of environment variable clobbering or lack of privileges to set use LD_PRELOAD). |
+|  | **Non-technical users**: If Object Mount is being used by many people in an organization, teaching people how to use the Object Mount shell and diagnose if it's working correctly may be less desirable than setting up a Object Mount Mount on their behalf. |
 
 ### Usage
 
@@ -91,7 +77,7 @@ $ cuno
 (cuno) $ ls /cuno/s3/<bucket>/<path>
 ```
 
-See [user-guide-cloud-paths]() for more information, options and examples of using Direct Interception with the Object Mount CLI.
+See [user-guide-cloud-paths](../user-guides/access) for more information, options and examples of using Direct Interception with the Object Mount CLI.
 
 #### Fully supported shells
 
@@ -133,7 +119,7 @@ cuno run <shell>
 Object Mount Mount allows you to mount an object storage path in a directory within the local file system hierarchy. This allows you and any other user of the mount to access object storage as if it were just another directory.
 
 Object Mount Mount uses Linux FUSE (Filesystem in Userspace) v3 to mount an object storage path in a directory within the file system hierarchy.
-Due to the nature of FUSE file systems, Object Mount Mount is usually less performant than Direct Interception using Object Mount CLI. Consider using Object Mount CLI or the userspace library (described in [user-guide-ldpreload]()) if speed is the primary objective.
+Due to the nature of FUSE file systems, Object Mount Mount is usually less performant than Direct Interception using Object Mount CLI. Consider using Object Mount CLI or the userspace library (described in [user-guide-ldpreload](../user-guides/advanced#user-mode-library)) if speed is the primary objective.
 
 {% callout type="note"  %}
 The `--posix` option requires that a FUSE package be installed on the system.
@@ -158,9 +144,9 @@ cuno [cuno-options] mount [mount-options] <mount-path>
 
 There are various options that can be specified, including
 
-- [Object Mount Mount options](user-guide-cuno-mount-operation-options)
-- [Object Mount options for the mount's Object Mount subsystem](user-guide-cuno-mount-subsystem-options)
-- [FUSE options](user-guide-cuno-mount-fuse-options)
+- [Object Mount Mount options](#usage-and-options)
+- [Object Mount options for the mount's Object Mount subsystem](#options-to-configure-the-mount-s-object-mount-subsystem)
+- [FUSE options](#fuse-options)
 
 #### Mount options
 
@@ -174,34 +160,17 @@ cuno mount [option] ...
 These options must come AFTER the verb `mount`.
 {% /callout %}
 
-``` 
-.. list-table:: Object Mount Mount options
-   :widths: 40 60
-   :header-rows: 1
-
-   * - Option
-     - Description
-   * - ``--root <cloud path>``
-     - Specifies the root object storage path to be mounted. For example, to mount a single bucket, you would use ``--root s3://<bucket>``.
-   * - ``--posix``
-     - Enables setting and enforcing access permissions, symbolic and hard links, users, groups, etc. Can be used with default permissions. Implicitly sets :code:`-o allow_other`.
-
-       This option is ideally used with a mount that is only on a single bucket, e.g. ``cuno mount --root s3://<bucket> --posix <mount-path>``. You should also be using ``cuno creds setposix s3://examplebucket true`` to enable POSIX handling of the bucket consistently when Direct Interception or a FlexMount is used.
-   * - ``<FUSE option>``
-     - Options that are specific to the FUSE mount operation. These options are passed on to ``fum`` ( `fusermount3 <https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html>`_). Not to be confused with Object Mount subsystem options which use the same ``-o`` syntax. See below for some of these. See :ref:`user-guide-cuno-mount-fuse-options`.
-   * - ``--no-allow-root``
-     - Do not allow root to access the mount (allowed by default). Disables support for SUID binaries, Snap, AppArmor, and Flatpak applications.
-   * - ``--auto-restart``
-     - Automatically restarts Object Mount Mount if problems occur during execution.
-   * - ``--mkdir``
-     - Automatically creates the mount point directory if it does not exist.
-   * - ``--debug``
-     - Enables debug output (same as ``cuno mount -o debug``).
-   * - ``--dev-logs``
-     - Enabled debug logging to ``/tmp/fuse.logs``
-   * - ``--verbose``
-     - Enables verbose output.
-```
+| Option | Description |
+|--------|-------------|
+| `--root <cloud path>` | Specifies the root object storage path to be mounted. For example, to mount a single bucket, you would use `--root s3://<bucket>`. |
+| `--posix` | Enables setting and enforcing access permissions, symbolic and hard links, users, groups, etc. Can be used with default permissions. Implicitly sets `-o allow_other`. This option is ideally used with a mount that is only on a single bucket, e.g. `cuno mount --root s3://<bucket> --posix <mount-path>`. You should also be using `cuno creds setposix s3://examplebucket true` to enable POSIX handling of the bucket consistently when Direct Interception or a FlexMount is used. |
+| `<FUSE option>` | Options that are specific to the FUSE mount operation. These options are passed on to `fum` ([fusermount3](https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html)). Not to be confused with Object Mount subsystem options which use the same `-o` syntax. See below for some of these. See user-guide-cuno-mount-fuse-options. |
+| `--no-allow-root` | Do not allow root to access the mount (allowed by default). Disables support for SUID binaries, Snap, AppArmor, and Flatpak applications. |
+| `--auto-restart` | Automatically restarts Object Mount Mount if problems occur during execution. |
+| `--mkdir` | Automatically creates the mount point directory if it does not exist. |
+| `--debug` | Enables debug output (same as `cuno mount -o debug`). |
+| `--dev-logs` | Enabled debug logging to `/tmp/fuse.logs` |
+| `--verbose` | Enables verbose output. |
 
 #### Options to configure the mount's Object Mount subsystem
 
@@ -215,70 +184,20 @@ cuno -o <Object Mount option> mount ...
 export CUNO_OPTIONS="<Object Mount option>"
 ```
 
-Some relevant Object Mount options are given below. Refer to [user-guide-config-options](user-guide-config-options) for more information.
+Some relevant Object Mount options are given below. Refer to [user-guide-config-options](../user-guides/configuration) for more information.
 
 {% callout type="note"  %}
 These options must come BEFORE the verb `mount`.
 {% /callout %}
 
-``` 
-.. list-table:: Object Mount options relevant to mount
-   :widths: 40 60
-   :header-rows: 1
+| Object Mount option | Description |
+|---------------------|-------------|
+| `cachehome=<directory>` (default: `/cunodb;/dev/shm;/tmp/cache/cuno`) | This option allows you to set a semicolon-delimited list of directories to consider for caching. This is for the internal metadata cache of the Object Mount process behind the mount. Note that the FUSE cache is separate from this cache. Example: `cuno -o cachehome=/mnt/cache;/cunodb;/dev/shm mount <mount-path>` |
+| `uid=<integer>` | Define the default user ownership of files and directories within a bucket. These are the UIDs that the Object Mount subsystem will feed to the FUSE mount for non-POSIX (core file access) buckets. Not recommended for most use cases, but may be useful if mounting non-POSIX buckets in the same mount as POSIX buckets. **Ignored** if the bucket has an enabled POSIX tag. Example: `cuno -o uid=$(id -u <username>) mount <mount-path>` To enforce these settings, use the FUSE mount option `-o default_permissions`. |
+| `gid=<integer>` | Define the default group ownership of files and directories within a bucket. These are the GIDs that the Object Mount subsystem will feed to the FUSE mount for non-POSIX (core file access) buckets. Not recommended for most use cases, prefer to use POSIX file access. Not recommended for most use cases, but may be useful if mounting non-POSIX buckets in the same mount as POSIX buckets. **Ignored** if the bucket has an enabled POSIX tag. Example: `cuno -o gid=$(id -g <username>) mount <mount-path>` To enforce these settings, use the FUSE mount option `-o default_permissions`. |
+| `filemode=<octal>` | Define the default file access permission bits of files within a bucket. Supply the octal (numeric) representation of the permissions you want to apply. These are the permissions that the Object Mount subsystem will feed to the FUSE mount for non-POSIX (core file access) buckets. Not recommended for most use cases, but may be useful if mounting non-POSIX buckets in the same mount as POSIX buckets. **Ignored** if the bucket has an enabled POSIX tag. For example, to set the default file access permission bits to 0770 (`-rwxrwx---`), use the following command: `cuno -o filemode=0770 mount <mount-path>` To enforce these settings, use the FUSE mount option `-o default_permissions`. |
+| `dirmode=<octal>` | Define the default file access permission bits of directories within a bucket. Supply the octal (numeric) representation of the permissions you want to apply. These are the permissions that the Object Mount subsystem will feed to the FUSE mount for non-POSIX (core file access) buckets. Not recommended for most use cases, but may be useful if mounting non-POSIX buckets in the same mount as POSIX buckets. **Ignored** if the bucket has an enabled POSIX tag. For example, to set the default file access permission bits to 0770 (`drwx
 
-   * - Object Mount option
-     - Description
-   * - ``cachehome=<directory>`` (default: :code:`/cunodb;/dev/shm;/tmp/cache/cuno`)
-     - This option allows you to set a semicolon-delimited list of directories to consider for caching. This is for the internal metadata cache of the Object Mount process behind the mount. Note that the FUSE cache is separate from this cache.
-
-       Example:
-
-       .. code-block:: console
-
-          cuno -o cachehome=/mnt/cache;/cunodb;/dev/shm mount <mount-path>
-
-   * - ``uid=<integer>``
-     -  Define the default user ownership of files and directories within a bucket. These are the UIDs that the Object Mount subsystem will feed to the FUSE mount for non-POSIX (core file access) buckets. Not recommended for most use cases, but may be useful if mounting non-POSIX buckets in the same mount as POSIX buckets. **Ignored** if the bucket has an enabled POSIX tag.
-
-        Example:
-
-        .. code-block:: console
-
-          cuno -o uid=$(id -u <username>) mount <mount-path>
-
-        To enforce these settings, use the FUSE mount option ``-o default_permissions``.
-   * - ``gid=<integer>``
-     - Define the default group ownership of files and directories within a bucket. These are the GIDs that the Object Mount subsystem will feed to the FUSE mount for non-POSIX (core file access) buckets.  Not recommended for most use cases, prefer to use POSIX file access. Not recommended for most use cases, but may be useful if mounting non-POSIX buckets in the same mount as POSIX buckets. **Ignored** if the bucket has an enabled POSIX tag.
-
-       Example:
-
-       .. code-block:: console
-
-         cuno -o gid=$(id -g <username>) mount <mount-path>
-
-       To enforce these settings, use the FUSE mount option ``-o default_permissions``.
-   * - ``filemode=<octal>``
-     - Define the default file access permission bits of files within a bucket. Supply the octal (numeric) representation of the permissions you want to apply. These are the permissions that the Object Mount subsystem will feed to the FUSE mount for non-POSIX (core file access) buckets.  Not recommended for most use cases, but may be useful if mounting non-POSIX buckets in the same mount as POSIX buckets. **Ignored** if the bucket has an enabled POSIX tag.
-
-       For example, to set the default file access permission bits to 0770 (``-rwxrwx---``), use the following command:
-
-       .. code-block:: console
-
-         cuno -o filemode=0770 mount <mount-path>
-
-       To enforce these settings, use the FUSE mount option ``-o default_permissions``.
-   * - ``dirmode=<octal>``
-     - Define the default file access permission bits of directories within a bucket. Supply the octal (numeric) representation of the permissions you want to apply. These are the permissions that the Object Mount subsystem will feed to the FUSE mount for non-POSIX (core file access) buckets. Not recommended for most use cases, but may be useful if mounting non-POSIX buckets in the same mount as POSIX buckets. **Ignored** if the bucket has an enabled POSIX tag.
-
-       For example, to set the default file access permission bits to 0770 (``drwxrwx---``), use the following command:
-
-       .. code-block:: console
-
-         cuno -o filemode=0770 mount <mount-path>
-
-       To enforce these settings, use the FUSE mount option ``-o default_permissions``.
-
-```
 
 #### FUSE options
 
@@ -294,123 +213,43 @@ These options must come AFTER the verb `mount`.
 Some of these are provided using the same `-o` syntax as the `cuno -o` options, but they are not the same.
 {% /callout %}
 
-``` 
-.. list-table:: FUSE mount options
-   :widths: 40 60
-   :header-rows: 1
+| FUSE option | Description |
+|-------------|-------------|
+| `-o allow_root` | Allows root access to the mount; required for [SUID](https://www.redhat.com/sysadmin/suid-sgid-sticky-bit) permissions. |
+| `-o allow_other` | Allows other users to access the mount; requires `user_allow_other` in `/etc/fuse.conf`. |
+| `-o default_permissions` | Enable permission checking by the kernel. To use Enforced POSIX, use `--posix`, which will set this internally. |
+| `-o auto_unmount` | Automatically unmounts the mount when the process terminates. |
+| `-o ro` | Mounts the file system read-only. To achieve a read-only mount through Object Mount, you can alternatively use `cuno mount --posix` and change the permissions on dirs/files in the mount manually to read-only using `chmod`. See [here](https://www.man7.org/linux/man-pages/man8/mount.8.html) for more on standard mount options like `ro`, `rw`, etc. |
+| `-o rw` (default) | Mounts the file system read-write. |
+| `-o exec` (default) | Allow execution of binaries on the file system. |
+| `-o noexec` | Disallow execution of binaries on the file system. |
+| `-o clone_fd` | Uses a separate fuse device fd for each thread (may improve performance). |
+| `-o max_idle_threads` | The maximum number of idle worker threads allowed (default: 10). |
+| `-s` | Run in single-threaded mode. |
+| `-f` | Run in the foreground. |
+| `-o debug` | Enable debug output (implies `-f`). |
+| **FUSE kernel default attributes** |  |
+| `-o uid=N` | Sets the file owner of all mounted files/dirs to the specified user ID. These are the UIDs that the FUSE mount will expose to the user. This will ignore any cuonFS POSIX settings including the bucket tag. To enforce these settings, use the FUSE mount option `-o default_permissions`. |
+| `-o gid=N` | Sets the file group of all mounted files/dirs to the specified group ID. These are the GIDs that the FUSE mount will expose to the user. This will ignore any cuonFS POSIX settings including the bucket tag. To enforce these settings, use the FUSE mount option `-o default_permissions`. |
+| `-o umask=M` | Sets the file permissions (octal) of all mounted files/dirs. These are the permissions that the FUSE mount will expose to the user. This will ignore any cuonFS POSIX settings including the bucket tag. To enforce these settings, use the FUSE mount option `-o default_permissions`. |
+| **FUSE kernel cache configuration** |  |
+| `-o kernel_cache` | This method caches file data across `open`; i.e. disables flushing of the file data cache on every `open`. Without this option (and neither `direct_io`), data is cached before the next `open` so a `read` syscall may not initiate a `read` operation. |
+| `-o auto_cache` | Enables automatic flushing of the data cache on open(). The cache is only flushed if the modification based on modification times (off). |
+| `-o entry_timeout=T` | Sets the kernel cache timeout for names (1.0s). |
+| `-o negative_timeout=T` | Sets the kernel cache timeout for a negative lookup (file not found) (0.0s). |
+| `-o attr_timeout=T` | Sets the kernel cache timeout for attributes (1.0s). |
+| `-o ac_attr_timeout=T` | Sets the kernel cache timeout for checking if `-o auto_cache` should flush file data on `open`. |
 
-   * - FUSE option
-     - Description
-   * - ``-o allow_root``
-     - Allows root access to the mount; required for `SUID <https://www.redhat.com/sysadmin/suid-sgid-sticky-bit>`_ permissions.
-   * - ``-o allow_other``
-     - Allows other users to access the mount; requires ``user_allow_other`` in ``/etc/fuse.conf``.
-   * - ``-o default_permissions``
-     - Enable permission checking by the kernel. To use Enforced POSIX, use ``--posix``, which will set this internally.
-   * - ``-o auto_unmount``
-     - Automatically unmounts the mount when the process terminates.
-   * - ``-o ro``
-     - Mounts the file system read-only.
-
-       To achieve a read-only mount through Object Mount, you can alternatively use ``cuno mount --posix`` and change the permissions on dirs/files in the mount manually to read-only using ``chmod``.
-
-       See `here <https://www.man7.org/linux/man-pages/man8/mount.8.html>`_ for more on standard mount options like ``ro``, ``rw``, etc.
-   * - ``-o rw`` (default)
-     - Mounts the file system read-write.
-   * - ``-o exec`` (default)
-     - Allow execution of binaries on the file system.
-   * - ``-o noexec``
-     - Disallow execution of binaries on the file system.
-   * - ``-o clone_fd``
-     - Uses a separate fuse device fd for each thread (may improve performance).
-   * - ``-o max_idle_threads``
-     - The maximum number of idle worker threads allowed (default: 10).
-   * - ``-s``
-     - Run in single-threaded mode.
-   * - ``-f``
-     - Run in the foreground.
-   * - ``-o debug``
-     - Enable debug output (implies ``-f``).
-   * - **FUSE kernel default attributes**
-     -
-   * - ``-o uid=N``
-     - Sets the file owner of all mounted files/dirs to the specified user ID. These are the UIDs that the FUSE mount will expose to the user. This will ignore any cuonFS POSIX settings including the bucket tag. To enforce these settings, use the FUSE mount option `-o default_permissions`.
-   * - ``-o gid=N``
-     - Sets the file group of all mounted files/dirs to the specified group ID. These are the GIDs that the FUSE mount will expose to the user. This will ignore any cuonFS POSIX settings including the bucket tag. To enforce these settings, use the FUSE mount option `-o default_permissions`.
-   * - ``-o umask=M``
-     - Sets the file permissions (octal) of all mounted files/dirs. These are the permissions that the FUSE mount will expose to the user. This will ignore any cuonFS POSIX settings including the bucket tag. To enforce these settings, use the FUSE mount option `-o default_permissions`.
-   * - **FUSE kernel cache configuration**
-     -
-   * - ``-o kernel_cache``
-     - This method caches file data across ``open``; i.e. disables flushing of the file data cache on every ``open``. Without this option (and neither ``direct_io``), data is cached before the next ``open`` so a ``read``  syscall may not initiate a ``read`` operation.
-   * - ``-o auto_cache``
-     - Enables automatic flushing of the data cache on open(). The cache is only flushed if the modification  based on modification times (off).
-   * - ``-o entry_timeout=T``
-     - Sets the kernel cache timeout for names (1.0s).
-   * - ``-o negative_timeout=T``
-     - Sets the kernel cache timeout for a negative lookup (file not found) (0.0s).
-   * - ``-o attr_timeout=T``
-     - Sets the kernel cache timeout for attributes (1.0s).
-   * - ``-o ac_attr_timeout=T``
-     - Sets the kernel cache timeout for checking if ``-o auto_cache`` should flush file data on ``open``.
-```
-
-% * - ``-o max_read=N``
-
-% - Set maximum size of read requests (default is infinite).
-
-% * - ``-o hard_remove``
-
-% - Immediate removal (don't hide files).
-
-% * - ``-o use_ino``
-
-% - Use inode numbers.
-
-% * - ``-o readdir_ino``
-
-% - Try to fill in d_ino in readdir.
-
-% * - ``-o direct_io``
-
-% - Use direct I/O.
 
 #### Object Mount Mount commands
 
 Once a Object Mount Mount is set up, you can use the following commands to manage it.
 
-``` 
-.. list-table:: Object Mount Mount commands
-   :widths: 40 60
-   :header-rows: 1
-
-   * - Command
-     - Description
-   * - ``--list``
-     - Lists your active Object Mount Mounts. You can also the use the Linux utility ``mount`` directly.
-
-       Example usage:
-
-       .. code-block:: console
-
-          cuno mount --list
-   * - ``--unmount`` / ``-u``
-     - Unmounts a Object Mount Mount from the specified mount path. You can also use the Linux utility ``umount`` directly.
-
-       Example usage:
-
-       .. code-block:: console
-
-          cuno mount --unmount <path to mount>
-   * - ``--unmount-kill`` / ``-U``
-     - Unmounts a Object Mount Mount from the specified mount path and kills the fum process. You can also use the Linux utility ``umount`` directly.
-
-       Example usage:
-
-       .. code-block:: console
-
-          cuno mount --unmount-kill <path to mount>
-```
+| Command | Description |
+|---------|-------------|
+| `--list` | Lists your active Object Mount Mounts. You can also use the Linux utility `mount` directly.<br><br>Example usage:<br>```console<br>cuno mount --list<br>``` |
+| `--unmount` / `-u` | Unmounts an Object Mount Mount from the specified mount path. You can also use the Linux utility `umount` directly.<br><br>Example usage:<br>```console<br>cuno mount --unmount <path to mount><br>``` |
+| `--unmount-kill` / `-U` | Unmounts an Object Mount Mount from the specified mount path and kills the fum process. You can also use the Linux utility `umount` directly.<br><br>Example usage:<br>```console<br>cuno mount --unmount-kill <path to mount><br>``` |
 
 #### Mount on boot
 
@@ -467,18 +306,6 @@ When using Object Mount Direct Inteception in FlexMount mode, most "local" paths
   (cuno) $ ls $HOME/object_storage_mount/s3/<bucket>/<path>
   ```
 
-% You can also use the ``--flex`` option when *mounting* to both mount and launch a Object Mount-enabled shell with the correct options/parameters. This can be helpful when repeatedly using the same mount location, as the mount will be created if it's not already present, but the mount will not be re-created if it already exists.
-
-% .. warning::
-
-% The mount is not unmounted when the shell is exited, so this method is not suitable for arbitrary use.
-
-% .. code-block:: console
-
-% $ cuno mount --flex "$HOME/my-object-storage"
-
-% (cuno) $ ls ``$HOME/my-object-storage/s3/<bucket>/<path>``
-
 ### Advantages
 
 1. Speed: where interception is possible, Object Mount in FlexMount mode will be as fast as Object Mount
@@ -486,5 +313,5 @@ When using Object Mount Direct Inteception in FlexMount mode, most "local" paths
 
 ### Disadvantages
 
-1. Set up time: a Object Mount Mount needs to be set up. Consider [setting up the mount at boot](user-guide-mount-on-boot).
+1. Set up time: a Object Mount Mount needs to be set up. Consider [setting up the mount at boot](#mount-on-boot).
 2. Launch is more complicated: each time a Object Mount shell is launched it must be configured to use the mount. This can be worked around by setting up a Object Mount mount on boot, and setting an alias to launch a Object Mount shell with the correct parameters.

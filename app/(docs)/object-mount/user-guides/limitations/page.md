@@ -21,7 +21,7 @@ This document contains technical limitations applying to all Object Mount users.
 ## Direct interception
 
 Direct interception (using Object Mount CLI or `LD_PRELOAD`) does not currently support SUID binaries, or certain packaged apps like [Snap](https://ubuntu.com/core/services/guide/snaps-intro), [AppImage](https://appimage.org/), or [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications. Future updates are planned to address this.
-If you need to use such apps, prefer to use [user-guide-object-mount-mount](../user-guides/configuration#ownership-and-permissions) or [user-guide-object-mount-flexmount](../user-guides/basic#object-mount-flex-mount).
+If you need to use such apps, prefer to use [user-guide-object-mount-mount](../user-guides/basic#object-mount-mount) or [user-guide-object-mount-flexmount](../user-guides/basic#object-mount-flex-mount).
 
 ## Maximum object size
 

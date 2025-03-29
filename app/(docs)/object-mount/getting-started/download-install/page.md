@@ -18,18 +18,7 @@ All of our releases are [available on GitHub](https://github.com/cunoFS/cunoFS/r
 
 ## Licenses and activation
 
-When installing, you will have the option for a 14-day trial of Object Mount Professional. You don't need to register or activate Object Mount during the trial period. 
-To continue using Object Mount beyond the trial period, you must [register online](https://cuno.io/register) and activate your license.
-
-
-{% callout type="note"  %}
-Trials are only to be used once per user/organisation. If installing inside a cloud instance or container, you should register and activate an appropriate license manually.
-
-Register [online](https://cuno.io/register) for a free personal-use license or Professional, Educational or Enterprise evaluation. Contact [sales@storj.io](mailto:sales@storj.io) when you're ready for a quote.
-
-All free licenses (including evaluations) let you use Professional-tier features for 14 days, and thereafter you will be limited to the [Personal](mailto:sales@storj.io) tier of usage. 
-See the [pricing page](mailto:sales@storj.io) for more information about pricing, licenses and the available features on each tier.
-{% /callout %}
+[Register](mailto:sales@storj.io) and activate your license.
 
 ### Activating your license
 

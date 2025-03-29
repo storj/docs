@@ -74,39 +74,29 @@ Furthermore, Direct Interception (even when using the Object Mount CLI) requires
 To help work around these limitations, we provide steps below on how to use `locate`.
 
 1. Create a new database, which we call `cunoloc.db`:
-
-   ``` 
-   .. tabs::
-
-        .. group-tab:: **Using Object Mount Mount**
-
-            Assuming you have a Object Mount Mount set up at ``~/my-object-storage``, you can use ``updatedb`` directly to crawl all paired buckets from all your object storage providers:
-
-            .. code-block:: console
-
-                sudo updatedb -U ~/my-object-storage -o cunoloc.db
-
-            .. warning::
-
-                The mount location should not change (``~/my-object-storage`` in the example above), because it will be written into the database created.
-
-        .. group-tab:: **Using Direct Interception**
-
-            Run ``updatedb`` with the workarounds for sudo:
-
-            #.  Launch a Object Mount shell:
-
-                .. code-block:: console
-
-                    $ cuno
-
-            #.  Run ``updatedb`` inside the shell, using a cloud path in the directory format:
-
-                .. code-block:: console
-
-                    (cuno) $ sudo --preserve-env /bin/bash -c "export LD_PRELOAD=$LD_PRELOAD && updatedb -U /cuno/<s3/az/gs>/<bucket> -o cunoloc.db"
-
-   ```
+{% tabs %}
+{% tab label="Using Object Mount Mount" %}
+Assuming you have a Object Mount Mount set up at ``~/my-object-storage``, you can use ``updatedb`` directly to crawl all paired buckets from all your object storage providers:
+```console
+sudo updatedb -U ~/my-object-storage -o cunoloc.db
+```
+{% callout type="warning"  %}
+The mount location should not change (``~/my-object-storage`` in the example above), because it will be written into the database created.
+{% /callout %}
+{% /tab %}
+{% tab label="Using Direct Interception" %}
+ Run ``updatedb`` with the workarounds for sudo:
+ ```shell
+ # terminal
+ cuno
+ ```
+ 
+ Run ``updatedb`` inside the shell, using a cloud path in the directory format:
+```console
+(cuno) $ sudo --preserve-env /bin/bash -c "export LD_PRELOAD=$LD_PRELOAD && updatedb -U /cuno/<s3/az/gs>/<bucket> -o cunoloc.db"
+```
+{% /tab %}
+{% /tabs %}
 
 2. Change the database ownership back to your current user:
 

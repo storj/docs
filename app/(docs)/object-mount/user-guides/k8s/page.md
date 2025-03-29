@@ -23,8 +23,8 @@ helm install Object Mount-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi
   --set credsToImport="{<credentials-1>,<credential-2>, ... ,<credentials-N>}"
 ```
 
-- `--set Object MountLicense.license`: (required) Object Mount license \[[more details](mailto:sales@storj.io/)\]
-- `--set credsToImport`: (optional) cloud credentials \[[more details](getting-started-credentials)\]
+- `--set Object MountLicense.license`: (required) Object Mount license [[more details](mailto:sales@storj.io/)]
+- `--set credsToImport`: (optional) cloud credentials [[more details](../getting-started/configuring-credentials)]
 
 3. Display the status of the Object Mount CSI Driver resources:
 
@@ -70,8 +70,6 @@ The Object Mount CSI Driver support the following strategies:
 To allocate storage statically, define one or more `PV` ([PersistentVolume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)) providing the bucket details and options:
 
 ```yaml
-:caption: '``PV`` manifest defined by cluster admin'
-
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -96,8 +94,6 @@ spec:
 Then, define a `PVC` ([PersistentVolumeClaim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)):
 
 ```yaml
-:caption: '``PVC`` manifest defined by cluster admin'
-
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -115,8 +111,6 @@ spec:
 Finally, cluster users can mount the `PVC`:
 
 ```yaml
-:caption: '``Pod`` manifest defined by cluster user'
-
 apiVersion: v1
 kind: Pod
 metadata:
@@ -141,8 +135,6 @@ spec:
 To allocate storage dynamically, define a [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) providing the bucket details and options:
 
 ```yaml
-:caption: '``StorageClass`` manifest defined by cluster admin'
-
 apiVersion: storage.K8s.io/v1
 kind: StorageClass
 metadata:
@@ -164,8 +156,6 @@ provisioner: cunofs.csi.com
 Then, define a `PVC` which has a reference to the `StorageClass`:
 
 ```yaml
-:caption: '``PVC`` manifest defined by cluster admin'
-
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -182,8 +172,6 @@ spec:
 Cluster users can mount the `PVC` similarly to the static allocation case:
 
 ```yaml
-:caption: '``Pod`` manifest defined by cluster user'
-
 apiVersion: v1
 kind: Pod
 metadata:
@@ -206,8 +194,6 @@ spec:
 Alternatively, cluster users can create a generic inline volume which doesn't require a `PVC`:
 
 ```yaml
-:caption: '``Pod`` manifest defined by cluster user'
-
 apiVersion: v1
 kind: Pod
 metadata:
@@ -276,39 +262,16 @@ helm install cunofs-csi-chart <path-to-chart>
 
 Available options:
 
-``` 
-.. list-table::
-    :widths: 30 50 20
-    :header-rows: 1
-
-    * - Yaml Value
-      - Description
-      - Default Value
-    * - ``driverName``
-      - Optionally change the name of the deployed driver. Only useful if you want to deploy several instances of the driver.
-      - ``cunofs.csi.com``
-    * - ``cunofsCSIimage.pullPolicy``
-      - Specifies how the docker image is deployed onto the Node and Controller. Only useful to change if self-hosting the docker image.
-      - ``Always``
-    * - ``cunofsCSIimage.name``
-      - Specifies the Object Mount CSI docker image. Only useful to change if self-hosting the docker image under a different name (Note: do not include the version here).
-      - ``cunofs/cunofs_csi``
-    * - ``cunofsCSIimage.version``
-      - Specifies the docker image's version. No need to change it unless you have a good reason to.
-      - <equal to chart version>
-    * - ``cunofsLicense.license``
-      - The license used for activating Object Mount on the Driver. It needs to be a valid Professional or Enterprise license.
-      - <empty>
-    * - ``credsToImport``
-      - Yaml array that you can populate with your s3/az/gs credential files.
-      - <emtpy>
-    * - ``rbac.useRBAC``
-      - Enables out of the box support for RBAC clusters (deploys the required ClusterRole/ClusterRoleBinding).
-      - ``true``
-    * - ``eks.iam_arn``
-      - On Amazon EKS, associates IAM role to ``ServiceAccount``.
-      - <empty>
-```
+| Yaml Value | Description | Default Value |
+|------------|-------------|---------------|
+| `driverName` | Optionally change the name of the deployed driver. Only useful if you want to deploy several instances of the driver. | `cunofs.csi.com` |
+| `cunofsCSIimage.pullPolicy` | Specifies how the docker image is deployed onto the Node and Controller. Only useful to change if self-hosting the docker image. | `Always` |
+| `cunofsCSIimage.name` | Specifies the Object Mount CSI docker image. Only useful to change if self-hosting the docker image under a different name (Note: do not include the version here). | `cunofs/cunofs_csi` |
+| `cunofsCSIimage.version` | Specifies the docker image's version. No need to change it unless you have a good reason to. | <equal to chart version> |
+| `cunofsLicense.license` | The license used for activating Object Mount on the Driver. It needs to be a valid Professional or Enterprise license. | <empty> |
+| `credsToImport` | Yaml array that you can populate with your s3/az/gs credential files. | <empty> |
+| `rbac.useRBAC` | Enables out of the box support for RBAC clusters (deploys the required ClusterRole/ClusterRoleBinding). | `true` |
+| `eks.iam_arn` | On Amazon EKS, associates IAM role to `ServiceAccount`. | <empty> |
 
 ## PersistentVolume options
 
@@ -317,71 +280,36 @@ Note that due to K8s parameter passing design decisions, the boolean parameters 
 For this reason, please use `"true"` and `"false"` instead of `true` and `false`.
 {% /callout %}
 
-``` 
-.. list-table::
-    :widths: 50 50
-    :header-rows: 1
 
-    * - Yaml Value
-      - Description
-    * - ``metadata.name``
-      - Can be any legal, unique name
-    * - ``spec.capacity.storage``
-      - This value is ignored, but is required to be set by the CSI specification
-    * - ``spec.csi.driver``
-      - Set this to the name of the CSI driver you deployed which is ``cunofs.csi.com`` by default
-    * - ``spec.csi.volumeHandle``
-      - Name of the volume, needs to be unique
-    * - ``spec.accessModes``
-      - We support ``ReadWriteOncePod``, ``ReadWriteOnce``, ``ReadOnlyMany``, ``ReadWriteMany``. ``ReadWriteMany`` requires Object Mount Fusion for write consistency, but works in any mode
-    * - ``spec.csi.volumeAttributes.root``
-      - This is the cloud URI tht will be mounted to the target mountpath. If not specified, you can access s3, az and gz through the target + ``/az`` or ``/gs`` or ``/s3`` directories
-    * - ``spec.csi.volumeAttributes.posix``
-      - Set it to ``"true"`` to enforce strict posix mode for Object Mount
-    * - ``spec.csi.volumeAttributes.allow_root``
-      - Set it to ``"true"`` to allow *only* the root user to access the mount. Overrides ``allow_other``
-    * - ``spec.csi.volumeAttributes.allow_other``
-      - Set it to ``"true"`` to allow all users to use the mount (recommended)
-    * - ``spec.csi.volumeAttributes.auto_restart``
-      - Set it to ``"true"`` to automatically restart the Object Mount mount if an error occurs
-    * - ``spec.csi.volumeAttributes.readonly``
-      - Set it to ``"true"`` to mount the volume as read only
-    * - ``spec.csi.volumeAttributes.CUNO_OPTIONS``
-      - Sets the ``CUNO_OPTIONS`` of the ``cuno mount``
-    * - ``spec.csi.volumeAttributes.CUNO_LOG``
-      - Sets the ``CUNO_LOG`` of the ``cuno mount``
-    * - ``spec.csi.volumeAttributes.fusion_pvc``
-      - Enables Object Mount Fusion on the ``PV`` with the input as the backing ``PVC``
-```
+| Yaml Value | Description |
+|------------|-------------|
+| `metadata.name` | Can be any legal, unique name |
+| `spec.capacity.storage` | This value is ignored, but is required to be set by the CSI specification |
+| `spec.csi.driver` | Set this to the name of the CSI driver you deployed which is `cunofs.csi.com` by default |
+| `spec.csi.volumeHandle` | Name of the volume, needs to be unique |
+| `spec.accessModes` | We support `ReadWriteOncePod`, `ReadWriteOnce`, `ReadOnlyMany`, `ReadWriteMany`. `ReadWriteMany` requires Object Mount Fusion for write consistency, but works in any mode |
+| `spec.csi.volumeAttributes.root` | This is the cloud URI that will be mounted to the target mountpath. If not specified, you can access s3, az and gz through the target + `/az` or `/gs` or `/s3` directories |
+| `spec.csi.volumeAttributes.posix` | Set it to `"true"` to enforce strict posix mode for Object Mount |
+| `spec.csi.volumeAttributes.allow_root` | Set it to `"true"` to allow *only* the root user to access the mount. Overrides `allow_other` |
+| `spec.csi.volumeAttributes.allow_other` | Set it to `"true"` to allow all users to use the mount (recommended) |
+| `spec.csi.volumeAttributes.auto_restart` | Set it to `"true"` to automatically restart the Object Mount mount if an error occurs |
+| `spec.csi.volumeAttributes.readonly` | Set it to `"true"` to mount the volume as read only |
+| `spec.csi.volumeAttributes.CUNO_OPTIONS` | Sets the `CUNO_OPTIONS` of the `cuno mount` |
+| `spec.csi.volumeAttributes.CUNO_LOG` | Sets the `CUNO_LOG` of the `cuno mount` |
+| `spec.csi.volumeAttributes.fusion_pvc` | Enables Object Mount Fusion on the `PV` with the input as the backing `PVC` |
 
 ## StorageClass options
 
-``` 
-.. list-table::
-    :widths: 50 50
-    :header-rows: 1
-
-    * - Yaml Value
-      - Description
-    * - ``metadata.name``
-      - Can be any name as long as it's unique
-    * - ``provisioner``
-      - The name of the driver, by default: ``cunofs.csi.com``
-    * - ``reclaimPolicy``
-      - ``Retain`` will not delete the generated ``PVs`` and their storage when the ``PVCs`` go out of scope, ``Delete`` will
-    * - ``parameters.cloud-type``
-      - Can be ``s3``, ``az`` or ``gs``
-    * - ``parameters.bucket``
-      - The bucket used to create volumes
-    * - ``parameters.bucket-subdir``
-      - Optional. The subdirectory of the bucket where the ``PVCs`` will get generated. Can be nested subdirectories like "dir/other_dir/yet_another_dir"
-    * - ``parameters.{posix, allow_root, allow_other, auto_restart, readonly, CUNO_OPTIONS, CUNO_LOG}``
-      - These options will be passed down to the generated ``PV`` and behave the same way as described in the ``PV`` options
-    * - ``parameters.fusionStorageClass``
-      - Tells Object Mount Fusion to use the given ``StorageClass`` to allocate backing ``PVs``
-```
-
-% _fusion_csi_support
+| Yaml Value | Description |
+|------------|-------------|
+| `metadata.name` | Can be any name as long as it's unique |
+| `provisioner` | The name of the driver, by default: `cunofs.csi.com` |
+| `reclaimPolicy` | `Retain` will not delete the generated `PVs` and their storage when the `PVCs` go out of scope, `Delete` will |
+| `parameters.cloud-type` | Can be `s3`, `az` or `gs` |
+| `parameters.bucket` | The bucket used to create volumes |
+| `parameters.bucket-subdir` | Optional. The subdirectory of the bucket where the `PVCs` will get generated. Can be nested subdirectories like "dir/other_dir/yet_another_dir" |
+| `parameters.{posix, allow_root, allow_other, auto_restart, readonly, CUNO_OPTIONS, CUNO_LOG}` | These options will be passed down to the generated `PV` and behave the same way as described in the `PV` options |
+| `parameters.fusionStorageClass` | Tells Object Mount Fusion to use the given `StorageClass` to allocate backing `PVs` |
 
 # Object Mount Fusion Support
 
@@ -402,8 +330,6 @@ Then, refer to the `PVC`'s name in the `spec.csi.volumeAttributes.fusion_pvc` pa
 The Object Mount CSI Driver will mount the `PV` to itself and bind the two filesystems.
 
 ```yaml
-:caption: '``PV``/``PVC`` pairs defined by cluster admin'
-
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -449,8 +375,6 @@ Simply deploy a backing `StorageClass` and refer to it in the Object Mount `Stor
 The Object Mount CSI Driver will use it to generate and delete backing `PVs` alongside Object Mount `PVs` and bind them as needed.
 
 ```yaml
-:caption: '``StorageClass`` manifests defined by cluster admin'
-
 ---
 apiVersion: storage.k8s.io/v1
 kind: StorageClass

@@ -8,7 +8,7 @@ metadata:
     Debian Installation Instructions
 ---
 
-1. Download the installer. By downloading you are agreeing to the terms of the [End User License Agreement](https://cuno.io/cunoFS-EULA). Click to download the latest version of the [self-extracting package for Debian](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_amd64_glibc_deb.run) from your browser, or run the command:
+1. Download the installer. By downloading you are agreeing to the terms of the [End User License Agreement](https://www.storj.io/legal/terms-of-use). Click to download the latest version of the [self-extracting package for Debian](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_amd64_glibc_deb.run) from your browser, or run the command:
 
    ```console
    wget https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_amd64_glibc_deb.run

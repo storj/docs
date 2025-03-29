@@ -107,7 +107,7 @@ OrbStack does not currently work with the  native/host ``cuno-mac`` utility.
 {% /tab %}
 {% /tabs %}
 
-2. Download the installer. By downloading you are agreeing to the terms of the [End User License Agreement](https://cuno.io/cunofs-EULA). Click to download the [Scripted Installer](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno-glibc-installer.run).
+2. Download the installer. By downloading you are agreeing to the terms of the [End User License Agreement](https://www.storj.io/legal/terms-of-use). Click to download the [Scripted Installer](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno-glibc-installer.run).
 
 3. Install the package onto your Mac directly, or inside a Linux container:
 {% tabs %}

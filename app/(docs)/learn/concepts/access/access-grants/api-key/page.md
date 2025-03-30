@@ -20,7 +20,7 @@ Storj make it easy to share access to objects securely and privately. You don't 
 
 ## About API Keys
 
-For a more complete review of Macaroons, please check out [the Google paper](https://ai.google/research/pubs/pub41892). This documentation will provide enough information to effectively use the access management and object sharing functionality of Storj, but is not intended to be an exhaustive explanation on the full functionality of Macaroons.
+For a more complete review of Macaroons, please check out [the Google paper](https://research.google/pubs/macaroons-cookies-with-contextual-caveats-for-decentralized-authorization-in-the-cloud/). This documentation will provide enough information to effectively use the access management and object sharing functionality of Storj, but is not intended to be an exhaustive explanation on the full functionality of Macaroons.
 
 Although this documentation uses the terms “API Key” and “Macaroon” interchangeably, only the term “Access Grant” is referenced on the service, through the libraries, and in the documentation. The API Key is embedded inside of an Access Grant, and is not something you need to manage separately.
 

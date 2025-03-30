@@ -33,15 +33,17 @@ The Access Grant screen allows you to create or delete Access Grants, generate c
 
 1. You need to have a Storj account and Uplink CLI installed. See [](docId:HeEf9wiMdlQx9ZdS_-oZS)
 
-2. To start, proceed through the initial steps of creating a new Access Grant.
+2. The project should be configured to use a manual managed encryption (see [](docId:aitie6rohXai9uuv))
 
-3. Navigate to "Access Keys" page and click the **New Access Key** button, then type an access name and choose **API Key** as an Access type.
+3. To start, proceed through the initial steps of creating a new Access Grant.
 
-4. On the next step, select either **Full Access** or **Advanced** if you want to choose the permissions, buckets, and set an expiry date for this access key.
+4. Navigate to "Access Keys" page and click the **New Access Key** button, then type an access name and choose **API Key** as an Access type.
 
-5. Once you create the access key, copy and save the **Satellite Address** and **API Key** in a safe place, or download them as they will only appear once.
+5. On the next step, select either **Full Access** or **Advanced** if you want to choose the permissions, buckets, and set an expiry date for this access key.
 
-6. Make sure you've already [](docId:hFL-goCWqrQMJPcTN82NB) and run `uplink setup`.
+6. Once you create the access key, copy and save the **Satellite Address** and **API Key** in a safe place, or download them as they will only appear once.
+
+7. Make sure you've already [](docId:hFL-goCWqrQMJPcTN82NB) and run `uplink setup`.
 
    {% code-group %}
 
@@ -63,9 +65,9 @@ The Access Grant screen allows you to create or delete Access Grants, generate c
    For anyone who has previously configured an Uplink, please use a named access. If you want to replace the default access, you need to either [](docId:b4-QgUOxVHDHSIWpAf3hG) and use the [](docId:9MIN1usU8WPUY2212Y-_S)command with`--force` flag to import it, or use the[](docId:9MIN1usU8WPUY2212Y-_S)command with `--force` flag to create an Access Grant in CLI and import it to the specified access in the local store of Uplink.
    {% /callout %}
 
-7. Follow the prompts. When asked for your API Key, enter it (you should have saved it in step 5 above).
+8. Follow the prompts. When asked for your API Key, enter it (you should have saved it in step 5 above).
 
-8. Generate the Access Grant by running `uplink share` with no restrictions.
+9. Generate the Access Grant by running `uplink share` with no restrictions.
 
    {% callout type="info"  %}
    If you chose an access name, you'll need to specify it in the following command as `--access=name`
@@ -91,7 +93,7 @@ The Access Grant screen allows you to create or delete Access Grants, generate c
    Keep your full-rights Access Grant secret, it contains the encryption key and will enable uploading, downloading or deleting your data from the entire project!
    {% /callout %}
 
-9. Your Access Grant should have been output.
+10. Your Access Grant should have been output.
 
 {% callout type="success"  %}
 The alternative for using the `uplink setup` command and then `uplink access restrict` is to use the `uplink access create` command instead, it will print the Access Grant right away.

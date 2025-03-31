@@ -10,7 +10,7 @@ weight: 10
 ---
 
 
-The Object Mount CSI Driver facilitates seamless integration of your cloud storage services (Amazon S3, Google Cloud, and Azure Cloud) within a Kubernetes cluster. The driver is available through [Helm](https://helm.sh) under `oci://registry-1.docker.io/cunofs/Object Mount-csi-chart`. More information can be found [on docker hub](https://hub.docker.com/r/cunofs/cunofs-csi-chart).
+The Object Mount CSI Driver facilitates seamless integration of your cloud storage services (Amazon S3, Google Cloud, and Azure Cloud) within a Kubernetes cluster. The driver is available through [Helm](https://helm.sh) under `oci://registry-1.docker.io/cunofs/cunofs-csi-chart`. More information can be found [on docker hub](https://hub.docker.com/r/cunofs/cunofs-csi-chart).
 
 ## Install
 
@@ -18,7 +18,7 @@ The Object Mount CSI Driver facilitates seamless integration of your cloud stora
 2. Deploy the Object Mount CSI Driver:
 
 ```shell
-helm install Object Mount-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi-chart \
+helm install cunofs-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi-chart \
   --set Object MountLicense.license="<license-text>"                                   \
   --set credsToImport="{<credentials-1>,<credential-2>, ... ,<credentials-N>}"
 ```
@@ -47,7 +47,7 @@ To ensure that the cloud credentials are passed correctly, please provide them i
 Upgrade to the latest version:
 
 ```shell
-helm upgrade --reuse-values Object Mount-csi-chart 'oci://registry-1.docker.io/cunofs/cunofs-csi-chart'
+helm upgrade --reuse-values cunofs-csi-chart 'oci://registry-1.docker.io/cunofs/cunofs-csi-chart'
 ```
 
 You can append the `--version <version>` to upgrade to a specific version.
@@ -292,7 +292,7 @@ For this reason, please use `"true"` and `"false"` instead of `true` and `false`
 | `spec.csi.volumeAttributes.posix` | Set it to `"true"` to enforce strict posix mode for Object Mount |
 | `spec.csi.volumeAttributes.allow_root` | Set it to `"true"` to allow *only* the root user to access the mount. Overrides `allow_other` |
 | `spec.csi.volumeAttributes.allow_other` | Set it to `"true"` to allow all users to use the mount (recommended) |
-| `spec.csi.volumeAttributes.auto_restart` | Set it to `"true"` to automatically restart the Object Mount mount if an error occurs |
+| `spec.csi.volumeAttributes.auto_restart` | Set it to `"true"` to automatically restart the Object Mount on FUSE if an error occurs |
 | `spec.csi.volumeAttributes.readonly` | Set it to `"true"` to mount the volume as read only |
 | `spec.csi.volumeAttributes.CUNO_OPTIONS` | Sets the `CUNO_OPTIONS` of the `cuno mount` |
 | `spec.csi.volumeAttributes.CUNO_LOG` | Sets the `CUNO_LOG` of the `cuno mount` |
@@ -459,7 +459,7 @@ The credential `Secret` is mounted to the `Node` and the `Controller` through a 
 Not every existing `K8s` optional feature is currently implemented in this driver.
 Please contact [supportdcs@storj.io](mailto:supportdcs@storj.io) for specific feature inquiries.
 
-- Due to the internals of K8s, the Object Mount CSI Driver makes use of `Object Mount mount` as a backend instead of regular `Object Mount`. This means that performance will be high, but not always as high as a regular `Object Mount` installation.
+- Due to the internals of K8s, the Object Mount CSI Driver makes use of `Object Mount on FUSE` as a backend instead of regular `Object Mount`. This means that performance will be high, but not always as high as a regular `Object Mount` installation.
 - Not every `Object Mount` option is currently available for use in the driver. Please refer to the [configuration section](#configuration-section) for the available options.
 - The `ReadWriteMany` access mode doesn't guarantee write consistency without Object Mount Fusion
 - The `Object Mount` CSI Driver currently doesn't support CSI Ephemeral Volumes, raw block volumes, volume snapshotting, volume expansion, volume cloning and volume topology options.

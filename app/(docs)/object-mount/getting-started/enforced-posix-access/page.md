@@ -24,7 +24,7 @@ We can also provide a hybrid-approach, which does both client-side access manage
 ## Key steps
 
 1. Through your object storage provider, generate access credentials with the highest level of permissions that any user or admin could need, including permissions to [edit bucket tags](../user-guides/configuration#using-a-bucket-tag). On a public cloud supporting IAM, you set up an `admin` IAM user with such credentials.
-2. The admin credentials are stored privately and are used to set up a Object Mount Mount in an accessible location.
+2. The admin credentials are stored privately and are used to set up a Object Mount on FUSE in an accessible location.
 3. Users are only told the path to the mount; they are not given access to `cuno` nor to the admin credentials.
 
 {% callout type="warning"  %}
@@ -71,7 +71,7 @@ If you are on S3, to additionally store the POSIX metadata as object metadata on
 as it will slow down Object Mount. For more information, see [user-guide-posix-file-access](../user-guides/configuration#posix-file-access)
 
 {% callout type="note"  %}
-When a bucket tag enabling POSIX File Access is set, Object Mount Direct Interception, along with any Object Mount Mounts/FlexMounts are compelled to operate in POSIX mode while accessing the bucket. However, the mounts will not be able to enfroce POSIX access without the additional `--posix` flag at mount time.
+When a bucket tag enabling POSIX File Access is set, Object Mount Direct Interception, along with any Object Mount on FUSEs/FlexMounts are compelled to operate in POSIX mode while accessing the bucket. However, the mounts will not be able to enfroce POSIX access without the additional `--posix` flag at mount time.
 
 However, Object Mount Direct Interception necessitates read access to object storage credentials, or some other user-accessible way to authenticate with the object storage (e.g. an IAM role on EC2). This implies that Direct Interception is not appropriate for enforcing POSIX, as users can easily circumvent this by using the accessible credentials or IAM role with a tool other than Object Mount (such as awscli or directly through an S3 API library). Since FlexMounts are dependent on Object Mount Direct Interception, they are also unsuitable for use-cases that require POSIX enforcement.
 {% /callout %}

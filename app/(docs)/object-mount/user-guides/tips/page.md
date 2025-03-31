@@ -75,8 +75,8 @@ To help work around these limitations, we provide steps below on how to use `loc
 
 1. Create a new database, which we call `cunoloc.db`:
 {% tabs %}
-{% tab label="Using Object Mount Mount" %}
-Assuming you have a Object Mount Mount set up at ``~/my-object-storage``, you can use ``updatedb`` directly to crawl all paired buckets from all your object storage providers:
+{% tab label="Using Object Mount on FUSE" %}
+Assuming you have a Object Mount on FUSE set up at ``~/my-object-storage``, you can use ``updatedb`` directly to crawl all paired buckets from all your object storage providers:
 ```console
 sudo updatedb -U ~/my-object-storage -o cunoloc.db
 ```

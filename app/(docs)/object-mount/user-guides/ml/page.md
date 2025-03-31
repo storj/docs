@@ -45,7 +45,7 @@ You must also set the following environment variables to enable the Object Mount
 
 In this example, Python will load the Object Mount MLA's `sitecustomize.py` first. The `CUNO_SPEEDUP_PYTHON` environment variable will signal the Object Mount MLA to enable our ML optimizations.
 
-Next, you can use any of the standard ways to enable Object Mount, including Direct Interception and Object Mount Mount.
+Next, you can use any of the standard ways to enable Object Mount, including Direct Interception and Object Mount on FUSE.
 
 ### Using Object Mount Direct Interception
 
@@ -64,9 +64,9 @@ $ cuno
 (cuno) $ python3 demo/verify.py
 ```
 
-### Using Object Mount Mount
+### Using Object Mount on FUSE
 
-To use Object Mount Mount with your object storage data, you will need to configure your Python scripts to look for data inside the mount.
+To use Object Mount on FUSE with your object storage data, you will need to configure your Python scripts to look for data inside the mount.
 
 #### Example usage
 

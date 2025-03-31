@@ -28,7 +28,7 @@ When running in Direct Interception mode, Object Mount will insert itself betwee
 
 ## What actually is Object Mount?
 
-Object Mount is the common back-end system of both our Direct Interception and Object Mount Mount (a modified FUSE mount). It is an architecture and implementation for mapping POSIX file-system concepts to object storage concepts.
+Object Mount is the common back-end system of both our Direct Interception and Object Mount on FUSE (a modified FUSE mount). It is an architecture and implementation for mapping POSIX file-system concepts to object storage concepts.
 
 When the Object Mount CLI is used to launch a new shell, the primary purpose is to start a new shell (whether that's bash, zsh, or whatever else) with `LD_PRELOAD` set to point at `cuno.so`. There is no Object Mount shell binary - it only wraps existing shells with Object Mount pre-loaded.
 

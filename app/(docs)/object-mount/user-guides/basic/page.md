@@ -13,9 +13,9 @@ Object Mount may be loaded in a number of ways, depending on user requirements a
 For program calls to be routed through Object Mount, they must use
 
 - [Directly Intercepted](#direct-interception-with-object-mount-cli) using the `cuno` command line or `LD_PRELOAD` environment variable;
-- or the program must be pointed to a [Object Mount Mount](#object-mount-mount) (a custom FUSE mount) set up using `cuno mount`.
+- or the program must be pointed to a [Object Mount on FUSE](#object-mount-on-fuse) (a custom FUSE mount) set up using `cuno mount`.
 
-There is also [Object Mount FlexMount](#object-mount-flex-mount), which makes use of both Direct Interception and a Object Mount Mount as a fallback.
+There is also [Object Mount FlexMount](#object-mount-flex-mount), which makes use of both Direct Interception and a Object Mount on FUSE as a fallback.
 
 ## Direct Interception with Object Mount CLI
 
@@ -65,7 +65,7 @@ Direct interception uses the `LD_PRELOAD` environment variable so that Object Mo
 |------------|---------------|
 | **Speed**: Dynamic interception offers the best performance. | **Compatibility**: Direct interception does not currently support SUID binaries, [Snaps](https://ubuntu.com/core/services/guide/snaps-intro), [AppArmor](https://ubuntu.com/server/docs/security-apparmor), or [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications. |
 | **Set up time**: This is the default; all you have to do is launch a Object Mount shell with the `cuno` command line utility. No FUSE mount set up is required. | **Activation**: In some cases, it is difficult to enable direct interception or keep it enabled (because of environment variable clobbering or lack of privileges to set use LD_PRELOAD). |
-|  | **Non-technical users**: If Object Mount is being used by many people in an organization, teaching people how to use the Object Mount shell and diagnose if it's working correctly may be less desirable than setting up a Object Mount Mount on their behalf. |
+|  | **Non-technical users**: If Object Mount is being used by many people in an organization, teaching people how to use the Object Mount shell and diagnose if it's working correctly may be less desirable than setting up a Object Mount on FUSE on their behalf. |
 
 ### Usage
 
@@ -114,12 +114,12 @@ To launch a specific shell with Object Mount enabled, use `cuno run`:
 cuno run <shell>
 ```
 
-## Object Mount Mount
+## Object Mount on FUSE
 
-Object Mount Mount allows you to mount an object storage path in a directory within the local file system hierarchy. This allows you and any other user of the mount to access object storage as if it were just another directory.
+Object Mount on FUSE allows you to mount an object storage path in a directory within the local file system hierarchy. This allows you and any other user of the mount to access object storage as if it were just another directory.
 
-Object Mount Mount uses Linux FUSE (Filesystem in Userspace) v3 to mount an object storage path in a directory within the file system hierarchy.
-Due to the nature of FUSE file systems, Object Mount Mount is usually less performant than Direct Interception using Object Mount CLI. Consider using Object Mount CLI or the userspace library (described in [user-guide-ldpreload](../user-guides/advanced#user-mode-library)) if speed is the primary objective.
+Object Mount on FUSE uses Linux FUSE (Filesystem in Userspace) v3 to mount an object storage path in a directory within the file system hierarchy.
+Due to the nature of FUSE file systems, Object Mount on FUSE is usually less performant than Direct Interception using Object Mount CLI. Consider using Object Mount CLI or the userspace library (described in [user-guide-ldpreload](../user-guides/advanced#user-mode-library)) if speed is the primary objective.
 
 {% callout type="note"  %}
 The `--posix` option requires that a FUSE package be installed on the system.
@@ -127,14 +127,14 @@ The `--posix` option requires that a FUSE package be installed on the system.
 
 ### Advantages
 
-1. **Compatibility:** use a Object Mount Mount when extensively using Object Mount with a variety of operating systems, applications or when compatibility is a particular concern.
+1. **Compatibility:** use a Object Mount on FUSE when extensively using Object Mount with a variety of operating systems, applications or when compatibility is a particular concern.
 2. **Simple usage:** after a mount is set up, scripts only need to be changed to point at it, without any further changes to the workflow. No environment variables need to be set, and no Object Mount-wrapped shell has to be launched.
-3. **Greater admin control:** a centralised Object Mount Mount can be set up by an admin, without giving users any credentials. This allows the admin to abstract away the concepts of object storage entirely from users.
+3. **Greater admin control:** a centralised Object Mount on FUSE can be set up by an admin, without giving users any credentials. This allows the admin to abstract away the concepts of object storage entirely from users.
 4. When launching the `cuno` binary is not possible (limited cases, e.g. an automation engine without the required features).
 
 ### Disadvantages
 
-1. You cannot use URI paths like "s3://bucket1/foo" directly when using a Object Mount mount. To convert such a path to be usable, you need to replace the URI prefix (`s3://`) with the path to your mount.
+1. You cannot use URI paths like "s3://bucket1/foo" directly when using a Object Mount on FUSE. To convert such a path to be usable, you need to replace the URI prefix (`s3://`) with the path to your mount.
 
 ### Usage and options
 
@@ -144,7 +144,7 @@ cuno [cuno-options] mount [mount-options] <mount-path>
 
 There are various options that can be specified, including
 
-- [Object Mount Mount options](#usage-and-options)
+- [Object Mount on FUSE options](#usage-and-options)
 - [Object Mount options for the mount's Object Mount subsystem](#options-to-configure-the-mount-s-object-mount-subsystem)
 - [FUSE options](#fuse-options)
 
@@ -166,7 +166,7 @@ These options must come AFTER the verb `mount`.
 | `--posix` | Enables setting and enforcing access permissions, symbolic and hard links, users, groups, etc. Can be used with default permissions. Implicitly sets `-o allow_other`. This option is ideally used with a mount that is only on a single bucket, e.g. `cuno mount --root s3://<bucket> --posix <mount-path>`. You should also be using `cuno creds setposix s3://examplebucket true` to enable POSIX handling of the bucket consistently when Direct Interception or a FlexMount is used. |
 | `<FUSE option>` | Options that are specific to the FUSE mount operation. These options are passed on to `fum` ([fusermount3](https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html)). Not to be confused with Object Mount subsystem options which use the same `-o` syntax. See below for some of these. See user-guide-cuno-mount-fuse-options. |
 | `--no-allow-root` | Do not allow root to access the mount (allowed by default). Disables support for SUID binaries, Snap, AppArmor, and Flatpak applications. |
-| `--auto-restart` | Automatically restarts Object Mount Mount if problems occur during execution. |
+| `--auto-restart` | Automatically restarts Object Mount on FUSE if problems occur during execution. |
 | `--mkdir` | Automatically creates the mount point directory if it does not exist. |
 | `--debug` | Enables debug output (same as `cuno mount -o debug`). |
 | `--dev-logs` | Enabled debug logging to `/tmp/fuse.logs` |
@@ -241,15 +241,15 @@ Some of these are provided using the same `-o` syntax as the `cuno -o` options, 
 | `-o ac_attr_timeout=T` | Sets the kernel cache timeout for checking if `-o auto_cache` should flush file data on `open`. |
 
 
-#### Object Mount Mount commands
+#### Object Mount on FUSE commands
 
-Once a Object Mount Mount is set up, you can use the following commands to manage it.
+Once a Object Mount on FUSE is set up, you can use the following commands to manage it.
 
 | Command | Description |
 |---------|-------------|
-| `--list` | Lists your active Object Mount Mounts. You can also use the Linux utility `mount` directly.<br><br>Example usage:<br>```console<br>cuno mount --list<br>``` |
-| `--unmount` / `-u` | Unmounts an Object Mount Mount from the specified mount path. You can also use the Linux utility `umount` directly.<br><br>Example usage:<br>```console<br>cuno mount --unmount <path to mount><br>``` |
-| `--unmount-kill` / `-U` | Unmounts an Object Mount Mount from the specified mount path and kills the fum process. You can also use the Linux utility `umount` directly.<br><br>Example usage:<br>```console<br>cuno mount --unmount-kill <path to mount><br>``` |
+| `--list` | Lists your active Object Mount on FUSEs. You can also use the Linux utility `mount` directly.<br><br>Example usage:<br>```console<br>cuno mount --list<br>``` |
+| `--unmount` / `-u` | Unmounts an Object Mount on FUSE from the specified mount path. You can also use the Linux utility `umount` directly.<br><br>Example usage:<br>```console<br>cuno mount --unmount <path to mount><br>``` |
+| `--unmount-kill` / `-U` | Unmounts an Object Mount on FUSE from the specified mount path and kills the fum process. You can also use the Linux utility `umount` directly.<br><br>Example usage:<br>```console<br>cuno mount --unmount-kill <path to mount><br>``` |
 
 #### Mount on boot
 
@@ -259,13 +259,13 @@ You can add mount commands to `/etc/fstab` to automount on start up.
 
 Object Mount FlexMount is for when the speed of direct interception is preferred whenever it is possible to use, but wider-support for different contexts and types of applications is also required.
 
-FlexMount is used by setting up a Object Mount Mount and then accessing the cloud using Object Mount CLI always "through" the mount path. Object Mount will recognise that the path is a mount and use direct interception where possible for faster access. It will naturally fall back to the Object Mount Mount for anything that cannot be directly intercepted.
+FlexMount is used by setting up a Object Mount on FUSE and then accessing the cloud using Object Mount CLI always "through" the mount path. Object Mount will recognise that the path is a mount and use direct interception where possible for faster access. It will naturally fall back to the Object Mount on FUSE for anything that cannot be directly intercepted.
 
 ### Usage
 
 A FlexMount is set up as follows:
 
-1. First, set up a Object Mount Mount, with a `cloudroot` set:
+1. First, set up a Object Mount on FUSE, with a `cloudroot` set:
 
    ```console
    $ mkdir "$HOME/my-object-storage"
@@ -291,7 +291,7 @@ The `-flex` option can also be used with `cuno run` to run a single command/scri
 cuno run --flex "$HOME/my-object-storage" bash -c "touch $HOME/object_storage_mount/s3/<bucket>/newfile"
 ```
 
-The `-flex` option is synonymous with the `-o cloudrootover=exact -o cloudroot="<mountpoint>"` option, which is used to tell Object Mount to intercept paths that exactly match the cloudroot setting, and to handle them using the Object Mount Mount.
+The `-flex` option is synonymous with the `-o cloudrootover=exact -o cloudroot="<mountpoint>"` option, which is used to tell Object Mount to intercept paths that exactly match the cloudroot setting, and to handle them using the Object Mount on FUSE.
 
 When using Object Mount Direct Inteception in FlexMount mode, most "local" paths are intercepted but not actioned upon, because they can be handled by the local file system. The `cloudrootover` setting is telling Object Mount to intercept local paths that match the cloudroot setting, and to prioritise itself handling them over the mount. This means that whenever a path is recognised as the cloudroot, it can be more efficiently handled in user-space by the Direct Inteception/`LD_PRELOAD` library. That path recognition can be done in two ways:
 
@@ -309,9 +309,9 @@ When using Object Mount Direct Inteception in FlexMount mode, most "local" paths
 ### Advantages
 
 1. Speed: where interception is possible, Object Mount in FlexMount mode will be as fast as Object Mount
-2. Support: support for all POSIX applications, as anything that cannot be directly intercepted falls through to the Object Mount Mount.
+2. Support: support for all POSIX applications, as anything that cannot be directly intercepted falls through to the Object Mount on FUSE.
 
 ### Disadvantages
 
-1. Set up time: a Object Mount Mount needs to be set up. Consider [setting up the mount at boot](#mount-on-boot).
-2. Launch is more complicated: each time a Object Mount shell is launched it must be configured to use the mount. This can be worked around by setting up a Object Mount mount on boot, and setting an alias to launch a Object Mount shell with the correct parameters.
+1. Set up time: a Object Mount on FUSE needs to be set up. Consider [setting up the mount at boot](#mount-on-boot).
+2. Launch is more complicated: each time a Object Mount shell is launched it must be configured to use the mount. This can be worked around by setting up a Object Mount on FUSE on boot, and setting an alias to launch a Object Mount shell with the correct parameters.

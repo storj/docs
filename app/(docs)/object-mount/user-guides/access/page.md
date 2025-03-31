@@ -127,7 +127,7 @@ Use hard-linking to trigger a more efficient cloud-only copy mechanism within a 
 
 ### POSIX mode
 
-Symbolic links can be created (using `ln --symbolic` or `ln -s`) between local and cloud objects in either direction under POSIX mode (see [user-guide-Object-Mount-mount](../user-guides/basic#object-mount-mount)).
+Symbolic links can be created (using `ln --symbolic` or `ln -s`) between local and cloud objects in either direction under POSIX mode (see [user-guide-object-mount-on-fuse](../user-guides/basic#object-mount-on-fuse)).
 
 Hard links can be created (using `ln`) between cloud objects in the {strong}`same` bucket under POSIX mode.
 

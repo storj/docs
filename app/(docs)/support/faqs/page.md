@@ -91,6 +91,7 @@ You can learn more under Concepts for [](docId:CBMEVO2vA2lDZ_BVuZ9aP) and [](doc
 Storj is a secure and private object storage service. While there are several different ways to interact with the service, including an S3 compatible gateway, CLI, developer library and tools like FileZilla, Rclone, Restic, Duplicati and more, you are responsible for keeping your encryption keys safe.
 
 You can learn more under [](docId:yI4q9JDB3w01xEkFWA4_z) and [](docId:KEt1PX_a8sbmwGXI4IhT_)
+See also [](docId:aitie6rohXai9uuv)
 
 ## When do you create an Access Grant in Satellite UI and when do you use the CLI?
 

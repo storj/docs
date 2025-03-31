@@ -110,11 +110,11 @@ rsync -aP --delete /mnt/storj/storagenode/orders/ /mnt/storj2/storagenode-new/or
 rsync -aP --delete /mnt/storj/storagenode/storage/ /mnt/storj2/storagenode-new/storage/
 ```
 
-10\. Now you can copy `config.yaml` file and `revocation.db` to the new location:
+10\. Now you can copy `config.yaml` file and `revocations.db` to the new location:
 
 ```shell
 cp /mnt/storj/storagenode/config.yaml /mnt/storj2/storagenode-new/
-cp /mnt/storj/storagenode/revocation.db /mnt/storj2/storagenode-new/revocation.db
+cp /mnt/storj/storagenode/revocations.db /mnt/storj2/storagenode-new/revocations.db
 ```
 
 11\. After you copied over all the necessary files, update your `--mount` parameters in your[](docId:HaDkV_0aWg9OJoBe53o-J). For our example, it will look like this (we only show a partial example of the new`--mount` parameter lines, not the entire `docker run` command!):

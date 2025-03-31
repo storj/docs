@@ -15,7 +15,7 @@ Create S3 credentials in the Storj console:
 
 6. Provide Access encryption Information
    {% callout type="warning"  %}
-   In order to see the data uploaded to your bucket in the Storj console, you must unlock the bucket with the same encryption passphrase as the credentials.
+   If you have opted out of [Storj-managed passphrases](docId:aitie6rohXai9uuv) for the project you must unlock the bucket with your passphrase. In order to see the data uploaded to your bucket in the Storj console, you must unlock the bucket with the same encryption passphrase as the credentials.
    {% /callout %}
 
    - **Use the current passphrase**: this is default option

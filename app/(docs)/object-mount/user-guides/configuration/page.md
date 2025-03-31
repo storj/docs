@@ -216,7 +216,7 @@ This is not "secure" in the sense that Direct Interception mode requires the use
 
 #### Enabling POSIX for a Object Mount on FUSE
 
-If a bucket doesn't have POSIX mode already set, you can use the option `--posix` when mounting a [Object Mount on FUSE](../user-guides/basic#object-mount-mount) to enable fine-grained control over ownership and permissions and have them enforced. If a bucket's POSIX mode tag is set, but the `--posix` flag is not, the bucket's setting will apply but the permissions will not be enforced by the mount.
+If a bucket doesn't have POSIX mode already set, you can use the option `--posix` when mounting a [Object Mount on FUSE](../user-guides/basic#object-mount-on-fuse) to enable fine-grained control over ownership and permissions and have them enforced. If a bucket's POSIX mode tag is set, but the `--posix` flag is not, the bucket's setting will apply but the permissions will not be enforced by the mount.
 
 If you are mounting for yourself and others, mount the bucket in a location that is accessible to the users who need access to the files. This can be a shared location, or a location that is only accessible to the user who needs access.
 

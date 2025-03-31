@@ -12,7 +12,7 @@ metadata:
 
 By default, Object Mount is configured for [Core File Access](../getting-started/configuration-modes#core-file-access) which does not write additional Object Mount metadata to your buckets. Once you’re up and running, you can change the mode of operation to better suit your requirements.
 
-For program calls to be routed through Object Mount, they must be either [directly intercepted](#direct-interception-with-object-mount-cli) using the `cuno` command line; or pointed at a [Object Mount on FUSE](#object-mount-mount) (a custom FUSE mount) set up using `cuno mount`. 
+For program calls to be routed through Object Mount, they must be either [directly intercepted](#direct-interception-with-object-mount-cli) using the `cuno` command line; or pointed at a [Object Mount on FUSE](#object-mount-on-fuse) (a custom FUSE mount) set up using `cuno mount`. 
 There is also [Object Mount FlexMount](#object-mount-flex-mount), which makes use of both Direct Interception and a Object Mount on FUSE as a fallback.
 
 {% callout type="note"  %}
@@ -156,7 +156,7 @@ ls ~/my-object-storage/s3/<bucket>/<path>
 {% /tabs %}
 
 
-For directions on unmounting, configuration options and further information, see the [user guide section on Object Mount on FUSE](../user-guides/basic#object-mount-mount).
+For directions on unmounting, configuration options and further information, see the [user guide section on Object Mount on FUSE](../user-guides/basic#object-mount-on-fuse).
 
 ## Object Mount FlexMount
 

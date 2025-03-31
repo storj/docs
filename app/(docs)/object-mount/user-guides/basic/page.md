@@ -13,7 +13,7 @@ Object Mount may be loaded in a number of ways, depending on user requirements a
 For program calls to be routed through Object Mount, they must use
 
 - [Directly Intercepted](#direct-interception-with-object-mount-cli) using the `cuno` command line or `LD_PRELOAD` environment variable;
-- or the program must be pointed to a [Object Mount on FUSE](#object-mount-mount) (a custom FUSE mount) set up using `cuno mount`.
+- or the program must be pointed to a [Object Mount on FUSE](#object-mount-on-fuse) (a custom FUSE mount) set up using `cuno mount`.
 
 There is also [Object Mount FlexMount](#object-mount-flex-mount), which makes use of both Direct Interception and a Object Mount on FUSE as a fallback.
 

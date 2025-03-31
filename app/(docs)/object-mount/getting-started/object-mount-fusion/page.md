@@ -274,7 +274,7 @@ Example: `cuno fusion /dev/sdf/fusion-store s3://bucket/fusion-store`
 
 #### Mount the Object Mount Fusion filesystem after binding
 
-Object Mount Fusion is set up and accessed through a Object Mount on FUSE. To do this, additional options must be used when creating a [Object Mount on FUSE](../user-guides/basic#object-mount-mount).
+Object Mount Fusion is set up and accessed through a Object Mount on FUSE. To do this, additional options must be used when creating a [Object Mount on FUSE](../user-guides/basic#object-mount-on-fuse).
 
 If you have already bound a directory to a cloud location, you only need to use the `--root` option to specify the path to the attached-storage backing directory in order to use the mount as a Fusion mount:
 
@@ -380,7 +380,7 @@ cuno mount --root "/mnt/fast/fusion-store" "$HOME/my-fusion-filesystem"
 {% /tab %}
 {% /tabs %}
 
-For instructions on unmounting, see [user-guide-unmount](../user-guides/basic#object-mount-mount-commands).
+For instructions on unmounting, see [user-guide-unmount](../user-guides/basic#object-mount-on-fuse-commands).
 
 ## Using the Object Mount Fusion filesystem
 

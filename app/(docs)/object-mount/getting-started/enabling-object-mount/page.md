@@ -12,8 +12,8 @@ metadata:
 
 By default, Object Mount is configured for [Core File Access](../getting-started/configuration-modes#core-file-access) which does not write additional Object Mount metadata to your buckets. Once you’re up and running, you can change the mode of operation to better suit your requirements.
 
-For program calls to be routed through Object Mount, they must be either [directly intercepted](#direct-interception-with-object-mount-cli) using the `cuno` command line; or pointed at a [Object Mount Mount](#object-mount-mount) (a custom FUSE mount) set up using `cuno mount`. 
-There is also [Object Mount FlexMount](#object-mount-flex-mount), which makes use of both Direct Interception and a Object Mount Mount as a fallback.
+For program calls to be routed through Object Mount, they must be either [directly intercepted](#direct-interception-with-object-mount-cli) using the `cuno` command line; or pointed at a [Object Mount on FUSE](#object-mount-on-fuse) (a custom FUSE mount) set up using `cuno mount`. 
+There is also [Object Mount FlexMount](#object-mount-flex-mount), which makes use of both Direct Interception and a Object Mount on FUSE as a fallback.
 
 {% callout type="note"  %}
 If you have a specialised use case, follow the relevant quick start guide:
@@ -103,11 +103,11 @@ See [user-guide-cloud-paths](../user-guides/access) for more information, option
 See [User Guide: Direct Interception with Object Mount CLI](../user-guides/basic#direct-interception-with-object-mount-cli) for additional information, including [how it works](../user-guides/basic#how-it-works), 
 as well as the [benefits and drawbacks](../user-guides/basic#advantages-and-disadvantages) of using Object Mount in this way.
 
-## Object Mount Mount
+## Object Mount on FUSE
 
-Object Mount Mount allows you to mount an object storage path in a directory within the local file system hierarchy. This allows you (and any other user with access to the mount) to access object storage as if it were just another local directory.
+Object Mount on FUSE allows you to mount an object storage path in a directory within the local file system hierarchy. This allows you (and any other user with access to the mount) to access object storage as if it were just another local directory.
 
-Object Mount Mount is a FUSE file system that routes calls through the Object Mount object storage back-end. Due to the nature of FUSE file systems, this is usually less performant than Direct Interception. However, you can still expect great performance.
+Object Mount on FUSE is a FUSE file system that routes calls through the Object Mount object storage back-end. Due to the nature of FUSE file systems, this is usually less performant than Direct Interception. However, you can still expect great performance.
 
 ### Usage
 
@@ -156,19 +156,19 @@ ls ~/my-object-storage/s3/<bucket>/<path>
 {% /tabs %}
 
 
-For directions on unmounting, configuration options and further information, see the [user guide section on Object Mount Mount](../user-guides/basic#object-mount-mount).
+For directions on unmounting, configuration options and further information, see the [user guide section on Object Mount on FUSE](../user-guides/basic#object-mount-on-fuse).
 
 ## Object Mount FlexMount
 
 Use Object Mount FlexMount for the widest compatibility and support (including SUID binaries, Snap, AppImage and FlatPak applications using FUSE), combined with the speed of Direct Interception when possible.
 
-FlexMount is used by setting up a Object Mount Mount and then accessing the cloud using Object Mount CLI always "through" the mount path. Object Mount will recognise that the path is a mount and use direct interception where possible for faster access. It will naturally fall back to the Object Mount Mount for anything that cannot be directly intercepted.
+FlexMount is used by setting up a Object Mount on FUSE and then accessing the cloud using Object Mount CLI always "through" the mount path. Object Mount will recognise that the path is a mount and use direct interception where possible for faster access. It will naturally fall back to the Object Mount on FUSE for anything that cannot be directly intercepted.
 
 ### Usage
 
 A FlexMount is set up as follows:
 
-1. First, set up a Object Mount Mount:
+1. First, set up a Object Mount on FUSE:
 
    ```console
    $ mkdir "$HOME/my-object-storage"
@@ -199,4 +199,4 @@ For more information and configuration options, see the [user guide section on O
 
 ## Enabling Object Mount in other environments
 
-For information on setting up Docker containers with Object Mount pre-loaded, automatically setting up a Object Mount Mount at boot, and other containerisation and HPC use-cases, see [Advanced Loading](../user-guides/advanced).
+For information on setting up Docker containers with Object Mount pre-loaded, automatically setting up a Object Mount on FUSE at boot, and other containerisation and HPC use-cases, see [Advanced Loading](../user-guides/advanced).

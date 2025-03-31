@@ -15,7 +15,7 @@ Object Mount is a scalable, high-performance POSIX compatibility layer that lets
 
 Object Mount is Linux software: there's a Object Mount Command Line Interface (Object Mount CLI), `cuno`, providing the highest performance and most straightforward way to interact with object storage. This works through a user-mode library, `cuno.so`, which intercepts (both dynamic and static) applications using [LD_PRELOAD] functionality and fast dynamic binary instrumentation.
 
-Object Mount can also be used with our modified [FUSE] mount solution, [Object Mount Mount](./user-guides/basic#object-mount-mount), providing wider support for applications where the [Object Mount CLI cannot be used](./user-guides/limitations#direct-interception).
+Object Mount can also be used with our modified [FUSE] mount solution, [Object Mount on FUSE](./user-guides/basic#object-mount-on-fuse), providing wider support for applications where the [Object Mount CLI cannot be used](./user-guides/limitations#direct-interception).
 
 To match the best performance with the widest support, consider the hybrid solution: [Object Mount FlexMount](./user-guides/basic#object-mount-flex-mount).
 

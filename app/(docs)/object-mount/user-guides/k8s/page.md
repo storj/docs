@@ -459,7 +459,7 @@ The credential `Secret` is mounted to the `Node` and the `Controller` through a 
 # Limitations
 
 Not every existing `K8s` optional feature is currently implemented in this driver.
-Please contact [supportdcs@storj.io](mailto:supportdcs@storj.io) for specific feature inquiries.
+Please contact us via our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) for specific feature inquiries.
 
 - Due to the internals of K8s, the Object Mount CSI Driver makes use of `Object Mount on FUSE` as a backend instead of regular `Object Mount`. This means that performance will be high, but not always as high as a regular `Object Mount` installation.
 - Not every `Object Mount` option is currently available for use in the driver. Please refer to the [configuration section](#configuration-section) for the available options.

@@ -11,7 +11,7 @@ weight: 12
 
 There are some general ideas presented in [user-guide-core-concepts](../user-guides/core-concepts) that should help inform usage of object storage with your software. For example, object storage is not very good for high IOPS work loads, so prefer to use [Object Mount Fusion](Object Mount-fusion-guide) for that use-case.
 
-The following are some applications for which we have additional guidance when using then in combination with Object Mount. If you have more to add to the list, let us and the community know on our [forum](https://forum.storj.io).
+The following are some applications for which we have additional guidance when using then in combination with Object Mount. If you have more to add to the list, let us and the community know at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).
 
 ## Applications
 
@@ -37,7 +37,7 @@ While ``ffmpeg`` works, it may be slow for the following use-cases:
 
 - Writing to object storage, if the task requires many randomly-placed writes during an upload. For example, for a large mp4 file being written with the flags ``-movflags +faststart``.
 
-- Reading from object storage, a complex filterchain where multiple subtitle streams are being read from the same input file. (This will be improved soon! Be the first to find out by contacting [supportdcs@storj.io](mailto:supportdcs@storj.io>))
+- Reading from object storage, a complex filterchain where multiple subtitle streams are being read from the same input file. (This will be improved soon! Be the first to find out by contacting our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new))
 
 - Reading from object storage, files that contain title screen and extra credit scenes can be slow to start.
 

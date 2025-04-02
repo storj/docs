@@ -125,7 +125,7 @@ Now it is time to tell Kerberos where to store videos (your Storj bucket) and ho
 
 5.  **Region** this is not relevant for Storj or an edge deployment and can be left blank
 
-6.  **Hostname** is the [](docId:yYCzPT8HHcbEZZMvfoCFa)for your Storj bucket's region (for example, **"gateway.us1.storjshare.io"**)
+6.  **Hostname** is the [](docId:yYCzPT8HHcbEZZMvfoCFa) for your Storj bucket's region (for example, **"gateway.storjshare.io"**)
 
 7.  Under **Storj Credentials**, enter the **Access Key** and **Secret Key** you saved earlier when creating your access credentials.
 

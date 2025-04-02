@@ -11,4 +11,4 @@ weight: 1
 
 The ideas presented here are intended to familiarise you with our approach to object storage.
 
-See [Getting Stared Core Concepts](../getting-started/intro)
+See [Getting Started Core Concepts](../getting-started/intro)

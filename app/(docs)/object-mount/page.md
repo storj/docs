@@ -12,7 +12,7 @@ Object Mount lets you interact with object storage as if it were a fast native f
 
 New to Object Mount and want to try it out? Check out our [Getting Started](object-mount/getting-started/intro) guide.
 
-Find us on [storj.io](https://storj.io) for product information, benchmarks and case studies. Contact us on [sales@storj.io](mailto:sales@storj.io) for product related queries.
+Find us on [storj.io](https://storj.io) for product information, benchmarks and case studies. Contact us [here](https://www.storj.io/fuse-filesystem) for product related queries.
 
 If interested in a free trial license, please schedule a discovery call [here](https://meetings.hubspot.com/tom1581/storj-object-mount-discovery-meeting?uuid=7d69a8eb-87d2-4971-aef9-9ea2b1073e7a).
 

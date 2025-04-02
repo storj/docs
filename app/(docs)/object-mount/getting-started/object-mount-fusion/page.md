@@ -9,7 +9,7 @@ metadata:
 
 ## Overview
 {% callout type="warning"  %}
-Object Mount Fusion is currently in `BETA`. Your [feedback](https://forum.storj.io/) and [bug reports](https://github.com/storj/storj) will help us improve it.
+Object Mount Fusion is currently in `BETA`. Your feedback via our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) will help us improve it.
 {% /callout %}
 
 Object Mount Fusion is way to upgrade high-performance attached storage solutions like Amazon Elastic File System (EFS) with the throughput of object storage. 
@@ -421,4 +421,4 @@ Check that access, modification and migration are working as expected. We recomm
 
 NB: You can set the ``CUNO_DEBUG`` environment variable to ``trace``, or ``debug`` at the time of mounting.
 
-Not seeing what you expect? Get in touch on our public [Community forum](https://forum.storj.io/) or get in touch privately at [supportdcs@storj.io](mailto:supportdcs@storj.io).
+Not seeing what you expect? Contact us at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).

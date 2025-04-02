@@ -14,6 +14,8 @@ New to Object Mount and want to try it out? Check out our [Getting Started](obje
 
 Find us on [storj.io](https://storj.io) for product information, benchmarks and case studies. Contact us on [sales@storj.io](mailto:sales@storj.io) for product related queries.
 
+If interested in a free trial license, please schedule a discovery call [here](https://meetings.hubspot.com/tom1581/storj-object-mount-discovery-meeting?uuid=7d69a8eb-87d2-4971-aef9-9ea2b1073e7a).
+
 Questions? Need help trouble-shooting? Check out our [Community forum](https://forum.storj.io/). If you have a bug to report, help us help you by reporting it on our [GitHub](https://github.com/storj/storj). 
 If you are on the Professional or Enterprise tiers, you can message us directly at [supportdcs@storj.io](mailto:supportdcs@storj.io).
 

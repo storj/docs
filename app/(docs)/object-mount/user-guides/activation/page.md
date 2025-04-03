@@ -10,8 +10,7 @@ weight: 4
 ---
 
 ## Licenses and activation
-
-If interested in a free trial license, please schedule a discovery call [here](https://meetings.hubspot.com/tom1581/storj-object-mount-discovery-meeting?uuid=7d69a8eb-87d2-4971-aef9-9ea2b1073e7a).
+For licensing information, please schedule a [discovery call](https://meetings.hubspot.com/tom1581/storj-object-mount-discovery-meeting?uuid=7d69a8eb-87d2-4971-aef9-9ea2b1073e7a).
 
 ### Interactive
 

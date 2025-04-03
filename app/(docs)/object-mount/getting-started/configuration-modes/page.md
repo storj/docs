@@ -127,5 +127,6 @@ If this is the case, consider:
 - If the client needs to repeatedly read the same parts of a file, consider using client-side caching on a fast local disk.
 
 {% callout type="note"  %}
-Client-side caching on disk for workloads requiring many reads of the same data, such as video editing, is coming soon. Be the first to find out about it by signing up to our mailing list on our [website](https://storj.io) or by emailing us directly at [info@storj.io](mailto:info@storj.io).
+Client-side caching on disk for workloads requiring many reads of the same data, such as video editing, is coming soon.
+Follow along [here](https://www.storj.io/fuse-filesystem).
 {% /callout %}

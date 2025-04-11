@@ -92,7 +92,7 @@ uplink rm --recursive --encrypted --parallelism 30 sj://my-bucket
 
 To remove object versions from the bucket even if the encryption phrase is lost:
 
-You can [setup uplink](https://storj.dev/learn/tutorials/quickstart-uplink-cli/uploading-your-first-object/set-up-uplink-cli) with the access grant created in advanced mode and all permissions (including required **`BypassGovernanceRetention`** if you also have [Object Lock](docId:gjrGzPNnhpYrAGTTAUaj) enabled in a Governance mode), then you can use this command:
+You can [setup uplink](docId:h3RyJymEIi4gf2S9wVJg8) with the access grant created in advanced mode and all permissions (including required **`BypassGovernanceRetention`** if you also have [Object Lock](docId:gjrGzPNnhpYrAGTTAUaj) enabled in a Governance mode), then you can use this command:
 
 ```shell {% title="uplink" %}
 # link[1:6] docId:hFL-goCWqrQMJPcTN82NB

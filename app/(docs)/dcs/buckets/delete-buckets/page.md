@@ -43,7 +43,7 @@ rclone purge storj:my-bucket
 ```
 
 To remove the bucket with [Object Lock](docId:gjrGzPNnhpYrAGTTAUaj) enabled in a Governance mode and if you know the encryption phrase:
-You need to use [rclone configured with Storj S3](https://storj.dev/dcs/getting-started) credentials with **`List`**, **`Upload`**, **`Download`**, **`Delete`** and **`BypassGovernanceRetention`** permissions in an **Advance** mode:
+You need to use [rclone configured with Storj S3](docId:AsyYcUJFbO1JI8-Tu8tW3) credentials with **`List`**, **`Upload`**, **`Download`**, **`Delete`** and **`BypassGovernanceRetention`** permissions in an **Advance** mode:
 
 ```shell {% title="rclone" %}
 # link[1:6] https://rclone.org/install/

@@ -42,6 +42,20 @@ To remove the not empty bucket even if the encryption phrase is lost:
 rclone purge storj:my-bucket
 ```
 
+To remove the bucket with [Object Lock](docId:gjrGzPNnhpYrAGTTAUaj) enabled in a Governance mode and if you know the encryption phrase:
+You need to use [rclone configured with Storj S3](docId:AsyYcUJFbO1JI8-Tu8tW3) credentials with **`List`**, **`Upload`**, **`Download`**, **`Delete`** and **`BypassGovernanceRetention`** permissions in an **Advance** mode:
+
+```shell {% title="rclone" %}
+# link[1:6] https://rclone.org/install/
+# link[8:12] https://rclone.org/commands/rclone_purge/
+# terminal
+rclone purge us1-gw-mt:my-locked-bucket --header "x-amz-bypass-governance-retention:true"
+```
+
+{% callout type="warning" %}
+Please note, this command do not honor any include/exclude filters or prefixes (subfolders), it will always purge the entire bucket, including bucket itself.
+{% /callout %}
+
 {% /tab %}
 
 {% tab label="aws cli" %}
@@ -74,6 +88,39 @@ To remove objects from the bucket even if the encryption phrase is lost:
 # link[8:9] docId:eavv_906IH-39ylIXq30d
 # terminal
 uplink rm --recursive --encrypted --parallelism 30 sj://my-bucket
+```
+
+To remove object versions from the bucket even if the encryption phrase is lost:
+
+You can [setup uplink](docId:h3RyJymEIi4gf2S9wVJg8) with the access grant created in advanced mode and all permissions (including required **`BypassGovernanceRetention`** if you also have [Object Lock](docId:gjrGzPNnhpYrAGTTAUaj) enabled in a Governance mode), then you can use this command:
+
+```shell {% title="uplink" %}
+# link[1:6] docId:hFL-goCWqrQMJPcTN82NB
+# terminal
+uplink ls --encrypted --recursive --all-versions sj://locked-bucket/ -o json | jq '"uplink rm --encrypted --bypass-governance-retention --version-id " + .versionId + " sj://locked-bucket/" + .key' -r | bash
+```
+
+PowerShell version:
+```powershell {% title="uplink" %}
+# link[3:8] docId:hFL-goCWqrQMJPcTN82NB
+# terminal
+./uplink ls --encrypted --recursive --all-versions sj://locked-bucket/ -o json | %{$o = ($_ | ConvertFrom-Json); ./uplink rm --encrypted --bypass-governance-retention --version-id $o.versionId $("sj://locked-bucket/" + $o.key)}
+```
+
+after that you can delete the bucket:
+```shell {% title="uplink" %}
+# link[1:6] docId:hFL-goCWqrQMJPcTN82NB
+# link[8:9] docId:Wo5-shT0hZDNMeyM1kA12
+# terminal
+uplink rb --force sj://locked-bucket
+```
+
+PowerShell version:
+```powershell {% title="uplink" %}
+# link[3:8] docId:hFL-goCWqrQMJPcTN82NB
+# link[10:11] docId:Wo5-shT0hZDNMeyM1kA12
+# terminal
+./uplink rb --force sj://locked-bucket
 ```
 
 

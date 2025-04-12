@@ -29,7 +29,7 @@ Override the defaults by setting the `CUNO_CREDENTIALS` environment variable.
 
 ### Credential file formats
 
-Credential files are {strong}`plain-text`, with a specific format for each cloud provider.
+Credential files are `plain-text`, with a specific format for each cloud provider.
 
 ### Amazon Web Services S3
 
@@ -172,7 +172,7 @@ cuno creds pair <container_remote_uri> "?<SAS>"
 ```
 
 {% callout type="note"  %}
-The question mark `?` prefix and quotation marks `"` are {strong}`required`.
+The question mark `?` prefix and quotation marks `"` are `required`.
 {% /callout %}
 
 ### Public Access buckets
@@ -188,7 +188,7 @@ Notice `public` is used in the place of the imported credential file name.
 ### Requester Pays buckets
 
 Amazon AWS S3 and Google Cloud Storage offer 'Requester Pays' features for containers.
-In this case, requesters—and {strong}`not` bucket owners—are billed when remote objects are accessed.
+In this case, requesters—and `not` bucket owners—are billed when remote objects are accessed.
 
 By default, Object Mount skips 'Requester Pays' containers when importing a credential file to avoid unexpected charges.
 To enable access to such containers with a previously-imported credential file, run the following command:
@@ -309,7 +309,7 @@ These credentials can be used for accessing AWS S3. Refer to the [Amazon AWS EC2
 Object Mount will automatically detect IAM roles on an EC2 instance, so no further configuration is necessary.
 
 {% callout type="note"  %}
-Combined use of Object Mount managed credentials with IAM Roles in EC2 is {strong}`not currently supported`.
+Combined use of Object Mount managed credentials with IAM Roles in EC2 is `not currently supported`.
 {% /callout %}
 
 ### Google Cloud Storage using environment variable

@@ -19,8 +19,14 @@ The POSIX mode needs to write a hidden file at the root of the bucket that track
 In order for Object Mount to "see" the bucket to be mounted when adding new credentials into cunoFS, the AWS equivalent of ListAllMyBuckets is required. In the absence of ListAllMyBuckets, you can specify what bucket to mount by manually pairing the bucket.
 
 ## Where can I see logs of Object Mount on Windows?
-Logs are available at `C:\Users\(your username)\AppData\Local\cunoFS\cunofs.log` - the default logging level is "error" so changing this to “access,trace" will provide much more verbose logs to better understand what is going on.
+Logs are available at `C:\Users\%username%\AppData\Local\cunoFS\cunofs.log` (or `C:\Users\%username%\AppData\Local\Object Mount\cunofs.log` if you use the latest version of Object Mount) - the default logging level is "error" so changing this to "access,trace" will provide much more verbose logs to better understand what is going on.
 
 ## Where can I see logs of Object Mount on macOS?
-For MacOS the logs are located at:
-`/Users/[username]/Library/Application Support/cunoFS/cunoFS.log`
+For macOS the logs are located at:
+`/Users/$USER/Library/Application Support/cunoFS/cunoFS.log` (or `/Users/$USER/Library/Application Support/Object Mount/cunoFS.log` if use the latest version of Object Mount)
+
+## Where configs and license files are located on Windows?
+For Windows they are located in the same place, to [where logs are stored](#where-can-i-see-logs-of-object-mount-on-windows): `C:\Users\%username%\AppData\Local\cunoFS\license` and the `config.json` file is in the same directory, here the mount/bucket information is kept, i.e. `C:\Users\%username%\AppData\Local\cunoFS\` (or `C:\Users\%username%\AppData\Local\Object Mount\` if you use the latest version of Object Mount)
+
+## Where configs and license files are located on macOS?
+For macOS they are located in the same place, to [where logs are stored](#where-can-i-see-logs-of-object-mount-on-mac-os): `/Users/$USER/Library/Application Support/cunoFS/license` and the `config.json` file is in the same directory, here the mount/bucket information is kept, i.e. `/Users/$USER/Library/Application Support/cunoFS/` (or `/Users/$USER/Library/Application Support/cunoFS/Object Mount/` if you use the latest version of Object Mount)

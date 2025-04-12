@@ -116,7 +116,7 @@ $ ls s3://arn:aws:s3:us-east-1:999999999999:accesspoint:my-access-point-name/<re
 
 ### Symbolic links
 
-By default, symbolic links can {strong}`only` be created (using `ln --symbolic` or `ln -s`) to point {strong}`from` a local system {strong}`to` a cloud location using either the URI or directory format.
+By default, symbolic links can `only` be created (using `ln --symbolic` or `ln -s`) to point `from` a local system `to` a cloud location using either the URI or directory format.
 
 ### Hard links and Server-side copy
 
@@ -129,7 +129,7 @@ Use hard-linking to trigger a more efficient cloud-only copy mechanism within a 
 
 Symbolic links can be created (using `ln --symbolic` or `ln -s`) between local and cloud objects in either direction under POSIX mode (see [user-guide-object-mount-on-fuse](../user-guides/basic#object-mount-on-fuse)).
 
-Hard links can be created (using `ln`) between cloud objects in the {strong}`same` bucket under POSIX mode.
+Hard links can be created (using `ln`) between cloud objects in the `same` bucket under POSIX mode.
 
 {% callout type="warning"  %}
 If the target is deleted or moved, then both symbolic and hard links will break.

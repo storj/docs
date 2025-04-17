@@ -34,7 +34,7 @@ If the LINSTOR controller service restarts, for example, after an upgrade or if 
 linstor encryption enter-passphrase
 ```
 
-{% callout="info" %}
+{% callout type="info" %}
 📝 NOTE: LINSTOR allows for automating the encryption passphrase entry. This is not without security risk implications. Refer to details in the [LINSTOR User Guide](https://linbit.com/drbd-user-guide/linstor-guide-1_0-en/#s-automatic_passphrase).
 {% /callout %}
 

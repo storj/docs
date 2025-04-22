@@ -1,5 +1,5 @@
 ---
-title: Storj Managed vs. User Managed Encryption
+title: Storj Managed vs. Self-Managed Encryption
 docId: aitie6rohXai9uuv
 metadata:
   title: Encryption passphrase management comparison
@@ -7,7 +7,7 @@ metadata:
     Overview of the supported methods for managing an encryption passphrase
     in  a Storj project, and their advantages/disadvantages.
 ---
-When creating a new Storj project, users can choose between **Storj-Managed Encryption** and **Self-Managed Encryption**. Each option offers distinct benefits and tradeoffs. Once selected, the encryption method cannot be changed for that project.
+When creating a new Storj project, users can choose between **Storj Managed Encryption** and **Self-Managed Encryption**. Each option offers distinct benefits and tradeoffs. Once selected, the encryption method cannot be changed for that project.
 
 This page explains the differences between these options to help users determine which approach best suits their needs.
 
@@ -17,7 +17,7 @@ This page explains the differences between these options to help users determine
 * Users who want a streamlined web-based experience similar to other cloud storage providers.
 * Users who need to collaborate with others on the same project without managing passphrases manually.
 
-**Storj Managed Encryption** is best suited to:
+**Self-Managed Encryption** is best suited to:
 * Users who require complete control over their encryption keys.
 * Users with advanced or specialized encryption requirements.
 
@@ -28,7 +28,7 @@ This page explains the differences between these options to help users determine
 * Applies at the project level, ensuring seamless access for all project members.
 * No path encryption and objects are listed in lexicographical order.
 
-## User Managed Encryption
+## Self-Managed Encryption
 
 * Encrypts data using a user-provided passphrase that is **not stored in the satellite's database**.
 * Users must remember and share their passphrase as needed; prompts appear in the browser for certain actions that require the passphrase.

@@ -1,5 +1,5 @@
 ---
-title: Using LINSTOR with Storj for Disaster Recovery
+title: LINSTOR
 docId: 1b4cca3e-05b7-4173-a22d-15e5285830ae
 tags:
   - backup
@@ -8,8 +8,15 @@ metadata:
   description:
     Guide how to store your LINSTOR data on Storj to be able to recover
 ---
+LINSTOR® is an open source configuration management system, developed by LINBIT®, for storage on Linux systems.
+It manages LVM logical volumes, ZFS volumes, or both, on a cluster of nodes.
+It uses DRBD® (also open source software) for replication between different nodes and to provide block storage devices to users and applications, for high availability and disaster recovery use cases.
+
+Because DRBD is a live replication software and not a backup solution, you might want a complimentary solution to create immutable backups.
+LINSTOR allows you to make such backups and then store them, for example, in S3 compatible storage, such as a Storj bucket.
 Storj provides enterprise-grade, globally distributed cloud object storage and can be a drop-in replacement for any S3-compatible object storage.
 
+## Overview of integrating LINSTOR with Storj
 To integrate LINSTOR with Storj, for disaster recovery, you can configure a Storj storage bucket as an S3 remote in LINSTOR. An S3 remote in LINSTOR can be a destination for shipping storage volume snapshots. These snapshots are called backups on the remote S3 storage. You can create snapshots and [ship them to a LINSTOR S3 remote](https://linbit.com/drbd-user-guide/linstor-guide-1_0-en/#s-linstor-snapshots-shipping) either manually, or automatically on a schedule.
 
 When disaster strikes, you can restore data from a Storj backup into your existing LINSTOR cluster, or into another LINSTOR cluster at an off-site DR location.
@@ -35,7 +42,7 @@ linstor encryption enter-passphrase
 ```
 
 {% callout type="info" %}
-📝 NOTE: LINSTOR allows for automating the encryption passphrase entry. This is not without security risk implications. Refer to details in the [LINSTOR User Guide](https://linbit.com/drbd-user-guide/linstor-guide-1_0-en/#s-automatic_passphrase).
+LINSTOR allows for automating the encryption passphrase entry. This is not without security risk implications. Refer to details in the [LINSTOR User Guide](https://linbit.com/drbd-user-guide/linstor-guide-1_0-en/#s-automatic_passphrase).
 {% /callout %}
 
 ## Creating a LINSTOR remote for your Storj S3 storage
@@ -147,7 +154,7 @@ linstor resource delete linstor-sat-0 linstor-sat-1 linstor-sat-2 myres
 ```
 
 {% callout type="warning" %}
-❗ IMPORTANT: Deleting a LINSTOR resource will also delete the data stored in the resource in a way that will require snapshot restoration or data forensics recovery to get back. However, LINSTOR will not delete a resource that is in an InUse state on a satellite node, for example, if the storage resource is mounted within a file system.
+Deleting a LINSTOR resource will also delete the data stored in the resource in a way that will require snapshot restoration or data forensics recovery to get back. However, LINSTOR will not delete a resource that is in an InUse state on a satellite node, for example, if the storage resource is mounted within a file system.
 {% /callout %}
 
 Next, restore the resource from the S3 remote to a single LINSTOR satellite node (`linstor-sat-0` in this example) in your local LINSTOR cluster by entering the following commands. Change the remote, satellite, resource group, and resource names to match your environment.

@@ -107,12 +107,12 @@ PowerShell version:
 ./uplink ls --encrypted --recursive --all-versions sj://locked-bucket/ -o json | %{$o = ($_ | ConvertFrom-Json); ./uplink rm --encrypted --bypass-governance-retention --version-id $o.versionId $("sj://locked-bucket/" + $o.key)}
 ```
 
-after that you can delete the bucket:
+after that you can delete the empty bucket:
 ```shell {% title="uplink" %}
 # link[1:6] docId:hFL-goCWqrQMJPcTN82NB
 # link[8:9] docId:Wo5-shT0hZDNMeyM1kA12
 # terminal
-uplink rb --force sj://locked-bucket
+uplink rb sj://locked-bucket
 ```
 
 PowerShell version:
@@ -120,7 +120,7 @@ PowerShell version:
 # link[3:8] docId:hFL-goCWqrQMJPcTN82NB
 # link[10:11] docId:Wo5-shT0hZDNMeyM1kA12
 # terminal
-./uplink rb --force sj://locked-bucket
+./uplink rb sj://locked-bucket
 ```
 
 

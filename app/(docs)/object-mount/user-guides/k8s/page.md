@@ -19,11 +19,11 @@ The Object Mount CSI Driver facilitates seamless integration of your cloud stora
 
 ```shell
 helm install cunofs-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi-chart \
-  --set Object MountLicense.license="<license-text>"                                   \
+  --set cunofsLicense.license="<license-text>"                                   \
   --set credsToImport="{<credentials-1>,<credential-2>, ... ,<credentials-N>}"
 ```
 
-- `--set Object MountLicense.license`: (required) Object Mount license
+- `--set cunofsLicense.license`: (required) Object Mount license
 - `--set credsToImport`: (optional) cloud credentials [[more details](../getting-started/configuring-credentials)]
 
 For licensing, please schedule a [discovery call](https://meetings.hubspot.com/tom1581/storj-object-mount-discovery-meeting?uuid=7d69a8eb-87d2-4971-aef9-9ea2b1073e7a).
@@ -243,11 +243,11 @@ Download the chart manually:
 helm pull --untar oci://registry-1.docker.io/cunofs/cunofs-csi-chart
 ```
 
-Set the `Object MountLicense.license` variable and import the cloud credentials:
+Set the `cunofsLicense.license` variable and import the cloud credentials:
 
 ```yaml
 # values.yaml file
-Object MountLicense:
+cunofsLicense:
   license: "<your license key>"
 credsToImport:
   - "<credential-1>"

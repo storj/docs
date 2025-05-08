@@ -31,7 +31,7 @@ Storj accepts the following several payment methods:
 
 Once you have created a user account and a project, registered users are required to add a payment method before storing data on Storj. Payment methods are added from the [](docId:Hurx0SirlRp_O5aUzew7_) section of the user interface.
 
-Begin by selecting "Billiing" from the "My Account" dropdown menu at the left bottom corner of your dashboard.
+Begin by selecting "Billing" from the "My Account" dropdown menu at the left bottom corner of your dashboard.
 
 ## Using a Credit Card
 

@@ -55,7 +55,7 @@ You can select to **Add New Payment Method** to add a Card to your account on th
 
 Please provide a valid Card number, expiration date and CVC, then confirm adding a Card with the **Add Credit Card** button. We do not store your card details, they are used to register your Card on [Stripe](https://stripe.com).
 
-There you can use a Google Pay payment method, if you logged in to your Google Account with enabled Google Pay. The Apple Pay payment method is available only in the Safary browser. You can also use a Bank payment method (availability varies by region).
+There you can use a Google Pay payment method, if you logged in to your Google Account with enabled Google Pay. The Apple Pay payment method is available only in the Safari browser. You can also use a Bank payment method (availability varies by region).
 
 ## View a Previous Billing Period and Invoices
 

@@ -15,7 +15,7 @@ metadata:
 ---
 
 {% callout type="info"  %}
-A download can become a chargeable event for 2 times the actual file size if the gateway is running on another cloud provider. We recommend interfacing with the network directly through the [](docId:TC-N6QQVQg8w2cRqvEqEf) or using our [](docId:AsyYcUJFbO1JI8-Tu8tW3).
+A download can become a chargeable event for 2 times the actual file size if the gateway is running on another cloud provider. We recommend interfacing with the network directly through the [](docId:TC-N6QQVQg8w2cRqvEqEf) or using our [Storj-Hosted S3 Compatible Gateway](docId:AsyYcUJFbO1JI8-Tu8tW3).
 {% /callout %}
 
 For a complete list of the supported architectures and API calls for the S3 Gateway, see [](docId:eEZ6hkJK6U7J7SyVwV5Th).

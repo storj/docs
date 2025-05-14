@@ -59,7 +59,7 @@ If you chose an access name, you'll need to specify it in the following command 
 {% code-group %}
 
 ```windows
-./uplink.exe access restrictt --readonly=false
+./uplink.exe access restrict --readonly=false
 ```
 
 ```macos

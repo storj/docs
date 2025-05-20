@@ -15,11 +15,11 @@ How data is logically segmented on the network
 
 ## Hierarchy of Data Storage
 
-**Projects**Projects allow you to invite team members, manage billing, and manage access for various apps or users.
+**Projects** Projects allow you to invite team members, manage billing, and manage access for various apps or users.
 
 **Buckets** Buckets represent a collection of objects. You can upload, download, list, and delete objects of any size or shape.
 
-**Objects**Each object typically includes the data itself, a variable amount of [metadata](https://en.wikipedia.org/wiki/Metadata), and a [globally unique identifier](https://en.wikipedia.org/wiki/Globally_unique_identifier) (Object key) which uniquely identifies the object in a bucket. Objects within buckets are represented by keys, where keys can optionally be listed using the "/" delimiter. Objects are always end-to-end encrypted.
+**Objects** Each object typically includes the data itself, a variable amount of [metadata](https://en.wikipedia.org/wiki/Metadata), and a [globally unique identifier](https://en.wikipedia.org/wiki/Globally_unique_identifier) (Object key) which uniquely identifies the object in a bucket. Objects within buckets are represented by keys, where keys can optionally be listed using the "/" delimiter. Objects are always end-to-end encrypted.
 
 ### Advanced Concepts
 

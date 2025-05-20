@@ -18,7 +18,7 @@ Select what works best for you:
 ## Network Attached Storage (NAS) systems
 
 {% quick-links %}
-{% quick-link title="💻 TrueNAS Storage Node App" href="https://apps.truenas.com/resources/deploy-storj/#installing-the-storj-app" /%}
+{% quick-link title="💻 TrueNAS Storage Node App" href="https://apps.truenas.com/resources/deploy-storj/" /%}
 {% quick-link title="💻 QNAP Storage Node App" href="docId:N-dnnf7HhHcOaavvXjplw" /%}
 
 {% /quick-links %}

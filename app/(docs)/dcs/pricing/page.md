@@ -119,9 +119,9 @@ A user uploads 1PB of one GB objects using multipart upload with a 5MB Part Size
 
 ## Minimum Monthly Billing
 
-Storj has a **minimum monthly charge of $4 per account** for object storage.
+Storj has a **minimum monthly usage fee $5** for all accounts.
 
-This is equivalent to the price of storing 1TB in the Global tier, but the minimum is based on **dollar value, not data volume**. If your total monthly storage cost is less than $4, your bill will be rounded up to meet the minimum charge.
+If your total monthly storage cost is less than $5, your bill will be rounded up to meet the minimum charge.
 
 ### Why is there a minimum?
 
@@ -129,8 +129,8 @@ The minimum helps support consistent service levels and sustainable pricing as t
 
 ### Example Scenarios
 
-- If your usage results in $2.50 of storage charges, your total bill will be rounded up to **$4**.
-- If your usage results in $6 of storage charges, you will be billed **$6** — no change.
+If your monthly usage (storage, bandwidth, and segments) exceeds $5, nothing changes.
+If your usage totals less than $5, your account will be billed the $5 minimum usage fee.
 
 ## Project limits
 

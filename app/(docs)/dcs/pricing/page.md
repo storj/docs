@@ -121,7 +121,7 @@ A user uploads 1PB of one GB objects using multipart upload with a 5MB Part Size
 
 Storj has a **$5 minimum monthly usage fee** for all accounts.
 
-This helps cover the cost of credit card processing and basic operations so we can continue offering fast, secure, and reliable storage—even for small accounts.
+This helps cover the cost of payment processing and basic operations so we can continue offering fast, secure, and reliable storage—even for small accounts.
 
 ### What does this mean for you?
 

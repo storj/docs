@@ -1,6 +1,6 @@
 ---
 title: Delete buckets
-docId: pxdnqsVDjCLZgeEXt2S6x
+docId: b953ae01-9beb-48d3-83f7-2f6c7d07e875
 weight: 1
 metadata:
   title: Deleting Buckets Using Different Tools

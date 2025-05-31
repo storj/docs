@@ -18,7 +18,7 @@ If your free trial is expired and the account is frozen, all operations will be 
 The process to eliminate platform usage starts with deleting all data from the platform, including all objects and buckets. Next, all Access Grants should be deleted. Once this is done, the user should delete all projects (via [**Project settings**](docId:k6QwBZM3hnzxkCuQxLOal)) and the account itself (via **My Account** -> **Settings**).
 
 {% callout type="info" %}
-If you have thousands objects or versions, the bucket deletion could take a lot of time via Storj Console (web UI) due to browsers limitations, so it's recommended to use CLI tools instead, like `uplink` CLI or `rclone`. See [](docId:b953ae01-9beb-48d3-83f7-2f6c7d07e875) for details.
+If you have thousands objects or versions, the bucket deletion could take a lot of time via [](docId:nGzxQBhV8nx5Pukj6O0zT) (web UI) due to browsers limitations, so it's recommended to use CLI tools instead, like `uplink` CLI or `rclone`. See [](docId:b953ae01-9beb-48d3-83f7-2f6c7d07e875) for details.
 {% /callout %}
 
 {% callout type="info"  %}

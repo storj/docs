@@ -1,12 +1,13 @@
 ---
 title: Delete buckets
-docId: pxdnqsVDjCLZgeEXt2S6x
+docId: b953ae01-9beb-48d3-83f7-2f6c7d07e875
 weight: 1
 metadata:
   title: Deleting Buckets Using Different Tools
   description:
     Guide on how to delete Storj buckets using command-line tools or the
-    Storj Console even if the encryption phrase is lost.
+    Storj Console even if the encryption phrase is lost or you have had
+    a Governance Object Lock enabled.
 ---
 
 You can delete a bucket from various command-line tools or the Storj Console.

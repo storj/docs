@@ -59,4 +59,4 @@ The Satellite instance is made up of these components:
 
 - A storage node payment service
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gLz7oZ6M4vakL8WRG8yyx_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gLz7oZ6M4vakL8WRG8yyx_image.png)

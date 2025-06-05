@@ -28,13 +28,13 @@ Storj enables a number of different approaches to partitioning data for tenant i
 
 The encryption scheme uses hierarchically deterministic derived keys for both access and encryption. This makes it very easy to achieve tenant isolation in any of the configurations described below. This model enables tenants to view, interact with and share data within the scope of the defined data tenancy while providing strong security and privacy between tenancies. Figure 1 below describes the process for credential creation.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Arch_Diagram_Access_Mgmt.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Arch_Diagram_Access_Mgmt.png)
 
 _Figure 1: Storj access management configuration sequence diagram_
 
 Storj supports using common application access credentials within a multi-tenant application that provide full tenant isolation or creation of unique access credentials per tenant. Tenants may be configured to use unique encryption passphrases per tenant or hierarchically deterministic derived encryption keys. Note that when using the project per tenant model described below, unique credentials per customer are mandatory. Figure 2 below describes the process for tenant management using hierarchically deterministic derived keys.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Arch_Diagram_Provisioning.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Arch_Diagram_Provisioning.png)
 
 _Figure 2: Remote provisioning sequence diagram for multi-tenant application with hierarchically deterministic derived credentials_
 
@@ -48,7 +48,7 @@ For assistance with design of complex access management models, please contact u
 
 The most straightforward approach to partitioning tenant data with Storj is to assign a separate bucket per tenant. The diagram below provides an example of this model.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Bucket_Per_Tenant.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Bucket_Per_Tenant.png)
 
 With this approach, each tenant would be assigned a bucket that holds its data. This bucket would be given a name that uniquely associates it with the tenant.
 
@@ -75,7 +75,7 @@ Summary of Bucket Per Tenant configuration:
 
 To achieve better scale and overcome some of the limitations of the bucket-per-tenant model, SaaS providers may use object key path prefixes to associate objects with tenants. This approach allows you to scale to a much larger collection of tenants without compromising on the structure or organization of your data partitioning scheme. The diagram below provides an example of this model.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Object_Key_Per_Tenant.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Object_Key_Per_Tenant.png)
 
 Here, you will notice that two tenants are sharing a single bucket. Each tenant has a unique prefix which identifies the objects that belong to that tenant. There is no limit to the number of objects you can store in a bucket or the number of prefixes you can have.
 
@@ -100,7 +100,7 @@ Summary of Object Key Path Prefix per Tenant configuration:
 
 For the maximum level of tenant isolation, the Project per Tenant approach to partitioning tenant data with Storj provides a separate Storj invoice line per tenant and requires unique application access credentials per tenant. The diagram below provides an example of this model.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Project_per_tenant.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Project_per_tenant.png)
 
 This format is most commonly used with Managed Service Providers or Value Added Resellers that are reselling storage as part of a bundled solution. In this structure each Tenant is defined as a Project on the Storj Platform. This model has the highest level of tenant isolation as it is not possible to create a single credential that can perform operations on data in more than one tenancy.
 

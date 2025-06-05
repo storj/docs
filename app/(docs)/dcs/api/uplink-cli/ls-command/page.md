@@ -40,7 +40,7 @@ uplink ls [sj://BUCKET[/PREFIX]] [flags]
 
 _We consider the following object hierarchy throughout these examples:_
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/cvEUiGkZBSQPWr_GwlRLL_ls-example-hierarchy2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/cvEUiGkZBSQPWr_GwlRLL_ls-example-hierarchy2.png)
 
 _We assume the object has been uploaded using a different encryption key than the other objects in the project._
 
@@ -62,7 +62,7 @@ uplink ls
 
 {% /code-group %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/37CrYbSUci3Pdlh1QcuwW_ls-project.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/37CrYbSUci3Pdlh1QcuwW_ls-project.png)
 
 ### List objects in a bucket
 
@@ -82,7 +82,7 @@ uplink ls sj://images
 
 {% /code-group %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/yqXPSB-VzWVfHnSdD0i3A_ls-bucket.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/yqXPSB-VzWVfHnSdD0i3A_ls-bucket.png)
 
 ### List by prefix
 
@@ -102,7 +102,7 @@ uplink ls sj://images/cakes
 
 {% /code-group %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jC9kW-YXQ7fi3xje1o5Vs_ls-prefix.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jC9kW-YXQ7fi3xje1o5Vs_ls-prefix.png)
 
 ### List recursively
 
@@ -122,7 +122,7 @@ uplink ls --recursive
 
 {% /code-group %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EbQXgIH4f3qxT1oP7K9kk_ls-example-hierarchy3.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EbQXgIH4f3qxT1oP7K9kk_ls-example-hierarchy3.png)
 
 ### List encrypted paths of all objects in a bucket
 
@@ -142,6 +142,6 @@ uplink ls sj://recipes --encrypted
 
 {% /code-group %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/CBy2GPMCGBtZtHw7V7PVm_ls-encrypted.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/CBy2GPMCGBtZtHw7V7PVm_ls-encrypted.png)
 
 Notice that since `sj://recipes/cakes/very-secret-recipe.txt` was encrypted with a different key, we cannot view it using regular ls and the default access, but with `--encrypted` we can see that it is indeed stored in sj://recipes

@@ -61,10 +61,10 @@ Vultr’s [“Looking Glass”](https://lax-ca-us-ping.vultr.com/) ping test can
 1. Log into the Signiant Media Shuttle management console: [https://manage.mediashuttle.com/](https://manage.mediashuttle.com/)
 
 1. Go to **Storage** - **Add**
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/signiant/signiant-image3.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/signiant/signiant-image3.png)
 
 1. Select **S3 Compatible**
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/signiant/signiant-image1.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/signiant/signiant-image1.png)
 
 
 1. Select a SDCX server, then enter in all of the S3 information:
@@ -74,7 +74,7 @@ Vultr’s [“Looking Glass”](https://lax-ca-us-ping.vultr.com/) ping test can
    - **Access Key**: your-access-key
    - **Secret Key**: your-secret-key
    - **Access Parameters**: Check **Use SSL** and Bucket Access Style **Virtual Host**
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/signiant/signiant-image4.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/signiant/signiant-image4.png)
 
 1. Assign the newly created storage to the Media Shuttle Portal by clicking **Assign**
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/signiant/signiant-image2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/signiant/signiant-image2.png)

@@ -30,13 +30,13 @@ For a video walkthrough of this process, please see below:
 
 1. Click "Install Manually" and click on the QNAP Package (downloaded above) to install the QNAP Storj application onto the device.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/2_N44-j5CDn6cZiLzoCVG_spaces.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/2_N44-j5CDn6cZiLzoCVG_spaces.png)
 
 1. Hit **accept** when prompted to accept that the application has no official digital signature:
 
 Once the installation is completed, the Storj Storage Node app will be available through the App Center, as well as be visible on the desktop.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1uAYJpLKzzU09nFBE3owp_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1uAYJpLKzzU09nFBE3owp_image.png)
 
 {% callout type="info" title="Don't see the Storj app?" %}
 
@@ -45,33 +45,33 @@ Go to **Control Panel** -> **Privileges**, double click the storage node app and
 
 1. Open the application, and click "Wizard" in the sidebar. You will be prompted with a walkthrough of the application, like so:
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9mKBXGbXoQJ95ywE_mbBL_image.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9mKBXGbXoQJ95ywE_mbBL_image.png)
 
 1. Enter your email address that you would like associated with notifications for your node:
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/kfnmhfsVG_k61weJPvi4a_image.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/kfnmhfsVG_k61weJPvi4a_image.png)
 
 1. Add your [ERC-20 Token Compatible Wallet Address](docId:a045be02-e05a-11ef-9338-6045bd1fa4e3) for payouts.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4nmAYwFJUzivgihR-NruY_image.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4nmAYwFJUzivgihR-NruY_image.png)
 
 1. Configure Storage Allocation, and set the amount of excess storage capacity you would like to share with the network.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LWmWZBADgrai71-5EQDp9_image.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LWmWZBADgrai71-5EQDp9_image.png)
 
 1. Input a selected Storage Directory (which specifies the path where the data will be stored).
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DGiiifk0J5D7xotc04dp9_image.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DGiiifk0J5D7xotc04dp9_image.png)
 
 1. Configure the external [](docId:y0jltT-HzKPmDefi532sd)
 
    This allows the connection for the Storj Network to come in, and communicate with the software running on the NAS.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jZ8twzcfbWd-AnTpKMprj_image.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jZ8twzcfbWd-AnTpKMprj_image.png)
 
 1. Set the location for your node's identity certificate, like so:
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hIJRyypNup8zNmjTzKq7F_image.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hIJRyypNup8zNmjTzKq7F_image.png)
 
 1. Hit **finish**, and you have successfully completed that setup wizard for your QNAP device.
 
@@ -83,7 +83,7 @@ After following the configuration steps above,
 
    Look for the log output, which indicates that the image is running.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/AoZkAsmxNVvt8HkJX-h-K_image.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/AoZkAsmxNVvt8HkJX-h-K_image.png)
 
 1. You have successfully shared your excess capacity on your QNAP Device with the Storj Network.
 

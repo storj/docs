@@ -173,7 +173,7 @@ docker run -it --rm --mount type=bind,source=/path/to/gateway-config-dir/,destin
 
 The satellite address should be entered as \<nodeid>@\<address>:\<port> for example: `12L9ZFwhzVpuEKMUNUqkaTLGzwY9G24tbiigLiXpmZWKwmcNDDs@eu1.storj.io:7777`, or just use the number from the list:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/BirgvyDy2IoOQ47RfoyHZ_self-s3-01.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/BirgvyDy2IoOQ47RfoyHZ_self-s3-01.png)
 
 3\. Choose an access name (this step may not yet be implemented in the version of S3 Gateway you are using - if you don't see this prompt, skip to step 5 below).
 
@@ -181,15 +181,15 @@ The satellite address should be entered as \<nodeid>@\<address>:\<port> for exam
 If you would like to choose your own access name, please be sure to only use lowercase letters. Including any uppercase letters will result in your access name not getting recognized when creating buckets.
 {% /callout %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/6vsa92CZ3AjvuQ0Hfc79__self-s3-02.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/6vsa92CZ3AjvuQ0Hfc79__self-s3-02.png)
 
 4\. Enter the [](docId:OXSINcFRuVMBacPvswwNU) you generated:
 
-![Didn't save your Access token? Simply create another one in the satellite web interface.](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Rw3hYkf0CYKx49aJUyCgU_self-s3-03.png)
+![Didn't save your Access token? Simply create another one in the satellite web interface.](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Rw3hYkf0CYKx49aJUyCgU_self-s3-03.png)
 
 5\. Create and confirm an encryption passphrase, which is used to encrypt your files before they are uploaded:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/r0PGzFlbeZmrAUhoUXuYJ_self-s3-04.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/r0PGzFlbeZmrAUhoUXuYJ_self-s3-04.png)
 
 {% callout type="warning"  %}
 Please note that **Storj Labs does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
@@ -272,7 +272,7 @@ If you want to connect to your S3 Gateway via the network, then you should repla
 
 The gateway should output your S3-compatible endpoint, access key, and secret key.
 
-![Example terminal output](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/3WoImqP2O-QBdVwDK-eHV_self-s3-05.png)
+![Example terminal output](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/3WoImqP2O-QBdVwDK-eHV_self-s3-05.png)
 
 ## Configure AWS CLI to use Gateway ST
 

@@ -29,4 +29,4 @@ uplink ls sj://cakes
 
 Result
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Oi5zbmxWWcTU4hvoxhk_L_listobjects.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Oi5zbmxWWcTU4hvoxhk_L_listobjects.png)

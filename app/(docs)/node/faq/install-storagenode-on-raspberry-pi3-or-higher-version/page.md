@@ -31,7 +31,7 @@ sudo raspi-config
 ```
 Navigate to the **Advanced Options**, then choose **Expand Filesystem**. After a while you should see a  screen like this:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rpi3/mceclip0.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rpi3/mceclip0.png)
 
 When you exit from the `raspi-config`, it will suggest you to reboot. Please do it.
 

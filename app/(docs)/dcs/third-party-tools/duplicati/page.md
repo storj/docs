@@ -29,31 +29,31 @@ To restore a small file, Duplicati has to download the entire block it is contai
 
 1.  On the Duplicati dashboard, click "Add Backup" and select "Configure a new backup"
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/g6qLQzAnaSz4TJGLQXpGg_duplicati.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/g6qLQzAnaSz4TJGLQXpGg_duplicati.png)
 
 2\. Enter a name for this backup. For this example, we'll call it "My Backup Job." The Storj plugin will encrypt all files before they get uploaded. We don't want to encrypt each file twice. Disable the Duplicati encryption.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ferela1Npve8771EbpzNc_duplicatinoencryption-1.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ferela1Npve8771EbpzNc_duplicatinoencryption-1.png)
 
 3\. Click the storage type dropdown and select "Storj (Decentralized Cloud Storage)." The authentication method should be Access Grant (Access Grant). Enter an Access Grant, see [](docId:OXSINcFRuVMBacPvswwNU), bucket, and, optionally, a folder.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/iya_7I3bOi2_y092qX4oy_screenshot-2023-07-17-at-74955-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/iya_7I3bOi2_y092qX4oy_screenshot-2023-07-17-at-74955-am.png)
 
 4\. Next, press "Test Connection."
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4i_ebldc7aonFmT4UCaew_duplicaticonnectiontest-1.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4i_ebldc7aonFmT4UCaew_duplicaticonnectiontest-1.png)
 
 5\. On the next page, we will select the folder we want to backup. For this example, we will use "My Drive."
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/yv6TEEqQIBleZJcpDXlq-_duplicatisourcedata.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/yv6TEEqQIBleZJcpDXlq-_duplicatisourcedata.png)
 
 6\. Now, we will create a schedule. In this example, we will run the backup once every day at 1:00 PM.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/vT1FdQHEBkdjUdIF8FFqn_duplicatischedule.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/vT1FdQHEBkdjUdIF8FFqn_duplicatischedule.png)
 
 7\. On the next page, select the appropriate options for you. Please set the remote volume size to 60MB.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/h4dydfhaEFCzRA-0_OKPU_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/h4dydfhaEFCzRA-0_OKPU_image.png)
 
 ## Recommended Options
 
@@ -68,7 +68,7 @@ To restore a small file, Duplicati has to download the entire block it is contai
 
 8\. Click "Save", and you should see the "My Backup Job" we created on the Duplicati homepage.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ZICEKLKUFj-c9tH_lK8tW_duplicatibackupjob.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ZICEKLKUFj-c9tH_lK8tW_duplicatibackupjob.png)
 
 9\. You can select "Run now" if you would like to do a backup instantly.
 

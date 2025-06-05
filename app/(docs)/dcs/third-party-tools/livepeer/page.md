@@ -25,7 +25,7 @@ To begin, you will need to create a Storj account. If you already an account, go
 
 Navigate to <https://storj.io/signup> to sign up. Enter your full name, email address, and a password, as shown below:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
 ### Install uplink
 
@@ -53,7 +53,7 @@ Create an Access Grant in the Storj web console:
 
 2.  Click “Create Access Grant” under the Access Grant block.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zSzwufHPzUnaoHThKccBx_screenshot-2023-02-28-at-20538-pm.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zSzwufHPzUnaoHThKccBx_screenshot-2023-02-28-at-20538-pm.png)
 
 3\. When the Create Access screen comes up, set specifications according to the following guidelines:
 
@@ -65,7 +65,7 @@ Create an Access Grant in the Storj web console:
 
 - **Buckets:** Feel free to limit the grant to a specific bucket or leave as “All”
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/d49yH5Krbqdh6Sd-vA8k1_screenshot-2023-02-28-at-20757-pm.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/d49yH5Krbqdh6Sd-vA8k1_screenshot-2023-02-28-at-20757-pm.png)
 
 4\. Select "Encrypt My Access"
 
@@ -83,7 +83,7 @@ uplink setup
 
 7\. Copy the access grant from the web console and paste it into the uplink prompt
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DprSGo1J0M5JVqqTqkLnK_screenshot-2023-02-28-at-21135-pm.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DprSGo1J0M5JVqqTqkLnK_screenshot-2023-02-28-at-21135-pm.png)
 
 ### Create a bucket
 

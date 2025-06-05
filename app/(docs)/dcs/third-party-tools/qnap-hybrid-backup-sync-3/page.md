@@ -44,7 +44,7 @@ To integrate your QNAP NAS with your preferred backup solution using HBS 3, you'
 
 1. Create new S3 compatible space.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/qnap-hbs3-backup1.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/qnap-hbs3-backup1.png)
 
 1. Create [Storj S3-compatible credentials](docId:_xWsamBjOsZYyu9xtQCm5#create-s3-credentials)
 
@@ -56,7 +56,7 @@ To integrate your QNAP NAS with your preferred backup solution using HBS 3, you'
    - **Region**: Global
    - **Access key** and **Secret key**: created in the previous step
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/qnap-hbs3-backup2.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/qnap-hbs3-backup2.png)
 
 1. [Create a bucket](docId:pxdnqsVDjCLZgeEXt2S6x) for the "Use specific bucket" option
 
@@ -72,7 +72,7 @@ To integrate your QNAP NAS with your preferred backup solution using HBS 3, you'
 
 1. Enter the bucket name created previously
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/qnap-hbs3-backup4.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/qnap-hbs3-backup4.png)
 
 1. Set Schedule and Options: Configure backup schedule, versioning, encryption, and other options based on your needs.
 

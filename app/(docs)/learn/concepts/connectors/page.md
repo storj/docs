@@ -43,7 +43,7 @@ The Storj Connector Framework is a basic set of utility methods and operations t
 
 Generally, a Storj connector will interface directly with [libuplink](https://pkg.go.dev/storj.io/uplink), our native Go library, which enables you to programmatically interface with Storj. A basic architectural diagram of how a Storj Connector fits into the stack is located below:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/fQgO9I6_fVG25opF3vI1r_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/fQgO9I6_fVG25opF3vI1r_image.png)
 
 ### Get Started - and Monetize OSS!
 

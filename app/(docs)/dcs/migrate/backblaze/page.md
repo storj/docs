@@ -48,19 +48,19 @@ Use your Backblaze account credentials to log in to the Backblaze Management Con
 
 1.  Click `Application Keys` from the left side menu under Accounts
 
-    ![Account application keys](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b2_application_keys.png)
+    ![Account application keys](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b2_application_keys.png)
 
 1.  Click `Add a New Application Key` button
 
-    ![create a b2 application key](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b2_new_application_key.png)
+    ![create a b2 application key](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b2_new_application_key.png)
 
 1.  Populate the name of the key and Click the `Create New Key` button
 
-    ![create new b2 application key](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b2_add_application_key.png)
+    ![create new b2 application key](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b2_add_application_key.png)
 
 1.  Save the `keyID` and `applicationKey` as you'll need those later to configure rclone
 
-    ![b2 application key](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b2_account_key.png)
+    ![b2 application key](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b2_account_key.png)
 
 ### Create Storj Access Grant
 

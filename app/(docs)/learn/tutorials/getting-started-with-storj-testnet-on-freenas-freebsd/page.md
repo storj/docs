@@ -31,17 +31,17 @@ We will create a ZFS dataset and create a new FreeNAS Jail to run a local Storj 
 
 ## Create a new ZFS dataset for store Storj data:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip0.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip0.png)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip1.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip1.png)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip2.png)
 
 ***Figure 1.** Creating a new dataset for storage*
 
 ### Specify options for a new dataset - see **Figure 2**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip3.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip3.png)
 
 ***Figure 2.** Options of the new dataset*
 
@@ -57,66 +57,66 @@ Then click on **Advanced Mode**.
 
 Depend on your HDD pool configuration, you can see the default value for Record Size (in our case 32K) - see **Figure 3**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip4.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip4.png)
 
 ***Figure 3.** Record Size for the Pool*
 
 ## Create a new FreeNAS Jail
 To activate Pool for Jail Manager, just click **CONFIG**. See **Figure 4**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip5.png) ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip6.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip5.png) ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip6.png)
 
 ***Figure 4.** Creation of a new Jail*
 
 Then click **ADD**. Fill in a new Jail name and select the latest FreeBSD release (**Figure 5**)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip7.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip7.png)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip8.png) ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip9.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip8.png) ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip9.png)
 
 ***Figure 5.** Adding a new Jail with parameters*
 
 Select both options - **DHCP Autoconfiguration IPv4** and **VNET** (**Figure 6**)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip10.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip10.png)
 
 ***Figure 6.** DHCP Autoconfiguration IPv4 and VNET*
 
 Check configuration and click **SUBMIT** (**Figure 7**)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip11.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip11.png)
 
 ***Figure 7.** Submit configuration of a new Jail*
 
 Wait until the new Jail has been created, then click the three dots on the right side and specify the mount point inside a Jail to store data (**Figure 8**)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip12.png)
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip13.png) ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip14.png) ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip15.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip12.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip13.png) ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip14.png) ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip15.png)
 
 ***Figure 8.** Mount point*
 
 Select our dataset (we created it earlier with name `Storjv3_data`) as a source and mount point inside a Jail (which will be `storj_data`) as a destination - see **Figure 9**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip16.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip16.png)
 
 ***Figure 9.** Options of mountpoint*
 
 Here is an example - see **Figure 10**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip17.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip17.png)
 
 ***Figure 10.** Example of options for the mountpoint*
 
 Now you can start a Jail - see **Figure 11**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip18.png) ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip19.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip18.png) ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip19.png)
 
 ***Figure 11.** Starting a Jail*
 
 ## Configure the FreeNAS Jail
 Select the three dots on the right side and select **Shell** to access the Jail console - see **Figure 12**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip20.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip20.png)
 
 ***Figure 12.** Starting a Jail shell*
 
@@ -126,7 +126,7 @@ Let’s enable SSH access and allow connections to the Jail for your favorite SS
 sysrc sshd_enable="YES"
 ```
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip21.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip21.png)
 
 ***Figure 13.** Example of the command execution*
 
@@ -144,7 +144,7 @@ nano /etc/ssh/sshd_config
 
 Uncomment `PermitRootLogin` and set to `yes` (see **Figure 14**), then save the file (Press **Ctrl+X** for exit and **Y** for save changes).
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip22.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip22.png)
 
 ***Figure 14.** Changing PermitRootLogin option in the text editor*
 
@@ -162,7 +162,7 @@ passwd
 
 Now you can log in via SSH using login: `root` and **your password** (check the Jail section for the IP address) - see **Figure 15**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip23.png) ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip24.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip23.png) ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip24.png)
 
 ***Figure 15.** IP address for connections to the Jail*
 
@@ -184,7 +184,7 @@ go version
 go env
 ```
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip25.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip25.png)
 
 ***Figure 17.** Example of environment variables for Go*
 
@@ -194,7 +194,7 @@ Add a new user for Storj with Username `storj` and set shell: `bash` - see **Fig
 adduser storj
 ```
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip26.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip26.png)
 
 ***Figure 18.** Adding a new storj user*
 
@@ -211,7 +211,7 @@ Open your `.profile` file and add a global variables as follows at the end of th
 nano /home/storj/.profile
 ```
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip27.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip27.png)
 
 ***Figure 19.** Adding a global variables to the `.profile`*
 
@@ -247,7 +247,7 @@ storj-sim network run
 
 Now the test network is ready and you can see the output like this - see **Figure 20**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip28.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-sim/freeBSD/mceclip28.png)
 
 ***Figure 20.** Example of the output of a local test network*
 

@@ -33,7 +33,7 @@ Our decentralization goals for fundamental infrastructure, such as storage, are 
 
 **​**[](docId:CBMEVO2vA2lDZ_BVuZ9aP): In [coding theory](https://en.wikipedia.org/wiki/Coding_theory), an erasure code is a [forward error correction](https://en.wikipedia.org/wiki/Forward_error_correction) (FEC) code under the assumption of bit erasures (rather than bit errors), which transforms a message of k symbols into a longer message (code word) with n symbols such that the original message can be recovered from a subset of the n symbols. The fraction r = k/n is called the [code rate](https://en.wikipedia.org/wiki/Code_rate). The fraction k’/k, where k’ denotes the number of symbols required for recovery, is called reception efficiency. (Source: <https://en.wikipedia.org/wiki/Erasure_code>).​
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bezZFK_OlDdAc1AcROTNv_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bezZFK_OlDdAc1AcROTNv_image.png)
 
 You can learn more about erasure codes in Storj under the [](docId:CBMEVO2vA2lDZ_BVuZ9aP) section under Concepts.‌
 

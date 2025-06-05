@@ -60,7 +60,7 @@ In this step, we will download and install storagenode. If you have already done
 
 To check the architecture of your computer, open the control panel and type in "system": (Control Panel\System and Security\System). This will open up a window that show the architecture of your system (Figure 4.1). The system architecture in this guide is 64-bit (x64), indicating that the 64-bit version of the storagenode binary should be downloaded (Figure 3.1).
 
-![System architecture check](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/5cb09cc2ed0a8.png)
+![System architecture check](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/5cb09cc2ed0a8.png)
 
 ***Figure 3.1.** System architecture check.*
 
@@ -136,13 +136,13 @@ Adding a DDNS hostname solves the issue of public IP changes. We will add a free
 2. Next select `.ddns.net` in the box to the right.
 3. Click on Sign Up
 
-![Adding our own DDNS hostname](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/dbmW2zZComZnvZfiTlmTZ_image.png)
+![Adding our own DDNS hostname](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/dbmW2zZComZnvZfiTlmTZ_image.png)
 
 ***Figure 4.1.** Adding our own DDNS hostname.*
 
 4. On the sign-up page enter your email, username and password. Make sure to write these details down, we will need them later.
 
-![NoIP registration page](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Xzp-7nDgdp0H2r60KmFvq_image.png)
+![NoIP registration page](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Xzp-7nDgdp0H2r60KmFvq_image.png)
 
 ***Figure 4.2.** NoIP registration page.*
 
@@ -150,39 +150,39 @@ Adding a DDNS hostname solves the issue of public IP changes. We will add a free
 
 6. Now scroll down to where it says How to remote access your device and click on get started with dynamic DNS (**Figure 4.3**).
 
-![The activation page](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Od2QBn9eLu5_O8RpNC1GR_image.png)
+![The activation page](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Od2QBn9eLu5_O8RpNC1GR_image.png)
 
 ***Figure 4.3.** The activation page: click on the large blue box to go to the DDNS hostname setup page.*
 
 7. Clicking on the link should take us to our NoIP dashboard.
 8. Now scroll down to *Dynamic Update Client for Windows (DUC)* and click on Download (**Figure 4.4**). This should take us to the download page where we can download the DUC tool. On the download page click on **Download Now**.
 
-![Dynamic Update Client download](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/5cb09ccb529ec.png)
+![Dynamic Update Client download](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/5cb09ccb529ec.png)
 
 ***Figure 4.4.** Dynamic Update Client download.*
 
 9. After the file downloaded successfully head over to the download folder and double click on the DUCSetup executable.
 10. On the resulting installation window, click on **Agree** - **Install** - **Finish**.
 
-![DUC installation](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/5cb09ccc138d2.png)
+![DUC installation](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/5cb09ccc138d2.png)
 
 ***Figure 4.5.** DUC installation.*
 
 11. The Dynamic Update Client should now open. Enter the details from step (4) above and click on **Sign in** (**Figure 4.6**).
 
-![Dynamic Update Client](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/5cb09ccced623.png)
+![Dynamic Update Client](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/5cb09ccced623.png)
 
 ***Figure 4.6.** Dynamic Update Client.*
 
 12. Once logged in successfully, the Edit groups/Hosts menu should be displayed (Figure 4.7). If not already selected, choose the hostname box and click on save.
 
-![](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/5cb09ccdc5c95.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/5cb09ccdc5c95.png)
 
 ***Figure 4.7.** From the Edit groups/Hosts menu, select the hostname and click on **Save**.*
 
 13. The DUC tool will now come to life (**Figure 4.8**). Next head over to ***File*** - ***Preferences*** and select **Start this application automatically when the user logs on**. In case your computer reboots, DUC will automatically start in the background. This is very handy because if storagenode starts automatically, it will not run into a closed port as DUC is also already running.
 
-![](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/5cb09cce87ccc.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/5cb09cce87ccc.png)
 
 ***Figure 4.8.** DUC once configured correctly.*
 
@@ -192,13 +192,13 @@ Congratulations! You now have a hostname and a dynamic update tool that automati
 
 In this step we will download and configure PIA so that it can be used with storagenode. First we head over to the registration page, this page gives us three payment plan options. If you just want to test out PIA with storagenode, it is advisable to take the One month only plan. On the other hand, if you are serious about running storagenode and plan to rent out a storage space over the long run (the ideal case), the yearly plan at 3.33$/month is much cheaper (**Figure 5.1**)
 
-![Private internet access plans and pricing](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/Screenshot-2025-01-30-124150.png)
+![Private internet access plans and pricing](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/Screenshot-2025-01-30-124150.png)
 
 ***Figure 5.1.** Private internet access plans and pricing.*
 
 Next we select the plan that is best for us and click on **Select plan**. This should open the payment method window (**Figure 5.2**).
 
-![Payment methods and options](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/Screenshot-2025-01-30-124457.png)
+![Payment methods and options](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/Screenshot-2025-01-30-124457.png)
 
 ***Figure 5.2.** Payment methods and options.*
 
@@ -206,7 +206,7 @@ Next we select the plan that is best for us and click on **Select plan**. This 
 Now click on our preferred payment method and proceed to the registration process. Once paid, Private Internet Access will send a few confirmation emails containing the details of our account and the information we will need to login to the app (**Figure 5.3**). The email containing the login information is called *Private Internet Access Account Activated.*
 
 
-![](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/5cb09cd127cd9.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/5cb09cd127cd9.png)
 
 ***Figure 5.3.** Access Account Activation email containing the PIA app username and password.*
 
@@ -215,7 +215,7 @@ Now download the PIA app [here](https://www.privateinternetaccess.com/download)
 * Now add the username and password that was sent to you in the activation email.
 * Next select Start application at login and hit save (**Figure 5.4**).
 
-![](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/5cb09cd204766.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/5cb09cd204766.png)
 
 ***Figure 5.4.** PIA application with the entered username and password provided to us via email.*
 
@@ -242,7 +242,7 @@ In order to add a gateway we head over to the PIA app, which is normally hidden 
 **Note**: we can also launch the app by doing a windows app search for PIA, which allows us to pin the app to the taskbar, making it easier to access in the future.
 {% /callout %}
 
-![](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/5cb09cd2c30c4.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/5cb09cd2c30c4.png)
 
 ***Figure 5.5.** How to enter the PIA settings through the system tray icon.*
 
@@ -252,7 +252,7 @@ Now right click on the system tray icon again (**Figure 5.5**) and click on *
 
 Now hover over the green icon with the mouse, the IP address and port number should appear, note however that it can be delayed a bit so sometimes it does not appear right away as PIA first has to request a port from the gateway which can take some time (**Figure 5.6**).
 
-![](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/5cb09cd4a29f7.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/5cb09cd4a29f7.png)
 
 ***Figure 5.6.** When hovering over the PIA tray icon our new IP and port is shown. We will use the port number of PIA in storagenode.*
 
@@ -359,7 +359,7 @@ The easiest way to manually check if everything is working correctly is to use a
 A green flag should now appear indicating that the PIA port is open for our hostname, indicating that storagenode is successfully connected to the network (**Figure 7.1**).
 
 
-![](https://link.storjshare.io/raw/jwdgkkb45jf3qbxeehfmdu6b23kq/docs/images/PIA-storagenode/5cb09cd619824.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PIA-storagenode/5cb09cd619824.png)
 
 ***Figure 7.1.** When all is working correctly the PIA port should be open for our DDNS*
 

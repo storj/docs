@@ -236,11 +236,11 @@ While Linksharing links are secure, when you use a custom domain the browser is 
 
 Problem: Customers using Cloudflare (or likely anything as a reverse proxy) who have certain TLS settings may see an error. In an effort to improve security and bring users SSL certs without the need for a CDN proxy, we no longer support self-signed certificates for custom domains.
 
-![Cloudflare Invalid SSL Certificate Error](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/dsxcEfc44l_gwzQHRiRKS_167760201695824623.png)
+![Cloudflare Invalid SSL Certificate Error](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/dsxcEfc44l_gwzQHRiRKS_167760201695824623.png)
 
 **Solution: Update your Cloudflare SSL/TLS encryption mode to "Flexible"**
 
-![Cloudflare Flexible SSL/TLS encryption](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Y_EKNdQvTeG-lHQ52HbX9_image.png)
+![Cloudflare Flexible SSL/TLS encryption](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Y_EKNdQvTeG-lHQ52HbX9_image.png)
 
 ### How do I verify my custom domain?
 

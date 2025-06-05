@@ -9,7 +9,7 @@ You can use the STORJ token to buy storage on the Storj network to power apps an
 
 As the number of apps and ecosystems built on the Storj network grows, so too will the number of uses for the STORJ token!
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/mceclip0.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/mceclip0.png)
 
 The billing page for your satellite account offers an option to select your payment method. This is where you would choose "Add STORJ Tokens" which will then show the screen with STORJ deposit address and QR, it accepts only STORJ ERC20 Tokens via L1 (Ethereum) or L2 (zkSync Era only) to in order to be credited to your account in USD equivalent on the sent date.
 

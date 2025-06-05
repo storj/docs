@@ -48,13 +48,13 @@ Once you have your Storj account you can create a bucket for your data to be sto
 1. Log into Bweb Management Console (https://IP-of-server:9180)
 
 1. On the left hand navigation, click **Storage and Media** then **Add New Storage**
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bacula.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bacula.png)
 
 1. From the radio buttons, choose **Select a Storage Dameon...**. Then, in the **Device Type** dropdown, select **Cloud Virtual Disk Changer**. Click **Next**.
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bacula-config-1.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bacula-config-1.png)
 
 1. On the **Copy from existing Storage** dropdown, select **DiskAutoChanger**. The remaining fields automatically populate with information.  Click **Next**.
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bacula-config-2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bacula-config-2.png)
 
 1. Type "storj" or a custom name for **Media Type**.  Then enter values under **Configure your Cloud resource**.
    * **Driver** : "S3"
@@ -65,7 +65,7 @@ Once you have your Storj account you can create a bucket for your data to be sto
    * **Bucket Name**:  The name of the bucket you created in Storj
 
 1. Click the circle-arrow button to test the connectivity, it will turn green if successful.  Then click **Next**.
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bacula-config-3.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bacula-config-3.png)
 
 1. Give this storage resource a name, then hit **Save**.
 

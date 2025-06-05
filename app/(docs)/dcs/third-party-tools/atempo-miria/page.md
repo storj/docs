@@ -82,7 +82,7 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 1. Enter a name for your **Storage Manager**, such as Storj, and the appropriate **Storj service URL** into the **Configuration** part.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zM2lJCGBJZOFUWbZW7fPc_0.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zM2lJCGBJZOFUWbZW7fPc_0.png)
 
 1. Click **Create**.
 
@@ -90,7 +90,7 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 1. If desired, enable the **Data compression** checkbox to optimize the size of data stored in the Object Storage.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/KApbFdOcEAxy0sPeG-Xyr_2.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/KApbFdOcEAxy0sPeG-Xyr_2.png)
 
 1. The new **Storage Manager Container** is ready for data storage.
 

@@ -8,7 +8,7 @@ Storj is globally distributed by default and has [more consistent performance](h
 
 When a download is requested on Storj, the segments located closest to the destination are typically used to satisfy the request as illustrated in the graphic below.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj_download_distributed_cloud.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj_download_distributed_cloud.png)
 
 ## Setting the region
 

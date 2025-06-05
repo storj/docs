@@ -119,14 +119,15 @@ A user uploads 1PB of one GB objects using multipart upload with a 5MB Part Size
 
 ## Minimum Monthly Billing
 
-Storj has a **$5 minimum monthly usage fee** for all accounts.
+Storj has a **$5 minimum monthly usage fee**.
 
 This helps cover the cost of payment processing and basic operations so we can continue offering fast, secure, and reliable storage—even for small accounts.
 
 ### What does this mean for you?
 
-If your monthly usage (storage, bandwidth, and segments) exceeds $5, nothing changes.
-If your usage totals less than $5, your account will be billed the $5 minimum usage fee.
+If your usage exceeds $5 per month, you will not be charged a minimum usage fee.
+If you prepay or pay with STORJ token, you will not be charged a minimum usage fee.
+Any monthly usage that results in an invoice less than $5 will result in the minimum usage fee. 
 
 ## Project limits
 

@@ -72,7 +72,7 @@ uname -a
 ```
 This command should return a text similar to the following:
 ```
-Linux behrooz 2.6.32-5-amd64 #1 SMP Tue Apr 4 12:24:40 UTC 2017 \*x86_64** GNU/Linux*
+Linux behrooz 2.6.32-5-amd64 #1 SMP Tue Apr 4 12:24:40 UTC 2017 **x86_64** GNU/Linux
 ```
 This indicates that the user has an amd64 (64-bit) architecture system. If it prints out x86 instead, the system has a 32-bit architecture.
 

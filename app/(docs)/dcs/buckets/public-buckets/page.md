@@ -25,7 +25,7 @@ uplink share --url --readonly --disallow-lists --not-after=none sj://BUCKET
 
 1. Select **Share Bucket** from the bucket menu
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/cie0gae7voob2Weigh3c_public_buckets.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/cie0gae7voob2Weigh3c_public_buckets.png)
 
 {% /tab %}
 {% /tabs %}

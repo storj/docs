@@ -72,4 +72,4 @@ uplink import cheesecake 13df....qa
 
 These two commands will have the same output:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/QMHA8C75PyqDP6qfMVNfR_access-imported.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/QMHA8C75PyqDP6qfMVNfR_access-imported.png)

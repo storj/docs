@@ -59,7 +59,7 @@ To begin setting up Comet with Storj, first create a Storj account.
 
 Navigate to <https://storj.io/signup?partner=comet> to sign up or log in to an existing Storj account. If signing up, enter your full name, email address, and password, as shown below:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Q7WPRJpkbFkJs17bqTZBD_comet-backup-storj.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Q7WPRJpkbFkJs17bqTZBD_comet-backup-storj.png)
 
 ### Create a Storj Bucket
 
@@ -69,17 +69,17 @@ Once you have your Storj account, create a Storj bucket for Comet following the 
 
 2\. Click “New Bucket” on the top right.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
 
 3\. Name the bucket something identifiable such as “comet-backups”.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rfBV0Z4_dDhMJXM5FmVQh_comet-backup-storj-3.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rfBV0Z4_dDhMJXM5FmVQh_comet-backup-storj-3.png)
 
 4\. Select “Continue”.
 
 5\. Generate a passphrase or enter your own.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YSw0iVI4F7so2Z0A2Zpyr_comet-backup-storj-4.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YSw0iVI4F7so2Z0A2Zpyr_comet-backup-storj-4.png)
 
 6\. Select “Continue”.
 
@@ -97,7 +97,7 @@ Users will need to configure a Storj **access key** for Comet to be able to crea
 
 2.  Click “Create Keys for CLI” under the API key block
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/vilNSGBWFtH5jGNTB_Lzf_comet-backup-storj-5.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/vilNSGBWFtH5jGNTB_Lzf_comet-backup-storj-5.png)
 
 3\. Set specifications according to the following example:
 
@@ -109,7 +109,7 @@ Users will need to configure a Storj **access key** for Comet to be able to crea
 
 - **Buckets:** Feel free to specify the bucket you created above (e.g. comet-backups), or leave as “All”
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/orCpR_aiaxgbM22_yHm5u_comet-backup-storj-6.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/orCpR_aiaxgbM22_yHm5u_comet-backup-storj-6.png)
 
 4\. Click “Create Keys” and record the API key somewhere safe
 
@@ -129,7 +129,7 @@ To complete the integration, you will need the credentials (bucket name and pass
 
 2\. Click the green “Add” button to add a new Storage Template
 
-![This applies to both self-hosted and Comet-hosted servers](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/oDRf5aD6ICAw55-445ij9_comet-backup-storj-7.png)
+![This applies to both self-hosted and Comet-hosted servers](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/oDRf5aD6ICAw55-445ij9_comet-backup-storj-7.png)
 
 3\. Change the “Type” to Storj and then fill in the fields as described below:
 
@@ -137,25 +137,25 @@ To complete the integration, you will need the credentials (bucket name and pass
 
 2.  **Satellites:** The location of the Storj satellite server. The satellite you are using is visible in the url of the Storj web console. For instance, if the URL is us1.storj.io/access-grants, the satellite is "us1.storj.io".
 
-    1.  ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xLXByP86sqG7PX284cPZf_comet-backup-storj-8.png)
+    1.  ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xLXByP86sqG7PX284cPZf_comet-backup-storj-8.png)
 
 3.  **API Key**: The API key created above (see the **Generate a Storj Access Key** section.)
 
 4.  **Passphrase**: The passphrase you created for your Storj bucket (see **step 5** in the **Create a Storj Bucket** section).
 
 5.  **Bucket**: The name of the Storj bucket you created above (see **step 3** in the **Create a Storj Bucket** section).
-    1.  ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/vxzj-ZT6HEef6OaZ72NjH_comet-backup-storj-9.png)
+    1.  ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/vxzj-ZT6HEef6OaZ72NjH_comet-backup-storj-9.png)
 
 4\. Once complete, Storj should appear as an option in the Storage Templates section in your Comet Server.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/XxAOobRYzheuX-zXCvafu_comet-backup-storj-10.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/XxAOobRYzheuX-zXCvafu_comet-backup-storj-10.png)
 
 ## Success!
 
 Once you have completed the integration, you will be able to request a new Storj Storage Vault for a user in Comet by clicking the "Add new vault" button and selecting Storj from the drop-down.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/dmYZDueoNCPS4FxME7yTY_comet-backup-storj-11.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/dmYZDueoNCPS4FxME7yTY_comet-backup-storj-11.png)
 
 You can also request a Storj Storage Vault when adding new users in Comet. Storj will appear as a Remote Storage Destination option under the "Configure first storage template" field when adding a new user.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/klQ89ODj1CLqzsqtgr6xe_comet-backup-storj-12.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/klQ89ODj1CLqzsqtgr6xe_comet-backup-storj-12.png)

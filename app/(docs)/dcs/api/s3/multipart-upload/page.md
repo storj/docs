@@ -34,7 +34,7 @@ Multipart upload takes a single object and divides it into encapsulated pieces t
 
 As described below, mutlipart upload is a process consisting of: starting the upload, transferring each piece, and finally completing the multipart upload. Upon successful upload of the final piece, Storj will logically reassemble the object, apply metadata and make the object accessible. During the multipart upload operation, you can get status of active upload operations and get lists of parts you have uploaded. More detail on multipart operations is provided in the sections below.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9qF0Kk8WCViIQLFoL5pZD_storj.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9qF0Kk8WCViIQLFoL5pZD_storj.png)
 
 ## Initiate Multipart upload
 

@@ -67,21 +67,21 @@ To set up Backup Gateway, do the following:
 
 1.  On the **INFRASTRUCTURE** > **Networks** screen, make sure that the **ABGW private** and **ABGW public** traffic types are added to your networks.
 
-    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Zzfpt2JpXnvew_u57s4Em_screenshot-2023-03-08-at-15302-pm.png)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Zzfpt2JpXnvew_u57s4Em_screenshot-2023-03-08-at-15302-pm.png)
 
 2.  In the left menu, click **STORAGE SERVICES** > **Backup storage**.
 
-    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/VcMLWnSaqkHs9Rt_KV-rn_screenshot-2023-03-08-at-15353-pm.png)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/VcMLWnSaqkHs9Rt_KV-rn_screenshot-2023-03-08-at-15353-pm.png)
 
 3.  Click **Create backup storage**.
 
 4.  Select **Public cloud** and click **next.**
 
-    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5xj9hChjVLwVJs5QpOL-U_screenshot-2023-03-08-at-15443-pm.png)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/5xj9hChjVLwVJs5QpOL-U_screenshot-2023-03-08-at-15443-pm.png)
 
 5.  Select the node(s) to run the gateway services on and click **Next**
 
-        ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hnehZ46GqDA6tjCM2A0YU_screenshot-2023-03-08-at-15521-pm.png)
+        ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hnehZ46GqDA6tjCM2A0YU_screenshot-2023-03-08-at-15521-pm.png)
 
 6.  Configure Public cloud with the following in their respective fields:
 
@@ -93,18 +93,18 @@ To set up Backup Gateway, do the following:
 
     - **Secret Key**: Enter the secret key from the S3 credentials you generated in Storj.
 
-    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/nrSFaE1HABH7hiU1PYavW_screenshot-2023-06-20-at-24524-pm.png)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/nrSFaE1HABH7hiU1PYavW_screenshot-2023-06-20-at-24524-pm.png)
 
 7.  Click **Next** on the Storage policy.
 
-    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ysUUNOfYk4qJY7M-1Yw5H_screenshot-2023-03-08-at-20100-pm.png)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ysUUNOfYk4qJY7M-1Yw5H_screenshot-2023-03-08-at-20100-pm.png)
 
 8.  Sign in to your Acronis account and click **Next**.
 
-    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/SMydqxrJiWu53hMoIbliJ_screenshot-2023-03-08-at-20344-pm.png)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/SMydqxrJiWu53hMoIbliJ_screenshot-2023-03-08-at-20344-pm.png)
 
 9.  Click **Create.**
 
-    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4vrgngJbaH5JLjl4HyFql_screenshot-2023-03-08-at-24028-pm.png)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4vrgngJbaH5JLjl4HyFql_screenshot-2023-03-08-at-24028-pm.png)
 
     You now should be able to use Storj as a backup destination.

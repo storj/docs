@@ -34,7 +34,7 @@ When an Uplink Client (LibUplink, Uplink CLI, or Uplink S3 Gateway) is configure
 
 ## Sharing Access to Objects
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MwdavJ1Uhw29KTR0n6XhZ_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MwdavJ1Uhw29KTR0n6XhZ_image.png)
 
 When the Access Grant is created by the Uplink Client, that Access Grant can be passed to a peer (another Uplink Client). When that peer Uplink Client uses that Access Grant to access an object, it passes only the API Key to the appropriate Satellite to request access to the object (never the encryption key). The Satellite can determine the validity of the API Key passed to it (along with any Caveats as described below) without needing access to the actual metadata. Since the metadata is also encrypted client-side, this is extremely important.
 

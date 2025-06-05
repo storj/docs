@@ -46,11 +46,11 @@ Use your Wasabi account credentials to log in to the Wasabi Management Console.
 
 2.  Click `CREATE ACCESS KEY` button under the Access Keys heading
 
-![create a wasabi access key](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bDKe-207rFZXgsmC3e9Mn_screenshot-2023-07-05-at-22731-pm.png)
+![create a wasabi access key](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/bDKe-207rFZXgsmC3e9Mn_screenshot-2023-07-05-at-22731-pm.png)
 
 Once the key is created, you can view and copy the Access Key and Secret Key. Make sure to store these securely as the Secret Key cannot be retrieved again and will be needed later on.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1rp53j9mBwkYEoYKOzUqK_screenshot-2023-07-05-at-21415-pm.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1rp53j9mBwkYEoYKOzUqK_screenshot-2023-07-05-at-21415-pm.png)
 
 ### Create Storj Access Grant
 

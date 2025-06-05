@@ -17,7 +17,7 @@ The `online_score` is reported back to nodes not immediately but with some delay
 
 You may see a [graphical explanation](https://forum.storj.io/t/online-score-not-updating-2-weeks/26444/9?u=alexey) on the forum:
 
-![](https://link.storjshare.io/raw/jvgdmqtyhgztaeyejjekh5dcywha/docs/images/34de4ae4675ad987b387f29be4342033e9b606bf.jpeg)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/34de4ae4675ad987b387f29be4342033e9b606bf.jpeg)
 
 You may use [these scripts](https://forum.storj.io/t/my-uptime-should-be-100-on-all-satellites-i-have-not-gotten-any-uptime-robot-notifications-of-downtime-in-months/14694/2?u=alexey) to find out when your node was offline.
 

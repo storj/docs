@@ -66,7 +66,7 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 1.  Click **Save**
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Commvault%20add%20credential.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Commvault%20add%20credential.png)
 
 
 ### Cloud Storage Configuration
@@ -86,11 +86,11 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 1.  Click **Save**
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Commvault%20add%20cloud%20storage.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Commvault%20add%20cloud%20storage.png)
 
 
 ### Backup Configuration
 
 1.  Storj should now be available as a storage target for your Commvault backups.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Commvault%20storage%20location.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Commvault%20storage%20location.png)

@@ -66,7 +66,7 @@ If you decided to specify the `zksync-era` wallet feature as an option, you need
 
    You should see an indication of zkSync enabled:
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1dzgaZpKadOoLc2krD5Y1_image.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1dzgaZpKadOoLc2krD5Y1_image.png)
 
 1. Opt-in for zkSync Era payouts for STORJ payments
 

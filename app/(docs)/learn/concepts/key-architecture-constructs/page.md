@@ -21,7 +21,7 @@ This section will orient you to some of the main constructs within the service a
 
 It's important to understand the constructs of Storj so that an application storing data is optimized depending on the requirements for privacy, access control, sharing, etc. The main constructs to understand are shown in the figure below:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9b421M_VoF9n0TBr2Enoh_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9b421M_VoF9n0TBr2Enoh_image.png)
 
 ## Satellite
 

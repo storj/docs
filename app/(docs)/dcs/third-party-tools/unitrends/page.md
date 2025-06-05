@@ -48,7 +48,7 @@ To begin, you will need to create a Storj account. If you already an account, go
 
 Navigate to <https://storj.io/signup> to sign up. Enter your full name, email address, and a password, as shown below:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
 ### Create a Bucket
 
@@ -58,11 +58,11 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 2\. Click “New Bucket” on the top right.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
 
 3\. Assign the bucket an easily identifiable name, such as "my-bucket".
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
 
 4\. Click **Create bucket**
 
@@ -76,7 +76,7 @@ Create S3 credentials in the Storj web console:
 
 2\. Click **Create S3 Credentials** under the S3 Credentials block.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
 
 3\. When the Create Access screen comes up, set specifications according to the following guidelines:
 
@@ -84,7 +84,7 @@ Create S3 credentials in the Storj web console:
 
 - **Name:** The name of the credentials (e.g. my-access)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
 
 4\. Click **Continue** to provide permissions
 
@@ -94,7 +94,7 @@ Create S3 credentials in the Storj web console:
 
 - **End date**: provide an expiration date for these credentials (optional)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
 
 5\. Click **Continue** to provide Access encryption Information
 
@@ -106,7 +106,7 @@ Create S3 credentials in the Storj web console:
 
   - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
 
 {% callout type="warning"  %}
 In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
@@ -114,13 +114,13 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 6\. Click **Create Access** to finish creation of your S3 credentials
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
 
 7\. Click **Confirm** the Confirm details pop-up message
 
 8\. Your S3 credentials are created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
 
 ---
 
@@ -140,13 +140,13 @@ Follow the steps below to complete the integration:
 
 1\. On the initial Unitrends setup screen, check the **Use an NTP Server** option. Then select **Next**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/n-F0m_YXQPgXXIy0xEwt2_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/n-F0m_YXQPgXXIy0xEwt2_image.png)
 
 2\. In the Unitrends dashboard, select **Configure > Backup Copy Targets > Add Target**.
 
 3\. From the drop-down menu, select **Cloud**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gtHurd0Z9sOrBwVXq1x2D_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gtHurd0Z9sOrBwVXq1x2D_image.png)
 
 4\. In the **Storage Details** window, fill out the appropriate connection data:
 
@@ -162,7 +162,7 @@ Follow the steps below to complete the integration:
 
 - If desired, check the box next to the **Specify Purging Threshold** field. This sets a size limit for your cloud archive storage. Enter a number in gigabytes for the limit. If no purging threshold is specified, there is no limit to the amount of data the appliance can archive to the cloud storage.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/lU-Z1rBC4mfI_8xKxW-m__image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/lU-Z1rBC4mfI_8xKxW-m__image.png)
 
 5\. Select **Confirm** to complete setting up your Storj account to Unitrends.
 

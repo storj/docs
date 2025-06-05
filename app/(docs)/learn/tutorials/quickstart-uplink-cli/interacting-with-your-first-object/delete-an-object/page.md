@@ -29,4 +29,4 @@ uplink rm sj://cakes/cheesecake.jpg
 
 Result
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/S3cXDL76beDFiDktMTcDU_deleteobject.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/S3cXDL76beDFiDktMTcDU_deleteobject.png)

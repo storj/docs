@@ -94,7 +94,7 @@ Once the download is complete, you'll be able to open the CyberDuck client. By s
 
 - **Secret Access Key:**
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xOlk_1dXj-ODMpTIn-37o_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xOlk_1dXj-ODMpTIn-37o_image.png)
 
 To configure **Storj** as the decentralized cloud storage network target, you’ll need to generate Storj credentials.
 
@@ -102,11 +102,11 @@ To configure **Storj** as the decentralized cloud storage network target, you’
 
 Once the download is complete, you'll be able to open the CyberDuck client. By selecting the **+** button in the bottom left-hand corner of the client, you'll be able to add a connection bookmark, facilitating the connection between CyberDuck and Storj. Select **Storj** from the drop-down.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MJ-vjelgQGnchg9zxFu7J_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MJ-vjelgQGnchg9zxFu7J_image.png)
 
 This is where you will add **Server, Access Key ID, and the Secret Access Key** for Storj Gateway MT.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/aGFG9jmdtOm32wmk1dNKM_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/aGFG9jmdtOm32wmk1dNKM_image.png)
 
 To configure **Storj** as the decentralized cloud storage network target, you’ll need to generate Storj credentials.
 
@@ -126,29 +126,29 @@ One of the most versatile ways to get up and running with **Storj** is through t
 
 Navigate to the [](docId:bNywu7-9KLjYfk5LBQABx) page within your project and then click on **Create Access Grant**. A modal window will pop up where you should enter a name for this access grant.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/BcnCX2eZIgoKJSofci7la_screen-shot-2021-04-16-at-90250-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/BcnCX2eZIgoKJSofci7la_screen-shot-2021-04-16-at-90250-am.png)
 
 Assign the permissions you want this access grant to have, then click on **Continue in Browser**:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Ny23pe6zPwc2Y_wRzt3YM_screen-shot-2021-04-16-at-90315-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Ny23pe6zPwc2Y_wRzt3YM_screen-shot-2021-04-16-at-90315-am.png)
 
 {% callout type="info"  %}
 _If you do not feel comfortable entering this sensitive information into your browser, we understand. Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, please select “Continue in CLI” and follow _[](docId:AsyYcUJFbO1JI8-Tu8tW3) _instead._
 {% /callout %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Q_OxNbVD1vGCmLacrNcTT_screen-shot-2021-04-16-at-90334-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Q_OxNbVD1vGCmLacrNcTT_screen-shot-2021-04-16-at-90334-am.png)
 
 **Generate and Save the Encryption Passphrase.** If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you if you choose "Generate Phrase.") You will need this passphrase later if you want to again access files uploaded with this encryption phrase.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/N6BqEH4bKainTDV7T_spV_screen-shot-2021-04-16-at-90350-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/N6BqEH4bKainTDV7T_spV_screen-shot-2021-04-16-at-90350-am.png)
 
 Be sure to download the Access Grant to save it and then click on the **Generate S3 Gateway Credentials** link.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_1N0mondSjpRRtnlrLkrc_screen-shot-2021-04-16-at-90354-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_1N0mondSjpRRtnlrLkrc_screen-shot-2021-04-16-at-90354-am.png)
 
 Now click on the **Generate Credentials** button.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rONKodBVYoHRO6nTU7Kg0_screen-shot-2021-04-16-at-90408-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rONKodBVYoHRO6nTU7Kg0_screen-shot-2021-04-16-at-90408-am.png)
 
 Copy your **_Access Key_**, **_Secret Key_**, and **_Endpoint_** to a safe location.
 
@@ -164,7 +164,7 @@ Whether using Windows or macOS, you’ll simply add the Storj Gateway S3 credent
 
 - Enter your S3 Gateway Credentials Secret Key into the **Secret Access Key** selection
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rAvBeUlBjTAhTZnsj_S7H_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rAvBeUlBjTAhTZnsj_S7H_image.png)
 
 **Click Connect**
 
@@ -173,7 +173,7 @@ _Use endpoint without `https://`, i.e., **gateway.us1.storjshare.io** in the Cyb
 
 As seen here:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/H428j0xiIhv_wp1Hfkq-l_pasted-image-0.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/H428j0xiIhv_wp1Hfkq-l_pasted-image-0.png)
 
 ---
 

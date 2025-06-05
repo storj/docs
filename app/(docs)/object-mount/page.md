@@ -14,7 +14,7 @@ New to Object Mount and want to try it out? Check out our [Getting Started](obje
 
 Find us [here](https://www.storj.io/fuse-filesystem) for product information, benchmarks and case studies.
 
-For licensing quotes, free trials, product fit, or chat with an expert, please schedule a [discovery call](https://meetings.hubspot.com/tom1581/storj-object-mount-discovery-meeting?uuid=7d69a8eb-87d2-4971-aef9-9ea2b1073e7a).
+For licensing quotes, free trials, product fit, or chat with an expert, please schedule a [discovery call](https://www.storj.io/landing/get-in-touch).
 
 Need help? Message us directly at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new)
 

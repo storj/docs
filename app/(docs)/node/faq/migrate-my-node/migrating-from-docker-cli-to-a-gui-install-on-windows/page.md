@@ -24,7 +24,7 @@ Do NOT copy the path from the old `config.yaml` or `source` part of the `--mount
 It is better to specify the path to the **storage** subfolder with the **Browse...** button.
 {% /callout %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1ObCw2xLut_f0t9c1E9Jl_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1ObCw2xLut_f0t9c1E9Jl_image.png)
 
 4\. Verify the complete path to the correct **storage** folder on your hard drive.
 

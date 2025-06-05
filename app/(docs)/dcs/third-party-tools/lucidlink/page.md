@@ -56,7 +56,7 @@ To begin, you will need to create a Storj account. If you already an account, go
 
 Navigate to <https://storj.io/signup> to sign up. Enter your full name, email address, and a password, as shown below:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
 ### Create a Bucket
 
@@ -66,11 +66,11 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 2\. Click “New Bucket” on the top right.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
 
 3\. Assign the bucket an easily identifiable name, such as "my-bucket".
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
 
 4\. Click **Create bucket**
 
@@ -84,7 +84,7 @@ Create S3 credentials in the Storj web console:
 
 2\. Click **Create S3 Credentials** under the S3 Credentials block.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
 
 3\. When the Create Access screen comes up, set specifications according to the following guidelines:
 
@@ -92,7 +92,7 @@ Create S3 credentials in the Storj web console:
 
 - **Name:** The name of the credentials (e.g. my-access)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
 
 4\. Click **Continue** to provide permissions
 
@@ -102,7 +102,7 @@ Create S3 credentials in the Storj web console:
 
 - **End date**: provide an expiration date for these credentials (optional)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
 
 5\. Click **Continue** to provide Access encryption Information
 
@@ -114,7 +114,7 @@ Create S3 credentials in the Storj web console:
 
   - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
 
 {% callout type="warning"  %}
 In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
@@ -122,13 +122,13 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 6\. Click **Create Access** to finish creation of your S3 credentials
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
 
 7\. Click **Confirm** the Confirm details pop-up message
 
 8\. Your S3 credentials are created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
 
 ---
 
@@ -152,15 +152,15 @@ When you initially log in to LucidLink, you will be prompted to name your domain
 
 2\. Choose the "Custom Filespace" plan to add your own cloud storage.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/aX7UqSXK4j8ASD-LM67yW_01home.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/aX7UqSXK4j8ASD-LM67yW_01home.png)
 
 3\. Choose the "Custom Filespace" option to use your own cloud storage.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/diNf1NhPIcuGyLYlF6gq1_001filespace.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/diNf1NhPIcuGyLYlF6gq1_001filespace.png)
 
 4\. Choose a Filespace name. In this case, we will use "storj".
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/a7OoUv56oD2pMUOptcVIl_03filespacename.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/a7OoUv56oD2pMUOptcVIl_03filespacename.png)
 
 1.
 
@@ -172,17 +172,17 @@ When you initially log in to LucidLink, you will be prompted to name your domain
 
 8\. If desired, check "Configure advanced settings" at the bottom of the page before clicking "Continue".
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JvZmx8eldEen7okLe2Py8_endpoint.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JvZmx8eldEen7okLe2Py8_endpoint.png)
 
 9\. On the Advanced Settings page, enter the bucket name that you created in Storj. In this instance, the bucket is "lucidlink-bucket".
 
 10\. It is recommended to set the block size to **at least 2MB** for optimal data stream quality.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_UNPS7Kq_nfEidJ3xFVU5_00026bucket.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/_UNPS7Kq_nfEidJ3xFVU5_00026bucket.png)
 
 12\. Review and confirm the details of your Filespace before clicking "Create" at the bottom of the page.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hpfpo2p9zlbmR5WqcF0P4_00027review.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/hpfpo2p9zlbmR5WqcF0P4_00027review.png)
 
 13\. LucidLink will redirect you to your dashboard while it sets up your Filespace. Once the Filespace is set up, you will have to initialize it. Follow the steps below to initialize your Filespace.
 
@@ -198,15 +198,15 @@ Initializing your Filespace must be completed through the LucidLink client, whic
 
 2.  If you have already downloaded the LucidLink client (LucidApp), click "Launch the desktop client" at the bottom of the window.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9n306OD79T4a77FeLPhzF_00035instructions.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9n306OD79T4a77FeLPhzF_00035instructions.png)
 
 3\. Once the LucidApp has launched, add your saved **access key** and **secret key **created in Storj into the "Access Key" and "Secret Key" fields, respectively. Click "Next".
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8O3vgxGkeWFux51kKXmrT_00036pass.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8O3vgxGkeWFux51kKXmrT_00036pass.png)
 
 4\. Create a root password. Make sure to save this password because it cannot be recovered. Check the "Remember password" box at the bottom of the screen if you wish to store your password. Then click "Initialize".
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/vWdcZ6p9gNEyfCTcmrRJX_00037password.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/vWdcZ6p9gNEyfCTcmrRJX_00037password.png)
 
 ### Initializing a Filespace From the Command Line
 
@@ -226,4 +226,4 @@ For more information on using the command line with LucidLink, see the following
 
 ## Success!
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8Snm14NljluKExsW2ZFZ__0004folder.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8Snm14NljluKExsW2ZFZ__0004folder.png)

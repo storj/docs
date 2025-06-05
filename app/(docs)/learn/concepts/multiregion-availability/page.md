@@ -27,4 +27,4 @@ A specific Satellite instance does not necessarily constitute one server. A Sate
 
 ## Gateways
 
-Storj also operates a global network of highly available, distributed S3-compatible gateways. Each gateway is operated in a high availability environment, typically in Equinix data centers, with BGP-enabled global routing, where the loss of any one gateway has no impact of the availability of data. Applications are always routed to the closest available gateway to optimized for low latency and high performance.\\
+Storj also operates a global network of highly available, distributed S3-compatible gateways. Each gateway is operated in a high availability environment, typically in Equinix data centers, with BGP-enabled global routing, where the loss of any one gateway has no impact of the availability of data. Applications are always routed to the closest available gateway to optimized for low latency and high performance.

@@ -58,10 +58,10 @@ Once you have your Storj account you can create a bucket for your data to be sto
 The workflow assumes a bucket called sf-test has previously been created within Storj. The following will add Storj as an target for archive jobs.
 
 1. Select **Targets** button from the base UI to create a new target
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/starfish_image_2.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/starfish_image_2.png)
 
 1. Select **Add target** and **S3**
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/starfish_image_3.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/starfish_image_3.png)
 
 1. Fill out the target specific details:
 
@@ -71,11 +71,11 @@ The workflow assumes a bucket called sf-test has previously been created within 
    - **Aws secret access Key**: Enter the secret key from the S3 credentials you generated in Storj.
    - **Bucket name**: Enter the name of the bucket created previously
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/starfish_image_6.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/starfish_image_6.png)
 
 1. Select **Close**
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/starfish_image_5.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/starfish_image_5.png)
 
 1. Using the CLI, adjust the `max_part_size` and `default_part_size` to 64MiB
 

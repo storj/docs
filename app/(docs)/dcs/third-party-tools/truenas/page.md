@@ -55,7 +55,7 @@ Navigate to <https://storj.io/signup?partner=ix-storj-1> to sign up for TrueNAS
 If you have an existing Storj account, you will need to contact support to have it linked to the TrueNAS Storj integration. See [here](https://forum.storj.io/t/truenas-backups-and-differences-between-storj-and-storj-ix/20044/7) for more information
 {% /callout %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PnQ7D7Z6fU0RPKZpOCRXJ_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PnQ7D7Z6fU0RPKZpOCRXJ_image.png)
 
 ### Create a Bucket
 
@@ -65,11 +65,11 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 2\. Click “New Bucket” on the top right.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
 
 3\. Assign the bucket an easily identifiable name, such as "my-bucket".
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
 
 4\. Click **Create bucket**
 
@@ -83,7 +83,7 @@ Create S3 credentials in the Storj web console:
 
 2\. Click **Create S3 Credentials** under the S3 Credentials block.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
 
 3\. When the Create Access screen comes up, set specifications according to the following guidelines:
 
@@ -91,7 +91,7 @@ Create S3 credentials in the Storj web console:
 
 - **Name:** The name of the credentials (e.g. my-access)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
 
 4\. Click **Continue** to provide permissions
 
@@ -101,7 +101,7 @@ Create S3 credentials in the Storj web console:
 
 - **End date**: provide an expiration date for these credentials (optional)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
 
 5\. Click **Continue** to provide Access encryption Information
 
@@ -113,7 +113,7 @@ Create S3 credentials in the Storj web console:
 
   - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
 
 {% callout type="warning"  %}
 In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
@@ -121,13 +121,13 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 6\. Click **Create Access** to finish creation of your S3 credentials
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
 
 7\. Click **Confirm** the Confirm details pop-up message
 
 8\. Your S3 credentials are created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
 
 ---
 
@@ -141,15 +141,15 @@ If you use TrueNAS 24.10 (Electric Eel) or later, you would be able to setup a [
 
 1\. Log into TrueNAS on your network.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9caiWgOrlUL5dtj7e7JFv_login.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9caiWgOrlUL5dtj7e7JFv_login.png)
 
 2\. On the left-hand menu, navigate to **Credentials** and select **Backup credentials**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/amTXglEqJexuCScBmO2Fm_bc.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/amTXglEqJexuCScBmO2Fm_bc.png)
 
 3\. Click **Add** under the **_Cloud Credentials_** section.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ryjNzCggsxIy5HSOitxyu_cc.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ryjNzCggsxIy5HSOitxyu_cc.png)
 
 4\. On the right-hand pop-up menu, complete the fields as follows:
 
@@ -161,9 +161,9 @@ If you use TrueNAS 24.10 (Electric Eel) or later, you would be able to setup a [
 
 - **Secret Access Key**: the secret key from your S3 credentials created in Storj.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JZeL9b5DOtKTZirlwxr7S_cloudc1.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JZeL9b5DOtKTZirlwxr7S_cloudc1.png)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/o3G3DY3n4yCw9lq1eBiH8_cloudc2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/o3G3DY3n4yCw9lq1eBiH8_cloudc2.png)
 
 5\. Click **Verify** to very the credentials if you wish.
 
@@ -182,7 +182,7 @@ Please follow the [TrueNAS documentation to setup a TrueCloud Backup Task](https
 
 1\. On the left-hand menu, click **Data Protection**, navigate to **_Cloud Sync Tasks_**, and click **Add**.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/q5Dqcs72_i-JdGQ16NOG3_screen-shot-2022-11-10-at-111126-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/q5Dqcs72_i-JdGQ16NOG3_screen-shot-2022-11-10-at-111126-am.png)
 
 2\. In the **_Add Cloud Sync Task_** window, fill out the fields as follows:
 
@@ -202,11 +202,11 @@ Please follow the [TrueNAS documentation to setup a TrueCloud Backup Task](https
 
 3\. Click **Save**. Under **_Cloud Sync Tasks_** you should see an entry for the **Daily** task, along with a green SUCCESS tag.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/sl2BBBB8ji5l6HXCA1da7_success.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/sl2BBBB8ji5l6HXCA1da7_success.png)
 
 4\. To test whether the sync has been successful, click the **Run Now** arrow in the task entry.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/FAbFNiNGpHfycYMgE_1ZJ_run.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/FAbFNiNGpHfycYMgE_1ZJ_run.png)
 
 {% callout type="info" %}
 You may consider to enable [Object versioning](docId:oogh5vaiGei6atohm5thi) for the bucket and you may also [generate S3 credentials with TTL](docId:55e7ac9b-cf21-41fa-be19-087f55de1066#setting-object-ttl-in-the-access-grant--s3-credentials) to automatically delete expired versions.

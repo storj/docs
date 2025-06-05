@@ -133,13 +133,13 @@ identity create storagenode
 
 This process will continue until it reaches a difficulty of at least 36. On completion, it will look something like this:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ziCJkaXYzJYBRuLl0vyA2_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ziCJkaXYzJYBRuLl0vyA2_image.png)
 
 ## 3. Authorize the identity
 
 Authorize your Storage Node identity using your single-use authorization token (please, replace the placeholder **email\:characterstring** to your actual authorization token):
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Yi1FdCqXE0mIbsiwMDtDr_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Yi1FdCqXE0mIbsiwMDtDr_image.png)
 
 Authorize your Storage Node identity using your [](docId:v-fUvPqySvUwTMF-od6hD) (_please, replace the placeholder to your actual authorization token_):
 
@@ -222,7 +222,7 @@ grep -c BEGIN ~/Library/Application\ Support/Storj/identity/storagenode/identity
 
 The first command should return **2**, and the second command should return **3**:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/GlTZ8mJI50FN4_AMDPri-_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/GlTZ8mJI50FN4_AMDPri-_image.png)
 
 If your numbers are different, then [](docId:aT6VAB297OWLd4vqeXxf5) was not successful. Please try again.
 

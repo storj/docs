@@ -7,4 +7,4 @@ redirects:
 
 Your Node may require extra monitoring. You may have to frequently restart Docker from the Docker desktop application when your Last Contact shown in the dashboard gets OFFLINE.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/TP1GtoM230mATj-SyjK4w_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/TP1GtoM230mATj-SyjK4w_image.png)

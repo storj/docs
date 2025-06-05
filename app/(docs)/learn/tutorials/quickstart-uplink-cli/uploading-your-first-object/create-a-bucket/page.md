@@ -31,4 +31,4 @@ uplink mb sj://cakes
 
 Result
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/VE2SKIz_0DR32w_SqGKly_bucketcakescreated.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/VE2SKIz_0DR32w_SqGKly_bucketcakescreated.png)

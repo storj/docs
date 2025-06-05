@@ -20,4 +20,4 @@ Ensure the credential does **not** include:
 
 - Delete
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-worm.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-worm.png)

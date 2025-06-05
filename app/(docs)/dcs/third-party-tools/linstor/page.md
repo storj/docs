@@ -61,9 +61,9 @@ linstor remote create s3 $linstor_s3remotename $storj_endpoint \
 
 The `linstor_s3remotename` is a user-defined name for the LINSTOR S3 remote object that you are creating. The `storj_bucketname` is the name of an existing Storj bucket that you want to use for holding LINSTOR storage backups and `storj_region` is the associated location of the bucket. You can verify the bucket name and region from the Storj dashboard by navigating to the Browse Buckets screen, by clicking on Browse from the left-side menu, or by clicking Buckets from the Project Dashboard.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images%2FLinstor/linstor-storj-remote-s3-storage-backup-guide_01-storj-dashboard.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images%2FLinstor/linstor-storj-remote-s3-storage-backup-guide_01-storj-dashboard.png)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images%2FLinstor/linstor-storj-remote-s3-storage-backup-guide_02-browse-buckets-screen.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images%2FLinstor/linstor-storj-remote-s3-storage-backup-guide_02-browse-buckets-screen.png)
 
 You will also need to know the Storj access and secret keys, and the associated Storj endpoint for the Storj S3 credentials applicable to the Storj bucket that you are using as a LINSTOR remote. You can show, copy, or download these when you create your Storj S3 credentials.
 

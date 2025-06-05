@@ -72,7 +72,7 @@ You cannot use regular expressions to specify which files to copy (e.g. `uplink 
 
 Output:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/-hjCrs6csxIQRGlUsN-_h_cp01.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/-hjCrs6csxIQRGlUsN-_h_cp01.png)
 
 ### Copy a file from a bucket to a local drive
 
@@ -96,7 +96,7 @@ uplink cp sj://cakes/cheesecake.jpg ~/Downloads/
 
 {% /code-group %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/L3WG_T6fFd44KDKM0ySZU_cp02.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/L3WG_T6fFd44KDKM0ySZU_cp02.png)
 
 ### Copy a local file into a bucket with an expiration date
 
@@ -122,7 +122,7 @@ The date is given in the `yyyy-mm-ddThh:mm:ssZhh:mm` format defined in ISO 8601.
 
 The command above gives the following output:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/kaEp97IAbLH80jtAKZLuX_cp03.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/kaEp97IAbLH80jtAKZLuX_cp03.png)
 
 ### Copy an object with parallelism
 
@@ -148,7 +148,7 @@ uplink cp --parallelism 10 cheesecake.jpg sj://cakes
 
 Since our sample object is small, you likely will not notice a difference.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YdggjS4upivbH0WFWfiLd_cp04.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YdggjS4upivbH0WFWfiLd_cp04.png)
 
 It would be significantly different with big objects like videos or OS images etc. and for upstream bandwidth much greater than 100Mbps.
 

@@ -64,7 +64,7 @@ The label `storj` refers to the `rclone` configuration name which you chose duri
 
 Now, enter a password for your repository.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9Pwnr8Xm5xOZElCIB8OzE_restic.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/9Pwnr8Xm5xOZElCIB8OzE_restic.png)
 
 {% callout type="info"  %}
 Remembering your password is important! If you lose it, you won’t be able to access data stored in the repository.

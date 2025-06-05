@@ -48,7 +48,7 @@ To begin, you will need to create a Storj account. If you already an account, go
 
 Navigate to <https://storj.io/signup?partner=iconik> to sign up. Enter your full name, email address, and a password, as shown below:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/x1VMINrRdadrVk5vLXIBT_capture.PNG)
 
 ### Create a Bucket
 
@@ -58,11 +58,11 @@ Once you have your Storj account you can create a bucket for your data to be sto
 
 2\. Click “New Bucket” on the top right.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/jbnQ38ynnrWl0jnO_j-E5_comet-backup-storj-2.png)
 
 3\. Assign the bucket an easily identifiable name, such as "my-bucket".
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/K65vHcrJtRq4S87jICtYx_screenshot-2023-03-09-at-110429-am.png)
 
 4\. Click **Create bucket**
 
@@ -76,7 +76,7 @@ Create S3 credentials in the Storj web console:
 
 2\. Click **Create S3 Credentials** under the S3 Credentials block.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/EZyAl8Wux2GOlyPd70HnI_screenshot-2023-03-09-at-110900-am.png)
 
 3\. When the Create Access screen comes up, set specifications according to the following guidelines:
 
@@ -84,7 +84,7 @@ Create S3 credentials in the Storj web console:
 
 - **Name:** The name of the credentials (e.g. my-access)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Cv1Lirp-3-OueRk-YAR8u_image.png)
 
 4\. Click **Continue** to provide permissions
 
@@ -94,7 +94,7 @@ Create S3 credentials in the Storj web console:
 
 - **End date**: provide an expiration date for these credentials (optional)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/gQ8jBHtvd5sFZFuAqth_h_image.png)
 
 5\. Click **Continue** to provide Access encryption Information
 
@@ -106,7 +106,7 @@ Create S3 credentials in the Storj web console:
 
   - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Uxn8zBqXQVmQvsswV3pJ2_image.png)
 
 {% callout type="warning"  %}
 In order to see the data uploaded to your bucket in the web console, you must unlock the bucket with the same encryption passphrase as the credentials.
@@ -114,13 +114,13 @@ In order to see the data uploaded to your bucket in the web console, you must un
 
 6\. Click **Create Access** to finish creation of your S3 credentials
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/zk2JE9Z6f3vk_R2cjpdqc_image.png)
 
 7\. Click **Confirm** the Confirm details pop-up message
 
 8\. Your S3 credentials are created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xH5tgzVKXn-uK2hVfSo8e_image.png)
 
 ---
 
@@ -132,25 +132,25 @@ To complete the integration, you will need the S3 credentials created in the pre
 
 To sign in to your iconik account, visit [https://iconik.io/](https://app.iconik.io/) and click Sign In. This takes you to <https://app.iconik.io/> from where you can enter your credentials.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/W_L58KzUqW4fiZ9RTNCul_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/W_L58KzUqW4fiZ9RTNCul_image.png)
 
 If you do not have an iconik account, you must request a trial by clicking Request Trial on the home page or filling out the contact form at [https://www.iconik.io/trial.](https://www.iconik.io/trial)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/6fx_6jRseVAUIazaaTp9l_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/6fx_6jRseVAUIazaaTp9l_image.png)
 
 ### Add New Storage in iconik
 
 1\. From the iconik app landing page, click on ADMIN in the top navigation bar.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rhokM20s1IZ30eoBgNcRQ_admin1.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/rhokM20s1IZ30eoBgNcRQ_admin1.png)
 
 2\. From the left-hand menu, select the brown Storages icon, which appears as a file storage unit. This will take you to the Storages section, where all connected storages are listed.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b8sCXzCaADRieY9JWLLrd_storage.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/b8sCXzCaADRieY9JWLLrd_storage.png)
 
 3\. From the Storages section, click + NEW STORAGE in the upper right corner. This brings up a pop-up screen.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8Bnk1Igu6MRrQkNTjifqu_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/8Bnk1Igu6MRrQkNTjifqu_image.png)
 
 4\. In the pop-up screen, you will enter all of the relevant information about your storage, including the S3 credentials you have saved from the previous section of this tutorial. Fill out the fields as directed below:
 
@@ -190,13 +190,13 @@ If you do not have an iconik account, you must request a trial by clicking Reque
 
     6.  **Scan Directories**: add directories to scan in this field.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DWaqqDnHgbuHdNElutGWI_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/DWaqqDnHgbuHdNElutGWI_image.png)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Qhrfg0CwjPsUWgY3IyNyj_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Qhrfg0CwjPsUWgY3IyNyj_image.png)
 
 5\. Click OK at the bottom of the pop-up screen.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/y1zwlwVrJ2KNYFnf4D405_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/y1zwlwVrJ2KNYFnf4D405_image.png)
 
 ## Success!
 
@@ -206,17 +206,17 @@ A pop-up window confirms that your storage was created successfully with a green
 
 Click **Close** to exit, or **Edit** to make changes to your storage credentials.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/L6UuZmhowWvbhmmezzb5F_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/L6UuZmhowWvbhmmezzb5F_image.png)
 
 ### Editing Your Storage
 
 Clicking **Edit** takes you to the general settings page for the storage. From there, you can make any changes to the credentials and permissions you initially set.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/G9C1f9lpZDfLzCQUYVjja_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/G9C1f9lpZDfLzCQUYVjja_image.png)
 
 Returning to the **_Storages_** section, you will see the new storage listed. Clicking on the storage row also takes you to the general settings page of that storage.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/masloLmwj8xPFE5-K-eCV_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/masloLmwj8xPFE5-K-eCV_image.png)
 
 ### Testing your Storj storage in iconik
 

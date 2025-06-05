@@ -52,7 +52,7 @@ Please note: The deposit address currently only accepts transactions with ERC20 
 You can also add Google Pay as a payment method, it's available when you select **Add Card** on the _**Payment Methods**_ tab of the [**Billing**](docId:Hurx0SirlRp_O5aUzew7_) page in the desktop or mobile Chrome browsers logged in to the Google Account with enabled Google Pay.
 
 ### Apple Pay Payment method
-You can aslo add Apple Pay as a payment method, it's available when you select **Add Card** on the _**Payment Methods**_ tab of the [**Billing**](docId:Hurx0SirlRp_O5aUzew7_) page in the desktop or mobile Safary browsers.
+You can aslo add Apple Pay as a payment method, it's available when you select **Add Card** on the _**Payment Methods**_ tab of the [**Billing**](docId:Hurx0SirlRp_O5aUzew7_) page in the desktop or mobile Safari browsers.
 
 ### Bank account Payment method
 Available banks depending on the used region. Use the **Add Card** button on the _**Payment Methods**_ tab of the [**Billing**](docId:Hurx0SirlRp_O5aUzew7_) page.

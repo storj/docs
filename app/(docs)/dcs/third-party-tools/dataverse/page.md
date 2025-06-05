@@ -25,7 +25,7 @@ S3 credentials allow Dataverse to upload and download files from Storj as if it 
 
 2.  Select 'Create S3 Credentials'
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/-85BIv0WdIdn3stV_J5CX_access-2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/-85BIv0WdIdn3stV_J5CX_access-2.png)
 
 Give your access grant a name such as 'My S3 Creds' and generate a passphrase. Your credentials will be created. These will be used to configure your Dataverse server.
 
@@ -107,4 +107,4 @@ You'll need to delete the existing default storage driver and set a new one usin
 
 After you've configured your server, the Storj storage option will appear as a when creating a new Dataverse.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ElEbYhWSbPGCdUWhzvYKj_screen-shot-2022-06-10-at-35521-pm.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ElEbYhWSbPGCdUWhzvYKj_screen-shot-2022-06-10-at-35521-pm.png)

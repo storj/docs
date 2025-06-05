@@ -37,7 +37,7 @@ For different uplink binaries see [](docId:hFL-goCWqrQMJPcTN82NB)
 
 ### Create access grant and setup uplink
 
-![Creating an access token in the Storj web console](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Eht5dlfTFplrWPyJxUHdi_screen-shot-2022-07-01-at-102352-am.png)
+![Creating an access token in the Storj web console](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Eht5dlfTFplrWPyJxUHdi_screen-shot-2022-07-01-at-102352-am.png)
 
 Click "Continue in CLI" after giving your access grant a name
 
@@ -45,7 +45,7 @@ Click "Continue in CLI" after giving your access grant a name
 Keep the credential window open until you have completed the `uplink setup` command below
 {% /callout %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/faDJYPJEby6kdGKcDksq4_screen-shot-2022-07-01-at-103337-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/faDJYPJEby6kdGKcDksq4_screen-shot-2022-07-01-at-103337-am.png)
 
 Run `uplink setup` to start the credentials prompt
 
@@ -57,11 +57,11 @@ Enter a name for the credential (default is "main")
 
 Copy your "API Key" from the web console to the uplink cli "Enter API key or Access grant" prompt
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4mOHJgqzt9R08zuY3CV6n_screen-shot-2022-07-01-at-104439-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/4mOHJgqzt9R08zuY3CV6n_screen-shot-2022-07-01-at-104439-am.png)
 
 Copy your "Satellite Address" from the web console to the uplink cli "Satellite address" prompt
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JhvR4VSngd467LcZcyCFn_screen-shot-2022-07-01-at-104558-am.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JhvR4VSngd467LcZcyCFn_screen-shot-2022-07-01-at-104558-am.png)
 
 Enter a passphrase to complete the setup
 
@@ -109,13 +109,13 @@ Create another access grant with the following limitations
 
 2.  Select `snapshots` as the bucket from the dropdown
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/2ie4QkrUL4spycgAYzVUy_screen-shot-2022-07-01-at-25604-pm-1.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/2ie4QkrUL4spycgAYzVUy_screen-shot-2022-07-01-at-25604-pm-1.png)
 
 Select "Continue in Browser"
 
 Copy the access grant in file. You'll use it later in the template below.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/A0R9dXbDt5ZZcl8kusZNe_screen-shot-2022-07-01-at-30619-pm.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/A0R9dXbDt5ZZcl8kusZNe_screen-shot-2022-07-01-at-30619-pm.png)
 
 {% callout type="warning"  %}
 When populating the template, only publish the access grant that is limited to downloads. Do not use the access grant that was used to upload snapshots.

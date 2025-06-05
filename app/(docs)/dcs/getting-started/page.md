@@ -168,7 +168,7 @@ aws s3 --endpoint-url=https://gateway.storjshare.io ls s3://
 
 Next we'll upload a file. Here is an example image of a tree growing hard drives (while Storj doesn't grow hard drives on trees, it does emphasize [sustainability](https://www.storj.io/benefits/sustainability)). Right-click on it and save as `storj-tree.png` to your Downloads.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-tree.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/storj-tree.png)
 
 Copy the file to your bucket.
 

@@ -13,4 +13,4 @@ The filtering system blocks bad Storage Nodes from participating. Additional act
 
 After disqualified Storage Nodes have been filtered out, remaining statistics collected during audits are used to establish a preference for better Storage Nodes during uploads. These statistics include performance characteristics such as throughput and latency, history of reliability and uptime, geographic location, and other desirable qualities. They are combined into a load-balancing selection process, such that all uploads are sent to qualified Nodes, with a higher likelihood of uploads to preferred Nodes, but with a non-zero chance for any qualified Node.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/6kyTxJSBnAQUkuk50IIWq_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/6kyTxJSBnAQUkuk50IIWq_image.png)

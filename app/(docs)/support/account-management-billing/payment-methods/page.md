@@ -19,7 +19,7 @@ Storj accepts the following several payment methods:
 
 3.  Google Pay (available only in the browser logged in to your Google Account with enabled Google Pay)
 
-4.  Apple Pay (available only in the Safary browser)
+4.  Apple Pay (available only in the Safari browser)
 
 5.  Bank payment method (availability varies by region)
 
@@ -31,7 +31,7 @@ Storj accepts the following several payment methods:
 
 Once you have created a user account and a project, registered users are required to add a payment method before storing data on Storj. Payment methods are added from the [](docId:Hurx0SirlRp_O5aUzew7_) section of the user interface.
 
-Begin by selecting "Billiing" from the "My Account" dropdown menu at the left bottom corner of your dashboard.
+Begin by selecting "Billing" from the "My Account" dropdown menu at the left bottom corner of your dashboard.
 
 ## Using a Credit Card
 
@@ -39,7 +39,7 @@ You can select to **Add New Card** to add a Card to your account on the **_Billi
 
 On this screen you can also use a Google Pay payment method, it become available if you use a browser logged in to a Google Account with enabled Google Pay.
 
-The Apple Pay payment method is available only in the Safary browser.
+The Apple Pay payment method is available only in the Safari browser.
 
 Bank payment method may also be available here (availability varies by region).
 

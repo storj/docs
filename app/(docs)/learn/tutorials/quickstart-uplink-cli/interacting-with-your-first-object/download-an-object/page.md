@@ -29,4 +29,4 @@ uplink cp sj://cakes/cheesecake.jpg ~/Downloads/cheesecake.jpg
 
 Result
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/w2PAkMtn5GYCDJAt30cmP_downloadobject.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/w2PAkMtn5GYCDJAt30cmP_downloadobject.png)

@@ -31,7 +31,7 @@ With the launch of the native Storj Integration into the FileZilla client, devel
 
 ## Getting Started
 
-![Getting Started Guide to Configure Storj with Filezilla](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/A3axDH9IIHl-G8gI--gjT_fz.png)
+![Getting Started Guide to Configure Storj with Filezilla](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/A3axDH9IIHl-G8gI--gjT_fz.png)
 
 ## Create an Access Grant
 
@@ -45,11 +45,11 @@ To download the latest release of FileZilla, navigate to <https://filezilla-proj
 
 Open the Site Manager by clicking on the leftmost icon.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ptIx46T-1UVKXUjFN4ogP_filezilla1.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ptIx46T-1UVKXUjFN4ogP_filezilla1.png)
 
 Select the 'New Site' option
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/R_IRpQKcgfDIUbxsBnW7d_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/R_IRpQKcgfDIUbxsBnW7d_image.png)
 
 ### Configure the Satellite and Access Grant
 
@@ -61,20 +61,20 @@ Now enter the **Satellite** and **Access Grant** as shown below (Entering the po
 
 2.  For **Access Grant** please enter the Access Grant you saved above.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/QfVDo6-BAPCOq85iJqWEJ_image.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/QfVDo6-BAPCOq85iJqWEJ_image.png)
 
 After you enter the above information, hit the "Connect" button, and FileZilla will connect directly to the remote site. You should see a screen showing your local site vs. Storj, like so:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LKG7hFgbpmSQUM5Ps8GIh_filezilla2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LKG7hFgbpmSQUM5Ps8GIh_filezilla2.png)
 
 ### Uploading a File
 
 To upload a file to your local machine, simply drag it from the local to the remote site (on the decentralized cloud), as shown below:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/yC9FAbglEVJ3Ps7eL4Eik_filezilla3.gif)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/yC9FAbglEVJ3Ps7eL4Eik_filezilla3.gif)
 
 ### Downloading a File
 
 To download a file to your local machine, simply drag it from the remote site to the local site, as shown below:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/TvSrHNg6pSIvsXyeKGm2A_filezilla4.gif)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/TvSrHNg6pSIvsXyeKGm2A_filezilla4.gif)

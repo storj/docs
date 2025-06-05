@@ -1,12 +1,13 @@
 ---
 title: Delete buckets
-docId: pxdnqsVDjCLZgeEXt2S6x
+docId: b953ae01-9beb-48d3-83f7-2f6c7d07e875
 weight: 1
 metadata:
   title: Deleting Buckets Using Different Tools
   description:
     Guide on how to delete Storj buckets using command-line tools or the
-    Storj Console even if the encryption phrase is lost.
+    Storj Console even if the encryption phrase is lost or you have had
+    a Governance Object Lock enabled.
 ---
 
 You can delete a bucket from various command-line tools or the Storj Console.
@@ -56,6 +57,10 @@ rclone purge us1-gw-mt:my-locked-bucket --header "x-amz-bypass-governance-retent
 Please note, this command do not honor any include/exclude filters or prefixes (subfolders), it will always purge the entire bucket, including bucket itself.
 {% /callout %}
 
+{% callout type="info" %}
+If you have a Governance Object Lock enabled and do not remember the encryption phrase, you can use only a method with `uplink` CLI.
+{% /callout %}
+
 {% /tab %}
 
 {% tab label="aws cli" %}
@@ -67,6 +72,10 @@ To remove a not empty bucket even if the encryption phrase is lost:
 # terminal
 aws s3 --endpoint-url=https://gateway.storjshare.io rb --force s3://my-bucket
 ```
+
+{% callout type="info" %}
+If you have a Governance Object Lock enabled and do not remember the encryption phrase, you can use only a method with `uplink` CLI.
+{% /callout %}
 
 {% /tab %}
 
@@ -90,7 +99,7 @@ To remove objects from the bucket even if the encryption phrase is lost:
 uplink rm --recursive --encrypted --parallelism 30 sj://my-bucket
 ```
 
-To remove object versions from the bucket even if the encryption phrase is lost:
+To remove object versions from the bucket even if the encryption phrase is lost and/or you have a Governance Object Lock enabled:
 
 You can [setup uplink](docId:h3RyJymEIi4gf2S9wVJg8) with the access grant created in advanced mode and all permissions (including required **`BypassGovernanceRetention`** if you also have [Object Lock](docId:gjrGzPNnhpYrAGTTAUaj) enabled in a Governance mode), then you can use this command:
 
@@ -134,6 +143,10 @@ PowerShell version:
 If there are millions of objects, it could timeout. In that case it's highly recommended to use [`rclone purge`](https://rclone.org/commands/rclone_purge/),
 [`uplink rb --force`](docId:Wo5-shT0hZDNMeyM1kA12), [`aws s3 rb --force`](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html),
 [](docId:QQGzEDU8o-IodQWmr7xP3) even if the encryption phrase is lost or [](docId:3Vj_5zZ99c4mTMRhQjGFM) (_Please note, [**FileZilla Free**](docId:OkJongWeLGhPy4KKz34W4) or [**FileZilla PRO with a Storj Native integration**](docId:APk9353kCNcg5PKRPQ06u#storj-file-zilla-pro-via-native-uplink) wouldn't work if the encryption phrase is lost, you need to use [**FileZilla PRO with Storj S3 integration**](docId:APk9353kCNcg5PKRPQ06u#storj-file-zilla-pro-via-gateway-mt) in that case_)
+{% /callout %}
+
+{% callout type="info" %}
+If you have a Governance Object Lock enabled and/or do not remember the encryption phrase, you can use only a method with `uplink` CLI.
 {% /callout %}
 
 {% /tab %}

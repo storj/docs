@@ -117,6 +117,17 @@ A user uploads 100,000 one GB objects using multipart upload with a 64MB Part Si
 
 A user uploads 1PB of one GB objects using multipart upload with a 5MB Part Size. Halfway through the month, the user deletes the files. The 1PB of one GB files (1 million files) are stored as 200,000,000 Segments. The files are stored for 360 hours. The data is stored for 72,000,000,000 Segment hours. The price per Segment month is $0.0000088. The price per-segment hour at 720 hours per month is $0.00000001222. The monthly per-segment fee in this example would be $879.84.
 
+## Minimum Monthly Billing
+
+Storj has a **$5 minimum monthly usage fee** for all accounts.
+
+This helps cover the cost of payment processing and basic operations so we can continue offering fast, secure, and reliable storage—even for small accounts.
+
+### What does this mean for you?
+
+If your monthly usage (storage, bandwidth, and segments) exceeds $5, nothing changes.
+If your usage totals less than $5, your account will be billed the $5 minimum usage fee.
+
 ## Project limits
 
 All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj. To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGYhfgGbVhlQ2ZHXVS) sections of this Documentation.

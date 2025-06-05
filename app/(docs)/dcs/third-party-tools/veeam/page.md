@@ -71,7 +71,7 @@ Storj backup is integrated with Veeam using Veeam's **New Object Repository** w
 
 1. In the **Add Backup Repository** dialog, select **Object Storage > S3 Compatible**.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MMbsPEmATTdZ81_JyAe92_news3storagesplash.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/MMbsPEmATTdZ81_JyAe92_news3storagesplash.png)
 
 #### Name Object Storage Repository
 
@@ -87,7 +87,7 @@ Without this registry value present, the default number of TCP connections used 
 Setting a value higher than 64 can increase throughput backing up (offloading) to Storj.
 {% /callout %}
 
-    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/XLfq1ljqWaRGqlyKujk7K_s3repository.png)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/XLfq1ljqWaRGqlyKujk7K_s3repository.png)
 
 1.  Select **Next**.
 
@@ -104,12 +104,12 @@ Setting a value higher than 64 can increase throughput backing up (offloading) t
    You can also click the **Manage cloud accounts** link to add, edit, or remove a credentials record.
    {% /callout %}
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PSB-9XpGQgOYkyM-rMD4l_awsaccount.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/PSB-9XpGQgOYkyM-rMD4l_awsaccount.png)
 
 1. Note the **Use the following gateway server** check box. If selected without a server specified, by default the role of a gateway server is assigned to the machine where Veeam is installed.
    For more information on considerations and limitations for using a gateway server, see [Considerations and Limitations](https://helpcenter.veeam.com/docs/backup/vsphere/object_storage_repository_cal.html) on the Veeam website.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Nm_ozkSpgKbrppfRK5G_v_archiverepositorys3c.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Nm_ozkSpgKbrppfRK5G_v_archiverepositorys3c.png)
 
 1. Select **Next**.
 
@@ -127,7 +127,7 @@ Setting a value higher than 64 can increase throughput backing up (offloading) t
 
       Veeam's immutability setting uses S3-Compatible Object Lock. For more information and instructions on setting up your bucket with Object Lock, please refer to our documentation here: [](docId:e94a86fc-3deb-42f0-b7fe-1f80c675930a).
     {% /callout %}
-    ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YOE-le-vX4D0wfn7tnrey_archiverepositorys3cbucket.png)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/YOE-le-vX4D0wfn7tnrey_archiverepositorys3cbucket.png)
 
 1.  Select **Next**.
 
@@ -145,11 +145,11 @@ Use the New **Backup Job wizard** to configure the backup job. Follow the steps 
 
 2. Work your way though the configuration and open **Advanced** on the [Storage Selection Step](https://helpcenter.veeam.com/docs/backup/vsphere/backup_job_storage_vm.html)
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam1.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam1.png)
 
 3. Upon opening Advanced - Storage, you will be presented with the option of selecting Storage Optimization.
 Veeam recommends the default of 1MB because increasing the block size can result in larger incremental backups. 
 However, Storj's recommended setting for object storage is **4MB**. 
 Taking into account [Storj segment cost](docId:59T_2l7c1rvZVhI8p91VX#per-segment-fee), using larger block sizes both reduces overall Storj costs and provides better backup and restore times.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam_advanced_settings.png) 
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam_advanced_settings.png) 

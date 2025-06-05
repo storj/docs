@@ -58,4 +58,4 @@ Nested buckets are not supported.
 
 Output:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/tu46BijIJlozZB2Rhhjd5_bucketcakescreated.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/tu46BijIJlozZB2Rhhjd5_bucketcakescreated.png)

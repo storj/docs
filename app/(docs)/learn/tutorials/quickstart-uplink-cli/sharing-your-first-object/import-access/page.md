@@ -29,7 +29,7 @@ uplink access import cheesecake ~/cheesecake.access
 
 This should give you the following output:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LnvFyNM5SGNgYhluYziqI_access-import.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/LnvFyNM5SGNgYhluYziqI_access-import.png)
 
 ### Import from the input
 

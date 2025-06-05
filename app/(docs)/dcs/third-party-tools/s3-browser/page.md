@@ -28,7 +28,7 @@ One license allows you to install one instance of S3 Browser on a single compute
 
 ## Downloading S3 Browser
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/imHgm4QwRRec0sKL2Z-yx_pasted-image-0.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/imHgm4QwRRec0sKL2Z-yx_pasted-image-0.png)
 
 As noted, S3 Browser is only available for Windows, supporting **Windows XP/Vista/7/8/10/11 and Windows Server 2003/2008/2012/2016/2019/2022.**
 
@@ -62,25 +62,25 @@ Users interested in accessing their Storj bucket(s) via S3 Browser can do so via
 
 **Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/U_P56dlNYzj-p7I4Ubsvj_rclone1.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/U_P56dlNYzj-p7I4Ubsvj_rclone1.png)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xTdExe6AA-ZbmJWOqNmSf_rclone2.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/xTdExe6AA-ZbmJWOqNmSf_rclone2.png)
 
 **Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/m_NwIW3B7Rx5xOL1zRAwz_rclone3.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/m_NwIW3B7Rx5xOL1zRAwz_rclone3.png)
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase. (The GUI automatically generates one on the client-side for you)
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JrZT5rCAHWkwTWMy-iJzE_rclone4.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/JrZT5rCAHWkwTWMy-iJzE_rclone4.png)
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1tsIfAbcVWQWViVWNSYF1_rclone5.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/1tsIfAbcVWQWViVWNSYF1_rclone5.png)
 
 Click the **Create my Access** link to finish generating of S3 credentials.
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/m4gl1YLwvpUBQ0DTu6mQe_rclone6.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/m4gl1YLwvpUBQ0DTu6mQe_rclone6.png)
 
 Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them. We’ll be using this shortly!
 
@@ -104,7 +104,7 @@ Optionally, you’ll be able to protect your Access Keys with a master password 
 
 Check the box **Use secure transfer (SSL/TSL)** to secure all transfers via (SSL/TLS).
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/floRrJHtKxYJNVPKRL2Cl_s3browser.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/floRrJHtKxYJNVPKRL2Cl_s3browser.png)
 
 Finallly, hit **Connect**.
 

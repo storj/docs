@@ -87,7 +87,7 @@ Markdown is parsed and rendered using [Markdoc](https://markdoc.io). It allows f
 ### Image handling
 
 Images must be stored within the "Website Assets" internal project at Storj with the prefix of
-`https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images`
+`https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images`
 
 ## Style Guidelines
 

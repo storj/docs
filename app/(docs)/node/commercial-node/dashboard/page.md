@@ -91,7 +91,7 @@ Login to Grafana by visiting <http://localhost:3000> (username and password is `
 To view the metrics data in Grafana, you'll need to create a new Prometheus data source.
 
 1. Click **Add new connection** from the left sidebar under connections.
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/grafana-add-new-data-source.png)
+   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/grafana-add-new-data-source.png)
 
 1. Select **Prometheus** as the data source
 
@@ -119,5 +119,5 @@ It may say "No data" for each graph until an upload or download to your Storage 
 
 {% /callout %}
 
-![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/grafana-storage-node-dashboard.png)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/grafana-storage-node-dashboard.png)
 

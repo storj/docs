@@ -126,7 +126,7 @@ This helps cover the cost of payment processing and basic operations so we can c
 ### What does this mean for you?
 
 If your usage exceeds $5 per month, you will not be charged a minimum usage fee.
-If you prepay or pay with STORJ token, you will not be charged a minimum usage fee.
+If you prepay via a partner or pay with STORJ token, you will not be charged a minimum usage fee.
 Any monthly usage that results in an invoice less than $5 will result in the minimum usage fee. 
 
 ## Project limits

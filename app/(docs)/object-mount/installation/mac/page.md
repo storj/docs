@@ -8,6 +8,8 @@ metadata:
     MacOS Installation Instructions
 
 ---
+### MacOS - Using Linux Containers
+
 A fully native Mac client is in private beta, with a public beta available soon!
 
 However, if you would like to run the Linux version on your Mac, you can currently install inside a container. Installing Object Mount on your Mac directly will allow you to use `cuno-mac`, our handy tool for launching Linux containers that automatically have your local installation of Object Mount available inside them.

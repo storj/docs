@@ -1,16 +1,16 @@
 ---
-title: MacOS
+title: MacOS (Using Linux Containers)
 docId: yoopieyewevei1Eo
 
 metadata:
-  title: MacOS
+  title: MacOS (Using Linux Containers)
   description:
-    MacOS Installation Instructions
+    MacOS Using Linux Containers Installation Instructions
 
 ---
 A fully native Mac client is in private beta, with a public beta available soon!
 
-However, if you would like to run the Linux version on your Mac, you can currently install inside a container. Installing Object Mount on your Mac directly will allow you to use `cuno-mac`, our handy tool for launching Linux containers that automatically have your local installation of Object Mount available inside them.
+However, if you would like to run the Linux version of Object Mount on your Mac, you can install it inside a container. The instructions below will allow you to use `cuno-mac`, our handy tool for launching Linux containers that automatically have your local installation of Object Mount available inside them.
 
 {% callout type="note"  %}
 For those on Apple Silicon (ARM) Macs, macOS 13.0 Ventura or later is required.

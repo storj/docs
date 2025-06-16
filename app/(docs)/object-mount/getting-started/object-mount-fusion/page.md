@@ -21,7 +21,7 @@ Object Mount Fusion will migrate files between object storage and local filesyst
 
 {% callout type="note"  %}
 This feature is available only to Professional and Enterprise Tier customers.
-For licensing, please schedule a [discovery call](https://meetings.hubspot.com/tom1581/storj-object-mount-discovery-meeting?uuid=7d69a8eb-87d2-4971-aef9-9ea2b1073e7a).
+For licensing, please schedule a [discovery call](https://www.storj.io/landing/get-in-touch).
 {% /callout %}
 
 ## How it works

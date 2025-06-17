@@ -8,7 +8,6 @@ metadata:
     MacOS Installation Instructions
 
 ---
-## MacOS - Using Linux Containers
 
 A fully native Mac client is in private beta, with a public beta available soon!
 

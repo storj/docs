@@ -10,12 +10,10 @@ metadata:
 
 Object Mount lets you interact with object storage as if it were a fast native file system with POSIX compatibility that can run any new or existing applications.
 
-New to Object Mount and want to try it out? Check out our [Getting Started](object-mount/getting-started/intro) guide.
-
 Find us [here](https://www.storj.io/fuse-filesystem) for product information, benchmarks and case studies.
 
-For licensing quotes, free trials, product fit, or chat with an expert, please schedule a [discovery call](https://www.storj.io/landing/get-in-touch).
+For licensing, free trials, product fit, or chat with an expert, please schedule a [discovery call](https://www.storj.io/landing/get-in-touch).
 
 Need help? Message us directly at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new)
 
-The [User Guide](./object-mount/user-guides) is also available with all options and details about how Object Mount works and all available options.
+Navigate to the [Linux](./linux), [macOS](./macos), or [Windows](./windows) sections to learn more about installing and using Object Mount.

@@ -1,7 +1,8 @@
 ---
-title: macOS Native Installation
+title: Installation
+weight: 1
 metadata:
-  title: macOS Native Installation
+  title:  macOS Native Installation
   description:
     Details about installing Object Mount on macOS
 ---

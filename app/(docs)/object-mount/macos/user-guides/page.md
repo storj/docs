@@ -1,8 +1,8 @@
 ---
-title: macOS User Guide
+title: User Guide
 
 metadata:
-  title: User Guide
+  title: macOS User Guide
   description:
     User Guides Overview
 weight: 4

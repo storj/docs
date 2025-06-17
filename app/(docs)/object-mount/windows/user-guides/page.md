@@ -1,8 +1,8 @@
 ---
-title: Windows User Guide
+title: User Guide
 
 metadata:
-  title: User Guide
+  title: Windows User Guide
   description:
     User Guides Overview
 weight: 4

@@ -1,5 +1,7 @@
 ---
-title: Windows Native Installation
+title: Installation
+weight: 1
+
 metadata:
   title: Windows Native Installation
   description:

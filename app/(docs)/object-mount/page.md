@@ -16,4 +16,4 @@ For licensing, free trials, product fit, or chat with an expert, please schedule
 
 Need help? Message us directly at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new)
 
-Navigate to the [Linux](docId:wxtofwqcb5f2), [macOS](docId:apog2ij9jk6f), or [Windows](docId:veoobbmaya4z) sections to learn more about installing and using Object Mount.
+Navigate to the [Linux](./object-mount/linux), [macOS](./object-mount/macos), or [Windows](./object-mount/windows) sections to learn more about installing and using Object Mount.

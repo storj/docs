@@ -230,7 +230,7 @@ aws s3api put-object-retention \
   --version-id <version-id> \
   --retention "{}" \
   --bypass-governance-retention \
-  --content-md5 1B2M2Y8AsgTpgAmY7PhCfg== \
+  --content-md5 mZFLkyvTelC5g8XnyQrpOw== \
   --endpoint-url https://gateway.storjshare.io
 ```
 

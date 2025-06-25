@@ -107,7 +107,7 @@ These options let you further customise Object Mount's performance and diagnosti
 | **Log Level**                       | Adjusts logging detail. Options: `error`, `warning`, `debug`, or `trace` |
 | **Single Threaded Mode**            | Runs the filesystem in single-threaded mode (rarely needed; leave off unless instructed by Support) |
 | **Debug Logging**                   | Enables detailed debug output to assist with support issues |
-| **Environment Variables**           | Custom variables to modify Object Mount behaviour, such as:<br> `CUNO_OPTIONS = -filePrefetch` to enable file-level prefetching<br> (Other settings may be recommended by Support teams or Engineers) |
+| **Environment Variables**           | Custom variables to modify Object Mount behaviour, adding variables may be recommended by Support |
 
 {% callout type="info"  %}
 **Log File Location**  

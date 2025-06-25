@@ -1,18 +1,19 @@
 ---
 title: Object Mount with DaVinci Resolve
+hideTitle: true
 metadata:
   title: Object Mount with DaVinci Resolve
   description:
     Recommended settings and tips for using Object Mount with DaVinci Resolve
 ---
 
-# 🎬 Using Object Mount with DaVinci Resolve
+# Using Object Mount with DaVinci Resolve
 
 This guide walks you through the best setup for using Object Mount with **DaVinci Resolve**, along with a few optional tweaks and performance tips that may help smooth things out depending on your system and workflow.
 
 ---
 
-## ⚙️ Recommended Settings (Per Project)
+## Recommended Settings (Per Project)
 
 After opening or importing your Resolve project, please check the following:
 
@@ -28,7 +29,7 @@ After opening or importing your Resolve project, please check the following:
 
 ---
 
-## 🧪 Optional Performance Tweaks
+## Optional Performance Tweaks
 
 These settings aren’t required, but can improve responsiveness or playback performance — especially on larger projects or when working over cloud storage.
 
@@ -56,7 +57,7 @@ These settings aren’t required, but can improve responsiveness or playback per
 
 ---
 
-## 📊 Monitoring Performance
+## Monitoring Performance
 
 Because of how Object Mount optimises transfers, the built-in file copy progress indicators (in Finder or File Explorer) may not accurately reflect what's happening behind the scenes.
 
@@ -67,6 +68,8 @@ For a better view of performance:
 
 If Object Mount is saturating the network connection, that’s a good sign — it’s doing what it’s designed to do. Transfers may still appear idle in the UI, but they are active under the hood.
 
-> ⏳ **Tip:** Don’t cancel a transfer just because the Finder or Explorer bar seems stuck — always check your system’s network usage first.
+{% callout type="info" %}
+Don’t cancel a transfer just because the Finder or Explorer bar seems stuck — always check your system’s network usage first.
+{% /callout %}
 
 ---

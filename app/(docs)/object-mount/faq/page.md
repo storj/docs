@@ -10,7 +10,7 @@ metadata:
 ## What S3 permissions are recommended to mount a bucket with Object Mount?
 Short answer, for a generic cloud: read, write, and list permissions for the bucket intended to be mounted.
 
-## Are full permissions are required to achieve maximum performance of Object Mount?
+## Are full permissions required to achieve maximum performance of Object Mount?
 The maximum performance comes from Object Mount's ability to prefetch data based on how we handle certain file types. It is not dependent on being able to write the POSIX-metadata file. With read-only permissions to a bucket, Object Mount will still achieve maximum performance - but it will not be able to update any POSIX-related metadata associated with the original files.
 
 ## Why don't read-only credentials work with POSIX enabled in Object Mount?

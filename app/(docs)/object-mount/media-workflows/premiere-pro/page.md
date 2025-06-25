@@ -1,18 +1,19 @@
 ---
 title: Object Mount with Premiere Pro
+hideTitle: true
 metadata:
   title: Object Mount with Premiere pro
   description:
     Recommended workflow and setup for editing with Adobe Premiere Pro using Object Mount volumes
 ---
 
-# 🎞️ Using Object Mount with Adobe Premiere Pro
+# Using Object Mount with Adobe Premiere Pro
 
 Object Mount makes it easy to browse, import, and edit footage directly from S3-compatible storage in Adobe Premiere Pro. Whether you're working with local proxies, editing remotely, or centralising project media, Object Mount integrates smoothly into your editing pipeline.
 
 ---
 
-## ✅ Recommended Setup
+## Recommended Setup
 
 Once you've mounted your object storage with Object Mount, your volume will appear like a standard drive in **File Explorer (Windows)** or **Finder (macOS)**. From there, you can work as usual in Premiere Pro with just a few things to keep in mind.
 
@@ -22,11 +23,13 @@ Once you've mounted your object storage with Object Mount, your volume will appe
 - Navigate to your **Object Mount** drive and select your files
 - Footage can be previewed and scrubbed before importing
 
-> 💡 **Tip:** If you notice slower performance with large files or over remote networks, consider using proxy workflows.
+{% callout type="info" %}
+If you notice slower performance with large files or over remote networks, consider using proxy workflows.
+{% /callout %}
 
 ---
 
-## ⚙️ Proxy and Cache Settings (Recommended)
+## Proxy and Cache Settings (Recommended)
 
 While Object Mount enables direct-from-cloud editing, Premiere Pro still benefits from local cache for smooth playback and faster timeline scrubbing.
 
@@ -46,19 +49,20 @@ While Object Mount enables direct-from-cloud editing, Premiere Pro still benefit
 
 ---
 
-## 📁 Relinking Media
-
+## Relinking Media
 If a project was opened on a different machine or the mount point has changed:
 
 - Go to **File > Link Media**
 - Browse to your Object Mount volume
 - Premiere will relink to all matching file paths automatically
 
-> 🔄 Object Mount maintains consistent folder structures across platforms, which makes relinking straightforward.
+{% callout type="info"}
+Object Mount maintains consistent folder structures across platforms, which makes relinking straightforward.
+{% /callout }
 
 ---
 
-## 🧪 Performance Tips
+## Performance Tips
 
 - Stick to **List View** in Media Browser when browsing large folders
 - Use proxies for multicam or high-resolution editing (e.g. 4K, RAW)
@@ -66,7 +70,7 @@ If a project was opened on a different machine or the mount point has changed:
 
 ---
 
-## 📂 Storage Visibility
+## Storage Visibility
 
 Your Object Mount volume will show up like this:
 - On **macOS**: Under **Locations** in Finder
@@ -76,7 +80,7 @@ Once mounted, there’s no need to sync or copy files — you’re working live 
 
 ---
 
-## 🔐 Reminder on Write Operations
+## Reminder on Write Operations
 
 Premiere Pro reads from cloud storage efficiently, but for best results:
 

@@ -1,22 +1,37 @@
 ---
-title: Getting Started
-docId: ueDah3xoo4xah5ae
+title: Linux
+hideTitle: true
+docID: wxtofwqcb5f2
 weight: 2
 metadata:
-  title: Getting Started
+  title: Linux Installation and Usage
   description:
-    Getting Started
+    How to install and use the Object Mount Linux package across different distributions.
 ---
 
-Object Mount is a scalable, high-performance POSIX compatibility layer that lets you interact with files stored on object storage such as Storj, Amazon S3, Azure Blob Storage, Google Cloud Storage, or any S3-compatible object store hosted in the cloud or locally.
+# Linux Installation and Usage
 
-Once set up, you’ll be able to operate on your objects as if they are files with your existing tools and applications.
+This section covers everything you need to install and use the **Object Mount Linux package** across different distributions.
 
-This guide contains step-by-step instructions for:
+Whether you're setting up on Ubuntu, Debian, CentOS, or another system, you'll find step-by-step instructions, package details, and best practices to help you get up and running quickly.
 
-- Installing Object Mount
-- Setting up access to your object storage
-- Using Object Mount
+---
 
-This getting started guide assumes you already have an object storage system set up and is intended to get you set up and using Object Mount quickly. 
-The [user guide](./user-guides) contains additional details including alternative installation methods, a full list of available configuration options and additional use-cases and examples.
+## What’s Covered
+
+- Installation guides tailored for popular Linux distributions
+- System requirements and dependency notes
+- Instructions for mounting, configuration, and permissions
+- Optional performance and logging tips
+
+---
+
+## Related Pages
+
+- [Debian/Ubuntu Installation](./linux/installation/debian/)
+- [RHEL/CentOS Installation](./linux/installation/redhat/)
+- [Core Concepts](./linux/getting-started/intro/)
+
+If you're just getting started, we recommend beginning with your OS-specific guide. Each includes exactly what you need to install Object Mount safely and effectively.
+
+---

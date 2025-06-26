@@ -86,5 +86,5 @@ Important: The deposit address generated for your account is a deposit-only addr
 If the STORJ token balance runs out, a user will receive a notification to the registered email on the account. However, if a new payment is not added within a reasonable amount of time, Storj reserves the right to reduce account usage limits to zero and/or reclaim the available storage and bandwidth resources and delete your data stored on the network pursuant to our data retention policy.
 
 ## Using Online payment link in the Open invoice
-This option is available only in the Opened unpaid invoices. 
+This option is available only in the Opened unpaid invoices. You need to download the invoice PDF from the Billing History and open it, then click the Online payment link.
 There you could also use a different Card, a Wire bank transfer, Google Pay, Apple Pay and Amazon Pay.

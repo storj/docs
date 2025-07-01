@@ -1,6 +1,8 @@
 ---
 title: Configuring Credentials
 docId: heefureS2iubahpi
+redirects:
+  - /object-mount?platform=linux&help=credentials
 weight: 4
 metadata:
   title: Configuring Credentials

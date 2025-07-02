@@ -74,3 +74,7 @@ For app-specific setup steps, visit:
 - [Object Mount with Adobe Premiere Pro](./media-workflows/premiere-pro/)
 
 ---
+
+## Object Mount Demo
+
+{% youtube-embed videoId="Si__mi8HXPE" /%}

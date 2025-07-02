@@ -24,6 +24,12 @@ Once mounted, your object storage behaves like any other drive — you can brows
 
 ---
 
+## Object Mount Demo
+
+{% youtube-embed videoId="Si__mi8HXPE" /%}
+
+---
+
 ## DaVinci Resolve
 
 Object Mount integrates cleanly into DaVinci Resolve workflows:
@@ -74,3 +80,5 @@ For app-specific setup steps, visit:
 - [Object Mount with Adobe Premiere Pro](./media-workflows/premiere-pro/)
 
 ---
+
+

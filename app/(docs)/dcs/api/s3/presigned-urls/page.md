@@ -40,7 +40,7 @@ pip3 install requests
 
 ### Script
 
-#### Create your script my_put_script.py for uploads
+#### Create your script `my_put_script.py` for uploads
 
 This script will create a “put” pre-signed URL to be used for uploading
 
@@ -72,7 +72,7 @@ url = s3.generate_presigned_url('put_object', Params={"Bucket":BUCKET_NAME, "Key
 print(url)
 ```
 
-#### Execute script my_put_script.py
+#### Execute script `my_put_script.py`
 
 The output of this script will be your pre-signed URL
 
@@ -90,7 +90,7 @@ curl -v --upload-file file.name "https://gateway.storjshare.io/yourbucketname/pa
 
 ### Script for Download
 
-#### Create your script my_get_script.py for downloads
+#### Create your script `my_get_script.py` for downloads
 
 This script will create a "get" pre-signed URL to be used for downloading
 
@@ -122,7 +122,7 @@ url = s3.generate_presigned_url('get_object', Params={"Bucket":BUCKET_NAME, "Key
 print(url)
 ```
 
-#### Execute script my_get_script.py
+#### Execute script `my_get_script.py`
 
 The output of this script will be your pre-signed URL
 

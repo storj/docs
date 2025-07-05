@@ -40,7 +40,7 @@ pip3 install requests
 
 ### Script
 
-### Create your script my_put_script.py
+#### Create your script my_put_script.py for uploads
 
 This script will create a “put” pre-signed URL to be used for uploading
 
@@ -72,7 +72,7 @@ url = s3.generate_presigned_url('put_object', Params={"Bucket":BUCKET_NAME, "Key
 print(url)
 ```
 
-### Execute script myscript.py
+#### Execute script my_put_script.py
 
 The output of this script will be your pre-signed URL
 
@@ -80,10 +80,60 @@ The output of this script will be your pre-signed URL
 python3 my_put_script.py
 ```
 
-### Upload with URL and Curl
+#### Upload with URL and Curl
 
 Set for file name and extension and paste in your newly generated pre-signed URL. Note that the pre-signed URL below is invalid and included as an example only.
 
 ```bash
 curl -v --upload-file file.name "https://gateway.storjshare.io/yourbucketname/path/within/bucket?AWSAccessKeyId=jvruleqdpbwqx7vxmwgqbtlbmapa&Signature=fUNxawPyFd%2F9apR%2FZnKmR%2BPXGCA%3D&Expires=1628019103"
+```
+
+### Script for Download
+
+#### Create your script my_get_script.py for downloads
+
+This script will create a "get" pre-signed URL to be used for downloading
+
+Below you can see we need to set the following parameters:
+
+- **ACCESS_KEY** - S3 Credential created with Access
+
+- **SECRET_KEY** - S3 Credential created with Access
+
+- **URL** - You can use us1, eu1, or ap1 depending on location
+
+- **BUCKET NAME** - Name of the bucket related to this URL
+
+- **url** - Use ‘put_object to upload and ‘get_object’ to download/share
+
+- **Key** - Path of the object you wish to upload
+
+- **ExpiresIn** - How long the URL will be valid from its creation (in seconds)
+
+```python
+import boto3
+ACCESS_KEY = "Your_Access_Key"
+SECRET_KEY = "Your_Secret_Key"
+URL = "https://gateway.storjshare.io"
+BUCKET_NAME = "yourbucketname"
+session = boto3.session.Session()
+s3 = session.client(service_name="s3", aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY, endpoint_url=URL)
+url = s3.generate_presigned_url('get_object', Params={"Bucket":BUCKET_NAME, "Key":"path/within/bucket/file.name"}, ExpiresIn=3600)
+print(url)
+```
+
+#### Execute script my_get_script.py
+
+The output of this script will be your pre-signed URL
+
+```bash
+python3 my_get_script.py
+```
+
+#### Download with URL and Curl
+
+Set for file name and extension and paste in your newly generated pre-signed URL. Note that the pre-signed URL below is invalid and included as an example only.
+
+```bash
+curl -v -o file.name "https://gateway.storjshare.io/yourbucketname/path/within/bucket/file.name?AWSAccessKeyId=jvruleqdpbwqx7vxmwgqbtlbmapa&Signature=fUNyawPyFd%2F9apT%2FZnLmD%2BPXDCB%3D&Expires=1628019103"
 ```

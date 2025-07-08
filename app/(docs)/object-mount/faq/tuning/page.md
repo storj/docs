@@ -53,7 +53,7 @@ Object Mount adapts well to different network conditions, but optimal performanc
 
 - Enable **file prefetching** via `CUNO_OPTIONS = -filePrefetch`  
 - Increase **S3 connections limit** (e.g. 200+)  
-- If Client and Storage are on same **Local Area Network (LAN)** swith off **Data cache**
+- If Client and Storage are on same **Local Area Network (LAN)** switch off **Data cache**
 - Consider setting **metadata cache timeout** to a lower value for frequent sync  
 {% /tab %}
 

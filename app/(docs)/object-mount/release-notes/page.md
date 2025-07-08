@@ -6,4 +6,4 @@ metadata:
     Object Mount Release Notes
 ---
 
-Release notes for Object Mount can be found over on our [Github page](https://github.com/storj/object-mount/releases)
+Release notes for Object Mount can be found over on our [GitHub page](https://github.com/storj/object-mount/releases)

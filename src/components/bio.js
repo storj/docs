@@ -6,13 +6,14 @@
  */
 
 import Link from 'next/link'
+import LocalImage from '@/components/LocalImage'
 
 export default async function Bio({ name = 'Dan Willoughby', image, summary }) {
   return (
     <div className="my-8 flex flex-col py-2 md:flex-row">
       {image && (
         <div className="mr-4 inline-flex flex-shrink-0">
-          <img
+          <LocalImage
             src={image}
             alt={name}
             className="border-storj-600 h-12 w-12 rounded-full border-2"

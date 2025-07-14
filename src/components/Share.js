@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import React from 'react'
 import { usePathname } from 'next/navigation'
 
@@ -61,7 +62,7 @@ const ShareButtons = ({
             )}
             {hackernews && (
               <a href={hackernews} rel="noreferrer" target="_blank">
-                <img
+                <Image
                   alt="hackernews link"
                   className="color-red bg-green mr-2 h-10 w-10"
                   src="/images/misc_logos/hackernews.svg"
@@ -70,7 +71,7 @@ const ShareButtons = ({
             )}
             {indiehackers && (
               <a href={indiehackers} rel="noreferrer" target="_blank">
-                <img
+                <Image
                   alt="indiehackers link"
                   className="color-red bg-green mr-2 h-10 w-10"
                   src="/images/misc_logos/indie-hackers.svg"

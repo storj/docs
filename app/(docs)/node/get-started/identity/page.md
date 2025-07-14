@@ -111,12 +111,6 @@ If you are unable to execute the command, be sure that you set your file permiss
 PowerShell:
 
 ```powershell
-./identity.exe create storagenode
-```
-
-Command Prompt:
-
-```shell
 identity.exe create storagenode
 ```
 

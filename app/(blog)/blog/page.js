@@ -143,28 +143,10 @@ export default function BlogIndex() {
                               post.excerpt}
                           </p>
                         </div>
-                        {/*
-                  <div className="relative flex items-center mt-8 gap-x-4">
-                    <img
-                      src={post.author.imageUrl}
-                      alt=""
-                      className="w-10 h-10 bg-gray-100 rounded-full"
-                    />
-                    <div className="text-sm leading-6">
-                      <p className="font-semibold text-gray-900">
-                        <a href={post.author.href}>
-                          <span className="absolute inset-0" />
-                          {post.author.name}
-                        </a>
-                      </p>
-                      <p className="text-gray-600">{post.author.role}</p>
-                    </div>
-                  </div>
-*/}
                       </div>
                       <div className="relative mt-3 flex items-center gap-x-4">
                         {frontmatter.author && frontmatter.author.imageUrl && (
-                          <img
+                          <LocalImage
                             src={frontmatter.author.imageUrl}
                             alt=""
                             className="h-10 w-10 rounded-full bg-gray-50"

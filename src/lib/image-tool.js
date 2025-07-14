@@ -2,6 +2,7 @@ import sharp from 'sharp'
 import glob from 'fast-glob'
 import * as path from 'path'
 import fs from 'fs'
+import Image from 'next/image'
 
 export function ImageWrap({ src, alt, width, height, noLink }) {
   let imgStyle = 'xs:max-w-full sm:max-w-sm'
@@ -15,7 +16,7 @@ export function ImageWrap({ src, alt, width, height, noLink }) {
     newWidth = (width * newHeight) / height
   }
   let img = (
-    <img
+    <Image
       className={`object-fit ${imgStyle}`}
       width={newWidth}
       height={newHeight}

@@ -171,20 +171,34 @@ rclone sync --progress s3:mybucket/videos/ waterbear:mybucket/videos/
 
 ## Mounting a Bucket
 
-Use the `mount` command to mount a bucket to a folder (Mac and Linux only). When mounted, you can use the bucket as a local folder.
+Use the `mount` command to mount a bucket to a folder (Mac, Windows and Linux) or as a disk drive (Windows). When mounted, you can use the bucket as a local folder (drive).
+{% tabs %}
+{% tab label="Windows" %}
+```powershell
+mkdir ~/mybucket
+rclone mount waterbear:mybucket ~/mybucket --vfs-cache-mode full
+```
+{% /tab %}
+
+{% tab label="Linux" %}
 
 ```bash
 sudo mkdir /mnt/mybucket
 sudo chown $USER: /mnt/mybucket
 rclone mount waterbear:mybucket /mnt/mybucket --vfs-cache-mode full
 ```
+{% /tab %}
 
+{% tab label="macOS" %}
+```shell
+sudo mkdir /mnt/mybucket
+sudo chown $USER: /mnt/mybucket
+rclone mount waterbear:mybucket /mnt/mybucket --vfs-cache-mode full
+```
+{% /tab %}
+{% /tabs %}
 {% callout type="info"  %}
 The `--vfs-cache-mode full` flag means that all reads and writes are cached to disk. Without it, reads and writes are done directly to the Storj bucket.
 {% /callout %}
 
-To unmount the bucket, use the `umount` command.
-
-```bash
-umount /mnt/mybucket
-```
+To unmount the bucket, use the `Ctrl-C` keystroke to stop rclone.

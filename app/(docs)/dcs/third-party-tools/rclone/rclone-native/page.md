@@ -13,18 +13,20 @@ metadata:
 
 ## Selecting an Integration Pattern
 
-Use our native integration pattern to take advantage of client-side encryption as well as to achieve the best possible download performance. Uploads will be erasure-coded locally, thus a 1GB upload will result in 2.68GB of data being uploaded to storage nodes across the network.
+Use our native Rclone integration to take advantage of client-side encryption, and to achieve the best possible download performance. Note that uploads will be erasure-coded locally [](docId:Pksf8d0TCLY2tBgXeT18d); thus, uploading a 1GB file will result in 2.68GB uploaded data out of your network (to storage nodes across the network).
 
-## Use this pattern for
+Use this pattern (native integration) for:
 
 - The strongest security
 - The best download speeds
 
+Alternatively, you can use the [S3 compatible integration](docId:eZ4caegh9queuQuaazoo) with Rclone to increase upload performance and reduce the load on your systems and network.
+
 ## Setup
 
-First, [Download](https://rclone.org/downloads/) and extract the rclone binary onto your system.
+First, [download rclone](https://rclone.org/downloads/) and extract the rclone binary onto your system.
 
-Execute the config command:
+Execute the config command to setup a new Storj "remote" configuration:
 
 ```bash
 rclone config
@@ -179,4 +181,4 @@ q) Quit config
 e/n/d/r/c/s/q> q
 ```
 
-For additional commands you can do, see [](docId:WayQo-4CZXkITaHiGeQF_).
+For a listing of Rclone commands for general use, see [](docId:WayQo-4CZXkITaHiGeQF_).

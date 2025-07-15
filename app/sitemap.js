@@ -7,6 +7,8 @@ import {
   oMountBottomNav,
 } from '@/markdoc/navigation.mjs'
 
+export const dynamic = "force-static"
+
 export default function sitemap() {
   return [
     dcsBottomNav,

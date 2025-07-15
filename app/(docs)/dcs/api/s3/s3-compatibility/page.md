@@ -29,7 +29,7 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | DeleteBucketOwnershipControls | No |  |
 | DeleteBucketPolicy | No |  |
 | DeleteBucketReplication | No |  |
-| DeleteBucketTagging | No |  |
+| DeleteBucketTagging | Full |  |
 | DeleteBucketWebsite | No |  |
 | DeleteObject | Full |  |
 | DeleteObjectTagging | Full | Tags can be modified outside of tagging endpoints |
@@ -54,7 +54,7 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | GetBucketPolicyStatus | No | Currently, it always returns false |
 | GetBucketReplication | No |  |
 | GetBucketRequestPayment | No | Planned support status needs verification |
-| GetBucketTagging | No |  |
+| GetBucketTagging | Full |  |
 | GetBucketVersioning | Yes | [](docId:oogh5vaiGei6atohm5thi) |
 | GetBucketWebsite | No |  |
 | GetObject | Partial | We need to add support for the partNumber parameter |
@@ -94,7 +94,7 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | PutBucketPolicy | No |  |
 | PutBucketReplication | No |  |
 | PutBucketRequestPayment | No | Planned support status needs verification |
-| PutBucketTagging | No |  |
+| PutBucketTagging | Full |  |
 | PutBucketVersioning | Yes | [](docId:oogh5vaiGei6atohm5thi) |
 | PutBucketWebsite | No |  |
 | PutObject | Full |  |
@@ -143,6 +143,7 @@ action (see Caveats column).
 
 ### ListObjects
 
+#### Encrytped Object Keys
 A bucket's paths are end-to-end encrypted. We don't use an ordering-preserving
 encryption scheme yet, meaning that it's impossible to always list a bucket in
 lexicographical order (as per S3 specification). For requests that come with
@@ -156,6 +157,11 @@ paths gateway-side. In this case, gateways return listing in lexicographical
 order. Forcing exhaustive listing for any request is not possible for Storj
 production deployments of Gateway-MT, and for, e.g. Gateway-ST can be achieved
 with `--s3.fully-compatible-listing`.
+
+#### Unencrypted Object Keys
+Always lists in lexicographical order (as per S3 specification). For requests that come with a
+non-forward-slash delimiter, we perform exhaustive listing, which will filter
+paths gateway-side.
 
 ### ListMultipartUploads
 

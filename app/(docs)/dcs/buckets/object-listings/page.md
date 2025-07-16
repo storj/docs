@@ -49,5 +49,5 @@ Avoid using access grants or S3 credentials with different path encryption setti
 {% /callout %}
 
 {% callout type="info"  %}
-The [](docId:4oDAezF-FcfPr0WPl7knd) in the Satellite Console cannot list objects with unencrypted object keys yet. If you try to open a bucket with such objects, you'll see it empty with a message "You have objects locked with a different passphrase". Support for unencrypted object keys in the Object Browser will be added in a future release. Until then, you can use the [](docId:TC-N6QQVQg8w2cRqvEqEf) or a S3-compatible app to list such objects.
+The [](docId:4oDAezF-FcfPr0WPl7knd) in the Satellite Console cannot list objects with unencrypted object keys yet. If you try to open a bucket with such objects, you'll see it empty with a message "You have objects locked with a different passphrase". Support for unencrypted object keys in the Object Browser will be added in a future release. Until then, you can use the [](docId:TC-N6QQVQg8w2cRqvEqEf) or an S3-compatible app to list such objects.
 {% /callout %}

@@ -1,28 +1,28 @@
 ---
-title: Rclone additional commands
+title: Rclone Commands
 docId: WayQo-4CZXkITaHiGeQF_
 redirects:
   - /dcs/how-tos/sync-files-with-rclone/rclone-with-hosted-gateway
 metadata:
-  title: Rclone with S3 Compatibility Guide
-  description: Step-by-step guide to configure Rclone pointed to Storj's S3 compatible API, providing better upload performance and lower network load.
+  title: Rclone Command Guide
+  description: Step-by-step guide to use Rclone with common commands.
 ---
 
 {% callout type="info"  %}
 Follow the [Getting Started guide](docId:AsyYcUJFbO1JI8-Tu8tW3) to setup Rclone.
 {% /callout %}
 
-The follow are additional commands or options you can consider when using Rclone
+The follow are additional commands and options you can consider when using Rclone.
 
-## Configuration password
+## Configuration Password
 
-For additional security, you should consider using the `s) Set configuration password` option. It will encrypt the `rclone.conf` configuration file. This way secrets like the [](docId:OXSINcFRuVMBacPvswwNU), the encryption passphrase, and the access grant can't be easily stolen.
+For additional security, you should consider using the `s) Set configuration password` option. It will encrypt the `rclone.conf` configuration file. This way, secrets like the [](docId:OXSINcFRuVMBacPvswwNU), the encryption passphrase, and the access grant can't be easily stolen.
 
 ## Create a Bucket
 
 Use the `mkdir` command to create new bucket, e.g., `mybucket`.
 
-```yaml
+```bash
 rclone mkdir waterbear:mybucket
 ```
 
@@ -162,8 +162,43 @@ Or between two Storj buckets.
 rclone sync --progress waterbear-us:mybucket/videos/ waterbear-europe:mybucket/videos/
 ```
 
-Or even between another cloud storage and Storj.
+Or even between another cloud storage (e.g., an AWS S3 connection names `s3`) and Storj.
 
 ```bash
 rclone sync --progress s3:mybucket/videos/ waterbear:mybucket/videos/
 ```
+
+
+## Mounting a Bucket
+
+Use the `mount` command to mount a bucket to a folder (Mac, Windows and Linux) or as a disk drive (Windows). When mounted, you can use the bucket as a local folder (drive).
+{% tabs %}
+{% tab label="Windows" %}
+```powershell
+mkdir ~/mybucket
+rclone mount waterbear:mybucket ~/mybucket --vfs-cache-mode full
+```
+{% /tab %}
+
+{% tab label="Linux" %}
+
+```bash
+sudo mkdir /mnt/mybucket
+sudo chown $USER: /mnt/mybucket
+rclone mount waterbear:mybucket /mnt/mybucket --vfs-cache-mode full
+```
+{% /tab %}
+
+{% tab label="macOS" %}
+```shell
+sudo mkdir /mnt/mybucket
+sudo chown $USER: /mnt/mybucket
+rclone mount waterbear:mybucket /mnt/mybucket --vfs-cache-mode full
+```
+{% /tab %}
+{% /tabs %}
+{% callout type="info"  %}
+The `--vfs-cache-mode full` flag means that all reads and writes are cached to disk. Without it, reads and writes are done directly to the Storj bucket.
+{% /callout %}
+
+To unmount the bucket, use the `Ctrl-C` keystroke to stop rclone.

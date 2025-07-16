@@ -13,15 +13,15 @@ Our software attempts to increase the UDP receive buffer size. However, on Linux
 We recommend increasing the maximum buffer size by running the following to increase it to \~2.5MB.
 
 ```bash
-sysctl -w net.core.rmem_max=2500000
+sysctl -w net.core.rmem_max=7500000
 ```
 
 To make this value persistent across reboots, run the following instead (as root):
 
 ```bash
-echo "net.core.rmem_max=2500000" >> /etc/sysctl.d/udp_buffer.conf
+echo "net.core.rmem_max=7500000" >> /etc/sysctl.d/udp_buffer.conf
 
-sysctl -w net.core.rmem_max=2500000
+sysctl -w net.core.rmem_max=7500000
 ```
 
 Reference: [udp receive buffer size in quic-go](https://github.com/lucas-clemente/quic-go/wiki/UDP-Receive-Buffer-Size)

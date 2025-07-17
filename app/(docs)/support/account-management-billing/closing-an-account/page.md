@@ -20,7 +20,3 @@ The process to eliminate platform usage starts with deleting all data from the p
 {% callout type="info" %}
 If you have thousands objects or versions, the bucket deletion could take a lot of time via [](docId:nGzxQBhV8nx5Pukj6O0zT) (web UI) due to browsers limitations, so it's recommended to use CLI tools instead, like `uplink` CLI or `rclone`. See [](docId:b953ae01-9beb-48d3-83f7-2f6c7d07e875) for details.
 {% /callout %}
-
-{% callout type="info"  %}
-If you use the [](docId:4oDAezF-FcfPr0WPl7knd) in the [](docId:nGzxQBhV8nx5Pukj6O0zT), then after deleting the last bucket please do not return to the Buckets menu, otherwise the `demo-bucket` will be created automatically. This bucket will prevent the account deletion. It also can create a linked Access grant, this will prevent the account deletion too.
-{% /callout %}

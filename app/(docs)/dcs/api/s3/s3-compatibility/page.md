@@ -144,7 +144,7 @@ action (see Caveats column).
 
 ### ListObjects
 
-#### Encrytped Object Keys
+#### Encrypted Object Keys
 A bucket's paths are end-to-end encrypted. We don't use an ordering-preserving
 encryption scheme yet, meaning that it's impossible to always list a bucket in
 lexicographical order (as per S3 specification). For requests that come with

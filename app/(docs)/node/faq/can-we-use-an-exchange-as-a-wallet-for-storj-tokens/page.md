@@ -15,5 +15,6 @@ Since the deposit address is disposable, the exchange could also change it at an
 
 Most of the exchanges use a separate deposit addresses for every token and if you send STORJ to the Ethereum deposit address for example, they could be lost. Exchanges post warnings about this on their deposit addresses so you may have no recourse if you ignore the warning and deposit STORJ to the wrong exchange deposit address anyway.
 
+If you are a EU resident, you will be eligible to confirm the source address of funds due to MiCA changes, due to this mandatory requirement it's not possible for you to use the exchange address as your wallet address in the node's configuration at all, see the [relarted thread](https://forum.storj.io/t/getting-payed-to-kraken-address-with-mica/30295) on the forum.
 
 We will not be able to assist to recover STORJ tokens if you have any problems with an exchange; in order to recover tokens, you will have to file a support ticket directly with the help desk of the exchange in question.

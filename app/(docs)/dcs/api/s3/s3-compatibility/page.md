@@ -59,7 +59,7 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | GetBucketWebsite | No |  |
 | GetObject | Partial | We need to add support for the partNumber parameter |
 | GetObjectAcl | No |  |
-| GetObjectAttribute | Partial | Etag, StorageClass, and ObjectSize only |
+| GetObjectAttributes | Partial | Etag, StorageClass, and ObjectSize only |
 | GetObjectLegalHold | Yes | [](docId:gjrGzPNnhpYrAGTTAUaj) |
 | GetObjectLockConfiguration | Yes | [](docId:gjrGzPNnhpYrAGTTAUaj) |
 | GetObjectRetention | Yes | [](docId:gjrGzPNnhpYrAGTTAUaj) |

@@ -1,6 +1,8 @@
 ---
 title: macOS User Guide
 docId: macos-user-guide
+redirects:
+   - /object-mount/credentials/macos/import
 hideTitle: true
 weight: 1
 metadata:

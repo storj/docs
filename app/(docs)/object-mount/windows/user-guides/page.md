@@ -2,6 +2,8 @@
 title: Windows User Guide
 hideTitle: true
 docId: windows-user-guide
+redirects:
+   - /object-mount/credentials/windows/import
 weight: 1
 metadata:
   title: Object Mount Windows User Guide

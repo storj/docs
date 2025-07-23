@@ -1,7 +1,8 @@
 ---
 title: Credential Management
 docId: aish4shuiheeZaig
-
+redirects:
+  - /object-mount/credentials/linux/import
 metadata:
   title: Credential Management
   description: Credential Management

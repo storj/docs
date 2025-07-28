@@ -14,7 +14,7 @@ Object Mount is designed to make working with cloud storage as seamless as possi
 
 This page gives a quick overview of how Object Mount fits into post-production workflows, and where it works well with tools like **DaVinci Resolve** and **Adobe Premiere Pro**.
 
----
+
 
 ## What is Object Mount?
 
@@ -22,13 +22,13 @@ Object Mount is a native S3 mount tool that lets you treat remote object storage
 
 Once mounted, your object storage behaves like any other drive — you can browse, preview, and edit media directly from it using your preferred creative software.
 
----
+
 
 ## Object Mount Demo
 
 {% youtube-embed videoId="Si__mi8HXPE" /%}
 
----
+
 
 ## DaVinci Resolve
 
@@ -41,7 +41,7 @@ Object Mount integrates cleanly into DaVinci Resolve workflows:
 
 See [Using Object Mount with DaVinci Resolve](./media-workflows/davinci-resolve) for the full setup guide.
 
----
+
 
 ## Adobe Premiere Pro
 
@@ -55,7 +55,7 @@ Premiere Pro users can also benefit from Object Mount in similar ways:
 Object Mount volumes appear like regular drives in Finder or File Explorer, making them easy to integrate with Premiere’s media browser and import panels.
 {% /callout %}
 
----
+
 
 ## When to Use Object Mount
 
@@ -68,7 +68,7 @@ Object Mount is ideal for:
 
 It’s particularly well-suited for **hybrid workflows** where some assets live on fast local disks and others come in from the cloud — without needing clunky manual sync tools or complex workflows.
 
----
+
 
 ## Final Notes
 
@@ -86,6 +86,6 @@ Others:
 - [Object Mount with Graphics Applications](./media-workflows/graphics/)
 - [Object Mount with Digital Audio Workstations](./media-workflows/daw/)
 
----
+
 
 

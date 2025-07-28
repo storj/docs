@@ -1,14 +1,11 @@
 ---
 title: Object Mount in Media Workflows
-hideTitle: true
 weight: 1
 metadata:
   title: Object Mount in Media Workflows
   description:
     Overview of using Object Mount with creative tools like DaVinci Resolve and Adobe Premiere Pro
 ---
-
-# Object Mount in Media Workflows
 
 Object Mount is designed to make working with cloud storage as seamless as possible — especially in media production environments where performance, compatibility, and simplicity matter.
 

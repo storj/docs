@@ -12,12 +12,12 @@ Warning: Read this carefully before you start
 Please read the following information carefully and ask any questions your might have on this forum thread and this one before executing graceful exit.
 {% /callout %}
 
-# Requirements
+## Requirements
 1. Storage node has joined the network more than **15 months** ago (requirement **temporarily reduced to 6 months**).
 2. Storage node is **healthy** and **hasn’t lost any significant amount of data**. Disqualification during graceful exit is possible.
 3. Storage node will have **no huge downtime** during the graceful exit period (30 days). The uptime score requirement is higher during graceful exit (0.8) than it is normally (0.6). If your node has too much downtime during the graceful exit period, the graceful exit will fail and you will not get back your held amount.
 
-# Start Graceful Exit
+## Start Graceful Exit
 Are you sure you want to start graceful exit? Did you read the information above? Do you understand that graceful exit can’t be canceled once initiated?
 
 Here is an example how you call graceful exit from the command prompt (Linux):
@@ -59,7 +59,7 @@ For example, if you changed it to `server.private-address: 127.0.0.1:7779` and y
 "C:\Program Files\Storj\Storage Node\storagenode.exe" exit-satellite --config-dir "C:\Program Files\Storj\Storage Node2\\" --identity-dir "C:\Users\USER\AppData\Roaming\Storj\Identity\storagenode2" --log.output stderr --server.private-address 127.0.0.1:7779
 ```
 
-# During Graceful Exit
+## During Graceful Exit
 You can watch the status of graceful exit as follows (example output from a test satellite):
 
 ```shell
@@ -91,7 +91,7 @@ If you get the output `No graceful exit in progress.` this means graceful exit d
 
 In case of a crash, power failure or other outage during graceful exit, please get your storage node back online. Graceful exit will continue.
 
-# Finish Graceful Exit
+## Finish Graceful Exit
 After the graceful exit period (currently 30 days) is complete, your node will no longer be in the graceful exit stage. Either it will have succeeded (if your uptime was high enough) or it will have failed.
 
 At the end you will get this output: (sample output from a test satellite)

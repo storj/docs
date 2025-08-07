@@ -15,7 +15,7 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 |---|---|---|
 | AbortMultipartUpload | Full |  |
 | CompleteMultipartUpload | Full |  |
-| CopyObject | Full |  |
+| CopyObject | Full | See CopyObject section |
 | CreateBucket | Full |  |
 | CreateMultipartUpload | Full |  |
 | DeleteBucket | Full |  |
@@ -122,7 +122,14 @@ except for features that rely on other actions that we haven't fully
 implemented.
 
 ### Bucket Logging
+
 Bucket Logging is available upon request. Please refer to [](docId:0191fc71-e031-761c-a16b-aa8ca9e44413).
+
+### CopyObject
+
+Unlike in AWS S3, CopyObject calls in Storj will not fail on objects that exceed
+5 GB in size. The object size that can be copied via CopyObject is currently
+limited to approximately 671 GB.
 
 ### GetBucketLocation
 
@@ -145,6 +152,7 @@ action (see Caveats column).
 ### ListObjects
 
 #### Encrypted Object Keys
+
 A bucket's paths are end-to-end encrypted. We don't use an ordering-preserving
 encryption scheme yet, meaning that it's impossible to always list a bucket in
 lexicographical order (as per S3 specification). For requests that come with
@@ -160,9 +168,10 @@ production deployments of Gateway-MT, and for, e.g. Gateway-ST can be achieved
 with `--s3.fully-compatible-listing`.
 
 #### Unencrypted Object Keys
-Always lists in lexicographical order (as per S3 specification). For requests that come with a
-non-forward-slash delimiter, we perform exhaustive listing, which will filter
-paths gateway-side.
+
+Always lists in lexicographical order (as per S3 specification). For requests
+that come with a non-forward-slash delimiter, we perform exhaustive listing,
+which will filter paths gateway-side.
 
 ### ListMultipartUploads
 
@@ -354,6 +363,7 @@ func main() {
 ```
 
 ## Compatibility with Python SDK (`boto3`) and `aws` CLI
+
 Currently only `boto3` version up to 1.35.99 is working normally. Since AWS CLI uses `boto3` under the hood, it's affected too.
 
 You can find the explanation of this breaking change in boto3 in this [github issue](https://github.com/boto/boto3/issues/4392).

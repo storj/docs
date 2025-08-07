@@ -34,13 +34,9 @@ Run one Storage Node per hard drive.
 If you have a virtualized environment, try to target the nodes size to be similar to the average drive size underlying that virtualized environment. So if the infrastructure is mostly on 10 TB HDD then set the node size to be 10 TB.
 {% /callout %}
 
-Follow Steps 1 through 6 in the [Storage Node setup guide](docId:kjMiGo7HTr4v_qwD5Iqc7) for each Commercial Storage Node:
+Follow Steps 1 through 5 in the [Storage Node setup guide](docId:kjMiGo7HTr4v_qwD5Iqc7) for each Commercial Storage Node:
 
 [](docId:hbCGTv1ZLLR2-kpSaGEXw)
-
-[](docId:v-fUvPqySvUwTMF-od6hD)
-
-For Step 2, if you require a significant number of authorization tokens, please reach out to your contact for assistance.
 
 [](docId:y0jltT-HzKPmDefi532sd)
 

@@ -1,5 +1,5 @@
 ---
-title: Step 4. Configure QUIC
+title: Step 3. Configure QUIC
 docId: owZeAc56KSDnUzDhsBfB8
 redirects:
   - /node/dependencies/quic-requirements
@@ -12,8 +12,6 @@ redirects:
 {% /callout %}
 
 [](docId:hbCGTv1ZLLR2-kpSaGEXw)
-
-[](docId:v-fUvPqySvUwTMF-od6hD)
 
 [](docId:y0jltT-HzKPmDefi532sd)
 

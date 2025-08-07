@@ -1,5 +1,5 @@
 ---
-title: Step 3. Setup Port Forwarding
+title: Step 2. Setup Port Forwarding
 docId: y0jltT-HzKPmDefi532sd
 redirects:
   - /node/dependencies/port-forwarding
@@ -12,8 +12,6 @@ redirects:
 {% /callout %}
 
 [](docId:hbCGTv1ZLLR2-kpSaGEXw)
-
-[](docId:v-fUvPqySvUwTMF-od6hD)
 
 ## Introduction
 

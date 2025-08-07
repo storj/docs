@@ -1,5 +1,5 @@
 ---
-title: Step 5. Create an Identity
+title: Step 4. Create an Identity
 docId: aT6VAB297OWLd4vqeXxf5
 redirects:
   - /node/dependencies/identity
@@ -12,8 +12,6 @@ redirects:
 {% /callout %}
 
 [](docId:hbCGTv1ZLLR2-kpSaGEXw)
-
-[](docId:v-fUvPqySvUwTMF-od6hD)
 
 [](docId:y0jltT-HzKPmDefi532sd)
 
@@ -89,13 +87,13 @@ sudo mv identity /usr/local/bin/identity
 {% /tab %}
 {% /tabs %}
 
+## 2. Create an identity
+
 {% callout type="info"  %}
 **This can take several hours or days, depending on your machines processing power and luck.**
 
 Plan to run your Node on a NAS, Raspberry Pi or similar? Create your identity on a more powerful machine and transfer it over.
 {% /callout %}
-
-## 2. Create an identity
 
 {% tabs %}
 {% tab label="Linux" %}
@@ -135,100 +133,7 @@ This process will continue until it reaches a difficulty of at least 36. On comp
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/ziCJkaXYzJYBRuLl0vyA2_image.png)
 
-## 3. Authorize the identity
-
-Authorize your Storage Node identity using your single-use authorization token (please, replace the placeholder **email\:characterstring** to your actual authorization token):
-
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/Yi1FdCqXE0mIbsiwMDtDr_image.png)
-
-Authorize your Storage Node identity using your [](docId:v-fUvPqySvUwTMF-od6hD) (_please, replace the placeholder to your actual authorization token_):
-
-{% tabs %}
-{% tab label="Linux" %}
-
-```shell
-identity authorize storagenode <email:characterstring>
-```
-
-{% /tab %}
-
-{% tab label="Windows" %}
-
-```powershell
-./identity.exe authorize storagenode <email:characterstring>
-```
-
-```shell
-identity.exe authorize storagenode <email:characterstring>
-```
-
-{% /tab %}
-
-{% tab label="macOS" %}
-
-```shell
-identity authorize storagenode <email:characterstring>
-```
-
-{% /tab %}
-{% /tabs %}
-
-### Confirm the identity
-
-Run the following command to confirm you have the required identity files:
-
-{% tabs %}
-{% tab label="Linux" %}
-
-```shell
-grep -c BEGIN ~/.local/share/storj/identity/storagenode/ca.cert
-```
-
-```shell
-grep -c BEGIN ~/.local/share/storj/identity/storagenode/identity.cert
-```
-
-{% /tab %}
-
-{% tab label="Windows" %}
-
-```powershell
-(sls BEGIN "$env:AppData\Storj\Identity\storagenode\ca.cert").count
-```
-
-```powershell
-(sls BEGIN "$env:AppData\Storj\Identity\storagenode\identity.cert").count
-```
-
-```powershell
-findstr "BEGIN" "%APPDATA%\Storj\Identity\storagenode\ca.cert" | find /c /v ""
-```
-
-```powershell
-findstr "BEGIN" "%APPDATA%\Storj\Identity\storagenode\identity.cert" | find /c /v ""
-```
-
-{% /tab %}
-
-{% tab label="macOS" %}
-
-```macos
-grep -c BEGIN ~/Library/Application\ Support/Storj/identity/storagenode/ca.cert
-grep -c BEGIN ~/Library/Application\ Support/Storj/identity/storagenode/identity.cert
-```
-
-{% /tab %}
-{% /tabs %}
-
-The first command should return **2**, and the second command should return **3**:
-
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/GlTZ8mJI50FN4_AMDPri-_image.png)
-
-If your numbers are different, then [](docId:aT6VAB297OWLd4vqeXxf5) was not successful. Please try again.
-
-Might move your storage node to another machine in the future? Back up your identity folder.
-
-## 4. Backup the identity
+## 3. Backup the identity
 
 {% callout type="danger"  %}
 **Backup before you continue, it should be quick! 🙏**

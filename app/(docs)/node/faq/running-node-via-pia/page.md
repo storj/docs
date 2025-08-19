@@ -95,24 +95,18 @@ For Linux: 
 
 You need to [create a new Identity](docId:aT6VAB297OWLd4vqeXxf5) for your storage node, if you don't have one.
 
-## 3.3. Authorize your identity with an authorization token
-
-If you [requested an authorization token](docId:v-fUvPqySvUwTMF-od6hD), you should get your one-time authorization token. This token can be used only once. For the second time it will not be valid.
-
-[Sign the Identity](docId:aT6VAB297OWLd4vqeXxf5#3-authorize-the-identity) and Backup the Identity folder.
-
-## 3.4. Download a storagenode
+## 3.3. Download a storagenode
 {% quick-links %}
 {% quick-link title="⌨️ CLI Install" href="docId:rz3s9lC3qAQHYSl37ngBN" /%}
 
 {% quick-link title="🖥 GUI Install - Windows" href="docId:5shJebpS3baWj6LDV5ANQ" /%}
 {% /quick-links %}
 
-## 3.5. Wallet address
+## 3.4. Wallet address
 
 The article [](docId:66d6c295-53e4-4308-9cde-1c6193155f52) will let you create a valid STORJ token address if you do not already have one. If you already have a compatible STORJ payout address, or an address made with another [ERC20 compatible wallet](docId:a045be02-e05a-11ef-9338-6045bd1fa4e3), you can continue with the steps below.
 
-## 3.6. Storage Location
+## 3.5. Storage Location
 
 You will need a place to store the data. It could be a dedicated HDD (or even RAID, if you want).
 
@@ -122,7 +116,7 @@ We suggest to use a subfolder for the data (it will prevent the storage node fro
 ***Note.** The network connected drive could work, but not recommended and not supported.*
 {% /callout %}
 
-## 3.7. Storage Size
+## 3.6. Storage Size
 
 Next, you have to make a decision how much space you want to rent out to the network. The minimum allotted space is 500 GB however, you should allow for 10% overhead.
 

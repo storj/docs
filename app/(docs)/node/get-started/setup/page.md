@@ -20,10 +20,6 @@ By becoming a Storage Node Operator you enable your unused hard drive space to b
 
 Includes Hardware Requirements (Recommended), System Requirements, Internet Connection, Power Supply.
 
-## [](docId:v-fUvPqySvUwTMF-od6hD) {% anchor=false %}
-
-You need to get an Authorization Token to setup your node.
-
 ## [](docId:y0jltT-HzKPmDefi532sd) {% anchor=false %}
 
 Most, if not all ISPs give a dynamic IP address, which means your IP can change at any time. As a workaround, you need a dynamic DNS service to ensure your storage node is connected.

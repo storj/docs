@@ -85,6 +85,7 @@ function getFrontmatter(filepath) {
     docId: frontmatter.docId,
     weight: frontmatter.weight,
     date: frontmatter.date,
+    hidden: frontmatter.hidden,
   }
 }
 
@@ -136,7 +137,10 @@ function walkDirRec(dir, space, currentPath) {
       if (fs.existsSync(pageFilepath)) {
         entry.href = `/${space}/${relativePath}`
       }
-      results.push(entry)
+      // Only add to navigation if not hidden
+      if (!entry.hidden) {
+        results.push(entry)
+      }
     }
   })
 

@@ -190,7 +190,7 @@ Note. You can also specify to place the identity files into another folder using
 {% /callout %}
 
 ## Copy your node Identity to the RPi
-In case you generated and authorized your node identity on a desktop/laptop computer instead of directly on the RPi to save time, you can copy it to the RPi afterward, as follows:
+In case you generated your node identity on a desktop/laptop computer instead of directly on the RPi to save time, you can copy it to the RPi afterward, as follows:
 
 ### Copy the Identity to the RPi from Linux or Mac
 Copy your node identity from your desktop to the RPi: [https://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh](https://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh)

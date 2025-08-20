@@ -189,24 +189,8 @@ Your Identity will be generated here:
 Note. You can also specify to place the identity files into another folder using the option `--identity-dir`
 {% /callout %}
 
-## Sign your node Identity
-```powershell
-./identity_windows_amd64.exe authorize storagenode user@example.com:ohihioHiohohIOhUyTUfyufVJHvufUyvJHvyFTYdhVJGionOoHib
-```
-Where `user@example.com:ohihioHiohohIOhUyTUfyufVJHvufUyvJHvyFTYdhVJGionOoHib` is your authorization token you [have generated](docId:v-fUvPqySvUwTMF-od6hD).
-
-We recommend to move your signed identity from the SD card to the HDD with the storagenode data, so if the SD card fails, you will not lose your identity. In the event of a hard drive failure, your node would be lost anyway, so it is better to store identity and data together in different folders on the hard drive.
-
-{% callout type="info" %}
-Note: You cannot authorize your identity if you didn't get your authorization token.
-
-Note: The email address is a part of the authorization token and should be copied including all characters.
-
-Note: You can specify the identity folder with an `--identity-dir` option.
-{% /callout %}
-
 ## Copy your node Identity to the RPi
-In case you generated and authorized your node identity on a desktop/laptop computer instead of directly on the RPi to save time, you can copy it to the RPi afterward, as follows:
+In case you generated your node identity on a desktop/laptop computer instead of directly on the RPi to save time, you can copy it to the RPi afterward, as follows:
 
 ### Copy the Identity to the RPi from Linux or Mac
 Copy your node identity from your desktop to the RPi: [https://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh](https://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh)

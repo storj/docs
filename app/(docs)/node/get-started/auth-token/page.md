@@ -3,12 +3,13 @@ title: Step 2. Get an Authorization Token
 docId: v-fUvPqySvUwTMF-od6hD
 redirects:
   - /node/before-you-begin/auth-token
+hidden: true
 ---
 
 ## Before starting
 
 {% callout type="warning"  %}
-**Failure to complete these steps will prevent your storage node from working.**
+**This step is not required any more. Identities can be used without authorizing them manually!**
 {% /callout %}
 
 [](docId:hbCGTv1ZLLR2-kpSaGEXw)

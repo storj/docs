@@ -13,8 +13,6 @@ Failure to complete these steps will prevent your storage node from working.
 
 [](docId:hbCGTv1ZLLR2-kpSaGEXw)
 
-[](docId:v-fUvPqySvUwTMF-od6hD)
-
 [](docId:y0jltT-HzKPmDefi532sd)
 
 [](docId:owZeAc56KSDnUzDhsBfB8)

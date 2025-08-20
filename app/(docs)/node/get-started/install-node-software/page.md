@@ -1,5 +1,5 @@
 ---
-title: Step 6. Install Node Software
+title: Step 5. Install Node Software
 docId: XC--4Jtp1o309gbWFOHPn
 redirects:
   - /node/step-6-install-node-software

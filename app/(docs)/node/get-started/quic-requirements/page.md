@@ -33,7 +33,7 @@ Linux users, please take a look at [](docId:uIbtSLgN6Ug86rBvFZQOB). macOS/FreeBS
 
 Windows users, please take a look at the Firewall configuration instructions in the [](docId:y0jltT-HzKPmDefi532sd) section for Windows.
 
-If you configured QUIC while your node was running, you need to restart it to apply the changes (the QUIC connectivity is checked only on startup).
+If you configured QUIC while your node was running, you need to restart it to apply the changes (the QUIC connectivity will be checked on startup and on every check-in on the satellite (1h by default)).
 
 {% tabs %}
 {% tab label="Docker" %}

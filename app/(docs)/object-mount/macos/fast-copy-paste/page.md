@@ -46,8 +46,8 @@ You may need to right-click again or relaunch Finder (`Cmd + Option + Esc`) to s
 
 These options are ideal when:
 
-- Copying large files or folders into an Object Mount volume  
 - Moving footage, projects, or renders from a local disk into the cloud  
+- Copying large files or folders from one Object Mount volume to another  
 - Working with high-latency networks or remote S3 endpoints  
 - Avoiding bottlenecks from Finder’s standard file operations
 
@@ -87,13 +87,17 @@ Fast Copy / Move:
 Unlike drag-and-drop or standard Copy + Paste, **Fast Copy / Move** ensures optimal use of bandwidth and avoids unnecessary local I/O.
 {% /callout %}
 
+{% callout type="info"  %}
+**Log File Location**  
+-`~/Library/Application Support/Object Mount/cunoFS.log`  
+{% /callout %}
+
 ---
 
 ## Related Settings
 
 For further tuning, see:  
 - [Performance Tuning](../faq/tuning/)
-- [Log Location & Preferences](../macos/user-guides/page.md)
 
 ---
 

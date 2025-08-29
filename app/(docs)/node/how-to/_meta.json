@@ -12,6 +12,18 @@
     {
       "title": "Troubleshoot offline node", 
       "id": "troubleshoot-offline-node"
+    },
+    {
+      "title": "Fix database corruption",
+      "id": "fix-database-corruption"
+    },
+    {
+      "title": "Set up remote access",
+      "id": "setup-remote-access"
+    },
+    {
+      "title": "Monitor node performance",
+      "id": "monitor-node-performance"
     }
   ]
 }

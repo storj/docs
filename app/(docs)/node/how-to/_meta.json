@@ -1,0 +1,17 @@
+{
+  "title": "How-to Guides",
+  "nav": [
+    {
+      "title": "Change payout address",
+      "id": "change-payout-address"
+    },
+    {
+      "title": "Migrate node",
+      "id": "migrate-node"
+    },
+    {
+      "title": "Troubleshoot offline node", 
+      "id": "troubleshoot-offline-node"
+    }
+  ]
+}

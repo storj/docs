@@ -6,6 +6,10 @@ metadata:
   description: Comprehensive 7-day tutorial to master Storj DCS fundamentals, from account setup to advanced features
 ---
 
+{% callout type="note" %}
+**Tutorial** - Learning-oriented guide for hands-on skill development
+{% /callout %}
+
 Master Storj DCS in your first week with this comprehensive tutorial that takes you from complete beginner to confident user.
 
 ## What you'll build
@@ -575,3 +579,21 @@ Now that you've mastered the basics:
    - [Documentation](https://docs.storj.io)
 
 Congratulations on completing your first week with Storj! You're now ready to build amazing applications with decentralized cloud storage.
+
+## Related Content
+
+**More Tutorials:**
+- [Build Your First App](docId:build-your-first-app-tutorial) - Create a web application with Storj integration
+
+**Next Steps (How-to Guides):**
+- [Optimize Upload Performance](docId:optimize-upload-performance) - Speed up your data uploads
+- [Configure CORS](docId:configure-cors-how-to) - Set up web application security
+- [Migrate from AWS S3](docId:migrate-from-s3) - Switch from S3 to Storj
+
+**Technical Reference:**
+- [CLI Commands Reference](docId:cli-reference-001) - Complete command documentation
+- [S3 API Reference](docId:s3-api-reference) - API compatibility details
+
+**Understanding Concepts:**
+- [Understanding Decentralized Storage](docId:understand-decent-stor) - Learn the fundamentals
+- [Storj Architecture Overview](docId:storj-architecture-overview) - How the network works

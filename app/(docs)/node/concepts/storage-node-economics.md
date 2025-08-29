@@ -6,6 +6,10 @@ metadata:
   description: Comprehensive explanation of how Storage Node economics work, including payment structures, cost factors, profitability analysis, and economic incentives.
 ---
 
+{% callout type="success" %}
+**Explanation** - Concept guide providing context and understanding
+{% /callout %}
+
 Understanding Storage Node economics is essential for making informed decisions about hardware investments, operational strategies, and long-term profitability. The Storj network's economic model balances fair compensation for Storage Node Operators with competitive pricing for customers.
 
 ## Economic Model Overview

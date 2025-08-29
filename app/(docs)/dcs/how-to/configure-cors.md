@@ -6,6 +6,10 @@ metadata:
   description: Step-by-step guide to understand and work with Storj's CORS policy for secure web application development.
 ---
 
+{% callout type="info" %}
+**How-to Guide** - Problem-solving guide for specific tasks
+{% /callout %}
+
 This guide explains how to work with Cross-Origin Resource Sharing (CORS) when building web applications that access Storj storage.
 
 ## Prerequisites
@@ -177,7 +181,24 @@ async uploadFile(file) {
 
 Once CORS is working correctly:
 
-- [Implement presigned URLs for secure uploads](#)
-- [Set up client-side file validation](#)
-- [Configure bucket policies for web hosting](#)
-- [Optimize web application performance](#)
+- [Use Presigned URLs](docId:use-presigned-urls) for secure uploads
+- [Set up Object Versioning](docId:setup-object-versioning) for data protection
+- [Optimize Upload Performance](docId:optimize-upload-performance) for better UX
+
+## Related Content
+
+**Start Learning:**
+- [Your First Week with Storj](docId:first-week-storj-tutorial) - Complete beginner tutorial
+- [Build Your First App](docId:build-your-first-app-tutorial) - Web app development guide
+
+**Related How-to Guides:**
+- [Use Presigned URLs](docId:use-presigned-urls) - Secure browser uploads
+- [Migrate from AWS S3](docId:migrate-from-s3) - Switch to Storj storage
+
+**Technical Details:**
+- [S3 API Reference](docId:s3-api-reference) - CORS specification details
+- [CLI Commands Reference](docId:cli-reference-001) - Command-line tools
+
+**Background Concepts:**
+- [Security and Encryption](docId:security-and-encryption) - How Storj secures data
+- [Storj Architecture Overview](docId:storj-architecture-overview) - System design

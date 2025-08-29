@@ -6,6 +6,10 @@ metadata:
   description: "Complete reference for all Uplink CLI commands, flags, and usage patterns for managing Storj DCS storage."
 ---
 
+{% callout type="warning" %}
+**Reference** - Authoritative specification and lookup information
+{% /callout %}
+
 Complete reference for the Uplink CLI tool commands and options.
 
 {% callout type="info" %}

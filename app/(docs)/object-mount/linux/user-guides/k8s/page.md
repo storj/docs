@@ -26,7 +26,7 @@ helm install cunofs-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi-chart
 - `--set cunofsLicense.license`: (required) Object Mount license
 - `--set credsToImport`: (optional) cloud credentials [[more details](../getting-started/configuring-credentials)]
 
-For licensing, please schedule a [discovery call](https://meetings.hubspot.com/tom1581/storj-object-mount-discovery-meeting?uuid=7d69a8eb-87d2-4971-aef9-9ea2b1073e7a).
+For licensing, please schedule a [discovery call](https://www.storj.io/landing/get-in-touch).
 
 3. Display the status of the Object Mount CSI Driver resources:
 

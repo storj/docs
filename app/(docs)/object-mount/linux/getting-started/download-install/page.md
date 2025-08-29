@@ -17,7 +17,7 @@ All of our releases are [available on GitHub](https://github.com/cunoFS/cunoFS/r
 [Download and Install Instructions](./installation)
 
 ## Licenses and activation
-For licensing, please schedule a [discovery call](https://meetings.hubspot.com/tom1581/storj-object-mount-discovery-meeting?uuid=7d69a8eb-87d2-4971-aef9-9ea2b1073e7a).
+For licensing, please schedule a [discovery call](https://www.storj.io/landing/get-in-touch).
 
 ### Activating your license
 

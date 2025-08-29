@@ -6,6 +6,10 @@ metadata:
   description: Complete guide to migrate your data and applications from Amazon S3 to Storj DCS
 ---
 
+{% callout type="info" %}
+**How-to Guide** - Problem-solving guide for specific tasks
+{% /callout %}
+
 Migrate your data and applications from Amazon S3 to Storj DCS with minimal disruption to your workflows.
 
 ## Prerequisites

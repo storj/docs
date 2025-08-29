@@ -41,18 +41,18 @@ This documentation is organized using the [Diataxis framework](https://diataxis.
 
 **New to Storj?** Start with our tutorials:
 - [**DCS**: Your First Week with Storj](docId:first-week-storj-tutorial) - Complete beginner guide
-- [**Object Mount**: Your First Mount](docId:object-mount-first-tutorial) - Get started with filesystem access
-- [**Storage Node**: Set Up Your First Node](docId:setup-first-node-tutorial) - Start earning by providing storage
+- [**Object Mount**: Your First Mount](docId:your-first-object-mount) - Get started with filesystem access
+- [**Storage Node**: Set Up Your First Node](docId:setup-first-storage-node) - Start earning by providing storage
 
 **Need to solve a specific problem?** Check our how-to guides:
-- [**DCS How-to Guides**](docId:dcs-how-to) - Task-focused solutions
-- [**Object Mount How-to Guides**](docId:object-mount-how-to) - Specific configuration tasks
-- [**Storage Node How-to Guides**](docId:node-how-to) - Operational procedures
+- [**DCS How-to Guides**](docId:REPde_t8MJMDaE2BU8RfQ) - Task-focused solutions
+- [**Object Mount How-to Guides**](docId:okai0aiJei9No1Sh) - Specific configuration tasks
+- [**Storage Node How-to Guides**](docId:change-payout-address-how-to) - Operational procedures
 
 **Looking for technical details?** Browse our reference sections:
-- [**DCS Reference**](docId:dcs-reference) - API specs, CLI commands, limits
-- [**Object Mount Reference**](docId:object-mount-reference) - Configuration options, compatibility
-- [**Storage Node Reference**](docId:node-reference) - System requirements, metrics
+- [**DCS Reference**](docId:cli-reference-001) - CLI commands and API specifications
+- [**Object Mount Reference**](docId:okai0aiJei9No1Sh) - Configuration options, compatibility
+- [**Storage Node Reference**](docId:node-system-req-ref-001) - System requirements, metrics
 
 **Want to understand how things work?** Read our concept explanations:
 - [**Core Concepts**](docId:learn-concepts) - Fundamental Storj concepts

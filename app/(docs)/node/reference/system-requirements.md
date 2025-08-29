@@ -6,6 +6,10 @@ metadata:
   description: "Complete reference for Storage Node hardware, software, and network requirements for optimal performance."
 ---
 
+{% callout type="warning" %}
+**Reference** - Authoritative specification and lookup information
+{% /callout %}
+
 Complete reference for Storage Node system requirements and specifications.
 
 ## Hardware Requirements

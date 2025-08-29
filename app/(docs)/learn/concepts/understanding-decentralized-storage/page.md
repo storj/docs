@@ -6,6 +6,10 @@ metadata:
   description: Learn the fundamental principles behind decentralized storage systems, how they differ from traditional cloud storage, and why they provide better security and privacy.
 ---
 
+{% callout type="success" %}
+**Explanation** - Concept guide providing context and understanding
+{% /callout %}
+
 Decentralized storage represents a fundamental shift from traditional centralized cloud storage models. Understanding how it works and why it matters is essential for making informed decisions about data storage and protection.
 
 ## What is Decentralized Storage

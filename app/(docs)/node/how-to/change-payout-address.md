@@ -6,6 +6,10 @@ metadata:
   description: Step-by-step guide to update the wallet address where you receive payments for your storage node operations.
 ---
 
+{% callout type="info" %}
+**How-to Guide** - Problem-solving guide for specific tasks
+{% /callout %}
+
 This guide shows you how to change the wallet address where you receive payments for operating your storage node.
 
 ## Prerequisites

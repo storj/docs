@@ -21,14 +21,18 @@ Avid Media Composer expects all media to reside on high-performance, locally mou
    - Avid prefers media directories without long paths or special characters  
    - Example: `D:\Avid_Mount` or `/Volumes/AvidMedia`
 
-2. **Do not place Avid project or bin files in the mounted volume**  
+2. **Ensure visibility using the `alldrive` console command (Windows only)**  
+   - Open Avid Media Composer and press `Ctrl + ` (backtick) to open the Console  
+   - Type `alldrive` and press Enter. This makes all mounted volumes visible to Avid
+
+3. **Do not place Avid project or bin files in the mounted volume**  
    - Save your `.avb`, `.avp`, and `.avf` files to a local disk  
    - Use Object Mount for read access to media assets (e.g., linked clips, raw footage)
 
-3. **Use AMA (Link to Media) instead of Import**  
+4. **Use Link to Media instead of Import**  
    - Go to **File > Input > Link to Media**  
    - Browse to your Object Mount volume and select your media  
-   - Do *not* use **Import**, as this attempts to copy files locally and may introduce delays or unexpected results
+   - While **Import** can sometimes work when targeting mounted buckets, it is generally slower and may attempt unnecessary local copies
 
 ---
 
@@ -50,11 +54,21 @@ To ensure a smooth editing experience:
 
 ## Proxy & Optimized Workflows
 
-Avid’s DNxHR and DNxHD proxy workflows are recommended when editing from cloud storage:
+Avid’s DNxHR and DNxHD proxy workflows are recommended when editing from cloud storage. There are two approaches depending on your workflow:
 
+- Use the **Create Proxies** command to generate proxy media and toggle between proxy and high-resolution clips via the **Play button drop menu**
+- Or, transcode media to proxy formats such as **DNx36** or **DNxHR LB** and later use **Relink** to conform back to high resolution for finishing
+
+In either case, **generating proxies to local storage** is recommended for optimal playback performance, especially when working over slower or high-latency connections.
+
+For more on the latest Avid proxy features, see [this article on configuring modern proxy workflows](https://kb.avid.com/pkb/articles/en_US/Knowledge/How-to-configure-a-proxy-workflow-in-Media-Composer).
+
+{% callout type="info" %}
+The method previously described below is considered more of a legacy workflow. It may still be useful in collaborative or bandwidth-limited environments:
 - Transcode linked media to proxy formats into **local drives**  
 - Use **Relink** or **Consolidate** when you're ready to finalise offline-to-online workflows  
 - Use **Media Tool** to manage and track linked vs transcoded files
+{% /callout %}
 
 ---
 
@@ -74,7 +88,7 @@ If Object Mount appears slow when linking large files, it's often due to first-t
 
 ## Known Considerations
 
-- Avid doesn’t natively understand cloud latency — playback may stutter if accessing untranscoded high-resolution files over slower connections  
+- Avid doesn’t natively understand cloud latency so playback may stutter if accessing untranscoded high-resolution files over slower connections  
 - Ensure the mount path is stable and doesn’t unmount or disconnect mid-session  
 - POSIX mode can help with permission-sensitive environments, but is not required for typical read workflows
 
@@ -85,4 +99,3 @@ If Object Mount appears slow when linking large files, it's often due to first-t
 Avid Media Composer can work effectively with Object Mount when media is linked (not imported) and cache settings are optimised. Local project files, proxy workflows, and sensible mount paths all contribute to a faster, more reliable experience.
 
 For help tuning your Avid workflow with Object Mount, [contact our support team](https://supportdcs.storj.io/hc/en-us/requests/new) — we’re happy to assist.
-

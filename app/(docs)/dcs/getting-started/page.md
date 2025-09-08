@@ -86,7 +86,7 @@ However, some may already be familiar with AWS CLI which is also a suitable opti
    secret_access_key = secret_key  # REPLACE ME
    endpoint = gateway.storjshare.io
    chunk_size = 64Mi
-   disable_checksum: true
+   disable_checksum = true
    ```
 
    {% /code-group %}

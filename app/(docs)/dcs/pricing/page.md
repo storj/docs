@@ -12,6 +12,14 @@ metadata:
     prices.
 ---
 
+{% callout type="warning" %}
+The current pricing will change starting from November 1, 2025 (see [Global Collaboration](#global-collaboration) and [Active Archive](#active-archive) tiers below).
+
+All old projects will still have the current pricing until November 1, 2026 and will be converted to the [Active Archive](#active-archive), starting from this date.
+
+See details in our [pricing change FAQ](https://www.storj.io/pricing/change-faqs)
+{% /callout %}
+
 {% youtube-embed videoId="9uhX0X3ZW2c" /%}
 
 The price for object storage is as low as $4.00 per TB per month with $7.00 per TB for egress.
@@ -116,6 +124,37 @@ A user uploads 100,000 one GB objects using multipart upload with a 64MB Part Si
 **Multipart Cost Example 2:**
 
 A user uploads 1PB of one GB objects using multipart upload with a 5MB Part Size. Halfway through the month, the user deletes the files. The 1PB of one GB files (1 million files) are stored as 200,000,000 Segments. The files are stored for 360 hours. The data is stored for 72,000,000,000 Segment hours. The price per Segment month is $0.0000088. The price per-segment hour at 720 hours per month is $0.00000001222. The monthly per-segment fee in this example would be $879.84.
+
+## Global Collaboration
+
+Multi-region, low-latency, includes 1× free egress.
+
+{% callout type="warning" %}
+Starting November 1, 2025
+
+See details in our [pricing change FAQ](https://www.storj.io/pricing/change-faqs)
+{% /callout %}
+The price for Global Collaboration is $15 per TB with 1X egress included. Overage over the included egress is billed at $0.02/GB.
+
+As described elsewhere in this documentation, objects stored on Storj are encrypted and erasure coded, with the encrypted, erasure-coded pieces stored on various Storage Nodes on the distributed and decentralized network. Each object stored on the network is represented as at least one Segment. 
+
+### Minimum object size for Global Collaboration
+50 KB minimum per object. Objects under 50 KB are billed as 50 KB.
+
+## Active Archive
+Optimized for instant access. No bundled egress. 30-day minimum retention.
+
+{% callout type="warning" %}
+Starting November 1, 2025
+
+See details in our [pricing change FAQ](https://www.storj.io/pricing/change-faqs)
+{% /callout %}
+The price for Active Archive object storage is $6.00 per TB per month, with $20.00 per TB for egress.
+
+As described elsewhere in this documentation, objects stored on Storj are encrypted and erasure coded, with the encrypted, erasure-coded pieces stored on various Storage Nodes on the distributed and decentralized network. Each object stored on the network is represented as at least one Segment. 
+
+### Minimum object size for Active Archive
+100 KB minimum per object. Objects under 100 KB are billed as 100 KB.
 
 ## Minimum Monthly Billing
 

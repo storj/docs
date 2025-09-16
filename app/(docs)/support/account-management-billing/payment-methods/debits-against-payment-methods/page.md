@@ -15,7 +15,7 @@ If you have an amount due, your payment methods will be debited in the following
 
 1.  **Coupon** - Any valid Coupon on an account will first be used to pay an invoice amount. If the entire invoice is paid with Coupons, no further debits are made in that billing cycle. If, after all Coupons are exhausted in a billing cycle, a balance on an invoice remains, the balance will be debited using the next available payment method;
 
-2.  **Credits** - After applying any Coupons, any valid Credit on an account will then be used to pay an invoice amount. If the entire invoice is paid from the amount of valid Credits on an account, no further payment is needed. If, after all Credits are exhausted in a billing cycle, a balance on an invoice remains, the balance will be debited to the next available payment method;
+2.  **Credits** - After applying any Coupons, any valid Credit (including the balance after use of an "Add funds" feature) on an account will then be used to pay an invoice amount. If the entire invoice is paid from the amount of valid Credits on an account, no further payment is needed. If, after all Credits are exhausted in a billing cycle, a balance on an invoice remains, the balance will be debited to the next available payment method;
 
 3.  **STORJ Token Balance** - After applying any Coupons and Credits, any valid STORJ token balance on an account will then be used to pay an invoice amount. If the entire invoice is paid from the amount of STORJ token balance on an account, no further payment is needed. If, after all STORJ token balance is exhausted in a billing cycle, a balance on an invoice remains, the balance will be debited to the next available payment method;
 

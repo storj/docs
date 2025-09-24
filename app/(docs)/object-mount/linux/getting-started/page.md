@@ -28,9 +28,9 @@ Whether you're setting up on Ubuntu, Debian, CentOS, or another system, you'll f
 
 ## Related Pages
 
-- [Debian/Ubuntu Installation](./linux/installation/debian/)
-- [RHEL/CentOS Installation](./linux/installation/redhat/)
-- [Core Concepts](./linux/getting-started/intro/)
+- [Debian/Ubuntu Installation](../linux/installation/debian/)
+- [RHEL/CentOS Installation](../linux/installation/redhat/)
+- [Core Concepts](../linux/getting-started/intro/)
 
 If you're just getting started, we recommend beginning with your OS-specific guide. Each includes exactly what you need to install Object Mount safely and effectively.
 

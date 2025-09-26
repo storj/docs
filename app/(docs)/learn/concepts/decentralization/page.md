@@ -23,7 +23,7 @@ There are more than a number of reasons why you may wish to utilize **decentrali
 
 - Ease of integration
 
-One of the main motivations for preferring decentralization is to drive down infrastructure costs for maintenance, utilities, and bandwidth. We believe that there are significant underutilized resources at the edge of the network for many smaller operators. In our experience building decentralized storage networks, we have found a long tail of resources that are presently unused or underused that could provide an affordable and geographically distributed cloud storage.‌
+One of the main motivations for preferring decentralization is to drive down infrastructure costs for maintenance, utilities, and bandwidth. We believe that there are significant underutilized resources at the edge of the network for many smaller operators. In our experience building decentralized storage networks, we have found a long-tail of resources that are presently unused or underused that could provide an affordable and geographically distributed cloud storage.‌
 
 Our decentralization goals for fundamental infrastructure, such as storage, are also driven by our desire to provide a viable alternative to the few major centralized storage entities who dominate the market at present. We believe that there exists inherent risk in trusting a single entity, company, or organization with a significant percentage of the world’s data. In fact, we believe that there is an implicit cost associated with the risk of trusting any third party with custodianship of personal data.‌
 

@@ -1,5 +1,8 @@
 {
   "files.associations": {
     "*.md": "markdoc"
-  }
+  },
+  "cSpell.words": [
+    "markdoc"
+  ]
 }

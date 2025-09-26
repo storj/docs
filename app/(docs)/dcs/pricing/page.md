@@ -77,6 +77,6 @@ We've added new capabilities and have updated our pricing packages to make the S
 
 {% /quick-links %}
 
-## Project limits
+## Project Limits
 
 All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj. To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGYhfgGbVhlQ2ZHXVS) sections of this Documentation.

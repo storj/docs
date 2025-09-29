@@ -105,6 +105,14 @@ You can [setup uplink](docId:h3RyJymEIi4gf2S9wVJg8) with the access grant create
 
 ```shell {% title="uplink" %}
 # link[1:6] docId:hFL-goCWqrQMJPcTN82NB
+# link[8:9] docId:Wo5-shT0hZDNMeyM1kA12
+# terminal
+uplink rb --force --bypass-governance-retention sj://locked-bucket/
+```
+
+If you also want to see the progress, you can use this command:
+```shell {% title="uplink" %}
+# link[1:6] docId:hFL-goCWqrQMJPcTN82NB
 # terminal
 uplink ls --encrypted --recursive --all-versions sj://locked-bucket/ -o json | jq '"uplink rm --encrypted --bypass-governance-retention --version-id " + .versionId + " sj://locked-bucket/" + .key' -r | bash
 ```

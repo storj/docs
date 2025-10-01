@@ -16,12 +16,12 @@ We've recently added new products, new capabilities, and have introduced simpler
 
 **Changes include:**
 
-- **New Distributed Object Storage tiers** that better support customer needs, simplify fees, and eliminate segment fees: 
+- **New  Object Storage tiers** that better support customer needs, simplify fees, and eliminate segment fees: 
   - **Global Collaboration** &mdash; Multi-region. Low-latency. Includes 1x free egress.
   - **Regional Workflows** &mdash; Single-region. SOC 2 compliant. Includes 1x free egress.
   - **Active Archive** &mdash; Optimized for instant access. No bundled egress. 30-day minimum retention.
 - **Object Mount is now available**, allowing you to connect to your object storage as a local file system; optimized for peak performance with Storj's Object Storage.
-- **A new Production Cloud offerings** that combines the unique benefits of distributed storage with local-like file access.
+- **A new Production Cloud offerings** that combines the unique benefits of Storj's distributed cloud storage with local-like file access.
 - **A new Cloud Compute offering** with CPUs and GPUs co-located alongside Storj's Object Storage, for ultra-low latency, maximum performance, and no egress fees.
 - **SOC2 Type 2 certification** has been achieved by Storj on specific storage offerings, reinforcing our commitment to delivering enterprise-grade security and privacy.
 

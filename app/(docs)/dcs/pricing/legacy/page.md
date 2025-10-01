@@ -26,7 +26,7 @@ Storj's Object Storage Legacy Pricing Model charges fees based on three types of
 | **Egress Bandwidth** | Bytes     | GB           | Total Volume  | $0.007 per GB                | Bandwidth is calculated based on bytes downloaded, including long-tail elimination-related bandwidth. |
 | **Segments**         | Segments  | Segment Hour | Segment Month | $0.0000088 per Segment Month | Segment usage depends on storage and file sizes. The default minimum size per segment is 64MB. |
 
-For bject storage, billing is aggregated at the **project** level. Within a project, usage is tracked at the bucket level and aggregated for invoicing to the project.
+For object storage, billing is aggregated at the **project** level. Within a project, usage is tracked at the bucket level and aggregated for invoicing to the project.
 
 The following sections describe how charges are calculated for each type of service.
 

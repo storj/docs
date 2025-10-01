@@ -1,5 +1,6 @@
 ---
-title: Compute Pricing
+title: Cloud Compute Pricing
+hideTitle: true
 docId: X7SZXsXS?CXhj?tA
 weight: 5
 redirects:
@@ -10,7 +11,9 @@ metadata:
     Information on Storj's Cloud Compute product and pricing.
 ---
 
-## Compute 
+# Cloud Compute Pricing
+
+## Overview
 
 High quality CPU and GPU resources located next to your distributed storage to eliminate egress fees.
 
@@ -26,7 +29,11 @@ High quality CPU and GPU resources located next to your distributed storage to e
 - Can also install any other major distributions, like Ubuntu, Debian, etc.
 
 
-## Provisional Pricing
+## Pricing (Provisional)
+
+This pricing is provisional. 
+
+Please [Contact Sales](https://www.storj.io/landing/get-in-touch) for the most up-to-date pricing. 
 
 | **Commit (months)** | **Price per workstation** | **Total (for 8 workstations)** | **Discount** | **Effective rate (per wkstn)** |
 | :-- | :------ | :-------- | :---- | :--------- |

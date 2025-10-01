@@ -23,7 +23,7 @@ Storj's Object Mount adds the convenience and productivity boost of mounting you
 
 Object Mount can be **combined** with Storj's powerful object storage solutions, creating our Production Cloud offerings. Existing Storj customers can upgrade to Production Cloud to obtain Object Mount. Learn more on the [Production Cloud Pricing](docId:ZnRTYv8k?KEC3hzk) page.
 
-Object Mount can also be licensed as a **stand-alone** product. If you have an established S3 storage solution and want to add Object Mount, see below for additional pricing details.
+Object Mount can also be licensed as a **stand-alone** product. If you have an established S3 storage solution and want to add Object Mount, see below for stand-alone pricing details.
 
 
 ## Object Mount: Stand-Alone

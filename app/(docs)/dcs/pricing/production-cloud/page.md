@@ -18,18 +18,15 @@ metadata:
 
 Storj's Production Cloud offerings combine the best of global and regional work flows with the power and convenience of local file system access.
 
-Production Cloud pairs Object Mount with Storj Distributed Storage for better performance and value for production teams.
+Production Cloud pairs Object Mount with our Distributed Storage for better performance and added value for every production team.
 
 - Access your media in real time
-- Edit fast with consistently low latency.
+- Edit fast with consistently low latency
 - Works with your existing apps
-- No proprietary formats.
+- No proprietary formats
 
 
 ## Production Cloud Pricing
-
-
-
 
 |    | **Production Cloud: Global** | **Production Cloud: Regional** |
 | :- | :--------------------------- | :----------------------------- |

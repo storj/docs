@@ -18,7 +18,7 @@ metadata:
 High quality CPU and GPU resources located next to your distributed storage to eliminate egress fees.
 
 
-## Workstation Specs
+## Workstation Specs (Provisional)
 - Intel Xeon Gold (12x vCPU)
 - 1x NVIDIA A4000 GPU
 - 30 GB RAM

@@ -17,11 +17,8 @@ We've recently added new products, new capabilities, and have introduced simpler
 **Changes include:**
 
 - **New  Object Storage tiers** that better support customer needs, simplify fees, and eliminate segment fees: 
-  - **Global Collaboration** &mdash; Multi-region. Low-latency. Includes 1x free egress.
-  - **Regional Workflows** &mdash; Single-region. SOC 2 compliant. Includes 1x free egress.
-  - **Active Archive** &mdash; Optimized for instant access. No bundled egress. 30-day minimum retention.
 - **Object Mount is now available**, allowing you to connect to your object storage as a local file system; optimized for peak performance with Storj's Object Storage.
-- **A new Production Cloud offerings** that combines the unique benefits of Storj's distributed cloud storage with local-like file access.
+- **New Production Cloud offerings** that combine the unique benefits of Storj's distributed cloud storage with local-like file access.
 - **A new Cloud Compute offering** with CPUs and GPUs co-located alongside Storj's Object Storage, for ultra-low latency, maximum performance, and no egress fees.
 - **SOC2 Type 2 certification** has been achieved by Storj on specific storage offerings, reinforcing our commitment to delivering enterprise-grade security and privacy.
 
@@ -31,7 +28,7 @@ We've recently added new products, new capabilities, and have introduced simpler
 - **New Projects** created on or after November 1, 2025 will be charged using the new model (Tiered Pricing).
 
 
-## Choose a Pricing Model or Storj Product Below to Learn More
+## Choose a Pricing Model or a Storj Product Below to Learn More
 
 {% quick-links %}
 
@@ -49,19 +46,19 @@ We've recently added new products, new capabilities, and have introduced simpler
 
 {% quick-link
   title="Object Mount Pricing"
-  description="Details on the new Object Mount product and pricing."
+  description="Details on the Object Mount product and pricing."
   href="docId:FwEG)7uVcTBcepCT"
 /%}
 
 {% quick-link
   title="Production Cloud Pricing"
-  description="Details on the new Production Cloud offering and pricing."
+  description="Details on the Production Cloud offering and pricing."
   href="docId:FwEG)7uVcTBcepCT"
 /%}
 
 {% quick-link 
   title="Cloud Compute Pricing" 
-  description="Details on the new Cloud Compute product and pricing." 
+  description="Details on the Cloud Compute product and pricing." 
   href="docId:X7SZXsXS?CXhj?tA" 
 /%}
 
@@ -71,7 +68,5 @@ We've recently added new products, new capabilities, and have introduced simpler
 ## Additional Pricing Notes
 
 **US sales tax** will be included on all US invoices in accordance with state and local regulations (effective November 1, 2025). Exemption certificates should be emailed to accounting@storj.io.
-
-There is a **$5 minimum monthly charge** for all accounts.
 
 See our [Pricing Change FAQ](https://www.storj.io/pricing/change-faqs) for additional details.

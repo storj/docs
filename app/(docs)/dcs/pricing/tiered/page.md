@@ -65,7 +65,7 @@ Use Active Archive for near and long-term data retention, backups, and restore-o
 
 The price for **Active Archive** object storage is $6.00 per TB per month, with $20.00 per TB for egress ($0.02/GB.)
 
-Minimum size of 100 KB per object. Objects under 100 KB are billed as 50 KB.
+Minimum size of 100 KB per object. Objects under 100 KB are billed as 100 KB.
 
 
 ## Project Limits

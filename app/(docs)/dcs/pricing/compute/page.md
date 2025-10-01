@@ -1,13 +1,13 @@
 ---
 title: Compute Pricing
 docId: X7SZXsXS?CXhj?tA
-weight: 4
+weight: 5
 redirects:
   - /dcs/pricing
 metadata:
   title: Compute Pricing
   description:
-    Details on Storj's Compute Product, Bundles and Pricing.
+    Information on Storj's Cloud Compute product and pricing.
 ---
 
 ## Compute 
@@ -33,7 +33,3 @@ High quality CPU and GPU resources located next to your distributed storage to e
 | 1   | $200/mo | $1,600/mo | 0%    | < $0.12/hr |
 | 12  | $175/mo | $1,400/mo | 12.5% | < $0.10/hr |
 | 24+ | $150/mo | $1,200/mo | 25%   | < $0.09/hr |
-
-
-
-

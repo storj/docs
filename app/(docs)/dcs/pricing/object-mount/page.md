@@ -8,39 +8,25 @@ redirects:
 metadata:
   title: Object Mount Pricing
   description:
-    Details on Storj's Object Mount Product, Bundles and Pricing.
+    Information on Storj's Object Mount product and pricing.
 ---
 
 # Object Mount Pricing
 
 ## Overview
 
-Storj's Object Mount can be **bundled** as an add-on for existing Object Store customers or licensed as a **stand-alone** product for use with other S3-compatible solutions.
+Storj's Object Mount adds the convenience and productivity boost of mounting your cloud storage as a local drive.
 
+- Works with any S3 compatible storage
+- Desktop or server-level access
+- Reduces download and egress fees
 
-## Object Mount: Bundled
+Object Mount can be **combined** with Storj's powerful object storage solutions, creating our Production Cloud offerings. Existing Storj customers can upgrade to Production Cloud to obtain Object Mount. Learn more on the [Production Cloud Pricing](docId:ZnRTYv8k?KEC3hzk) page.
 
-Object Mount licenses can be added to either Object Store's new Global Collaboration tier or Regional Workflows tier. (Object Mount cannot be added to the Active Archive tier.)
-
-Combining Object Mount with Object Store creates a bundle called Storj's "Production Cloud" offering.
-
-|    | **Global Collaboration** | **Regional Workflows** |
-| :- | :---------- | :---------- |
-| **Use Case**          | For teams that collaborate and share media globally and need instant access to assets. | For enterprise teams with compliance or regional needs that collaborate and share media in a specific region. |
-| **Cost: Object Storage only** (Object Store tier w/o Object Mount) | $15/TB/mo | $10/TB/mo |
-| **Cost: Production Cloud Bundle** (Object Store tier w/ Object Mount)| $40/TB/mo | $30/TB/mo |
-| **Egress**            | Included | Included |
-| **Minimum Footprint** | 20 TB or more | 300 TB or more |
-| **Licenses**          | 10 licenses | Starts at 15 licenses |
-
-**Production Cloud: Regional Workflows - Add-on licenses:** 
-- ~~MSRP $199~~ 
-- Add-on licenses are available at early adopter pricing: $75/mo, billed annually ($895/yr)
+Object Mount can also be licensed as a **stand-alone** product. If you have an established S3 storage solution and want to add Object Mount, see below for additional pricing details.
 
 
 ## Object Mount: Stand-Alone
-
-If you already have an S3 storage solution, Object Mount can add the convenience and productivity boost of mounting your cloud storage as a local drive.
 
 Object Mount has two stand-alone licensing models available, depending on your size and storage footprint:
 
@@ -49,18 +35,18 @@ Object Mount has two stand-alone licensing models available, depending on your s
 | **Named End-user Licensing**  | Small, Medium and Large Accounts | Storage footprint less than 300 TB, or when customers prefer named end-user licensing. |
 | **Footprint-based Licensing** | Very Large and Enterprise Accounts | Enterprise engagements at scale, with storage footprints of 300 TB or greater. |
 
-**Details: Named End-user Licensing:**
+### Details: Named End-user Licensing
 
 - Licenses are assigned to individual, named end-users
-- License pricing:
-  - Early adopter pricing (through 2025): $75/mo, billed annually ($895/yr) 
-  - Standard pricing (2026): $199/mo, billed annually ($1,999/yr)
+- License pricing per user: $75/mo., billed annually
 - Licenses are not workflow-dependent
+- Minimum storage footprint: None
 - Includes support
 
-**Details: Footprint-based licensing:**
-- Pricing is based on total storage footprint (e.g.: $24/TB/mo)
+### Details: Footprint-based Licensing
+
+- Pricing is based on total storage footprint. [Contact Sales](https://www.storj.io/landing/get-in-touch).
 - Includes 15 licenses
-- Add-on licenses are available at early adopter pricing: 
-  - $75/mo, billed annually ($895/yr)
+- Add-on license pricing: $75/mo., billed annually
 - Includes support
+- Minimum storage footprint: 300 TB

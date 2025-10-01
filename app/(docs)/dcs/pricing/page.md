@@ -7,76 +7,71 @@ redirects:
 metadata:
   title: Pricing Overview
   description:
-    Guides users on Storj's cost and billing system, explaining different
-    metered services like object storage, egress bandwidth, segments, and their respective
-    prices.
+    Information on Storj's cost and billing system, explaining different metered services like object storage, egress bandwidth segments, and their respective prices.
 ---
 
-## Added Value from the The Storj Platform
+## New Offerings and New Object Storage Tiers
 
-In addition to favorable pricing, Object Storage by Storj offers significant economic benefits over the competition, including:
-
-- **Flexible egress offerings** designed for real-world production environments & creating dynamic content, including streaming media workflows.
-
-- **Global content distribution** eliminates inter-region transfer fees, removes the need for multi-region replication and avoids unnecessary CDN overlays.
-
-- Storj's unique use of **erasure-coding and object segmentation** ensures redundancy, availability and high performance from any global region, removing the need for backups and replication.
-
-**Learn more about Storj's compelling economic benefits in this comparison video:**
-
-{% youtube-embed videoId="9uhX0X3ZW2c" /%}
-
-
-## New Offerings and New Object Store Tiers
-
-We've added new capabilities and have updated our pricing packages to make the Storj Platform an even easier choice for customers. 
+We've recently added new products, new capabilities, and have introduced simpler pricing tiers to make the Storj Platform an even easier choice for customers. 
 
 **Changes include:**
 
-- **New Object Storage tiers** that better support customer needs: 
-  - Global Collaboration
-  - Regional Workflows
-  - Active Archive
-- **A simplified pricing model** that eliminates segment fees and includes egress in most tiers.
-- **Object Mount is now available**, allowing you to mount your object storage as a local file system, optimized for peak performance with Storj Object Storage.
-- **A new Compute offering** with CPUs and GPUs co-located alongside Storj Object Storage, for ultra-low latency, maximum performance and no egress costs.
-- **SOC2 Type 2 certification** has been achieved by Storj on specific storage offerings, reinforcing Storj's commitment to delivering enterprise-grade security and privacy.
+- **New Distributed Object Storage tiers** that better support customer needs, simplify fees, and eliminate segment fees: 
+  - **Global Collaboration** &mdash; Multi-region. Low-latency. Includes 1x free egress.
+  - **Regional Workflows** &mdash; Single-region. SOC 2 compliant. Includes 1x free egress.
+  - **Active Archive** &mdash; Optimized for instant access. No bundled egress. 30-day minimum retention.
+- **Object Mount is now available**, allowing you to connect to your object storage as a local file system; optimized for peak performance with Storj's Object Storage.
+- **A new Production Cloud offerings** that combines the unique benefits of distributed storage with local-like file access.
+- **A new Cloud Compute offering** with CPUs and GPUs co-located alongside Storj's Object Storage, for ultra-low latency, maximum performance, and no egress fees.
+- **SOC2 Type 2 certification** has been achieved by Storj on specific storage offerings, reinforcing our commitment to delivering enterprise-grade security and privacy.
 
-**What you need to know today about the new tiered pricing model:**
+**What to know about the new object storage tiered pricing:**
 - No action is needed at this time.
-- **Existing Projects** created before November 1, 2025 will continue to use the current pricing model (Legacy Pricing) for a full additional year (through October 31, 2026). 
-- **New Projects** created on or after November 1, 2025 will be charged using the new Tiered Pricing model.
+- **Existing Projects** created before November 1, 2025 will continue to use the current pricing model (Legacy Pricing) for a full additional year (through October 31, 2026).
+- **New Projects** created on or after November 1, 2025 will be charged using the new model (Tiered Pricing).
 
-**Choose a Pricing Model or Product below to learn more:**
+
+## Choose a Pricing Model or Storj Product Below to Learn More
 
 {% quick-links %}
 
 {% quick-link
-  title="Object Store: Legacy Pricing"
-  description="Details on Object Store's legacy pricing model (for projects created before Nov. 1, 2025)."
+  title="Object Storage: Legacy Pricing"
+  description="Details on Storj's legacy pricing model for Object Storage (for projects created before Nov. 1, 2025)."
   href="docId:x3xPZJXCp!CB@spN"
 /%}
 
 {% quick-link
-  title="Object Store: Tiered Pricing"
-  description="Details on Object Store's tiered pricing model (for projects created on or after Nov. 1, 2025)."
+  title="Object Storage: Tiered Pricing"
+  description="Details on Storj's tiered pricing model for Object Storage (for projects created on or after Nov. 1, 2025)."
   href="docId:x3xPZJXCp!CB@spN"
 /%}
 
 {% quick-link
-  title="Object Mount Pricing" 
-  description="Details on the new Object Mount product, pricing and bundles." 
-  href="docId:FwEG)7uVcTBcepCT" 
+  title="Object Mount Pricing"
+  description="Details on the new Object Mount product and pricing."
+  href="docId:FwEG)7uVcTBcepCT"
+/%}
+
+{% quick-link
+  title="Production Cloud Pricing"
+  description="Details on the new Production Cloud offering and pricing."
+  href="docId:FwEG)7uVcTBcepCT"
 /%}
 
 {% quick-link 
-  title="Compute Pricing" 
-  description="Details on the new Compute product, pricing and bundles." 
+  title="Cloud Compute Pricing" 
+  description="Details on the new Cloud Compute product and pricing." 
   href="docId:X7SZXsXS?CXhj?tA" 
 /%}
 
 {% /quick-links %}
 
-## Project Limits
 
-All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj. To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGYhfgGbVhlQ2ZHXVS) sections of this Documentation.
+## Additional Pricing Notes
+
+**US sales tax** will be included on all US invoices in accordance with state and local regulations (effective November 1, 2025). Exemption certificates should be emailed to accounting@storj.io.
+
+There is a **$5 minimum monthly charge** for all accounts.
+
+See our [Pricing Change FAQ](https://www.storj.io/pricing/change-faqs) for additional details.

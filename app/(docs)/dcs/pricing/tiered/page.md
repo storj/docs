@@ -1,67 +1,78 @@
 ---
-title: "OS: Tiered Pricing"
+title: "Storage: Tiered Pricing"
 hideTitle: true
 docId: mqRRgT,hL*dk3zNT
 weight: 2
 redirects:
   - /dcs/pricing
 metadata:
-  title: Storage Tiers
+  title: Object Storage Tiered Pricing
   description:
-    Provides details on the new Object Storage Pricing Tiers
+    Information on Storj's tiered pricing model for distributed cloud object storage.
 ---
 
-# Object Store: Tiered Pricing
+# Object Storage: Tiered Pricing
 
 ## Overview
 
-Beginning November 1, 2025, Storj now offers three new Object Storage pricing tiers that better support the expanding needs of our customers: 
+Beginning November 1, 2025, Storj now offers three new object storage pricing tiers that better support the expanding needs of our customers: 
 
 - Global Collaboration
 - Regional Workflows
 - Active Archive
 
-Storj customers and partners have asked for expanded, purpose-built storage offerings to meet the demands of modern media and streaming-focused workflows. These new tiers simplify our pricing models for more predictable billing, eliminate segment fees, and bundle-in egress (on most tiers).
+Storj customers and partners have asked for expanded, purpose-built storage offerings to meet the demands of modern media use and streaming-focused workflows. These new tiers simplify our object storage pricing models, provide more predictable billing, eliminate segment fees, and include egress bandwidth (on most tiers).
 
 
-## Object Store Tiers
+## Object Storage Tiers
 
 |    | **Global Collaboration** | **Regional Workflows** | **Active Archive** |
 | :- | :---------- | :---------- | :---------- |
-| **Best For** | Global teams needing high-speed performance. Powered by a Storj's distributed edge network and a redundant global region for low-latency anywhere. | Region-specific storage built for compliance and predictable performance. Keeps data local while meeting residency and regulatory requirements. | Cost-effective, region-based for long-term retention. Archive and backup data are instantly accessible without paying for peak performance.|
-| **Storage Fees** | $15/TB/mo | $10/TB/mo | $6/TB/mo |
-| **Egress Fees**  | Included  | Included  | $0.02/GB |
+| **Best For** | Global teams needing high-speed performance. Powered by Storj's distributed edge network and redundant, global, low-latency coverage from  anywhere. | Region-specific storage built for regulatory compliance and predictable performance. Keeps data local while meeting data sovereignty requirements. | Cost-effective, region-based for long-term retention. Archive and backup data are instantly accessible without paying for peak performance.|
+| **Storage Fees** | $15/TB/mo. | $10/TB/mo. | $6/TB/mo. |
+| **Egress Fees**  | 1x free egress included   | 1x free egress included   | $0.02/GB  |
 
 Learn more about each tier in the sections below.
 
 
 ## Global Collaboration
 
-**Featuring:** Multi-region, low-latency, includes 1X free egress.
+Utilize Storj's Global Collaboration object storage tier for world-wide file ingestion, editing, real-time review, and collaboration among broadly distributed teams.
 
-The price for **Global Collaboration** object storage is $15 per TB per month, with 1X egress included. (Download overages beyond the included egress amount is billed at $0.02/GB.)
+**Featuring:** Multi-region, low-latency, and includes 1x free egress.
 
-Minimum object size for the Global Collaboration Tier: 
-- 50 KB minimum per object. (Objects under 50 KB are billed as 50 KB.)
+The price for **Global Collaboration** object storage is $15.00 per TB per month, with 1x egress included. (Download overages beyond the included egress amount is billed at $0.02/GB.)
+
+Minimum size of 50 KB per object. Objects under 50 KB are billed as 50 KB.
 
 
 ## Regional Workflows
 
-TO BE ADDED
+Use Storj's Regional Workflows object storage tier for compliance-sensitive workflows. Initially available in U.S. East, with more locations coming soon.
+
+**Featuring:** Single-region, SOC 2 compliant, includes 1x free egress.
+
+The price for **Regional Workflows** object storage is $10.00 per TB per month, with 1x egress included. (Download overages beyond the included egress amount is billed at $0.01/GB.)
+
+Minimum size of 50 KB per object. Objects under 50 KB are billed as 50 KB.
 
 
 ## Active Archive
 
-**Optimized for:** Instant access. No bundled egress. 30-day minimum retention.
+Use Active Archive for near and long-term data retention, backups, and restore-on-demand workflows such as conform and repurposing content.
+
+**Optimized for:** Instant access. No bundled egress. Requires 30-day minimum retention.
 
 The price for **Active Archive** object storage is $6.00 per TB per month, with $20.00 per TB for egress ($0.02/GB.)
 
-Minimum object size for Active Archive Tier:
-- 100 KB minimum per object. (Objects under 100 KB are billed as 100 KB.)
+Minimum size of 100 KB per object. Objects under 100 KB are billed as 50 KB.
+
+
+## Project Limits
+
+All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj. To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGYhfgGbVhlQ2ZHXVS) sections of this Documentation.
 
 
 ## Additional Pricing Notes
 
-**US sales tax** will be included on all US invoices in accordance with state and local regulations (effective November 1, 2025). Exemption certificates should be emailed to accounting@storj.io.
-
-There is a **$5 minimum monthly charge** for all accounts. Any monthly usage that results in an invoice less than $5 will result in the minimum usage fee. (See our [Pricing FAQ](https://www.storj.io/pricing/change-faqs)).
+There is a **$5 minimum monthly charge** for all object storage accounts.

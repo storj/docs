@@ -70,7 +70,7 @@ If you decided to specify the `zksync-era` wallet feature as an option, you need
 
 1. Opt-in for zkSync Era payouts for STORJ payments
 
-1. Navigate to [zkSync Bridges](https://zksync.io/explore#bridges).
+1. Navigate to [zkSync Bridge](https://portal.zksync.io/bridge).
    See also [How to add STORJ token to my Wallet](https://forum.storj.io/t/zksync-era-to-transfer-storj-in-binance-wallet/26119/10?u=alexey).
 
 1. Connect your L1 Ethereum wallet

@@ -3,8 +3,6 @@ title: "Storage: Tiered Pricing"
 hideTitle: true
 docId: mqRRgT,hL*dk3zNT
 weight: 2
-redirects:
-  - /dcs/pricing
 metadata:
   title: Object Storage Tiered Pricing
   description:
@@ -70,9 +68,18 @@ Minimum size of 100 KB per object. Objects under 100 KB are billed as 100 KB.
 
 ## Project Limits
 
-All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj. To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGYhfgGbVhlQ2ZHXVS) sections of this Documentation.
+All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj. To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGYhfgGbVhlQ2ZHXVS) sections of the documentation.
 
 
 ## Additional Pricing Notes
 
-There is a **$5 minimum monthly charge** for all object storage accounts.
+Storj has a $5 minimum monthly usage fee for all object storage accounts.
+
+This helps cover the cost of payment processing and basic operations so we can continue offering fast, secure, and reliable storage—even for small accounts.
+
+**What does this mean for you?**
+
+- Any monthly usage that results in an invoice less than $5 will result in the minimum usage fee.
+- If your usage exceeds $5 per month, you will not be charged a minimum usage fee.
+- If you bought a starter package via a partner before August 1, 2025, you will not be charged a minimum usage fee until your starter package expires. The starter package expires one year from purchase or when the starter package credits have been fully used.
+- If you pay with STORJ token, you will not be charged a minimum usage fee.

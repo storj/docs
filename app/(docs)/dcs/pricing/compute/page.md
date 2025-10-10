@@ -3,8 +3,6 @@ title: Cloud Compute Pricing
 hideTitle: true
 docId: X7SZXsXS?CXhj?tA
 weight: 5
-redirects:
-  - /dcs/pricing
 metadata:
   title: Compute Pricing
   description:

@@ -3,8 +3,6 @@ title: Object Mount Pricing
 hideTitle: true
 docId: FwEG)7uVcTBcepCT
 weight: 3
-redirects:
-  - /dcs/pricing
 metadata:
   title: Object Mount Pricing
   description:

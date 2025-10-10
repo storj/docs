@@ -26,7 +26,7 @@ Storj customers and partners have asked for expanded, purpose-built storage offe
 
 |    | **Global Collaboration** | **Regional Workflows** | **Active Archive** |
 | :- | :---------- | :---------- | :---------- |
-| **Best For** | Global teams needing high-speed performance. Powered by Storj's distributed edge network and redundant, global, low-latency coverage from  anywhere. | Region-specific storage built for regulatory compliance and predictable performance. Keeps data local while meeting data sovereignty requirements. | Cost-effective, region-based for long-term retention. Archive and backup data are instantly accessible without paying for peak performance.|
+| **Best For** | Global teams needing consistent and reliable performance. Powered by Storj's distributed edge network with redundant, global, low-latency coverage from  anywhere. | Region-specific storage built for regulatory compliance and predictable performance. Keeps data local while meeting data sovereignty requirements. | Cost-effective, region-based for long-term retention. Archive and backup data are instantly accessible without paying for peak performance.|
 | **Storage Fees** | $15/TB/mo. | $10/TB/mo. | $6/TB/mo. |
 | **Egress Fees**  | 1x free egress included   | 1x free egress included   | $0.02/GB  |
 
@@ -75,7 +75,7 @@ All Projects have Project Limits on certain important constructs. Increases in P
 
 Storj has a $5 minimum monthly usage fee for all object storage accounts.
 
-This helps cover the cost of payment processing and basic operations so we can continue offering fast, secure, and reliable storage—even for small accounts.
+This helps cover the cost of payment processing and basic operations so we can continue offering fast, secure, and reliable storage &mdash; even for small accounts.
 
 **What does this mean for you?**
 

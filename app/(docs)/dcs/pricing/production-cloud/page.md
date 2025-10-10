@@ -34,17 +34,3 @@ Production Cloud pairs Object Mount with our Distributed Cloud Storage for bette
 | **API Access**        | Included    | Included      |
 | **Licenses**          | 10 licenses | 15 licenses   |
 | **Minimum Footprint** | 20 TB       | 300 TB        |
-
-
-## Additional Pricing Notes
-
-Storj has a $5 minimum monthly usage fee for all object storage accounts.
-
-This helps cover the cost of payment processing and basic operations so we can continue offering fast, secure, and reliable storage—even for small accounts.
-
-**What does this mean for you?**
-
-- Any monthly usage that results in an invoice less than $5 will result in the minimum usage fee.
-- If your usage exceeds $5 per month, you will not be charged a minimum usage fee.
-- If you bought a starter package via a partner before August 1, 2025, you will not be charged a minimum usage fee until your starter package expires. The starter package expires one year from purchase or when the starter package credits have been fully used.
-- If you pay with STORJ token, you will not be charged a minimum usage fee.

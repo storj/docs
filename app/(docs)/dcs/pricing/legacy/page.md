@@ -144,7 +144,7 @@ All Projects have Project Limits on certain important constructs. Increases in P
 
 Storj has a $5 minimum monthly usage fee for all object storage accounts.
 
-This helps cover the cost of payment processing and basic operations so we can continue offering fast, secure, and reliable storage—even for small accounts.
+This helps cover the cost of payment processing and basic operations so we can continue offering fast, secure, and reliable storage &mdash; even for small accounts.
 
 **What does this mean for you?**
 

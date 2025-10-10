@@ -3,8 +3,6 @@ title: "Storage: Legacy Pricing"
 hideTitle: true
 docId: x3xPZJXCp!CB@spN
 weight: 1
-redirects:
-  - /dcs/pricing#per-segment-fee
 metadata:
   title: Object Storage Legacy Pricing
   description:

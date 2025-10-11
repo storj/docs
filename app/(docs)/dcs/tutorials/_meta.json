@@ -1,13 +1,1 @@
-{
-  "title": "Tutorials",
-  "nav": [
-    {
-      "title": "Your first week with Storj",
-      "id": "your-first-week-with-storj"
-    },
-    {
-      "title": "Build your first app",
-      "id": "build-your-first-app"
-    }
-  ]
-}
+{"title": "Tutorials"}

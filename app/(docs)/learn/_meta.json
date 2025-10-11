@@ -1,17 +1,1 @@
-{
-  "title": "Learn",
-  "nav": [
-    {
-      "title": "Concepts",
-      "id": "concepts"
-    },
-    {
-      "title": "Tutorials",
-      "id": "tutorials"
-    },
-    {
-      "title": "Self-host",
-      "id": "self-host"
-    }
-  ]
-}
+{"title": "Learn"}

@@ -29,14 +29,14 @@ Before changing your payout address, ensure you have:
 
 **Verification**: Double-check your new wallet address is correct - incorrect addresses may result in lost payments.
 
+## Change payout address
 
 Choose the method that matches your storage node installation:
 
 {% tabs %}
-## Change payout address
 {% tab label="CLI Install (Docker)" %}
 
-### Step 1: Stop the storage node
+## Step 1: Stop the storage node
 
 Stop your running storage node container safely:
 
@@ -47,7 +47,7 @@ docker rm storagenode
 
 The `-t 300` flag allows the node 5 minutes to gracefully shut down and complete any ongoing operations.
 
-### Step 2: Update configuration
+## Step 2: Update configuration
 
 Edit your configuration file to add or update the wallet address. The location depends on how you set up your node:
 
@@ -85,7 +85,7 @@ docker run -d --restart unless-stopped \
   storjlabs/storagenode:latest
 ```
 
-### Step 3: Restart the storage node
+## Step 3: Restart the storage node
 
 Start your storage node with the updated configuration:
 
@@ -98,7 +98,7 @@ Start your storage node with the updated configuration:
 
 {% tab label="Windows GUI Install" %}
 
-### Step 1: Stop the storage node service
+## Step 1: Stop the storage node service
 
 Open an elevated PowerShell window (Run as Administrator) and stop the service:
 
@@ -111,7 +111,7 @@ Alternatively, you can use the Windows Services applet:
 2. Find "Storj V3 Storage Node" in the list
 3. Right-click and select "Stop"
 
-### Step 2: Edit configuration file
+## Step 2: Edit configuration file
 
 Open the configuration file with a text editor. **Important**: Use Notepad++ or another advanced text editor - the regular Windows Notepad may not work properly with the file format.
 
@@ -129,7 +129,7 @@ operator:
 
 Save the file.
 
-### Step 3: Restart the storage node service
+## Step 3: Restart the storage node service
 
 Restart the service to apply the changes:
 

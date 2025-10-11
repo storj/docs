@@ -29,12 +29,11 @@ Before changing your payout address, ensure you have:
 
 **Verification**: Double-check your new wallet address is correct - incorrect addresses may result in lost payments.
 
-## Change payout address
 
 Choose the method that matches your storage node installation:
 
 {% tabs %}
-
+## Change payout address
 {% tab label="CLI Install (Docker)" %}
 
 ### Step 1: Stop the storage node

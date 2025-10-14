@@ -25,10 +25,10 @@ Use the selector to guide your installation:
 {% tab label="Red Hat & derivatives" %}
 {% tabs %}
 {% tab label="Scripted Installer" %}
-[glibc](../installation/glibc)
+[glibc](./installation/glibc)
 {% /tab %}
 {% tab label="Package Manager" %}
-[RedHat](../installation/redhat)
+[RedHat](./installation/redhat)
 {% /tab %}
 {% /tabs %}
 {% /tab %}

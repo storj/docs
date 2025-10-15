@@ -14,7 +14,7 @@ All of our releases are [available on GitHub](https://github.com/cunoFS/cunoFS/r
 
 ## Downloading and installing
 
-[Download and Install Instructions](./installation)
+[Download and Install Instructions](../installation)
 
 ## Licenses and activation
 For licensing, please schedule a [discovery call](https://www.storj.io/landing/get-in-touch).

@@ -11,10 +11,6 @@ metadata:
 
 The Scripted Installer allows you to install Object Mount without root privileges (no sudo).
 
-{% callout type="note"  %}
-For full details about user privileges for installation, see the [user guide](../user-guides/install/scripted-installer).
-{% /callout %}
-
 1. Download the installer. By downloading you are agreeing to the terms of the [End User License Agreement](https://www.storj.io/legal/terms-of-use). Click to download the [latest version](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno-glibc-installer.run) from your browser, or run the command:
 
    ```console

@@ -18,7 +18,9 @@ hidden: true
 
 Please enter your email address below to receive your authentication token and copy it to be used at a later step.
 
+<!-- Removing content below
 {% registration-token /%}
+-->
 
 By using your authorization token, you agree to the [Storage Node Operator Terms and Conditions](https://storj.io/storj-operator-terms).
 

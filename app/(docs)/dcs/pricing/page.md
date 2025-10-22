@@ -34,8 +34,8 @@ Storj has consistent and competitive pricing that provides the global scale prod
 **What to know about the new object storage tiered pricing:**
 
 - No action is needed at this time.
-- **Existing Projects** created before November 1, 2025 will continue to use the current pricing model (Legacy Pricing) for a full additional year (through October 31, 2026).
-- **New Projects** created on or after November 1, 2025 will be charged using the new model (Tiered Pricing).
+- **Existing Projects** created before November 1, 2025 will continue to use the current pricing model ([](docId:x3xPZJXCp!CB@spN)) for a full additional year (through October 31, 2026).
+- **New Projects** created on or after November 1, 2025 will be charged using the new model (([](docId:mqRRgT,hL*dk3zNT))).
 
 
 ## Choose a Storj Product Below to Learn More

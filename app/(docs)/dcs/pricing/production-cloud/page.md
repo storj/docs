@@ -2,7 +2,7 @@
 title: "Production Cloud Pricing"
 hideTitle: true
 docId: ZnRTYv8k?KEC3hzk
-weight: 4
+weight: 1
 metadata:
   title: Object Storage Tiered Pricing
   description:

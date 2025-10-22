@@ -2,7 +2,7 @@
 title: "Storage: Legacy Pricing"
 hideTitle: true
 docId: x3xPZJXCp!CB@spN
-weight: 1
+weight: 4
 metadata:
   title: Object Storage Legacy Pricing
   description:
@@ -10,6 +10,16 @@ metadata:
 ---
 
 # Object Storage: Legacy Pricing
+
+{% callout type="info" %}
+Legacy pricing will be retired on **November 1, 2025** and replaced by our new **tiered pricing model**.
+
+Projects created **before November 1, 2025** will retain legacy pricing for **one calendar year** or until they **upgrade or migrate**, whichever comes first.
+
+For details, see [our pricing documentation](docId:59T_2l7c1rvZVhI8p91VX).
+{% /callout %}
+
+
 
 ## Overview
 

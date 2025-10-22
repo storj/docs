@@ -91,7 +91,7 @@ The Storj service uses an array of different technologies such as strong encrypt
 
         1.  **_k_ = 29** – This is the number of pieces required to recreate a Segment. Any 29 of the pieces of a Segment can be used to reconstitute a Segment
 
-        2.  **_m_ = 35** – This is the number of pieces an Uplink will attempt to download when downloading a Segment. The Uplink will cut off any piece downloads after 29 pieces have been downloaded. The Uplink attempts to download more pieces than needed to eliminate the long tail effect of dependency on the slowest Storage Node.
+        2.  **_m_ = 35** – This is the number of pieces an Uplink will attempt to download when downloading a Segment. The Uplink will cut off any piece downloads after 29 pieces have been downloaded. The Uplink attempts to download more pieces than needed to eliminate the long-tail effect of dependency on the slowest Storage Node.
 
         Note that m is also the repair threshold for a Segment. Satellites track when Storage Nodes fail or leave the network making pieces unavailable. If too many storage nodes become unavailable, putting the potential durability of a Segment at risk, the Satellite will recreate the missing pieces via file repair and store the repaired pieces on diverse, health storage nodes. The repair threshold may be overwritten and for Storj Satellites, and is set to 54.
 

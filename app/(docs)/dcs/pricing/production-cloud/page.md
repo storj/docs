@@ -1,25 +1,24 @@
 ---
-title: "Production Cloud Pricing"
+title: Production Cloud Pricing
 hideTitle: true
 docId: ZnRTYv8k?KEC3hzk
 weight: 1
 metadata:
   title: Object Storage Tiered Pricing
   description:
-    Information on Storj's Production Cloud product and pricing.
+    Information on Storj’s Production Cloud product and pricing.
 ---
 
 # Production Cloud Pricing
 
 ## Overview
 
-Storj's Production Cloud offerings combine the best of global and regional workflows with the power and convenience of local file system access.
+Storj’s Production Cloud offerings combine the best of global and regional workflows with the power and convenience of local file system access.
 
-Production Cloud pairs Object Mount with our Distributed Cloud Storage for better performance and added value for every production team.
+Production Cloud pairs **Object Mount** with our **Distributed Cloud Storage** for better performance and added value for every production team.
 
-- Access your media in real time
-- Edit in real time, with consistently low latency
-- Works with your existing applications
+- Access and edit your media in real time, with consistently low latency
+- Works with all your existing applications
 - No proprietary formats
 
 

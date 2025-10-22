@@ -6,24 +6,23 @@ weight: 4
 metadata:
   title: Object Storage Legacy Pricing
   description:
-    Information on Storj's legacy pricing model for distributed cloud object storage.
+    Information on Storj’s legacy pricing model for distributed cloud object storage.
 ---
 
 # Object Storage: Legacy Pricing
 
 {% callout type="info" %}
-Legacy pricing will be retired on **November 1, 2025** and replaced by our new **tiered pricing model**.
+Legacy pricing will be retired on **November 1, 2025** and replaced by our new [tiered pricing model](docId:mqRRgT,hL*dk3zNT).
 
 Projects created **before November 1, 2025** will retain legacy pricing for **one calendar year** or until they **upgrade or migrate**, whichever comes first.
 
-For details, see [our pricing documentation](docId:59T_2l7c1rvZVhI8p91VX).
 {% /callout %}
-
 
 
 ## Overview
 
-Storj's Object Storage Legacy Pricing Model charges fees based on three types of metered services: 
+Storj’s Object Storage Legacy Pricing Model charges fees based on three types of metered services:
+
 - Object Storage
 - Egress Bandwidth
 - Segments
@@ -67,9 +66,9 @@ Egress Bandwidth, also referred to as Download Bandwidth, is priced per GB. All 
 
 **Note:** When an object is downloaded, there are a number of factors that can impact the actual amount of bandwidth used:
 
-- Storj's file retrieval process includes requests for pieces from _more_ than the minimum number of storage nodes required. While only a subset of pieces are necessary to reconstitute an object, in order to avoid potential long-tail performance lag from a single slow storage node, the Storj Platform will request retrieval from a few additional storage nodes. The Platform will terminate all incomplete downloads once the required quantity of pieces are successfully downloaded and the object can be completely re-encoded. (For more detail, review our [Product Overview](docId:2npG1YD8Y7JH9UiENkMqR#what-happens-when-you-upload).)
+- Storj’s file retrieval process includes requests for pieces from _more_ than the minimum number of storage nodes required. While only a subset of pieces are necessary to reconstitute an object, in order to avoid potential long-tail performance lag from a single slow storage node, the Storj Platform will request retrieval from a few additional storage nodes. The Platform will terminate all incomplete downloads once the required quantity of pieces are successfully downloaded and the object can be completely re-encoded. (For more detail, review our [Product Overview](docId:2npG1YD8Y7JH9UiENkMqR#what-happens-when-you-upload).)
 
-- In addition, if a user terminates a download before completion, the amount of data transferred might exceed the amount of data that the customer's application receives. This may create minor discrepancies between the total size of downloaded files vs. the actual bandwidth consumed to retrieve those files.
+- In addition, if a user terminates a download before completion, the amount of data transferred might exceed the amount of data that the customer’s application receives. This may create minor discrepancies between the total size of downloaded files vs. the actual bandwidth consumed to retrieve those files.
 
 **Example:**
 
@@ -85,9 +84,9 @@ We can assist with the migration and, by following this process, the Egress fees
 
 ## Segment Fees
 
-Storj's distributed object storage is optimized for large files &mdash; those that are many MB or larger. On the other end of the spectrum, very small files can actually generate more storage overhead (to maintain the file's metadata) than for the file itself. 
+Storj’s distributed object storage is optimized for large files &mdash; those that are many MB or larger. On the other end of the spectrum, very small files can actually generate more storage overhead (to maintain the file’s metadata) than for the file itself. 
 
-Consequently, Storj charges a small fee "Per Segment" to better accommodate small-file overhead. If a user is storing mostly large files, the segment fee will be inconsequential. The segment fee is priced per segment per month, in increments of segment hours. The calculation of segment fees is based on a standard 720-hour month (30 days x 24 hours).
+Consequently, Storj charges a small fee “Per Segment“ to better accommodate small-file overhead. If a user is storing mostly large files, the segment fee will be inconsequential. The segment fee is priced per segment per month, in increments of segment hours. The calculation of segment fees is based on a standard 720-hour month (30 days x 24 hours).
 
 The default segment size on Storj Satellites is 64MB (but is configurable).
 
@@ -140,7 +139,7 @@ The Storj Platform distinguishes between two types of objects: **Remote** and **
 
 - **Remote objects** are files _large_ enough to slice, erasure-code, and then store the many pieces of the file across multiple (up to 80) storage nodes.
 
-- **Inline objects** are those _small_ files where the file itself is smaller than the metadata associated with it. To improve efficiency, the Storj Platform stores these small objects "inline" in the satellite metadata database. 
+- **Inline objects** are those _small_ files where the file itself is smaller than the metadata associated with it. To improve efficiency, the Storj Platform stores these small objects “inline“ in the satellite metadata database. 
 
 _**Tip:** If needing to store a large number of small files, a best practice is to employ a packing strategy (e.g.: .zip, .rar, archive, etc.) to combine the many small files into one or more larger files before uploading._
 

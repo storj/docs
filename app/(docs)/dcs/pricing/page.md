@@ -1,174 +1,101 @@
 ---
 title: Pricing
+hideTitle: true
 docId: 59T_2l7c1rvZVhI8p91VX
 redirects:
   - /dcs/billing-payment-and-accounts-1/pricing
   - /dcs/billing-payment-and-accounts-1/pricing/free-tier
 metadata:
-  title: Understanding Storj Pricing Structure
+  title: Pricing Overview
   description:
-    Guides users on Storj's cost and billing system, explaining different
-    metered services like object storage, egress bandwidth, segments, and their respective
-    prices.
+    Information on Storj’s cost and billing system, explaining different metered services like object storage, egress bandwidth segments, and their respective prices.
 ---
 
-{% callout type="warning" %}
-The current pricing will change starting from November 1, 2025 (see [Global Collaboration](#global-collaboration) and [Active Archive](#active-archive) tiers below).
+# Pricing Overview
 
-All old projects will still have the current pricing until November 1, 2026 and will be converted to the [Active Archive](#active-archive), starting from this date.
+## New Offerings and New Object Storage Tiers
 
-See details in our [pricing change FAQ](https://www.storj.io/pricing/change-faqs)
-{% /callout %}
+We’ve recently added new products, new capabilities, and have introduced simpler pricing tiers to make the Storj Platform an even easier choice for customers. 
+
+**Changes include:**
+
+- **New Object Storage tiers** that better support customer needs, simplify fees, and eliminate segment fees: 
+- **Object Mount is now available**, allowing you to connect to your object storage as a local file system; optimized for peak performance with Storj’s Object Storage.
+- **New Production Cloud offerings** that combine the unique benefits of Storj’s distributed cloud storage with local-like file access.
+- **SOC2 Type 2 certification** has been achieved by Storj on specific storage offerings, reinforcing our commitment to delivering enterprise-grade security and privacy.
+
+<!-- REMOVING FOR NOW
+- **A new Cloud Compute offering** with CPUs and GPUs co-located alongside Storj’s Object Storage, for ultra-low latency, maximum performance, and no egress fees.
+-->
+
+
+## Simplified Pricing
+
+Storj has consistent and competitive pricing that provides the global scale productions need &mdash; without scaling up your monthly bill. 
 
 {% youtube-embed videoId="9uhX0X3ZW2c" /%}
 
-The price for object storage is as low as $4.00 per TB per month with $7.00 per TB for egress.
+**What to know about the new object storage tiered pricing:**
 
-The following table lists the types of metered services that appear in billing and usage user interfaces as well as invoices:
+- No action is needed at this time.
+- **Existing Projects** created before November 1, 2025 will continue to use the current pricing model ([](docId:x3xPZJXCp!CB@spN)) for a full additional year (through October 31, 2026).
+- **New Projects** created on or after November 1, 2025 will be charged using the new model ([](docId:mqRRgT,hL*dk3zNT)).
 
-| **Metered Service Type** | **Metered Units** | **Increment** | **Pricing Unit** | **Price per Pricing Unit**   | **Description**                                                                                                                |
-| :----------------------- | :---------------- | :------------ | :--------------- | :--------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
-| Object Storage           | Bytes             | GB Hour       | GB Month         | $0.004 per GB Month          | Storage is calculated based on bytes uploaded, including any encryption-based overhead                                         |
-| Egress Bandwidth         | Bytes             | GB            | Total Volume     | $0.007 per GB                | Bandwidth related to object downloads calculated on bytes downloaded including long tail elimination-related bandwidth         |
-| Segments                 | Segments          | Segment Hour  | Segment Month    | $0.0000088 per Segment Month | Segments usage depends on Storage. The default size for the Segment is 64MB (or less), i.e. smaller objects uses more Segments |
 
-Billing is aggregated at the project level. A project is the Storj service construct used for aggregating usage, calculating billing, invoicing fees, and collecting payment. Billing on a project begins when a user upgrades to a pro account (even if their free trial has not ended). Projects are created by a single user, then multiple users may be added to a project team, and one user may be on more than one project. Within a project, usage is tracked at the bucket level and aggregated for invoicing to the project. Project names are not client-side encrypted so that they may be rendered in the satellite user interface. For more information about Developer Accounts, Projects, Buckets, etc., please read [](docId:M-5oxBinC6J1D-qSNjKYS).
+## Choose a Storj Product Below to Learn More
 
-The following section describes how the charges listed in the table above are calculated to provide users detailed insights into their cloud storage usage, broken down by storage, egress bandwidth, and number of objects. Note that for billing purposes, usage data is continuously rolled up and aggregated. Billing data is not displayed in real-time in the satellite interface and some time lag should be expected.
+{% quick-links %}
 
-## Object Storage
+{% quick-link
+  title="Production Cloud Pricing"
+  description="Details on Storj’s Production Cloud products and pricing."
+  href="docId:ZnRTYv8k?KEC3hzk"
+/%}
 
-Object storage is priced per GB per month in increments of byte hours. The calculation of object storage fees is based on a standard 720-hour month. Actual storage is metered in bytes uploaded. Bytes uploaded include the bytes associated with actual objects plus any nominal overhead associated with encryption. Byte hours are calculated based on the number of hours bytes are stored on the Storj Platform from when an object is uploaded to when it is deleted. The calculated number of bytes is then multiplied by the byte hour price. The byte hour price is derived from the GB month price divided by the standard 720-hour month and base 10 conversion of GB to bytes.
+{% quick-link
+  title="Object Mount Pricing"
+  description="Details on Storj’s Object Mount product and pricing."
+  href="docId:FwEG)7uVcTBcepCT"
+/%}
 
-**Example**
+{% quick-link
+  title="Object Storage: Tiered Pricing"
+  description="Details on Storj’s Object Storage product and tiered pricing model."
+  href="docId:mqRRgT,hL*dk3zNT"
+/%}
 
-A user uploads a 1TB file. Half way through the month, the user deletes the file. With encryption overhead, the file is stored as 1.001TB. The 1.001TB is accounted for as 1,001,000,000,000 bytes. The file is stored for 360 hours. The file is stored for 360,360,000,000,000 byte hours. In this example, the price per GB month is $0.004 and per GB hour is $0.000005556. The price per byte hour is $0.000000000000005556. The total amount charged for the storage is $2.00.
 
-## Bandwidth Fee
+<!-- REMOVING FOR NOW
+{% quick-link
+  title="Object Storage: Legacy Pricing"
+  description="Details on Storj’s legacy pricing model for Object Storage (for projects created before Nov. 1, 2025)."
+  href="docId:x3xPZJXCp!CB@spN"
+/%}
 
-Download bandwidth, also referred to as egress bandwidth, is priced per GB in increments of bytes downloaded. The calculation of download bandwidth price per byte is derived from the GB download bandwidth divided by the base 10 conversion of GB to bytes. The calculated number of bytes is then multiplied by the byte download bandwidth per byte price.
+{% quick-link 
+  title="Cloud Compute Pricing" 
+  description="Details on the Cloud Compute product and pricing." 
+  href="docId:X7SZXsXS?CXhj?tA" 
+/%}
+-->
 
-When an object is downloaded, there are a number of factors that can impact the actual amount of bandwidth used. The download process includes requests for pieces from more than the minimum number of storage nodes required. While only a subset of pieces out of total are required to reconstitute an object, in order to avoid potential long-tail performance lag from a single storage node, uplink will try to retrieve an object from additional storage nodes. Uplink will terminate all incomplete downloads in process once the required pieces are successfully downloaded and the object can be re-encoded. For example, we may need 29 of the 80 pieces we uploaded. In addition, if a user terminates a download before completion, the amount of data that is transferred might exceed the amount of data that the customer’s application receives. This discrepancy can occur because a transfer termination request cannot be executed instantaneously, and some amount of data might be in transit pending execution of the termination request. This data that was transferred is billed as data download bandwidth.
+{% /quick-links %}
 
-**Example**
+_Looking for Object Storage Legacy pricing? See: [Legacy Pricing](docId:x3xPZJXCp!CB@spN)_
 
-A user downloads one 1 TB file. Based on the long tail elimination, up to 1.3 TB of download bandwidth may be used. The 1.3 TB of download bandwidth is accounted for as 1,300,000,000 bytes. In this example, the price per GB is $0.007 and per byte is $0.000000045. The total amount charged for the egress is $9.10.
-
-Unlike other cloud object storage vendors, we don't use high egress fees to create vendor lock-in. If you discover that Storj isn't a fit for your project or application and you transfer your data to another service, use our support portal to submit a ticket and let us know. As long as you follow the process, we won't charge you for that egress bandwidth.
-
-## Per Segment Fee
-
-Each Segment stored on the network is charged a nominal Per Segment fee. The Per Segment Fee is $0.0000088 Per Segment Per Month. Distributed object storage is optimized for large files (several MB or larger - the larger the better). Very small objects generate more overhead with the storage of the metadata for the file than the actual storage of the object. Consequently, we charge a small Per Segment Fee to account for that overhead. If a user is storing even large numbers of big files, the Per Segment Fee will be inconsequential. If a user streams millions of small files, the Per Segment Fee will offset the cost associated with the metadata overhead.
-
-The segment Limit will be billed at a rate of $0.0000088 per Segment per month, equivalent to a rate of $0.00000001222 per Segment Hour.
-
-The Storj Platform distinguishes between two types of object storage: remote and inline. Remote objects are large enough to erasure code and store the pieces of the file on storage nodes. Inline objects are smaller than the metadata associated with the actual object. In the case of objects that are smaller than the associated metadata, it is more efficient to store the object inline in the satellite metadata database. When storing a large number of tiny files, the best practice is to employ a packing strategy to store larger blocks of small files as a single object.
-
-The Per Segment Fee is priced per Segment per month in increments of Segment hours. The calculation of per segment fees is based on a standard 720-hour month. Actual Per Segment Fees are metered in Segments uploaded. Per Segment Fee hours are calculated based on the number of hours Segments are stored on the Storj Platform from when a Segment is uploaded to when it is deleted. The number of hours each Segment is stored on the platform during the month then is multiplied by the Segment hour price. The segment hour price is derived from the Segment month price divided by the standard 720-hour month.
-
-As described elsewhere in this documentation, objects stored on Storj are encrypted and erasure coded, with the encrypted, erasure coded pieces stored on various Storage Nodes on the distributed and decentralized network. Each object stored on the network is represented as at least one Segment.
-
-A Segment is a single array of bytes, between 0 and a user-configurable maximum segment size. The default Segment size on Storj Satellites is 64MB. A File smaller than 64MB is stored as one segment. Files larger than 64MB are stored in multiple 64MB Segments. Each Segment is stored as pieces on the network. Only a subset of pieces of the total pieces (e.g. 29 of the 80) are required to reconstitute a Segment. All Segments are required to reconstitute a File.
-
-**Examples:**
-
-- A single 1MB file is one segment
-
-- A single 10MB file is 1 Segment
-
-- A single 64MB file is 1 Segment
-
-- A single 256Mb file is four 64MB Segments
-
-- A single 300MB file is 5 Segments (four 64MB Segments, and one 44MB Segment)
-
-- A single 1GB file is sixteen 64MB Segments
-
-**Important:** Sixteen 1MB files use the same amount of metadata resources as a 1GB file.
-
-The Cost examples below assume a Segment Limit Increase has been applied to a project and the Segment Project Limit is sufficient to provide for the usage as described. 
-
-**Cost Example 1:**
-
-A user uploads 100,000 one GB files, a total of 100TB. Half way through the month, the user deletes the files. The 100,000 files are stored as 1,600,000 Segments. The files are stored for 360 hours. The files are stored for 576,000,000 Segment hours. The price per Segment month is $0.0000088. The price per Segment hour at 720 hours per month is $0.00000001222. The total amount charged for the monthly Per Segment Fee would be $7.04.
-
-**Cost Example 2:**
-
-A user uploads 1,600,000 one MB files, a total of 1.6TB. Half way through the month, the user deletes the files. The 1,600,000 files are stored as 1,600,000 Segments. The files are stored for 360 hours. The files are stored for 576,000,000 Segment hours.  The price per Segment month is $0.0000088. The price per Segment hour at 720 hours per month is $0.00000001222. The total amount charged for the per segment fee would be $7.04.
-
-Note that the number of segments for 100TB of 1GB files and 1.6TB of 1MB files is the same.
-
-## Multipart Upload Impact on Segments
-
-When an object is uploaded using Multipart Upload, a file is first broken into parts, each part of a Multipart Upload is also stored as one or more Segments. With Multipart Upload, a single object is uploaded as a set of parts. Each part is an integral portion of the data comprising the object. The object parts may be uploaded independently, in parallel, and in any order. Uploads may be paused and resumed by uploading an initial set of parts, then resuming and uploading the remaining parts. If the upload of any part fails, that part may be re-uploaded without impacting the upload of other parts. All of these parts are broken into one or more Segments by the Storj Gateway based on whether the Part Size is smaller or larger than the default Segment size. While Multipart Upload is most appropriate for files larger than the 64MB default Segment size, the Part Size is configurable in applications that use Multipart Upload.
-
-**Examples:**
-
-A single 128MB file using a 64MB Part Size is uploaded as 2 parts, with each part stored as one 64MB Segment
-
-A single 128MB file using a 5MB Part Size is uploaded as 26 Parts (25 5MB Parts and one 3MB Part), with each part stored as one Segment, for a total of 26 Segments.
-
-The default Part Size for Multipart Upload for some applications is 5MB. The difference between using the default 5MB Part Size instead of the default size of 64MB for Storj is impactful.
-
-Assuming a 1TB data set comprised of 1,000 1GB files is stored for an entire month, the difference between using 64MB Part Size vs. 5MB Part Size is described below:
-
-| Part Size | Files | Parts/ S | Segment Hours | Chargeable Segment Hours | Monthly Cost of Per Segment Fee | Monthly cost of storage |
-| :-------- | :---- | :------- | :------------ | :----------------------- | :------------------------------ | :---------------------- |
-| 64MB      | 1,000 | 15,625   | 11.25M        | 11.25M                   | $0.14                           | $4.14                   |
-| 5MB       | 1,000 | 200,000  | 144.0M        | 144.0M                   | $1.76                           | $5.76                   |
-
-**Multipart Cost Example 1:**
-
-A user uploads 100,000 one GB objects using multipart upload with a 64MB Part Size and 10,000 100MB objects using a 5MB Part Size. Halfway through the month, the user deletes the files. The 100,000 one GB files are stored as 1,562,500 Segments. The 10,000 100MB files are stored as 200,000 Segments. The files are stored for 360 hours. The 100,000 one GB files in 64MB Segments are stored for 562,500,000 Segment hours. The 10,000 100 MB files in 5MB Segments are stored for 72,000,000 Segment hours. The total is 634,500,000 Segment Hours. The monthly per-segment fee is $7.75.
-
-**Multipart Cost Example 2:**
-
-A user uploads 1PB of one GB objects using multipart upload with a 5MB Part Size. Halfway through the month, the user deletes the files. The 1PB of one GB files (1 million files) are stored as 200,000,000 Segments. The files are stored for 360 hours. The data is stored for 72,000,000,000 Segment hours. The price per Segment month is $0.0000088. The price per-segment hour at 720 hours per month is $0.00000001222. The monthly per-segment fee in this example would be $879.84.
-
-## Global Collaboration
-
-Multi-region, low-latency, includes 1× free egress.
-
-{% callout type="warning" %}
-Starting November 1, 2025
-
-See details in our [pricing change FAQ](https://www.storj.io/pricing/change-faqs)
-{% /callout %}
-The price for Global Collaboration is $15 per TB with 1X egress included. Overage over the included egress is billed at $0.02/GB.
-
-As described elsewhere in this documentation, objects stored on Storj are encrypted and erasure coded, with the encrypted, erasure-coded pieces stored on various Storage Nodes on the distributed and decentralized network. Each object stored on the network is represented as at least one Segment. 
-
-### Minimum object size for Global Collaboration
-50 KB minimum per object. Objects under 50 KB are billed as 50 KB.
-
-## Active Archive
-Optimized for instant access. No bundled egress. 30-day minimum retention.
-
-{% callout type="warning" %}
-Starting November 1, 2025
-
-See details in our [pricing change FAQ](https://www.storj.io/pricing/change-faqs)
-{% /callout %}
-The price for Active Archive object storage is $6.00 per TB per month, with $20.00 per TB for egress.
-
-As described elsewhere in this documentation, objects stored on Storj are encrypted and erasure coded, with the encrypted, erasure-coded pieces stored on various Storage Nodes on the distributed and decentralized network. Each object stored on the network is represented as at least one Segment. 
-
-### Minimum object size for Active Archive
-100 KB minimum per object. Objects under 100 KB are billed as 100 KB.
 
 ## Minimum Monthly Billing
 
-Storj has a **$5 minimum monthly usage fee**.
+There is a **$5 minimum monthly charge** for all object storage accounts.
 
-This helps cover the cost of payment processing and basic operations so we can continue offering fast, secure, and reliable storage—even for small accounts.
+See the “Additional Pricing Notes“ section for your applicable pricing plan for details:
 
-### What does this mean for you?
+- [Object Storage: Tiered Pricing](docId:mqRRgT,hL*dk3zNT#additional-pricing-notes)
+- [Object Storage: Legacy Pricing](docId:x3xPZJXCp!CB@spN#additional-pricing-notes)
 
-- Any monthly usage that results in an invoice less than $5 will result in the minimum usage fee.
-- If your usage exceeds $5 per month, you will not be charged a minimum usage fee.
-- If you bought a starter package via a partner before August 1, 2025, you will not be charged a minimum usage fee until your starter package expires. The starter package expires one year from purchase or when the starter package credits have been fully used.
-- If you pay with STORJ token, you will not be charged a minimum usage fee.
 
-## Project limits
+## Additional Pricing Notes
 
-All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj. To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGYhfgGbVhlQ2ZHXVS) sections of this Documentation.
+**US sales tax** will be included on all US invoices in accordance with state and local regulations (effective November 1, 2025). Exemption certificates should be emailed to accounting@storj.io.
+
+See our [Pricing Change FAQ](https://www.storj.io/pricing/change-faqs) for additional details.

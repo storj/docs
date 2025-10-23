@@ -1,27 +1,19 @@
 ---
-title: Step 2. Get an Authorization Token
+title: Get an Authorization Token
 docId: v-fUvPqySvUwTMF-od6hD
 redirects:
   - /node/before-you-begin/auth-token
 hidden: true
 ---
 
-## Before starting
-
 {% callout type="warning"  %}
-**This step is not required any more. Identities can be used without authorizing them manually!**
-{% /callout %}
 
-[](docId:hbCGTv1ZLLR2-kpSaGEXw)
+**Note:** An earlier version of these Node Setup instructions included a requirement to request an authorization token for the `identity authorize` command. 
 
-## Get your token
+This step is no longer required. 
 
-Please enter your email address below to receive your authentication token and copy it to be used at a later step.
+Identities can now be used without authorizing them manually.
 
-{% registration-token /%}
+Please refer to the new and revised Node Setup steps: [](docId:kjMiGo7HTr4v_qwD5Iqc7)
 
-By using your authorization token, you agree to the [Storage Node Operator Terms and Conditions](https://storj.io/storj-operator-terms).
-
-{% callout type="info"  %}
-Make sure you have copied your personal single-use authorization token to be used at a later step
 {% /callout %}

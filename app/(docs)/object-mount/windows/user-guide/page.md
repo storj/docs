@@ -1,40 +1,37 @@
 ---
 title: User Guide
 hideTitle: true
-docId: QpBba8p4bMTXAkBK
+docId: khHGfZsyY9NJ2uGK
 redirects:
-   - /object-mount/credentials/macos/import
+   - /object-mount/credentials/windows/import
 weight: 2
 metadata:
-  title: Object Mount User Guide for macOS
+  title: Object Mount User Guide for Windows
   description:
-    A user guide for getting started with Object Mount on macOS.
+    A user guide for getting started with Object Mount on Windows.
 hidden: false
 ---
 
-# User Guide: macOS Native App
+# User Guide: Windows Native App
 
-This guide walks you through the core steps to get started with **Object Mount** on macOS &mdash; including activation, adding credentials, and mounting your cloud-based object storage as a local volume.
+This guide walks you through the core steps to get started with **Object Mount** on Windows &mdash; including activation, adding credentials, and mounting your cloud-based object storage as a local drive.
 
+Follow the steps below to launch and activate Object Mount:
 
 ## Step 1. Launch & Activate Object Mount
 
-Once Object Mount and macFUSE are installed on your Mac (see the macOS [](docId:MyV4Bv3fKJEZucAb)), follow the steps below to launch and activate Object Mount:
-
-- Run Object Mount from your **Applications** folder.
+- Run Object Mount from your Start Menu or Desktop shortcut.
 
 - You will be prompted to enter your Object Mount **License Key**.
     - _Contact your [Storj representative](https://www.storj.io/landing/get-in-touch) if you need to obtain an Object Mount License Key._
 
-- Click **Renew License** and paste your Object Mount license key into the text box.
+- Click **Install New License** and paste your Object Mount license key into the text box.
 
 - Click **Activate**.
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-license-key-valid.jpg)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-license-key-valid.jpg)
 
-- If prompted, click **OK** to allow Object Mount to access files on network volumes.
-
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-permission.jpg)
+- If prompted, click **Allow Access** to permit firewall changes.
 
 Once activated, you can view your license key details by clicking the **About** tab in Object Mount.
 
@@ -85,43 +82,38 @@ If you’re provider is not listed, select **Other S3** and choose the provider 
 
 4. Select **Mount all buckets** or choose one or more specific buckets to create a mount drive for. Click **Next**.
 
-5. Enter a **Mount name** to use and, if necessary, alter the path location for the local mount drive.
+5. Enter a **Display name** for your mount.
+
+   - Make note of the drive letter that Windows initially assigns to the new mount.
+   - If this drive letter is in use when you enable a mount, you can select a new drive letter (see step 8, below).
+   - You can also set a **Preferred drive letter** to use under the **Settings** tab.
 
 6. Tick the **Mount as read-only** box if all you need is to browse and copy content. Uncheck the box to enable **full read/write access**.
 
 7. Tick the box to **Enable POSIX metadata** (recommended).
    - For more details, see the [POSIX Explained](docId:ySneAEd79CVewSSr) page in the **Concepts & Technical Details** section.
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-configure-your-mount.jpg)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-configure-your-mount.jpg)
 
 8. Click **Next** to create the mount. Then enable the mount from the **Mounts** tab.
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-enable-your-mount.jpg)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-enable-your-mount.jpg)
 
-{% callout type="info" %}
-Depending on your Mac hardware and OS version, an **Extension blocked** message may be presented when Object Mount attempts to mount your new drive.
+   - If the drive letter assigned by Windows is already in use, you will be prompted to select a new drive letter:
 
-If so, perform the following steps:
-- Open **System Settings**
-- Navigate to **Privacy & Security**
-- Scroll down to the **Security** section
-- Click **Allow** to permit the macFUSE extension (from developer "Benjamin Fleischer") to be loaded
-
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-allow-macfuse.jpg)
-
-{% /callout %}
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-drive-assignment.jpg)
 
 {% callout type="info"  %}
 First-time access to a new mount may take a few moments if the bucket contains many files &mdash; performance improves after the initial mount.
 {% /callout %}
 
-Your newly mounted drive will appear on your Mac using a **FUSE** drive icon:
+Your newly mounted drive will appear on your PC using the assigned drive letter:
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-fuse-drive-icon.jpg)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-new-drive-01.jpg)
 
-If there are multiple buckets accessible using the same credential set, those buckets will each appear as separate **Folders** within the single mounted drive icon:
+If there are multiple buckets accessible using the same credential set, those buckets will each appear as separate **Directories** within the single mounted drive letter:
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-multiple-buckets.jpg)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-new-drive-02.jpg)
 
 
 ## Preferences & Advanced Settings
@@ -133,8 +125,13 @@ Object Mount includes a flexible **Settings** panel where you can fine-tune cach
 - These settings cannot be edited while any mount is active. You must disable all mounts before making changes.
 {% /callout %}
 
-
 Refer to the following sections for details on each setting.
+
+### General
+
+Select a **Preferred drive letter** for Object Mount to use.
+
+**Note:** Currently Object Mount only allows for a single mount to be active at any time. This preferred drive letter will be used for the one, active mount.
 
 ### Data cache
 
@@ -144,7 +141,7 @@ The local **data cache** temporarily stores small portions of accessed files on 
 - **Maximum cache size:** The upper limit (in MB) for total cached data  
   - **Note:** This does *not* delay cloud writes — writing to the cloud happens immediately
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-settings-01.jpg)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-settings-01.jpg)
 
 {% callout type="info"  %}
 Data Cache Recommendations:
@@ -159,7 +156,7 @@ Metadata caching helps Object Mount remember file structure, timestamps, and per
 - **Location:** The local directory for storing metadata information  
 - **Cache timeout:** The duration, in seconds, that metadata remains valid before being refreshing from the cloud (default: 60 seconds)
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-settings-02.jpg)
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-settings-02.jpg)
 
 ### Advanced settings
 
@@ -178,8 +175,7 @@ These options let you further customize Object Mount’s performance and diagnos
 
 ***QUESTION: DO WE HAVE INFO ON WHAT COLD CACHE ON/OFF DOES??***
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-settings-03.jpg)
-
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-settings-03.jpg)
 
 
 
@@ -187,26 +183,9 @@ These options let you further customize Object Mount’s performance and diagnos
 
 {% callout type="info"  %}
 **Log File Location**  
--`~/Library/Application Support/Object Mount/cunoFS.log`  
+`C:\Users\%username%\AppData\Local\Object Mount\cunofs.log`
 {% /callout %}
 
 Click **Apply** to save any changes. Then re-enable your mount.
 
 Click **Reset** to revert all settings back to their default values.
-
-
-## Updating macFUSE
-
-You can update and/or uninstall macFUSE within the Mac’s System Preference.
-
-For **older macOS versions** (Monterey and prior) you will find the macFUSE extension at the bottom of the **System Preferences** window:
-
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-macfuse-preferences-01.jpg)
-
-Click the macFUSE icon to see options to update and/or uninstall macFUSE:
-
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-macfuse-preferences-02.jpg)
-
-For **newer macOS versions**, you will find the macFUSE kernel extension listed at the very bottom within **System Settings**:
-
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-update-macfuse-m-chip.jpg)

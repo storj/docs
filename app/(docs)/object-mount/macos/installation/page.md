@@ -23,7 +23,7 @@ Before you begin, make sure your system meets the following system requirements:
 
 - macOS 12 Monterey or later
 
-  (macOS 13 Ventura or later for advanced features such as Fast Copy & Fast Move)
+  (Note: macOS 13 Ventura or later for advanced features such as Fast Copy & Fast Move)
 
 - At least 300MB of free disk space
 - Internet connection for mounting cloud-hosted buckets, or LAN connection for mounting local buckets

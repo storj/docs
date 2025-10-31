@@ -2,7 +2,7 @@
 title: Linux
 hideTitle: true
 docID: wxtofwqcb5f2
-weight: 2
+weight: 5
 metadata:
   title: Linux Installation and Usage
   description:

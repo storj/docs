@@ -1,25 +1,25 @@
 ---
-title: Features Guide
+title: Feature Guide
 hideTitle: true
 docId: ehHbpq6KFndcVCgc
 weight: 3
 metadata:
-  title: Features Guide for macOS
+  title: Feature Guide for macOS
   description:
-    A semi-technical explanation of how Object Mount’s Fast Copy and Move Finder integration works on macOS.
+    Details on unique features of the macOS native app.
 hidden: false
 ---
 
-# Features Guide: macOS Native App
+# Feature Guide: macOS Native App
 
-This page will provide details on unique and noteworthy features that are specific to the **macOS Native App**.
+This page will provide details on unique and noteworthy features that are specific to the Object Mount **macOS Native App**.
 
-Features that are global and apply to **all** versions of Object Mount (macOS, Windows, Linux) can be found in the [Global Features](#global-features) section below.
+Features that are global and apply to **all OS versions** of Object Mount (macOS, Windows, Linux) can be found in the [Global Features](#global-features) section below.
 
 
 ## Fast Copy & Fast Move on macOS
 
-Starting with **v1.0.4** Object Mount for macOS now supports **Fast Copy** and **Fast Move** options directly from the Mac Finder. 
+Starting with **Object Mount v1.0.4** Object Mount for macOS now supports **Fast Copy** and **Fast Move** options directly from the Mac Finder. 
 
 **Note:** macOS 13 Ventura (or later) is required to use Fast Copy and Fast Move.
 
@@ -64,14 +64,14 @@ You may need to right-click more than once to activate the extension for the fir
 
 Using Fast Copy or Fast Move is ideal when you want to:
 
-- Move large files or large folder trees (footage, projects, renders, etc.) from a local disk into the cloud
+- Move large files or large folder trees (media footage, projects, renders, etc.) from a local disk to a mounted S3 bucket or Storj bucket
 - Copy large files or folders from one Object Mount volume to another
-- Work with high-latency networks or slow remote S3 endpoints
-- Avoid bottlenecks from Finder’s standard file operations
+- Improve performance on high-latency networks or slow remote S3 endpoints
+- Avoid the bottlenecks of Finder’s standard file operations
 
-### How Fast Copy or Fast Move work
+### How Fast Copy and Fast Move work
 
-Standard **copy & move** actions performed by the Finder use macOS file APIs. These commands copy data **one block** at a time, without any awareness of how cloud storage works. This can lead to slow performance, especially for large files or nested folder structures.
+Standard **copy & move** actions performed by the Finder use macOS file I/O calls. These standard file calls copy data **one block** at a time, without any awareness of how cloud storage works. This can lead to slow performance, especially for large files or nested folder structures.
 
 **Fast Copy and Fast Move** bypass these standard read/write calls and instead:
 
@@ -89,9 +89,9 @@ Behind the scenes, Fast Copy and Fast Move:
 
 ### Best practices for Fast Copy or Fast Move
 
-- Store original media locally, then **Fast Move** it to cloud when ready.
-- For large archive folders, use **Fast Copy** to quickly duplicate into your S3 bucket.
-- Use Fast Move to clear local storage while archiving to the cloud &mdash; in one step.
+- Store original media locally, then **Fast Move** it to cloud when ready
+- For large archive folders, use **Fast Copy** to quickly duplicate into your S3 bucket
+- Use Fast Move to clear local storage while archiving to the cloud &mdash; in one step
 
 
 ## Global Features

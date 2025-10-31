@@ -1,6 +1,6 @@
 ---
 title: FAQs
-weight: 5
+weight: 7
 docId: dd27e33c-7804-4e15-bdc5-941f9a1a7e12
 metadata:
   title: Frequently Asked Questions

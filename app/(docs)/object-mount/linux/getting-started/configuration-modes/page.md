@@ -74,7 +74,7 @@ See [enforced posix](../installation/enforced-posix).
 - Use this if you’re moving workflows from POSIX to object storage, such as workloads that were previously run on EC2 with EFS.
 
 {% callout type="note"  %}
-We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us via our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if you need these features.
+We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us via our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if you need these features.
 {% /callout %}
 
 #### How to enable
@@ -91,7 +91,7 @@ See [enforced posix](../installation/enforced-posix)
 - Host an organisation's user filesystem in the cloud.
 
 {% callout type="note"  %}
-We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if you need these features.
+We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us at our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if you need these features.
 {% /callout %}
 
 #### How to enable
@@ -128,5 +128,5 @@ If this is the case, consider:
 
 {% callout type="note"  %}
 Client-side caching on disk for workloads requiring many reads of the same data, such as video editing, is coming soon.
-Follow along [here](https://www.storj.io/fuse-filesystem).
+Follow along 🌐 [here](https://www.storj.io/fuse-filesystem).
 {% /callout %}

@@ -188,7 +188,7 @@ Valid options are:
 The `cuno creds setposix` command writes a tag to the bucket's metadata on the bucket store. The setting set by this command applies to all users using the bucket through Object Mount.
 
 {% callout type="warning"  %}
-Some S3-compatible stores may not support setting custom metadata flags required for this feature to function. If this is the case for you, you can still use the `--posix` flag to enable POSIX enforcement when starting a Object Mount on FUSE. You can also still use the `CUNO_POSIX` environment variable to enable it for a Direct Interception session. If these methods are not satisfactory or preferable, please get in contact at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).
+Some S3-compatible stores may not support setting custom metadata flags required for this feature to function. If this is the case for you, you can still use the `--posix` flag to enable POSIX enforcement when starting a Object Mount on FUSE. You can also still use the `CUNO_POSIX` environment variable to enable it for a Direct Interception session. If these methods are not satisfactory or preferable, please get in contact at our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).
 {% /callout %}
 
 To unset the bucket-level setting and allow controlling POSIX mode using either the `CUNO_POSIX` environment variable or the `--posix` command line flag, use `cuno creds setposix` with a setting of `unset`:

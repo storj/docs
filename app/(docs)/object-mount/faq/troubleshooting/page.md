@@ -109,7 +109,7 @@ If files are stuck during paste, and you're on **Windows**:
 
 ## Still Not Working?
 
-Reach out via our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) and include:
+Reach out via our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) and include:
 
 - OS and Object Mount version  
 - Cloud provider and bucket name  

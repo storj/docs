@@ -12,7 +12,7 @@ hidden: false
 
 ## What is POSIX?
 
-The Portable Operating System Interface (POSIX) is a set of IEEE specifications intended to maintain compatibility between disparate Linux/UNIX flavors through standardized definitions of APIs, shells, interfaces, commands, etc.
+The Portable Operating System Interface (POSIX) is a set of IEEE specifications intended to encourage compatibility between disparate Linux/UNIX flavors through standardized definitions of APIs, shells, interfaces, commands, etc.
 
 Writing an application (or binary) which meets POSIX standards means that the program is “portable,” and is more likely to run correctly no matter what UNIX-based OS it is installed on.
 
@@ -21,11 +21,13 @@ Some applications or programs may (or may not) require _strict_ POSIX-compliant 
 
 ## Object Mount’s POSIX Mode
 
-To support those programs and applications that require POSIX-compliant interfaces, access-control and metadata, Object Mount includes **POSIX Mode**. When activated, POSIX Mode enables the necessary additional features to support those applications that rely on the rigid, traditional UNIX-style file permissions and metadata.
+To support those programs and applications that require POSIX-compliant interfaces, access-control and metadata, Object Mount includes **POSIX Mode**. 
+
+When activated, POSIX Mode enables the necessary additional features to support applications that rely on the rigid, traditional UNIX-style file permissions and metadata.
 
 Object storage, by default, lacks concepts like file ownership, permissions, and modification timestamps that are normal features of most local file systems. Object Mount’s POSIX Mode recreates these features and behaviors in the object storage world.
 
-When enabled, POSIX mode generates, stores, and maintains the metadata that is typically expected in a local file system, including:
+When enabled, POSIX Mode generates, stores, and maintains the metadata that is typically expected in a local file system, including:
 - File ownership (uid, gid)
 - Read/Write/Execute permissions
 - Timestamps (mtime, ctime, etc.)
@@ -35,11 +37,9 @@ To retain this metadata, Object Mount creates and writes to a hidden index file 
 
 {% callout type="info" %}
 Ensure your credentials and your bucket support write access. Your credentials must allow `s3:PutObject` and `s3:DeleteObject` on that path.
-
-**Important:** You cannot change the POSIX mode setting after a mount has been created.
 {% /callout %}
 
-**Be advised:** Using any non-Object Mount tool to rename, move or copy your files will result in those objects losing their POSIX metadata. You should use Object Mount to manage POSIX-enabled files in order to preserve their metadata and attributes.
+**Be advised:** Using any non-Object Mount tool to rename, move, or copy your files will result in those objects _losing_ their POSIX metadata. You should only use Object Mount to manage POSIX-enabled files in order to preserve their metadata and attributes.
 
 
 ## When to Enable Object Mount’s POSIX Mode
@@ -50,7 +50,7 @@ You should enable POSIX mode in Object Mount if:
 - You require symbolic link emulation or fine-grained permission mapping
 - You are mounting object storage as a shared filesystem in team environments
 
-Enabling POSIX mode is recommended for:
+Enabling POSIX mode is recommended for workflows such as:
 
 - Media Production
 - Backup Solutions
@@ -61,9 +61,9 @@ Enabling POSIX mode is recommended for:
 
 ## When NOT to Enable Object Mount’s POSIX Mode
 
-You should not enable POSIX mode in Object Mount for:
+You should not enable POSIX Mode in Object Mount for:
 
-- **Read-only bucket credentials**: POSIX mode requires _write_ access to the object storage bucket in order to create and write to the hidden metadata file. If your credentials are read-only, POSIX mode will not function and may prevent the mount from working correctly.
+- **Read-only bucket credentials**: POSIX Mode requires _write_ access to the object storage bucket in order to create and write to the hidden metadata file. If your credentials are read-only, POSIX mode will not function and may prevent the mount from working correctly.
 
 - **Lightweight access:** For read-only workflows or general content browsing, POSIX mode is typically unnecessary and can be left disabled.
 
@@ -72,46 +72,27 @@ You should not enable POSIX mode in Object Mount for:
 
 POSIX mode is enabled on a mount-by-mount basis: You can choose which mounts require it and which don’t.
 
-You enable POSIX mode when **creating** a new mount within Object Mount. Once a mount is created, you cannot add or remove POSIX mode.
+You enable POSIX mode when **creating** a new mount within Object Mount. 
 
-Enabling POSIX mode in Windows or macOS environments is done through Object Mount's graphical user interface (GUI). See the associated installation pages for your operating system:
-
-- Enabling POSIX Mode when [creating a mount in macOS](docId:QpBba8p4bMTXAkBK#2-enter-your-object-storage-credentials-and-create-a-mount)
-- Enabling POSIX Mode [creating a mount in Windows] <<LINK>>
-
-Enabling POSIX mode in Linux is done through the command line interface (CLI). See the following installation page for Linux commands:
-
-- Enabling POSIX Mode in Linux <<LINK>>
+- **Important:** You cannot change (add or remove) the POSIX Mode setting after a mount has been created.
 
 
+**Windows and macOS:**
 
+Enabling POSIX mode in **Windows** and **macOS** environments is done through Object Mount’s graphical user interface (GUI). 
 
+See the associated installation pages for your operating system:
 
+- Enabling POSIX Mode when [creating a mount in macOS](docId:QpBba8p4bMTXAkBK#step-2-configure-object-storage-credentials-and-create-a-mount)
+- Enabling POSIX Mode [creating a mount in Windows](docId:khHGfZsyY9NJ2uGK#step-2-configure-object-storage-credentials-and-create-a-mount)
 
+**Linux:**
 
+Enabling POSIX mode in **Linux** is done through the command line interface (CLI). See the following installation page for Linux commands:
 
+- Enabling POSIX Mode in Linux <<LINK TO BE ADDED>>
 
-## MOVE TO WINDOWS SECTION >>> Enabling POSIX Mode (Windows)
-
-POSIX mode is enabled on a mount-by-mount basis: You can choose which mounts require it and which don’t.
-
-In Windows environments, you enable POSIX mode when **creating** a new mount in the Object Mount user interface:
-
-- Launch the Object Mount Application
-- From the Mounts tab, select **Create New Mount**
-- Select your Object Storage Provider, Credentials, Bucket and Access Mode as normal
-- When prompted, tick the checkbox for **Enable POSIX metadata**
-
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-enable-posix-mode.jpg)
-
-- Create the mount, then enable the mount
-
-{% callout type="info" %}
-Ensure your credentials and bucket support write access. Your credentials must allow `s3:PutObject` and `s3:DeleteObject` on that path.
-
-**Note:** You cannot change the POSIX mode setting after a mount has been created.
-{% /callout %}
-
+<!-- 
 
 ## MOVE TO LINUX SECTION >>> Enabling POSIX Mode (Linux)
 
@@ -190,3 +171,7 @@ There are two main ways to enable “POSIX File Access”:
 Note: This is **client-side** rather than **server-side** enforcement, and is not enforced using server-side IAM roles or ACL lists. If the user has access to object storage credentials with server-side privileges beyond this, then the user can potentially access or modify objects outside of these POSIX access controls. Contact the Storj our <<LINK>> help desk for how to setup ACL Policies to enforce server-side access control that reflects POSIX access controls.
 
 << CAN THE ABOVE ^^^ CONTRADICT the NOTE above??? >>>
+
+
+-->
+

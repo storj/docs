@@ -1,15 +1,16 @@
 ---
 title: Red Hat
+hideTitle: false
 docId: woosaugaiNohree9
-
+weight: 4
 metadata:
   title: Red Hat
   description:
     Red Hat Installation Instructions
-
+hidden: false
 ---
 
-1. Donwload the installer. By downloading you are agreeing to the terms of the [End User License Agreement](https://www.storj.io/legal/terms-of-use). Click to download the latest version of the [self-extracting package for RHEL](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_glibc_rpm.run) from your browser, or run the command:
+1. Donwload the installer. By downloading you are agreeing to the terms of the 🌐 [End User License Agreement](https://www.storj.io/legal/terms-of-use). Click to download the latest version of the 🌐 [self-extracting package for RHEL](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_glibc_rpm.run) from your browser, or run the command:
 
    ```console
    wget https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_glibc_rpm.run

@@ -1,6 +1,7 @@
 ---
 title: Object Mount with Graphics Applications
 hideTitle: true
+docId: GAJUM3rHcSz7ccZc
 metadata:
   title: Object Mount with Graphics Applications
   description:

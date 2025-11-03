@@ -10,7 +10,7 @@ weight: 4
 ---
 
 ## Licenses and activation
-For licensing information, please schedule a [discovery call](https://www.storj.io/landing/get-in-touch).
+For licensing information, please schedule a 🌐 [discovery call](https://www.storj.io/landing/get-in-touch).
 
 ### Interactive
 

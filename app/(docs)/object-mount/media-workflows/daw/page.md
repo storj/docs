@@ -1,6 +1,7 @@
 ---
 title: Object Mount with Digital Audio Workstations
 hideTitle: true
+docId: TVsdxXtLrbzDG9Xw
 metadata:
   title: Object Mount with Digital Audio Workstations (DAWs)
   description:

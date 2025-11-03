@@ -1,6 +1,7 @@
 ---
 title: Object Mount with DaVinci Resolve
 hideTitle: true
+docId: xZ5tdyuyYGM8Lrfp
 metadata:
   title: Object Mount with DaVinci Resolve
   description:

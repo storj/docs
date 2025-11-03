@@ -6,5 +6,7 @@
     "Gbps",
     "markdoc",
     "Storj"
-  ]
+  ],
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false
 }

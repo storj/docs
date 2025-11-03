@@ -1,5 +1,5 @@
 ---
-title: User Guide
+title: Windows User Guide
 hideTitle: true
 docId: khHGfZsyY9NJ2uGK
 redirects:
@@ -14,104 +14,91 @@ hidden: false
 
 # User Guide: Windows Native App
 
-This guide walks you through the core steps to get started with **Object Mount** on Windows &mdash; including activation, adding credentials, and mounting your cloud-based object storage as a local drive.
+This guide walks you through the core steps to get started with **Object Mount** on Windows, including: activation, adding credentials, and mounting your cloud-based object storage as a local drive.
 
-Follow the steps below to launch and activate Object Mount:
 
 ## Step 1. Launch & Activate Object Mount
 
-- Run Object Mount from your Start Menu or Desktop shortcut.
+- Run Object Mount from the Start Menu or Desktop shortcut.
 
 - You will be prompted to enter your Object Mount **License Key**.
-    - _Contact your [Storj representative](https://www.storj.io/landing/get-in-touch) if you need to obtain an Object Mount License Key._
+  - Contact your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch) if you need to obtain an Object Mount License Key.
 
 - Click **Install New License** and paste your Object Mount license key into the text box.
 
 - Click **Activate**.
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-license-key-valid.jpg)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-license-key-valid.jpg)
 
 - If prompted, click **Allow Access** to permit firewall changes.
 
 Once activated, you can view your license key details by clicking the **About** tab in Object Mount.
 
 
-## Step 2.Configure Object Storage Credentials & Create a Mount
+## Step 2. Configure Object Storage Credentials & Create a Mount
 
-Object Mount can connect to object storage from Storj as well as other major cloud storage providers.
+Object Mount can connect to object storage from Storj as well as other major cloud storage providers. Standard S3-compatible credentials from your cloud storage provider are required.
 
-Standard S3-compatible credentials from your cloud storage provider are required.
+### Obtain your Object Storage Credentials
 
-### Obtain your object storage credentials
+See the [](docId:E4NhE5kPdjURRajJ) page in the **User Guides** section.
 
-See the [](docId:E4NhE5kPdjURRajJ) page in the **Concepts & Technical Details** section.
-
-### Enter your object storage credentials and create a mount
+### Enter Your Object Storage Credentials and Create a Mount
 
 There are two easy paths to create a mount:
 - Click **Create New Mount** from the **Mounts** tab
 - Click **Add New Credentials** from the **Credentials** tab 
 
-Both paths achieve identical results and both require your object storage credentials and then allow you to select and configure one or more buckets to mount as a local drive.
+Both paths achieve identical results and both require your object storage credentials. Then you will select and configure one or more buckets to mount as a local drive.
 
 The steps below follow the **Add New Credentials** path:
 
 1. Select the **Credentials** tab in Object Mount.
 
 2. Click the **Add New Credentials** button.
-   - Give the credential set a clear name
-   - Choose your provider tab (e.g.: AWS, Storj, etc.).
-   - Enter the **Access key ID**, **Secret key**, and **Endpoint** (or Region, if applicable) that you obtained.
+    - Give the credential set a clear name
+    - Choose your provider tab (e.g.: Storj, AWS, etc.).
+    - Enter the **Access key ID**, **Secret key**, and **Endpoint** (or Region, if applicable) that you obtained earlier.
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-new-credentials.jpg)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-new-credentials.jpg)
 
-{% callout type="info"  %}
-If you’re provider is not listed, select **Other S3** and choose the provider from the dropdown. Ensure the endpoint is accessible. Some providers may require extra compatibility settings like a defined region.
-{% /callout %}
-
-
-
-**QUESTION: IS THE NOTE BELOW NEEDED???**
-
-
-
-**Note:** For **Storj users**, we recommend using _lexicographically ordered buckets_ for the best listing performance.
+    {% callout type="info"  %}
+    If your provider is not listed, select **Other S3** and choose the provider from the dropdown. Ensure the endpoint is accessible. Some providers may require extra compatibility settings like a defined region.
+    {% /callout %}
 
 3. Click **Next**.
-   - Object Mount will authenticate to your cloud storage provider and attempt to discover any buckets your credentials can access.
+    - Object Mount will authenticate to your cloud storage provider and attempt to discover any buckets your credentials can access.
 
 4. Select **Mount all buckets** or choose one or more specific buckets to create a mount drive for. Click **Next**.
 
 5. Enter a **Display name** for your mount.
+    - Make note of the drive letter that Windows initially assigns to the new mount.
+    - If this drive letter is in use when you enable your mount, you will be prompted to select a new drive letter (see step 8, below).
+    - **Note:** You can also set a **Preferred drive letter** to use under the **Settings** tab.
 
-   - Make note of the drive letter that Windows initially assigns to the new mount.
-   - If this drive letter is in use when you enable a mount, you can select a new drive letter (see step 8, below).
-   - You can also set a **Preferred drive letter** to use under the **Settings** tab.
-
-6. Tick the **Mount as read-only** box if all you need is to browse and copy content. Uncheck the box to enable **full read/write access**.
+6. Tick the **Mount as read-only** box if all you need is to browse and copy content. 
+    - Uncheck the box to enable **full read/write access**.
 
 7. Tick the box to **Enable POSIX metadata** (recommended).
-   - For more details, see the [POSIX Explained](docId:ySneAEd79CVewSSr) page in the **Concepts & Technical Details** section.
+    - For more details, see the [POSIX Explained](docId:ySneAEd79CVewSSr) page in the **User Guides** section.
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-configure-your-mount.jpg)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-configure-your-mount.jpg)
 
 8. Click **Next** to create the mount. Then enable the mount from the **Mounts** tab.
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-enable-your-mount.jpg)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-enable-your-mount.jpg)
 
-   - If the drive letter assigned by Windows is already in use, you will be prompted to select a new drive letter:
+    - If the drive letter assigned by Windows is already in use, you will be prompted to select a new drive letter:
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-drive-assignment.jpg)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-drive-assignment.jpg)
 
-{% callout type="info"  %}
-First-time access to a new mount may take a few moments if the bucket contains many files &mdash; performance improves after the initial mount.
-{% /callout %}
+**Note:** First-time access to a new mount may take a few moments if the bucket contains many files &mdash; performance improves after the initial mount.
 
 Your newly mounted drive will appear on your PC using the assigned drive letter:
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-new-drive-01.jpg)
 
-If there are multiple buckets accessible using the same credential set, those buckets will each appear as separate **Directories** within the single mounted drive letter:
+If there are multiple buckets accessible using the same credential set, those buckets will each appear as separate **folders** within the single mounted drive letter:
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-new-drive-02.jpg)
 
@@ -122,34 +109,34 @@ Object Mount includes a flexible **Settings** panel where you can fine-tune cach
 
 {% callout type="info" %}
 - These settings are global and apply to all mounts.
-- These settings cannot be edited while any mount is active. You must disable all mounts before making changes.
+- These settings cannot be edited while a mount is active. You must disable all mounts before making changes.
 {% /callout %}
 
-Refer to the following sections for details on each setting.
+Refer to the following sections for details on each setting:
 
 ### General
 
 Select a **Preferred drive letter** for Object Mount to use.
 
-**Note:** Currently Object Mount only allows for a single mount to be active at any time. This preferred drive letter will be used for the one, active mount.
+- **Note:** Object Mount only allows for a single mount to be active at any time. This preferred drive letter will be used for that one, active mount.
 
-### Data cache
+### Data Cache
 
-The local **data cache** temporarily stores small portions of accessed files on your local disk &mdash; useful for repeated or random access operations.
+The local **data cache** temporarily stores small portions of accessed cloud files on your local disk &mdash; useful for repeated or random access operations.
 
 - **Location:** The local path where data cache files are stored  
 - **Maximum cache size:** The upper limit (in MB) for total cached data  
   - **Note:** This does *not* delay cloud writes — writing to the cloud happens immediately
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-settings-01.jpg)
+  ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-settings-01.jpg)
 
-{% callout type="info"  %}
-Data Cache Recommendations:
-- Use a fast local drive (SSD or NVMe) for best caching performance.
-- If you are on a high-speed, low-latency network connected to your object storage, you may see improved performance by turning caching _off_.
-{% /callout %}
+  {% callout type="info"  %}
+  Data Cache Recommendations:
+  - Use a fast local drive (SSD or NVMe) for best caching performance.
+  - If you are on a high-speed, low-latency network connected to your object storage, you may see improved performance by turning caching _off_.
+  {% /callout %}
 
-### Metadata cache settings
+### Metadata Cache Settings
 
 Metadata caching helps Object Mount remember file structure, timestamps, and permissions more efficiently.
 
@@ -158,31 +145,26 @@ Metadata caching helps Object Mount remember file structure, timestamps, and per
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-settings-02.jpg)
 
-### Advanced settings
+### Advanced Settings
 
 These options let you further customize Object Mount’s performance and diagnostic behavior.
 
-| **Setting**               | **Description** |
-|---------------------------|-----------------|
-| **S3 connections limit**  | Controls the number of concurrent S3 operations (default: 100) |
-| **Log level**             | Adjusts logging detail. Options: `error`, `warning`, `debug`, or `trace` |
-| **Single threaded mode**  | Runs the filesystem in single-threaded mode (rarely needed; leave `off` unless instructed by Storj Support) |
-| **Debug logging**         | Enables extensive debug output to assist with support issues |
-| **Custom Environment Variables** | Custom variables to modify Object Mount’s behavior, add variables when recommended by Storj Support |
+| **Setting**              | **Description** |
+|--------------------------|-----------------|
+| **S3 connections limit** | Controls the number of concurrent S3 operations (default: 100).
+| **Log level**            | Adjusts logging detail. Options: `error`, `warning`, `debug`, or `trace`.
+| **Single threaded mode** | Runs the filesystem in single-threaded mode (rarely needed; leave `off` unless instructed by Storj Support).
+| **Debug logging**        | Enables extensive debug output to assist with support issues.
+| **Custom Environment Variables** | Custom variables to modify Object Mount’s behavior, add variables when recommended by Storj Support
 
 
 
-
-***QUESTION: DO WE HAVE INFO ON WHAT COLD CACHE ON/OFF DOES??***
+<!-- *** QUESTION: DO WE HAVE INFO ON WHAT COLD CACHE ON/OFF DOES??*** -->
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-settings-03.jpg)
 
-
-
-
-
 {% callout type="info"  %}
-**Log File Location**  
+**Log File Location on Windows:**  
 `C:\Users\%username%\AppData\Local\Object Mount\cunofs.log`
 {% /callout %}
 

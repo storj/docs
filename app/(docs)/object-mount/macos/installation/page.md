@@ -12,36 +12,36 @@ hidden: false
 
 # Installation Guide: macOS Native App
 
-This section covers how to install the Object Mount native application for macOS using a standard `.dmg` file. 
+This section covers how to install the Object Mount native application for macOS using a standard `.dmg` image. 
 
 The steps below work for Macs with either Intel processors or Apple Silicon (M1/M2/M3/M4/M5) chips.
 
 
 ## System Requirements
 
-Before you begin, make sure your system meets the following system requirements:
+Before you begin, make sure your Mac meets the following system requirements:
 
 - macOS 12 Monterey or later
 
-  (Note: macOS 13 Ventura or later for advanced features such as Fast Copy & Fast Move)
+  (Note: macOS 13 Ventura or later required for advanced features such as Fast Copy & Fast Move)
 
 - At least 300MB of free disk space
-- Internet connection for mounting cloud-hosted buckets, or LAN connection for mounting local buckets
+- Internet connection for mounting cloud-hosted buckets, or LAN connection for mounting local S3 buckets
 - macFUSE 4.8.2 or later must be installed (see instructions below)
 
 
-## Step 1: Download the latest Object Mount Installation File
+## Step 1: Download the latest Installation Image
 
 Download the correct macOS `.dmg` disk image file for your system. 
 
-**Note:** Contact your [Storj representative](https://www.storj.io/landing/get-in-touch) if you need access to the most up-to-date disk image.
+**Note:** Contact your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch) if you need access to the most up-to-date disk image.
 
 {% callout type="info" %}
 Be sure to choose the version that matches your chip architecture: 
 - **x86** for Intel processors
 - **arm64** for Apple Silicon/chips (M1-M5).
 
-If you’re unsure which chip you have:
+To determine which chip you have:
 - Click the Apple  menu in the top left  
 - Select **About This Mac**  
 - Look for **Processor** (Intel) or **Chip** (Apple M1, M2, etc.)
@@ -60,94 +60,82 @@ If you’re unsure which chip you have:
 
 The native macOS Object Mount app requires the **macFUSE** system extension. 
 
-macFuse, on both Intel and Apple silicon Macs, provides system-level volume mounting tools that Object Mount benefits from.
+macFuse, on both Intel and Apple silicon Macs, provides system-level volume mounting tools that Object Mount leverages.
 
-To download and install macFUSE, follow the steps below for your Mac hardware type:
+Download and install macFUSE following the steps below for your Mac hardware type:
 
 {% tabs %}
 
 {% tab label="Intel Processor" %}
-    1. Download the **latest** (not pre-release) `.dmg` version from the [macFUSE releases page](https://macfuse.github.io/).
+  1. Download the **latest** version (not pre-release) `.dmg` image from the [macFUSE releases page](https://macfuse.github.io/).
 
-    2. Open the macFUSE `.dmg` and run the **Install macFUSE.pkg**.
+  2. Open the macFUSE `.dmg` and run the **Install macFUSE.pkg**.
+      - As prompted, click **Allow**, **Continue** and/or **Agree** to install the package
 
-    • As prompted, click **Allow**, **Continue** and/or **Agree** to install the package
-
-    3. As a new System Extension, the package will generate a "System Extension Blocked" message.
+  3. As a new System Extension, the package will generate a "System Extension Blocked" message.
     
-    • Open **System Settings**
+      - Open **System Settings**
+      - Open **Security & Privacy**
+      - Click the **lock** 🔒 icon to allow changes
+      - Click the **Allow** button to permit the installation
 
-    • Open **Security & Privacy**
+      ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-macfuse-01.jpg)
 
-    • Click the **lock** 🔒 icon to allow changes
-    
-    • Click the **Allow** button to permit the installation
-
-    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-macfuse-01.jpg)
-
-    4. Restart your Mac when prompted.
+  4. Restart your Mac when prompted.
 {% /tab %}
 
 {% tab label="Apple Silicon (M Chip)" %}
-    1. Download the **latest** (not pre-release) `.dmg` version from the [macFUSE releases page](https://macfuse.github.io/).
+  1. Download the **latest** version (not pre-release) `.dmg` image from the [macFUSE releases page](https://macfuse.github.io/).
 
-    2. Open the macFUSE `.dmg` and run the **Install macFUSE.pkg**.
+  2. Open the macFUSE `.dmg` and run the **Install macFUSE.pkg**.
+      - As prompted, click **Allow**, **Continue** and/or **Agree** to install the package
 
-    • As prompted, click **Allow**, **Continue** and/or **Agree** to install the package
+  3. As a new System Extension, the package will generate a "System Extension Blocked" message.
+      - Open **System Settings**
+      - Open **Privacy & Security**
+      - Scroll down to the **Security** section
+      - Find and click the **Enable System Extensions...** button
 
-    3. As a new System Extension, the package will generate a "System Extension Blocked" message.
-    
-    • Open **System Settings**
+      ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-fuse-install-01-enable.jpg)
 
-    • Open **Privacy & Security**
+  4. You will then be prompted to **Shut Down** and restart your Mac into its **Recovery Mode**
+      -Save any work you have in progress
+      - Click **Shut Down**
 
-    • Scroll down to the **Security** section
+      ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-fuse-install-02-shut-down.jpg)
 
-    • Find and click the **Enable System Extensions...** button
+  5. With your Mac powered off, **PRESS AND HOLD** your power button (or Touch ID button) for 3-5+ seconds.
+      - You should see an Apple message that says **Continue holding for startup options...**
 
-    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-fuse-install-01-enable.jpg)
+      ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-recovery-mode-01-hold.jpg)
 
-    4. You will then be prompted to **Shut Down** and restart your Mac into its **Recovery Mode**
+      - Continue holding the power button until the message changes to **Loading startup options...**
 
-    • Save any work you have in progress
+  6. In the modified boot screen, click the gear icon labeled **Options** then click **Continue**
 
-    • Click **Shut Down**
+      ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-recovery-mode-02-gear.jpg)
 
-    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-fuse-install-02-shut-down.jpg)
+      - Select your admin user, click **Next** and enter your password to view the **Recovery Mode** screen and its menu options
 
-    5. With your Mac powered off, **PRESS AND HOLD** your power button (or Touch ID button) for 3-5+ seconds.
+  7. From the **Recovery** menu, select the **Utilities** drop-down menu and choose **Startup Security Utility** 
 
-    • You should see an Apple message that says **Continue holding for startup options...**
+  8. Select your primary hard drive and click **Unlock...**
 
-    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-recovery-mode-01-hold.jpg)
+      - Enter your Admin password and click **Unlock**
 
-    • Continue holding the power button until the message changes to **Loading startup options...**
+  9. Once unlocked, click the **Security Policy...** button
 
-    6. In the modified boot screen, click the gear icon labeled **Options** then click **Continue**
+  10. Click the **Reduced Security** radio button
 
-    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-recovery-mode-02-gear.jpg)
+      - Then, tick the first box for **Allow user management of kernel extensions from identified developers**
 
-    • Select your admin user, click **Next** and enter your password to view the **Recovery Mode** screen and its menu options
+      ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-recovery-mode-03-reduced-security.jpg)
 
-    7. From the **Recovery** menu, select the **Utilities** drop-down menu and choose **Startup Security Utility** 
+      - Click **OK** and enter your admin password one last time
 
-    8. Select your primary hard drive and click **Unlock...**
+  11. Lastly, from the **Startup Disk** Menu, choose **Shut Down**
 
-    • Enter your Admin password and click **Unlock**
-
-    9. Once unlocked, click the **Security Policy...** button
-
-    10. Click the **Reduced Security** radio button
-
-    • Then, tick the first box for **Allow user management of kernel extensions from identified developers**
-
-    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-recovery-mode-03-reduced-security.jpg)
-
-    • Click **OK** and enter your admin password one last time
-
-    11. Lastly, from the **Startup Disk** Menu, choose **Shut Down**
-
-    Restart your Mac as normal
+  Restart your Mac as normal
 {% /tab %}
 
 {% /tabs %}
@@ -159,4 +147,4 @@ Proceed to the macOS [User Guide](docId:QpBba8p4bMTXAkBK) to activate your Objec
 
 Then review the macOS [Feature Guide](docId:ehHbpq6KFndcVCgc).
 
-Finally, read through usage tips for your specific [media application](docId:JXF4_NLsV@nh9QcT) and workflow.
+Finally, read through usage tips for your specific [media applications](docId:JXF4_NLsV@nh9QcT) and workflows.

@@ -1,12 +1,13 @@
 ---
 title: Windows
+hideTitle: false
 docId: bekoo5aenePoo7Oh
-
+weight: 7
 metadata:
   title: Windows
   description:
     Windows Installation Instructions
-
+hidden: false
 ---
 
 A fully native Windows client is in private beta, with a public beta available soon!

@@ -8,7 +8,7 @@ metadata:
     This guide represents the general process for setting up enforced POSIX access. The specific steps may vary depending on your object storage provider.
 ---
 
-This guide represents the general process for setting up enforced POSIX access. The specific steps may vary depending on your object storage provider. Please contact us at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if this is a use-case that you are interested in and these instructions don't match your expectations or preferences.
+This guide represents the general process for setting up enforced POSIX access. The specific steps may vary depending on your object storage provider. Please contact us at our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if this is a use-case that you are interested in and these instructions don't match your expectations or preferences.
 
 This mode will maintain POSIX metadata for your objects, and will enforce POSIX access controls on those objects. Use this when you want to manage what users have access to based on the UID/GID of their UNIX user and the corresponding POSIX metadata (owner, group, mode) on files.
 
@@ -18,7 +18,7 @@ See [metadata warning](../installation/enforced-posix)
 
 
 {% callout type="note"  %}
-We can also provide a hybrid-approach, which does both client-side access management and server-side access management through ACLs. If you need server-side ACL policies to reflect POSIX access controls, contact us at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).
+We can also provide a hybrid-approach, which does both client-side access management and server-side access management through ACLs. If you need server-side ACL policies to reflect POSIX access controls, contact us at our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).
 {% /callout %}
 
 ## Key steps
@@ -29,17 +29,17 @@ We can also provide a hybrid-approach, which does both client-side access manage
 
 {% callout type="warning"  %}
 The approach given here is not suitable if users have the ability to create their own VMs/instances where they can set any POSIX uid/gid. In that case, consider using server-side IAM roles or ACL lists to enforce access controls, 
-and contacting us at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) for advice on how this integrates with Object Mount.
+and contacting us at our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) for advice on how this integrates with Object Mount.
 {% /callout %}
 
 ## Key considerations
 
-- If multiple machines or locations are being used, it is important that user and group IDs are controlled and consistent across all machines. This is because the POSIX metadata is stored in the object storage, and Object Mount will use the same user and group IDs to present the files on all machines. If you require assistance with managing user and group IDs across multiple machines, contact our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).
+- If multiple machines or locations are being used, it is important that user and group IDs are controlled and consistent across all machines. This is because the POSIX metadata is stored in the object storage, and Object Mount will use the same user and group IDs to present the files on all machines. If you require assistance with managing user and group IDs across multiple machines, contact our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).
 - Independent IAM roles or credentials for each user are not required. The admin credentials are used to set up the mount, and the users are only given access to the mount. If the user has access to object storage credentials with server-side privileges beyond this, then the user can potentially access or modify objects outside of these POSIX access controls.
 - This guide assumes that the bucket to use is empty initially. If you are switching from an ACL-based approach to access management, then you will need to map existing rules to POSIX uids/gids and "apply" those ACLs through POSIX commands like `chown` and `chmod`.
 
 {% callout type="note"  %}
-We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if you need these features.
+We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us at our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if you need these features.
 {% /callout %}
 
 ## How to set up enforced POSIX access
@@ -141,7 +141,7 @@ Change: 2022-03-01 12:00:00.000000000 +0000
 ### Setting inherited permissions on a directory
 
 {% callout type="warning"  %}
-Support for POSIX ACLs is coming soon. If this is a feature you need, please contact us at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).
+Support for POSIX ACLs is coming soon. If this is a feature you need, please contact us at our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).
 {% /callout %}
 
 

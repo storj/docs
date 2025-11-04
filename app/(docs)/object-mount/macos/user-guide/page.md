@@ -1,5 +1,5 @@
 ---
-title: macOS User Guide
+title: User Guide
 hideTitle: true
 docId: QpBba8p4bMTXAkBK
 redirects:

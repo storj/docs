@@ -1,5 +1,5 @@
 ---
-title: Windows User Guide
+title: User Guide
 hideTitle: true
 docId: khHGfZsyY9NJ2uGK
 redirects:

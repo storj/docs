@@ -53,4 +53,4 @@ These deployment modes include:
 
 
 ## Configuring Deployment Modes
-After you have Object Mount for Linux installed and running, read through the detailed configuration and usage guidelines for these deployment modes in the [Configuration Guide: Deployment Modes](docId:jqySXsBfj5WGUjgs) article.
+_After you have installed_ Object Mount for Linux, read through the detailed configuration and usage guidelines for these deployment modes in the [Configuration Guide: Deployment Modes](docId:jqySXsBfj5WGUjgs) article.

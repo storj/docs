@@ -10,13 +10,15 @@ metadata:
 hidden: false
 ---
 
-Many Linux distributions use the GNU Project’s C standard library 🌐 ([glibc](https://en.wikipedia.org/wiki/glibc)). 
+Many Linux distributions use the GNU Project’s C standard library: 🌐 [glibc](https://en.wikipedia.org/wiki/glibc).
 
 Storj’s Object Mount **glibc scripted installer** (a `.run` file) is compatible with all such Linux distributions.
 
 This installer shell script allows you to install Object Mount (for the current user) _without_ needing root privileges &mdash; no `sudo` required.
 
 {% callout type="info" %}
+**Package Installer**
+
 If you prefer a **full installer** for use with package managers (i.e.: Debian, Ubuntu, etc.) refer to the [](docId:aemie9zeiP9Nie2k) installation instructions.
 {% /callout %}
 
@@ -105,26 +107,31 @@ Verify Object Mount is able to run correctly and can connect to publicly accessi
 
 **3a.** Enter Object Mount’s CLI console (aka “cunoFS”):
 
-- From a shell prompt (command line or terminal window) enter the `cuno` command:
-  ```console
+- From a Linux shell prompt enter the `cuno` command:
+  ```
   user:~$ cuno
   ```
 
-- You should see that the `cuno` CLI console interface has been activated:
+- You should see the `(cuno)` CLI prefix to the left of your user prompt. This indicates that a new shell has been launched wrapped in Object Mount’s `cuno` wrapper:
   ```
   user:~$ cuno
   (cuno) user:~$
   ```
 
 {% callout type="info" %}
+**Adding `cuno` to the PATH**
+
 If the Object Mount `cuno` application cannot be found (`cuno: command not found`), add the install location (`/home/<user>/.local/opt/cuno`) to your `$PATH` variable.
 {% /callout %}
 
-- Enter `exit` at any time to close the Object Mount CLI console and return to the shell prompt.
+- Enter `exit` at any time to close the Object Mount CLI console and return to the unwrapped shell prompt.
   ```
   (cuno) user:~$ exit
   user:~$
   ```
+
+<!-- MOVE THIS TO A GLOBAL SECTION:
+
 
 **3b.** `cuno` commands & documentation
 
@@ -135,7 +142,7 @@ Some Object Mount `cuno` commands _must_ be run from a Linux shell prompt:
   CUNO v1.2.8.8 (b08568ca6)
   ```
 
-Other commands must be run from within the `cuno` CLI console interface.
+Other commands _must_ be run from within the `cuno` CLI console interface.
 
 - **From a Linux Shell:** Use `cuno -h` (or `cuno --help`) from a Linux shell to view the **Cuno Documentation** and browse the list of Linux shell `cuno` commands:
 
@@ -166,6 +173,7 @@ Other commands must be run from within the `cuno` CLI console interface.
   case WORD in [PATTERN [| PATTERN]...)>  read [-ers] [-a array] [-d delim] [->
   ```
 
+-->
 
 **3b.** Explore public datasets
 
@@ -173,14 +181,14 @@ Validate that Object Mount can reach Internet-based object storage buckets by li
 
 - View image file listings from the James Webb Space Telescope on AWS S3:
 
-  ```shell
+  ```
   (cuno) $ ls s3://stpubdata/jwst/public/
   ```
 
   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-list-aws-bucket.jpg)
 
-- Browse through satellite images on Google Cloud Storage:
-  ```shell
+- Browse satellite images on Google Cloud Storage:
+  ```
   (cuno) $ ls gs://gcp-public-data-landsat/
   ```
 

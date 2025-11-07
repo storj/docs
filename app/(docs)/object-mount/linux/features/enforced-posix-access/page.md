@@ -1,20 +1,20 @@
 ---
-title: Enabling Enforced POSIX Access
+title: Enabling Enforced POSIX File Access
 hideTitle: false
 docId: Eegoo1teiJ8eerae
 weight: 6
 redirects:
   - /object-mount/linux/getting-started/enforced-posix-access
 metadata:
-  title: Enabling up Enforced POSIX Access
+  title: Enabling up Enforced POSIX File Access
   description:
-    This guide represents the general process for setting up enforced POSIX access. The specific steps may vary depending on your object storage provider.
+    This guide represents the general process for setting up Enforced POSIX File Access. The specific steps may vary depending on your object storage provider.
 hidden: false
 ---
 
-This guide represents the general process for setting up “POSIX Enforced File Access” mode in Object Mount for Linux. 
+This guide represents the general process for setting up “Enforced POSIX File Access” mode in Object Mount for Linux. 
 
-“POSIX Enforced File Access” mode will maintain POSIX metadata for your objects, and will enforce POSIX access controls on those objects. Use this when you want to manage what users have access to based on the UID/GID of their UNIX user and the corresponding POSIX metadata (owner, group, mode) on files.
+“Enforced POSIX File Access” mode will maintain POSIX metadata for your objects, and will enforce POSIX access controls on those objects. Use this when you want to manage what users have access to based on the UID/GID of their UNIX user and the corresponding POSIX metadata (owner, group, mode) on files.
 
 Users will encounter `access denied` errors if they try to read or write to a file/directory they haven't been given permission to (by a suitably privileged user doing `chown`, `chgrp` or `chmod`). Note that this is client-side rather than server-side enforcement, and is not enforced using server-side IAM roles or ACL lists.
 

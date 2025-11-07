@@ -54,7 +54,7 @@ Once you have your installation download link and your Object Mount license key,
 
 **Other? Not sure?** 
 
-Most Linux distributions use either the GNU Project’s C standard library 🌐 ([glibc](https://en.wikipedia.org/wiki/glibc)) or the 🌐 [musl](https://en.wikipedia.org/wiki/musl) C standard library. 
+Most Linux distributions use either the GNU Project’s C standard library 🌐 [glibc](https://en.wikipedia.org/wiki/glibc) or the 🌐 [musl](https://en.wikipedia.org/wiki/musl) C standard library. 
 
 Check your distribution, then follow instructions for either our [glibc scripted installer](docId:ahWohd5eegh6eizi) or our [musl scripted installer](docId:ao0yaeng2Aitheel).
 

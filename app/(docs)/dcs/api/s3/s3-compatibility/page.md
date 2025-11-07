@@ -145,7 +145,7 @@ This is currently supported in Gateway-MT only.
 Specifies the region (or tier) where the object data for a bucket is stored.
 
 {% callout type="info" %}
-Buckets in projects created **before November 1, 2025** use legacy constraints (`global`, `us-select-1`) unless they are migrated to the new tiers.
+Buckets in projects created **before November 1, 2025** use legacy constraints (`global`, `us-select-1`).
 
 For more information:
 - [Tiered Pricing](docId:mqRRgT,hL*dk3zNT)

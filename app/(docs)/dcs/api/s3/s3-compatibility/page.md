@@ -137,12 +137,23 @@ This is currently supported in Gateway-MT only.
 
 #### LocationConstraint
 
-Specifies the placement region where the object data for a bucket is stored:
+Specifies the region (or tier) where the object data for a bucket is stored.
 
-|     Value     |                                                        Description                                                        |
-| :-----------: | :-----------------------------------------------------------------------------------------------------------------------: |
-|   `global`    |                                  Stored on nodes connected to the global public network                                   |
-| `us-select-1` | Stored on infrastructure located in SOC 2 Type 2 certified facilities located in the continental United States of America |
+{% callout type="info" %}
+Buckets in projects created **before November 1, 2025** use legacy constraints (`global`, `us-select-1`) unless they are migrated to the new tiers.
+
+For more information:
+- [Tiered Pricing](docId:mqRRgT,hL*dk3zNT)
+- [Legacy Pricing](docId:x3xPZJXCp!CB@spN)
+{% /callout %}
+
+| Region | Description | Location Constraint |
+| :-- | :-- | :-- |
+| **Global Collaboration** | Globally distributed placement optimized for worldwide team access and consistent performance. Ideal for multi-region workflows and active collaboration. | `global-1` |
+| **Regional Workflows – US** | Region-specific storage confined to SOC 2 Type 2 certified facilities in the United States. Ensures data residency, compliance, and predictable performance. Successor to the legacy `us-select-1` region. | `regional-1` |
+| **Active Archive** | Cost-effective **global** storage tier for long-term retention and backup. Provides instant access without paying for peak performance. Successor to the legacy `global` region. | `archive-1` |
+| **Global** {% tag variant="small" color="zinc" %}(Legacy){% /tag %} | Legacy globally distributed storage tier. Replaced by **Active Archive**. | `global` |
+| **US Select** {% tag variant="small" color="zinc" %}(Legacy){% /tag %} | Legacy US-only storage tier hosted in SOC 2 Type 2 compliant facilities. Replaced by **Regional Workflows – US**. | `us-select-1` |
 
 #### Partial compatibility
 

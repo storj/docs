@@ -10,7 +10,7 @@ metadata:
 hidden: false    
 ---
 
-# Overview
+Welcome to the Storj Object Mount Documentation!
 
 Storj’s Object Mount makes working with object storage as fast and seamless as using a local drive.
 

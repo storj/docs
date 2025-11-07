@@ -3,6 +3,8 @@ title: Core Concepts
 hideTitle: false
 docId: xzAqS9Um7xjQSbmD
 weight: 1
+redirects:
+  - /object-mount/linux/user-guides/core-concepts
 metadata:
   title: Core Concepts
   description:

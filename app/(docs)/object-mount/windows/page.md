@@ -12,7 +12,7 @@ hidden: false
 
 # Windows Installation and Usage
 
-This section contains everything you need to install and use the native **Object Mount** app on Windows.
+This section contains everything you need to install and use the native **Object Mount** app on Microsoft Windows.
 
 Whether you’re setting up a single workstation or deploying across a team, these pages will walk you through the key steps for installation, configuration, and daily use with cloud storage.
 

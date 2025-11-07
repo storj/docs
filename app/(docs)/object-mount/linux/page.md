@@ -12,17 +12,17 @@ hidden: false
 
 # Linux Installation and Usage
 
-This section contains everything you need to install and use **Object Mount** on Linux.
+This section contains everything you need to understand, install and use **Object Mount** on a Linux machine.
 
 Whether you’re setting up for creative workflows, remote storage access, or team-based collaboration, these pages will walk you through installation, setup, and day-to-day use.
 
-## OS Version Differences
+## Object Mount: OS Version Differences
 
 Storj’s **Object Mount for Linux** retains much of its original look and feel from its **cunoFS** heritage.
 
-You will encounter many `cunu`-related commands, settings, and custom variables through your configuration and daily use of Object Mount for Linux. 
+You will encounter many `cunu`-related commands, settings, and custom variables throughout your configuration and daily use of Object Mount for Linux. 
 
-This is in contrast to the Graphical User Interface (GUI) experience Object Mount presents to Windows and macOS.
+This is in contrast to the Graphical User Interface (GUI) experience that Object Mount presents to Windows and macOS users.
 
 Other OS differences include:
 
@@ -36,7 +36,7 @@ Other OS differences include:
 
 ## What’s Covered
 
-The many guides in this Linux section will dive deep into installing, configuring, and using Object Mount on multiple flavors of Linux &mdash; navigate to what you need when you need it!
+The many guides in this Linux section will cover the installation, configuration, and use of Object Mount on multiple flavors of Linux &mdash; navigate to what you need when you need it!
 
 Object Mount’s Linux-specific content includes: 
 - Getting Started Guides
@@ -48,42 +48,46 @@ Click below to access the content you are looking for:
 
 ### Getting Started Guides
 
-View the [Getting Started Guides]() to understand the breadth of capabilities and options for using Object Mount and its various deployment modes in your environment, including:
-- Topic 1
-- Topic 2
-- Topic 3
-- Topic 4
+Prior to installing, view the [Getting Started Guides](docId:xhNvtETAA6UBZVNH) pages to better understand the capabilities, options, and deployment choices available for Object Mount for Linux. 
+
+Topics include:
+  - Deployment Modes
+  - POSIX Options
+  - Topic 3
+  - Topic 4
 
 ### Installation Guides
 
-View the [Installation Guides](docId:iethahkeeX5EiJoh) for multiple Linux variants, including:
+When ready to install, view the [Installation Guides](docId:iethahkeeX5EiJoh) for your particular Linux variant, including:
   - Alpine
   - Debian & Ubuntu
   - Red Hat
   - RHEL & CentOS
   - glibc (standard C library)
-  - musl(standard C library)
-  - Windows - Windows Subsystem for Linux (WSL)
-  - macOS - Linux within containers
+  - musl (standard C library)
+  - Windows - via Windows Subsystem for Linux (WSL)
+  - macOS - via Linux within containers
 
-### User Guides
+### Configuration and User Guides
 
-Read through [Usage Guides] covering<<NEED LINK>>:
-  - concept 1
-  - concept 2
-  - concept 3
+After installation, read through the [Configuration Guides](docId:ohs0ailohSh0Vie3) to learn more about using and configuring Object Mount for Linux:
+  - Concept 1
+  - Concept 2
+  - Concept 3
 
 ### Linux Feature Guides
 
-Review advanced, Linux-specific Object Mount features and tools, including:
-  - Advanced POSIX Mode features <<ADD LINK>>
-  - Object Mount Fusion <<ADD LINK>>
-  - Linux Profile Mode <<ADD LINK>>
+Once you are up and running, explore the Linux [Feature Guides](docId:GeWpcQTuVpL6d3wU) for advanced, Linux-specific configuration tips to fine-tune your deployment, improve Object Mount’s performance and increase your productivity. 
+
+Topics include:
+  - Advanced POSIX Mode features
+  - Object Mount Fusion
+  - Linux Profile Mode
 
 
 ## Additional Global Reference Material
 
-One your Linux deployment of Object Mount is up and running, there are several **Global Topics** and **Media Application Guides** that you can reference, including:
+Once your Linux deployment of Object Mount is up and running, there are several **Global Topics** and **Media Application Guides** that you can reference, including:
 
 **Global Features:**
 
@@ -91,7 +95,7 @@ Features that apply to all operating systems (macOS, Windows, Linux)
 
 These global features are defined and explained in more detail for all users
 
-  - <<LINK NEEDED>>
+  - <<LINKS NEEDED>>
 
 **Media Application & Workflow Guides:**
 

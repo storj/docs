@@ -1,14 +1,21 @@
 ---
-title: Linux User Guides
+title: Configuration Guides
 hideTitle: false
 docId: ohs0ailohSh0Vie3
 weight: 3
 metadata:
-  title: User Guides
+  title: Configuration Guides
   description:
     User Guides Overview
 hidden: false
 ---
+
+Once Object Mount for Linux is installed and running on your computer, browse through these Linux **Configuration Guides** to understand additional usage and configuration settings.
+
+Topics include:
+- Configuring Deployment Modes
+- 
+
 
 Access credentials can also be optionally managed by Object Mount.
 

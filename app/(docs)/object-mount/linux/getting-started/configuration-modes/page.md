@@ -9,13 +9,6 @@ metadata:
 ---
 ## Overview
 
-Each time you set up Object Mount in a new compute environment, you will need to assess the requirements of your workloads and your end goals.
-
-By default, Object Mount is configured for core object storage access in a LAN setting. If you have one of the following specialized use cases, follow the relevant quick start guide:
-
-- High-performance attached storage upgrade (EFS upgrade): [Object Mount Fusion](../getting-started/object-mount-fusion)
-- Strict POSIX-controlled access to object storage: [Enforced Posix Access](../getting-started/enforced-posix-access)
-
 ### Which mode is for me?
 
 When configuring Object Mount, it is important to understand the needs of the tools and workloads you wish to run. 

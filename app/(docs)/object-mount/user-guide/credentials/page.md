@@ -10,7 +10,7 @@ metadata:
 hidden: false
 ---
 
-Object Mount can connect to Storj’s Distributed Cloud Storage, or to other major S3-compatible cloud storage providers.
+Object Mount can connect to Storj’s Distributed Cloud Storage as well as other major S3-compatible cloud storage providers.
 
 You will need to create and/or obtain credentials from your provider and configure Object Mount with those credentials. 
 
@@ -27,14 +27,34 @@ You will need to obtain the following three items from your provider:
 | **Access Key Secret** | Example: vMxJBmUxxxxxxxxxxxxxxxxxxxxxxxxxK4kKvwJnw8PwKpj4PmNvL
 | **Endpoint**          | An accessible IP address or domain/subdomain to use as an endpoint. Example: https://gateway.storjshare.io
 
-**Note:** The credentials you obtain need to have sufficient permissions in order for Object Mount to discover and manage your data. This needs to include permission to list buckets. If this is not possible (or desired), you can use `cuno creds pair` options (See: << LINK TO BE ADDED >>).
+{% callout type="info" %}
+The credentials you obtain need to have sufficient permissions in order for Object Mount to discover and manage your data. This needs to include permission to list buckets. If this is not possible (or desired), you can use `cuno creds pair` options (See: << LINK TO BE ADDED >>).
+{% /callout %}
 
-Select the tab below that corresponds to your S3 storage provider:
+For instructions on how to create and/or obtain your S3 credentials, select the tab below that corresponds to your S3 storage provider:
 
 {% tabs %}
 
+{% tab label="AWS S3" %}
+  **Amazon Web Services**
+  
+  **AWS EC2 with IAM:**
+  
+  If you are accessing S3 buckets through an Amazon AWS EC2 instance configured with an IAM role, no further configuration is needed and Object Mount will automatically authenticate using the AWS-managed configuration.
+    
+  **Using Credentials:**
+
+  You will need the Access Key ID and Access Key Secret for an AWS **IAM user** with permission to access your S3 buckets. These credentials would need to have been saved when the IAM user was first created.
+
+  **Creating New Credentials**
+
+  Alternatively, create a new IAM user with “programmatic access” (access using keys), by following the AWS User Guide: 🌐 [Creating an IAM user in your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)`.
+
+  For further options and alternatives, consult our full guide on [accessing S3 object storage](../user-guides/credentials#amazon-web-services-s3).
+{% /tab %}
+
 {% tab label="Storj" %}
-  **Storj**
+  **Storj Object Storage**
   
   **Creating New Storj Credentials:**
   
@@ -67,24 +87,6 @@ Select the tab below that corresponds to your S3 storage provider:
       **Note:** This saved text file is _not_ in the correct format for importing into Object Mount for Linux. See below for details on creating a credential file with the _correct_ syntax.
 {% /tab %}
 
-{% tab label="AWS S3" %}
-  **Amazon Web Services**
-  
-  **AWS EC2 with IAM:**
-  
-  If you are accessing S3 buckets through an Amazon AWS EC2 instance configured with an IAM role, no further configuration is needed and Object Mount will automatically authenticate using the AWS-managed configuration.
-    
-  **Using Credentials:**
-
-  You will need the Access Key ID and Access Key Secret for an AWS **IAM user** with permission to access your S3 buckets. These credentials would need to have been saved when the IAM user was first created.
-
-  **Creating New Credentials**
-
-  Alternatively, create a new IAM user with “programmatic access” (access using keys), by following the AWS User Guide: 🌐 [Creating an IAM user in your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)`.
-
-  For further options and alternatives, consult our full guide on [accessing S3 object storage](../user-guides/credentials#amazon-web-services-s3).
-{% /tab %}
-
 {% tab label="Microsoft Azure" %}
   **Microsoft Azure**
   
@@ -108,6 +110,8 @@ Select the tab below that corresponds to your S3 storage provider:
 {% /tab %}
 
 {% tab label="Other S3-Compatible" %}
+  **S3-Compatible Providers**
+  
   Consult your object storage solution’s documentation to find out how to retrieve credentials for authentication using S3 APIs. 
 
   You will need an **Access Key ID**, an **Access Key Secret**, and an accessible IP address/URL or domain/subdomain to use as an **endpoint**.
@@ -116,46 +120,31 @@ Select the tab below that corresponds to your S3 storage provider:
 {% /tabs %}
 
 
-## Saving Your S3 Credentials
+## Using & Saving Your S3 Credentials
 
-Depending on your S3 storage platform, you may only be able to copy and save your access credentials _at the time you create them_. 
-
-- For increased security, displaying previously generated credentials may not be an option. 
+Depending on your S3 storage platform, you may only be able to see, copy, and save your access credentials _at the time you create them_. (For increased security, some platforms prevent the display of previously generated credentials.) 
 
 Therefore, be sure to copy and record your Access Key ID and Access Key Secret at the time you create them.
 
-**Object Mount for Windows and macOS**
+**Entering Credentials: Object Mount for Windows and macOS**
 
-When activating Object Mount in **Windows** and **macOS**, you will need to copy & paste these keys into the application’s UI.
+When activating Object Mount in **Windows** and **macOS**, you will need to copy & paste these keys into the application’s GUI interface.
 
-**Object Mount for Linux**
+**Entering Credentials: Object Mount for Linux**
 
-For **Linux** activation, you can also save these keys to a text file to be imported.
+For **Linux** Object Mount activation, you can copy/paste your your credentials, or you can import them from a previously saved text file.
+
+See below for instructions (and the syntax required) to save you credentials to a text file to be used for import:
 
 ### Saving Credentials as a File
 
 A credential file can be used to import your S3 credentials when activating a mount in Object Mount for Linux. 
 
-Credential files are `plain-text` and must comply with specific format for each cloud provider.
+Credential files are `plain-text` and must comply with the proper format defined for your specific cloud provider.
 
-Select your S3 provider below for details on syntax and variable naming:
+Select your S3 storage provider below for details on syntax and variable naming:
 
 {% tabs %}
-
-{% tab label="Storj" %}
-  **Storj**
-
-  Storj’s object storage is S3-compatible.
-  
-  Therefore the syntax used for storing Storj credentials uses the same as for AWS S3:
-
-  ```
-  aws_access_key_id = <access_key_id>
-  aws_secret_access_key = <secret_access_key>
-  region = <region>
-  ```
-
-{% /tab %}
 
 {% tab label="AWS S3" %}
   **Amazon Web Services**
@@ -177,10 +166,24 @@ Select your S3 provider below for details on syntax and variable naming:
   Object Mount can also use an **AWS S3 Access Point** instead of a container (see [](docId:jieteeYeyievui9k) for more details).
 {% /tab %}
 
+{% tab label="Storj" %}
+  **Storj Object Storage**
+
+  Storj’s object storage is S3-compatible.
+  
+  Therefore, the syntax used for storing Storj credentials mimics the format used for AWS S3 storage:
+
+  ```
+  aws_access_key_id = <access_key_id>
+  aws_secret_access_key = <access_key_secret>
+  region = <endpoint>
+  ```
+{% /tab %}
+
 {% tab label="Microsoft Azure" %}
   **Microsoft Azure**
 
-  For Microsoft’s Azure cloud storage, the credential file should conform to the following:
+  For Microsoft’s Azure cloud storage, the credential file should conform to the following format:
 
   ```
   AZURE_STORAGE_ACCOUNT= xxxxxxxxxxxxxxxxxx
@@ -193,9 +196,9 @@ Select your S3 provider below for details on syntax and variable naming:
 {% tab label="Google Cloud" %}
   **Google Cloud Platform**
   
-  If you have an existing JSON/P12 (PCKS#12) file &mdash;  that file is formatted correctly and will work.
+  If you have an existing JSON/P12 (PCKS#12) file &mdash;  that file is formatted correctly and will import properly.
 
-  If you provided your own private key when creating the service account, you will need to create a JSON file which conforms to the following:
+  If you provided your own private key when creating the service account, you will need to create a JSON file which conforms to the following format:
 
   ```
   {
@@ -225,7 +228,7 @@ Select your S3 provider below for details on syntax and variable naming:
 {% /tabs %}
 
 
-For additional details and options on _endpoint_ formatting, consult the full user guide section for [Authenticating with S3-compatible solutions](../user-guides/credentials#s3-compatible-solutions).
+**Note:** For additional details and options on _endpoint_ formatting, consult the user guide section for [Authenticating with S3-compatible solutions](../user-guides/credentials#s3-compatible-solutions).
 
 
 ## Securing Your S3 Credentials
@@ -240,7 +243,7 @@ chmod 0600 "<path to your credentials file>"
 {% callout type="info" %}
   **Time Saving Tip**
 
-  You can combine the creation of the file and modifying the permissions in a single shell command (insert your credential information):
+  You can combine the creation of the file and securing permissions on the file in a single shell command (insert your credential details):
   
   ```shell
   #terminal
@@ -248,13 +251,3 @@ chmod 0600 "<path to your credentials file>"
   ```
 {% /callout %}
 
-
-## Next Steps
-
-Once you have obtained your S3 credentials, you may be ready to install Object Mount!
-
-Choose your operating system below for Installation Guides, User References and Feature Details:
-
-- [macOS](docId:apog2ij9jk6f) Installation and Usage
-- [Windows](docId:TSMB5yXSc4FcqwXj) Installation and Usage
-- [Linux](docId:wxtofwqcb5f2) Installation and Usage

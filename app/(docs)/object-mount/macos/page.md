@@ -12,7 +12,7 @@ hidden: false
 
 # macOS Installation and Usage
 
-This section contains everything you need to install and use the native **Object Mount** app on a Mac.
+This section contains everything you need to install and use the native **Object Mount** app on an Apple Mac.
 
 Whether you’re setting up for creative workflows, remote storage access, or team-based collaboration, these pages will walk you through installation, configuration and day-to-day use.
 

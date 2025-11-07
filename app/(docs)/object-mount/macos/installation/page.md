@@ -37,7 +37,9 @@ Download the correct macOS `.dmg` disk image file for your system.
 **Note:** Contact your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch) if you need access to the most up-to-date disk image.
 
 {% callout type="info" %}
-Be sure to choose the version that matches your chip architecture: 
+**Mac Chip Types**
+
+Be sure to choose the installer version that matches your chip architecture: 
 - **x86** for Intel processors
 - **arm64** for Apple Silicon/chips (M1-M5).
 
@@ -53,7 +55,7 @@ To determine which chip you have:
 1. Double-click the `.dmg` file to mount it  
 2. Drag the Object Mount app into your **Applications** folder
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/on-mac-drag-to-install.jpg)
+    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/on-mac-drag-to-install.jpg)
 
 
 ## Step 3: Install macFUSE (Required)
@@ -135,7 +137,7 @@ Download and install macFUSE following the steps below for your Mac hardware typ
 
   11. Lastly, from the **Startup Disk** Menu, choose **Shut Down**
 
-  Restart your Mac as normal
+  Restart your Mac as normal.
 {% /tab %}
 
 {% /tabs %}
@@ -147,4 +149,4 @@ Proceed to the macOS [User Guide](docId:QpBba8p4bMTXAkBK) to activate your Objec
 
 Then review the macOS [Feature Guide](docId:ehHbpq6KFndcVCgc).
 
-Finally, read through usage tips for your specific [media applications](docId:JXF4_NLsV@nh9QcT) and workflows.
+Finally, read through the usage tips for your specific [media applications](docId:JXF4_NLsV@nh9QcT) and workflows.

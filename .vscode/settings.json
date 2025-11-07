@@ -3,8 +3,11 @@
     "*.md": "markdoc"
   },
   "cSpell.words": [
+    "cuno",
     "Gbps",
     "markdoc",
+    "mdash",
+    "posix",
     "Storj"
   ],
   "editor.tabSize": 2,

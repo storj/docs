@@ -35,15 +35,15 @@ Download the latest Object Mount `.exe` installer program.
 
 **Note:** Administrative permissions are required to install some of the Object Mount components.
 
-1. Double-click the setup `.exe` program to start the installation
+1. Double-click the setup `.exe` program to start the installation.
 
-2. Follow the prompts to complete the installation process
+2. Follow the prompts to complete the installation process.
 
 
 ## Next Steps
 
 Proceed to the Windows [User Guide](docId:khHGfZsyY9NJ2uGK) to activate your Object Mount installation, configure your object storage credentials, and create your first mount.
 
-Then review the Windows [Feature Guide](docId:xMKcaWrTVK6QMD8h).
+Then review the Windows OS-specific [Feature Guide](docId:xMKcaWrTVK6QMD8h).
 
 Finally, read through usage tips for your specific [media application](docId:JXF4_NLsV@nh9QcT) and workflows.

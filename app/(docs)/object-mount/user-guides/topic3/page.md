@@ -1,7 +1,7 @@
 ---
-title: Topic 3 - SOON!
+title: Next Topic (TO BE ADDED)
 hideTitle: false
-#docId: 
+#docId: TBA
 weight: 5
 metadata:
   title: Topic to be added
@@ -10,6 +10,6 @@ metadata:
 hidden: false
 ---
 
-## Topic 3
+## Topic NEXT
 
 To be added ...

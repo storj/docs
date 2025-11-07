@@ -121,6 +121,11 @@ Full compatibility means that we support all features of a specific action
 except for features that rely on other actions that we haven't fully
 implemented.
 
+#### Partial compatibility
+
+Partial compatibility means that we don't support all features of a specific
+action (see Caveats column).
+
 ### Bucket Logging
 
 Bucket Logging is available upon request. Please refer to [](docId:0191fc71-e031-761c-a16b-aa8ca9e44413).
@@ -154,11 +159,6 @@ For more information:
 | **Active Archive** | Cost-effective **global** storage tier for long-term retention and backup. Provides instant access without paying for peak performance. Successor to the legacy `global` region. | `archive-1` |
 | **Global** {% tag variant="small" color="zinc" %}(Legacy){% /tag %} | Legacy globally distributed storage tier. Replaced by **Active Archive**. | `global` |
 | **US Select** {% tag variant="small" color="zinc" %}(Legacy){% /tag %} | Legacy US-only storage tier hosted in SOC 2 Type 2 compliant facilities. Replaced by **Regional Workflows – US**. | `us-select-1` |
-
-#### Partial compatibility
-
-Partial compatibility means that we don't support all features of a specific
-action (see Caveats column).
 
 ### ListObjects
 

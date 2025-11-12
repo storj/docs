@@ -1,6 +1,7 @@
 ---
 title: Object Mount with Final Cut Pro
 hideTitle: true
+docId: EwuncnHAbXKa7q8h
 metadata:
   title: Object Mount with Final Cut Pro
   description:

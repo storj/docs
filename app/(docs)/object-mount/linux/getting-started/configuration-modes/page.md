@@ -1,5 +1,5 @@
 ---
-title: Configure Object Mount
+title: ORIG-Configure Object Mount
 docId: hoeSh4ieSh6Ees9v
 weight: 3
 metadata:
@@ -8,13 +8,6 @@ metadata:
     Each time you set up Object Mount in a new compute environment, you will need to assess the requirements of your workloads and your end goals.
 ---
 ## Overview
-
-Each time you set up Object Mount in a new compute environment, you will need to assess the requirements of your workloads and your end goals.
-
-By default, Object Mount is configured for core object storage access in a LAN setting. If you have one of the following specialized use cases, follow the relevant quick start guide:
-
-- High-performance attached storage upgrade (EFS upgrade): [Object Mount Fusion](../getting-started/object-mount-fusion)
-- Strict POSIX-controlled access to object storage: [Enforced Posix Access](../getting-started/enforced-posix-access)
 
 ### Which mode is for me?
 
@@ -74,7 +67,7 @@ See [enforced posix](../installation/enforced-posix).
 - Use this if you’re moving workflows from POSIX to object storage, such as workloads that were previously run on EC2 with EFS.
 
 {% callout type="note"  %}
-We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us via our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if you need these features.
+We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us via our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if you need these features.
 {% /callout %}
 
 #### How to enable
@@ -91,7 +84,7 @@ See [enforced posix](../installation/enforced-posix)
 - Host an organisation's user filesystem in the cloud.
 
 {% callout type="note"  %}
-We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if you need these features.
+We don't currently support POSIX ACLs or extended attributes on the cloud. Please get in contact with us at our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if you need these features.
 {% /callout %}
 
 #### How to enable
@@ -128,5 +121,5 @@ If this is the case, consider:
 
 {% callout type="note"  %}
 Client-side caching on disk for workloads requiring many reads of the same data, such as video editing, is coming soon.
-Follow along [here](https://www.storj.io/fuse-filesystem).
+Follow along 🌐 [here](https://www.storj.io/fuse-filesystem).
 {% /callout %}

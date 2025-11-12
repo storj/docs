@@ -1,11 +1,13 @@
 ---
 title: Object Mount in Media Workflows
 hideTitle: true
-weight: 1
+docId: JXF4_NLsV@nh9QcT
+weight: 6
 metadata:
   title: Object Mount in Media Workflows
   description:
     Overview of using Object Mount with creative tools like DaVinci Resolve and Adobe Premiere Pro
+hidden: false
 ---
 
 # Object Mount in Media Workflows

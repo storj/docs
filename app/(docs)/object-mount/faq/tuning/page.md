@@ -124,6 +124,6 @@ Each storage backend behaves slightly differently depending on API responsivenes
 
 Need help tuning for a specific workflow, app, or storage provider?
 
-Reach out via our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) and our team will be happy to assist.
+Reach out via our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) and our team will be happy to assist.
 
 ---

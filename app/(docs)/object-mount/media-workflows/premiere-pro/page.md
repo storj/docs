@@ -1,6 +1,7 @@
 ---
 title: Object Mount with Premiere Pro
 hideTitle: true
+docId: fdz5QyWwRqaDFYS9
 metadata:
   title: Object Mount with Premiere pro
   description:

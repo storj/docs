@@ -1,6 +1,7 @@
 ---
 title: Object Mount with Avid Media Composer
 hideTitle: true
+docId: eSTEd9V5JbexxYDQ
 metadata:
   title: Object Mount with Avid Media Composer
   description:

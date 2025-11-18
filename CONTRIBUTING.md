@@ -36,7 +36,12 @@ The front matter is a section at the beginning of each Markdown file (page.md) t
 
 **title:** The title of the article or page. This is typically displayed at the top of the page.
 
-**docId:** A unique identifier for the document. This can be used for internal tracking and linking. See [Internal Linking](/CONTRIBUTING.md#internal-linking). If you're making a new page, generate a new unique ID with `pwgen -1 16` or something similar. 
+**docId:** A unique identifier for the document. This can be used for internal tracking and linking. See [Internal Linking](/CONTRIBUTING.md#internal-linking). If you're making a new page, generate a new unique ID with `pwgen -1 16` or something similar.
+
+`docid` Recommendations:
+- Online password generators such as [https://pwgen.io/](https://pwgen.io/) work well.
+- A length of 16 characters is preferred
+- Avoid special characters or symbols. Use only UPPER, lower and numbers (0-9).
 
 **redirects:** A list of URLs that should redirect to this page. This is useful for maintaining links when a page's URL changes or for creating aliases for a page.
 

@@ -1,5 +1,5 @@
 ---
-title: Linux Profile Mode (CUNO_PROFILE)
+title: ORIG-Linux Profile Mode (CUNO_PROFILE)
 docId: linux-profile-mode
 hideTitle: true
 weight: 9
@@ -105,5 +105,5 @@ Choosing the right `CUNO_PROFILE` ensures Object Mount behaves appropriately for
 - Use `hpc` for background, server, or scripted automation
 
 {% callout type="info" %}
-Still unsure which profile to use? [Reach out to our support team](https://supportdcs.storj.io/hc/en-us/requests/new) and we’ll help you pick the right configuration.
+Still unsure which profile to use? 🌐 [Reach out to our support team](https://supportdcs.storj.io/hc/en-us/requests/new) and we’ll help you pick the right configuration.
 {% /callout %}

@@ -15,13 +15,27 @@ redirects:
 weight: 1
 ---
 
-Storj is the leading provider of enterprise-grade, globally distributed cloud object storage.
+Storj is the leading provider of enterprise-grade, globally distributed cloud object storage that delivers default multi-region CDN-like performance with zero-trust security at a [cost that's 80%](docId:59T_2l7c1rvZVhI8p91VX) lower than AWS S3.
 
-It is a drop-in replacement for any S3-compatible object storage that is just as durable but with 99.95% availability and better global performance from a single upload.
+## What you'll build
 
-Storj delivers default multi-region CDN-like performance with zero-trust security at a [cost that’s 80%](docId:59T_2l7c1rvZVhI8p91VX) lower than AWS S3.
+In this tutorial, you'll complete your first complete storage workflow with Storj. By the end, you'll have:
 
-## Before you begin
+- Generated S3-compatible credentials for secure access
+- Installed and configured command-line tools (rclone or AWS CLI)
+- Created your first bucket for file storage
+- Uploaded, downloaded, listed, and deleted files
+- Managed bucket operations including cleanup
+
+**Expected time to complete**: 15-20 minutes
+
+## Prerequisites
+
+Before you begin, you'll need:
+
+- A computer with internet access and terminal/command line access
+- Administrative privileges to install software on your system
+- Basic familiarity with command-line operations
 
 To get started, create an account with Storj. You'll automatically begin a free trial that gives you access to try our storage with your [third-party tool](docId:REPde_t8MJMDaE2BU8RfQ) or project.
 
@@ -38,11 +52,13 @@ If you already have a Storj account, log in to get started
 {% /quick-link %}
 {% /quick-links %}
 
-## Generate S3 compatible credentials
+## Step 1: Generate S3 compatible credentials
 
 {% partial file="s3-credentials.md" /%}
 
-## Install command-line tools
+**Expected outcome**: You should now have an Access Key ID and Secret Access Key that will allow your applications to authenticate with Storj.
+
+## Step 2: Install command-line tools
 
 Storj works with a variety command-line tools. Rclone is recommended for its compatibility with various cloud providers and ease of use.
 
@@ -121,7 +137,9 @@ However, some may already be familiar with AWS CLI which is also a suitable opti
 {% /tab %}
 {% /tabs %}
 
-## Create a bucket
+**Expected outcome**: Your command-line tool should now be configured to authenticate with Storj using your credentials.
+
+## Step 3: Create a bucket
 
 Now that the command-line tool is configured, let's make a bucket to store our files.
 
@@ -140,7 +158,9 @@ aws s3 --endpoint-url=https://gateway.storjshare.io mb s3://my-bucket
 
 {% /code-group %}
 
-## List buckets
+**Expected outcome**: You've successfully created a bucket named "my-bucket" that's ready to store files.
+
+## Step 4: List buckets
 
 The bucket will show up in our bucket list (not to be mistaken with a life's to-do list)
 
@@ -164,7 +184,9 @@ aws s3 --endpoint-url=https://gateway.storjshare.io ls s3://
 
 {% /code-group %}
 
-## Upload file
+**Expected outcome**: You should see "my-bucket/" listed, confirming your bucket was created successfully.
+
+## Step 5: Upload file
 
 Next we'll upload a file. Here is an example image of a tree growing hard drives (while Storj doesn't grow hard drives on trees, it does emphasize [sustainability](https://www.storj.io/benefits/sustainability)). Right-click on it and save as `storj-tree.png` to your Downloads.
 
@@ -197,7 +219,9 @@ upload: Downloads/storj-tree.png to s3://my-bucket/storj-tree.png
 
 {% /tabs %}
 
-## Download file
+**Expected outcome**: The file has been successfully uploaded to your bucket. You should see output confirming the upload completed.
+
+## Step 6: Download file
 
 To retrieve the file, use the same command as upload but reverse the order of the arguments
 
@@ -223,7 +247,9 @@ aws s3 --endpoint-url=https://gateway.storjshare.io cp s3://my-bucket/ ~/Downloa
 
 {% /tabs %}
 
-## List files
+**Expected outcome**: The file should be downloaded to your local machine. Check your Downloads folder to confirm the file was retrieved successfully.
+
+## Step 7: List files
 
 Let's see what files we have in the bucket.
 
@@ -247,9 +273,9 @@ aws s3 --endpoint-url=https://gateway.storjshare.io ls s3://my-bucket
 
 {% /code-group %}
 
-Yep there's the Storj tree!
+**Expected outcome**: You should see your uploaded file listed with its size, confirming it's stored in your bucket.
 
-## Delete file
+## Step 8: Delete file
 
 Okay time to remove the file.
 
@@ -272,7 +298,9 @@ delete: s3://my-bucket/storj-tree.png
 
 {% /code-group %}
 
-## Delete buckets
+**Expected outcome**: The file should be removed from your bucket. You can verify this by listing files again - the bucket should now be empty.
+
+## Step 9: Delete buckets
 
 Last but not least, we'll delete the bucket.
 
@@ -317,6 +345,36 @@ remove_bucket: my-bucket
 
 {% /code-group %}
 
-## Next Steps
+**Expected outcome**: Your bucket should be completely removed from your account. Running the list buckets command again should show no buckets.
 
-Congratulations on getting started with Storj!
+## What you've accomplished
+
+Congratulations! You've successfully completed your first Storj workflow. You now know how to:
+
+- Generate secure S3-compatible credentials
+- Set up command-line tools for Storj access  
+- Create and manage buckets
+- Upload, download, and organize files
+- Clean up resources when finished
+
+## What's next
+
+Now that you understand the basics, you can explore more advanced Storj capabilities:
+
+### Integrate with Applications
+- [Use Storj with third-party tools](docId:REPde_t8MJMDaE2BU8RfQ) - Connect existing tools like Duplicati, Nextcloud, and more
+- Build applications using SDKs for your preferred programming language
+
+### Advanced Storage Operations  
+- Set up bucket versioning for file history
+- Configure CORS for web applications
+- Use presigned URLs for secure direct uploads
+- Optimize upload performance for large files
+
+### Production Deployment
+- Learn about Storj's multi-region architecture
+- Understand pricing and billing
+- Set up monitoring and logging
+- Plan your migration from other storage providers
+
+Ready to dive deeper? Check out our [third-party integrations](docId:REPde_t8MJMDaE2BU8RfQ) to see Storj working with popular tools and applications.

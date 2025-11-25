@@ -149,7 +149,6 @@ Use the New **Backup Job wizard** to configure the backup job. Follow the steps 
 
 3. Upon opening Advanced - Storage, you will be presented with the option of selecting Storage Optimization.
 Veeam recommends the default of 1MB because increasing the block size can result in larger incremental backups. 
-However, Storj's recommended setting for object storage is **4MB**. 
-Taking into account [Storj segment cost](docId:59T_2l7c1rvZVhI8p91VX#per-segment-fee), using larger block sizes both reduces overall Storj costs and provides better backup and restore times.
+However, Storj's recommended setting for object storage is **4MB**. Using larger block sizes provides better backup and restore times.
 
    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/veeam_advanced_settings.png) 

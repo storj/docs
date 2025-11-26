@@ -5,7 +5,7 @@ docId: dd27e33c-7804-4e15-bdc5-941f9a1a7e12
 metadata:
   title: Frequently Asked Questions
   description:
-    Comprehensive resource to various FAQs covering topics related to Object Mount.
+    Comprehensive resource to various FAQs on topics related to Object Mount.
 ---
 ## What S3 permissions are recommended to mount a bucket with Object Mount?
 Short answer, for a generic cloud: read, write, and list permissions for the bucket intended to be mounted.
@@ -30,3 +30,4 @@ For Windows they are located in [where logs are stored](#where-can-i-see-logs-of
 
 ## Where configs and license files are located on macOS?
 For macOS they are located in [where logs are stored](#where-can-i-see-logs-of-object-mount-on-mac-os): `/Users/$USER/Library/Application Support/Object Mount/license` and the `config.json` file is in the same directory, here the mount/bucket information is kept
+

@@ -37,12 +37,18 @@ Storj’s new pricing model introduces **three distinct storage tiers** designed
 
 Storj bills based on **GB** and **GB-months** (not MB or MB-months).  
 
-To ensure consistency across all tiers, **usage is always rounded up to the nearest whole GB** before billing.
+To ensure consistency across all tiers, **your total usage is rounded up to the nearest whole GB** when your invoice is generated. This rounding applies to the **sum of all your usage**—not to each individual object.
+
+{% callout type="info" %}
+**Important:** Rounding is applied to your total usage, not per object. You can store as many small objects as you want without each one being rounded up individually. For example, if you store 1,000 objects of 1 MB each, your total storage is 1,000 MB (~1 GB), which would be billed as 1 GB—not 1,000 GB.
+
+Note: Small objects below the [minimum object size](#minimums) threshold (50-100 kB depending on tier) are billed as if they meet that minimum. This is separate from the GB rounding policy described here.
+{% /callout %}
 
 **Examples:**
-- If usage is **500 MB**, it is rounded up to **1 GB**.
-- If usage is **1 byte**, it is rounded up to **1 GB**.
-- If usage is **1001 MB**, it is rounded up to **2 GB**.
+- If your total usage is **500 MB**, it is rounded up to **1 GB**.
+- If your total usage is **1 byte**, it is rounded up to **1 GB**.
+- If your total usage is **1001 MB**, it is rounded up to **2 GB**.
 
 This rounding rule applies to **both storage and egress bandwidth**.
 

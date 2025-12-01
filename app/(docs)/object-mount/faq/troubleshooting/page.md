@@ -109,7 +109,7 @@ If files are stuck during paste, and you’re on **Windows**:
 
 ## Still Not Working?
 
-If you still need assistance in resolving your issue, follow the steps below to enable detailed logging and send the log files to the Storj Help Desk.
+If you still need assistance in resolving your issue, follow the steps below to enable detailed logging and send the log files to the Storj Support team.
 
 For macOS and Windows environments: 
 

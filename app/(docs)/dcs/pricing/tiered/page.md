@@ -37,14 +37,22 @@ Storj’s new pricing model introduces **three distinct storage tiers** designed
 
 Storj bills based on **GB** and **GB-months** (not MB or MB-months).  
 
-To ensure consistency across all tiers, **usage is always rounded up to the nearest whole GB** before billing.
+Usage is rounded up to the nearest whole GB **per tier** (Global Collaboration, Regional Workflows, Active Archive) for each usage type. Within a tier, Storj sums all storage usage across objects and rounds once for storage, and sums all egress usage and rounds once for egress.
+
+{% callout type="info" %}
+**Important:** Rounding is applied per tier total, not per object. You can store as many small objects as you want without each one being rounded up individually.
+
+For example, if you store 1,000 objects of 1 MB each in a single tier, your total storage is 1,000 MB (~1 GB) and would be billed as 1 GB of storage—not 1,000 GB.
+
+**Note:** Small objects below the [minimum object size](#minimums) threshold (50-100 kB depending on tier) are billed as if they meet that minimum. This is separate from the GB rounding policy described here.
+{% /callout %}
 
 **Examples:**
-- If usage is **500 MB**, it is rounded up to **1 GB**.
-- If usage is **1 byte**, it is rounded up to **1 GB**.
-- If usage is **1001 MB**, it is rounded up to **2 GB**.
+- If your storage usage in the **Regional Workflows** tier for the month is **500 MB**, it is billed as **1 GB** of storage for that tier.
+- If your egress usage in the **Global Collaboration** tier for the month is **1001 MB**, it is billed as **2 GB** of egress for that tier.
+- If you use **500 MB** of storage and **500 MB** of egress in the **Active Archive** tier in a month, your invoice shows **1 GB** of storage and **1 GB** of egress for that tier (not a combined 1 GB line item).
 
-This rounding rule applies to **both storage and egress bandwidth**.
+This rounding rule applies separately to **storage and egress bandwidth totals within each tier**.
 
 Also, Storj uses simple base 10 conversion to convert between Bytes, KB, GB, TB, etc. 
 
@@ -97,4 +105,4 @@ To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGY
 ---
 
 **Effective Date:** November 1, 2025  
-**Last Updated:** October 22, 2025
+**Last Updated:** December 1, 2025

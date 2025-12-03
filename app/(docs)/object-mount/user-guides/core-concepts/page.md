@@ -51,9 +51,9 @@ This enables _any_ application to instantly access cloud objects as if they were
 - Preserves NFS-equivalent POSIX consistency guarantees
 
 
-## What Object Mount Does _Not_ Do
+## What Object Mount Does NOT Do
 
 - Object Mount does _not_ interfere with how applications interact with local drives and any other non-S3 object data
-- Object Mount does _not_ alter or change the representation of your files on object storage &mdash; file data is not modified. This means your content can be accessed directly from your object storage tools and dashboards, bypassing Object Mount at any time.
+- Object Mount does _not_ alter or change the representation of your files on object storage &mdash; file data is not modified. This means your content can be accessed directly from your object storage using standard S3 tools and dashboards, bypassing Object Mount at any time.
 
-  _**Note:** Content accessed_ directly _on your object storage (rather than through Object Mount) bypasses Object Mount’s consistency guarantees._
+  **Note:** Content accessed _directly_ on your object storage (rather than through Object Mount) bypasses Object Mount’s consistency guarantees.

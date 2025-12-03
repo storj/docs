@@ -14,7 +14,7 @@ Object Mount can connect to Storj’s Distributed Cloud Storage offering as well
 
 You will need to create and/or obtain credentials from your S3 provider, and then configure Object Mount to use those credentials. 
 
-_**Note:** API access may also need to be enabled for some 3rd-party S3 providers. Consult your storage solution’s documentation to learn how to enable API access._
+**Note:** API access may also need to be enabled for some 3rd-party S3 providers. Consult your storage solution’s documentation to learn how to enable API access.
 
 
 ## Obtaining Your S3 Credentials

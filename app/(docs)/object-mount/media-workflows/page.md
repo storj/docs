@@ -80,14 +80,4 @@ For app-specific setup steps, visit:
 
 - [Object Mount with DaVinci Resolve](./media-workflows/davinci-resolve/)  
 - [Object Mount with Adobe Premiere Pro](./media-workflows/premiere-pro/)
-
-Others: 
-
-- [Object Mount with Final Cut Pro](./media-workflows/final-cut-pro/)
 - [Object Mount with Avid Media Composer](./media-workflows/media-composer/)
-- [Object Mount with Graphics Applications](./media-workflows/graphics/)
-- [Object Mount with Digital Audio Workstations](./media-workflows/daw/)
-
----
-
-

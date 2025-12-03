@@ -28,14 +28,15 @@ Whether you’re setting up for creative workflows, remote storage access, or te
 
 ## Next Steps
 
-Start with the **Installation Guide**. 
-
-Move on to the **User Guide** for instructions on creating mounts and working with object storage in your daily workflows. 
-
-Lastly, review the macOS OS-specific **Feature Guide** and the appropriate **Media Application Guide**.
-
+Start with the **Installation Guide**:
 
 - macOS [Installation Guide](docId:MyV4Bv3fKJEZucAb)
+
+Move on to the **User Guide** for instructions on creating mounts and working with object storage in your daily workflows:
+
 - macOS [User Guide](docId:QpBba8p4bMTXAkBK)
+
+Lastly, review the macOS OS-specific **Feature Guide** and the appropriate **Media Application Guide**:
+
 - macOS [Feature Guide](docId:ehHbpq6KFndcVCgc)
 - [Media Application Guides](docId:JXF4_NLsV@nh9QcT)

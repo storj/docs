@@ -113,7 +113,4 @@ Detailed usage tips and recommendations for many of the leading Media Workflow t
 
   - Using Object Mount with [DaVinci Resolve](./media-workflows/davinci-resolve/)  
   - Using Object Mount with [Adobe Premiere Pro](./media-workflows/premiere-pro/)
-  - Using Object Mount with [Final Cut Pro](./media-workflows/final-cut-pro/)
   - Using Object Mount with [Avid Media Composer](./media-workflows/media-composer/)
-  - Using Object Mount with [Graphics Applications](./media-workflows/graphics/)
-  - Using Object Mount with [Digital Audio Workstations (DAWs)](./media-workflows/daw/)

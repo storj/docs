@@ -26,13 +26,15 @@ Whether you’re setting up a single workstation or deploying across a team, the
 
 ## Next Steps
 
-Start with the **Installation Guide**. 
-
-Move on to the **User Guide** for instructions on creating mounts and working with object storage in your daily workflows. 
-
-Lastly, review the Windows OS-specific **Feature Guide** and the appropriate **Media Application Guide**.
+Start with the **Installation Guide**:
 
 - Windows [Installation Guide](docId:VFmmZcEdcxpZZCx5)
+
+Move on to the **User Guide** for instructions on creating mounts and working with object storage in your daily workflows:
+
 - Windows [User Guide](docId:khHGfZsyY9NJ2uGK)
+
+Lastly, review the Windows OS-specific **Feature Guide** and the appropriate **Media Application Guide**:
+
 - Windows [Feature Guide](docId:xMKcaWrTVK6QMD8h)
 - [Media Application Guides](docId:JXF4_NLsV@nh9QcT)

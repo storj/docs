@@ -23,7 +23,7 @@ Before you begin, make sure your Mac meets the following system requirements:
 
 - macOS 12 Monterey or later
 
-  (Note: macOS 13 Ventura or later required for advanced features such as Fast Copy & Fast Move)
+  (Note: macOS 13 Ventura or later is required for advanced features such as Fast Copy & Fast Move.)
 
 - At least 300MB of free disk space
 - Internet connection for mounting cloud-hosted buckets, or LAN connection for mounting local S3 buckets
@@ -39,7 +39,7 @@ Download the correct macOS `.dmg` disk image file for your system.
 {% callout type="info" %}
 **Mac Chip Types**
 
-Be sure to choose the installer version that matches your chip architecture: 
+Be sure to choose the disk image that matches your chip architecture: 
 - **x86** for Intel processors
 - **arm64** for Apple Silicon/chips (M1-M5).
 
@@ -62,7 +62,7 @@ To determine which chip you have:
 
 The native macOS Object Mount app requires the **macFUSE** system extension. 
 
-macFuse, on both Intel and Apple silicon Macs, provides system-level volume mounting tools that Object Mount leverages.
+macFuse, on both Intel and Apple silicon Macs, provides system-level volume mounting extensions that Object Mount leverages.
 
 Download and install macFUSE following the steps below for your Mac hardware type:
 
@@ -145,7 +145,7 @@ Download and install macFUSE following the steps below for your Mac hardware typ
 
 ## Next Steps
 
-Proceed to the macOS [User Guide](docId:QpBba8p4bMTXAkBK) to activate your Object Mount installation, configure your object storage credentials, and create your first mount.
+Proceed to the macOS [User Guide](docId:QpBba8p4bMTXAkBK) to **activate** your Object Mount installation, **configure** your object storage credentials, and **create** your first mount.
 
 Then review the macOS [Feature Guide](docId:ehHbpq6KFndcVCgc).
 

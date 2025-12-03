@@ -28,7 +28,7 @@ Features that are global and apply to **all OS versions** of Object Mount (macOS
 
 To use **Fast Paste**:
 
-1. Copy a file or folder from your local drive as normal: using CTRL+C or right-click + Copy.
+1. Copy a file or folder from your local drive as normal: using **CTRL+C** or **right-click + Copy**.
 
 2. Navigate to an Object Mount drive and directory.
 
@@ -64,13 +64,13 @@ Additionally, **Fast Paste**:
 - Applies performance and tuning options (cache settings & location, multipart thresholds, etc.)
 - Logs operations to the standard Object Mount log file
 
-### Best Practices for using Fast Paste
+### Use Cases for using Fast Paste
 
 - Store original media locally, then copy and **Fast Paste** it to cloud when ready.
 - For large archive folders, use copy then **Fast Paste** to quickly duplicate them into your S3 bucket.
 - Use **Fast Paste** to free up local storage when archiving to the cloud.
 
-## Pinning on Windows
+## File Pinning on Windows
 
 Starting with **Object Mount v1.0.5**, you can now **pin files** in Windows to ensure they remain in the **local Object Mount cache**.
 
@@ -78,7 +78,7 @@ This improves performance and is especially useful for:
 - Preventing delays when reopening large media assets
 - Ensuring critical project files stay cached locally
 
-### What Does Pinning Do?
+### What Does File Pinning Do?
 
 When you **pin a file**, Object Mount:
   - Downloads and stores the file in Object Mount’s local data cache
@@ -86,11 +86,11 @@ When you **pin a file**, Object Mount:
   - Flags the file for _persistent caching_, even across restarts
 
 {% callout type="info" %}
-**Windows Pinning**
+**Windows File Pinning**
 
 Pinning does *not* duplicate or move the file elsewhere. It simply marks the file as _persistent_ in the Object Mount local cache.
 
-**Important:** Pinned files _do not remain accessible_ when Object Mount is off-line or when your mount is disabled or disconnected. An active, live connection is still required for access, even when a file is pinned.
+**Important:** Pinned files _do not remain accessible_ when Object Mount is off-line, or when your mount is disabled or disconnected. An active, live connection is still required for access, even when a file is pinned.
 {% /callout %}
 
 ### Pinning Files

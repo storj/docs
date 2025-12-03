@@ -44,7 +44,7 @@ To support POSIX Mode, ensure your S3 credentials allow, and your bucket support
 {% /callout %}
 
 {% callout type="warning" %}
-**Accessing Objects Outside of Object Mount**
+**Accessing Content Outside of Object Mount**
 
 Using any non-Object Mount tool to rename, move, or copy your files will result in those objects _losing_ their POSIX metadata. You should only use Object Mount to manage POSIX-enabled files in order to preserve their metadata and attributes.
 {% /callout %}
@@ -69,7 +69,7 @@ Enabling POSIX mode is recommended for workflows such as:
 
 ## When NOT to Enable Object Mount’s POSIX Mode
 
-You should not enable POSIX Mode in Object Mount for:
+You should _not_ enable POSIX Mode in Object Mount for:
 
 - **Read-only Bucket Credentials**
 
@@ -94,8 +94,8 @@ Enabling POSIX mode in **macOS** and **Windows** environments is done through Ob
 
 See the associated page for your operating system:
 
-- Enabling POSIX Mode when [creating a mount in macOS](docId:QpBba8p4bMTXAkBK#step-2-configure-object-storage-credentials-and-create-a-mount)
-- Enabling POSIX Mode [creating a mount in Windows](docId:khHGfZsyY9NJ2uGK#step-2-configure-object-storage-credentials-and-create-a-mount)
+- Enabling POSIX Mode when [creating a mount in macOS](docId:QpBba8p4bMTXAkBK#step-2-configure-s3-credentials-and-create-a-mount)
+- Enabling POSIX Mode [creating a mount in Windows](docId:khHGfZsyY9NJ2uGK#step-2-configure-s3-credentials-and-create-a-mount)
 
 
 ## Enabling POSIX Mode: Linux

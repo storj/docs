@@ -75,7 +75,7 @@ Follow the steps below to create a new mount using  the **Add New Credentials** 
 3. Click **Next**.
     - Object Mount will authenticate to your cloud storage provider and attempt to discover any buckets your credentials have access to.
 
-4. Select **Mount all buckets** or choose one or more specific buckets to create a mounted drive for. Click **Next**.
+4. Select **Mount all buckets** or choose one or more specific buckets to create a mounted drive for, then click **Next**.
 
 5. Enter a **Mount name** to use and, if necessary, alter the path location for the local mount drive.
 
@@ -94,7 +94,7 @@ Follow the steps below to create a new mount using  the **Add New Credentials** 
     {% callout type="info" %}
     **“Extension Blocked” Message**
 
-    Depending on your Mac hardware and OS version, an **Extension Blocked** message may be presented when Object Mount attempts to mount your new drive.
+    Depending on your Mac hardware and OS version, an **“Extension Blocked”** message may be presented when Object Mount attempts to mount your new drive.
 
     If so, perform the following steps:
     - Open **System Settings**
@@ -181,7 +181,9 @@ These options let you further customize Object Mount’s performance and diagnos
 {% callout type="info"  %}
   **Log File Location**
 
-  On macOS the log file is stored at: `~/Library/Application Support/Object Mount/cunoFS.log`.
+  On macOS the default location for storing the log file is: 
+  
+  `~/Library/Application Support/Object Mount/cunoFS.log`.
 {% /callout %}
 
 Click **Apply** to save any changes. Then re-enable your mount.
@@ -196,11 +198,11 @@ You can update and/or uninstall macFUSE within the Mac’s System Preference.
 {% tabs %}
 
 {% tab label="Monterey (12) & Older" %}
-For **older macOS versions** (Monterey and prior) you will find the macFUSE extension at the bottom of the **System Preferences** window:
+For macOS versions Monterey and prior, you will find the macFUSE extension at the bottom of the **System Preferences** window:
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-macfuse-preferences-01.jpg)
 
-Click the macFUSE icon to see options to update and/or uninstall macFUSE:
+Click the macFUSE icon to see options to **update** and/or **uninstall** macFUSE:
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-macfuse-preferences-02.jpg)
 {% /tab %}

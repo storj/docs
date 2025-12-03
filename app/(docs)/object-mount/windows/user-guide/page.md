@@ -174,7 +174,9 @@ These options let you further customize Object Mount’s performance and diagnos
 {% callout type="info"  %}
   **Log File Location**
 
-  On Windows the log file is stored at: `C:\Users\%username%\AppData\Local\Object Mount\cunofs.log`.
+  On Windows the default location for storing the log file is:
+  
+  `C:\Users\%username%\AppData\Local\Object Mount\cunofs.log`.
 {% /callout %}
 
 Click **Apply** to save any changes. Then re-enable your mount.

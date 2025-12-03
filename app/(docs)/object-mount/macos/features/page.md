@@ -20,9 +20,9 @@ Features that are global and apply to **all OS versions** of Object Mount (macOS
 
 
 
-## Fast Copy and Fast Move on macOS
+## Fast Copy and Fast Move
 
-Starting with **v1.0.4** Object Mount for macOS now supports **Fast Copy** and **Fast Move** options directly from the Mac Finder. 
+Starting with **v1.0.4**, Object Mount for macOS now supports **Fast Copy** and **Fast Move** options directly from the Mac Finder. 
 
 - **Note:** macOS 13 Ventura (or later) is required to use Fast Copy and Fast Move.
 
@@ -62,12 +62,12 @@ Once enabled, you will see the new “right-click” options in the Finder.
 {% callout type="info" %}
 **“Right-Click” Options**
 
-You may need to right-click more than once to activate the extension for the first time. If necessary, reboot your Mac or relaunch Finder (`Cmd + Option + Esc`) to see the new menu items.
+You may need to right-click more than once to activate the extension for the first time. If necessary, reboot your Mac to see the new menu items.
 {% /callout %}
 
 ### When to Use Fast Copy or Fast Move
 
-Using Fast Copy or Fast Move is ideal when you want to:
+Using **Fast Copy** or **Fast Move** is ideal when you want to:
 
 - Move large files (media footage, projects, renders, etc.) or large folder trees from a local disk to a mounted S3 bucket
 - Copy large files or folders from one Object Mount volume to another Object Mount volume
@@ -76,7 +76,7 @@ Using Fast Copy or Fast Move is ideal when you want to:
 
 ### How Fast Copy and Fast Move Work
 
-Standard **copy and move** actions performed by the Finder use macOS file I/O calls. These standard file operations copy data **one block** at a time, without any awareness of how cloud storage works. This can lead to slow performance &mdash; especially for large files or nested folder structures.
+Standard **copy and move** actions performed by the Finder use the native macOS file system’s I/O calls. These standard file operations copy data **one block** at a time, without any awareness of how cloud storage works. This can lead to slow performance &mdash; especially for large files or nested folder structures.
 
 **Fast Copy** and **Fast Move** bypass these standard OS-based read/write calls and instead:
 
@@ -92,7 +92,7 @@ Behind the scenes, Fast Copy and Fast Move:
 - Respect your mount settings (e.g.: POSIX mode, cache location)
 - Log operations to the standard Object Mount log file
 
-### Best Practices for Fast Copy and Fast Move
+### Use Cases for Using Fast Copy and Fast Move
 
 - Store original media locally, then **Fast Move** it to the cloud when ready.
 - For large archive folders, use **Fast Copy** to quickly duplicate them into your S3 bucket.

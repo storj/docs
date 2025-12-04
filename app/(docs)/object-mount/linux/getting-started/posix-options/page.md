@@ -2,7 +2,7 @@
 title: POSIX Options
 hideTitle: false
 docId: cbm3PcQXmLpuYcbg
-weight: 2
+weight: 1
 metadata:
   title: POSIX Options
   description:
@@ -32,31 +32,26 @@ The levels of POSIX compatibility provided in Object Mount for Linux are:
 {% callout type="note" %}
 **How to check if you need to enable “POSIX File Access”:**
 
-- Check the outputs correspond to the same workload when run on the local file system. If there are randomized elements to workload (such as sampling in machine learning use cases), then the seeds need to be fixed to make such a comparison.
-- If the application running under Object Mount with only **Core File Access** fails with an error `(134) ENOTSUP` (not supported) or `Operation not permitted` then it is likely that POSIX File Access needs to be enabled.
+- Run your workload using a local file system volume. Then run the same workload using an Object Mount volume. Compare the outputs and results. If you find discrepancies, it is likely that POSIX File Access needs to be enabled.
+- If Object Mount running with only **Core File Access** fails with an error `(134) ENOTSUP` (not supported) or `Operation not permitted` then it is likely that POSIX File Access needs to be enabled.
 {% /callout %}
-
-<!-- REWORD THE ABOVE NOTES -->
-
 
 
 ## Core File Access
 
-Objects as files, files as objects. This is the default mode. 
-
-**Core File Access** mode does not support the persistence or modification of POSIX users, groups, symlinks, hard links, permissions control or file modes attributes on objects. 
+**Core File Access** mode disables all POSIX compatibility features in Objecty Mount for linux. Core File Access mode does not support the persistence or modification of POSIX users, groups, symlinks, hard links, permissions control or file modes attributes on objects. This is the default mode.
 
   - Use “Core File Access” when you don’t have any metadata requirements and your tools don’t need any POSIX metadata persistence to function correctly.
 
-  - Use “Core File Access” when you don’t have write access to the bucket in question, or you don’t want to create any Object Mount-internal objects there.
+  - Use “Core File Access” when you don’t have write access to the bucket in question, or you don’t want to create any Object Mount-generated objects there.
 
 **Example use-cases:**
 
-  - Use “Core File Access” when interacting with data you have already moved up to object storage and when you only require read-only access to the names and data of those objects. For example, if you have machine learning datasets in the cloud and you have previously configured your libraries to read them directly from object storage.
+  - Use “Core File Access” when interacting with data you have already moved up to object storage and when you only require read-only access to the filenames and content of those objects. For example, if you have machine learning datasets in the cloud and you have previously configured your libraries to read them directly from object storage.
 
 **How to enable:**
 
-  - “Core File Access” is the default mode. No action is required.
+  - “Core File Access” is enabled as the default mode. No additional action is required.
 
 
 ## POSIX File Access
@@ -71,15 +66,15 @@ Objects as files, files as objects. This is the default mode.
 
   - Use “POSIX File Access” if you are moving workflows from POSIX to object storage, such as workloads that were previously run on AWS EC2 with EFS.
 
-    **Note:** Object Mount does not currently support POSIX ACLs or extended attributes in cloud object storage. Contact 🌐 [Storj Support](https://supportdcs.storj.io/hc/en-us) if you need these features.
+    **Note:** Object Mount does not currently support POSIX ACLs or extended attributes in cloud object storage. Contact the 🌐 [Storj Support](https://supportdcs.storj.io/hc/en-us) team if you need assistance in providing these features.
 
 **How to enable:**
 
 There are two main ways to enable “POSIX File Access”:
 
-  - If the object storage provider supports setting **tags** at the bucket level, then you can enable POSIX File Access mode for all users using the command `cuno creds setposix s3://your_bucket_name true` from a command line/shell interface. This will affect _everyone_ using the bucket and will force all Object Mount users of that bucket into POSIX File Access mode. 
+  - If the object storage provider supports setting **tags** at the bucket level, then you can enable POSIX File Access mode for _all users_ using the command `cuno creds setposix s3://your_bucket_name true` from a command line/shell interface. This will affect _everyone_ using the bucket and will force all Object Mount users of that bucket into POSIX File Access mode. 
 
-  - Otherwise, to enable POSIX File Access on an individual workstation you can set a local environment variable. Enter `export CUNO_POSIX=1` from a command line/shell interface. This setting is valid per-session. 
+  - Otherwise, to enable POSIX File Access on an _individual workstation-basis_ you can set a local environment variable. Enter `export CUNO_POSIX=1` from a command line/shell interface. This setting is valid per-session. 
 
 <!-- VALIDATE THE ABOVE "PER SESSION" NOTE -->
 
@@ -89,16 +84,17 @@ There are two main ways to enable “POSIX File Access”:
 
 **POSIX Enforced File Access** mode will generate and maintain POSIX metadata for your objects (like “POSIX File Access” mode, above) but _will enforce_ POSIX access controls on those objects. 
 
-  - Use “POSIX Enforced File Access” when you want to manage what users have access to, based on the UID/GID of their UNIX user and the corresponding POSIX metadata (owner, group, mode) on files. This means users will encounter `access denied` errors if they try to read or write to a file/directory they haven’t been given permission to (by a suitably privileged user/admin using: chown, chgrp or chmod).
+  - Use “POSIX Enforced File Access” when you want to manage what users have access to, based on the UID/GID of their UNIX user and the corresponding POSIX metadata (owner, group, mode) on files. 
+  - This means users will encounter `access denied` errors if they try to read or write to a file/directory they haven’t been given permission to (by a suitably privileged user/admin using: `chown`, `chgrp` or `chmod`).
 
 **Example use-cases:**
 
-  - Use “POSIX Enforced File Access” to host a website (using NGINX or other server technologies) entirely from object storage, without any attached storage device(s) (such as EFS). “POSIX Enforced File Access” mode lets maintain control over which files/directories the web server process (e.g.: the `nginx` user) can access.
+  - Use “POSIX Enforced File Access” to host a website (using NGINX or other server technologies) entirely from object storage, without any attached storage device(s) (such as EFS). “POSIX Enforced File Access” mode lets you maintain control over which files/directories the web server process (e.g.: the `nginx` user) can access.
 
   - Use “POSIX Enforced File Access” to host an organization’s user filesystem in the cloud.
 
-    **Note:** Object Mount does not currently support POSIX ACLs or extended attributes in cloud object storage. Contact 🌐 [Storj Support](https://supportdcs.storj.io/hc/en-us) if you need these features.
+    **Note:** Object Mount does not currently support POSIX ACLs or extended attributes in cloud object storage. Contact the 🌐 [Storj Support](https://supportdcs.storj.io/hc/en-us) team if you need assistance in providing these features.
 
 **How to enable:**
 
-To enable and configure “POSIX Enforced File Access”, see the detailed steps on the [](docId:Eegoo1teiJ8eerae) page.
+To enable and configure “POSIX Enforced File Access” see the detailed steps in the Configuration Guide article: [](docId:Eegoo1teiJ8eerae).

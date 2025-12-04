@@ -26,19 +26,17 @@ This is in contrast to the Graphical User Interface (GUI) experience that Object
 
 Other OS differences include:
 
-| **Object Mount Feature** | **For Linux** | **For Windows & macOS** |
-|-------------|----------------------------|--------------------------------------|
-| CLI-based   | 100% | No CLI available
-| GUI-based   | No GUI available | 100%
-| POSIX Mode Features | Wide array of settings | Either `on` or `off`
-| `cuno`-based commands, settings, and variable | Large quantity of options | Few options
+| **Object Mount Feature** | **For Linux**    | **For Windows & macOS** |
+|--------------------------|------------------|-------------------------|
+| CLI-based                | 100%             | Limited CLI
+| GUI-based                | No GUI available | 100%
+| POSIX Mode Features | Wide array of settings   | Either `on` or `off`
+| `cuno`-based commands, settings, and variables | Large quantity of options | Few options
 
 
 ## What’s Covered
 
-The many guides in this Linux section will cover the installation, configuration, and use of Object Mount on multiple flavors of Linux.
-
-Navigate to what you need when you need it,
+The many articles in this Linux section will cover the installation, configuration, and use of Object Mount on multiple flavors of Linux. Navigate to what you need, when you need it.
 
 Object Mount’s Linux-specific content includes: 
 - Getting Started Guides
@@ -50,13 +48,11 @@ Click below to access the content you are looking for:
 
 ### Getting Started Guides
 
-Prior to installing, view the [Getting Started Guide](docId:xhNvtETAA6UBZVNH) pages to better understand the capabilities, options, and deployment choices available for Object Mount for Linux. 
+_Prior_ to installing, view the [Getting Started Guide](docId:xhNvtETAA6UBZVNH) articles to better understand the capabilities, options, and deployment choices available for Object Mount for Linux. 
 
-Topics include:
-  - Understanding [Deployment Modes](docId:bRnfbdNE6d5DaZzW)
+Getting Started topics include:
   - Understanding [POSIX Compatibility and Options](docId:cbm3PcQXmLpuYcbg)
-  - Topic 3
-  - Topic 4
+  - Understanding [Deployment Modes](docId:bRnfbdNE6d5DaZzW)
 
 ### Installation Guides
 
@@ -70,18 +66,17 @@ When ready to install, view the [Installation Guides](docId:iethahkeeX5EiJoh) fo
   - Windows - via Windows Subsystem for Linux (WSL)
   - macOS - via Linux within containers
 
-### Configuration and User Guides
+### User and Configuration Guides
 
-After installation, read through the [Configuration Guides](docId:ohs0ailohSh0Vie3) to learn more about using and configuring Object Mount for Linux:
+_After_ installation, read through the [User Guides](docId:ohs0ailohSh0Vie3) to learn more about using and configuring Object Mount for Linux, including:
+
+  - Validate Functionality
+  - Activating License Keys
   - [Deployment Modes](docId:jqySXsBfj5WGUjgs):
     - Configuring and Using: Direct Interception Mode
     - Configuring and Using: Object Mount on FUSE
     - Configuring and Using: Object Mount FlexMount
     - Configuring and Using: Object Mount Fusion
-
-
-  - Concept 2
-  - Concept 3
 
 ### Linux Feature Guides
 

@@ -2,7 +2,7 @@
 title: glibc
 hideTitle: false
 docId: ahWohd5eegh6eizi
-weight: 2
+weight: 1
 metadata:
   title: Glibc
   description:
@@ -11,6 +11,8 @@ hidden: false
 ---
 
 Many Linux distributions use the GNU Project’s C standard library: 🌐 [glibc](https://en.wikipedia.org/wiki/glibc).
+
+This includes: Debian/Ubuntu, RedHat and their derivatives.
 
 Storj’s Object Mount **glibc scripted installer** (a `.run` file) is compatible with all such Linux distributions.
 
@@ -91,9 +93,9 @@ Be sure to download the correct script file for your specific chip architecture:
 
 **2d.** The installation process will then prompt you to **activate Object Mount**. 
 
-- Press 1 to activate a free trial:
+- Press 1 to activate a **free trial**:
   - This will activate a fully-featured 14-day free trial.
-- Press 2 if you already have a license key:
+- Press 2 if you already have a **license key**:
   - Paste your license key or enter a full path to a license key file.
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-enter-license-key.jpg)
@@ -101,100 +103,19 @@ Be sure to download the correct script file for your specific chip architecture:
 - **Note:** You can automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
 
 
-## Step 3. Run & Validate Object Mount’s Connectivity
+## Installation Locations: Scripted Installers
 
-Verify Object Mount is able to run correctly and can connect to publicly accessible S3 object storage buckets.
+When Object Mount is installed via a **Scripted Installer** (e.g.: glibc or musl), it gets installed to different locations depending on whether it was installed by root, or by a non-root user.
 
-**3a.** Enter Object Mount’s CLI console (aka “cunoFS”):
+| Install Method  | Location (`CUNO_ROOT`) | Symlinks created in            |
+|-----------------|------------------------|--------------------------------|
+| Non-Root User   | `~/.local/opt/cuno/`   | `~/.local/bin/`
+|                 |                        | `~/.local/lib/x86_64-linux-gnu`
+|                 |                        | `~/.local/share/man/`
+| Root User       | `/opt/cuno/`           | `/usr/bin/` 
+|                 |                        | `/usr/lib/`
+|                 |                        | `/usr/share/man/`
 
-- From a Linux shell prompt enter the `cuno` command:
-  ```
-  user:~$ cuno
-  ```
+## Next Steps
 
-- You should see the `(cuno)` CLI prefix to the left of your user prompt. This indicates that a new shell has been launched wrapped in Object Mount’s `cuno` wrapper:
-  ```
-  user:~$ cuno
-  (cuno) user:~$
-  ```
-
-{% callout type="info" %}
-**Adding `cuno` to the PATH**
-
-If the Object Mount `cuno` application cannot be found (`cuno: command not found`), add the install location (`/home/<user>/.local/opt/cuno`) to your `$PATH` variable.
-{% /callout %}
-
-- Enter `exit` at any time to close the Object Mount CLI console and return to the unwrapped shell prompt.
-  ```
-  (cuno) user:~$ exit
-  user:~$
-  ```
-
-<!-- MOVE THIS TO A GLOBAL SECTION:
-
-
-**3b.** `cuno` commands & documentation
-
-Some Object Mount `cuno` commands _must_ be run from a Linux shell prompt:
-  ```shell
-  # terminal
-  cuno --version
-  CUNO v1.2.8.8 (b08568ca6)
-  ```
-
-Other commands _must_ be run from within the `cuno` CLI console interface.
-
-- **From a Linux Shell:** Use `cuno -h` (or `cuno --help`) from a Linux shell to view the **Cuno Documentation** and browse the list of Linux shell `cuno` commands:
-
-  ```shell
-  # terminal
-  cuno -h
-  ```
-
-  ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-man-pages.jpg)
-
-- **From the `cuno` Console:** Enter `help` within the `cuno` console interface to see commands that can be run from there:
-  ```shell
-  user:~$ cuno
-  (cuno) user:~$ help
-
-  job_spec [&]                            history [-c] [-d offset] [n] or hist>
-  (( expression ))                        if COMMANDS; then COMMANDS; [ elif C>
-  . filename [arguments]                  jobs [-lnprs] [jobspec ...] or jobs >
-  :                                       kill [-s sigspec | -n signum | -sigs>
-  [ arg... ]                              let arg [arg ...]
-  [[ expression ]]                        local [option] name[=value] ...
-  alias [-p] [name[=value] ... ]          logout [n]
-  bg [job_spec ...]                       mapfile [-d delim] [-n count] [-O or>
-  bind [-lpsvPSVX] [-m keymap] [-f file>  popd [-n] [+N | -N]
-  break [n]                               printf [-v var] format [arguments]
-  builtin [shell-builtin [arg ...]]       pushd [-n] [+N | -N | dir]
-  caller [expr]                           pwd [-LP]
-  case WORD in [PATTERN [| PATTERN]...)>  read [-ers] [-a array] [-d delim] [->
-  ```
-
--->
-
-**3b.** Explore public datasets
-
-Validate that Object Mount can reach Internet-based object storage buckets by listing the files in several public S3 repositories:
-
-- View image file listings from the James Webb Space Telescope on AWS S3:
-
-  ```
-  (cuno) $ ls s3://stpubdata/jwst/public/
-  ```
-
-  ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-list-aws-bucket.jpg)
-
-- Browse satellite images on Google Cloud Storage:
-  ```
-  (cuno) $ ls gs://gcp-public-data-landsat/
-  ```
-
-  ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-list-gc-bucket.jpg)
-
-
-
-## Step 4. Connect, access, and validate connectivity to your private object storage bucket(s)
-
+Once Object Mount is installed, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.

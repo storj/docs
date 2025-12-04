@@ -2,7 +2,7 @@
 title: Deployment Modes
 hideTitle: false
 docId: jqySXsBfj5WGUjgs
-weight: 1
+weight: 3
 redirects:
   - /object-mount/linux/user-guides/basic
 metadata:

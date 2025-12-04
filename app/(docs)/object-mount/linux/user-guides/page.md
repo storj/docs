@@ -1,10 +1,10 @@
 ---
-title: Configuration Guides
+title: User Guides
 hideTitle: false
 docId: ohs0ailohSh0Vie3
 weight: 3
 metadata:
-  title: Configuration Guides
+  title: User Guides
   description:
     User Guides Overview
 hidden: false

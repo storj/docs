@@ -1,45 +1,48 @@
 ---
-title: ORIG-Object Mount Fusion
-docId: duac8aixa9oPiw4u
-weight: 7
+title: Object Mount Fusion
+hideTitle: false
+docId: GVT7eXEaMSZCWESj
+weight: 4
 metadata:
-  title: Object Mount Fusion
-  description: Getting started with Object Mount Fusion
+  title: Configuring Object Mount Fusion
+  description:
+    Details on the use and configuration of Object Mount Fusion for Linux.
+hidden: false
 ---
 
 ## Overview
+
 {% callout type="warning"  %}
-Object Mount Fusion is currently in `BETA`. Your feedback via our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) will help us improve it.
+Object Mount Fusion is currently in `BETA`. Your feedback via our 🌐 [Support Team](https://supportdcs.storj.io/hc/en-us/requests/new) will help us improve it.
 {% /callout %}
 
-Object Mount Fusion is way to upgrade high-performance attached storage solutions like Amazon Elastic File System (EFS) with the throughput of object storage. 
-It is a **cheaper** and **faster** solution compared to using EFS alone.
+**Object Mount Fusion** is way to enhance local, LAN-based, high-performance attached storage solutions like Amazon’s Elastic File System (EFS) with the throughput of object storage. It is a **cheaper** and **faster** solution when compared to using EFS alone.
 
-Object Mount Fusion takes an attached storage filesystem and an initially empty object storage bucket/directory and exposes a single interface for both. 
-Object Mount Fusion will migrate files between object storage and local filesystem depending on where they are best for performance/cost.
+Object Mount Fusion takes an attached storage filesystem and an (initially) empty object storage bucket/directory and exposes a single interface for both. Object Mount Fusion will migrate files between object storage and local filesystem depending on their best fit for both performance & cost.
 
 
-{% callout type="note"  %}
-This feature is available only to Professional and Enterprise Tier customers.
-For licensing, please schedule a 🌐 [discovery call](https://www.storj.io/landing/get-in-touch).
-{% /callout %}
+## How it Works
 
-## How it works
+Object Mount Fusion combines both the **local** file storage and the **cloud** object storage into a single, virtual mount (a FUSE mount).
 
-Object Mount Fusion combines both into a virtual mount or a FUSE mount. The files on object storage are represented as hidden links from the host filesystem to the object store. 
-Unlike other solutions, the object store is a first-class high throughput tier, rather than a slow archival tier. 
-Object Mount Fusion automatically migrates files between the two according to application behaviour on such files. 
-New files may be written in either tier, depending on predicted and observed access properties. 
-Object Mount Fusion supports multiple users simultaneously accessing files on multiple nodes by sharing the attached storage and mount location.
+The files on object storage are represented as hidden links from the host filesystem to the object store. 
 
+Unlike other solutions, Object Mount empowers the cloud-based object store to be used as a first-class, high-throughput tier, rather than a traditional slow archival tier.
+
+Object Mount Fusion automatically migrates files between the two according to your application behavior and usage. New files may be written into either location depending on predicted and observed access properties. 
+
+Object Mount Fusion supports multiple users, each simultaneously accessing files on multiple nodes, by combining and sharing the attached storage and mount locations.
 
 ## Setting up Object Mount Fusion
 
-Object Mount Fusion is expected to be used within the same high-speed LAN as your object storage. For example, if you use AWS S3, Object Mount Fusion should only be set up on EC2 nodes within the same 
-[AWS Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/) as the bucket to accessed. If you are using an S3-compatible on-premises object storage solution, 
-then Object Mount Fusion should be set up on a computer on the same high-speed local network.
+Object Mount Fusion should be used within the same high-speed LAN as your object storage. 
 
-If you're already set up and using an attached storage system, such as EFS, you may skip ahead to [Mounting a Object Mount Fusion filesystem](#mounting-a-object-mount-fusion-filesystem).
+For example, if you use AWS S3, Object Mount Fusion should _only_ be set up on EC2 nodes within the same 
+[AWS Region](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/) as the bucket to to be accessed. 
+
+If you are using an S3-compatible on-premises object storage solution, then Object Mount Fusion should be set up on a computer on the same high-speed local network.
+
+If you are already set up and using an attached storage system, such as EFS, you may skip ahead to [Mounting a Object Mount Fusion filesystem](#mounting-a-object-mount-fusion-filesystem).
 
 ### Set up an empty bucket or directory on object storage
 
@@ -422,3 +425,4 @@ Check that access, modification and migration are working as expected. We recomm
 NB: You can set the ``CUNO_DEBUG`` environment variable to ``trace``, or ``debug`` at the time of mounting.
 
 Not seeing what you expect? Contact us at our 🌐 [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).
+

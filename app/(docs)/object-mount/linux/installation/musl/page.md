@@ -2,13 +2,25 @@
 title: musl
 hideTitle: false
 docId: ao0yaeng2Aitheel
-weight: 5
+weight: 2
 metadata:
   title: Musl
   description:
     Musl Installation Instructions
 hidden: false
 ---
+
+Some Linux distributions (including Alpine) use the musl C standard library: 🌐 [musl](https://en.wikipedia.org/wiki/musl).
+
+Storj’s Object Mount **musl scripted installer** (a `.run` file) is compatible with all such Linux distributions.
+
+This installer shell script allows you to install Object Mount (for the current user) _without_ needing root privileges &mdash; no `sudo` required.
+
+
+
+
+
+EDIT BELOW
 
 
 The Scripted Installer allows you to install Object Mount without root privileges (no sudo).

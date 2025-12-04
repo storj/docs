@@ -1,5 +1,5 @@
 ---
-title: MacOS
+title: MacOS (Linux)
 hideTitle: false
 docId: yoopieyewevei1Eo
 weight: 6
@@ -9,6 +9,61 @@ metadata:
     MacOS Installation Instructions
 hidden: false
 ---
+
+
+### macOS using Docker
+
+{% callout type="note"  %}
+Alternatives to Docker on Mac are available, some recommended alternatives are:
+
+- [Rancher Desktop](https://rancherdesktop.io/) (free) - If you're on Apple Silicon, enable Rosetta (Settings > Virtual Machine > VZ: Enable Rosetta support) and VirtioFS (Settings > Virtual Machine > Volumes: virtiofs)
+- [OrbStack for Mac](https://orbstack.dev/) (may be faster) - OrbStack works out of the box.
+
+Unfortunately, [colima](https://github.com/abiosoft/colima) is not currently supported.
+{% /callout %}
+
+<!-- .. include:: common-mac-install-instructions.rst -->
+See [](docId:yoopieyewevei1Eo) for more details.
+
+
+### Additional instructions for cuno-mac users
+
+If you have installed Object Mount directly onto a Mac, you will only have access to Object Mount functionality within Docker containers. We provide the `cuno-mac` utility which you run from Terminal to launch conveniently set-up Linux containers.
+
+The first time `cuno-mac` is run, a Docker image will be created with Object Mount ready to use, and a user will be set up within the container similar to your local user on the host Mac.
+
+The Dockerfile found at `~/.local/opt/cuno/share/macos/Dockerfile` can be edited to include any software packages you wish to have available inside the container. However, to update this will require deleting the old image first (by doing `docker rmi cuno-mac`), you can then run `cuno-mac` to rebuild it.
+
+You must choose between using `cuno-mac` and `cuno` depending on the environment you are currently in.
+
+To start a new session in which you can use Object Mount, you run `cuno-mac` in Terminal.
+
+If any arguments are given to `cuno-mac`, it will start a temporary container and pass the arguments on to `cuno`.
+
+If no arguments are given, `cuno-mac` will start a new interactive container and prefix `(cuno)` to your command-line prompt. This indicated that you are now inside a Docker container, so from here you cannot use `cuno-mac` and should instead use `cuno`.
+
+To return to macOS, run `exit` until the `(cuno)` prefix is removed. You may only need to do this once, or you may need to do it multiple times if you have started subshells.
+
+### Windows using WSL2
+
+See [Windows](../installation/windows)
+
+{% callout type="note"  %}
+Refer to the [Microsoft documentation on installing WSL](https://docs.microsoft.com/en-gb/windows/wsl/install) for more information.
+{% /callout %}
+
+### Exposing mounted object storage to the Host OS
+
+If you’re running Object Mount in a virtual machine, you can expose any object storage mounted as volumes in it using guest-to-host volume mapping.
+
+
+
+
+
+
+
+
+
 ## MacOS - Using Linux Containers
 
 A fully native Mac client is in private beta, with a public beta available soon!
@@ -190,3 +245,46 @@ sh /tmp/cuno_install
 {% /tabs %}
 
 4. The installation will prompt you to set the `CUNO_ROOT` environment variable to the installation directory. This is not always necessary when using Object Mount, but it will make it easier to follow the steps in this guide.
+
+
+
+
+
+
+
+
+
+
+## Validating Your Installation (MOVE TO MAC SECTION)
+
+You should now be able to run Object Mount from the command line, which you can test out by running the following command:
+
+{% tabs %}
+
+
+{% tab label="Mac (Linux)" %}
+   ```shell
+   # terminal
+   cuno-mac version
+   ```
+    Note:
+
+    If you have installed Object Mount directly onto a Mac, you must choose between using ``cuno-mac`` and ``cuno`` depending on the environment you are currently in.
+
+    If you're in a Mac Terminal session and have not run ``cuno-mac``, then you must replace ``cuno`` in any instructions with ``cuno-mac``.
+
+    If you have already started a Object Mount container by calling ``cuno-mac``, you will see the ``(cuno)`` prefix on your command line so any instructions using ``cuno`` commands will work as-is.
+
+    To return to macOS, run ``exit``.
+
+    See [user-guide-cuno-mac](../installation/mac) for more information.
+    
+    If you have already started a ``cuno-mac`` session:
+    
+   ```shell
+   # terminal
+   cuno version
+   ```
+
+{% /tab %}
+{% /tabs %}

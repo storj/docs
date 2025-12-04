@@ -6,7 +6,7 @@ metadata:
   title: Configuration Options
   description: Configuration Options
 
-weight: 3    
+weight: 10
 ---
 ## Overview
 Setting the environment variable `CUNO_OPTIONS` can be used to further configure Object Mount. The -o option on the `cuno` command can also be used to specify these options.

@@ -1,5 +1,5 @@
 ---
-title: Windows
+title: Windows (Linux)
 hideTitle: false
 docId: bekoo5aenePoo7Oh
 weight: 7

@@ -10,6 +10,20 @@ metadata:
 hidden: false
 ---
 
+
+
+{% callout type="note"  %}
+**Package Manager Installations**
+
+All package manager installations of Object Mount are always system-wide, regardless of the privileges of the user installing it.
+{% /callout %}
+
+
+
+
+
+
+
 Storj provides a package installer for Debian (and related) Linux distributions.
 
 {% callout type="info" %}

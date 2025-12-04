@@ -1,10 +1,10 @@
 ---
-title: Feature Guide
+title: Feature Guides
 hideTitle: true
 docId: GeWpcQTuVpL6d3wU
 weight: 4
 metadata:
-  title: Feature Guide for Linus
+  title: Feature Guides for Linus
   description:
     Details on unique features of Object Mount for Linux
 hidden: false

@@ -1,12 +1,32 @@
 ---
 title: Alpine
+hideTitle: false
 docId: MeiPie8EDuo7eise
-
+weight: 5
 metadata:
   title: Alpine
   description:
     Alpine Installation Instructions
+hidden: false
 ---
+
+
+### Alpine Linux
+
+{% callout type="warning"  %}
+Object Mount APK packages for Alpine will be available soon.
+{% /callout %}
+
+```console
+sudo apk add --allow-untrusted ./cuno_{FULL-VERSION}_amd64_musl/cuno_{FULL-VERSION}_amd64_musl.apk
+```
+
+
+
+
+
+
+
 
 1. Download the installer. By downloading you are agreeing to the terms of the 🌐 [End User License Agreement](https://www.storj.io/legal/terms-of-use). Click to download the latest version of the 🌐 [self-extracting package for Alpine](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_musl_apk.run) from your browser, or run the command:
 

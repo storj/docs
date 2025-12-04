@@ -11,7 +11,7 @@ hidden: false
 ---
 
 
-### macOS using Docker
+## macOS using Docker
 
 {% callout type="note"  %}
 Alternatives to Docker on Mac are available, some recommended alternatives are:
@@ -26,7 +26,7 @@ Unfortunately, [colima](https://github.com/abiosoft/colima) is not currently sup
 See [](docId:yoopieyewevei1Eo) for more details.
 
 
-### Additional instructions for cuno-mac users
+## Additional instructions for cuno-mac users
 
 If you have installed Object Mount directly onto a Mac, you will only have access to Object Mount functionality within Docker containers. We provide the `cuno-mac` utility which you run from Terminal to launch conveniently set-up Linux containers.
 
@@ -44,7 +44,7 @@ If no arguments are given, `cuno-mac` will start a new interactive container and
 
 To return to macOS, run `exit` until the `(cuno)` prefix is removed. You may only need to do this once, or you may need to do it multiple times if you have started subshells.
 
-### Windows using WSL2
+## Windows using WSL2
 
 See [Windows](../installation/windows)
 
@@ -52,7 +52,7 @@ See [Windows](../installation/windows)
 Refer to the [Microsoft documentation on installing WSL](https://docs.microsoft.com/en-gb/windows/wsl/install) for more information.
 {% /callout %}
 
-### Exposing mounted object storage to the Host OS
+## Exposing mounted object storage to the Host OS
 
 If you’re running Object Mount in a virtual machine, you can expose any object storage mounted as volumes in it using guest-to-host volume mapping.
 

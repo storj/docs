@@ -11,7 +11,7 @@ hidden: false
 ---
 
 
-### Alpine Linux
+## Alpine Linux
 
 {% callout type="warning"  %}
 Object Mount APK packages for Alpine will be available soon.
@@ -73,7 +73,7 @@ sudo apk add --allow-untrusted ./cuno_{FULL-VERSION}_amd64_musl/cuno_{FULL-VERSI
    sh cuno_x86_64_musl_apk.run
    ```
 
-5. Please follow the interactive steps, read the displayed end-user licence agreement ([EULA](https://www.storj.io/legal/terms-of-use)) and agree to the terms to continue with the extraction. To automate this, you can set the environment variable `CUNO_INSTALL_ACCEPT_EULA="yes"` (this is equivalent to accepting the EULA).
+5. Please follow the interactive steps, read the displayed end-user license agreement ([EULA](https://www.storj.io/legal/terms-of-use)) and agree to the terms to continue with the extraction. To automate this, you can set the environment variable `CUNO_INSTALL_ACCEPT_EULA="yes"` (this is equivalent to accepting the EULA).
 
 6. The archive and its contents will be unpacked into a directory named `cuno_{FULL-VERSION}_x86_64_musl` containing the package itself and additional documents:
 

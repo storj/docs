@@ -1,6 +1,6 @@
 ---
 title: Concepts
-docId: KJzDdewgBVcK6rnp0Qho2
+docId: concepts
 redirects:
   - /node/KJzD-concepts
 weight: 5

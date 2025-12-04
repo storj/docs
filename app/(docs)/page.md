@@ -35,9 +35,34 @@ Some of the main Storj features include:
 
 ## How to Use These Docs
 
-On the left side of the screen, you'll find the docs navbar. The pages are organized sequentially that you can follow step-by-step or if you're already familiar with object storage you can jump to the section that applies most to your use case.
+This documentation is organized using the [Diataxis framework](https://diataxis.fr/) to help you find exactly what you need:
 
-On the right side of the screen, there's a table of contents to help you move between parts of a page. To find a page fast, use the search bar at the top or press Ctrl+K or Cmd+K on your keyboard.
+### Choose Your Path
+
+**New to Storj?** Start with our tutorials:
+- [**DCS**: Your First Week with Storj](/dcs/tutorials/your-first-week-with-storj) - Complete beginner guide
+- [**Object Mount**: Your First Mount](/object-mount) - Get started with filesystem access
+- [**Storage Node**: Set Up Your First Node](/node) - Start earning by providing storage
+
+**Need to solve a specific problem?** Check our how-to guides:
+- [**DCS How-to Guides**](/dcs/how-to) - Task-focused solutions
+- [**Object Mount How-to Guides**](/object-mount/how-to) - Specific configuration tasks
+- [**Storage Node How-to Guides**](/node/how-to) - Operational procedures
+
+**Looking for technical details?** Browse our reference sections:
+- [**DCS Reference**](/dcs/reference) - CLI commands and API specifications
+- [**Object Mount Reference**](/object-mount) - Configuration options, compatibility
+- [**Storage Node Reference**](/node) - System requirements, metrics
+
+**Want to understand how things work?** Read our concept explanations:
+- [**Core Concepts**](/learn/concepts) - Fundamental Storj concepts
+- [**Object Mount Concepts**](/object-mount/concepts) - Filesystem bridging explained
+- [**Storage Node Concepts**](/node/concepts) - Economics, reputation, participation
+
+**Quick Navigation Tips:**
+- Use the search bar (Ctrl+K or Cmd+K) to find specific topics
+- Follow the left sidebar for sequential learning
+- Use the right sidebar to jump within pages
 
 ## Join the community
 

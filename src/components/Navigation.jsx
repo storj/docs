@@ -23,6 +23,22 @@ function NavLink({ title, href, current, root, disclosure, className }) {
     padding = 'pl-0'
   }
 
+  if (!href) {
+    return (
+      <span
+        id={title}
+        className={clsx(
+          className,
+          padding,
+          `block w-full py-0.5 font-semibold text-slate-700 dark:text-slate-300`
+        )}
+        title={title}
+      >
+        {title}
+      </span>
+    )
+  }
+
   return (
     <Link
       id={title}
@@ -108,7 +124,7 @@ function NavItem({ item, root }) {
             title={item.title}
             root={root}
             disclosure
-            href={item.href ? item.href : walkTree(item).href}
+            href={item.href ? item.href : walkTree(item)?.href}
             current={current}
           />
         </div>

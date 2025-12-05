@@ -3,8 +3,15 @@
     "*.md": "markdoc"
   },
   "cSpell.words": [
+    "cuno",
     "Gbps",
     "markdoc",
-    "Storj"
-  ]
+    "mdash",
+    "posix",
+    "Storj",
+    "Virtio",
+    "virtiofs"
+  ],
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false
 }

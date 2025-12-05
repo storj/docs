@@ -1,37 +1,37 @@
 ---
-title: Linux
-hideTitle: true
-docID: wxtofwqcb5f2
-weight: 2
+title: Getting Started Guides
+hideTitle: false
+docId: xhNvtETAA6UBZVNH
+weight: 1
 metadata:
-  title: Linux Installation and Usage
+  title: Getting Started
   description:
-    How to install and use the Object Mount Linux package across different distributions.
+    Gettings started with Object Mount for Linux.
+hidden: false
 ---
 
-# Linux Installation and Usage
+The pages in these **Getting Started Guides** for Linux will introduce you to topics that should be understood _before_ installing and using Object Mount.
 
-This section covers everything you need to install and use the **Object Mount Linux package** across different distributions.
 
-Whether you're setting up on Ubuntu, Debian, CentOS, or another system, you'll find step-by-step instructions, package details, and best practices to help you get up and running quickly.
+## Deployment & Configuration Options on Linux
 
----
+When configuring Object Mount on Linux, it is important to understand the needs of the **tools** and **workloads** you plan to run. 
 
-## What’s Covered
+You can change settings for each workflow or tool, or you can set options at the bucket-level to impose a particular usage mode for all users.
 
-- Installation guides tailored for popular Linux distributions
-- System requirements and dependency notes
-- Instructions for mounting, configuration, and permissions
-- Optional performance and logging tips
 
----
+## Deployment Considerations
 
-## Related Pages
+There are two important, but independent, aspects to consider when configuring Object Mount for Linux:
 
-- [Debian/Ubuntu Installation](../linux/installation/debian/)
-- [RHEL/CentOS Installation](../linux/installation/redhat/)
-- [Core Concepts](../linux/getting-started/intro/)
+1. The requirements for your tools and applications to work _correctly_:
 
-If you're just getting started, we recommend beginning with your OS-specific guide. Each includes exactly what you need to install Object Mount safely and effectively.
+    - For **correct operation**, you need to know what level of **POSIX Compatibility** your tools require in order to function.
+    - **Object Mount for Linux** offers multiple **POSIX Compatibility Options** giving the end user an array of tools to fine-tune and tailor the functionality and performance of Object Mount for their specific use case and environment.
+    - See the article on [POSIX Options](docId:cbm3PcQXmLpuYcbg) to understand the many different POSIX compatibility choices available to you.
 
----
+2. Ensuring your specific tools and environment work _efficiently_:
+
+    - For **efficient operation**, your primary concerns are the bandwidth and latency between your compute resources and your object storage resources. 
+    - **Object Mount for Linux** supports multiple **Deployment Modes** to support a variety of unique bandwidth, user requirements, and environmental situations.
+    - See the [Deployment Modes](docId:bRnfbdNE6d5DaZzW) article to understand the different deployment modes available to you.

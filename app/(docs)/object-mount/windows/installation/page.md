@@ -19,7 +19,8 @@ This section covers how to install the the Object Mount native application for W
 
 Before you begin, make sure your PC meets the following system requirements:
 
-- Windows 10 or later (or Windows Server 2016 or newer) on x86_64 and AMD processors (no ARM CPU support at this time)
+- Windows 10 or later (or Windows Server 2016 or newer) 
+- Intel x86_64 or AMD processor (no ARM CPU support at this time)
 - At least 300MB of free disk space  
 - Internet connection for mounting cloud-hosted buckets, or LAN connection for mounting local buckets
 

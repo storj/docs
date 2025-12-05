@@ -41,7 +41,7 @@ sh cuno_mne_amd64_glibc_deb.run
 {% callout type="info" %}
 **Processor Compatibility**
 
-Although the Object Mount Package Installer’s file is named `cuno_mne_amd64_glibc_deb.run`, it is designed to run on _both_ AMD64 and Intel x86_64 processors (although not ARM-based CPUs).
+Although the Debian distro file naming convention is to only specify `AMD64` (ex: `cuno_mne_amd64_glibc_deb.run`), the Object Mount DEB/APT Installer Package is designed to run on _both_ AMD64 and Intel x86_64 processors (although not ARM-based CPUs).
 {% /callout %}
 
 The unpacking process will prompt you to read and agree to the Object Mount **end-user license agreement (EULA)**. 

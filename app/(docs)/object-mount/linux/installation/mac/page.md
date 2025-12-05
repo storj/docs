@@ -1,290 +1,222 @@
 ---
-title: MacOS (Linux)
+title: macOS (Linux Container)
 hideTitle: false
 docId: yoopieyewevei1Eo
 weight: 6
 metadata:
-  title: MacOS
+  title: macOS
   description:
-    MacOS Installation Instructions
+    Installation Instructions for running Object Mount for Linux in a container on a Mac.
 hidden: false
 ---
 
+Storj provides a full-featured, native version of [Object Mount for macOS](docId:apog2ij9jk6f).
 
-## macOS using Docker
+If you are unable to use that native Mac app, you can run a **Linux version** of Object Mount on a Mac by using a container environment such as 🌐 [Docker](https://www.docker.com/products/docker-desktop/) or 🌐 [Rancher Desktop](https://rancherdesktop.io/).
 
-{% callout type="note"  %}
-Alternatives to Docker on Mac are available, some recommended alternatives are:
+{% callout type="warning" %}
+  **Apple Silicon (M-Chip) Challenges**
 
-- [Rancher Desktop](https://rancherdesktop.io/) (free) - If you're on Apple Silicon, enable Rosetta (Settings > Virtual Machine > VZ: Enable Rosetta support) and VirtioFS (Settings > Virtual Machine > Volumes: virtiofs)
-- [OrbStack for Mac](https://orbstack.dev/) (may be faster) - OrbStack works out of the box.
+  **Important:** When creating a virtualized or containerized environment on an Apple Silicon (M-Chip)-based Mac, the operating system within the VM/Container likely needs to be an ARM/M-Chip compatible version of the OS. 
+  
+  And any Apps (such as Object Mount) installed within that VM/Containerized OS _also_ need to be written to conform to the underlying chip architecture.
 
-Unfortunately, [colima](https://github.com/abiosoft/colima) is not currently supported.
+  As of this writing, Storj does _not_ provide any ARM-based versions of Object Mount.
+
+  This may prevent successful installation of Object Mount in _any_ VM/Container running _any_ OS or distribution on an Apple Silicon (M-Chip)-based Mac.
+
+  **Using the Native Mac Object Mount client is strongly advised.**
 {% /callout %}
 
-<!-- .. include:: common-mac-install-instructions.rst -->
-See [](docId:yoopieyewevei1Eo) for more details.
 
+## macOS - Using Linux Containers
 
-## Additional instructions for cuno-mac users
-
-If you have installed Object Mount directly onto a Mac, you will only have access to Object Mount functionality within Docker containers. We provide the `cuno-mac` utility which you run from Terminal to launch conveniently set-up Linux containers.
-
-The first time `cuno-mac` is run, a Docker image will be created with Object Mount ready to use, and a user will be set up within the container similar to your local user on the host Mac.
-
-The Dockerfile found at `~/.local/opt/cuno/share/macos/Dockerfile` can be edited to include any software packages you wish to have available inside the container. However, to update this will require deleting the old image first (by doing `docker rmi cuno-mac`), you can then run `cuno-mac` to rebuild it.
-
-You must choose between using `cuno-mac` and `cuno` depending on the environment you are currently in.
-
-To start a new session in which you can use Object Mount, you run `cuno-mac` in Terminal.
-
-If any arguments are given to `cuno-mac`, it will start a temporary container and pass the arguments on to `cuno`.
-
-If no arguments are given, `cuno-mac` will start a new interactive container and prefix `(cuno)` to your command-line prompt. This indicated that you are now inside a Docker container, so from here you cannot use `cuno-mac` and should instead use `cuno`.
-
-To return to macOS, run `exit` until the `(cuno)` prefix is removed. You may only need to do this once, or you may need to do it multiple times if you have started subshells.
-
-## Windows using WSL2
-
-See [Windows](../installation/windows)
+Running Object Mount for Linux on a Mac **requires** the use of containers. Although modern macOS versions are derived from a BSD Unix kernel, you _cannot_ install or run any version of Object Mount for Linux directly within a standalone Mac Terminal window.
 
 {% callout type="note"  %}
-Refer to the [Microsoft documentation on installing WSL](https://docs.microsoft.com/en-gb/windows/wsl/install) for more information.
+**macOS Version requirements**
+
+For Macs using Apple Silicon (ARM/M1-M5 chips) macOS 13.0 Ventura or later is required.
 {% /callout %}
 
-## Exposing mounted object storage to the Host OS
+The instructions for installing Object Mount for Linux in a container on a Mac are broken down into two separate steps:
 
-If you’re running Object Mount in a virtual machine, you can expose any object storage mounted as volumes in it using guest-to-host volume mapping.
+  - **Step 1: Container Prep**
+    - Debian/Ubuntu Linux distribution
+    - Settings changes for proper functionality
+  - **Step 2: Download, Install & Activate Object Mount**
+    - Download the Object Mount Installer
+    - Install & Activate Object Mount
+
+These options are described in detail below.
 
 
+## Step 1: Container Prep
 
+[Object Mount for Linux](docId:iethahkeeX5EiJoh) can be installed on a wide variety of Linux distributions. For simplicity sake, we will assume installation on an **Ubuntu Linux** deployment within a **Docker container**. 
 
+Adjust these instructions as needed for your specific OS and container platform.
 
+The details provided below are separated into two parts: 
+  - Specifics for Intel processor-based Macs
+  - Specifics for Apple Silicon-based (M1-M5 chip) Macs
 
+Within each division you will find details and setting recommendations for **Docker** and **Rancher**.
 
+If unspecified, instructions will presume Docker as your containerization platform.
 
-
-## MacOS - Using Linux Containers
-
-A fully native Mac client is in private beta, with a public beta available soon!
-
-However, if you would like to run the Linux version of Object Mount on your Mac, you can do so inside a container.
-
-{% callout type="note"  %}
-For those on Apple Silicon (ARM) Macs, macOS 13.0 Ventura or later is required.
-{% /callout %}
-
-1. *All* Mac users require a virtualization/containerization software to be installed and set up.
 {% tabs %}
-{% tab label="Intel" %}
-## Intel
-We fully support usage of [Docker](https://docs.docker.com/desktop/install/mac-install/) and [Rancher Desktop](https://rancherdesktop.io/). Docker is assumed in these guides.
+{% tab label="Intel Processor" %}
+**Setting Changes when using: Intel Processor Macs**
 
-Some settings should be changed to use Object Mount:
+Some container settings should be changed prior to installing and using Object Mount.
+
 {% tabs %}
 {% tab label="Docker" %}
-## Docker
+**Setting Changes for: Docker on Intel Processor Macs**
 
-We recommend changing the file sharing implementation to VirtioFS:
-- Open Docker Desktop's ``Settings`` panel
-- Open the ``General`` section.
-- For the setting ``Choose file sharing implementation for your containers`` select ``VirtioFS``.
-- Use the ``Apply & Restart`` button to save the change.
+We recommend changing the file sharing implementation to **VirtioFS**:
+  - Open Docker Desktop’s `Settings` panel.
+  - Open the `General` section.
+  - For the setting `Choose file sharing implementation for your containers` select **“VirtioFS”**.
+  - Use the `Apply & Restart` button to save the change.
 {% /tab %}
+
 {% tab label="Rancher" %}
-## Rancher
+**Setting Changes for: Rancher on Intel Processor Macs**
 
-We recommend using the Apple Virtualization Framework (VZ), and the VirtioFS file sharing implementation:
-- Open Rancher Desktop's ``Preferences`` panel.
-- Open the ``Virtual Machine`` section.
-- Open the ``Emulation`` tab, and set ``Virtual Machine Type`` to ``VZ``.
-- Open ``Volumes`` tab, and set the ``Mount Type`` to  ``virtiofs``.
-- Use the ``Apply`` button to save the changes.
+We recommend using the Apple **Virtualization Framework (VZ)**, and the **VirtioFS** file sharing implementation:
+  - Open Rancher Desktop's `Preferences` panel.
+  - Open the `Virtual Machine` section.
+  - Open the `Emulation` tab, and set `Virtual Machine Type` to **“VZ”**.
+  - Open `Volumes` tab, and set the `Mount Type` to **“virtiofs”**.
+  - Use the `Apply` button to save the changes.
 
-In order to use the ``cuno-mac`` utility with Rancher, the "dockerd" (moby) container engine must be used:
-- Open Rancher Desktop's ``Preferences`` panel.
-- Open the ``Container Engine`` section.
-- In the ``General`` tab, set the ``Container Engine`` to ``dockerd (moby)``.
-- Use the ``Apply`` button to save the change.
-{% /tab %}
-{% tab label="OrbStack" %}
-## OrbStack
-
-You may also use [OrbStack for Mac](https://orbstack.dev/)  and find it to be faster, but ``cuno-mac`` native support is not available in this case.
-
-Unfortunately, [colima](https://github.com/abiosoft/colima) is not currently supported.
+In order to use the `cuno-mac` CLI utility with Rancher, the **“dockerd (moby)”** container engine must be used:
+  - Open Rancher Desktop's `Preferences` panel.
+  - Open the `Container Engine` section.
+  - In the `General` tab, set the `Container Engine` to **“dockerd (moby)”**.
+  - Use the `Apply` button to save the change.
 {% /tab %}
 {% /tabs %}
-{% /tab %}
 
-{% tab label="Apple Silicon (ARM)" %}
-## Apple Silicon (ARM)
-We assume usage of Docker in these guides, but any of following containerization technologies is supported with some additional set up required for ARM Macs:
+{% /tab %}
+{% tab label="Apple Silicon (M Chip)" %}
+**Setting Changes when using: Apple Silicon (M Chip) Macs**
+
+Some container settings should be changed prior to installing and using Object Mount.
+
 {% tabs %}
 {% tab label="Docker" %}
-## Docker
+**Setting Changes for: Docker on Apple Silicon (M Chip) Macs**
 
-[Docker Desktop](https://docs.docker.com/desktop/install/mac-install/) version ``4.16.0`` or later is required.
+Docker Desktop version `4.16.0` or later is required.
 
-Use Rosetta for hardware emulation:
-- Open Docker Desktop's ``Settings`` panel
-- Open the ``Features in development`` section.
-- Open the ``Beta features`` tab, and enable the setting :code:`Use Rosetta for x86/amd64 emulation on Apple Silicon`.
-- We recommend changing the file sharing implementation to VirtioFS:
-- Open Docker Desktop's ``Settings`` panel
-- Open the ``General`` section.
-- For the setting ``Choose file sharing implementation for your containers`` select ``VirtioFS``.
-- Use the ``Apply & Restart`` button to save the change.
-- Restart the Docker Engine by clicking on the Docker icon in the menu bar and selecting :code:`Restart`.
+Use **Rosetta** for hardware emulation:
+  - Open Docker Desktop’s `Settings` panel.
+  - Open the `Features in development` section.
+  - Open the `Beta features` tab, and enable the setting **“Use Rosetta for x86/amd64 emulation on Apple Silicon”**.
+
+We recommend changing the file sharing implementation to **VirtioFS**:
+  - Open Docker Desktop’s `Settings` panel.
+  - Open the `General` section.
+  - For the setting `Choose file sharing implementation for your containers` select **“VirtioFS”**.
+  - Use the `Apply & Restart` button to save the change.
+
+Restart the Docker Engine by clicking on the Docker icon in the menu bar and selecting **“Restart”**.
 {% /tab %}
+
 {% tab label="Rancher" %}
-## Rancher
+**Setting Changes for: Rancher on Apple Silicon (M Chip) Macs**
 
-Use Rosetta for emulation, and we recommend changing the file sharing implementation to VirtioFS:
-- Open Rancher Desktop's ``Preferences`` panel.
-- Open the ``Virtual Machine`` section.
-- Open the ``Emulation`` tab
-- Set ``Virtual Machine Type`` to ``VZ``.
-- In the ``VZ`` sub-option, enable ``Rosetta``.
-- Open ``Volumes`` tab, and set the ``Mount Type`` to  ``virtiofs``.
-- Use the ``Apply`` button to save the changes.
-- In order to use the ``cuno-mac`` utility with Rancher, the "dockerd" (moby) container engine must be used:
-- Open Rancher Desktop's ``Preferences`` panel.
-- Open the ``Container Engine`` section.
-- In the ``General`` tab, set the ``Container Engine`` to ``dockerd (moby)``.
-- Use the ``Apply`` button to save the change.
-{% /tab %}
-{% tab label="OrbStack" %}
-## OrbStack
+We recommend using the Apple **Virtualization Framework (VZ)** and **Rosetta** for emulation:
+  - Open Rancher Desktop’s `Preferences` panel.
+  - Open the `Virtual Machine` section.
+  - Select the `Emulation` tab.
+  - Set `Virtual Machine Type` to **“VZ”**.
+  - In the `VZ` sub-option, enable **“Rosetta”**.
 
-Usage of Object Mount on [OrbStack for Mac](https://orbstack.dev/) containers works without any additional set up required. 
+We recommend using the **VirtioFS** file sharing implementation:
+  - Select the `Volumes` tab, and set the `Mount Type` to **“virtiofs”**.
 
-OrbStack does not currently work with the  native/host ``cuno-mac`` utility.
+Use the `Apply` button to save the changes.
+
+In order to use the `cuno-mac` CLI utility with Rancher, the **“dockerd (moby)”** container engine must be used:
+  - Open Rancher Desktop’s `Preferences` panel.
+  - Open the `Container Engine` section.
+  - In the `General` tab, set the `Container Engine` to **“dockerd (moby)”**.
+
+Use the `Apply` button to save the change.
 {% /tab %}
 {% /tabs %}
 {% /tab %}
 {% /tabs %}
 
-2. Download the installer. By downloading you are agreeing to the terms of the 🌐 [End User License Agreement](https://www.storj.io/legal/terms-of-use). Click to download the 🌐 [Scripted Installer](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno-glibc-installer.run).
+{% callout type="warning" %}
+  **Alternate Container Platforms**
 
-3. Install the package onto your Mac directly, or inside a Linux container:
-{% tabs %}
-{% tab label="Install on macOS" %}
-## Install on macOS
-Installing Object Mount on to your Mac directly will allow you to use ``cuno-mac``, our handy tool for launching Linux containers that automatically have your local installation of Object Mount installed inside them.
+  **OrbStack:**
 
-NB: To use ``cuno-mac``, you must also have Python 3 installed and available as ``python3`` in Terminal.
+  - You _can_ use 🌐 [OrbStack](https://orbstack.dev/) for Mac and may find it to be faster. 
+  - But `cuno-mac` CLI support is not provided when using OrbStack.
+  - No additional settings changes are required for OrbStack usage.
 
-In a Terminal on your Mac, navigate to your download directory. If this was the default ``Downloads`` folder, you can run:
-```shell
-cd /Users/$USER/Downloads
-```
-Run the installer (without ``sudo``):
-```shell
-sh cuno-glibc-installer.run
-```
+  **colima:**
 
-Please follow the interactive steps, read the displayed end-user license agreement (EULA) and agree to the terms to continue with the installation.
-- Export the ``cuno-mac`` location to your ``PATH`` variable:
-```shell
-export PATH=$PATH:~/.local/opt/cuno/share/macos
-```
-- To have this persist and apply to new Terminal sessions, add this as a new line at the bottom of the file ``/Users/<your username>/.bash_profile`` using a text editor, or using the following command in a Terminal session:
-```shell 
-echo "PATH=\$PATH:~/.local/opt/cuno/share/macos" >> ~/.bash_profile
-```
-**WARNING:** Do not miss the ``\`` because otherwise your current ``PATH`` will be written literally into the profile and break future changes.
-{% /tab %}
-{% tab label="Install in Linux containers" %}
-## Install in Linux containers
-If installing on your Mac's local user is not preferred, you can install Object Mount within a container of your choice. 
+  - 🌐 [colima](https://github.com/abiosoft/colima) is not supported at this time.
 
-We provide instructions here for installing within Docker containers using Ubuntu images. These instructions can be adapted to other Linux distributions, as well other virtualization technologies such as Rancher, and OrbStack.
-
-These instructions depend on the architecture of you Mac, please follow the appropriate guide:
-{% tabs %}
-{% tab label="Intel" %}
-## Intel
-- Run the following command to run a Docker container with the Object Mount installer made available at ``/tmp/cuno_install``:
-
-**WARNING:** This command will download the latest stable Ubuntu image, which could be large.
-```shell
-docker run -it --rm --entrypoint /bin/bash \
--v <path_to_installation_script>/cuno-glibc-installer:/tmp/cuno_install \
---name cuno-container \
-ubuntu:latest
-```
-- Within the Docker container (using ``docker exec -it cuno-container /bin/bash``), install Object Mount:
-```shell
-sh /tmp/cuno_install
-```
-- Please follow the interactive steps, read the displayed end-user license agreement (EULA) and agree to the terms to continue with the installation.
-{% /tab%}
-{% tab label="Apple Silicon (ARM)" %}
-## Apple Silicon (ARM)
-- Run the following command to run a Docker container with the Object Mount installer made available at ``/tmp/cuno_install``:
-
-**WARNING:** This command will download the latest stable Ubuntu image, which could be large.
-```shell
-docker run -it --rm --entrypoint /bin/bash \
--v <path_to_installation_script>:/tmp/cuno_install \
---name cuno-container \
---platform linux/amd64 ubuntu:latest
-```
-
-NB: The :code:`--platform linux/amd64` flag is *required* to run Object Mount on Macs with Apple Silicon.
-
-- Within the Docker container (using ``docker exec -it cuno-container /bin/bash``), install Object Mount:
-```shell
-sh /tmp/cuno_install
-```
-- Please follow the interactive steps, read the displayed end-user license agreement (EULA) and agree to the terms to continue with the installation.
-{% /tab%}
-{% /tabs %}
-{% /tab %}
-{% /tabs %}
-
-4. The installation will prompt you to set the `CUNO_ROOT` environment variable to the installation directory. This is not always necessary when using Object Mount, but it will make it easier to follow the steps in this guide.
+{% /callout %}
 
 
+## Step 2: Download, Install & Activate Object Mount
+
+Once your container is up and running with a Linux distribution, you can install the appropriate version of Object Mount for Linux within that containerized OS.
+
+The specific installation instructions for each Linux flavor (Package installer or Scripted Installer) can be followed verbatim:
+
+| **Scripted Installers**                 | **Installation Guide** |
+|-----------------------------------------|------------------------|
+| **glibc** (C standard library)          | [glibc Scripted Installer](docId:ahWohd5eegh6eizi)
+| **musl** (C standard library)           | [musl Scripted Installer](docId:ao0yaeng2Aitheel)
 
 
+| **Package Managers**                    | **Installation Guide** |
+|-----------------------------------------|------------------------|
+| **Debian** (& Ubuntu, etc.)             | [Debian Package Installer](docId:aemie9zeiP9Nie2k)
+| **Red Hat** (& RPM, RHEL, CentOS, etc.) | [Red Hat Package Installer](docId:woosaugaiNohree9)
+| **Alpine** (& APM, etc.)                | [APK Package Installer](docId:MeiPie8EDuo7eise)
+| **macOS** (Linux)                       | [macOS (via Linux in containers)](docId:yoopieyewevei1Eo)
+| **Windows** (Linux)                     | [Windows (via Windows Subsystem for Linux [WSL])](docId:bekoo5aenePoo7Oh)
+
+Be sure to obtain an installer package/script that corresponds to your Mac’s processor.
+
+{% callout type="warning" %}
+  **Apple Silicon (M-Chip) Challenges**
+
+  **Important:** As stated at the top of this article, when creating a virtualized or containerized environment on an Apple Silicon (M-Chip)-based Mac, the operating system within the VM/Container likely needs to be an ARM/M-Chip compatible version of the OS. 
+  
+  And any Apps (such as Object Mount) installed within that VM/Containerized OS _also_ need to be written to conform to the underlying chip architecture.
+
+  As of this writing, Storj does _not_ provide any ARM-based versions of Object Mount.
+
+  This may prevent successful installation of Object Mount in _any_ VM/Container running _any_ OS or distribution on an Apple Silicon (M-Chip)-based Mac.
+
+  **Using the Native Mac Object Mount client is strongly advised.**
+{% /callout %}
 
 
+## Using Object Mount for Linux within your Container
 
+Object Mount can now be used from your Mac within the containerized Linux OS.
 
+You will be able to use Object Mount with any Linux applications also installed in the Linux container.
 
+{% callout type="info" %}
+  **`cuno-mac` CLI utility**
 
-## Validating Your Installation (MOVE TO MAC SECTION)
+  The `cuno-mac` CLI utility referenced above allows for the launching and controlling of containerized Linux instances from within a native Mac Terminal Window. Linux containers are still required but can be interacted with from the Mac’s command line.
 
-You should now be able to run Object Mount from the command line, which you can test out by running the following command:
+  Use of `cuno-mac` requires the installation of Python 3 on your Mac.
 
-{% tabs %}
-
-
-{% tab label="Mac (Linux)" %}
-   ```shell
-   # terminal
-   cuno-mac version
-   ```
-    Note:
-
-    If you have installed Object Mount directly onto a Mac, you must choose between using ``cuno-mac`` and ``cuno`` depending on the environment you are currently in.
-
-    If you're in a Mac Terminal session and have not run ``cuno-mac``, then you must replace ``cuno`` in any instructions with ``cuno-mac``.
-
-    If you have already started a Object Mount container by calling ``cuno-mac``, you will see the ``(cuno)`` prefix on your command line so any instructions using ``cuno`` commands will work as-is.
-
-    To return to macOS, run ``exit``.
-
-    See [user-guide-cuno-mac](../installation/mac) for more information.
-    
-    If you have already started a ``cuno-mac`` session:
-    
-   ```shell
-   # terminal
-   cuno version
-   ```
-
-{% /tab %}
-{% /tabs %}
+  Detailed usage of the **`cuno-mac` CLI utility** is beyond the scope of this article.
+{% /callout %}

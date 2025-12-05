@@ -1,83 +1,73 @@
 ---
-title: Object Mount in Media Workflows
+title: Media Workflow Guides
 hideTitle: true
 docId: JXF4_NLsV@nh9QcT
 weight: 6
 metadata:
-  title: Object Mount in Media Workflows
+  title: Media Workflow Guides
   description:
-    Overview of using Object Mount with creative tools like DaVinci Resolve and Adobe Premiere Pro
+    Overview of using Object Mount with creative tools like DaVinci Resolve and Adobe Premiere Pro.
 hidden: false
 ---
 
 # Object Mount in Media Workflows
 
-Object Mount is designed to make working with cloud storage as seamless as possible — especially in media production environments where performance, compatibility, and simplicity matter.
-
-This page gives a quick overview of how Object Mount fits into post-production workflows, and where it works well with tools like **DaVinci Resolve** and **Adobe Premiere Pro**.
-
----
-
-## What is Object Mount?
-
-Object Mount is a native S3 mount tool that lets you treat remote object storage like a local drive. It works with **Storj**, **AWS S3**, and other compatible providers, and is available on **macOS** and **Windows**.
-
-Once mounted, your object storage behaves like any other drive — you can browse, preview, and edit media directly from it using your preferred creative software.
-
----
-
-## Object Mount Demo
+Object Mount is designed to make working with cloud storage as seamless as possible &mdash; especially in media production environments where performance, compatibility, and simplicity matter.
 
 {% youtube-embed videoId="Si__mi8HXPE" /%}
 
----
+The articles in this **Media Workflow Guides** section will provide an overview of how Object Mount fits into post-production workflows, as well as configuration tips for tools like **Adobe Premiere Pro**, **Avid Media Composer** and **DaVinci Resolve**.
 
-## DaVinci Resolve
-
-Object Mount integrates cleanly into DaVinci Resolve workflows:
-
-- Media can be accessed directly from your Object Mount volume  
-- Stills, cache, and preview files are best kept on local SSD/NVMe to avoid bottlenecks  
-- Direct I/O should be disabled for the Object Mount path  
-- Optional settings like proxy mode and smart caching can improve playback on cloud-mounted media
-
-See [Using Object Mount with DaVinci Resolve](./media-workflows/davinci-resolve) for the full setup guide.
-
----
 
 ## Adobe Premiere Pro
 
-Premiere Pro users can also benefit from Object Mount in similar ways:
+Premiere Pro users benefit from Object Mount:
 
-- Projects and source footage can be stored remotely and edited directly  
-- Media can be linked and relinked to Object Mount volumes just like local storage  
-- Proxies and cache files are recommended to remain on local disks for speed  
+  - Projects and source footage can be stored remotely and edited directly.
+  - Media can be linked and relinked to Object Mount volumes just like local storage.
+  - Assign proxies and cache files to local disks for the best performance.
+  - Object Mount volumes appear like regular drives in Finder or File Explorer, making them easy to integrate with Premiere’s media browser and import panels.
 
-{% callout type="info" %}
-Object Mount volumes appear like regular drives in Finder or File Explorer, making them easy to integrate with Premiere’s media browser and import panels.
-{% /callout %}
+See [Using Object Mount with Premiere Pro](docId:fdz5QyWwRqaDFYS9) for complete configuration tips.
 
----
+
+## Avid Media Composer
+
+Object Mount integrates cleanly into Avid Media Composer workflows:
+
+  - Preview and scrub footage before importing.
+  - Store Scratch Disks and Proxies on local, fast volumes.
+  - Adjust Proxy file formats to improve performance.
+
+See [Using Object Mount with Avid Media Composer](docId:eSTEd9V5JbexxYDQ) for full setup and setting guidelines.
+
+
+## DaVinci Resolve
+
+Object Mount interacts seamlessly with DaVinci Resolve:
+
+  - Media can be accessed directly from your Object Mount volume.
+  - Stills, cache, and preview files are fastest when stored on local SSD/NVMe volumes.
+  - Direct I/O should be disabled for the Object Mount path.
+  - Optional settings like proxy mode and smart caching can improve playback on cloud-mounted media.
+
+See [Using Object Mount with DaVinci Resolve](docId:xZ5tdyuyYGM8Lrfp) for more details.
+
 
 ## When to Use Object Mount
 
 Object Mount is ideal for:
 
-- Remote editing workflows  
-- Team environments where storage is centralised  
-- Archival footage access over cloud  
-- High-speed read access (e.g. proxy editing or frame review)
+  - Remote editing workflows  
+  - Team environments where storage is centralized  
+  - Archival footage access directly from the cloud  
+  - High-speed read access (e.g.: proxy editing or frame review)
 
-It’s particularly well-suited for **hybrid workflows** where some assets live on fast local disks and others come in from the cloud — without needing clunky manual sync tools or complex workflows.
+Object Mount is particularly well-suited for **hybrid workflows** where some assets live on fast local disks, while other content comes in from the cloud &mdash; with no need for manual sync tools or complex workflows.
 
----
 
 ## Final Notes
 
-Object Mount is not a replacement for all local workflows — cache files, renders, and scratch disks are still best kept local. But for accessing and working with cloud-hosted media, it bridges the gap between storage and usability beautifully.
+Object Mount is not a replacement for all local workflows &mdash; cache files, renders, and scratch disks are still best kept on local volumes. 
 
-For app-specific setup steps, visit:
-
-- [Object Mount with DaVinci Resolve](./media-workflows/davinci-resolve/)  
-- [Object Mount with Adobe Premiere Pro](./media-workflows/premiere-pro/)
-- [Object Mount with Avid Media Composer](./media-workflows/media-composer/)
+But for accessing and working with cloud-hosted media, Object Mount bridges the gap between cloud storage and simplified usability beautifully.

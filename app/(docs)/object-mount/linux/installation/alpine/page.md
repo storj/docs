@@ -41,7 +41,7 @@ sh cuno_mne_x86_64_musl_apk.run
 {% callout type="info" %}
 **Processor Compatibility**
 
-Although the Object Mount Package Installer’s file is named `cuno_mne_x86_64_musl_apk.run`, it is designed to run on _both_ AMD64 and Intel x86_64 processors (although not ARM-based CPUs).
+Although the Alpine distro file naming convention is to only specify `X86_64` (ex: `cuno_mne_x86_64_musl_apk.run`), the Object Mount APK Installer Package is designed to run on _both_ AMD64 and Intel x86_64 processors (although not ARM-based CPUs).
 {% /callout %}
 
 The unpacking process will prompt you to read and agree to the Object Mount **end-user license agreement (EULA)**. 

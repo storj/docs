@@ -6,39 +6,88 @@ weight: 4
 metadata:
   title: Red Hat
   description:
-    Red Hat Installation Instructions
+    Red Hat Package Installer Instructions
 hidden: false
 ---
 
-1. Donwload the installer. By downloading you are agreeing to the terms of the 🌐 [End User License Agreement](https://www.storj.io/legal/terms-of-use). Click to download the latest version of the 🌐 [self-extracting package for RHEL](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_glibc_rpm.run) from your browser, or run the command:
+Storj provides an Object Mount package installer for Red Hat Linux (and 🌐 [RHEL-based Linux distributions](https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux_derivatives))
 
-   ```console
-   wget https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_glibc_rpm.run
-   ```
+{% callout type="info" %}
+**Optional: Scripted Installer**
 
-2. Unpack the archive by running:
+If you prefer to use a glibc-based **scripted installer**, refer to the [](docId:ahWohd5eegh6eizi) installation instructions.
+{% /callout %}
 
-   ```console
-   sh cuno_x86_64_glibc_rpm.run
-   ```
+Follow the steps below to install and configure Object Mount for **Red Hat**-based Linux platforms.
 
-3. Please follow the interactive steps, read the displayed end-user licence agreement (EULA) and agree to the terms to continue with the extraction. To automate this, you can set the environment variable `CUNO_INSTALL_ACCEPT_EULA="yes"` (this is equivalent to accepting the EULA).
 
-4. The archive and its contents will be unpacked into a directory named `cuno_{FULL-VERSION}_x86_64_glibc` containing the package itself and additional documents:
+## Step 1. Download the Installer Package
 
-   ```console
-   $ ls cuno_{FULL-VERSION}_x86_64_glibc
-   cuno_{FULL-VERSION}_x84_64_.rpm
-   CUNO-Installation-and-User-Guide.pdf
-   ```
+Download the latest package installer.
 
-5. Install Object Mount and its dependencies using `yum`:
+- **Note:** If you do not have a download link, reach out to your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch).
 
-   ```console
-   sudo yum makecache
-   sudo yum install ./cuno_{FULL-VERSION}_x86_64_glibc/cuno_{FULL-VERSION}_x86_64_glibc.rpm
-   ```
 
-6. The installation will prompt you to activate Object Mount by starting a trial or entering a license key. Follow the steps interactively, or automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
+## Step 2. Unpack the Archive
 
-7. The installation will prompt you to set the `CUNO_ROOT` environment variable to the installation directory. This is not always necessary when using Object Mount, but it will make it easier to follow the steps in this guide.
+Use the installer’s `.run` script to unpack the archive by entering the following command from a terminal window:
+
+```console
+sh cuno_mne_x86_64_glibc_rpm.run
+```
+
+{% callout type="info" %}
+**Processor Compatibility**
+
+Although the Object Mount Package Installer’s file is named `cuno_mne_x86_64_glibc_rpm.run`, it is designed to run on _both_ AMD64 and Intel x86_64 processors (although not ARM-based CPUs).
+{% /callout %}
+
+The unpacking process will prompt you to read and agree to the Object Mount **end-user license agreement (EULA)**. 
+
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-eula.jpg)
+
+- **Note:** You can automate this step by setting the environment variable `CUNO_INSTALL_ACCEPT_EULA="yes"`. (This is equivalent to accepting the EULA).
+
+The archive and its contents will be unpacked into a directory named `cuno_{VERSION}_x86_64_glibc_rpm` containing the package itself plus some additional files.
+
+View the unpacked contents with the following `ls` command (substituting your version number):
+
+```console
+$ ls cuno_1.2.8.8_x86_64_glibc_rpm
+cuno_1.2.8.8_x86_64_glibc.rpm
+CUNO-Installation-and-Usage-Guide.pdf
+```
+
+
+## Step 3. Install Object Mount and its dependencies using `yum`
+
+**3a.** Use the following commands to extract and install Object Mount (substituting your version number):
+
+```console
+sudo yum makecache
+sudo yum install ./cuno_1.2.8.8_x86_64_glibc_rpm/cuno_1.2.8.8_x86_64_glibc.rpm
+```
+
+The installer will fetch and install any necessary additional packages (such as `libfuse`, etc.).
+
+**3b.** Next, the installation process will prompt you to **activate Object Mount**. 
+
+- Press 1 to activate a **free trial**:
+  - This will activate a fully-featured 14-day free trial.
+- Press 2 if you already have a **license key**:
+  - Paste your license key or enter a full path to a license key file.
+
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-enter-license-key.jpg)
+
+- **Note:** You can automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
+
+{% callout type="note"  %}
+**Access for: All-Users**
+
+Due to the use of `sudo`, all package manager installations install Object Mount for use by _all users_ of the system, not just the user that initiated the install process.
+{% /callout %}
+
+
+## Next Steps
+
+Once Object Mount is installed, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.

@@ -4,9 +4,9 @@ hideTitle: false
 docId: ahWohd5eegh6eizi
 weight: 1
 metadata:
-  title: Glibc
+  title: glibc
   description:
-    glibc Installation Instructions
+    glibc Scripted Installer Instructions
 hidden: false
 ---
 
@@ -19,7 +19,7 @@ Storj’s Object Mount **glibc scripted installer** (a `.run` file) is compatibl
 This installer shell script allows you to install Object Mount (for the current user) _without_ needing root privileges &mdash; no `sudo` required.
 
 {% callout type="info" %}
-**Package Installer**
+**Optional: Package Installer**
 
 If you prefer a **full installer** for use with package managers (i.e.: Debian, Ubuntu, etc.) refer to the [](docId:aemie9zeiP9Nie2k) installation instructions.
 {% /callout %}
@@ -35,8 +35,8 @@ Download the latest scripted installer.
 
 Be sure to download the correct script file for your specific chip architecture:
 
-| **Chip Type** | **Scripted Installer Filename**    |
-|---------------|------------------------------------|
+| **Chip Type** | **Scripted Installer Filename** (Example) |
+|---------------|-------------------------------------------|
 | AMD x64       | cuno-mne-amd64-glibc-installer.run
 | Intel x86     | cuno-mne-x86_64-glibc-installer.run
 
@@ -85,7 +85,7 @@ Be sure to download the correct script file for your specific chip architecture:
 
 {% /tabs %}
 
-**2c.** The installation process will prompt you to read and agree to the **end-user license agreement (EULA)**. 
+**2c.** The installation process will prompt you to read and agree to the Object Mount **end-user license agreement (EULA)**. 
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-eula.jpg)
 
@@ -105,16 +105,17 @@ Be sure to download the correct script file for your specific chip architecture:
 
 ## Installation Locations: Scripted Installers
 
-When Object Mount is installed via a **Scripted Installer** (e.g.: glibc or musl), it gets installed to different locations depending on whether it was installed by root, or by a non-root user.
+When Object Mount is installed via a **Scripted Installer** (e.g.: glibc or musl), components are installed to different locations depending on whether it was installed by a root, or by a non-root user.
 
-| Install Method  | Location (`CUNO_ROOT`) | Symlinks created in            |
-|-----------------|------------------------|--------------------------------|
-| Non-Root User   | `~/.local/opt/cuno/`   | `~/.local/bin/`
-|                 |                        | `~/.local/lib/x86_64-linux-gnu`
-|                 |                        | `~/.local/share/man/`
-| Root User       | `/opt/cuno/`           | `/usr/bin/` 
-|                 |                        | `/usr/lib/`
-|                 |                        | `/usr/share/man/`
+| Install Method     | Location (`CUNO_ROOT`) | Symlinks created in            |
+|--------------------|------------------------|--------------------------------|
+| Non-Root User      | `~/.local/opt/cuno/`   | `~/.local/bin/`
+|                    |                        | `~/.local/lib/x86_64-linux-gnu`
+|                    |                        | `~/.local/share/man/`
+| Root User (`sudo`) | `/opt/cuno/`           | `/usr/bin/` 
+|                    |                        | `/usr/lib/`
+|                    |                        | `/usr/share/man/`
+
 
 ## Next Steps
 

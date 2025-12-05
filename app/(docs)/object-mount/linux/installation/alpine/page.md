@@ -6,89 +6,90 @@ weight: 5
 metadata:
   title: Alpine
   description:
-    Alpine Installation Instructions
+    Alpine Package Installer Instructions
 hidden: false
 ---
 
+Storj provides an Object Mount package installer for the Alpine Linux distribution.
 
-## Alpine Linux
+This installer can be used with any musl-based Linux distribution.
 
-{% callout type="warning"  %}
-Object Mount APK packages for Alpine will be available soon.
+{% callout type="info" %}
+**Optional: Scripted Installer**
+
+If you prefer to use a musl-based **scripted installer**, refer to the [](docId:ao0yaeng2Aitheel) installation instructions.
 {% /callout %}
 
+Follow the steps below to install and configure Object Mount for **Alpine**-based Linux platforms.
+
+
+## Step 1. Download the Installer Package
+
+Download the latest package installer.
+
+- **Note:** If you do not have a download link, reach out to your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch).
+
+
+## Step 2. Unpack the Archive
+
+Use the installer’s `.run` script to unpack the archive by entering the following command from a terminal window:
+
 ```console
-sudo apk add --allow-untrusted ./cuno_{FULL-VERSION}_amd64_musl/cuno_{FULL-VERSION}_amd64_musl.apk
+sh cuno_mne_x86_64_musl_apk.run
+```
+
+{% callout type="info" %}
+**Processor Compatibility**
+
+Although the Object Mount Package Installer’s file is named `cuno_mne_x86_64_musl_apk.run`, it is designed to run on _both_ AMD64 and Intel x86_64 processors (although not ARM-based CPUs).
+{% /callout %}
+
+The unpacking process will prompt you to read and agree to the Object Mount **end-user license agreement (EULA)**. 
+
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-eula.jpg)
+
+- **Note:** You can automate this step by setting the environment variable `CUNO_INSTALL_ACCEPT_EULA="yes"`. (This is equivalent to accepting the EULA).
+
+The archive and its contents will be unpacked into a directory named 
+`cuno_{VERSION}_x86_64_musl_apk` containing the package itself plus some additional files.
+
+View the unpacked contents with the following `ls` command (substituting your version number):
+
+```console
+$ ls cuno_1.2.8.8_x86_64_musl_apk
+cuno_1.2.8.8_x86_64_musl.apk
+CUNO-Installation-and-Usage-Guide.pdf
 ```
 
 
+## Step 3. Install Object Mount and its dependencies using `apk`
+
+**3a.** Install the Object Mount package (substituting your version number):
+
+```console
+sudo apk add ./cuno_1.2.8.8_x86_64_musl_apk/cuno_1.2.8.8_x86_64_musl.apk
+```
+
+The installer will fetch and install any necessary additional packages (such as `libfuse`, etc.).
+
+**3b.** Next, the installation process will prompt you to **activate Object Mount**. 
+
+- Press 1 to activate a **free trial**:
+  - This will activate a fully-featured 14-day free trial.
+- Press 2 if you already have a **license key**:
+  - Paste your license key or enter a full path to a license key file.
+
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-enter-license-key.jpg)
+
+- **Note:** You can automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
+
+{% callout type="note"  %}
+**Access for: All-Users**
+
+Due to the use of `sudo`, all package manager installations install Object Mount for use by _all users_ of the system, not just the user that initiated the install process.
+{% /callout %}
 
 
+## Next Steps
 
-
-
-
-1. Download the installer. By downloading you are agreeing to the terms of the 🌐 [End User License Agreement](https://www.storj.io/legal/terms-of-use). Click to download the latest version of the 🌐 [self-extracting package for Alpine](https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_musl_apk.run) from your browser, or run the command:
-
-   ```console
-   wget https://github.com/cunoFS/cunoFS/releases/latest/download/cuno_x86_64_musl_apk.run
-   ```
-
-2. Download the public key for package verification `cunoFS.rsa.pub`:
-
-   ```console
-   wget https://github.com/cunoFS/cunoFS/releases/latest/download/cunoFS.rsa.pub
-   ```
-
-   or create a file called `cunoFS.rsa.pub` with our public key using this "one-liner" (copy the whole thing, paste into your terminal, hit enter/return):
-
-   ```console
-   cat >cunoFS.rsa.pub <<EOF
-   -----BEGIN PUBLIC KEY-----
-   MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAl1TDuzTVhYkr8OPFqU4D
-   r250/ESsKys92maH7NWC6tprLEaGoTUWi/7XMO33dOOnIuHqWctcxvG/V5sQTRem
-   PmyozszYyAFNziSO8Wrp9kiCQZ72NyN00j3I+zKG3m/tQ6nVbl5JkWniuPhn6rKQ
-   mHE72e07+aHGk6a8/cTbkvMe9DA61Uhgu3BOj5+S8ksQhc6k4SFTu3XfhOKu+pIR
-   U0GJ+/ZtjagvDzwX6Ebf6YS+Skn1CCX4FrLC20CdyyIwf1qvKNG141ireaZlIdp8
-   4GCOG0UkccAMrACNipRXYfE2/Cx6uiwnwCoqa095CPqPvVXWZY++IlFk/8qdsiJj
-   FotKjfBd3H68UIMpZF+seIkT/NSIHkyViwUiwrfaMTrIfklZwer+dvVgYvN2M/K/
-   Eq6QSu9ZzefcE605I14rHya6AnqSVyJx4GZ23tz1fT+l1qA7xC/jJ5jZ04Ni7y8Z
-   CVEgn/9GD7hgZIc72bD4W8438oxhaALjbZadGz7mfmrp9j96w2pJzW59bpiT+f7I
-   Kgg57/XM1fjrDQ3xopM5PDTHzxPiIpvMGLmPivvr9gt3L3PoHHjWj3veS34OVPot
-   RnYU4SBGBHVq0sNZPkeaZpb1bpNyF4t7458F/+RWPVF3S+y0we1q0Q5O9yk6LIfp
-   OOUcK6r8cF6LV+CdCEE9VbkCAwEAAQ==
-   -----END PUBLIC KEY-----
-   EOF
-   ```
-
-3. Move the rsa public key into the Alpine directory of trusted signatures `/etc/apk/keys` (may need `sudo`):
-
-   ```console
-   mv cunoFS.rsa.pub /etc/apk/keys/
-   ```
-
-4. Unpack the archive by running:
-
-   ```console
-   sh cuno_x86_64_musl_apk.run
-   ```
-
-5. Please follow the interactive steps, read the displayed end-user license agreement ([EULA](https://www.storj.io/legal/terms-of-use)) and agree to the terms to continue with the extraction. To automate this, you can set the environment variable `CUNO_INSTALL_ACCEPT_EULA="yes"` (this is equivalent to accepting the EULA).
-
-6. The archive and its contents will be unpacked into a directory named `cuno_{FULL-VERSION}_x86_64_musl` containing the package itself and additional documents:
-
-   ```console
-   $ ls cuno_{FULL-VERSION}_x86_64_musl
-   cuno_{FULL-VERSION}_x84_64_.apk
-   CUNO-Installation-and-User-Guide.pdf
-   ```
-
-7. Install Object Mount and its dependencies using `apk` (may need `sudo`):
-
-   ```console
-   apk add ./cuno_{FULL-VERSION}_x86_64_musl/cuno_{FULL-VERSION}_x86_64_musl.apk
-   ```
-
-8. The installation will prompt you to activate Object Mount by starting a trial or entering a license key. Follow the steps interactively, or automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
-
-9. The installation will prompt you to set the `CUNO_ROOT` environment variable to the installation directory. This is not always necessary when using Object Mount, but it will make it easier to follow the steps in this guide.
+Once Object Mount is installed, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.

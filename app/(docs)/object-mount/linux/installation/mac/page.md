@@ -74,7 +74,7 @@ However, if you would like to run the Linux version of Object Mount on your Mac,
 For those on Apple Silicon (ARM) Macs, macOS 13.0 Ventura or later is required.
 {% /callout %}
 
-1. *All* Mac users require a virtualisation/containerisation software to be installed and set up.
+1. *All* Mac users require a virtualization/containerization software to be installed and set up.
 {% tabs %}
 {% tab label="Intel" %}
 ## Intel
@@ -119,7 +119,7 @@ Unfortunately, [colima](https://github.com/abiosoft/colima) is not currently sup
 
 {% tab label="Apple Silicon (ARM)" %}
 ## Apple Silicon (ARM)
-We assume usage of Docker in these guides, but any of following containerisation technologies is supported with some additional set up required for ARM Macs:
+We assume usage of Docker in these guides, but any of following containerization technologies is supported with some additional set up required for ARM Macs:
 {% tabs %}
 {% tab label="Docker" %}
 ## Docker
@@ -145,7 +145,7 @@ Use Rosetta for emulation, and we recommend changing the file sharing implementa
 - Open the ``Virtual Machine`` section.
 - Open the ``Emulation`` tab
 - Set ``Virtual Machine Type`` to ``VZ``.
-- In the ``VZ`` suboption, enable ``Rosetta``.
+- In the ``VZ`` sub-option, enable ``Rosetta``.
 - Open ``Volumes`` tab, and set the ``Mount Type`` to  ``virtiofs``.
 - Use the ``Apply`` button to save the changes.
 - In order to use the ``cuno-mac`` utility with Rancher, the "dockerd" (moby) container engine must be used:
@@ -157,7 +157,7 @@ Use Rosetta for emulation, and we recommend changing the file sharing implementa
 {% tab label="OrbStack" %}
 ## OrbStack
 
-Usage of Object Mount on [OrbStack for Mac](https://orbstack.dev/) containers works without any additonal set up required. 
+Usage of Object Mount on [OrbStack for Mac](https://orbstack.dev/) containers works without any additional set up required. 
 
 OrbStack does not currently work with the  native/host ``cuno-mac`` utility.
 {% /tab %}
@@ -184,7 +184,7 @@ Run the installer (without ``sudo``):
 sh cuno-glibc-installer.run
 ```
 
-Please follow the interactive steps, read the displayed end-user licence agreement (EULA) and agree to the terms to continue with the installation.
+Please follow the interactive steps, read the displayed end-user license agreement (EULA) and agree to the terms to continue with the installation.
 - Export the ``cuno-mac`` location to your ``PATH`` variable:
 ```shell
 export PATH=$PATH:~/.local/opt/cuno/share/macos
@@ -199,7 +199,7 @@ echo "PATH=\$PATH:~/.local/opt/cuno/share/macos" >> ~/.bash_profile
 ## Install in Linux containers
 If installing on your Mac's local user is not preferred, you can install Object Mount within a container of your choice. 
 
-We provide instructions here for installing within Docker containers using Ubuntu images. These instructions can be adapted to other Linux distributions, as well other virtualisation technologies such as Rancher, and OrbStack.
+We provide instructions here for installing within Docker containers using Ubuntu images. These instructions can be adapted to other Linux distributions, as well other virtualization technologies such as Rancher, and OrbStack.
 
 These instructions depend on the architecture of you Mac, please follow the appropriate guide:
 {% tabs %}
@@ -218,7 +218,7 @@ ubuntu:latest
 ```shell
 sh /tmp/cuno_install
 ```
-- Please follow the interactive steps, read the displayed end-user licence agreement (EULA) and agree to the terms to continue with the installation.
+- Please follow the interactive steps, read the displayed end-user license agreement (EULA) and agree to the terms to continue with the installation.
 {% /tab%}
 {% tab label="Apple Silicon (ARM)" %}
 ## Apple Silicon (ARM)
@@ -238,7 +238,7 @@ NB: The :code:`--platform linux/amd64` flag is *required* to run Object Mount on
 ```shell
 sh /tmp/cuno_install
 ```
-- Please follow the interactive steps, read the displayed end-user licence agreement (EULA) and agree to the terms to continue with the installation.
+- Please follow the interactive steps, read the displayed end-user license agreement (EULA) and agree to the terms to continue with the installation.
 {% /tab%}
 {% /tabs %}
 {% /tab %}

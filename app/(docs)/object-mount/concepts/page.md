@@ -1,10 +1,10 @@
 ---
-title: User Guides
+title: Concepts
 hideTitle: false
 docId: TzkP5EWAJ7ButtZZ
 weight: 2
 metadata:
-  title: User Guides for Object Mount
+  title: Concepts for Object Mount
   description:
     Details on using and configuring object mount, including global features that apply to all operating systems.
 hidden: false

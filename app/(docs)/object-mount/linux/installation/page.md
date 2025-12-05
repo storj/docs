@@ -23,7 +23,7 @@ Object Mount offers both **Scripted Installers** (which do _not_ require root pr
 
 The general steps to install and activate Object Mount are the _same_ regardless of your specific Linux distribution.
 
-A outline of these steps incude:
+A outline of these steps include:
 
 1. **Obtain** an Object Mount license key.
 
@@ -34,23 +34,27 @@ A outline of these steps incude:
     - **Note:** If you do not have a download link, reach out to your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch).
 
 3. **Install & Activate** Object Mount.
-4. **Validate connectivity** and the general functionality of Object Mount by accessing a public storage bucket.
-5. **Configure and Mount** your private object storage bucket(s).
+
+Once Object Mount is installed, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.
 
 
 ## OS-Specific Installation Procedures
 
 Once you have your installation download link and your Object Mount license key, proceed to the installation instructions for your specific OS and preferred installation method:
 
-| **Linux Platform**                      | **Installation Guide** |
+| **Scripted Installers**                 | **Installation Guide** |
 |-----------------------------------------|------------------------|
 | **glibc** (C standard library)          | [glibc Scripted Installer](docId:ahWohd5eegh6eizi)
 | **musl** (C standard library)           | [musl Scripted Installer](docId:ao0yaeng2Aitheel)
+
+
+| **Package Managers**                    | **Installation Guide** |
+|-----------------------------------------|------------------------|
 | **Debian** (& Ubuntu, etc.)             | [Debian Package Installer](docId:aemie9zeiP9Nie2k)
 | **Red Hat** (& RPM, RHEL, CentOS, etc.) | [Red Hat Package Installer](docId:woosaugaiNohree9)
 | **Alpine** (& APM, etc.)                | [APK Package Installer](docId:MeiPie8EDuo7eise)
-| **macOS (Linux)**                       | [macOS (via Linux in containers)](docId:yoopieyewevei1Eo)
-| **Windows (Linux)**                     | [Windows (via Windows Subsystem for Linux [WSL])](docId:bekoo5aenePoo7Oh)
+| **macOS** (Linux)                       | [macOS (via Linux in containers)](docId:yoopieyewevei1Eo)
+| **Windows** (Linux)                     | [Windows (via Windows Subsystem for Linux [WSL])](docId:bekoo5aenePoo7Oh)
 
 **Other? Not sure?** 
 

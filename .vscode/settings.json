@@ -8,7 +8,9 @@
     "markdoc",
     "mdash",
     "posix",
-    "Storj"
+    "Storj",
+    "Virtio",
+    "virtiofs"
   ],
   "editor.tabSize": 2,
   "editor.detectIndentation": false

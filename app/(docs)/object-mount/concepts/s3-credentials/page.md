@@ -195,10 +195,12 @@ Select your S3 storage provider below for details on syntax and variable naming:
   ```
   aws_access_key_id = <access_key_id>
   aws_secret_access_key = <access_key_secret>
-  region = <endpoint>
+  endpoint = <endpoint>
   ```
 
   `endpoint` is required.
+
+  The primary endpoint for Storj is: `endpoint = https://gateway.storjshare.io`
 {% /tab %}
 
 {% tab label="Microsoft Azure" %}

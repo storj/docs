@@ -12,7 +12,7 @@ hidden: false
 
 Many Linux distributions use the GNU Project’s C standard library: 🌐 [glibc](https://en.wikipedia.org/wiki/glibc).
 
-This includes: Debian/Ubuntu, RedHat and their derivatives.
+This includes: Debian, Ubuntu, RedHat and their derivatives.
 
 Storj’s Object Mount **glibc scripted installer** (a `.run` file) is compatible with all such Linux distributions.
 
@@ -21,7 +21,7 @@ This installer shell script allows you to install Object Mount (for the current 
 {% callout type="info" %}
 **Optional: Package Installer**
 
-If you prefer a **full installer** for use with package managers (i.e.: Debian, Ubuntu, etc.) refer to the [](docId:aemie9zeiP9Nie2k) installation instructions.
+If you prefer a **full installer** for use with package managers, refer to the [](docId:aemie9zeiP9Nie2k) (Debian, Ubuntu, etc.) or [](docId:woosaugaiNohree9) installation instructions.
 {% /callout %}
 
 Follow the steps below to install and configure Object Mount for **glibc** platforms.
@@ -40,6 +40,7 @@ Be sure to download the correct script file for your specific chip architecture:
 | AMD x64       | cuno-mne-amd64-glibc-installer.run
 | Intel x86     | cuno-mne-x86_64-glibc-installer.run
 
+- **Note:** ARM-based processors are not supported at this time.
 
 ## Step 2. Install & Activate Object Mount
 
@@ -65,7 +66,7 @@ Be sure to download the correct script file for your specific chip architecture:
 
 {% /tabs %}
 
-**2b.** To install Object Mount to be used by **all users** system-wide, add `sudo` to the _front_ of the run command:
+**2b.** To install Object Mount to be used by **all users** system-wide, add `sudo` to the _front_ of the command:
 
 {% tabs %}
 
@@ -119,4 +120,4 @@ When Object Mount is installed via a **Scripted Installer** (e.g.: glibc or musl
 
 ## Next Steps
 
-Once Object Mount is installed, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.
+_Once Object Mount is installed_, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.

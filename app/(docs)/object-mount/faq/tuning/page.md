@@ -1,11 +1,13 @@
 ---
 title: Performance Tuning
+hideTitle: false
 docId: tuning
-weight: 1
+weight: 2
 metadata:
   title: Performance Tuning
   description:
     Guidance on how to optimize Object Mount performance across platforms and environments.
+hidden: false
 ---
 
 There are many variables to consider when optimizing **Object Mount** for the best performance, including: 

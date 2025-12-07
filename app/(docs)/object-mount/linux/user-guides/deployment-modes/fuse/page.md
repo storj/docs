@@ -10,31 +10,33 @@ metadata:
 hidden: false
 ---
 
-This article dives deep into configuring and Object Mount on FUSE in Linux.
+This article dives into the configuration and use of **Object Mount on FUSE** in Linux.
 
-## Object Mount on FUSE
+## Overview
 
-Object Mount on FUSE allows you to mount an object storage path as a _directory_ within the local file system hierarchy.
+**Object Mount on FUSE** allows you to mount an object storage path as a _directory_ within the local file system hierarchy.
 
 This allows you (and any other user with access to the mount) to access object storage as if it were just another local directory.
 
 
 ## Highlights & Advantages
 
-Object Mount on FUSE is a FUSE file system that routes calls through the Object Mount object storage back-end. 
+Object Mount on FUSE is a FUSE file system. FUSE routes calls through the Object Mount object storage back-end. 
 
-  - **Compatibility:** Use Object Mount on FUSE when compatibility is a primary concern &mdash; such as when using a wide variety of applications across multiple different operating systems.
+  - **Compatibility:** Use Object Mount on FUSE when compatibility is a primary concern (e.g.: when using a variety of applications across multiple different operating systems).
 
   - **Interoperable:** Object Mount on FUSE can be used when launching the `cuno` binary is not possible (e.g. an automation engine without the required features).
 
   - **Simple Usage:** After a mount is set up, scripts only need to be changed to point at the new directory. No changes are needed to the workflow and no environment variables need to be set.
 
-  - **Greater Administrative Control:** Object Mount on FUSE can be setup once, by an admin, without giving users any credentials. This removes the need to explain object storage concepts to users.
+  - **Greater Administrative Control:** Object Mount on FUSE can be setup once, by an admin, without giving users any credentials. This removes the need to train users on object storage concepts.
 
 {% callout type="info" %}
-  Due to the nature of FUSE file systems, this can be slightly less performant than Direct Interception Mode.
+  **Performance vs. Compatibility**
+
+  Due to the nature of FUSE file systems, Object Mount on FUSE can be slightly less performant than Object Mount in Direct Interception Mode.
   
-  Consider using Object Mount in Direct Intercept Mode or the userspace library (described in [user-guide-ldpreload](../user-guides/advanced#user-mode-library)) if speed is the primary objective.
+  If speed is your primary objective, consider using Object Mount in [Direct Intercept Mode](docId:UHsd5HnesueQyhnZ) or via the [User-Mode Library](docId:airoogh4Waengi8u#user-mode-library).
 {% /callout %}
 
 
@@ -49,10 +51,11 @@ mkdir ~/my-object-storage
 cuno mount ~/my-object-storage
 ```
 
-Any paired object storage buckets will now be accessible through the mount:
+Any paired object storage buckets will now be accessible through the mount. 
+
+Choose your storage provider below to see the commands to list files on your S3 mount:
 
 {% tabs %}
-
 {% tab label="AWS S3" %}
 ```shell
 # terminal
@@ -67,6 +70,11 @@ ls ~/my-object-storage/sj/<bucket>/<path>
 ```
 {% /tab %}
 
+<!-- S3 VS SJ
+THIS IS THE FIRST MENTION OF `SJ` INSTEAD OF `S3.
+VALID? OR NOT?
+-->
+
 {% tab label="Microsoft Azure" %}
 ```shell
 # terminal
@@ -79,7 +87,7 @@ ls ~/my-object-storage/az/<account-name>/<bucket>/<path>
 ls ~/my-object-storage/gs/<bucket>/<path>
 ```  
 {% /tab %}
-{% tab label="S3-compatible" %}
+{% tab label="Other S3 Compatible" %}
 ```shell
 # terminal
 ls ~/my-object-storage/s3/<bucket>/<path>
@@ -88,12 +96,16 @@ ls ~/my-object-storage/s3/<bucket>/<path>
 {% /tabs %}
 
 {% callout type="info" %}
-  You cannot use URI paths like "s3://bucket1/foo" directly when using Object Mount on FUSE. 
+  **Mount Paths vs URI Paths**
+
+  You cannot use URI paths like “s3://bucket1/foo” when using Object Mount on FUSE. 
   
   To be usable, replace the URI prefix (`s3://`) with the path to your mount.
 {% /callout %}
 
 {% callout type="note"  %}
+  **POSIX Options**
+
   The `--posix` option requires that a FUSE package be installed on the system.
 {% /callout %}
 
@@ -108,20 +120,22 @@ cuno [subsys-options] mount [mount-options] <mount-path>
 
 These options include:
 
-  - Object Mount - Mount options
-  - Object Mount - Subsystem options
-  - FUSE options
+  - Object Mount --> Mount Options
+  - Object Mount --> Subsystem Options
+  - FUSE Options
 
-### Object Mount - Mount Options
+### Object Mount: Mount Options
 
-On the _right hand-side_ of the `mount` verb, you can specify options that are specific to the mount operation:
+To _right_ of the `mount` verb, you can specify options that are specific to the mount operation:
 
 ```
 cuno mount [option] ...
 ```
 
-| **Mount Option** | **Description** |
-|------------------|-----------------|
+**Noteworthy Mount Options:**
+
+| **Mount Option**      | **Description** |
+|-----------------------|-----------------|
 | `--root <cloud path>` | Specifies the root object storage path to be mounted. For example, to mount a single bucket, you would use `--root s3://<bucket>`. |
 | `--posix` | Enables setting and enforcing access permissions, symbolic and hard links, users, groups, etc. Can be used with default permissions. Implicitly sets `-o allow_other`. This option is ideally used with a mount that is only on a single bucket, e.g. `cuno mount --root s3://<bucket> --posix <mount-path>`. You should also be using `cuno creds setposix s3://examplebucket true` to enable POSIX handling of the bucket consistently when Direct Interception or a FlexMount is used. |
 | `<FUSE option>` | Options that are specific to the FUSE mount operation. These options are passed on to `fum` ([fusermount3](https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html)). Not to be confused with Object Mount subsystem options which use the same `-o` syntax. See below for some of these. See user-guide-cuno-mount-fuse-options. |
@@ -132,23 +146,25 @@ cuno mount [option] ...
 | `--dev-logs` | Enabled debug logging to `/tmp/fuse.logs` |
 | `--verbose` | Enables verbose output. |
 
-### Object Mount - Subsystem Options
+### Object Mount: Subsystem Options
 
-On the _left hand-side_ of the `mount` verb, you can specify options that are specific to the Object Mount subsystem:
-
-```
-cuno -o <Object Mount option> mount ...
-```
-
-Alternatively, these can be specific using a system variable:
+To _left_ of the `mount` verb, you can specify options that are specific to the Object Mount subsystem:
 
 ```
-export CUNO_OPTIONS="<Object Mount option>"
+cuno -o <Object Mount Subsystem Option> mount ...
+```
+
+Alternatively, these can be specific using a **system variable**:
+
+```
+export CUNO_OPTIONS="<Object Mount Subsystem Option>"
 ```
 
 **Noteworthy Subsystem Options:**
 
-Some relevant Object Mount options are given below. Refer to [user-guide-config-options](../user-guides/configuration) for more information.
+Some relevant Object Mount Subsystem options are given in the table below. 
+
+Refer to the Linux User Guide article [](docId:phohPoowequie5ji) for additional details.
 
 | **Subsystem Option** | **Description** |
 |----------------------|-----------------|
@@ -161,19 +177,22 @@ Some relevant Object Mount options are given below. Refer to [user-guide-config-
 
 ### FUSE Options
 
-Also on the _right hand-side_ of the `mount` verb, you can specify options that are specific to the FUSE mount operation. These options are passed on to `fum` (🌐  [fusermount3](https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html)).
+Also on the _right hand-side_ of the `mount` verb, you can specify options that are specific to the FUSE mount operation. 
 
+These options are passed to the FUSE User Mount process: `fum`. (Refer to the 🌐 [FUSE Mount Documentation](https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html).
 ```
 cuno mount [FUSE option] ...
 ```
 
 {% callout type="note"  %}
-As with the Mount Options, these FUSE options must come _after_ the verb `mount`.
+  **Object Mount Options vs. FUSE Options**
 
-**Note:** Some of these FUSE options use a similar `-o` syntax as the Object Mount Subsystem options ()`cuno -o`) &mdash; but they are _not_ the same.
+  As with the Mount Options, these FUSE options must come _after_ the verb `mount`.
+
+  **Note:** Some of these FUSE options use a similar `-o` syntax as the Object Mount Subsystem options (e.g.: `cuno -o`), but they are _not_ the same.
 {% /callout %}
 
-**FUSE Options:**
+**Noteworthy FUSE Options:**
 
 | **Option** | **Description** |
 |-----------------|-----------------|
@@ -219,7 +238,9 @@ Once you have configured a mount using Object Mount on FUSE, you can use the fol
 cuno mount [command]
 ```
 
-**List:**
+**Noteworthy Object Mount on FUSE Commands:**
+
+**List**
   - `--list`
   - Lists your active Object Mount on FUSE. 
   - You can also use the Linux utility `mount` directly.
@@ -228,7 +249,7 @@ cuno mount [command]
     cuno mount --list
     ```
 
-**Unmount:**
+**Unmount**
   - `--unmount` / `-u` 
   - Unmounts a mount from the specified mount path. 
   - You can also use the Linux utility `umount` directly.
@@ -237,7 +258,7 @@ cuno mount [command]
     cuno mount --unmount <path to mount>
     ```
 
-**Unmount and end the `fum` process:**
+**Unmount and end the `fum` process**
   - `--unmount-kill` / `-U`
   - Unmounts a mount from the specified mount path and kills the `fum` process. 
   - You can also use the Linux utility `umount` directly.

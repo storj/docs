@@ -1,12 +1,14 @@
 ---
 title: Cloud Paths
+hideTitle: false
 docId: jieteeYeyievui9k
-
+weight: 9   
+redirects:
+  - /object-mount/linux/user-guides/access
 metadata:
   title: Cloud Paths
   description: Cloud Paths Guide
-
-weight: 9   
+hidden: false
 ---
 ## Transparent access to object storage
 

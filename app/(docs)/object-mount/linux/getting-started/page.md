@@ -17,7 +17,7 @@ The pages in these **Getting Started Guides** for Linux will introduce you to to
 
 When configuring Object Mount on Linux, it is important to understand the needs of the **tools** and **workloads** you plan to run. 
 
-You can change settings for each workflow or tool, or you can set options at the bucket-level to impose a particular usage mode for all users.
+You can adapt settings for each workflow or tool, or you can set options at the bucket-level to impose a particular usage mode for all users.
 
 
 ## Deployment Considerations
@@ -27,11 +27,11 @@ There are two important, but independent, aspects to consider when configuring O
 1. The requirements for your tools and applications to work _correctly_:
 
     - For **correct operation**, you need to know what level of **POSIX Compatibility** your tools require in order to function.
-    - **Object Mount for Linux** offers multiple **POSIX Compatibility Options** giving the end user an array of tools to fine-tune and tailor the functionality and performance of Object Mount for their specific use case and environment.
+    - Object Mount for Linux offers multiple POSIX compatibility options giving the end user a wide array of tools to fine-tune and tailor the functionality and performance of Object Mount for their specific use case and environment.
     - See the article on [POSIX Options](docId:cbm3PcQXmLpuYcbg) to understand the many different POSIX compatibility choices available to you.
 
 2. Ensuring your specific tools and environment work _efficiently_:
 
-    - For **efficient operation**, your primary concerns are the bandwidth and latency between your compute resources and your object storage resources. 
-    - **Object Mount for Linux** supports multiple **Deployment Modes** to support a variety of unique bandwidth, user requirements, and environmental situations.
-    - See the [Deployment Modes](docId:bRnfbdNE6d5DaZzW) article to understand the different deployment modes available to you.
+    - For **efficient operation**, the bandwidth and latency between your compute resources and your object storage resources will help guide your selection of the best **Deployment Mode** for Object Mount.
+    - Object Mount for Linux supports multiple Deployment Modes supporting a variety of unique bandwidth, user requirements, and environmental situations.
+    - See the [Deployment Modes](docId:bRnfbdNE6d5DaZzW) article to understand the different deployment choices available to you.

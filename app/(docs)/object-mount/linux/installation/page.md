@@ -16,7 +16,7 @@ hidden: false
 
 Storj’s Object Mount supports multiple flavors of Linux and can also run inside Docker and other virtual environments, such as Microsoft’s Hyper-V and Oracle’s VirtualBox.
 
-Object Mount offers both **Scripted Installers** (which do _not_ require root privileges to install for a single user) as well as **Package Manager**-based installation files.
+Object Mount offers both **Scripted Installers** (which do _not_ require root privileges to install for a single user) as well as **Package Manager** installation files for different Linux platforms.
 
 
 ## General Installation Procedure
@@ -35,12 +35,12 @@ A outline of these steps include:
 
 3. **Install & Activate** Object Mount.
 
-Once Object Mount is installed, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.
+_Once Object Mount is installed_, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.
 
 
 ## OS-Specific Installation Procedures
 
-Once you have your installation download link and your Object Mount license key, proceed to the installation instructions for your specific OS and preferred installation method:
+Equipped with your installation download link and your Object Mount license key, proceed to the installation instructions for your specific OS and preferred installation method:
 
 | **Scripted Installers**                 | **Installation Guide** |
 |-----------------------------------------|------------------------|

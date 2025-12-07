@@ -26,12 +26,12 @@ This is in contrast to the Graphical User Interface (GUI) experience that Object
 
 Other OS differences include:
 
-| **Object Mount Feature** | **For Linux**    | **For Windows & macOS** |
-|--------------------------|------------------|-------------------------|
-| CLI-based                | 100%             | Limited CLI
-| GUI-based                | No GUI available | 100%
+| **Object Mount Feature** | **For Linux**       | **For Windows & macOS** |
+|--------------------------|---------------------|-------------------------|
+| CLI-based                | 100%                | Limited CLI
+| GUI-based                | No GUI available    | 100%
 | POSIX Mode Features | Wide array of settings   | Either `on` or `off`
-| `cuno`-based commands, settings, and variables | Large quantity of options | Few options
+| `cuno`-based commands, settings, and variables | Large quantity of options | Limited options
 
 
 ## What’s Covered
@@ -48,15 +48,16 @@ Click below to access the content you are looking for:
 
 ### Getting Started Guides
 
-_Prior_ to installing, view the [Getting Started Guide](docId:xhNvtETAA6UBZVNH) articles to better understand the capabilities, options, and deployment choices available for Object Mount for Linux. 
+_Prior to installing_ Object Mount for Linux, view the Linux-specific [Getting Started Guide](docId:xhNvtETAA6UBZVNH) articles to better understand the capabilities, options, and deployment choices available.
 
 Getting Started topics include:
-  - Understanding [POSIX Compatibility and Options](docId:cbm3PcQXmLpuYcbg)
-  - Understanding [Deployment Modes](docId:bRnfbdNE6d5DaZzW)
+  - Understanding [POSIX Compatibility and Options](docId:cbm3PcQXmLpuYcbg) in Object Mount for Linux
+  - Understanding [Deployment Modes](docId:bRnfbdNE6d5DaZzW) for Object Mount for Linux
 
 ### Installation Guides
 
-When ready to install, view the [Installation Guides](docId:iethahkeeX5EiJoh) for your particular Linux variant, including:
+When _ready to install_, view the Object Mount for Linux [Installation Guides](docId:iethahkeeX5EiJoh) for your particular Linux variant, including:
+
   - Alpine
   - Debian & Ubuntu
   - Red Hat
@@ -68,22 +69,26 @@ When ready to install, view the [Installation Guides](docId:iethahkeeX5EiJoh) fo
 
 ### User and Configuration Guides
 
-_After_ installation, read through the [User Guides](docId:ohs0ailohSh0Vie3) to learn more about using and configuring Object Mount for Linux, including:
+_After installation_, read through the [User Guides](docId:ohs0ailohSh0Vie3) to learn more about using and configuring Object Mount for Linux, including details on:
 
-  - Validate Functionality
+  - Validating Functionality
   - Activating License Keys
-  - [Deployment Modes](docId:jqySXsBfj5WGUjgs):
-    - Configuring and Using: Direct Interception Mode
-    - Configuring and Using: Object Mount on FUSE
-    - Configuring and Using: Object Mount FlexMount
-    - Configuring and Using: Object Mount Fusion
+  - The different Linux [Deployment Modes](docId:jqySXsBfj5WGUjgs):
+    - Direct Interception Mode
+    - Object Mount on FUSE
+    - Object Mount FlexMount
+    - Object Mount Fusion
 
 ### Linux Feature Guides
 
-Once you are up and running, explore the Linux [Feature Guides](docId:GeWpcQTuVpL6d3wU) for advanced, Linux-specific configuration tips to fine-tune your deployment, improve Object Mount’s performance and increase your productivity. 
+Once up and running, explore the Linux-specific _advanced configuration tips_ found in the Object Mount for Linux [Feature Guides](docId:GeWpcQTuVpL6d3wU). These articles will help you fine-tune your deployment, improve Object Mount’s performance, and increase your productivity. 
 
 Topics include:
   - [Enabling Enforced POSIX File Access](docId:Eegoo1teiJ8eerae)
+
+<!--
+ ADD/EDIT MORE BULLETS HERE
+-->
 
 
   - Object Mount Fusion
@@ -91,6 +96,10 @@ Topics include:
 
 
 ## Additional Global Reference Material
+
+<!--
+  IS THIS NEEDED??
+-->
 
 Once your Linux deployment of Object Mount is up and running, there are several **Global Topics** and **Media Application Guides** that you can reference, including:
 

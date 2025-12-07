@@ -15,12 +15,12 @@ Storj provides an Object Mount package installer for the Alpine Linux distributi
 This installer can be used with any musl-based Linux distribution.
 
 {% callout type="info" %}
-**Optional: Scripted Installer**
+  **Optional: Scripted Installer**
 
-If you prefer to use a musl-based **scripted installer**, refer to the [](docId:ao0yaeng2Aitheel) installation instructions.
+  If you prefer to use a musl-based **scripted installer**, refer to the [](docId:ao0yaeng2Aitheel) installation instructions.
 {% /callout %}
 
-Follow the steps below to install and configure Object Mount for **Alpine**-based Linux platforms.
+Follow the steps below to install and configure Object Mount for Alpine-based Linux platforms.
 
 
 ## Step 1. Download the Installer Package
@@ -39,9 +39,11 @@ sh cuno_mne_x86_64_musl_apk.run
 ```
 
 {% callout type="info" %}
-**Processor Compatibility**
+  **Processor Compatibility**
 
-Although the Alpine distro file naming convention is to only specify `X86_64` (ex: `cuno_mne_x86_64_musl_apk.run`), the Object Mount APK Installer Package is designed to run on _both_ AMD64 and Intel x86_64 processors (although not ARM-based CPUs).
+  Although the Alpine distro file naming convention is to only specify `X86_64` (ex: `cuno_mne_x86_64_musl_apk.run`), the Object Mount APK Installer Package is designed to run on _both_ AMD64 and Intel x86_64 processors (although not ARM-based CPUs).
+
+  **Note:** ARM-based processors are not supported at this time.
 {% /callout %}
 
 The unpacking process will prompt you to read and agree to the Object Mount **end-user license agreement (EULA)**. 
@@ -79,17 +81,17 @@ The installer will fetch and install any necessary additional packages (such as 
 - Press 2 if you already have a **license key**:
   - Paste your license key or enter a full path to a license key file.
 
-![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-enter-license-key.jpg)
+  ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-enter-license-key.jpg)
 
 - **Note:** You can automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
 
 {% callout type="note"  %}
-**Access for: All-Users**
+  **Access for: All-Users**
 
-Due to the use of `sudo`, all package manager installations install Object Mount for use by _all users_ of the system, not just the user that initiated the install process.
+  By using `sudo`, all package manager installations of Object Mount install the app for use by _all users_ of the system, not just the account that initiated the install process.
 {% /callout %}
 
 
 ## Next Steps
 
-Once Object Mount is installed, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.
+_Once Object Mount is installed_, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.

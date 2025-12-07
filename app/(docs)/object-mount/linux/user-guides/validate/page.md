@@ -10,16 +10,17 @@ metadata:
 hidden: false
 ---
 
-After [installing Object Mount](docId:iethahkeeX5EiJoh), you can:
+After [installing Object Mount](docId:iethahkeeX5EiJoh), you should:
 
   1. Run and Validate global functionality by accessing public buckets
   2. Import S3 credentials into Object Mount
   3. Connect to your private Object Storage buckets
 
+Details for each step is outlined below:
 
 ## Step 1. Validate Object Mount’s Public Connectivity
 
-These steps will help verify that Object Mount runs correctly and can connect to publicly accessible S3 object storage buckets.
+The following steps will help you verify that Object Mount is running correctly and can connect to publicly accessible S3 storage buckets.
 
 **1a. Enter Object Mount’s CLI Console (aka “cunoFS”)**
 
@@ -28,16 +29,16 @@ These steps will help verify that Object Mount runs correctly and can connect to
   user:~$ cuno
   ```
 
-- You should see the `(cuno)` CLI prefix to the left of your user prompt. This indicates that a new shell has been launched wrapped in Object Mount’s `cuno` wrapper:
+- You should see the `(cuno)` CLI prefix to the left of your user prompt. This indicates that a new shell has been launched, wrapped in Object Mount’s `cuno` wrapper:
   ```
   user:~$ cuno
   (cuno) user:~$
   ```
 
   {% callout type="info" %}
-  **Adding `cuno` to the PATH**
+    **Adding `cuno` to the PATH**
 
-  If the Object Mount `cuno` application cannot be found (`cuno: command not found`), add the install location (`/home/<user>/.local/opt/cuno`) to your `$PATH` variable.
+    If the Object Mount `cuno` application cannot be found (`cuno: command not found`), add the [install location](docId:ahWohd5eegh6eizi#installation-locations-scripted-installers) to your `$PATH` variable.
   {% /callout %}
 
 - Enter `exit` at any time to close the Object Mount CLI console and return to the unwrapped shell prompt:
@@ -68,11 +69,13 @@ Validate that Object Mount can reach Internet-based object storage buckets by li
 
 ## Step 2. Import S3 Credentials
 
-In order to access and mount your private Object Storage buckets you will need your S3 credentials and should save them to a file. Instructions on obtaining your credentials and saving them to a file can be found in the Concepts article: [](docId:E4NhE5kPdjURRajJ).
+In order to access and mount your private Object Storage buckets you will need to save your S3 credentials to a file. 
+
+Instructions on obtaining your credentials and saving them to a file can be found in the Concepts article: [](docId:E4NhE5kPdjURRajJ).
 
 Once your credentials have been saved to a file on your Linux drive, proceed with the following steps:
 
-**2a. Import Your Credentials into Object Mount**
+**2a. Import Your Credential File into Object Mount**
 
 Assuming you have saved your credentials to a file named `credentials.txt`, run the following command to add these credentials to the local set of Object Mount managed credentials:
 
@@ -94,9 +97,7 @@ Paired 2/2 buckets:
  [+] s3://bucket02
 ```
 
-You can display your imported credentials with the `cuno creds list` command. 
-
-Notice that a new credential file has been created with the `.s3c` extension, and that two buckets were found using the credentials:
+You can display your imported credentials with the `cuno creds list` command:
 
 ```
 +-------------+
@@ -111,26 +112,30 @@ Notice that a new credential file has been created with the `.s3c` extension, an
  [*] s3://bucket02 -> credentials.s3c
 ```
 
+Notice that a new credential file has been created with the `.s3c` extension, and that two buckets were found using the credentials.
+
 {% callout type="note"  %}
-**Generated `.s3c` Credential File Location**
+  **Generated `.s3c` Credential File Location**
 
-The `cuno creds import` command creates an `.s3c` file with the corresponding bucket entries and adds appropriate configuration settings such as: region, URL path style, etc.
+  The `cuno creds import` command creates an `.s3c` file with the corresponding bucket entries and adds appropriate configuration settings such as: region, URL path style, etc.
 
-The default location for storing these imported credentials is the directory `$XDG_CONFIG_HOME/cuno/creds` (if unset, `$XDG_CONFIG_HOME` defaults to `~/.config`). 
+  The default location for storing these imported credentials is the directory `$XDG_CONFIG_HOME/cuno/creds` (if unset, `$XDG_CONFIG_HOME` defaults to `~/.config`). 
 
-To use an alternative location, set the `CUNO_CREDENTIALS` environment variable to point to your preferred path. For example: `export CUNO_CREDENTIALS=/home/user/my-cloud-credentials`.
+  To use an alternative location, set the `CUNO_CREDENTIALS` environment variable to point to your preferred path. 
+  
+  For example: `export CUNO_CREDENTIALS=/home/user/my-cloud-credentials`.
 
-**Note:** You should _not_ manually copy your credentials directly into these locations.
+  **Note:** You should _not_ manually copy your credentials directly into these locations.
 {% /callout %}
 
 **2b. Troubleshooting Credential Import**
 
 **Purge and Re-Import:**
 
-If you encounter an issue and need to re-import your credential file, you must first remove the previously generated (and malformed) `.s3c` credential file using the `purge` command:
+If you encounter an issue and need to re-import your credential file, you must first remove the previously generated (and unwanted) `.s3c` credential file using the `purge` command:
 
 ```sh
-cuno creds purge credentials.txt
+cuno creds purge credentials.s3c
 ```
 
 **S3 Compatibility Check:**
@@ -143,12 +148,12 @@ cuno creds detectfeatures s3://bucket-to-test credentials.txt
 
 This command will iterate through multiple S3-compatibility tests, settings, and limitations, and then reconfigure and adjust the generated credentials `.s3c` file based on its findings. 
 
-**Note:** The bucket specified must permit **write access** to allow for the writing of temporary files for testing purposes.
+**Note:** The bucket specified must permit **write access** to allow for the creation of temporary files for testing purposes.
 
 {% callout type="warning"  %}
-**Bandwidth Usage During Feature Detection**
+  **Feature Detection: Bandwidth & Time Usage**
 
-Running feature detection may use up to a few gigabytes of bandwidth and may take a several minutes to complete depending on the machine’s connection speed and the S3 storage provider.
+  Running feature detection may use up to a few gigabytes of bandwidth and may take a several minutes to complete depending on the machine’s connection speed and the S3 storage provider.
 {% /callout %}
 
 
@@ -163,7 +168,7 @@ Once your credentials have been successfully imported you can test access to you
   user:~$ cuno
   ```
 
-- You should see the `(cuno)` CLI prefix to the left of your user prompt. This indicates that a new shell has been launched wrapped in Object Mount’s `cuno` wrapper:
+- You should see the `(cuno)` CLI prefix to the left of your user prompt. This indicates that a new shell has been launched, wrapped in Object Mount’s `cuno` wrapper:
   ```
   user:~$ cuno
   (cuno) user:~$
@@ -171,7 +176,13 @@ Once your credentials have been successfully imported you can test access to you
 
 **3b. Access Your Bucket’s Contents**
 
-Select your Object Storage Provider for the appropriate commands to view buckets, and then create, display and delete files from your buckets:
+Select your Object Storage Provider below for the appropriate commands to:
+
+  - View buckets
+  - View files
+  - Create files
+  - Display files
+  - Delete files
 
 {% tabs %}
 

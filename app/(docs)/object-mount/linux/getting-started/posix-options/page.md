@@ -30,7 +30,7 @@ The levels of POSIX compatibility provided in Object Mount for Linux are:
 - [POSIX Enforced File Access](#posix-enforced-file-access) &mdash; Same as “POSIX File Access” above, but POSIX access control _is enforced_.
 
 {% callout type="note" %}
-**How to check if you need to enable “POSIX File Access”:**
+**How to check if you need to enable “POSIX File Access”**
 
 - Run your workload using a local file system volume. Then run the same workload using an Object Mount volume. Compare the outputs and results. If you find discrepancies, it is likely that POSIX File Access needs to be enabled.
 - If Object Mount running with only **Core File Access** fails with an error `(134) ENOTSUP` (not supported) or `Operation not permitted` then it is likely that POSIX File Access needs to be enabled.
@@ -80,7 +80,7 @@ There are two main ways to enable “POSIX File Access”:
 
 
 
-## POSIX Enforced File Access
+## POSIX _Enforced_ File Access
 
 **POSIX Enforced File Access** mode will generate and maintain POSIX metadata for your objects (like “POSIX File Access” mode, above) but _will enforce_ POSIX access controls on those objects. 
 
@@ -97,4 +97,4 @@ There are two main ways to enable “POSIX File Access”:
 
 **How to enable:**
 
-To enable and configure “POSIX Enforced File Access” see the detailed steps in the Configuration Guide article: [](docId:Eegoo1teiJ8eerae).
+  - To enable and configure “POSIX Enforced File Access” see the detailed steps in the Configuration Guide article: [](docId:Eegoo1teiJ8eerae).

@@ -3,6 +3,8 @@ title: macOS (Linux Container)
 hideTitle: false
 docId: yoopieyewevei1Eo
 weight: 6
+redirects:
+  - /object-mount/linux/installation/mac
 metadata:
   title: macOS
   description:
@@ -15,17 +17,17 @@ Storj provides a full-featured, native version of [Object Mount for macOS](docId
 If you are unable to use that native Mac app, you can run a **Linux version** of Object Mount on a Mac by using a container environment such as 🌐 [Docker](https://www.docker.com/products/docker-desktop/) or 🌐 [Rancher Desktop](https://rancherdesktop.io/).
 
 {% callout type="warning" %}
-  **Apple Silicon (M-Chip) Challenges**
+  **Macs with Apple Silicon (M-Chips)**
 
-  **Important:** When creating a virtualized or containerized environment on an Apple Silicon (M-Chip)-based Mac, the operating system within the VM/Container likely needs to be an ARM/M-Chip compatible version of the OS. 
+  **Important:** When creating a virtualized or containerized environment on an Apple Silicon (M-Chip)-based Mac, the operating system _within_ the VM/Container likely needs to be an ARM/M-Chip compatible version of the OS. 
   
-  And any Apps (such as Object Mount) installed within that VM/Containerized OS _also_ need to be written to conform to the underlying chip architecture.
+  Consequently, any Apps (such as Object Mount) installed _within_ that VM/Containerized OS _also_ need to be written to conform to the underlying chip architecture.
 
-  As of this writing, Storj does _not_ provide any ARM-based versions of Object Mount.
+  As of this writing, Storj does _not_ provide any ARM-based versions of Object Mount for Linux.
 
-  This may prevent successful installation of Object Mount in _any_ VM/Container running _any_ OS or distribution on an Apple Silicon (M-Chip)-based Mac.
+  This may prevent successful installation of Object Mount for Linux in _any_ VM/Container running _any_ OS or distribution on an Apple Silicon (M-Chip)-based Mac.
 
-  **Using the Native Mac Object Mount client is strongly advised.**
+  **Using the Native Mac Object Mount client is strongly recommended.**
 {% /callout %}
 
 
@@ -33,16 +35,10 @@ If you are unable to use that native Mac app, you can run a **Linux version** of
 
 Running Object Mount for Linux on a Mac **requires** the use of containers. Although modern macOS versions are derived from a BSD Unix kernel, you _cannot_ install or run any version of Object Mount for Linux directly within a standalone Mac Terminal window.
 
-{% callout type="note"  %}
-**macOS Version requirements**
-
-For Macs using Apple Silicon (ARM/M1-M5 chips) macOS 13.0 Ventura or later is required.
-{% /callout %}
-
 The instructions for installing Object Mount for Linux in a container on a Mac are broken down into two separate steps:
 
   - **Step 1: Container Prep**
-    - Debian/Ubuntu Linux distribution
+    - Debian/Ubuntu Linux distribution within Docker
     - Settings changes for proper functionality
   - **Step 2: Download, Install & Activate Object Mount**
     - Download the Object Mount Installer
@@ -50,10 +46,18 @@ The instructions for installing Object Mount for Linux in a container on a Mac a
 
 These options are described in detail below.
 
+{% callout type="note"  %}
+  **macOS Version requirements**
+
+  For Macs using Apple Silicon (ARM/M1-M5 chips) macOS 13.0 Ventura or later is required.
+{% /callout %}
+
 
 ## Step 1: Container Prep
 
-[Object Mount for Linux](docId:iethahkeeX5EiJoh) can be installed on a wide variety of Linux distributions. For simplicity sake, we will assume installation on an **Ubuntu Linux** deployment within a **Docker container**. 
+[Object Mount for Linux](docId:iethahkeeX5EiJoh) can be installed on a wide variety of Linux distributions. 
+
+For simplicity sake, we will assume installation on an **Ubuntu Linux** deployment within a **Docker container**. 
 
 Adjust these instructions as needed for your specific OS and container platform.
 
@@ -63,7 +67,7 @@ The details provided below are separated into two parts:
 
 Within each division you will find details and setting recommendations for **Docker** and **Rancher**.
 
-If unspecified, instructions will presume Docker as your containerization platform.
+**Note:** If unspecified, instructions will presume Docker as your containerization platform.
 
 {% tabs %}
 {% tab label="Intel Processor" %}
@@ -103,6 +107,8 @@ In order to use the `cuno-mac` CLI utility with Rancher, the **“dockerd (moby)
 {% /tab %}
 {% tab label="Apple Silicon (M Chip)" %}
 **Setting Changes when using: Apple Silicon (M Chip) Macs**
+
+**Important:** _As stated at the top of this article, Object Mount for Linux does not support ARM processors. **Using the Native Mac Object Mount client is strongly recommended**._
 
 Some container settings should be changed prior to installing and using Object Mount.
 
@@ -164,7 +170,6 @@ Use the `Apply` button to save the change.
   **colima:**
 
   - 🌐 [colima](https://github.com/abiosoft/colima) is not supported at this time.
-
 {% /callout %}
 
 
@@ -191,32 +196,24 @@ The specific installation instructions for each Linux flavor (Package installer 
 Be sure to obtain an installer package/script that corresponds to your Mac’s processor.
 
 {% callout type="warning" %}
-  **Apple Silicon (M-Chip) Challenges**
+  **Macs with Apple Silicon (M-Chips)**
 
-  **Important:** As stated at the top of this article, when creating a virtualized or containerized environment on an Apple Silicon (M-Chip)-based Mac, the operating system within the VM/Container likely needs to be an ARM/M-Chip compatible version of the OS. 
-  
-  And any Apps (such as Object Mount) installed within that VM/Containerized OS _also_ need to be written to conform to the underlying chip architecture.
-
-  As of this writing, Storj does _not_ provide any ARM-based versions of Object Mount.
-
-  This may prevent successful installation of Object Mount in _any_ VM/Container running _any_ OS or distribution on an Apple Silicon (M-Chip)-based Mac.
-
-  **Using the Native Mac Object Mount client is strongly advised.**
+  **Important:** _As stated at the top of this article, Object Mount for Linux does not support ARM processors. **Using the Native Mac Object Mount client is strongly recommended**._
 {% /callout %}
 
 
 ## Using Object Mount for Linux within your Container
 
-Object Mount can now be used from your Mac within the containerized Linux OS.
+Object Mount can now be used from your Mac within the containerized Linux OS environment.
 
-You will be able to use Object Mount with any Linux applications also installed in the Linux container.
+You can use Object Mount with any Linux applications also installed in the Linux container.
 
 {% callout type="info" %}
   **`cuno-mac` CLI utility**
 
-  The `cuno-mac` CLI utility referenced above allows for the launching and controlling of containerized Linux instances from within a native Mac Terminal Window. Linux containers are still required but can be interacted with from the Mac’s command line.
+  The `cuno-mac` CLI utility (referenced above) allows for the launching and controlling of containerized Linux instances from within a native Mac Terminal Window. Linux containers are still required but can be interacted with from the Mac’s command line.
 
-  Use of `cuno-mac` requires the installation of Python 3 on your Mac.
+  **Note:** Use of `cuno-mac` requires the installation of Python 3 on your Mac.
 
   Detailed usage of the **`cuno-mac` CLI utility** is beyond the scope of this article.
 {% /callout %}

@@ -1,13 +1,17 @@
 ---
 title: Configuration Options
 docId: phohPoowequie5ji
-
+hideTitle: false
+weight: 10
+redirects:
+  - /object-mount/linux/user-guides/configuration
 metadata:
   title: Configuration Options
   description: Configuration Options
-
-weight: 10
+hidden: false
 ---
+
+
 ## Overview
 Setting the environment variable `CUNO_OPTIONS` can be used to further configure Object Mount. The -o option on the `cuno` command can also be used to specify these options.
 

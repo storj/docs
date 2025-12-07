@@ -1,13 +1,15 @@
 ---
 title: Frequent Questions
+hideTitle: false
+docId: dd27e33c-7804-4e15-bdc5-941f9a1a7e12
 weight: 1
 redirects:
   - /object-mount/faq
-docId: dd27e33c-7804-4e15-bdc5-941f9a1a7e12
 metadata:
   title: Frequently Asked Questions
   description:
     Comprehensive resource to various FAQs on topics related to Object Mount.
+hidden: false
 ---
 
 ## What S3 permissions are recommended to mount a bucket with Object Mount?

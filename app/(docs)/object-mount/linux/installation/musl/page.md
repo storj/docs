@@ -27,7 +27,7 @@ Follow the steps below to install and configure Object Mount for **musl** platfo
 {% callout type="warning"  %}
 **`libgcc` Dependency**
 
-The Scripted Installer instructions below assume you have the `libgcc` package installed (due to a dependency on `libgcc_s.so`). 
+The `musl` Scripted Installer instructions below assume you have the `libgcc` package installed (due to a dependency on `libgcc_s.so`). 
 
 If necessary, run the following command on your Alpine distro to add the `libgcc` package (may require `sudo`):
 
@@ -50,14 +50,14 @@ Download the latest scripted installer.
 
 - **Note:** If you do not yet have a license key, you can install Object Mount for Linux in a fully-featured **Free Trial** mode. Reach out to your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch) for more details.
 
-**2a.** To install Object Mount for use _only_ by the **current user**, run the following command from a terminal window (select your processor type):
+**2a.** To install Object Mount for use _only_ by the **current user**, run the following command from a terminal window:
 
 ```shell
 # terminal
 sh cuno-mne-amd64-musl-installer.run
 ```
 
-**2b.** To install Object Mount to be used by **all users** system-wide, add `sudo` to the _front_ of the run command:
+**2b.** To install Object Mount to be used by **all users** system-wide, add `sudo` to the _front_ of the command:
 
 ```shell
 # terminal
@@ -98,4 +98,4 @@ When Object Mount is installed via a **Scripted Installer** (e.g.: glibc or musl
 
 ## Next Steps
 
-Once Object Mount is installed, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.
+_Once Object Mount is installed_, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.

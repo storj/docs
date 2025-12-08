@@ -1,14 +1,14 @@
 ---
-title: Frequent Questions
+title: FAQ
 hideTitle: false
 docId: dd27e33c-7804-4e15-bdc5-941f9a1a7e12
-weight: 1
+weight: 10
 redirects:
   - /object-mount/faq
 metadata:
   title: Frequently Asked Questions
   description:
-    Comprehensive resource to various FAQs on topics related to Object Mount.
+    Resource on various FAQs on topics related to Object Mount.
 hidden: false
 ---
 

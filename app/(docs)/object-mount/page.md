@@ -34,12 +34,12 @@ Object Mount is a high-performance mount client that provides seamless, native a
 
 ## Where to Start
 
-**Learn more** about how Object Mount works: 
+**Learn more** about how Object Mount works in the many **Appendix** articles: 
 
-- Object Mount [Concepts](docId:xzAqS9Um7xjQSbmD)
-- Object Mount [User Guides](docId:TzkP5EWAJ7ButtZZ)
+- Object Mount [Core Concepts](docId:xzAqS9Um7xjQSbmD)
+- [POSIX Explained](docId:ySneAEd79CVewSSr)
 
-Follow the **Installation Guides** and **User References** for your operating system:
+Follow the **Installation Procedure** and **User Guides** for your operating system:
 
 - [macOS](docId:apog2ij9jk6f)
 - [Windows](docId:TSMB5yXSc4FcqwXj)

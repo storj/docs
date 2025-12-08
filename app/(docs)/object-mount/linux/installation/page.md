@@ -5,6 +5,7 @@ docId: iethahkeeX5EiJoh
 weight: 2
 redirects:
   - /object-mount/linux/installation
+  - /object-mount/linux/installation/mac  
 metadata:
   title: Linux Installation Overview
   description:
@@ -53,7 +54,6 @@ Equipped with your installation download link and your Object Mount license key,
 | **Debian** (& Ubuntu, etc.)             | [Debian Package Installer](docId:aemie9zeiP9Nie2k)
 | **Red Hat** (& RPM, RHEL, CentOS, etc.) | [Red Hat Package Installer](docId:woosaugaiNohree9)
 | **Alpine** (& APM, etc.)                | [APK Package Installer](docId:MeiPie8EDuo7eise)
-| **macOS** (Linux)                       | [macOS (via Linux in containers)](docId:yoopieyewevei1Eo)
 | **Windows** (Linux)                     | [Windows (via Windows Subsystem for Linux [WSL])](docId:bekoo5aenePoo7Oh)
 
 **Other? Not sure?** 

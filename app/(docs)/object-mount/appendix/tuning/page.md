@@ -2,7 +2,7 @@
 title: Performance Tuning
 hideTitle: false
 docId: tuning
-weight: 2
+weight: 5
 metadata:
   title: Performance Tuning
   description:

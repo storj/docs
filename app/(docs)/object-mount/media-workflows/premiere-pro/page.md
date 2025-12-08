@@ -1,5 +1,5 @@
 ---
-title: Object Mount with Adobe Premiere Pro
+title: Adobe Premiere Pro
 hideTitle: true
 docId: fdz5QyWwRqaDFYS9
 weight: 1

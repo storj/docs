@@ -1,5 +1,5 @@
 ---
-title: Object Mount with DaVinci Resolve
+title: DaVinci Resolve
 hideTitle: true
 docId: xZ5tdyuyYGM8Lrfp
 weight: 3

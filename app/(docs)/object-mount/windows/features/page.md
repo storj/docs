@@ -138,13 +138,12 @@ Use Pinning to:
   - Preload media for use in slow-bandwidth environments
 
 
-## Global Features
+## Global Features & Concepts
 
-<!--
-**STILL NEED TO REVIEW THESE LINKS**
--->
+See the following **Appendix** pages for additional details on features that apply to Object Mount on _all_ operating systems (macOS, Windows, and Linux):
 
-See the following pages for additional details on features that apply to Object Mount on all operating systems (macOS, Windows & Linux):
-
-- [Performance Tuning](../faq/tuning/)
-- [POSIX mode explained](../faq/POSIX-mode/)
+- [Object Storage Core Concepts](docId:xzAqS9Um7xjQSbmD)
+- [POSIX explained](docId:ySneAEd79CVewSSr)
+- [S3 Credential Management](docId:E4NhE5kPdjURRajJ)
+- [Supported S3 Providers](docId:xCjeasn8SLQn2vfd)
+- [Performance Tuning](docId:tuning)

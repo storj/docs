@@ -10,61 +10,65 @@ metadata:
 hidden: false
 ---
 
-This article dives into the configuration and use of **Object Mount FlexMount** in Linux.
+This article dives into the configuration and use of **Object Mount FlexMount** for Linux.
 
 
 ## Overview
 
-Use **Object Mount FlexMount** for the widest compatibility and support (including SUID binaries, Snap, AppImage and FlatPak applications using FUSE), combined with the speed of Direct Interception whenever possible.
+**Object Mount FlexMount** combines the wide compatibility and support for Linux Apps via FUSE (including SUID binaries, Snap, AppImage and FlatPak applications) plus all the speed & benefits of Direct Interception Mode whenever possible.
 
-Object Mount's FlexMount features are active when:
+With Object Mount in FlexMount Mode, Object Mount will recognize that the mount path is an Object Storage mount and use **Direct Interception Mode** whenever possible for the fastest access. Object Mount will fall back to using **Object Mount on FUSE** for anything that cannot be directly intercepted. THis provides both the **best performance** and the **broadest compatibility**.
 
-1. You set up Object Mount on FUSE, but ...
+Object Mount’s FlexMount benefits are leveraged by:
 
-2. You access your cloud storage _always_ via the Object Mount CLI and _always_ by specifying your mount path via the `--flex` parameter. 
-
-Object Mount will recognize that the path is a mount and use **Direct Interception Mode** whenever possible for faster access. 
-
-Object Mount will fall back to using **Object Mount on FUSE** for anything that cannot be directly intercepted.
+  1. Configuring **Object Mount on FUSE**, and
+  2. Accessing your cloud storage via the **Object Mount CLI** by specifying your mount path via the **`--flex` parameter**. 
 
 
-## Advantages
+### Advantages
 
-1. Speed: where interception is possible, Object Mount in FlexMount mode will be as fast as Object Mount
+1. **Speed:** Where possible, Object Mount in FlexMount Mode will operate as fast as possible, using Direct Interception Mode.
 
-2. Support: support for all POSIX applications, as anything that cannot be directly intercepted falls through to the Object Mount on FUSE.
+2. **Compatibility:** Support for all POSIX applications: Anything that cannot be directly intercepted will pass through and be handled by Object Mount on FUSE.
 
 
-## Disadvantages
+### Disadvantages
 
-1. Set up time: a Object Mount on FUSE needs to be set up. Consider [setting up the mount at boot](#mount-on-boot).
+1. **Set up time:** Object Mount on FUSE needs to be configured. Consider [setting up the mount at boot](#mount-on-boot).
 
-2. Launch is more complicated: each time a Object Mount shell is launched it must be configured to use the mount. This can be worked around by setting up a Object Mount on FUSE on boot, and setting an alias to launch a Object Mount shell with the correct parameters.
+2. **Shell launch is more complicated:** Each time an Object Mount shell is launched it must be configured to use the mount. This can be worked around by setting up a Object Mount on FUSE on boot, and setting an alias to launch a Object Mount shell with the correct parameters.
 
 
 ## How to Enable
 
 FlexMount is set up as follows:
 
-1. First, set up a mount using Object Mount on FUSE:
+1. First, set up a mount using [Object Mount on FUSE](docId:ZdvWLcm9uFmM5HLk):
 
-   ```console
-   $ mkdir "$HOME/my-object-storage"
-   $ cuno mount "$HOME/my-object-storage"
-   ```
+    ```console
+    $ mkdir "$HOME/my-object-storage"
+    $ cuno mount "$HOME/my-object-storage"
+    ```
 
-2. Always use the Object Mount CLI to interact with your object storage. Every time the Object Mount CLI is launched, use the `--flex <full_path_to_mount>` parameter. For example:
+2. Always use the Object Mount CLI to interact with your object storage. 
 
-   ```console
-   $ cuno --flex "$HOME/my-object-storage"
-   ```
+    Every time the Object Mount CLI is launched, use the `--flex <full_path_to_mount>` parameter. 
+    
+    For example:
+
+    ```console
+    $ cuno --flex "$HOME/my-object-storage"
+    ```
 
 3. Then reference your mount using the mount’s path:
-   ```console
-   (cuno) $ ls $HOME/my-object-storage/s3/<bucket>/<path>
-   ```
+
+    ```console
+    (cuno) $ ls $HOME/my-object-storage/s3/<bucket>/<path>
+    ```
 
 {% callout type="note" %}
+  **FlexMount Tilde Use**
+
   You cannot use a tilde `~` in your `CUNO_OPTIONS` or `cuno -o` CLI options when setting up a FlexMount, as this is something that the shell needs to resolve. 
  
   You may still use it for your `cuno mount` commands, and subsequent FlexMount operations (such as `ls ~/my-object-storage`).
@@ -72,7 +76,9 @@ FlexMount is set up as follows:
 
 The same FlexMount can be re-used across multiple Object Mount-wrapped shells.
 
-The `--flex` option can also be used with `cuno run` to run a single command/script with Object Mount enabled, for example:
+The `--flex` option can also be used with `cuno run` to run a single command or script with Object Mount enabled.
+
+For example:
 
 ```shell
 # terminal
@@ -82,21 +88,29 @@ cuno run --flex "$HOME/my-object-storage" bash -c "touch $HOME/object_storage_mo
 
 ## FlexMount Interception Details
 
-The `-flex` option is synonymous with the `-o cloudrootover=exact -o cloudroot="<mount point>"` option, which is used to tell Object Mount to intercept paths that exactly match the cloudroot setting, and to handle them using Object Mount on FUSE.
+The `--flex` option is synonymous with the `-o cloudrootover=exact -o cloudroot="<mount point>"` option, which is used to tell Object Mount to intercept paths that exactly match the `cloudroot` setting, and to handle them using Object Mount on FUSE.
 
-When using Object Mount Direct Interception in FlexMount Mode, most "local" paths are intercepted but not acted upon, because they can be handled by the local file system. 
+When using Object Mount Direct Interception in FlexMount Mode, most “local” paths are intercepted but not acted upon as they are handled by the local file system. 
 
-The `cloudrootover` setting is telling Object Mount to intercept local paths that match the `cloudroot` setting, and to prioritize itself handling them over the mount. This means that whenever a path is recognized as the `cloudroot`, it can be more efficiently handled in user-space by the Direct Interception/`LD_PRELOAD` library. 
+The `cloudrootover` setting tells Object Mount to intercept local paths that match the `cloudroot` setting, and to prioritize itself handling them via the mount. This means that whenever a path is recognized as the `cloudroot`, it will be more efficiently handled in user-space by the Direct Interception/`LD_PRELOAD` library. 
 
 That path recognition can be done in two ways:
 
-  - (default) Exact string matching (`exact`) will match the cloudroot setting exactly. This is faster, and will end up relying on the FUSE mount whenever the paths don't match the cloudroot - for example with symbolic links located outside the mount pointing into the mount.
+  - **Exact String Matching:** (`exact`) This method will match the `cloudroot` setting exactly. This is faster, and will end up relying on the FUSE mount whenever the paths don’t match the `cloudroot` &mdash; for example with symbolic links located outside the mount pointing into the mount. 
+  
+    Exact String Matching is the default method. No additional configuration is needed to enable.
 
-  - Resolved path matching (`resolve`) will resolve the full path given in a file system call including symbolic links to check if the file is ultimately located inside the mount point. This requires more calls for every path-based file system call, so is slower when many files are being accessed. It is useful when symbolic links are used to point into the mount, and other cases where the path ultimately is inside the mount. This can be more efficient in some special cases (few files, large transfers, complex relationships between files) as `cuno.so` will intercept more calls without requiring them to go through the slower FUSE mount.
+  - **Resolved Path Matching:** (`resolve`) This method will resolve the full path given in a file system call, including symbolic links, to check if the file is ultimately located inside the mount point. 
+  
+    This requires more calls for every path-based file system call, so is slower when many files are being accessed. It is useful when symbolic links are pointed to the mount, and other cases where the path ultimately is inside the mount. 
+    
+    This can be more efficient in some special cases (few files, large transfers, complex relationships between files) as `cuno.so` will intercept more calls without requiring them to go through the slower FUSE mount.
 
-To use resolve mode use the parameters `-o cloudrootover=resolve -o cloudroot="<full path to mount point>"`, for example:
+    To use Resolved Path Matching Mode, use the parameters `-o cloudrootover=resolve -o cloudroot="<full path to mount point>"`.
 
-```console
-$ cuno -o cloudrootover=resolve -o cloudroot="$HOME/my-object-storage"
-(cuno) $ ls $HOME/object_storage_mount/s3/<bucket>/<path>
-```
+    For example:
+
+    ```console
+    $ cuno -o cloudrootover=resolve -o cloudroot="$HOME/my-object-storage"
+    (cuno) $ ls $HOME/object_storage_mount/s3/<bucket>/<path>
+    ```

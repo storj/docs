@@ -1,5 +1,5 @@
 ---
-title: Object Mount with Avid Media Composer
+title: Avid Media Composer
 hideTitle: true
 docId: eSTEd9V5JbexxYDQ
 weight: 2

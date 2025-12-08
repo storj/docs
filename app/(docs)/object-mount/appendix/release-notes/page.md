@@ -2,7 +2,7 @@
 title: Release Notes
 hideTitle: false
 docId: ScTuUGKGH5DHVqZF
-weight: 10
+weight: 11
 redirects:
   - /object-mount/release-notes
 metadata:

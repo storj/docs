@@ -10,7 +10,7 @@ metadata:
 hidden: false
 ---
 
-This article dives into the configuration and use of **Object Mount on FUSE** in Linux.
+This article dives into the configuration and use of **Object Mount on FUSE** for Linux.
 
 ## Overview
 
@@ -66,14 +66,9 @@ ls ~/my-object-storage/s3/<bucket>/<path>
 {% tab label="Storj" %}
 ```shell
 # terminal
-ls ~/my-object-storage/sj/<bucket>/<path>
+ls ~/my-object-storage/s3/<bucket>/<path>
 ```
 {% /tab %}
-
-<!-- S3 VS SJ
-THIS IS THE FIRST MENTION OF `SJ` INSTEAD OF `S3.
-VALID? OR NOT?
--->
 
 {% tab label="Microsoft Azure" %}
 ```shell

@@ -28,9 +28,3 @@ As was described in the **Getting Started Guide** article [](docId:bRnfbdNE6d5Da
 ## Enabling Object Mount in Other Environments
 
 For information on setting up Docker containers with Object Mount pre-loaded, automatically setting up Object Mount on FUSE at boot, and other containerization and High-Performance Computing (HPC) use-cases, see Linux User Guide article: [](docId:airoogh4Waengi8u).
-
-
-
-
-
-

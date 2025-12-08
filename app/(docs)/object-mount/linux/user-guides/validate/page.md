@@ -138,6 +138,8 @@ If you encounter an issue and need to re-import your credential file, you must f
 cuno creds purge credentials.s3c
 ```
 
+_See the [](docId:aish4shuiheeZaig) article for additional `cuno cred` details._
+
 **S3 Compatibility Check:**
 
 If you are using an S3-compatible service and are having problems, you can run a compatibility check using the `detectfeatures` command:

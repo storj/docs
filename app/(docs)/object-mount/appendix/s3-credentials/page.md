@@ -177,11 +177,7 @@ Select your S3 storage provider below for details on syntax and variable naming:
 
   `region` is optional.
 
-  Object Mount can also use an **AWS S3 Access Point** instead of a container (see [](docId:jieteeYeyievui9k) for more details).
-
-  <!-- DOUBLE CHECK THE ABOVE LINK AND ITS CONTENT -->
-
-
+  Object Mount can also use an **AWS S3 Access Point** instead of a container (see [](docId:jieteeYeyievui9k#aws-s3-access-point-support) for more details).
 
 {% /tab %}
 
@@ -252,17 +248,7 @@ Select your S3 storage provider below for details on syntax and variable naming:
 
 {% /tabs %}
 
-{% callout type="info" %}
-  **Endpoint Formatting**
-
-  For additional details and options on _endpoint_ formatting, consult the user guide section for [Authenticating with S3-compatible solutions](../user-guides/credentials#s3-compatible-solutions).
-
-  <!-- DOUBLE CHECK THE ABOVE LINK AND ITS CONTENT -->
-
-
-
-
-{% /callout %}
+_See the [](docId:aish4shuiheeZaig) article for additional credential options and endpoint formatting details._
 
 
 ## Securing Your S3 Credentials
@@ -284,3 +270,5 @@ chmod 0600 "<path to your credentials file>"
   touch credentials.txt ; chmod 0600 credentials.txt ; printf "aws_access_key_id = xxxxxxxxxxxxxxxxxx \naws_secret_access_key = xxxxxxxxxxxxxxxxx \nendpoint=A.B.C.D:PORT" > credentials.txt
   ```
 {% /callout %}
+
+_See the [](docId:aish4shuiheeZaig) article for additional credential options._

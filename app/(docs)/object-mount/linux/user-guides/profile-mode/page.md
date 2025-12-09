@@ -1,109 +1,111 @@
 ---
-title: TBD-Linux Profile Mode (CUNO_PROFILE)
-docId: linux-profile-mode
+title: Media & HPC Modes
 hideTitle: true
+docId: linux-profile-mode
 weight: 9
 metadata:
-  title: Object Mount on Linux – Profile Modes
+  title: Linux Profile Mode (CUNO_PROFILE)
   description:
     Explains the CUNO_PROFILE environment variable for Linux builds and how to choose the appropriate mode (M&E vs HPC).
 ---
 
-# Linux Profile Mode: `CUNO_PROFILE`
+# Media & Entertainment and HPC Modes 
 
-Object Mount for Linux includes an environment variable called **`CUNO_PROFILE`** that configures internal behaviour for different types of workloads. This setting is **only applicable on Linux**, and helps Object Mount optimise itself for either:
+Object Mount for Linux includes an environment variable called `CUNO_PROFILE` that modifies internal application behavior for different types of workloads. 
 
-- **Media & Entertainment workflows** (`CUNO_PROFILE=M&E`)  
-- **High-performance computing environments** (`CUNO_PROFILE=hpc`)
+This setting only applies to Object Mount on Linux and helps Object Mount optimize itself for Media & Entertainment (M&E) and High-Performance Computing (HPC) workflows:
 
-Understanding which mode to use is important, the wrong setting can lead to suboptimal behaviour, especially for large-scale automated environments.
+| **CUNO Profile Setting**  | **Workflow** |
+|---------------------------|--------------|
+| `CUNO_PROFILE=M&E`        | Media & Entertainment workflows
+| `CUNO_PROFILE=hpc`        | High-Performance Computing environments
 
----
+Understanding the behavior of each mode is important. 
 
-## What Does `CUNO_PROFILE` Do?
+Setting the wrong mode can negatively impact expected performance, especially in large-scale automated environments.
+
+
+## Purpose of CUNO_PROFILE
 
 The `CUNO_PROFILE` variable adjusts how Object Mount behaves internally, including:
 
-- How aggressively metadata is cached  
-- Which filesystem features are exposed  
-- Logging, debugging, and memory handling profiles  
-- Compatibility expectations with the Linux userland and toolchains
+  - How aggressively metadata is cached  
+  - Which filesystem features are exposed  
+  - Logging, debugging, and memory handling profiles  
+  - Compatibility expectations with the Linux **UserLAnd** and **toolchain** tools
 
-{% callout type="info" %} 
-If unset, the default is:  
-`CUNO_PROFILE=M&E`
+{% callout type="info" %}
+  **Default Profile Mode**
+  
+  If unset, the default is for Media & Entertainment workflows: `CUNO_PROFILE=M&E`.
 {% /callout %}
 
-This is well-suited to desktop users, editors, and creative professionals using Object Mount interactively, but **not always suitable** for headless systems or scripted automation.
+Media & Entertainment Mode is well-suited to desktop users, editors, and creative professionals using Object Mount interactively, but less appropriate for headless systems or scripted automations.
 
----
 
 ## Choosing the Right Profile
 
-Before shipping or deploying the Linux version of Object Mount, ask the following:
+Before installing or configuring Object Mount for Linux, consider the following questions:
 
-### 1. **Is the user working interactively, or via headless automation?**
-- `M&E` is tuned for interactive, graphical workflows  
-- `hpc` is preferred for background tasks, CLI tools, and scripts
+1. **Is the user working interactively? Or via headless automation?**
 
-### 2. **Will the mount be used by creative software (e.g. Resolve, Premiere, FCP)?**
-- If yes: `M&E`  
-- If not (e.g. media transformation pipelines, backups): `hpc`
+    - `M&E` Mode is tuned for interactive, graphical workflows  
+    - `hpc` Mode is preferred for background tasks, CLI tools, and scripts
 
-### 3. **Is the system a personal workstation or shared server node?**
-- Workstation → `M&E`  
-- Server node / render farm → `hpc`
+2. **Will the mount be used by creative software applications?**
 
-### 4. **Is the mount expected to be long-lived and static, or frequently toggled?**
-- Session-based, user-initiated mounts → `M&E`
-- Long-lived, persistent mounts → `hpc`  
+    - If using Apps such as Avid Media Composer, DaVinci Resolve, Apple Final Cut Pro, Adobe Premiere Pro, etc.:
+      - Set: `CUNO_PROFILE=M&E` 
+    - If running scripted automation tools, media transformation pipelines, background archive/backup jobs, etc.:
+      - Set: `CUNO_PROFILE=hpc`
 
-### 5. **Will users be working via GUI, or purely via CLI/API?**
-- GUI or desktop usage → `M&E`  
-- CLI tools, automation, batch jobs → `hpc`
+3. **Is the system a personal workstation? Or shared server node?**
 
-### 6. **Is latency more important than throughput, or vice versa?**
-- Low-latency I/O (desktop feel) → `M&E`  
-- Bulk, high-throughput tasks (e.g. rendering, transcoding) → `hpc`
+    - Personal Workstation &mdash;  Set: `CUNO_PROFILE=M&E`  
+    - Server node / render farm &mdash; Set: `CUNO_PROFILE=hpc`
 
----
+4. **Is the mount expected to be long-lived and static? Or frequently toggled?**
+
+    - Session-based, user-initiated mounts &mdash; Set: `CUNO_PROFILE=M&E`  
+    - Long-lived, persistent mounts &mdash; Set: `CUNO_PROFILE=hpc`
+
+5. **Will users be working via GUI, or purely via CLI/API?**
+
+    - GUI or desktop usage &mdash; Set: `CUNO_PROFILE=M&E`  
+    - CLI tools, automation, batch jobs &mdash; Set: `CUNO_PROFILE=hpc`
+
+6. **Which is more important: latency or throughput?**
+
+    - Low-latency I/O, fast response time “desktop feel” &mdash; Set: `CUNO_PROFILE=M&E`  
+    - Bulk, high-throughput, background tasks (e.g.: rendering, transcoding) &mdash; Set: `CUNO_PROFILE=hpc`
+
 
 ## Setting the Profile
 
-To explicitly set the profile, define the environment variable before launching Object Mount:
+To explicitly set the profile, define the environment variable _before_ launching Object Mount.
+
+For example:
 
 ```
 bash
 export CUNO_PROFILE=hpc
 ```
 
-For permanent use, add this to:
-- Your shell profile (`~/.bashrc`, `~/.zshrc`)
-- A systemd service or login script
-- Docker or container entrypoints (if applicable)
+For permanent use, add the environment variable setting to:
+  - Your shell profile (`~/.bashrc`, `~/.zshrc`)
+  - A systemd service or login script
+  - Docker or container entrypoints (if applicable)
 
----
 
-## Quick Reference
+## Table: Use Case Quick Reference 
 
-| Use Case                   | Recommended Profile |
-|----------------------------|---------------------|
-| Desktop video editing      | `M&E`               |
-| Automated ingest pipeline  | `hpc`               |
-| Interactive audio work     | `M&E`               |
-| Render farm node           | `hpc`               |
-| Remote headless access     | `hpc`               |
-| Local workstation previews | `M&E`               |
-
----
-
-## Summary
-
-Choosing the right `CUNO_PROFILE` ensures Object Mount behaves appropriately for the workload. If in doubt:
-
-- Start with `M&E` for creative users  
-- Use `hpc` for background, server, or scripted automation
-
-{% callout type="info" %}
-Still unsure which profile to use? 🌐 [Reach out to our support team](https://supportdcs.storj.io/hc/en-us/requests/new) and we’ll help you pick the right configuration.
-{% /callout %}
+| **Use Case**                         | **Recommended Profile** |
+|--------------------------------------|-------------------------|
+| **Media & Entertainment Workflows:**         |
+| • Desktop video editing              | `M&E`               |
+| • Interactive audio work             | `M&E`               |
+| • Local workstation media previews   | `M&E`               |
+| **High-Performance Computing Environments:** |
+| • Automated ingest pipelines         | `hpc`               |
+| • Render farm nodes                  | `hpc`               |
+| • Remote headless access             | `hpc`               |

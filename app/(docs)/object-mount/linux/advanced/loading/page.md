@@ -39,7 +39,7 @@ Enter `exit` at any time to close the Object Mount CLI console and return to the
 user:~$
 ```
 
-## Via User-Mode library
+## Via User-Mode library: LD_PRELOAD
 
 As mentioned in the Object Mount for Linux [Introduction](docId:wxtofwqcb5f2), Object Mount provides a User-mode Library, `cuno.so`. This dynamic loader can be pre-loaded into a running process using the `LD_PRELOAD` environment variable.
 

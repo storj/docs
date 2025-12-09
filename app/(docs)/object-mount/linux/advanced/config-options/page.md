@@ -1,6 +1,6 @@
 ---
-title: Advanced Config Options
-hideTitle: true
+title: Advanced Configuration Options
+hideTitle: false
 docId: phohPoowequie5ji
 weight: 3
 redirects:
@@ -11,15 +11,13 @@ metadata:
 hidden: false
 ---
 
-# Advanced Configuration Options
-
 ## Overview
 Setting the environment variable `CUNO_OPTIONS` can be used to further configure Object Mount. 
 
 The `-o` option added to the `cuno` command can also be used to specify these options.
 
 
-## Options available for `CUNO_OPTIONS`
+## Options available for CUNO_OPTIONS
 
 {% callout type="note"  %}
   **Space Separation**
@@ -27,13 +25,13 @@ The `-o` option added to the `cuno` command can also be used to specify these op
   Individual options must be separated by spaces. Don’t forget to enclose multiple options in quotes (`"` or `’`), or to escape spaces.
 {% /callout %}
 
-### The `static` Option
+### The static Option
 
 To use Object Mount with static binaries, the _parent process_ needs to be intercepted in static mode. 
 
 Interception of static binaries is enabled by default. To disable it requires setting both `CUNO_OPTIONS="-static"` and starting a new Object Mount wrapped shell.
 
-### The `uricompat` Option
+### The uricompat Option
 
 Object Mount can override the handling of URI-style paths (`xx://`) in applications that attempt to provide internal handling of such URIs. Users may provide the `+uricompat` option to add similar patching for further applications.
 
@@ -94,7 +92,7 @@ This will intercept any invocation of `java` with `appname.jar` as its second ar
 It will also intercept invocations of Java where any argument is equal to `org.name.main.Class` (e.g.: `java org.name.main.Class s3://bucketname/file.bam`).
 
 
-### The `cloudroot` Option
+### The cloudroot Option
 
 You may define a custom directory path prefix to replace the default `/cuno` path. Once defined, the path specified will be made available at the root of the file system. 
 

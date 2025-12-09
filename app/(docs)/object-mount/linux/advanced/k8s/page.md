@@ -2,7 +2,7 @@
 title: Kubernetes CSI Driver
 hideTitle: false
 docId: zohm4zeXohpae9ga
-weight: 10
+weight: 5
 metadata:
   title: Kubernetes CSI Driver
   description: Kubernetes CSI Driver Guide

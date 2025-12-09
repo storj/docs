@@ -14,7 +14,7 @@ hidden: false
 
 ## What is POSIX?
 
-The Portable Operating System Interface (POSIX) is a set of IEEE specifications intended to encourage compatibility between disparate Linux/UNIX flavors through standardized definitions of APIs, shells, interfaces, commands, etc.
+The Portable Operating System Interface (🌐 [POSIX](https://en.wikipedia.org/wiki/POSIX)) is a set of IEEE specifications intended to encourage compatibility between disparate Linux/UNIX flavors through standardized definitions of APIs, shells, interfaces, commands, etc.
 
 Writing an application (or binary) which meets POSIX standards means that the program is “portable,” and is more likely to run correctly no matter what UNIX-based OS it is installed on.
 

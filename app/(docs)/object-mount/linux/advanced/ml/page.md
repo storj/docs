@@ -1,59 +1,91 @@
 ---
-title: TBD-Machine Learning Accelerator
+title: Machine Learning Accelerator
+hideTitle: false
 docId: aiwoo2Gohshah8Zo
-
+weight: 6
 metadata:
   title: Machine Learning Accelerator
-  description: Machine Learning Accelerator Guide
-    
-weight: 11
+  description: 
+    Machine Learning Accelerator Guide
+hidden: false  
 ---
 
-The Object Mount Machine Learning Accelerator (Object Mount MLA) is a software library that accelerates your existing machine learning models by advanced leveraging of our data retrieval and storage technology.
+The Object Mount **Machine Learning Accelerator** (Object Mount MLA) is a software library that accelerates existing machine learning models by leveraging Object Mount’s enhanced data retrieval and storage technology.
 
-It is available for our Professional and Enterprise customers.
+{% callout type="note" %}
+  **Enterprise Feature**
+  
+  The Object Mount MLA library is only available to Object Mount for Linux users with an **Enterprise License Key**.
+{% /callout %}
+
 
 ## Requirements
 
-Python 3.7+ is required to use the Object Mount Machine Learning Accelerator (Object Mount MLA). If you require lower versions of Python 3, please contact us at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new).
+Python 3.7 or higher is required to use the Object Mount Machine Learning Accelerator. 
 
-### Supported functions
+If you require previous versions of Python 3, reach out to our [Support Team](https://supportdcs.storj.io/hc/en-us/requests/new).
+
+
+## Supported Functions
 
 The Object Mount MLA has been tested with the following data loading functions:
 
-- `open`
-- `numpy.loadfile`
-- `numpy.load`
-- `numpy.loadtxt`
-- `PIL.Image.open`
-- `torchaudio.load`
+  - `open`
+  - `numpy.loadfile`
+  - `numpy.load`
+  - `numpy.loadtxt`
+  - `PIL.Image.open`
+  - `torchaudio.load`
 
-It may also work with additional data loading functions, and support is available at our [help desk](https://supportdcs.storj.io/hc/en-us/requests/new) if you need assistance to enable additional functions.
+It may also work with additional data loading functions.
 
-## Usage
+Contact our [Support Team](https://supportdcs.storj.io/hc/en-us/requests/new) for assistance with using additional functions.
 
-First, you must install the MLA dependencies in your environment. You can use `pip` to do so:
 
-```console
-pip install -r "<path to Object Mount MLA>/requirements.txt"
-```
+## Installation and Usage
 
-You must also set the following environment variables to enable the Object Mount Machine Learning capability:
+1. **Installation:**
 
-- `CUNO_SPEEDUP_PYTHON=1`
-- `PYTHONPATH="<path to the Object Mount MLA>${PYTHONPATH+:$PYTHONPATH}"`
+    To use Object Mount MLA you myst install the dependencies in your environment. 
 
-In this example, Python will load the Object Mount MLA's `sitecustomize.py` first. The `CUNO_SPEEDUP_PYTHON` environment variable will signal the Object Mount MLA to enable our ML optimizations.
+    Use `pip` to do so:
 
-Next, you can use any of the standard ways to enable Object Mount, including Direct Interception and Object Mount on FUSE.
+    ```console
+    pip install -r "<path to Object Mount MLA>/requirements.txt"
+    ```
 
-### Using Object Mount Direct Interception
+2. **Set Environment Variables:**
 
-To enable the Object Mount Direct Interception you can launch a new shell with Object Mount enabled as usual with `cuno`.
+    Then set the following environment variables:
 
-If this is not an option, you can use `cuno run` to enable Object Mount for a single command. You can also set the `LD_PRELOAD` environment variable directly, like `LD_PRELOAD=<path to your Object Mount installation>/lib/cuno.so`.
+      - `CUNO_SPEEDUP_PYTHON=1`
+      - `PYTHONPATH="<path to the Object Mount MLA>${PYTHONPATH+:$PYTHONPATH}"`
 
-#### Example usage
+    The `CUNO_SPEEDUP_PYTHON` variable signals Object Mount MLA to enable specific Machine Learning optimizations.
+
+    The `PYTHONPATH` alteration causes Python to load the Object Mount MLA’s `sitecustomize.py` file first. 
+
+When finished, you can begin using Object Mount. All standard Object Mount deployment modes are support, including Direct Interception and Object Mount on FUSE.
+
+Use the examples below for details on using Object Mount within your specific deployment mode.
+
+### Object Mount MLA with Direct Interception Mode
+
+Object Mount’s Direct Interception Mode is easily activate by running the `cuno` command to invoke a new Object Mount-wrapped shell.
+
+  ```shell
+  # terminal
+  cuno
+  (cuno) $ 
+  ```
+
+If using the Object Mount CLI (`cuno`) is _not_ an option, you can use `cuno run` to enable Object Mount for a _single command_. 
+
+You can also set the `LD_PRELOAD` environment variable directly: e.g.: `LD_PRELOAD=<path to your Object Mount installation>/lib/cuno.so`.
+
+See the “User-Mode library: LD_PRELOAD” section in the Advanced Guide article: [Advanced Loading Options](docId:airoogh4Waengi8u#via-user-mode-library-ld-preload) for additional details on using `LD_PRELOAD`.
+
+**Example Usage:**
 
 Activating a shell with Object Mount as an example:
 
@@ -64,13 +96,13 @@ $ cuno
 (cuno) $ python3 demo/verify.py
 ```
 
-### Using Object Mount on FUSE
+### Object Mount MLA with Object Mount on FUSE
 
-To use Object Mount on FUSE with your object storage data, you will need to configure your Python scripts to look for data inside the mount.
+To use Object Mount MLA with Object Mount on FUSE you will need to configure your Python scripts to look for data _inside_ the mount.
 
-#### Example usage
+**Example Usage:**
 
-Mounting an S3 bucket named `dataset_bucket` at the location `$HOME/cloudmount` as an example:
+Mount an S3 bucket named `dataset_bucket` at the location `$HOME/cloudmount`:
 
 ```console
 export CUNO_SPEEDUP_PYTHON=1

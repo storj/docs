@@ -32,13 +32,12 @@ You will need to obtain the following three items from your storage provider:
 
 The credentials you obtain need to have sufficient permissions in order for Object Mount to discover, read, write, and manage your data, including the permission to list buckets. 
 
-If this is not possible (or desired), you can use `cuno creds pair` options (See: << LINK TO BE ADDED >>).
+If this is not possible (or desired), you can use `cuno creds pair` options. See the **Pairing Containers and Credentials** section in the Linux Advanced Configuration Guide article: [Advanced Credential Options](docId:aish4shuiheeZaig#pairing-containers-and-credentials).
 {% /callout %}
 
 For instructions on how to create and/or obtain your S3 storage credentials, select the tab below that corresponds to your S3 provider:
 
 {% tabs %}
-
 {% tab label="AWS S3" %}
   **Amazon Web Services**
   
@@ -54,9 +53,28 @@ For instructions on how to create and/or obtain your S3 storage credentials, sel
 
   Alternatively, create a new **IAM user** with “programmatic access” (access using keys), by following the AWS User Guide: 🌐 [Creating an IAM user in your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html).
 
-  <!-- For further options and alternatives, consult our full guide on [accessing S3 object storage](../user-guides/credentials#amazon-web-services-s3).
+  The steps should be similar to the following:
 
-  ^^^ IS THIS STILL NEEDED? -->
+  1. Log into the AWS Console: 🌐 https://s3.console.aws.amazon.com
+
+  2. Navigate to: **Services > IAM**
+
+  3. Open **Users** and click on the **Add user** button
+
+    1. Set a username
+    2. Select the **Programmatic access** option
+    3. Click on **Next**
+
+  4. On the **Set Permissions** page:
+  
+    1. Select **Attach existing policies directly**
+    2. Select an existing policy, e.g.: **AmazonS3ReadOnlyAccess** or **AmazonS3FullAccess**
+    3. or Create a new policy that has the **s3:ListAllMyBuckets** permission and at least the **s3:ListBucket** and **s3:GetObject** permissions for each bucket available to the user
+    4. Click **Next**
+
+  5. Review and confirm to create the new user
+
+  6. Download the CSV file by pressing the corresponding button
 {% /tab %}
 
 {% tab label="Storj" %}
@@ -102,13 +120,16 @@ For instructions on how to create and/or obtain your S3 storage credentials, sel
 
   If you already have an account and need the access key, see 🌐 [View account access keys](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
-  Alternatively, Object Mount supports using Shared Access Signatures (SAS) to access Azure containers. (See [Accessing Azure containers using SAS](../user-guides/credentials#microsoft-azure-blob-storage-with-shared-access-signatures)).
+  The steps should be similar to:
 
-  <!-- DOUBLE CHECK THE ABOVE LINK AND ITS CONTENT -->
+  1. Log into the Azure Portal: 🌐 <https://portal.azure.com/>
+  2. From **services**, select **Storage Accounts**
+  3. Click on the Storage Account you want the key for
+  4. In the **Security + networking** section, click **Access keys**
+  5. Click on the **Show keys** button
+  6. Save the **Storage account name** and **Key**
 
-
-
-
+  Alternatively, Object Mount for Linux supports using Shared Access Signatures (SAS) to access Azure containers. See the **Microsoft Azure Storage with Shared Access Signatures** section in the Linux Advanced Configuration Guide article: [Advanced Credential Options](docId:aish4shuiheeZaig#microsoft-azure-storage-with-shared-access-signatures).
 {% /tab %}
 
 {% tab label="Google Cloud" %}
@@ -117,6 +138,17 @@ For instructions on how to create and/or obtain your S3 storage credentials, sel
   You will need key-based access to be associated with your 🌐 [Google Cloud service account](https://developers.google.com/workspace/guides/create-credentials#service-account).
 
   If you need to set this up, you can have Google generate a new key by following Google’s guide at 🌐 [Create and delete service account keys](https://cloud.google.com/iam/docs/keys-create-delete). 
+
+  The steps should be similar to:
+
+  1. Log into the GCS portal: 🌐 <https://cloud.google.com/>
+  2. Navigate to the **Service Accounts** page
+  3. Select the **project** you want to provide access to
+  4. Click the **email address** of the service account that you want to create a key for
+  5. Click the **Keys** tab
+  6. Click **Add key** from the drop-down menu, then select **Create new key**
+  7. Select **JSON** as the **Key type** and click **Create**
+  8. Save the downloaded JSON file.
   
   Alternatively, you can generate your own key pair and upload it on the service account’s key management page, by following this guide 🌐 [Upload service account keys](https://cloud.google.com/iam/docs/keys-upload).
 {% /tab %}
@@ -130,6 +162,18 @@ For instructions on how to create and/or obtain your S3 storage credentials, sel
 {% /tab %}
 
 {% /tabs %}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Using & Saving Your S3 Credentials

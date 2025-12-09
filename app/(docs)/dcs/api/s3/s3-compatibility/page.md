@@ -1,5 +1,5 @@
 ---
-title: S3-Compatibility
+title: S3 Compatibility
 docId: eZ4caegh9queuQuaazoo
 weight: 1
 redirects:

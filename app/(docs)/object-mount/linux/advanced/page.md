@@ -1,5 +1,5 @@
 ---
-title: Feature Guides
+title: Advanced Guides
 hideTitle: true
 docId: GeWpcQTuVpL6d3wU
 weight: 4

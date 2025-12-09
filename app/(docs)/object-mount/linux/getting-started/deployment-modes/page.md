@@ -2,7 +2,7 @@
 title: Deployment Modes
 hideTitle: false
 docId: bRnfbdNE6d5DaZzW
-weight: 2
+weight: 3
 metadata:
   title: Deployment Options for Linux
   description:

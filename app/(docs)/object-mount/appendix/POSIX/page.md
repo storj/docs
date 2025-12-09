@@ -113,4 +113,4 @@ Use the links below to **learn** about the many POSIX Modes, options, and settin
 |----------------------|-----------------|
 | **Learn about** [POSIX Options](docId:cbm3PcQXmLpuYcbg) | Understanding POSIX Modes in Object Mount for Linux |
 | **Enable** [POSIX File Access](docId:cbm3PcQXmLpuYcbg#posix-file-access) | Enabling POSIX File Access Mode in Object Mount for Linux |
-| **Enable** [Enforced POSIX File Access](docId:Eegoo1teiJ8eerae) | Enabling Enforced POSIX File Access Mode in Object Mount for Linux |
+| **Enable** [Enforced POSIX File Access](docId:Eegoo1teiJ8eerae) | Enabling _Enforced_ POSIX File Access Mode in Object Mount for Linux |

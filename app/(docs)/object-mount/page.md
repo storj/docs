@@ -36,7 +36,7 @@ Object Mount is a high-performance mount client that provides seamless, native a
 
 **Learn more** about how Object Mount works in the many **Appendix** articles: 
 
-- Object Mount [Core Concepts](docId:xzAqS9Um7xjQSbmD)
+- Object Storage [Core Concepts](docId:xzAqS9Um7xjQSbmD)
 - [POSIX Explained](docId:ySneAEd79CVewSSr)
 
 Follow the **Installation Procedure** and **User Guides** for your operating system:

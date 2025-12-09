@@ -16,13 +16,21 @@ This section contains everything you need to understand, install and use **Objec
 
 Whether you’re setting up for creative workflows, remote storage access, or team-based collaboration, these pages will walk you through installation, setup, and day-to-day use.
 
+
+## Linux Package
+
+Object Mount is a scalable, high-performance POSIX compatibility layer that lets you interact with files stored on object storage such as Amazon S3, Storj Object Storage, Azure Blob Storage, Google Cloud Storage, or any S3-compatible object store hosted in the cloud or locally.
+
+**Object Mount for Linux** retains much of its original look and feel from its **cunoFS** heritage.
+
+Object Mount for Linux includes an Object Mount Command Line Interface (CLI), `cuno`, providing the highest performance and most straightforward way to interact with object storage. You will encounter many `cunu`-related commands, settings, and custom variables throughout your configuration and daily use of Object Mount for Linux.
+
+Object Mount functions via a user-mode library, `cuno.so`, which acts as a 🌐 [dynamic linker/loader](https://man7.org/linux/man-pages/man8/ld.so.8.html) intercepting applications (both dynamic and static) via fast, dynamic binary instrumentation.
+
+
 ## Object Mount: OS Version Differences
 
-Storj’s **Object Mount for Linux** retains much of its original look and feel from its **cunoFS** heritage.
-
-You will encounter many `cunu`-related commands, settings, and custom variables throughout your configuration and daily use of Object Mount for Linux. 
-
-This is in contrast to the Graphical User Interface (GUI) experience that Object Mount presents to Windows and macOS users.
+Storj’s Object Mount for Linux, with its CLI-heavy user interface, is in stark contrast to the Graphical User Interface (GUI) experience that Object Mount presents to Windows and macOS users.
 
 Other OS differences include:
 
@@ -42,7 +50,7 @@ Object Mount’s Linux-specific content includes:
 - Getting Started Guides
 - Installation Guides
 - User Guides
-- Feature Guides
+- Advanced Guides
 
 Click below to access the content you are looking for:
 
@@ -65,7 +73,6 @@ When _ready to install_, view the Object Mount for Linux [Installation Guides](d
   - glibc (standard C library)
   - musl (standard C library)
   - Windows - via Windows Subsystem for Linux (WSL)
-  - macOS - via Linux within containers
 
 ### User and Configuration Guides
 
@@ -73,48 +80,49 @@ _After installation_, read through the [User Guides](docId:ohs0ailohSh0Vie3) to 
 
   - Validating Functionality
   - Activating License Keys
-  - The different Linux [Deployment Modes](docId:jqySXsBfj5WGUjgs):
+  - The different Linux Deployment Modes
     - Direct Interception Mode
     - Object Mount on FUSE
     - Object Mount FlexMount
     - Object Mount Fusion
 
-### Linux Feature Guides
+Plus expert topics such as:
 
-Once up and running, explore the Linux-specific _advanced configuration tips_ found in the Object Mount for Linux [Feature Guides](docId:GeWpcQTuVpL6d3wU). These articles will help you fine-tune your deployment, improve Object Mount’s performance, and increase your productivity. 
+  - Enabling Enforced POSIX File Access
+  - Cloud Path Details
+  
+### Advanced Guides
+
+Once up and running, explore the Linux-specific _advanced configuration tips_ found in the Object Mount for Linux [Advanced Guides](docId:GeWpcQTuVpL6d3wU). These articles will help you fine-tune your deployment, improve Object Mount’s performance, and increase your productivity. 
 
 Topics include:
-  - [Enabling Enforced POSIX File Access](docId:Eegoo1teiJ8eerae)
 
-<!--
- ADD/EDIT MORE BULLETS HERE
--->
-
-
-  - Object Mount Fusion
-  - Linux Profile Mode
+  - Advanced Credential Options
+  - Advanced Loading Options
+  - Advanced Config Options
+  - Server-Side Encryption
+  - Kubernetes CSI Driver
 
 
-## Additional Global Reference Material
+## Additional Reference Material
 
-<!--
-  IS THIS NEEDED??
--->
+Once your Linux deployment of Object Mount is up and running, there are several **Global Features** and **Media Application Guides** that you can reference, including:
 
-Once your Linux deployment of Object Mount is up and running, there are several **Global Topics** and **Media Application Guides** that you can reference, including:
+**Global Features & Concepts:**
 
-**Global Features:**
+See the **Appendix** for additional articles on features that apply to Object Mount on _all_ operating systems (macOS, Windows, and Linux):
 
-Features that apply to all operating systems (macOS, Windows, Linux)
-
-These global features are defined and explained in more detail for all users
-
-  - <<LINKS NEEDED>>
+- Object Storage Core Concepts
+- POSIX explained
+- S3 Credential Management
+- Supported S3 Providers
+- Performance Tuning
+- FAQs
 
 **Media Application & Workflow Guides:**
 
 Detailed usage tips and recommendations for many of the leading Media Workflow tools, including:
 
-  - Using Object Mount with [DaVinci Resolve](./media-workflows/davinci-resolve/)  
-  - Using Object Mount with [Adobe Premiere Pro](./media-workflows/premiere-pro/)
-  - Using Object Mount with [Avid Media Composer](./media-workflows/media-composer/)
+  - Using Object Mount with DaVinci Resolve
+  - Using Object Mount with Adobe Premiere Pro
+  - Using Object Mount with Avid Media Composer

@@ -1,12 +1,12 @@
 ---
-title: Enabling Enforced POSIX File Access
+title: Enable Enforced POSIX File Access
 hideTitle: false
 docId: Eegoo1teiJ8eerae
-weight: 6
+weight: 4
 redirects:
   - /object-mount/linux/getting-started/enforced-posix-access
 metadata:
-  title: Enabling up Enforced POSIX File Access
+  title: Enable Enforced POSIX File Access
   description:
     This guide represents the general process for setting up Enforced POSIX File Access. The specific steps may vary depending on your object storage provider.
 hidden: false
@@ -102,7 +102,9 @@ Below are some common behaviors and patterns that you might want to implement wh
 
 ### Setting Default Permissions for New Files
 
-On POSIX systems, you would normally do this using `umask`. To determine the umask value you want to set, subtract the value of the permissions you want from `666` (for a file) or `777` (for a directory).
+On POSIX systems, you would normally do this using `umask`. 
+
+To determine the umask value you want to set, subtract the value of the permissions you want from `666` (for a file) or `777` (for a directory).
 
 For example, if `user1` wants the default permissions on new files to be `rw-r--r-- 644`, they would subtract `644` from `666`, giving `022`.
 
@@ -114,6 +116,8 @@ $ ls -l /mnt/cloud/bucket/user1/newfile
 ```
 
 If you want to set the umask for all users, you can set it in the system-wide profile, or in the user's profile. For example, to set it for all users, you could add the umask command to `/etc/profile`.
+
+See the Advanced Guides article on [Advanced Configuration Options](docId:phohPoowequie5ji#ownership-and-permissions) fpr additional details on File and directory ownership and permissions.
 
 ### Converting a Bucket to “POSIX Enforced File Access” Mode
 

@@ -2,7 +2,7 @@
 title: POSIX Options
 hideTitle: false
 docId: cbm3PcQXmLpuYcbg
-weight: 1
+weight: 2
 metadata:
   title: POSIX Options
   description:
@@ -74,10 +74,7 @@ There are two main ways to enable “POSIX File Access”:
 
   - If the object storage provider supports setting **tags** at the bucket level, then you can enable POSIX File Access mode for _all users_ using the command `cuno creds setposix s3://your_bucket_name true` from a command line/shell interface. This will affect _everyone_ using the bucket and will force all Object Mount users of that bucket into POSIX File Access mode. 
 
-  - Otherwise, to enable POSIX File Access on an _individual workstation-basis_ you can set a local environment variable. Enter `export CUNO_POSIX=1` from a command line/shell interface. This setting is valid per-session. 
-
-<!-- VALIDATE THE ABOVE "PER SESSION" NOTE -->
-
+  - Otherwise, to enable POSIX File Access on an _individual workstation-basis_ you can set a local environment variable. Enter `export CUNO_POSIX=1` from a command line/shell interface. This setting is valid per-session.
 
 
 ## POSIX _Enforced_ File Access

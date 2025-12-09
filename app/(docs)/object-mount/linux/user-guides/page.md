@@ -10,20 +10,17 @@ metadata:
 hidden: false
 ---
 
-Once Object Mount for Linux is installed and running on your computer, browse through these Linux **Configuration Guides** to understand additional usage and configuration settings.
+Once Object Mount for Linux is installed and running on your computer, browse through these Linux **User Guides** articles for additional usage and configuration settings.
 
-Topics include:
-- Configuring Deployment Modes
-- 
-
-
-Access credentials can also be optionally managed by Object Mount.
-
----
+Articles include:
+- Validate Functionality & Access Object Storage
+- Activate a License Key
+- Understand Deployment Modes
+- Enable Enforced POSIX File Access
+- Cloud Path Details
 
 
-
----
+<!-- COMMENT OUT FOR NOW
 
 BE SURE TO ADD & ANSWER THE FOLLOWING 
 
@@ -39,7 +36,7 @@ WHY IS THAT??
 
 ## HELP
 
-VIEW TOP-LEVEL COmmands and Option (from Linux Shell prompt):
+VIEW TOP-LEVEL Commands and Option (from Linux Shell prompt):
   `cuno -h` (or `cuno --help`)
 
 VIEW `cuno CLI` commands:
@@ -47,6 +44,7 @@ VIEW `cuno CLI` commands:
 
   ---
 
+-->
 
 
 

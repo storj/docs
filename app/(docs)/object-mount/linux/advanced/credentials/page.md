@@ -2,7 +2,7 @@
 title: Advanced Credential Options
 hideTitle: false
 docId: aish4shuiheeZaig
-weight: 5
+weight: 1
 redirects:
   - /object-mount/credentials/linux/import
 metadata:
@@ -349,7 +349,7 @@ export AZURE_STORAGE_ACCESS_KEY="<account-key>"
   
   Microsoft recommends that storage access keys **not** be shared.
   
-  To permit access to storage resources without sharing access keys, use a [Shared Access Signature (SAS)](#microsoft-azure-storage-with-shared-access-signatures) instead.
+  To permit access to storage resources _without_ sharing access keys, see above for how to use a [Shared Access Signature (SAS)](#microsoft-azure-storage-with-shared-access-signatures) instead.
   
   An SAS gives users access to a container for a limited time period with a fixed set of permissions.
 {% /callout %}

@@ -4,41 +4,23 @@ docId: oozaauQueuq9hgeac4Ze
 weight: 1
 ---
 
-## Listing endpoints behavior
+## Listing Endpoints Behavior
 
-If your project is using Self-Managed Encryption, a bucket's paths are
-end-to-end encrypted, which means that it's impossible to always list a
-bucket in lexicographical order (as per S3 specification). For requests
-that come with forward-slash-terminated prefix and/or forward-slash
-delimiter, listing endpoints return results in lexicographical order,
-but for encrypted paths (which is often very different from the expected
-order for decrypted paths). Ideally, clients shouldn't care about
-ordering in those cases. For requests that come with
-non-forward-slash-terminated prefix and/or non-forward-slash delimiter,
-listing endpoints perform exhaustive listing, which filters paths
-server-side before they are returned to the caller. In this case,
-listing results are in lexicographical order.
+The behavior of listing endpoints depends on the encryption model configured for your project.
 
-Projects using Self-Managed Encryption created after November 30, 2025
-are excluded from the usage of arbitrary prefixes and/or delimiters to
-perform exhaustive listing. Such requests will immediately be rejected
-by the listing endpoints with the 501 Not Implemented S3-compatible HTTP
-error code. Users who need to create new projects utilizing exhaustive
-listing are encouraged to create projects using Storj Managed
-Encryption.
+### Self-Managed Encryption
+When using **Self-Managed Encryption**, bucket paths are end-to-end encrypted. This prevents the listing endpoint from seeing the plaintext paths, which affects sorting and filtering.
 
-Exhaustive listing won't work for buckets containing hundreds of
-thousands of objects. Users who need to perform exhaustive listing with
-such buckets are encouraged to start utilizing projects using Storj
-Managed Encryption.
+* **Standard Listing:** For requests using a forward-slash (`/`) as a prefix terminator or delimiter, results are returned in the lexicographical order of the *encrypted* paths. This often differs from the expected alphabetical order of the decrypted keys. Clients should not rely on ordering in these cases.
+* **Exhaustive Listing:** For requests using non-standard prefixes or delimiters (not ending in `/`), the endpoint performs an "exhaustive listing." This filters paths server-side to return results in the correct (decrypted) lexicographical order.
+
+**Limitations:**
+1.  **New Projects:** Projects created after **November 30, 2025**, cannot use exhaustive listing. Requests triggering this behavior will fail with a `501 Not Implemented` error.
+2.  **Large Buckets:** Exhaustive listing does not work for buckets containing hundreds of thousands of objects.
+
+Users requiring these features should use Storj Managed Encryption.
 
 ### Storj Managed Encryption
+If your project uses **Storj Managed Encryption**, bucket paths are stored in plaintext. This ensures that Storj's S3 listing endpoints are **fully S3-compatible**.
 
-If your project is using Storj Managed Encryption, a bucket's paths are
-kept in plaintext. This means that the behavior of Storj's S3 listing
-endpoints is fully S3-compatible. Requests can come with an arbitrary
-prefix and/or delimiter and they will take a preferable execution path,
-resulting in superior listing times compared to listing over buckets in
-any projects using Self-Managed Encryption. Storj recommends all new
-projects to be projects using Storj Managed Encryption for users that
-care about S3-compatibility, robustness, and performance.
+Requests can use arbitrary prefixes and/or delimiters. These requests utilize an optimized execution path, offering superior performance compared to Self-Managed Encryption. Storj recommends Storj Managed Encryption for all new projects requiring high performance and strict S3 compatibility.

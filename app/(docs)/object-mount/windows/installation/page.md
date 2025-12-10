@@ -1,56 +1,64 @@
 ---
-title: Installation
-weight: 1
+title: Installation Guide
 hideTitle: true
-
+docId: VFmmZcEdcxpZZCx5
+weight: 1
 metadata:
-  title: Windows Native Installation
+  title: Windows Native Installation Guide
   description:
     Details about installing Object Mount on Windows
+hidden: false
 ---
 
-# Windows Native Installation Guide
+# Installation Guide: Windows Native App
 
-This section covers how to install the app on Windows using the standard `.exe` installer. The process is quick and straightforward, with just a couple of setup steps to ensure everything runs smoothly on your Windows machines.
+This section covers how to install the the Object Mount native application for Windows using a standard `.exe` installer.
 
----
 
 ## System Requirements
 
-Before you begin, make sure your system meets the following:
+Before you begin, make sure your PC meets the following system requirements:
 
-- Windows 10 or Windows Server 2016, and newer
+- Windows 10 or later (or Windows Server 2016 or newer) 
+- Intel x86_64 or AMD processor (no ARM CPU support at this time)
 - At least 300MB of free disk space  
 - Internet connection for mounting cloud-hosted buckets, or LAN connection for mounting local buckets
 
----
+{% callout type="note" %}
+  **S3 Provider Support:**
 
-## Step 1: Download the Installer
+  Object Mount for Windows fully supports S3 container services from Amazon Web Services, Storj, and other fully S3-compatible Object Storage providers. 
+  
+  - See the [Supported S3 Providers](docId:xCjeasn8SLQn2vfd) article in the Appendix for a complete S3 provider list.
 
-Download the latest `.exe` file.
-
-{% callout type="info" %} 
-If your organisation restricts installer downloads, you may need to right-click the file and choose **Unblock** before running.
+  **Azure & GCS Support:** 
+  
+  - Support for _Native_ Microsoft Azure Storage and _Native_ Google Cloud Storage services are still under development in Object Mount for Windows.
+  - For Google Cloud access: Using GCS _S3_ is recommended instead of using GCS _S3 Gateways_.
+  - Native Azure and Native GCS (S3 Gateways) should be considered “experimental” at this time.
 {% /callout %}
 
----
 
-## Step 2: Install the App
+## Step 1: Download the Latest Installer
 
-Adminstrative permissions are required to install some of the necessary components.
+Download the latest Object Mount `.exe` Windows installer program.
 
-1. Double-click the `.exe` file to start the installation  
-2. Follow the prompts in the installer  
-3. When prompted, allow the app to make changes (click **Yes**)
+**Note:** Contact your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch) if you need access to the most up-to-date installer.
 
----
 
-## Step 3: Launch the App
+## Step 2: Install the Object Mount App
 
-Once installed:
+**Note:** Administrative permissions are required to install some of the Object Mount components.
 
-- Open **Object Mount** from your Start Menu or Desktop shortcut  
-- You will be prompted to enter your **Licence Key** automatically  
-- Windows may prompt you to allow firewall access — click **Allow Access**
+1. Double-click the setup `.exe` program to start the installation.
 
----
+2. Follow the prompts to complete the installation process.
+
+
+## Next Steps
+
+Proceed to the Windows [User Guide](docId:khHGfZsyY9NJ2uGK) to **activate** your Object Mount installation, **configure** your object storage credentials, and **create** your first mount.
+
+Then review the Windows OS-specific [Feature Guide](docId:xMKcaWrTVK6QMD8h).
+
+Finally, read through usage tips for your specific [Media Workflows](docId:JXF4_NLsV@nh9QcT) and Applications.

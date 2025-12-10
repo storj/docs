@@ -6,31 +6,37 @@ weight: 3
 metadata:
   title: macOS Installation and Usage
   description:
-    Step-by-step guidance for installing and using the native Object Mount app on macOS.
+    Home Page for guidance on installing and using the native Object Mount app on macOS.
+hidden: false
 ---
 
 # macOS Installation and Usage
 
-This section contains everything you need to install and use the native **Object Mount** app on macOS.
+This section contains everything you need to install and use the native **Object Mount** app on an Apple Mac.
 
-Whether you're setting up for creative workflows, remote storage access, or team-based collaboration, these pages will walk you through installation, setup, and day-to-day use.
+Whether you’re setting up for creative workflows, remote storage access, or team-based collaboration, these pages will walk you through installation, configuration and day-to-day use.
 
----
 
 ## What’s Covered
 
-- Native installation using the `.dmg` package  
+- Native installation using a `.dmg` package  
 - System requirements and FUSE dependencies  
-- Setup guidance for Apple Silicon and Intel Macs  
-- User guide for mounting, configuring, and managing storage  
+- Setup guidance for Macs using either Apple Silicon and Intel chips
+- User guides for mounting, configuring, and managing your object storage  
+- Tips and recommendations for unique macOS features, media applications, and performance improvements
 
----
 
-## Related Pages
+## Next Steps
 
-- [macOS Installation Guide](macos/installation/)  
-- [macOS User Guide](macos/user-guides/)
+Start with the **Installation Guide**:
 
-We recommend starting with the installation guide, then moving on to the user guide for tips on mounting and working with storage in your daily workflows.
+- macOS [Installation Guide](docId:MyV4Bv3fKJEZucAb)
 
----
+Move on to the **User Guide** for instructions on creating mounts and working with object storage in your daily workflows:
+
+- macOS [User Guide](docId:QpBba8p4bMTXAkBK)
+
+Lastly, review the macOS OS-specific **Feature Guide** and the appropriate **Media Workflow Guide**:
+
+- macOS [Feature Guide](docId:ehHbpq6KFndcVCgc)
+- [Media Workflow Guides](docId:JXF4_NLsV@nh9QcT)

@@ -48,12 +48,12 @@ You can also pipe the license key into the command as its input:
 echo "<your license key>" | cuno creds activate
 ```
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **License File Location**
 
   Once activated, the location of the license file is: `$CUNO_ROOT/etc/license`. 
 
-  By default, the permissions on this file are set to `0600`.  If needed, Administrators can manually modify the group and permissions to allow other system users access to the `cuno` CLI command.
+  By default, the permissions on this file are set to `0600`. If needed, Administrators can manually modify the group and permissions to allow other system users access to the `cuno` CLI command.
 {% /callout %}
 
 

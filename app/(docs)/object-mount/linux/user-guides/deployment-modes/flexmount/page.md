@@ -24,13 +24,11 @@ Object Mount’s FlexMount benefits are leveraged by:
   1. Configuring **Object Mount on FUSE**, and
   2. Accessing your cloud storage via the **Object Mount CLI** by specifying your mount path via the **`--flex` parameter**. 
 
-
 ### Advantages
 
 1. **Speed:** Where possible, Object Mount in FlexMount Mode will operate as fast as possible, using Direct Interception Mode.
 
 2. **Compatibility:** Support for all POSIX applications: Anything that cannot be directly intercepted will pass through and be handled by Object Mount on FUSE.
-
 
 ### Disadvantages
 

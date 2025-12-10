@@ -45,7 +45,7 @@ As mentioned in the Object Mount for Linux [Introduction](docId:wxtofwqcb5f2), O
 
 Set the environment variable `LD_PRELOAD="$CUNO_ROOT"/cuno.so` before executing a command and Object Mount will be enabled for that command.
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **`CUNO_ROOT`**
 
   The `CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is:
@@ -129,7 +129,7 @@ There are multiple methods to use Object Mount from within Docker containers.
 To enable automatic Docker interception, set the environment variable `CUNO_INTERCEPT_DOCKER=1` and load Object Mount.
 Launching a Docker container via `docker run …` will make Object Mount available inside the container.
 
-{% callout type="warning"  %}
+{% callout type="warning" %}
   **Automatic Interception within Docker**
   
   Support for automatic Docker interception is currently **experimental**.
@@ -176,7 +176,7 @@ To inject Object Mount into a Docker container when it is launched:
         <image> [container-commands]
       ```
 
-      {% callout type="note"  %}
+      {% callout type="note" %}
       This uses the volume mount option (`-v`) to make Object Mount and other directories available to the container.
 
       This command requires Object Mount already be installed and [activated](docId:BN6yJrwasPnZsaf), with a valid license key, on the host system.
@@ -225,7 +225,7 @@ From: rockylinux:8
 %post
     yum update -y
     yum install -y /opt/src/cuno-{FULL-VERSION}.x86_64.rpm
-    echo "YOUR LICENCE KEY HERE" | cuno creds activate
+    echo "YOUR LICENSE KEY HERE" | cuno creds activate
     chmod og+r /opt/cuno/etc/license
 
 %environment
@@ -258,7 +258,7 @@ contrib    crawl-analysis  index2012      parse-output       robots.txt
 crawl-001  crawl-data      mapred-temp    parse-output-test  stats-output
 ```
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **Activated License Required**
 
   This method requires Object Mount be installed and [activated](docId:BN6yJrwasPnZsaf), with a valid license key, on the system that is used to execute the Singularity images.

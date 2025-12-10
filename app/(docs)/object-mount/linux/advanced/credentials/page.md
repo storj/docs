@@ -27,7 +27,7 @@ Linux credentials are stored in `"${XDG_CONFIG_HOME}"/cuno/creds` by default (or
 
 You can override the defaults by setting the `CUNO_CREDENTIALS` environment variable.
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **Credential Storage**
 
   `cuno creds` will determine the presence of the following paths to store credentials, in descending order of precedence:
@@ -73,7 +73,7 @@ Depending on the capabilities and behaviors of your object storage provider’s 
 | `ignore-empty-prefixes` | Ignore directories that were removed but still reported as existing prefixes by the server.
 | `posix=<true/false>` | Set POSIX mode for all buckets associated with this credential. This option takes precedence over the POSIX mode runtime environment variable, but may be overridden by a bucket-wide POSIX setting (set via `cuno creds`).
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **Detect Features**
   
   Some of the above options can be automatically detected and populated by running `cuno creds detectfeatures <URI> <credential file name>` (e.g. `cuno creds detectfeatures s3://test-bucket test_credentials.s3c`).
@@ -137,7 +137,7 @@ Object Mount performs the following actions when importing a credential file:
 2. Discover all possible containers that can be accessed using the provided credentials.
 3. Create pairings between the imported credential file and remote containers.
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **Listing Permission are Required**
 
   Discovery only completes when the provided credentials include bucket listing permissions.
@@ -162,7 +162,7 @@ If the latter is not provided, all imported credential files are listed.
 
 To re-associate a previously paired remote container with a different credential file, use `pair` with the same remote URI and a different credential file.
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **Automatic Verification**
 
   Object Mount verifies that a remote container is accessible when pairing it with a credential file.
@@ -256,7 +256,7 @@ If the second argument is missing, then existing credential files are listed.
 
 ## Additional Flags
 
-Object Mount’'s `cuno creds` command accepts additional flags:
+Object Mount’’s `cuno creds` command accepts additional flags:
 
 ```
 cuno creds [flags] <rest_of_command>
@@ -344,7 +344,7 @@ export AZURE_STORAGE_ACCOUNT="<account-name>"
 export AZURE_STORAGE_ACCESS_KEY="<account-key>"
 ```
 
-{% callout type="warning"  %}
+{% callout type="warning" %}
   **Not Recommended**
   
   Microsoft recommends that storage access keys **not** be shared.

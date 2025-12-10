@@ -71,5 +71,7 @@ If Object Mount is saturating the network connection &mdash; that’s a good sig
 Transfers may still appear idle in the UI, but they are active “under the hood”.
 
 {% callout type="info" %}
+  **Use Patience with Slow Transfers**
+  
   Don’t cancel a transfer just because the Finder or Explorer bar seems stuck &mdash; always check your system’s network usage first.
 {% /callout %}

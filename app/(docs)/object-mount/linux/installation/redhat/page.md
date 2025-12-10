@@ -61,7 +61,7 @@ CUNO-Installation-and-Usage-Guide.pdf
 ```
 
 
-## Step 3. Install Object Mount and its dependencies using `yum`
+## Step 3. Install Object Mount and its dependencies using yum
 
 **3a.** Use the following commands to extract and install Object Mount (substituting your version number):
 
@@ -83,7 +83,7 @@ The installer will fetch and install any necessary additional packages (such as 
 
 - **Note:** You can automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **Access for: All-Users**
 
   By using `sudo`, all package manager installations of Object Mount install the app for use by _all users_ of the system, not just the account that initiated the install process.

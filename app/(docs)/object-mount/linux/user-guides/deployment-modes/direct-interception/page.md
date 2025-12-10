@@ -21,8 +21,9 @@ This direct interception means _any_ applications that can access file storage c
 
 It’s built to work everywhere: It works with dynamic binaries and static binaries. It works inside unprivileged containerized environments.
 
-{% callout type="note"  %}
-  This includes applications you've written yourself &mdash; just treat the paths to object storage as local file system paths. Object Mount handles the rest.
+{% callout type="note" %}
+  **Support for Any Application**
+  This includes applications you’ve written yourself &mdash; just treat the paths to object storage as local file system paths. Object Mount handles the rest.
 {% /callout %}
 
 Direct interception Mode uses the `LD_PRELOAD` environment variable so that Object Mount can capture and redirect storage access library and system calls to object storage APIs. 
@@ -42,7 +43,9 @@ Direct interception Mode uses the `LD_PRELOAD` environment variable so that Obje
   - Direct Interception Mode is best suited for situations in which installed app compatibility is not an issue.
   - For example: When setting up a fixed workflow with Object Mount that can be tested and verified before putting it into production.
 
-{% callout type="warning"  %}
+{% callout type="warning" %}
+  **Direct Interception vs. Object Mount on Fuse**
+
   Direct Interception Mode does _not_ currently support SUID binaries, or certain packaged apps like 🌐 [Snap](https://ubuntu.com/core/services/guide/snaps-intro), 🌐 [AppImage](https://appimage.org/), or 🌐 [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications. 
   
   See [Object Mount on FUSE](docId:ZdvWLcm9uFmM5HLk) and/or [Object Mount FlexMount](docId:cFUt9zgCRFFDk5Sq) to support these tools.
@@ -75,7 +78,9 @@ This will launch a new interactive “wrapped shell” with Object Mount acting 
 
 The wrapped shell itself has Object Mount monitoring all its I/O calls &mdash; so every command entered or application launched from within the wrapped shell will be monitored and intercepted by Object Mount
 
-{% callout type="note"  %}
+{% callout type="note" %}
+  **Object Mount CLI `cuno` as a Wrapper**
+
   When `cuno` is used to launch a new shell, the shell is launched with `LD_PRELOAD` set to point at `cuno.so`. 
 
   - There is no Object Mount shell binary.
@@ -90,15 +95,16 @@ To enable direct interception for a **single command**, use:
 cuno run bash -c "<your command and arguments>"
 ```
 
-{% callout type="note"  %}
-It is recommended to execute one-time commands in this fashion to maintain support for 
-Wildcard expansion (`*`) of filesystem and remote paths.
+{% callout type="note" %}
+  **Best Practice for Running Single Commands**
+
+  It is recommended to execute one-time commands in this fashion to maintain support for Wildcard expansion (`*`) of filesystem and remote paths.
 {% /callout %}
 
 
 ## Path Usage
 
-Inside a `cuno`-wrapped shell session, object storage buckets can be accessed using either **path** or **URI** formats.  
+Inside a `cuno`-wrapped shell session, object storage buckets can be accessed using either **path** or **URI** formats. 
 
 The commands below provide examples of both path and URI usage within a `cuno`-launched shell:
 

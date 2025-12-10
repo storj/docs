@@ -37,7 +37,7 @@ Here are a few common issues to be aware of:
 
   - Incorrect credentials
   - No accessible buckets
-  - Dependency not ustalled (e.g.: macFUSE)
+  - Dependency not installed (e.g.: macFUSE)
   - POSIX mode enabled without write access
 
 **Things to Check:**

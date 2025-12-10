@@ -14,6 +14,7 @@ hidden: false
 
 This article provides additional recommendations and guidance when using Object Mount for Linux with the following applications:
 
+
 ## Python
 
 Python’s `os.path.realpath(path)` does not support [URI formatted](docId:jieteeYeyievui9k) cloud paths (e.g.: `s3://<bucket_name>/path`).
@@ -112,9 +113,9 @@ To help work around these limitations, follow the guidance below when using `loc
       ```
 
       {% callout type="note" %}
-      **Mount Location Consistency**
+        **Mount Location Consistency**
 
-      The mount location (`~/my-object-storage` in the example above) should not be change after running `updatedb` as the mount details are written into the file path database.
+        The mount location (`~/my-object-storage` in the example above) should not be change after running `updatedb` as the mount details are written into the file path database.
       {% /callout %}
     {% /tab %}
     {% /tabs %}
@@ -137,7 +138,7 @@ To help work around these limitations, follow the guidance below when using `loc
     locate -d cunoloc.db myfile
     ```
 
-### Modify up the Locate cron Job
+### Modify the Locate cron Job
 
 By default, the global locate database is periodically updated by a cron job. 
 

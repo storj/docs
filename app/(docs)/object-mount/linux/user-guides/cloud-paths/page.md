@@ -25,7 +25,7 @@ When accessing cloud-based, object storage volumes using the Object Mount CLI, t
 The following table describes **URI prefixes** for supported cloud providers:
 
 | **Cloud Provider**   | **URI Format**                         |
-| -------------------- | -------------------------------------- |
+|----------------------|----------------------------------------|
 | AWS S3               | `s3://<bucket_name>`                   |
 | Storj                | `s3://<bucket_name>`                   |
 | Google Cloud Storage | `gs://<bucket_name>`                   |
@@ -37,7 +37,7 @@ The following table describes **URI prefixes** for supported cloud providers:
 The following table describes **directory format** for supported cloud providers:
 
 | **Cloud Provider**   | **Directory Format**                       |
-| -------------------- | ------------------------------------------ |
+|----------------------|--------------------------------------------|
 | AWS S3               | `/cuno/s3/<bucket_name>`                   |
 | Storj                | `/cuno/s3/<bucket_name>`                   |
 | Google Cloud Storage | `/cuno/gs/<bucket_name>`                   |
@@ -99,7 +99,7 @@ Some examples of using Object Mount are given below:
 
 ## Microsoft Azure Blob Storage Usage
 
-When using Microsoft's Azure Storage, the associated **Account Name** must be included in both the URI and directory format:
+When using Microsoft’s Azure Storage, the associated **Account Name** must be included in both the URI and directory format:
 
 ```sh
 (cuno) $ ls az://my-account-name/my-container
@@ -155,7 +155,7 @@ Use hard-linking to trigger a more efficient cloud-only copy mechanism within a 
 
 See the Getting Started Guide article [POSIX File Access](docId:cbm3PcQXmLpuYcbg#posix-file-access) for more details.
 
-{% callout type="warning"  %}
+{% callout type="warning" %}
   **HardLinks and SymLink on File Deletion**
 
   If the target file/object is deleted or moved, both symbolic and hard links will break.

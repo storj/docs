@@ -19,7 +19,7 @@ The `-o` option added to the `cuno` command can also be used to specify these op
 
 ## Options available for CUNO_OPTIONS
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **Space Separation**
 
   Individual options must be separated by spaces. Don’t forget to enclose multiple options in quotes (`"` or `’`), or to escape spaces.
@@ -38,7 +38,7 @@ Object Mount can override the handling of URI-style paths (`xx://`) in applicati
 To specify any applications to be patched, specify them as a colon-separated list:
 
 ```console
-+uricompat=<executable 1>:<exectuable 2>:< ... >
++uricompat=<executable 1>:<executable 2>:< ... >
 ```
 
 To limit the cases in which this patching occurs, you can filter interceptions to only occur when certain command-line arguments match specified keywords. This may be useful for certain code interpreters/executors (see the example below). 
@@ -51,7 +51,7 @@ For example:
 +uricompat=<name of binary>/<index of argument to be matched>/<argument value to match>
 ```
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **`uricompat`**
 
   The `+uricompat` option only works on URIs that have been paired.
@@ -108,7 +108,7 @@ You will then be able to list your configured S3 buckets with:
 ls /my-object-storage/s3/<bucket>
 ```
 
-{% callout type="warning"  %}
+{% callout type="warning" %}
   ** Using `cloudroot`**
 
   We strongly recommend that the cloudroot path does not exist locally because it can confuse Object Mount’s ability to distinguish whether a path refers to the local file system or to the cloud.
@@ -116,10 +116,10 @@ ls /my-object-storage/s3/<bucket>
   If you specify a cloudroot which conflicts with an existing directory, then it must not contain directories or files named `s3`, `az` or `gs`.
 {% /callout %}
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **`cd to cloud`**
   
-  In order for the "cd to cloud" functionality to see this option, you will need to spawn a new shell after `CUNO_OPTIONS`.
+  In order for the “cd to cloud” functionality to see this option, you will need to spawn a new shell after `CUNO_OPTIONS`.
 {% /callout %}
 
 **FlexMount Usage:**
@@ -182,7 +182,7 @@ To **persist and modify** file system metadata, [POSIX File Access](docId:ySneAE
 
 This allows the virtual files presented by Object Mount to have their system metadata modified by tools such as `chown`, `chmod`, and `touch`.
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **POSIX Metadata File**
 
   The system metadata is stored as objects within your object storage system within hidden subdirectories where the data resides. The name of that subdirectory is a period followed by a unicode U+FBF80 `󻾀` character.
@@ -225,7 +225,7 @@ There are two ways to enable POSIX File Access when using [Direct Interception M
     - `permissive-with-metadata` - enable posix in permissive mode and store posix attributes as object metadata
     - `unset` - remove posix configuration from the bucket
 
-    {% callout type="warning"  %}
+    {% callout type="warning" %}
       **Object Storage Compatibility with Tags**
 
       Some S3-compatible stores may not support setting custom metadata flags required for this feature to function. 

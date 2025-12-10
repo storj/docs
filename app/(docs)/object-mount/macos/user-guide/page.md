@@ -66,10 +66,17 @@ Follow the steps below to create a new mount using  the **Add New Credentials** 
 
     ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-new-credentials.jpg)
 
-    {% callout type="info"  %}
-    **S3 Compatible Providers**
+    {% callout type="info" %}
+      **S3 Compatible Providers**
 
-    If your provider is not listed, select **Other S3** and choose the provider from the dropdown. Ensure the endpoint is accessible. Some providers may require extra compatibility settings like a defined region.
+      If your provider is not listed, select **Other S3** and choose the provider from the dropdown. 
+      
+      - Ensure the endpoint is accessible from the Internet. 
+      - Some providers may require extra compatibility settings like a defined region.
+
+      Below is an example of providing an additional S3 Compatibility Setting for region:
+
+      ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-custom-s3-region.png)
     {% /callout %}
 
 3. Click **Next**.
@@ -92,18 +99,17 @@ Follow the steps below to create a new mount using  the **Add New Credentials** 
     ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-enable-your-mount.jpg)
 
     {% callout type="info" %}
-    **“Extension Blocked” Message**
+      **“Extension Blocked” Message**
 
-    Depending on your Mac hardware and OS version, an **“Extension Blocked”** message may be presented when Object Mount attempts to mount your new drive.
+      Depending on your Mac hardware and OS version, an **“Extension Blocked”** message may be presented when Object Mount attempts to mount your new drive.
 
-    If so, perform the following steps:
-    - Open **System Settings**
-    - Navigate to **Privacy & Security**
-    - Scroll down to the **Security** section
-    - Click **Allow** to permit the macFUSE extension (from developer “Benjamin Fleischer”) to be loaded
+      If so, perform the following steps:
+      - Open **System Settings**
+      - Navigate to **Privacy & Security**
+      - Scroll down to the **Security** section
+      - Click **Allow** to permit the macFUSE extension (from developer “Benjamin Fleischer”) to be loaded
 
-    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-allow-macfuse.jpg)
-
+      ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-allow-macfuse.jpg)
     {% /callout %}
 
 **Note:** First-time access to a new mount may take a few moments if the bucket contains many files &mdash; performance improves after the initial mount.
@@ -125,10 +131,10 @@ If there are multiple buckets accessible using the same credential set, those bu
 Object Mount for macOS includes a flexible **Settings** panel where you can fine-tune caching, logging, and performance settings. 
 
 {% callout type="info" %}
-**Settings**
+  **Settings**
 
-- These settings are global and apply to all mounts.
-- These settings cannot be edited while a mount is active. Disable all mounts before making changes.
+  - These settings are global and apply to all mounts.
+  - These settings cannot be edited while a mount is active. Disable all mounts before making changes.
 {% /callout %}
 
 Refer to the following sections for details on each setting:
@@ -143,7 +149,7 @@ The local **Data Cache** temporarily stores small portions of accessed cloud fil
 
   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-settings-01.jpg)
 
-{% callout type="info"  %}
+{% callout type="info" %}
   **Data Cache Recommendations**
 
   - Use a fast local drive (SSD or NVMe) for best caching performance.
@@ -171,14 +177,9 @@ These options let you further customize Object Mount’s performance and diagnos
 | **Debug logging**        | Enables extensive debug output to assist with support issues.
 | **Custom Environment Variables** | Custom variables to modify Object Mount’s behavior, add variables when recommended by Storj Support.
 
-
-
-
-<!-- *** QUESTION: DO WE HAVE INFO ON WHAT COLD CACHE ON/OFF DOES??*** -->
-
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-settings-03.jpg)
 
-{% callout type="info"  %}
+{% callout type="info" %}
   **Log File Location**
 
   On macOS the default location for storing the log file is: 

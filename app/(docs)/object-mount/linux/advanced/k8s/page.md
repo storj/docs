@@ -210,7 +210,7 @@ spec:
         claimName: cunofs-pvc # PVC metadata.name
 ```
 
-Alternatively, cluster users can create a generic inline volume which doesn't require a `PVC`:
+Alternatively, cluster users can create a generic inline volume which doesn’t require a `PVC`:
 
 ```yaml
 apiVersion: v1
@@ -241,7 +241,7 @@ spec:
                 storage: 16Ei # ignored but required
 ```
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **CSI Ephemeral Inline Volumes**
 
   Currently, Object Mount’s CSI Driver does not support 🌐 [CSI inline volumes](https://kubernetes.io/blog/2020/01/21/csi-ephemeral-inline-volumes/)
@@ -269,7 +269,7 @@ Set the `cunofsLicense.license` variable and import the cloud credentials:
 cunofsLicense:
   license: "<your license key>"
 credsToImport:
-  - "<credential-1>"
+  - “<credential-1>"
   - "<credential-2>"
   - "<..>"
   - "<credential-N>"
@@ -288,15 +288,15 @@ helm install cunofs-csi-chart <path-to-chart>
 | `driverName` | Optionally change the name of the deployed driver. Only useful if you want to deploy several instances of the driver. | `cunofs.csi.com` |
 | `cunofsCSIimage.pullPolicy` | Specifies how the docker image is deployed onto the Node and Controller. Only useful to change if self-hosting the docker image. | `Always` |
 | `cunofsCSIimage.name` | Specifies the Object Mount CSI docker image. Only useful to change if self-hosting the docker image under a different name (Note: do not include the version here). | `cunofs/cunofs_csi` |
-| `cunofsCSIimage.version` | Specifies the docker image's version. No need to change it unless you have a good reason to. | <equal to chart version> |
-| `cunofsLicense.license` | The license used for activating Object Mount on the Driver. It needs to be a valid Professional or Enterprise license. | <empty> |
+| `cunofsCSIimage.version` | Specifies the docker image’s version. No need to change it unless you have a good reason to. | <equal to chart version> |
+| `cunofsLicense.license` | The license used for activating Object Mount on the Driver. It needs to be a valid Enterprise license. | <empty> |
 | `credsToImport` | Yaml array that you can populate with your s3/az/gs credential files. | <empty> |
 | `rbac.useRBAC` | Enables out of the box support for RBAC clusters (deploys the required ClusterRole/ClusterRoleBinding). | `true` |
 | `eks.iam_arn` | On Amazon EKS, associates IAM role to `ServiceAccount`. | <empty> |
 
 **`PersistentVolume` Options:**
 
-{% callout type="warning"  %}
+{% callout type="warning" %}
   **Boolean Parameters**
 
   Due to K8s parameter passing design decisions, the boolean parameters require strings and not yaml booleans.
@@ -326,12 +326,12 @@ helm install cunofs-csi-chart <path-to-chart>
 
  **Yaml Value** | **Description** |
 |----------------|-----------------|
-| `metadata.name` | Can be any name as long as it's unique |
+| `metadata.name` | Can be any name as long as it’s unique |
 | `provisioner` | The name of the driver, by default: `cunofs.csi.com` |
 | `reclaimPolicy` | `Retain` will not delete the generated `PVs` and their storage when the `PVCs` go out of scope, `Delete` will |
 | `parameters.cloud-type` | Can be `s3`, `az` or `gs` |
 | `parameters.bucket` | The bucket used to create volumes |
-| `parameters.bucket-subdir` | Optional. The subdirectory of the bucket where the `PVCs` will get generated. Can be nested subdirectories like "dir/other_dir/yet_another_dir" |
+| `parameters.bucket-subdir` | Optional. The subdirectory of the bucket where the `PVCs` will get generated. Can be nested subdirectories like “dir/other_dir/yet_another_dir” |
 | `parameters.{posix, allow_root, allow_other, auto_restart, readonly, CUNO_OPTIONS, CUNO_LOG}` | These options will be passed down to the generated `PV` and behave the same way as described in the `PV` options |
 | `parameters.fusionStorageClass` | Tells Object Mount Fusion to use the given `StorageClass` to allocate backing `PVs` |
 
@@ -355,7 +355,7 @@ Using Object Mount Fusion under [static storage provisioning](#static-storage-pr
 
 Choose a backing mount that offers write consistency (Amazon EFS, Amazon EBS, a local NFS server, etc.), and deploy it with a `PV` and `PVC`, as if it was used by a `Pod`.
 
-Then, refer to the `PVC`'s name in the `spec.csi.volumeAttributes.fusion_pvc` parameter of the Object Mount `PV`.
+Then, refer to the `PVC`’s name in the `spec.csi.volumeAttributes.fusion_pvc` parameter of the Object Mount `PV`.
 
 The Object Mount CSI Driver will mount the `PV` to itself and bind the two filesystems.
 
@@ -405,7 +405,7 @@ spec:
 
 The Object Mount CSI Driver supports dynamic provisioning of Object Mount Fusion `PV` pairs.
 
-Simply deploy a backing `StorageClass` and refer to it in the Object Mount `StorageClasse's` `parameters.fusionStorageClass` parameter.
+Simply deploy a backing `StorageClass` and refer to it in the Object Mount `StorageClass` `parameters.fusionStorageClass` parameter.
 
 The Object Mount CSI Driver will use it to generate and delete backing `PVs` alongside Object Mount `PVs` and bind them as needed.
 
@@ -508,4 +508,4 @@ Please contact our [Support Team](https://supportdcs.storj.io/hc/en-us/requests/
   - Due to the internals of K8s, the Object Mount CSI Driver makes use of `Object Mount on FUSE` as a backend instead of regular `Object Mount`. This means that performance will be high, but not always as high as a regular `Object Mount` installation.
   - Not every `Object Mount` option is currently available for use in the driver. Please refer to the [configuration section](#configuring-helm-and-csi-driver) for the available options.
   - The `ReadWriteMany` access mode doesn’t guarantee write consistency without Object Mount Fusion.
-  - The `Object Mount` CSI Driver currently doesn't support CSI Ephemeral Volumes, raw block volumes, volume snapshotting, volume expansion, volume cloning and volume topology options.
+  - The `Object Mount` CSI Driver currently doesn’t support CSI Ephemeral Volumes, raw block volumes, volume snapshotting, volume expansion, volume cloning and volume topology options.

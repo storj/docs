@@ -68,7 +68,11 @@ Transfers via Object Mount may not show progress in Avid’s interface, so we su
   - For detailed diagnostics, set the Object Mount log level to `debug` or `trace` in Preferences.
 
 {% callout type="info" %}
-  If Object Mount appears slow when linking large files, it’s can be due to first-time access from cloud storage. Performance improves after initial reads, thanks to caching and file prefetch.
+  **Use Patience with Slow Transfers**
+  
+  If Object Mount appears slow when linking large files, it can be due to first-time access from cloud storage. 
+  
+  Performance improves after initial reads, thanks to caching and file prefetch.
 {% /callout %}
 
 

@@ -24,6 +24,20 @@ Before you begin, make sure your PC meets the following system requirements:
 - At least 300MB of free disk space  
 - Internet connection for mounting cloud-hosted buckets, or LAN connection for mounting local buckets
 
+{% callout type="note" %}
+  **S3 Provider Support:**
+
+  Object Mount for Windows fully supports S3 container services from Amazon Web Services, Storj, and other fully S3-compatible Object Storage providers. 
+  
+  - See the [Supported S3 Providers](docId:xCjeasn8SLQn2vfd) article in the Appendix for a complete S3 provider list.
+
+  **Azure & GCS Support:** 
+  
+  - Support for _Native_ Microsoft Azure Storage and _Native_ Google Cloud Storage services are still under development in Object Mount for Windows.
+  - For Google Cloud access: Using GCS _S3_ is recommended instead of using GCS _S3 Gateways_.
+  - Native Azure and Native GCS (S3 Gateways) should be considered “experimental” at this time.
+{% /callout %}
+
 
 ## Step 1: Download the Latest Installer
 
@@ -47,4 +61,4 @@ Proceed to the Windows [User Guide](docId:khHGfZsyY9NJ2uGK) to **activate** your
 
 Then review the Windows OS-specific [Feature Guide](docId:xMKcaWrTVK6QMD8h).
 
-Finally, read through usage tips for your specific [media application](docId:JXF4_NLsV@nh9QcT) and workflows.
+Finally, read through usage tips for your specific [Media Workflows](docId:JXF4_NLsV@nh9QcT) and Applications.

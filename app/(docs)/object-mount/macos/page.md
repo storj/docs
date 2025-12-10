@@ -36,7 +36,7 @@ Move on to the **User Guide** for instructions on creating mounts and working wi
 
 - macOS [User Guide](docId:QpBba8p4bMTXAkBK)
 
-Lastly, review the macOS OS-specific **Feature Guide** and the appropriate **Media Application Guide**:
+Lastly, review the macOS OS-specific **Feature Guide** and the appropriate **Media Workflow Guide**:
 
 - macOS [Feature Guide](docId:ehHbpq6KFndcVCgc)
-- [Media Application Guides](docId:JXF4_NLsV@nh9QcT)
+- [Media Workflow Guides](docId:JXF4_NLsV@nh9QcT)

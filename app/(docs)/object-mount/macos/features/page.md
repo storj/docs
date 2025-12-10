@@ -16,9 +16,6 @@ This guide provides details on unique and noteworthy features that are specific 
 
 Features that are global and apply to **all OS versions** of Object Mount (macOS, Windows, Linux) can be found in the [Global Features](#global-features) section below.
 
-<!-- THE GLOBAL FEATURES SECTION NEEDS TO BE REVIEWED - MAYBE PULLED INTO A NEW PAGE? -->
-
-
 
 ## Fast Copy and Fast Move
 
@@ -60,9 +57,9 @@ Follow the steps below to enable Fast Copy and Fast Move in **two** places withi
 Once enabled, you will see the new “right-click” options in the Finder.
 
 {% callout type="info" %}
-**“Right-Click” Options**
+  **“Right-Click” Options**
 
-You may need to right-click more than once to activate the extension for the first time. If necessary, reboot your Mac to see the new menu items.
+  You may need to right-click more than once to activate the extension for the first time. If necessary, reboot your Mac to see the new menu items.
 {% /callout %}
 
 ### When to Use Fast Copy or Fast Move
@@ -101,10 +98,13 @@ Behind the scenes, Fast Copy and Fast Move:
 
 ## Global Features & Concepts
 
-See the following **Appendix** pages for additional details on features that apply to Object Mount on _all_ operating systems (macOS, Windows, and Linux):
+See the many articles in the [Appendix](docId:xzAqS9Um7xjQSbmD) for additional details on features that apply to Object Mount on _all_ operating systems (macOS, Windows, and Linux):
 
-- [Object Storage Core Concepts](docId:xzAqS9Um7xjQSbmD)
-- [POSIX explained](docId:ySneAEd79CVewSSr)
-- [S3 Credential Management](docId:E4NhE5kPdjURRajJ)
-- [Supported S3 Providers](docId:xCjeasn8SLQn2vfd)
-- [Performance Tuning](docId:tuning)
+- Object Storage Core Concepts
+- POSIX explained
+- S3 Credential Management
+- Supported S3 Providers
+- Performance Tuning
+- Troubleshooting Guide
+- FAQ
+- Release Notes

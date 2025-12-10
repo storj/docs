@@ -18,9 +18,6 @@ This guide provides details on unique and noteworthy features that are specific 
 
 Features that are global and apply to **all OS versions** of Object Mount (macOS, Windows, Linux) can be found in the [Global Features](#global-features) section below.
 
-<!-- THE GLOBAL FEATURES SECTION NEEDS TO BE REVIEWED - MAYBE PULLED INTO A NEW PAGE? -->
-
-
 
 ## Fast Paste on Windows
 
@@ -70,6 +67,7 @@ Additionally, **Fast Paste**:
 - For large archive folders, use copy then **Fast Paste** to quickly duplicate them into your S3 bucket.
 - Use **Fast Paste** to free up local storage when archiving to the cloud.
 
+
 ## File Pinning on Windows
 
 Starting with **Object Mount v1.0.5**, you can now **pin files** in Windows to ensure they remain in the **local Object Mount cache**.
@@ -86,11 +84,11 @@ When you **pin a file**, Object Mount:
   - Flags the file for _persistent caching_, even across restarts
 
 {% callout type="info" %}
-**Windows File Pinning**
+  **Windows File Pinning**
 
-Pinning does *not* duplicate or move the file elsewhere. It simply marks the file as _persistent_ in the Object Mount local cache.
+  Pinning does *not* duplicate or move the file elsewhere. It simply marks the file as _persistent_ in the Object Mount local cache.
 
-**Important:** Pinned files _do not remain accessible_ when Object Mount is off-line, or when your mount is disabled or disconnected. An active, live connection is still required for access, even when a file is pinned.
+  **Important:** Pinned files _do not remain accessible_ when Object Mount is off-line, or when your mount is disabled or disconnected. An active, live connection is still required for access, even when a file is pinned.
 {% /callout %}
 
 ### Pinning Files
@@ -140,10 +138,13 @@ Use Pinning to:
 
 ## Global Features & Concepts
 
-See the following **Appendix** pages for additional details on features that apply to Object Mount on _all_ operating systems (macOS, Windows, and Linux):
+See the many articles in the [Appendix](docId:xzAqS9Um7xjQSbmD) for additional details on features that apply to Object Mount on _all_ operating systems (macOS, Windows, and Linux):
 
-- [Object Storage Core Concepts](docId:xzAqS9Um7xjQSbmD)
-- [POSIX explained](docId:ySneAEd79CVewSSr)
-- [S3 Credential Management](docId:E4NhE5kPdjURRajJ)
-- [Supported S3 Providers](docId:xCjeasn8SLQn2vfd)
-- [Performance Tuning](docId:tuning)
+- Object Storage Core Concepts
+- POSIX explained
+- S3 Credential Management
+- Supported S3 Providers
+- Performance Tuning
+- Troubleshooting Guide
+- FAQ
+- Release Notes

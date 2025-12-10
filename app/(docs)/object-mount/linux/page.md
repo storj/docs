@@ -59,8 +59,8 @@ Click below to access the content you are looking for:
 _Prior to installing_ Object Mount for Linux, view the Linux-specific [Getting Started Guide](docId:xhNvtETAA6UBZVNH) articles to better understand the capabilities, options, and deployment choices available.
 
 Getting Started topics include:
-  - Understanding [POSIX Compatibility and Options](docId:cbm3PcQXmLpuYcbg) in Object Mount for Linux
-  - Understanding [Deployment Modes](docId:bRnfbdNE6d5DaZzW) for Object Mount for Linux
+  - Understanding POSIX Compatibility and Options in Object Mount for Linux
+  - Understanding Deployment Modes for Object Mount for Linux
 
 ### Installation Guides
 
@@ -78,18 +78,17 @@ When _ready to install_, view the Object Mount for Linux [Installation Guides](d
 
 _After installation_, read through the [User Guides](docId:ohs0ailohSh0Vie3) to learn more about using and configuring Object Mount for Linux, including details on:
 
-  - Validating Functionality
+  - Validating Functionality & Access Object Storage
   - Activating License Keys
   - The different Linux Deployment Modes
     - Direct Interception Mode
     - Object Mount on FUSE
     - Object Mount FlexMount
     - Object Mount Fusion
-
-Plus expert topics such as:
-
   - Enabling Enforced POSIX File Access
   - Cloud Path Details
+  - Application Tips
+  - Media & Entertainment and High Performance COmputing Modes
   
 ### Advanced Guides
 
@@ -99,30 +98,35 @@ Topics include:
 
   - Advanced Credential Options
   - Advanced Loading Options
-  - Advanced Config Options
+  - Advanced Configuration Options
   - Server-Side Encryption
   - Kubernetes CSI Driver
+  - Machine Learning Accelerator
+  - Technical Limitations
+  - Uninstalling Object Mount
 
 
 ## Additional Reference Material
 
-Once your Linux deployment of Object Mount is up and running, there are several **Global Features** and **Media Application Guides** that you can reference, including:
+Once your Linux deployment of Object Mount is up and running, there are several **Global Features** and **Media Workflow Guides** that you can reference, including:
 
 **Global Features & Concepts:**
 
-See the **Appendix** for additional articles on features that apply to Object Mount on _all_ operating systems (macOS, Windows, and Linux):
+See the many articles in the [Appendix](docId:xzAqS9Um7xjQSbmD) for additional details on features that apply to Object Mount on _all_ operating systems (macOS, Windows, and Linux):
 
 - Object Storage Core Concepts
 - POSIX explained
 - S3 Credential Management
 - Supported S3 Providers
 - Performance Tuning
-- FAQs
+- Troubleshooting Guide
+- FAQ
+- Release Notes
 
 **Media Application & Workflow Guides:**
 
-Detailed usage tips and recommendations for many of the leading Media Workflow tools, including:
+Detailed usage tips and recommendations for [Media Workflows](docId:JXF4_NLsV@nh9QcT), including:
 
-  - Using Object Mount with DaVinci Resolve
   - Using Object Mount with Adobe Premiere Pro
   - Using Object Mount with Avid Media Composer
+  - Using Object Mount with DaVinci Resolve

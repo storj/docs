@@ -22,7 +22,7 @@ You will need to create and/or obtain credentials from your S3 provider, and the
 You will need to obtain the following three items from your storage provider:
 
 | **Variable**          | **Description** |
-| :-----------          | :-------------- | 
+| :-----------          | :---------------| 
 | **Access Key ID**     | Example: j4SQYkDxxxxxxxxxxsaSRYAahZgh
 | **Access Key Secret** | Example: vMxJBmUxxxxxxxxxxxxxxxxxxxxxxxxxK4kKvwJnw8PwKpj4PmNvL
 | **Endpoint**          | An accessible IP address or domain/subdomain/host to use as an endpoint. Example: https://gateway.storjshare.io

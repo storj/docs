@@ -6,7 +6,7 @@ weight: 1
 metadata:
   title: Getting Started
   description:
-    Gettings started with Object Mount for Linux.
+    Getting started with Object Mount for Linux.
 hidden: false
 ---
 

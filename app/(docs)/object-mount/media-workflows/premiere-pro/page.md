@@ -29,10 +29,11 @@ From there, you can work as usual in Premiere Pro with just a few things to keep
   - Footage can be previewed and scrubbed before importing.
 
 {% callout type="info" %}
+  **Large File Transfer Performance**
+
   If you notice slower performance with large files or over remote networks, consider using proxy workflows (see below).
 {% /callout %}
 
----
 
 ## Recommended Proxy and Cache Settings
 

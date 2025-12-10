@@ -62,10 +62,17 @@ Follow the steps below to create a new mount using  the **Add New Credentials** 
 
     ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-new-credentials.jpg)
 
-    {% callout type="info"  %}
-    **S3 Compatible Providers**
+    {% callout type="info" %}
+      **S3 Compatible Providers**
 
-    If your provider is not listed, select **Other S3** and choose the provider from the dropdown. Ensure the endpoint is accessible. Some providers may require extra compatibility settings like a defined region.
+      If your provider is not listed, select **Other S3** and choose the provider from the dropdown. 
+      
+      - Ensure the endpoint is accessible from the Internet. 
+      - Some providers may require extra compatibility settings like a defined region.
+
+      Below is an example of providing an additional S3 Compatibility Setting for region:
+
+      ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-custom-s3-region.png)
     {% /callout %}
 
 3. Click **Next**.
@@ -113,10 +120,10 @@ If there are multiple buckets accessible using the same credential set, those bu
 Object Mount includes a flexible **Settings** panel where you can fine-tune caching, logging, and performance settings across all mounts. 
 
 {% callout type="info" %}
-**Settings**
+  **Settings**
 
-- These settings are global and apply to all mounts.
-- These settings cannot be edited while a mount is active. Disable all mounts before making changes.
+  - These settings are global and apply to all mounts.
+  - These settings cannot be edited while a mount is active. Disable all mounts before making changes.
 {% /callout %}
 
 Refer to the following sections for details on each setting:
@@ -137,7 +144,7 @@ The local **Data Cache** temporarily stores small portions of accessed cloud fil
 
   ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-settings-01.jpg)
 
-{% callout type="info"  %}
+{% callout type="info" %}
   **Data Cache Recommendations**
 
   - Use a fast local drive (SSD or NVMe) for best caching performance.
@@ -165,13 +172,9 @@ These options let you further customize Object Mount’s performance and diagnos
 | **Debug logging**        | Enables extensive debug output to assist with support issues.
 | **Custom Environment Variables** | Custom variables to modify Object Mount’s behavior, add variables when recommended by Storj Support
 
-
-
-<!-- *** QUESTION: DO WE HAVE INFO ON WHAT COLD CACHE ON/OFF DOES??*** -->
-
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-settings-03.jpg)
 
-{% callout type="info"  %}
+{% callout type="info" %}
   **Log File Location**
 
   On Windows the default location for storing the log file is:

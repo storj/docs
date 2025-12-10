@@ -17,23 +17,23 @@ Storj’s Object Mount **musl scripted installer** (a `.run` file) is compatible
 This installer shell script allows you to install Object Mount (for the current user) _without_ needing root privileges &mdash; no `sudo` required.
 
 {% callout type="info" %}
-**Optional: Package Installer**
+  **Optional: Package Installer**
 
-If you prefer a **full installer** for use with package managers (i.e.: Alpine, etc.) refer to the [](docId:MeiPie8EDuo7eise) installation instructions.
+  If you prefer a **full installer** for use with package managers (i.e.: Alpine, etc.) refer to the [](docId:MeiPie8EDuo7eise) installation instructions.
 {% /callout %}
 
 Follow the steps below to install and configure Object Mount for **musl** platforms.
 
-{% callout type="warning"  %}
-**`libgcc` Dependency**
+{% callout type="warning" %}
+  **`libgcc` Dependency**
 
-The `musl` Scripted Installer instructions below assume you have the `libgcc` package installed (due to a dependency on `libgcc_s.so`). 
+  The `musl` Scripted Installer instructions below assume you have the `libgcc` package installed (due to a dependency on `libgcc_s.so`). 
 
-If necessary, run the following command on your Alpine distro to add the `libgcc` package (may require `sudo`):
+  If necessary, run the following command on your Alpine distro to add the `libgcc` package (may require `sudo`):
 
-```console
-apk add libgcc
-```
+  ```console
+  apk add libgcc
+  ```
 {% /callout %}
 
 

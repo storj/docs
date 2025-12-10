@@ -114,7 +114,7 @@ You can display your imported credentials with the `cuno creds list` command:
 
 Notice that a new credential file has been created with the `.s3c` extension, and that two buckets were found using the credentials.
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **Generated `.s3c` Credential File Location**
 
   The `cuno creds import` command creates an `.s3c` file with the corresponding bucket entries and adds appropriate configuration settings such as: region, URL path style, etc.
@@ -152,7 +152,7 @@ This command will iterate through multiple S3-compatibility tests, settings, and
 
 **Note:** The bucket specified must permit **write access** to allow for the creation of temporary files for testing purposes.
 
-{% callout type="warning"  %}
+{% callout type="warning" %}
   **Feature Detection: Bandwidth & Time Usage**
 
   Running feature detection may use up to a few gigabytes of bandwidth and may take a several minutes to complete depending on the machine’s connection speed and the S3 storage provider.

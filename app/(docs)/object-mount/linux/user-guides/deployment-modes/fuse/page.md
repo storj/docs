@@ -98,7 +98,7 @@ ls ~/my-object-storage/s3/<bucket>/<path>
   To be usable, replace the URI prefix (`s3://`) with the path to your mount.
 {% /callout %}
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **POSIX Options**
 
   The `--posix` option requires that a FUSE package be installed on the system.
@@ -169,7 +169,6 @@ Refer to the Linux User Guide article [](docId:phohPoowequie5ji) for additional 
 | `filemode=<octal>` | Define the default file access permission bits of files within a bucket. Supply the octal (numeric) representation of the permissions you want to apply. These are the permissions that the Object Mount subsystem will feed to the FUSE mount for non-POSIX (core file access) buckets. Not recommended for most use cases, but may be useful if mounting non-POSIX buckets in the same mount as POSIX buckets. **Ignored** if the bucket has an enabled POSIX tag. For example, to set the default file access permission bits to 0770 (`-rwxrwx---`), use the following command: `cuno -o filemode=0770 mount <mount-path>` To enforce these settings, use the FUSE mount option `-o default_permissions`. |
 | `dirmode=<octal>` | Define the default file access permission bits of directories within a bucket. Supply the octal (numeric) representation of the permissions you want to apply. These are the permissions that the Object Mount subsystem will feed to the FUSE mount for non-POSIX (core file access) buckets. Not recommended for most use cases, but may be useful if mounting non-POSIX buckets in the same mount as POSIX buckets. **Ignored** if the bucket has an enabled POSIX tag. For example, to set the default file access permission bits to 0770 (`drwx
 
-
 ### FUSE Options
 
 Also on the _right hand-side_ of the `mount` verb, you can specify options that are specific to the FUSE mount operation. 
@@ -179,7 +178,7 @@ These options are passed to the FUSE User Mount process: `fum`. (Refer to the ðŸ
 cuno mount [FUSE option] ...
 ```
 
-{% callout type="note"  %}
+{% callout type="note" %}
   **Object Mount Options vs. FUSE Options**
 
   As with the Mount Options, these FUSE options must come _after_ the verb `mount`.
@@ -223,7 +222,6 @@ cuno mount [FUSE option] ...
 | `-o negative_timeout=T` | Sets the kernel cache timeout for a negative lookup (file not found) (0.0s). |
 | `-o attr_timeout=T` | Sets the kernel cache timeout for attributes (1.0s). |
 | `-o ac_attr_timeout=T` | Sets the kernel cache timeout for checking if `-o auto_cache` should flush file data on `open`. |
-
 
 ### Object Mount on FUSE - Commands
 

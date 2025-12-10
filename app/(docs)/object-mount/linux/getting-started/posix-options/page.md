@@ -39,7 +39,7 @@ The levels of POSIX compatibility provided in Object Mount for Linux are:
 
 ## Core File Access
 
-**Core File Access** mode disables all POSIX compatibility features in Objecty Mount for linux. Core File Access mode does not support the persistence or modification of POSIX users, groups, symlinks, hard links, permissions control or file modes attributes on objects. This is the default mode.
+**Core File Access** mode disables all POSIX compatibility features in Object Mount for linux. Core File Access mode does not support the persistence or modification of POSIX users, groups, symlinks, hard links, permissions control or file modes attributes on objects. This is the default mode.
 
   - Use “Core File Access” when you don’t have any metadata requirements and your tools don’t need any POSIX metadata persistence to function correctly.
 

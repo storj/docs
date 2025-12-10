@@ -34,7 +34,7 @@ Move on to the **User Guide** for instructions on creating mounts and working wi
 
 - Windows [User Guide](docId:khHGfZsyY9NJ2uGK)
 
-Lastly, review the Windows OS-specific **Feature Guide** and the appropriate **Media Application Guide**:
+Lastly, review the Windows OS-specific **Feature Guide** and the appropriate **Media Workflow Guide**:
 
 - Windows [Feature Guide](docId:xMKcaWrTVK6QMD8h)
-- [Media Application Guides](docId:JXF4_NLsV@nh9QcT)
+- [Media Workflow Guides](docId:JXF4_NLsV@nh9QcT)

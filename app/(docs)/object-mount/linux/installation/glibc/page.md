@@ -19,9 +19,9 @@ Storj’s Object Mount **glibc scripted installer** (a `.run` file) is compatibl
 This installer shell script allows you to install Object Mount (for the current user) _without_ needing root privileges &mdash; no `sudo` required.
 
 {% callout type="info" %}
-**Optional: Package Installer**
+  **Optional: Package Installer**
 
-If you prefer a **full installer** for use with package managers, refer to the [](docId:aemie9zeiP9Nie2k) (Debian, Ubuntu, etc.) or [](docId:woosaugaiNohree9) installation instructions.
+  If you prefer a **full installer** for use with package managers, refer to the [](docId:aemie9zeiP9Nie2k) (Debian, Ubuntu, etc.) or [](docId:woosaugaiNohree9) installation instructions.
 {% /callout %}
 
 Follow the steps below to install and configure Object Mount for **glibc** platforms.
@@ -41,6 +41,7 @@ Be sure to download the correct script file for your specific chip architecture:
 | Intel x86     | cuno-mne-x86_64-glibc-installer.run
 
 - **Note:** ARM-based processors are not supported at this time.
+
 
 ## Step 2. Install & Activate Object Mount
 

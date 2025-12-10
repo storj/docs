@@ -10,13 +10,14 @@ metadata:
 hidden: false
 ---
 
-{% callout type="warning"  %}
+{% callout type="warning" %}
   **Fusion Beta**
 
   Object Mount Fusion is currently in **Beta**. 
   
   Your feedback via our 🌐 [Support Team](https://supportdcs.storj.io/hc/en-us/requests/new) will help us improve it!
 {% /callout %}
+
 
 ## Overview
 

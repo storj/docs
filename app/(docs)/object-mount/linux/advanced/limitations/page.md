@@ -79,8 +79,3 @@ For example:
 ```bash
 "$LD_PRELOAD" =~ cuno ]] && export COMP_WORDBREAKS=${COMP_WORDBREAKS/:/}
 ```
-
-
-## Memory Mapping
-
-Currently, only read-only private file memory mapping is supported.

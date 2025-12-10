@@ -29,7 +29,7 @@ The sections below will provide tips on optimization for each of these three are
   - Adjust `ulimit -n` if handling many open files (e.g. `ulimit -n 65535`).
 {% /tab %}
 
-{% tab label="macOS" %}
+{% tab label=" macOS" %}
   - Intel Processors: Use macOS Monterey (12.0) or later for best compatibility.
   - Apple Silicon (M-Chips): Use macOS Ventura (13.0) or later for best compatibility.
   - Make sure **macFUSE 4.8.2 or newer** is installed and authorized in **System Settings > Privacy & Security**.
@@ -47,6 +47,9 @@ The sections below will provide tips on optimization for each of these three are
 {% /tabs %}
 
 
+
+
+
 ## Connection Speed Tips
 
 Object Mount adapts well to different network conditions, but optimal performance depends on the speed and reliability of your connection to cloud storage.
@@ -55,7 +58,6 @@ Object Mount adapts well to different network conditions, but optimal performanc
 {% tab label="Fast" %}
 **10 Gbps or faster**
 
-  - Enable **file prefetching** via `CUNO_OPTIONS = -filePrefetch`.
   - Increase **S3 connections limit** (e.g. 200+).
   - If Client and Storage are on the same **Local Area Network (LAN)**, disable **Data cache**.
   - Consider setting **metadata cache timeout** to a lower value for frequent sync.
@@ -85,7 +87,6 @@ Object Mount adapts well to different network conditions, but optimal performanc
 Each storage backend behaves slightly differently depending on API responsiveness, region latency, and compatibility mode.
 
 {% tabs %}
-
 {% tab label="AWS S3" %}
   - Set an appropriate **region** to avoid cross-region latency.
   - Use multipart uploads for large file writes (default behavior in Object Mount).

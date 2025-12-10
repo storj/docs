@@ -38,15 +38,15 @@ When enabled, POSIX Mode generates, stores, and maintains the metadata that is t
 To retain this metadata, Object Mount creates and writes to a hidden index file that is stored at the root of your object storage bucket.
 
 {% callout type="info" %}
-**POSIX Mode Requirements**
+  **POSIX Mode Requirements**
 
-To support POSIX Mode, ensure your S3 credentials allow, and your bucket supports, write access. Your credentials must allow `s3:PutObject` and `s3:DeleteObject`.
+  To support POSIX Mode, ensure your S3 credentials allow, and your bucket supports, write access. Your credentials must allow `s3:PutObject` and `s3:DeleteObject`.
 {% /callout %}
 
 {% callout type="warning" %}
-**Accessing Content Outside of Object Mount**
+  **Accessing Content Outside of Object Mount**
 
-Using any non-Object Mount tool to rename, move, or copy your files will result in those objects _losing_ their POSIX metadata. You should only use Object Mount to manage POSIX-enabled files in order to preserve their metadata and attributes.
+  Using any non-Object Mount tool to rename, move, or copy your files will result in those objects _losing_ their POSIX metadata. You should only use Object Mount to manage POSIX-enabled files in order to preserve their metadata and attributes.
 {% /callout %}
 
 
@@ -96,6 +96,18 @@ See the associated page for your operating system:
 
 - Enabling POSIX Mode when [creating a mount in macOS](docId:QpBba8p4bMTXAkBK#step-2-configure-s3-credentials-and-create-a-mount)
 - Enabling POSIX Mode [creating a mount in Windows](docId:khHGfZsyY9NJ2uGK#step-2-configure-s3-credentials-and-create-a-mount)
+
+{% callout type="info" %}
+  **POSIX Feature Support on Mac & Windows**
+
+  User and Group identity features are not supported on Mac and Windows platforms:
+  - The owner of cloud objects is always reported to be the current user.
+  - The directory mode is reported as `0777` and the file mode is reported as `0666`.
+
+  Also, POSIX access controls are not enforced by Object Mount on Mac and Windows.
+
+  For a deeper understanding of the full suite of POSIX Mode Features see the Linux Getting Started Guide article: [](docId:cbm3PcQXmLpuYcbg) and the Linux User Guide article: [](docId:Eegoo1teiJ8eerae).
+{% /callout %}
 
 
 ## Enabling POSIX Mode: Linux

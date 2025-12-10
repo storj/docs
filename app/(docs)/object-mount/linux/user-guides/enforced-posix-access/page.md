@@ -20,8 +20,6 @@ Users will encounter `access denied` errors if they try to read or write to a fi
 
 The specific steps may vary depending on your object storage provider. Please contact the Storj 🌐 [Support Team](https://supportdcs.storj.io/hc/en-us/requests/new) if this is a use-case that you are interested in and these instructions don’t match your expectations or preferences.
 
-See also: [metadata warning](../installation/enforced-posix)
-
 {% callout type="note" %}
   **Hybrid Deployment for ACL Support**
 

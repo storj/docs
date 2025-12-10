@@ -172,7 +172,7 @@ If you still need assistance in resolving your issue, follow the steps below to 
 
     - _Once attached_, click to **Send** the message to the Storj Object Mount support team.
 
-Alternatively you can open a [support ticket](https://supportdcs.storj.io/hc/en-us/requests/new) and include:
+Alternatively, you can open a [support ticket](https://supportdcs.storj.io/hc/en-us/requests/new) and include:
 
 - OS and Object Mount version  
 - Cloud provider and bucket name  

@@ -36,7 +36,7 @@ Object Mount on FUSE is a FUSE file system. FUSE routes calls through the Object
 
   Due to the nature of FUSE file systems, Object Mount on FUSE can be slightly less performant than Object Mount in Direct Interception Mode.
   
-  If speed is your primary objective, consider using Object Mount in [Direct Intercept Mode](docId:UHsd5HnesueQyhnZ) or via the [User-Mode Library](docId:airoogh4Waengi8u#user-mode-library).
+  If speed is your primary objective, consider using Object Mount in [Direct Intercept Mode](docId:UHsd5HnesueQyhnZ) or via the [User-Mode Library](docId:airoogh4Waengi8u#via-user-mode-library-ld-preload).
 {% /callout %}
 
 
@@ -133,7 +133,7 @@ cuno mount [option] ...
 |-----------------------|-----------------|
 | `--root <cloud path>` | Specifies the root object storage path to be mounted. For example, to mount a single bucket, you would use `--root s3://<bucket>`. |
 | `--posix` | Enables setting and enforcing access permissions, symbolic and hard links, users, groups, etc. Can be used with default permissions. Implicitly sets `-o allow_other`. This option is ideally used with a mount that is only on a single bucket, e.g. `cuno mount --root s3://<bucket> --posix <mount-path>`. You should also be using `cuno creds setposix s3://examplebucket true` to enable POSIX handling of the bucket consistently when Direct Interception or a FlexMount is used. |
-| `<FUSE option>` | Options that are specific to the FUSE mount operation. These options are passed on to `fum` ([fusermount3](https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html)). Not to be confused with Object Mount subsystem options which use the same `-o` syntax. See below for some of these. See user-guide-cuno-mount-fuse-options. |
+| `<FUSE option>` | Options that are specific to the FUSE mount operation. These options are passed on to `fum` ([FUSE User Mount](https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html)). Not to be confused with Object Mount subsystem options which use the same `-o` syntax. See below for some of these. See user-guide-cuno-mount-fuse-options. |
 | `--no-allow-root` | Do not allow root to access the mount (allowed by default). Disables support for SUID binaries, Snap, AppArmor, and Flatpak applications. |
 | `--auto-restart` | Automatically restarts Object Mount on FUSE if problems occur during execution. |
 | `--mkdir` | Automatically creates the mount point directory if it does not exist. |
@@ -159,7 +159,7 @@ export CUNO_OPTIONS="<Object Mount Subsystem Option>"
 
 Some relevant Object Mount Subsystem options are given in the table below. 
 
-Refer to the Linux User Guide article [](docId:phohPoowequie5ji) for additional details.
+Refer to the Linux Advanced Guide article [](docId:phohPoowequie5ji) for additional details.
 
 | **Subsystem Option** | **Description** |
 |----------------------|-----------------|
@@ -173,7 +173,7 @@ Refer to the Linux User Guide article [](docId:phohPoowequie5ji) for additional 
 
 Also on the _right hand-side_ of the `mount` verb, you can specify options that are specific to the FUSE mount operation. 
 
-These options are passed to the FUSE User Mount process: `fum`. (Refer to the 🌐 [FUSE Mount Documentation](https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html).
+These options are passed to the FUSE User Mount process: `fum`. (Refer to the 🌐 [FUSE Mount documentation](https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html).
 ```
 cuno mount [FUSE option] ...
 ```

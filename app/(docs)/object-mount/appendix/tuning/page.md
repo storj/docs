@@ -47,9 +47,6 @@ The sections below will provide tips on optimization for each of these three are
 {% /tabs %}
 
 
-
-
-
 ## Connection Speed Tips
 
 Object Mount adapts well to different network conditions, but optimal performance depends on the speed and reliability of your connection to cloud storage.
@@ -95,7 +92,8 @@ Each storage backend behaves slightly differently depending on API responsivenes
 {% /tab %}
 
 {% tab label="Storj" %}
-  - Use [Storj-managed encryption](docId:aitie6rohXai9uuv) projects (alternatively - [**lexicographically ordered buckets**](docId:eZ4caegh9queuQuaazoo#unencrypted-object-keys)) for faster directory listings.
+  - Use [Storj-managed encryption](docId:aitie6rohXai9uuv) projects.
+  - Use [**lexicographically ordered buckets**](docId:eZ4caegh9queuQuaazoo#list-objects) for faster directory listings.
   - Enable `-filePrefetch` for large file reads.
   - Ensure your satellite and uplink are in the same region as your client when possible.
   - POSIX mode is supported but not required for most workflows.
@@ -128,4 +126,4 @@ Each storage backend behaves slightly differently depending on API responsivenes
 
 Need help tuning for a specific workflow, app, or storage provider?
 
-Reach out via our 🌐 Object Mount [Support Team](https://supportdcs.storj.io/hc/en-us/requests/new) for additional assistance.
+Reach out via our Object Mount 🌐 [Support Team](https://supportdcs.storj.io/hc/en-us/requests/new) for additional assistance.

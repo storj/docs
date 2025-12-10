@@ -45,7 +45,7 @@ Object Mount can connect to object storage from Storj as well as other major clo
 
 ### Obtain Your Object Storage Credentials
 
-- See the [](docId:E4NhE5kPdjURRajJ#obtaining-your-s3-credentials) page in the **User Guides** section.
+- See the Appendix article [](docId:E4NhE5kPdjURRajJ#obtaining-your-s3-credentials) for instructions.
 
 ### Enter Your Credentials and Create a Mount
 
@@ -90,7 +90,7 @@ Follow the steps below to create a new mount using  the **Add New Credentials** 
     - Uncheck the box to enable **full read/write access**.
 
 7. Tick the box to **Enable POSIX metadata** (recommended).
-    - For more details, see the [POSIX Explained](docId:ySneAEd79CVewSSr) page in the **User Guides** section.
+    - For more details, see the Appendix article: [POSIX Explained](docId:ySneAEd79CVewSSr).
 
     ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-mac-configure-your-mount.jpg)
 

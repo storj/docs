@@ -1,6 +1,6 @@
 ---
 title: Debian
-hideTitle: false
+hideTitle: true
 docId: aemie9zeiP9Nie2k
 weight: 3
 metadata:
@@ -9,6 +9,8 @@ metadata:
     Debian Package Installer Instructions
 hidden: false
 ---
+
+# Debian Package Installer
 
 Storj provides an Object Mount package installer for Debian (and Debian-based) Linux distributions. 
 
@@ -99,4 +101,4 @@ The installer will fetch and install any necessary additional packages (such as 
 
 ## Next Steps
 
-_Once Object Mount is installed_, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.
+_Once Object Mount is installed_, proceed to the Linux User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.

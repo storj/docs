@@ -29,7 +29,7 @@ hidden: false
 
 ## Direct Interception
 
-Direct Interception (using either Object Mount CLI or `LD_PRELOAD`) does not currently support SUID binaries, or certain packaged applications like 🌐 [Snap](https://ubuntu.com/core/services/guide/snaps-intro), 🌐 [AppImage](https://appimage.org/), or 🌐 [Flatpak](https://docs.flatpak.org/en/latest/introduction.html). 
+Direct Interception Mode (using either Object Mount CLI or `LD_PRELOAD`) does not currently support SUID binaries, or certain packaged applications like 🌐 [Snap](https://snapcraft.io/about), 🌐 [AppImage](https://appimage.org/), or 🌐 [Flatpak](https://docs.flatpak.org/en/latest/introduction.html). 
 
 Future updates are planned to improve this.
 
@@ -56,7 +56,7 @@ If left at the default, file ownership, permissions and timestamps are set as fo
   - The owner of the remote objects will be reported as the **current user**, and remote file permissions will be set to `777`. 
   - The creation time of directories is displayed as the Unix Epoch (00:00:00 UTC on 1 January 1970). 
 
-These can be overridden using `CUNO_OPTIONS`. See the [Ownership and Permissions](docId:phohPoowequie5ji) section in the Advance Guide article: Advanced Configuration Options for details.
+These can be overridden using `CUNO_OPTIONS`. See the [Ownership and Permissions](docId:phohPoowequie5ji#ownership-and-permissions) section in the Advance Guide article: Advanced Configuration Options for details.
 
 
 ## Directories in Azure

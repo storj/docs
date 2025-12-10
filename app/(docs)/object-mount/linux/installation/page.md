@@ -13,7 +13,7 @@ metadata:
 hidden: false
 ---
 
-# Installation Overview
+# Linux Installation Overview
 
 Storj’s Object Mount supports multiple flavors of Linux and can also run inside Docker and other virtual environments, such as Microsoft’s Hyper-V and Oracle’s VirtualBox.
 
@@ -43,20 +43,22 @@ _Once Object Mount is installed_, proceed to the User Guide article: [](docId:JD
 
 Equipped with your installation download link and your Object Mount license key, proceed to the installation instructions for your specific OS and preferred installation method:
 
-| **Scripted Installers**                 | **Installation Guide** |
-|-----------------------------------------|------------------------|
-| **glibc** (C standard library)          | [glibc Scripted Installer](docId:ahWohd5eegh6eizi)
-| **musl** (C standard library)           | [musl Scripted Installer](docId:ao0yaeng2Aitheel)
+| **Scripted Installers**                   | **Installation Guide** |
+|-------------------------------------------|------------------------|
+| **glibc** (C standard library)            | [glibc Scripted Installer](docId:ahWohd5eegh6eizi)
+| **musl** (C standard library)             | [musl Scripted Installer](docId:ao0yaeng2Aitheel)
 
+| **Package Managers**                      | **Installation Guide** |
+|-------------------------------------------|------------------------|
+| **Alpine** (and APM, etc.)                | [APK Package Installer](docId:MeiPie8EDuo7eise)
+| **Debian** (and Ubuntu, etc.)             | [Debian Package Installer](docId:aemie9zeiP9Nie2k)
+| **Red Hat** (and RPM, RHEL, CentOS, etc.) | [Red Hat Package Installer](docId:woosaugaiNohree9)
 
-| **Package Managers**                    | **Installation Guide** |
-|-----------------------------------------|------------------------|
-| **Debian** (& Ubuntu, etc.)             | [Debian Package Installer](docId:aemie9zeiP9Nie2k)
-| **Red Hat** (& RPM, RHEL, CentOS, etc.) | [Red Hat Package Installer](docId:woosaugaiNohree9)
-| **Alpine** (& APM, etc.)                | [APK Package Installer](docId:MeiPie8EDuo7eise)
-| **Windows** (Linux)                     | [Windows (via Windows Subsystem for Linux [WSL])](docId:bekoo5aenePoo7Oh)
+| **Other**                                 | **Installation Guide** |
+|-------------------------------------------|------------------------|
+| **Windows** (WSL)                         | [Windows (via Windows Subsystem for Linux [WSL])](docId:bekoo5aenePoo7Oh)
 
-**Other? Not sure?** 
+**Other Distro? Not Sure?** 
 
 Most Linux distributions use either the GNU Project’s C standard library 🌐 [glibc](https://en.wikipedia.org/wiki/glibc) or the 🌐 [musl](https://en.wikipedia.org/wiki/musl) C standard library. 
 

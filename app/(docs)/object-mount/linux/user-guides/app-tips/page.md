@@ -17,7 +17,7 @@ This article provides additional recommendations and guidance when using Object 
 
 ## Python
 
-Python’s `os.path.realpath(path)` does not support [URI formatted](docId:jieteeYeyievui9k) cloud paths (e.g.: `s3://<bucket_name>/path`).
+Python’s `os.path.realpath(path)` does _not_ support [URI formatted](docId:jieteeYeyievui9k) cloud paths (e.g.: `s3://<bucket_name>/path`).
 
 Use directory formatted cloud paths instead (e.g.: `/cuno/s3/<bucket_name>/path`).
 
@@ -28,7 +28,7 @@ We strongly recommend running `rsync` with the options `--inplace -W`. This make
 
 To use Rsync options that preserve permissions (`-p`) and modification times (`-t`), such as when you want to update files _only_ when the source has been updated, you must enable POSIX File Access.
 
-See the Getting Started Guide: [POSIX File Access](docId:xhNvtETAA6UBZVNH#posix-file-access) for details.
+See the Getting Started Guide: [POSIX File Access](docId:cbm3PcQXmLpuYcbg#posix-file-access) for details.
 
 
 ## Fpsync

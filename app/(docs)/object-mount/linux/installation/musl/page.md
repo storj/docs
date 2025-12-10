@@ -1,6 +1,6 @@
 ---
 title: musl
-hideTitle: false
+hideTitle: true
 docId: ao0yaeng2Aitheel
 weight: 2
 metadata:
@@ -9,6 +9,8 @@ metadata:
     musl Scripted Installer Instructions
 hidden: false
 ---
+
+# musl Scripted Installer
 
 Some Linux distributions (including Alpine) use the musl C standard library: 🌐 [musl](https://en.wikipedia.org/wiki/musl).
 
@@ -98,4 +100,4 @@ When Object Mount is installed via a **Scripted Installer** (e.g.: glibc or musl
 
 ## Next Steps
 
-_Once Object Mount is installed_, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.
+_Once Object Mount is installed_, proceed to the Linux User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.

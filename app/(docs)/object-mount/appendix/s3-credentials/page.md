@@ -22,7 +22,7 @@ You will need to create and/or obtain credentials from your S3 provider, and the
 You will need to obtain the following three items from your storage provider:
 
 | **Variable**          | **Description** |
-| :-----------          | :---------------| 
+|-----------------------|-----------------| 
 | **Access Key ID**     | Example: j4SQYkDxxxxxxxxxxsaSRYAahZgh
 | **Access Key Secret** | Example: vMxJBmUxxxxxxxxxxxxxxxxxxxxxxxxxK4kKvwJnw8PwKpj4PmNvL
 | **Endpoint**          | An accessible IP address or domain/subdomain/host to use as an endpoint. Example: https://gateway.storjshare.io
@@ -55,7 +55,7 @@ For instructions on how to create and/or obtain your S3 storage credentials, sel
 
   The steps should be similar to the following:
 
-  1. Log into the AWS Console: 🌐 https://s3.console.aws.amazon.com
+  1. Log into the AWS S3 Console: 🌐 <https://s3.console.aws.amazon.com>
 
   2. Navigate to: **Services > IAM**
 
@@ -86,7 +86,7 @@ For instructions on how to create and/or obtain your S3 storage credentials, sel
 
   1. Log into the **Storj Dashboard** for your Satellite.
     
-      For example: 🌐 [https://us1.storj.io/login](https://us1.storj.io/login)
+      For example: 🌐 <https://us1.storj.io/login>
 
   2. Open your **Project** and click on **Access Keys** in the left-hand menu.
     
@@ -221,7 +221,9 @@ Select your S3 storage provider below for details on syntax and variable naming:
 
   `region` is optional.
 
-  Object Mount can also use an **AWS S3 Access Point** instead of a container (see [](docId:jieteeYeyievui9k#aws-s3-access-point-support) for more details).
+  Object Mount can also use an **AWS S3 Access Point** instead of a container.
+  
+  For more details, see the **AWS S3 Access Point Support** section in the User Guide article: [](docId:jieteeYeyievui9k#aws-s3-access-point-support) .
 
 {% /tab %}
 
@@ -292,7 +294,7 @@ Select your S3 storage provider below for details on syntax and variable naming:
 
 {% /tabs %}
 
-_See the [](docId:aish4shuiheeZaig) article for additional credential options and endpoint formatting details._
+_See the Advanced Guide article [](docId:aish4shuiheeZaig) for additional credential options and endpoint formatting details._
 
 
 ## Securing Your S3 Credentials
@@ -315,4 +317,4 @@ chmod 0600 "<path to your credentials file>"
   ```
 {% /callout %}
 
-_See the [](docId:aish4shuiheeZaig) article for additional credential options._
+_SSee the Advanced Guide article [](docId:aish4shuiheeZaig) for additional credential options._

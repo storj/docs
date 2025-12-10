@@ -32,9 +32,9 @@ Object Mount’s FlexMount benefits are leveraged by:
 
 ### Disadvantages
 
-1. **Set up time:** Object Mount on FUSE needs to be configured. Consider [setting up the mount at boot](#mount-on-boot).
+1. **Set up time:** Object Mount on FUSE needs to be configured.
 
-2. **Shell launch is more complicated:** Each time an Object Mount shell is launched it must be configured to use the mount. This can be worked around by setting up a Object Mount on FUSE on boot, and setting an alias to launch a Object Mount shell with the correct parameters.
+2. **Shell launch is more complicated:** Each time an Object Mount shell is launched it must be configured to use the mount. This can be worked around by setting up a Object Mount on FUSE [on boot](docId:ZdvWLcm9uFmM5HLk#mount-on-boot), and setting an alias to launch a Object Mount shell with the correct parameters.
 
 
 ## How to Enable
@@ -65,7 +65,7 @@ FlexMount is set up as follows:
     ```
 
 {% callout type="note" %}
-  **FlexMount Tilde Use**
+  **FlexMount Tilde (~) Use**
 
   You cannot use a tilde `~` in your `CUNO_OPTIONS` or `cuno -o` CLI options when setting up a FlexMount, as this is something that the shell needs to resolve. 
  

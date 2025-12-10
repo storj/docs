@@ -50,7 +50,7 @@ For example: If you use AWS S3, Object Mount Fusion should _only_ be set up on E
 
 If you are using an S3-compatible on-premises object storage solution, Object Mount Fusion should be set up on a computer on the same high-speed local area network (LAN).
 
-If you have already set up and are using an attached storage system (such as EFS), you may skip ahead to [Mounting a Object Mount Fusion filesystem](#mounting-a-object-mount-fusion-filesystem).
+_**Note:** If you have already set up and are using an attached storage system (such as EFS), you may skip ahead to [Mounting a Object Mount Fusion filesystem](#mounting-an-object-mount-fusion-filesystem)._
 
 Otherwise, follow the steps below to configure Object Mount Fusion:
 
@@ -126,7 +126,7 @@ To set up a compute node in the same region as your bucket, follow the relevant 
 {% tab label="Google Cloud" %}
   **Google Cloud**
 
-  Follow the Google Clout Compute Engine Guide: 🌐 [Instance templates](https://cloud.google.com/compute/docs/instance-templates).
+  Follow the Google Cloud Compute Engine Guide: 🌐 [Instance templates](https://cloud.google.com/compute/docs/instance-templates).
 {% /tab %}
 
 {% tab label="Other S3 Compatible" %}

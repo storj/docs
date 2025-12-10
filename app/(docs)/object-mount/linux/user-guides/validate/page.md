@@ -10,13 +10,14 @@ metadata:
 hidden: false
 ---
 
-After [installing Object Mount](docId:iethahkeeX5EiJoh), you should:
+After [installing Object Mount](docId:iethahkeeX5EiJoh) for Linux, you should:
 
   1. Run and Validate global functionality by accessing public buckets
-  2. Import S3 credentials into Object Mount
+  2. Import your private S3 credentials into Object Mount
   3. Connect to your private Object Storage buckets
 
-Details for each step is outlined below:
+Details for each step is outlined below.
+
 
 ## Step 1. Validate Object Mount’s Public Connectivity
 
@@ -71,7 +72,7 @@ Validate that Object Mount can reach Internet-based object storage buckets by li
 
 In order to access and mount your private Object Storage buckets you will need to save your S3 credentials to a file. 
 
-Instructions on obtaining your credentials and saving them to a file can be found in the Concepts article: [](docId:E4NhE5kPdjURRajJ).
+Instructions on obtaining your credentials and saving them to a file can be found in the Appendix article: [](docId:E4NhE5kPdjURRajJ).
 
 Once your credentials have been saved to a file on your Linux drive, proceed with the following steps:
 
@@ -138,7 +139,7 @@ If you encounter an issue and need to re-import your credential file, you must f
 cuno creds purge credentials.s3c
 ```
 
-_See the [](docId:aish4shuiheeZaig) article for additional `cuno cred` details._
+See the [](docId:aish4shuiheeZaig) article for additional `cuno creds` details.
 
 **S3 Compatibility Check:**
 

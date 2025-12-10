@@ -1,6 +1,6 @@
 ---
 title: Alpine
-hideTitle: false
+hideTitle: true
 docId: MeiPie8EDuo7eise
 weight: 5
 metadata:
@@ -9,6 +9,8 @@ metadata:
     Alpine Package Installer Instructions
 hidden: false
 ---
+
+# Alpine Package Installer
 
 Storj provides an Object Mount package installer for the Alpine Linux distribution.
 
@@ -94,4 +96,4 @@ The installer will fetch and install any necessary additional packages (such as 
 
 ## Next Steps
 
-_Once Object Mount is installed_, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.
+_Once Object Mount is installed_, proceed to the Linux User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.

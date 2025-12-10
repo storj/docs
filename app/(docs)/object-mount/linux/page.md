@@ -23,7 +23,7 @@ Object Mount is a scalable, high-performance POSIX compatibility layer that lets
 
 **Object Mount for Linux** retains much of its original look and feel from its **cunoFS** heritage.
 
-Object Mount for Linux includes an Object Mount Command Line Interface (CLI), `cuno`, providing the highest performance and most straightforward way to interact with object storage. You will encounter many `cunu`-related commands, settings, and custom variables throughout your configuration and daily use of Object Mount for Linux.
+Object Mount for Linux includes an Object Mount Command Line Interface (CLI), `cuno`, providing the highest performance and most straightforward way to interact with object storage. You will encounter many `cuno`-related commands, settings, and custom variables throughout your configuration and daily use of Object Mount for Linux.
 
 Object Mount functions via a user-mode library, `cuno.so`, which acts as a 🌐 [dynamic linker/loader](https://man7.org/linux/man-pages/man8/ld.so.8.html) intercepting applications (both dynamic and static) via fast, dynamic binary instrumentation.
 
@@ -76,7 +76,7 @@ When _ready to install_, view the Object Mount for Linux [Installation Guides](d
 
 ### User and Configuration Guides
 
-_After installation_, read through the [User Guides](docId:ohs0ailohSh0Vie3) to learn more about using and configuring Object Mount for Linux, including details on:
+_After installation_, read through the Linux [User Guides](docId:ohs0ailohSh0Vie3) to learn more about using and configuring Object Mount for Linux, including details on:
 
   - Validating Functionality & Access Object Storage
   - Activating License Keys

@@ -68,7 +68,7 @@ Depending on the capabilities and behaviors of your object storage provider’s 
 | `no-multipart-upload` | Do not attempt to use 🌐 [multipart upload](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html).
 | `no-copy-part`      | Do not attempt to use 🌐 [UploadPartCopy](https://docs.aws.amazon.com/AmazonS3/latest/API/API_UploadPartCopy.html).
 | `no-range-download` | Do not attempt to use 🌐 [Byte-Range Fetches](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance-guidelines.html#optimizing-performance-guidelines-get-range) &mdash; use a single request to download the whole object instead.
-| `no-delete-objects` | Do not attempt to use 🌐 [DeleteObjects](https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObjects.html) (plural) when deleting multiple objects &mdash; use 🌐 [DeleteObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObject.html) (singular) for each object to delete.
+| `no-delete-objects` | Do not attempt to use 🌐 [DeleteObjects](https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObjects.html) (**plural**) when deleting multiple objects &mdash; use 🌐 [DeleteObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObject.html) (**singular**) for each object to delete.
 | `directory-marker` | Create a placeholder object when creating an empty prefix (e.g., `mkdir`). Remove the placeholder object when removing an empty directory.
 | `ignore-empty-prefixes` | Ignore directories that were removed but still reported as existing prefixes by the server.
 | `posix=<true/false>` | Set POSIX mode for all buckets associated with this credential. This option takes precedence over the POSIX mode runtime environment variable, but may be overridden by a bucket-wide POSIX setting (set via `cuno creds`).
@@ -311,7 +311,7 @@ AWS_SECRET_ACCESS_KEY
 ### Amazon AWS S3: Using IAM Roles for EC2
 
 IAM Roles provide an alternative method to securely distribute AWS credentials across EC2 instances.
-These credentials can be used for accessing AWS S3. Refer to the 🌐 [Amazon AWS EC2 documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) for more information.
+These credentials can be used for accessing AWS S3. Refer to the AWS article 🌐 [IAM roles for Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) for more information.
 
 Object Mount will automatically detect IAM roles on an EC2 instance, so no further configuration is necessary.
 

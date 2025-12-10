@@ -1,6 +1,6 @@
 ---
 title: Red Hat
-hideTitle: false
+hideTitle: true
 docId: woosaugaiNohree9
 weight: 4
 metadata:
@@ -9,6 +9,8 @@ metadata:
     Red Hat Package Installer Instructions
 hidden: false
 ---
+
+# Red Hat Package Installer
 
 Storj provides an Object Mount package installer for Red Hat Linux (and 🌐 [RHEL-based Linux distributions](https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux_derivatives))
 
@@ -92,4 +94,4 @@ The installer will fetch and install any necessary additional packages (such as 
 
 ## Next Steps
 
-_Once Object Mount is installed_, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.
+_Once Object Mount is installed_, proceed to the Linux User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.

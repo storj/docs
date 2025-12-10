@@ -1,5 +1,5 @@
 ---
-title: Deployment Modes
+title: Deployment Mode Details
 hideTitle: false
 docId: jqySXsBfj5WGUjgs
 weight: 3
@@ -22,7 +22,7 @@ As was described in the **Getting Started Guide** article [](docId:bRnfbdNE6d5Da
 
 3. [Object Mount FlexMount](docId:cFUt9zgCRFFDk5Sq) combines the speed and performance of Direct Interception (#1) with the wide application support of Object Mount on FUSE (#2).
 
-4. Lastly, [Object Mount Fusion](docId:GVT7eXEaMSZCWESj) can be used to enhance high-performance _attached_ storage solutions (like Amazon’s Elastic File System - EFS) with the throughput of object storage.
+4. [Object Mount Fusion](docId:GVT7eXEaMSZCWESj) can be used to enhance high-performance _attached_ storage solutions (like Amazon’s Elastic File System - EFS) with the throughput of object storage.
 
 
 ## Enabling Object Mount in Other Environments

@@ -23,6 +23,7 @@ It’s built to work everywhere: It works with dynamic binaries and static binar
 
 {% callout type="note" %}
   **Support for Any Application**
+
   This includes applications you’ve written yourself &mdash; just treat the paths to object storage as local file system paths. Object Mount handles the rest.
 {% /callout %}
 
@@ -46,7 +47,7 @@ Direct interception Mode uses the `LD_PRELOAD` environment variable so that Obje
 {% callout type="warning" %}
   **Direct Interception vs. Object Mount on Fuse**
 
-  Direct Interception Mode does _not_ currently support SUID binaries, or certain packaged apps like 🌐 [Snap](https://ubuntu.com/core/services/guide/snaps-intro), 🌐 [AppImage](https://appimage.org/), or 🌐 [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications. 
+  Direct Interception Mode does _not_ currently support SUID binaries, or certain packaged apps like 🌐 [Snap](https://snapcraft.io/about), 🌐 [AppImage](https://appimage.org/), or 🌐 [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications. 
   
   See [Object Mount on FUSE](docId:ZdvWLcm9uFmM5HLk) and/or [Object Mount FlexMount](docId:cFUt9zgCRFFDk5Sq) to support these tools.
 {% /callout %}
@@ -56,7 +57,7 @@ Direct interception Mode uses the `LD_PRELOAD` environment variable so that Obje
 
 | **Advantages**                   | **Disadvantages** |
 |----------------------------------|---------------|
-| **Speed:** Dynamic interception offers the best performance. | **Compatibility:** Direct interception does not currently support SUID binaries, [Snaps](https://ubuntu.com/core/services/guide/snaps-intro), [AppArmor](https://ubuntu.com/server/docs/security-apparmor), or [Flatpak](https://docs.flatpak.org/en/latest/introduction.html) applications.
+| **Speed:** Dynamic interception offers the best performance. | **Compatibility:** Direct interception does not currently support SUID binaries, Snaps, AppArmor, or Flatpak applications.
 | **Set up time:** This is the default mode &mdash; just launch an Object Mount shell with the `cuno` CLI command. | **Activation:** In some cases, it is difficult to enable direct interception or keep it enabled (because of environment variable clobbering or lack of privileges to set/use LD_PRELOAD). |
 | **Linux native:** For users who are skilled with Linux, using the `cuno` CLI is quick, easy, and non-intrusive. | **Non-technical users:** If Object Mount is being used by team members with only minimal Linux skills, teaching them how to use the Object Mount shell and diagnose if it’s working correctly may be less desirable than setting up a Object Mount on FUSE on their behalf. |
 

@@ -1,6 +1,6 @@
 ---
 title: Getting Started Guides
-hideTitle: false
+hideTitle: true
 docId: xhNvtETAA6UBZVNH
 weight: 1
 metadata:
@@ -9,6 +9,8 @@ metadata:
     Getting started with Object Mount for Linux.
 hidden: false
 ---
+
+# Getting Started Guides for Linux
 
 The pages in these **Getting Started Guides** for Linux will introduce you to topics that should be understood _before_ installing and using Object Mount.
 

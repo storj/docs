@@ -1,6 +1,6 @@
 ---
 title: glibc
-hideTitle: false
+hideTitle: true
 docId: ahWohd5eegh6eizi
 weight: 1
 metadata:
@@ -9,6 +9,8 @@ metadata:
     glibc Scripted Installer Instructions
 hidden: false
 ---
+
+# glibc Scripted Installer
 
 Many Linux distributions use the GNU Project’s C standard library: 🌐 [glibc](https://en.wikipedia.org/wiki/glibc).
 
@@ -121,4 +123,4 @@ When Object Mount is installed via a **Scripted Installer** (e.g.: glibc or musl
 
 ## Next Steps
 
-_Once Object Mount is installed_, proceed to the User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.
+_Once Object Mount is installed_, proceed to the Linux User Guide article: [](docId:JDK2ED8HGFmyaxk) to ensure you can access both public and private Object Storage buckets.

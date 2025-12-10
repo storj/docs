@@ -77,9 +77,9 @@ There are two main ways to enable “POSIX File Access”:
   - Otherwise, to enable POSIX File Access on an _individual workstation-basis_ you can set a local environment variable. Enter `export CUNO_POSIX=1` from a command line/shell interface. This setting is valid per-session.
 
 
-## POSIX _Enforced_ File Access
+## POSIX Enforced File Access
 
-**POSIX Enforced File Access** mode will generate and maintain POSIX metadata for your objects (like “POSIX File Access” mode, above) but _will enforce_ POSIX access controls on those objects. 
+**POSIX _Enforced_ File Access** mode will generate and maintain POSIX metadata for your objects (like “POSIX File Access” mode, above) but _will enforce_ POSIX access controls on those objects. 
 
   - Use “POSIX Enforced File Access” when you want to manage what users have access to, based on the UID/GID of their UNIX user and the corresponding POSIX metadata (owner, group, mode) on files. 
   - This means users will encounter `access denied` errors if they try to read or write to a file/directory they haven’t been given permission to (by a suitably privileged user/admin using: `chown`, `chgrp` or `chmod`).

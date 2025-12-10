@@ -163,7 +163,7 @@ To inject Object Mount into a Docker container when it is launched:
 
   2. If desired, the `CUNO_OPTIONS` environment variable can be set using the Docker `--env` option when using `docker run`
 
-      - See [Set environment variables (--env](https://docs.docker.com/reference/cli/docker/container/run/#env) in the Docker documentation.
+      - See [Set environment variables (--env)](https://docs.docker.com/reference/cli/docker/container/run/#env) in the Docker documentation.
 
   3. Use the following options when using `docker run`:
 
@@ -201,7 +201,7 @@ docker run                                                             \
 
 You can use Object Mount on Kubernetes clusters with the Object Mount Kubernetes CSI Driver.
 
-Refer to the User Guide article: [Kubernetes CSI Driver](docId:zohm4zeXohpae9ga).
+Refer to the Advanced Guide article: [Kubernetes CSI Driver](docId:zohm4zeXohpae9ga).
 
 
 ## With Sylabs Singularity

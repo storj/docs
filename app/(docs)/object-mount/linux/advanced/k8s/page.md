@@ -15,7 +15,7 @@ The driver is available through the [Helm](https://helm.sh) package manger under
 
   - `oci://registry-1.docker.io/cunofs/cunofs-csi-chart`. 
 
-More information can be found [on Docker hub](https://hub.docker.com/r/cunofs/cunofs-csi-chart).
+More information can be found on [Docker hub](https://hub.docker.com/r/cunofs/cunofs-csi-chart).
 
 
 ## Installing Helm & CSI Driver
@@ -244,7 +244,7 @@ spec:
 {% callout type="note" %}
   **CSI Ephemeral Inline Volumes**
 
-  Currently, Object Mount’s CSI Driver does not support 🌐 [CSI inline volumes](https://kubernetes.io/blog/2020/01/21/csi-ephemeral-inline-volumes/)
+  Currently, Object Mount’s CSI Driver does not support 🌐 [CSI Ephemeral Inline Volumes](https://kubernetes.io/blog/2020/01/21/csi-ephemeral-inline-volumes/).
 {% /callout %}
 
 
@@ -458,7 +458,7 @@ helm install cunofs-csi-chart oci://registry-1.docker.io/cunofs/cunofs-csi-chart
 
 ## Technical Details
 
-The Object Mount CSI Driver abides by the [Kubernetes Container Storage Interface](https://github.com/container-storage-interface/spec/blob/master/spec.md) standard.
+The Object Mount CSI Driver abides by the 🌐 [Kubernetes Container Storage Interface](https://github.com/container-storage-interface/spec/blob/master/spec.md) standard.
 
 It implements the `Node`, `Controller` and `Identity` plugins and uses sidecar containers for simplifying its deployment and maintenance.
 
@@ -472,31 +472,35 @@ The `Controller` plugin implements the ability to create `PersistentVolumes` dyn
 
 The `Node` and the `Controller` need to handle logic at different levels:
 
-- The `Node` plugin needs to be deployed on every K8s Node, since it handles mounting logic that’s specific to each machine on which the application containers run. Therefore, it is deployed via a K8s [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/). Additionally, these sidecar containers are shipped with the `Node`:
+**Node:**
 
-  [Liveness Probe](https://kubernetes-csi.github.io/docs/livenessprobe.html)
+- The `Node` plugin needs to be deployed on every K8s Node, since it handles mounting logic that’s specific to each machine on which the application containers run. Therefore, it is deployed via a K8s 🌐 [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/). Additionally, these sidecar containers are shipped with the `Node`:
+
+  🌐 [Liveness Probe](https://kubernetes-csi.github.io/docs/livenessprobe.html)
 
   This sidecar container ensures that the driver remains responsive, and replaces the driver container on crash.
 
-  [Node Driver Registrar](https://kubernetes-csi.github.io/docs/node-driver-registrar.html)
+  🌐 [Node Driver Registrar](https://kubernetes-csi.github.io/docs/node-driver-registrar.html)
 
   This sidecar container registers the driver to the kubelet to simplify its discovery and communication.
 
-- The `Controller` plugin needs to be unique across a Kubernetes cluster, since it handles the lifecycle of `PersistentVolumes`, which are K8s global objects. It is therefore managed through a K8s [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/):
+**Controller:**
 
-  [Liveness Probe](https://kubernetes-csi.github.io/docs/livenessprobe.html)
+- The `Controller` plugin needs to be unique across a Kubernetes cluster, since it handles the lifecycle of `PersistentVolumes`, which are K8s global objects. It is therefore managed through a K8s 🌐 [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/):
+
+  🌐 [Liveness Probe](https://kubernetes-csi.github.io/docs/livenessprobe.html)
 
   This sidecar container, like with the Node plugin, ensures that the driver remains responsive, and replaces the driver container on crash.
 
-  [External Provisioner](https://kubernetes-csi.github.io/docs/external-provisioner.html)
+  🌐 [External Provisioner](https://kubernetes-csi.github.io/docs/external-provisioner.html)
 
   This sidecar container helps the driver interacting with the K8s API by listening to volume provisioning-related calls.
 
-During the deployment, the Object Mount CSI Driver deploys the Object Mount **license** and cloud **credentials** as [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
+During the deployment, the Object Mount CSI Driver deploys the Object Mount **license** and cloud **credentials** as 🌐 [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
 The license `Secret` is imported by the `Node` and the `Controller` through an environment variable.
 
-The credentials `Secret` is mounted to the `Node` and the `Controller` through a [Projected Volume](https://kubernetes.io/docs/concepts/storage/projected-volumes/) and sequentially imported by Object Mount.
+The credentials `Secret` is mounted to the `Node` and the `Controller` through a 🌐 [Projected Volume](https://kubernetes.io/docs/concepts/storage/projected-volumes/) and sequentially imported by Object Mount.
 
 
 ## Limitations

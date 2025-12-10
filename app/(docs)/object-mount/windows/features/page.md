@@ -16,7 +16,7 @@ hidden: false
 
 This guide provides details on unique and noteworthy features that are specific to the **Windows Native App** of Object Mount.
 
-Features that are global and apply to **all OS versions** of Object Mount (macOS, Windows, Linux) can be found in the [Global Features](#global-features) section below.
+Features that are global and apply to **all OS versions** of Object Mount (macOS, Windows, Linux) can be found in the [Global Features](#global-features-and-concepts) section below.
 
 
 ## Fast Paste on Windows

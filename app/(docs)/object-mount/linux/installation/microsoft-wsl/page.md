@@ -1,6 +1,6 @@
 ---
 title: Windows (WSL)
-hideTitle: false
+hideTitle: true
 docId: bekoo5aenePoo7Oh
 weight: 7
 redirects:
@@ -12,9 +12,15 @@ metadata:
 hidden: false
 ---
 
+# Windows Subsystem for Linux Installation
+
 Storj provides a full-featured, native version of [Object Mount for Windows](docId:TSMB5yXSc4FcqwXj).
 
-However, if you would like to install the Linux version of Object Mount within your Windows environment, you can leverage 🌐 [Windows Subsystem for Linux 2 (WSL2)](https://learn.microsoft.com/en-us/windows/wsl/install). Installation of Object Mount for Linux within a Linux virtual machine or container is also possible.
+You are **strongly encouraged** to use that native Windows version. 
+
+However, if you would like to install the Linux version of Object Mount within your Windows environment, you can leverage 🌐 [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install). 
+
+Installation of Object Mount for Linux within a Linux virtual machine or container is also possible.
 
 
 ## Windows Subsystem for Linux

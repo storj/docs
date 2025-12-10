@@ -11,18 +11,19 @@ metadata:
 hidden: false
 ---
 
-## Overview
 Setting the environment variable `CUNO_OPTIONS` can be used to further configure Object Mount. 
 
 The `-o` option added to the `cuno` command can also be used to specify these options.
 
 
-## Options available for CUNO_OPTIONS
+## Options Available for CUNO_OPTIONS
 
 {% callout type="note" %}
   **Space Separation**
 
-  Individual options must be separated by spaces. Don’t forget to enclose multiple options in quotes (`"` or `’`), or to escape spaces.
+  Individual options must be separated by spaces. 
+  
+  Don’t forget to enclose multiple options in quotes (`"` or `’`), or to escape spaces.
 {% /callout %}
 
 ### The static Option
@@ -109,9 +110,9 @@ ls /my-object-storage/s3/<bucket>
 ```
 
 {% callout type="warning" %}
-  ** Using `cloudroot`**
+  **Using `cloudroot`**
 
-  We strongly recommend that the cloudroot path does not exist locally because it can confuse Object Mount’s ability to distinguish whether a path refers to the local file system or to the cloud.
+  We strongly recommend that the cloudroot path _does not exist locally_ because it can confuse Object Mount’s ability to distinguish whether a path refers to the local file system or to the cloud.
 
   If you specify a cloudroot which conflicts with an existing directory, then it must not contain directories or files named `s3`, `az` or `gs`.
 {% /callout %}
@@ -136,18 +137,16 @@ In very limited circumstances, it is not possible to choose a cloudroot that can
 
 **HIGHLY discouraged:** If a cloudroot needs to be set when creating the mount, and the `--root` option is set to a path within the cloudroot (e.g. `cuno -o cloudroot=/altcloudroot mount $HOME/my-object-storage --root /altcloudroot/s3/mybucket`), then, when using the FlexMount later, one must set the 'cloudrootover' path as so: `cuno -o cloudroot=/altcloudroot -o cloudrootover=$HOME/my-object-storage`. **Important:** always check that the mount point exposes the cloud at the same point when used directly as a Object Mount on FUSE (so outside of a Object Mount CLI instance) and when accessed as a FlexMount.
 
-{% callout type="warning" %}
-  **Correct Options Settings are Critical to Avoid Loss of Data**
-
-  Object Mount behavior will be broken and dangerous if you do not set the correct options when launching Object Mount CLI to this type of FlexMount. For example, in this case if the default parameters for launching a FlexMount are used, namely `cuno -o cloudrootover -o cloudroot=$HOME/my-object-storage`, then applications that are intercepted directly will see `$HOME/my-object-storage` as the cloudroot (so the immediate children are `az gs s3`) whereas any applications that fall through to the Object Mount on FUSE (static binaries, cloud binaries, SUID binaries, Snap apps, AppImage apps, and Flatpak apps) will see `$HOME/my-object-storage` as the bucket or directory specified as the `--root`. This could cause a **loss of data**, accidentally expose data in the wrong place or other misbehavior when running scripts.
-{% /callout %}
-
 **HIGHLY discouraged:** If a cloudroot needs to be set when creating the mount, and it is _not possible_ for `--root` to be set to a path within the cloudroot (i.e. `cuno -o cloudroot=/altroot mount $HOME/my-object-storage --root /`), then, when using the FlexMount later, one must set the cloudroot as follows: `cuno -o cloudrootover -o cloudroot=$HOME/my-object-storage/my/cloud/root`.
 
 {% callout type="warning" %}
-  **Correct Options Settings are Critical to Avoid Loss of Data**
+  **Critical Option Settings to Avoid Loss of Data**
 
-  Object Mount behavior will be broken and dangerous if you do not set the correct options when launching Object Mount CLI to this type of FlexMount. For example, in this case if the default parameters for launching a FlexMount are used, namely `cuno -o cloudrootover -o cloudroot=$HOME/my-object-storage`, then applications that are intercepted directly will see `$HOME/my-object-storage` as the cloudroot (so the immediate children are `az gs s3`) whereas any applications that fall through to the Object Mount on FUSE (static binaries, cloud binaries, SUID binaries, Snap apps, AppImage apps, and Flatpak apps) will see `$HOME/my-object-storage` as `/` - the root of your local filesystem. This could cause a **loss of data**, accidentally expose data in the wrong place or other misbehavior when running scripts.
+  Object Mount behavior will be **broken and dangerous** if you do not set the correct options when launching Object Mount CLI with there types of FlexMounts. 
+  
+  For example, in this case if the default parameters for launching a FlexMount are used, namely `cuno -o cloudrootover -o cloudroot=$HOME/my-object-storage`, then applications that are intercepted directly will see `$HOME/my-object-storage` as the cloudroot (so the immediate children are `az gs s3`) whereas any applications that fall through to the Object Mount on FUSE (static binaries, cloud binaries, SUID binaries, Snap apps, AppImage apps, and Flatpak apps) will see `$HOME/my-object-storage` as `/` - the root of your local filesystem. 
+  
+  This could cause a **loss of data**, accidentally expose data in the wrong place or other misbehavior when running scripts.
 {% /callout %}
 
 
@@ -155,7 +154,7 @@ In very limited circumstances, it is not possible to choose a cloudroot that can
 
 ### Core File Access
 
-In [Core File Access](docId:ySneAEd79CVewSSr#core-file-access) Mode, and for files in object storage uploaded using tools other than Object Mount, we have some dynamic defaults set for ownership and permissions. 
+In [Core File Access](docId:cbm3PcQXmLpuYcbg#core-file-access) Mode, and for files in object storage uploaded using tools _other_ than Object Mount, we assign some dynamic defaults for ownership and permissions. 
 
 In these circumstances, the owner of cloud objects is always reported to be the current user, the directory mode is reported as `0777`, and the file mode is reported as `0666`.
 
@@ -178,7 +177,7 @@ While the default UID/GID and access mode permissions can be set ahead of time, 
 
 ### POSIX File Access
 
-To **persist and modify** file system metadata, [POSIX File Access](docId:ySneAEd79CVewSSr#posix-file-access) must be enabled. 
+To **persist and modify** file system metadata, [POSIX File Access](docId:cbm3PcQXmLpuYcbg#posix-file-access) must be enabled. 
 
 This allows the virtual files presented by Object Mount to have their system metadata modified by tools such as `chown`, `chmod`, and `touch`.
 
@@ -278,7 +277,7 @@ $ cuno mount --posix -o allow_root -o allow_other --root s3://mybucket /mnt/clou
 
 Users will now be able to see the files in the bucket at `/mnt/cloud/bucket`. You should now treat this as any other POSIX file system, and set permissions as you need to control access.
 
-**Usage Examples:**
+### Usage Examples
 
 Assuming a mount location of `/mnt/s3-bucket`:
 

@@ -90,7 +90,7 @@ There is a **$5 minimum monthly charge** for all object storage accounts.
 
 See the “Additional Pricing Notes“ section for your applicable pricing plan for details:
 
-- [Object Storage: Tiered Pricing](docId:mqRRgT,hL*dk3zNT#additional-pricing-notes)
+- [Object Storage: Tiered Pricing](docId:mqRRgT,hL*dk3zNT#minimums)
 - [Object Storage: Legacy Pricing](docId:x3xPZJXCp!CB@spN#additional-pricing-notes)
 
 

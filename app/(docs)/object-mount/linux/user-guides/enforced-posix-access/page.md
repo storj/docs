@@ -123,12 +123,16 @@ Mount a bucket in a location that is accessible to the users.
 
 In this guide, we will use a shared location of `/mnt/cloud/bucket` as the mount point.
 
-When setting up the mount as an admin user, allow for sudo access using the `-o allow_root` flag. 
-
-To allow other users to access the mount as themselves, use `-o allow_other`.
+When setting up the mount as an **admin user**, allow for sudo access using the `-o allow_root` flag:
 
 ```console
-$ cuno mount --posix -o allow_root -o allow_other --root s3://mybucket /mnt/cloud/bucket
+$ cuno mount --posix -o allow_root --root s3://mybucket /mnt/cloud/bucket
+```
+
+To allow **other users** to access the mount as themselves, use the `-o allow_other` flag:
+
+```console
+$ cuno mount --posix -o allow_other --root s3://mybucket /mnt/cloud/bucket
 ```
 
 Users will now be able to see the files in the bucket at `/mnt/cloud/bucket`, and POSIX permissions persisted by Object Mount for files in that bucket will be respected. 

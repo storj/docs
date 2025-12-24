@@ -45,13 +45,13 @@ UserAgent can only be configured by adding or updating the following line of the
 client.user-agent = MyCompany
 ```
 
-### [rclone with S3 Integration](docId:AsyYcUJFbO1JI8-Tu8tW3)
+### Rclone with S3 Integration
 
 ```shell {% title="rclone" %}
 # terminal
 # link[1:6] docId:AsyYcUJFbO1JI8-Tu8tW3
 # link[8:12] https://rclone.org/commands/rclone_mkdir/
-# link[83:94] docId:eZ4caegh9queuQuaazoo#locationconstraint
+# link[83:94] docId:eZ4caegh9queuQuaazoo#location-constraint
 rclone mkdir storjs3:my-backup --user-agent "ix-storj-1" --s3-location-constraint "archive-1"
 ```
 

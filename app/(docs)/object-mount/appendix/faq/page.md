@@ -40,8 +40,9 @@ For macOS:
   - License key information is located along side the logs: `/Users/$USER/Library/Application Support/Object Mount/license`.
   - The `config.json` file is in the same directory where the mount/bucket information is kept
 
-## I have multiple Mounts added but I can pnly activate one at a time?
+## I have multiple Mounts added but I can only activate one at a time?
 
   - Object Mount for both Windows and Mac can only have **one active** mount at a time.
   - Activating a second mount, will automatically de-activate the previously active mount.
+
   

@@ -14,7 +14,6 @@ Object Mount can be used with any S3-compatible object storage provider, includi
 
   - 🌐 [Storj’s Object Storage](https://www.storj.io/cloud-object-storage)
   - 🌐 [Amazon Web Services S3](https://aws.amazon.com/s3/)
-  - 🌐 [Microsoft Azure Blob Storage](https://azure.microsoft.com/en-gb/services/storage/blobs/)
   - 🌐 [Google Cloud Platform](https://cloud.google.com/storage/) 
     - **Note:** For best GCP performance, we recommend using S3 with their 🌐 [S3 Access Point](https://cloud.google.com/storage/docs/interoperability), _not_ with their S3 Gateway.
 

@@ -9,6 +9,7 @@ import PartnerIntegration from '@/components/PartnerIntegration'
 import YouTubeEmbed from '@/components/YouTubeEmbed'
 import { RegistrationToken } from '@/components/RegistrationToken'
 import BlogLayout from '@/components/BlogLayout'
+import { WhiteLabelForm } from '@/components/WhiteLabelForm'
 
 const tags = {
   blog: {
@@ -129,6 +130,10 @@ const tags = {
     attributes: {
       videoId: { type: String, required: true },
     },
+  },
+  'white-label-form': {
+    selfClosing: true,
+    render: WhiteLabelForm,
   },
 }
 

@@ -10,6 +10,7 @@ import {
   learnNavigation,
   oMountNavigation,
   supportNavigation,
+  whiteLabelNavigation,
 } from '@/markdoc/navigation.mjs'
 
 function NavLink({ title, href, current, root, disclosure, className }) {
@@ -151,6 +152,8 @@ export function Navigation({ className }) {
     sideNavigation = supportNavigation
   } else if (pathname.startsWith('/object-mount')) {
     sideNavigation = oMountNavigation
+  } else if (pathname.startsWith('/white-label')) {
+    sideNavigation = whiteLabelNavigation
   }
 
 

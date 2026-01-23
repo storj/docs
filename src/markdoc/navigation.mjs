@@ -198,6 +198,8 @@ export default function (nextConfig = {}) {
             sortByWeightThenTitle(oMount)
             let support = walkDir(`${dir}/\(docs\)/support`, 'support')
             sortByWeightThenTitle(support)
+            let whiteLabel = walkDir(`${dir}/\(docs\)/white-label`, 'white-label')
+            sortByWeightThenTitle(whiteLabel)
             let blog = walkDir(`${dir}/\(blog\)/blog`, 'blog', {
               hasRoot: false,
             })
@@ -237,6 +239,8 @@ export default function (nextConfig = {}) {
             let supportBottomNav = extractHrefObjects(structuredClone(support))
             let blogBottomNav = extractHrefObjects(structuredClone(blog))
 
+            let whiteLabelBottomNav = extractHrefObjects(structuredClone(whiteLabel))
+
             // When this file is imported within the application
             // the following module is loaded:
             return `
@@ -245,12 +249,14 @@ export default function (nextConfig = {}) {
               export const learnNavigation = ${JSON.stringify(learn)}
               export const supportNavigation = ${JSON.stringify(support)}
               export const oMountNavigation = ${JSON.stringify(oMount)}
+              export const whiteLabelNavigation = ${JSON.stringify(whiteLabel)}
               export const blogNavigation = ${JSON.stringify(blog)}
               export const dcsBottomNav = ${JSON.stringify(dcsBottomNav)}
               export const nodeBottomNav = ${JSON.stringify(nodeBottomNav)}
               export const learnBottomNav = ${JSON.stringify(learnBottomNav)}
               export const oMountBottomNav = ${JSON.stringify(oMountBottomNav)}
               export const supportBottomNav = ${JSON.stringify(supportBottomNav)}
+              export const whiteLabelBottomNav = ${JSON.stringify(whiteLabelBottomNav)}
               export const blogBottomNav = ${JSON.stringify(blogBottomNav)}
             `
           }),

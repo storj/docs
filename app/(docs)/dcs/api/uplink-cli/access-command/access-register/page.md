@@ -30,7 +30,11 @@ uplink access register <flags> <ACCESS-GRANT>
 | Flag                    | Description                                                                                          |
 | :---------------------- | :--------------------------------------------------------------------------------------------------- |
 | `--auth-service string` | the address to the service you wish to register your access with (default "auth.storjshare.io:7777") |
+| `--ca-cert string`      | path to a file in PEM format with certificate(s) or certificate chain(s) to validate the auth        |
+|                         | service against                                                                                      |
 | `--public`              | if the access should be public. Default false                                                        |
+| `--format string`       | Format of the output credentials, use 'env', 'aws' or `om` (Object Mount) when using in scripts      |
+| `--aws-profile string`  | If using --format=aws, output the --profile tag using this profile                                   |
 
 ## Example
 

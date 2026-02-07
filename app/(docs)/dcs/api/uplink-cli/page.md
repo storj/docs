@@ -35,9 +35,36 @@ The `uplink` command can take the following child commands:
 | [](docId:OuoKJl9KqbJVQB9Xkdy3g) | create an uplink config file                                     |
 | [](docId:tBnCSrmR1jbOewG38fIr4) | shares restricted access to objects                              |
 
-## Flags
+## Global flags
 
 | Flag                  | Description                                     |
 | :-------------------- | :---------------------------------------------- |
+| `-h, --help`          | prints help for the command                     |
+| `--summary`           | prints a summary of what commands are available |
 | `--advanced`          | if used in with `-h`, print advanced flags help |
 | `--config-dir string` | main directory for uplink configuration         |
+
+## Advanced global flags
+
+You can see them with the `uplink <command> --help --advanced` command.
+
+| Global flags                  | Description                                                                   |
+| :---------------------------- | :-----------------------------------------------------------------------------|
+| `--interactive`               | Controls if interactive input is allowed                                      |
+| `--config-dir string`         | Directory that stores the configuration                                       |
+| `--legacy-config-dir string`  | Directory that stores legacy configuration. Only used during migration        |
+| `--trace-id int64`            | Specify a trace id manually. This should be globally unique. Usually you      |
+|                               | don't need to set it, and it will be automatically generated.                 |
+| `--trace-sample float64`      | The chance (between 0 and 1.0) to report tracing information. Set to 1 to     |
+|                               | always send it.                                                               |
+| `--trace-verbose bool`        | Flag to print out used trace ID                                               |
+| `--trace-addr string`         | Specify where to send traces                                                  |
+| `--trace-tags`                | comma separated k=v pairs to be added to distributed traces                   |
+| `--events-addr string`        | Specify where to send events                                                  |
+| `--debug-pprof string`        | File to collect Golang pprof profiling data                                   |
+| `--debug-monkit-trace string` | File to collect Monkit trace data. Understands file extensions .json and .svg |
+| `--debug-monkit-stats string` | File to collect Monkit stats                                                  |
+| `--analytics`                 | Whether to send usage information to Storj                                    |
+| `--help`, `-h`                | prints help for the command                                                   |
+| `--summary`                   | prints a summary of what commands are available                               |
+| `--advanced`                  | when used with -h, prints advanced flags help                                 |

@@ -31,15 +31,24 @@ Please note, the command `uplink rm --recursive` for the [versioned bucket](docI
 
 ## Flags
 
-| Flag                        | Description                                                  |
-| :-------------------------- | :----------------------------------------------------------- |
-| `--access string`           | the serialized access, or name of the access to use          |
-| `--encrypted`               | if true, treat paths as base64-encoded encrypted paths       |
-| `--help`, `-h`              | help for `rm`                                                |
-| `--parallelism`, `-p` `int` | Controls how many removes to perform in parallel (default 1) |
-| `--pending`                 | Remove pending object uploads instead                        |
-| `--recursive`, `-r`         | Remove recursively                                           |
-| `--help`, `-h`              | help for `rm`                                                |
+| Flag                            | Description                                                  |
+| :------------------------------ | :----------------------------------------------------------- |
+| `--access string`               | the serialized access, or name of the access to use          |
+| `--recursive`, `-r`             | Remove recursively                                           |
+| `--parallelism`, `-p` `int`     | Controls how many removes to perform in parallel (default 1) |
+| `--encrypted`                   | if true, treat paths as base64-encoded encrypted paths       |
+| `--pending`                     | Remove pending object uploads instead                        |
+| `--version-id`                  | Version ID to remove (if the location is an object path)     |
+| `--bypass-governance-retention` | Bypass Object Lock governance mode restrictions              |
+
+## Global flags
+
+| Flag                  | Description                                     |
+| :-------------------- | :---------------------------------------------- |
+| `--config-dir string` | main directory for uplink configuration         |
+| `--help`, `-h`        | help for the command                            |
+| `--summary`           | prints a summary of what commands are available |
+| `--advanced`          | if used in with `-h`, print advanced flags help |
 
 ## Examples
 
@@ -102,3 +111,59 @@ uplink rm --encrypted sj://cakes/Ao8rmi2hw5v8_SS2GRokJwqkzQ2j9wXRH2Ll-1owEGPwIWM
 {% /code-group %}
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/312jWiPeE9_7b2PweTHUZ_rm-02.png)
+
+## Delete a pending object
+
+To see a pending objects:
+
+{% code-group %}
+
+```windows
+./uplink.exe ls --pending sj://cakes/
+```
+
+```linux
+uplink ls --pending sj://cakes/
+```
+
+```macos
+uplink ls --pending sj://cakes/
+```
+
+{% /code-group %}
+
+To delete a pending object:
+
+{% code-group %}
+
+```windows
+./uplink.exe rm --pending sj://cakes/cheesecake.jpg
+```
+
+```linux
+uplink rm --pending sj://cakes/cheesecake.jpg
+```
+
+```macos
+uplink rm --pending sj://cakes/cheesecake.jpg
+```
+
+{% /code-group %}
+
+## Delete an object with a Governance object lock
+
+{% code-group %}
+
+```windows
+./uplink.exe rm --bypass-governance-retention sj://cakes/cheesecake.jpg
+```
+
+```linux
+uplink rm --bypass-governance-retention sj://cakes/cheesecake.jpg
+```
+
+```macos
+uplink rm --bypass-governance-retention sj://cakes/cheesecake.jpg
+```
+
+{% /code-group %}

@@ -6,7 +6,7 @@ weight: 1
 
 ## Listing Endpoints Behavior
 
-The behavior of listing endpoints depends on the encryption model configured for your project.
+The behavior of listing endpoints depends on the [encryption model](docId:aitie6rohXai9uuv) configured for your project.
 
 | Encryption Type | S3 Compatibility |
 | :--- | :--- |

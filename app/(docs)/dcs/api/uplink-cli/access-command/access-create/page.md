@@ -34,16 +34,18 @@ uplink access create [flags]
 | `--api-key string`           | API key from satellite UI (prompted if unspecified)                                |
 | `--import-as string`         | Import the access as this name                                                     |
 | `--export-to string`         | Export the access to this file path                                                |
+| `--unencrypted-object-keys`  | If set, the created access grant won't encrypt object keys                         |
 | `-f, --force`                | Force overwrite an existing saved access                                           |
 | `--use`                      | Switch the default access to the newly created one                                 |
 
 ## Global flags
 
-| Global flags          | Description                                   |
-| :-------------------- | :-------------------------------------------- |
-| `--config-dir string` | Directory that stores the configuration       |
-| `--help`, `-h`        | prints help for the command                   |
-| `--advanced`          | when used with -h, prints advanced flags help |
+| Global flags          | Description                                     |
+| :-------------------- | :-----------------------------------------------|
+| `--config-dir string` | Directory that stores the configuration         |
+| `--help`, `-h`        | prints help for the command                     |
+| `--summary`           | prints a summary of what commands are available |
+| `--advanced`          | when used with -h, prints advanced flags help   |
 
 ## Examples
 
@@ -54,21 +56,45 @@ As result it will print the created access grant to `stdout`.
 {% code-group %}
 
 ```windows
-./uplink.exe access create --export-to access.txt
+./uplink.exe access create
 ```
 
 ```macos
-uplink access create --export-to access.txt
+uplink access create
 ```
 
 ```linux
-uplink access create --export-to access.txt
+uplink access create
 ```
 
 {% /code-group %}
 
 ```Text
 18yMsZpg6ZQdz........
+```
+
+### Create an Access Grant with unencrypted keys
+
+You will create an access grant without keys encryption (see [](docId:oozaauQueuq9hgeac4Ze)).
+
+{% code-group %}
+
+```windows
+./uplink.exe access create --unencrypted-object-keys
+```
+
+```macos
+uplink access create --unencrypted-object-keys
+```
+
+```linux
+uplink access create --unencrypted-object-keys
+```
+
+{% /code-group %}
+
+```Text
+17frjuufklfdl.......
 ```
 
 ### Create an Access Grant and export to the file

@@ -113,8 +113,8 @@ For webhook delivery, use a Push subscription with your webhook URL.
    - **GCP Pub/Sub Topic**: Enter the fully-qualified topic name in the format `projects/GCP_PROJECT_ID/topics/TOPIC_ID`
 
    - **Event Types**: Select which events should trigger notifications:
-     - **All Object Created Events** - includes Object Created (Put) and Object Created (Copy)
-     - **All Object Removed Events** - includes Object Removed (Delete) and Object Removed (Delete Marker)
+     - **Object Created** - includes Object Created (Put) and Object Created (Copy)
+     - **Object Removed** - includes Object Removed (Delete) and Object Removed (Delete Marker)
      - You can also select individual event types in each category
 
    - **Filter Rules (Optional)**: Match objects by prefix and/or suffix. For example, set Object Key Prefix to `images/` and Object Key Suffix to `.jpg` to only receive events for JPEG files in the images folder. See [Filter Behavior](#filter-behavior) for details.

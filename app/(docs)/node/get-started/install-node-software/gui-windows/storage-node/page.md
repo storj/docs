@@ -8,7 +8,7 @@ weight: 0
 
 ## Installing a Storage Node with the Windows Installer
 
-1. [Download the Windows MSI installer](https://github.com/storj/storj/releases/latest/download/storagenode_windows_amd64.msi.zip)
+1. [Download the Windows MSI installer](https://github.com/storj/storj/releases/latest/download/storagenode_msi_windows_amd64.zip)
 
 2. Extract the MSI from the zip and double click it. The installation window will open.
 

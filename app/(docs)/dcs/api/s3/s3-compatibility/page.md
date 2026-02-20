@@ -47,8 +47,8 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | GetBucketLocation | Full | See GetBucketLocation section |
 | GetBucketLogging | No | Available upon request; see Bucket Logging section below |
 | GetBucketMetricsConfiguration | No |  |
-| GetBucketNotification (deprecated) | No |  |
-| GetBucketNotificationConfiguration | No |  |
+| GetBucketNotification (deprecated) | Yes | AWS CLI has a [known bug](https://github.com/aws/aws-cli/issues/2808) with JSON output |
+| GetBucketNotificationConfiguration | Yes | [](docId:Bf0SpKVT6dGmV7vj) |
 | GetBucketOwnershipControls | No |  |
 | GetBucketPolicy | Partial | Only in Gateway-ST with --website |
 | GetBucketPolicyStatus | No | Currently, it always returns false |
@@ -89,8 +89,8 @@ The Storj S3-compatible Gateway supports a RESTful API that is compatible with t
 | PutBucketLifecycleConfiguration | No |  |
 | PutBucketLogging | No | Available upon request; see Bucket Logging section below |
 | PutBucketMetricsConfiguration | No |  |
-| PutBucketNotification (deprecated) | No |  |
-| PutBucketNotificationConfiguration | No |  |
+| PutBucketNotification (deprecated) | Yes |  |
+| PutBucketNotificationConfiguration | Yes | [](docId:Bf0SpKVT6dGmV7vj) |
 | PutBucketOwnershipControls | No |  |
 | PutBucketPolicy | No |  |
 | PutBucketReplication | No |  |

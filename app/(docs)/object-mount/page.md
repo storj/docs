@@ -31,6 +31,9 @@ Object Mount is a high-performance mount client that provides seamless, native a
 | **Cost-efficient and Scalable** | By only accessing the bytes you need, Object Mount minimizes download bandwidth and reduces the need for expansive (and expensive) local storage arrays, lowering egress costs and saving you money on every project.|
 | **Eco-friendly Collaboration** | Reduce the energy and resource footprint of your Media and Entertainment workflows. Global teams access the same ‘single source of truth’ content without moving, copying or replicating media across multiple, disparate platforms. |
 
+### Bin Locking
+
+Bin locking prevents two editors from changing the same bin or project at the same time on Object Mount. The first person to open it gets write access and others are read only until the lock clears. Object Mount propagates lock state quickly and enforces read only behavior, but it does not create or remove locks. Some workflows also require additional third party software to coordinate locking with your editing application.
 
 ## Where to Start
 

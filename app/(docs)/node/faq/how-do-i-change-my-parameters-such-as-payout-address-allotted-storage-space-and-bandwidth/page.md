@@ -34,7 +34,7 @@ Or click the “Stop” button in the Windows Services applet on “Storj V3 Sto
 
 {% tabs %}
 {% tab label="CLI Install" %}
-Parameters are described in [](docId:KJzDdewgBVcK6rnp0Qho2) section. If you need to specify some parameters like a wallet options (i.e. [](docId:6TX_ve1PyUrXuwax-mWWw)) in the config.yaml, you can[](docId:gDXZgLlP_rcSW8SuflgqS).
+Parameters are described in [](docId:KJzDdewgBVcK6rnp0Qho2) section. If you need to specify some parameters like a wallet options (i.e. [](docId:6TX_ve1PyUrXuwax-mWWw)) you can provide them in the [config.yaml](docId:gDXZgLlP_rcSW8SuflgqS) file as well.
 
 How to run your Storage Node with modified parameters from the CLI: [](docId:HaDkV_0aWg9OJoBe53o-J)
 

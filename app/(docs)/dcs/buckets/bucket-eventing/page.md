@@ -10,14 +10,6 @@ metadata:
 
 Bucket event notifications allow you to receive real-time notifications when objects are created or deleted in your Storj buckets. This feature is S3-compatible and delivers notifications to Google Cloud Pub/Sub topics.
 
-{% callout type="info" %}
-**Request Access:** Bucket eventing is currently available upon request. Please contact support to enable this feature for your project:
-
-[Submit a support request](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000379291)
-
-Include "Enable Bucket Eventing" as the subject and provide your project name.
-{% /callout %}
-
 ## Overview
 
 Bucket event notifications enable automated workflows when objects change in your buckets. Common use cases include:

@@ -81,8 +81,7 @@ Egress (download) bandwidth is billed per GB and rounded up to the nearest GB.
 Bandwidth includes all data transferred out of the Storj network.
 
 {% callout type="info" %}
-**Storj Free Egress** (1X Example) 
-On plans with 1X free egress
+**Storj Free Egress** (On plans with 1X free egress)
 
 Your **free egress** = your **storage used** (measured in GB-months).
 

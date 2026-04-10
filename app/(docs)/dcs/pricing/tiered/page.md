@@ -96,7 +96,7 @@ You upload **2,000 GB** on the 15th of the month (data stored for half the month
 **Example 3: Mixed Usage**
 → Days 1–10: 500 GB stored
 → Days 11–30: 1,500 GB stored
-Average storage = **1,250 GB-months** → You can **egress 1,250 GB for free** that month
+Average storage = **1,250 GB-months** → You can **egress 1,250 GB for free** during that month
 
 **Rule of thumb:** As long as your total downloads (egress) for the month don’t exceed your GB-months of storage, you pay $0 for bandwidth on plans with 1X free egress.
 {% /callout %}

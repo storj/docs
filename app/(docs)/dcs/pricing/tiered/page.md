@@ -80,9 +80,27 @@ Egress (download) bandwidth is billed per GB and rounded up to the nearest GB.
 
 Bandwidth includes all data transferred out of the Storj network.
 
-**Example:**  
-- Downloading 1 TB from the Global Collaboration tier (after the 1× included egress)
-- **Calculation** = 1000 GB × $0.02 = **$20.00**.
+{% callout type="info" %}
+**Storj Free Egress** (1X Example) 
+On plans with 1X free egress
+
+Your **free egress** = your **storage used** (measured in GB-months).
+
+**Example 1: Full Month**
+You store **1,000 GB** for the entire month → You get **1,000 GB** of free egress.
+
+**Example 2: Partial Month**
+You upload **2,000 GB** on the 15th of the month (data stored for half the month).
+→ Storage used = **1,000 GB-months**
+→ You get **1,000 GB of free egress** for that month.
+
+**Example 3: Mixed Usage**
+→ Days 1–10: 500 GB stored
+→ Days 11–30: 1,500 GB stored
+Average storage = **1,250 GB-months** → You can **egress 1,250 GB for free** that month
+
+**Rule of thumb:** As long as your total downloads (egress) for the month don’t exceed your GB-months of storage, you pay $0 for bandwidth on plans with 1X free egress.
+{% /callout %}
 
 
 ## Minimums

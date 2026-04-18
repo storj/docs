@@ -2,30 +2,20 @@ Storj has an Amazon [S3 compatible API](docId:eZ4caegh9queuQuaazoo) and you'll n
 
 Create S3 credentials in the Storj console:
 
-1. Navigate to **Access** on the left side menu.
+1. Navigate to **Access Keys** on the left side menu.
 
-2. Click **Create S3 Credentials** under the S3 Credentials block.
+2. Click the **New Access Key** button.
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/s3_credentials_1.png)
+3. When the New Access dialog comes up, set specifications according to the following guidelines:
 
-3. When the Create Access screen comes up, set specifications according to the following guidelines:
-
-   - **Type:** S3 Credentials
    - **Name:** The name of the credentials (e.g. my-access)
+   - **Type:** S3 Credentials
+5. Choose **Full Access** or **Advanced**
+   - In most cases, you DO NOT want to choose full access. 
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/s3_credentials_2.png)
-
-4. Click **Continue** to provide permissions
-
-   - **Permissions:** All
-   - **Buckets:** Feel free to specify the bucket you created above (e.g. my-bucket), or leave as “All”
-   - **End date**: provide an expiration date for these credentials (optional)
-
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/s3_credentials_3.png)
-
-5. Click **Continue** to provide Access encryption Information
+6. Provide Access encryption Information
    {% callout type="warning"  %}
-   In order to see the data uploaded to your bucket in the Storj console, you must unlock the bucket with the same encryption passphrase as the credentials.
+   If you have opted out of [Storj-managed passphrases](docId:aitie6rohXai9uuv) for the project you must unlock the bucket with your passphrase. In order to see the data uploaded to your bucket in the Storj console, you must unlock the bucket with the same encryption passphrase as the credentials.
    {% /callout %}
 
    - **Use the current passphrase**: this is default option
@@ -33,14 +23,38 @@ Create S3 credentials in the Storj console:
      - **Enter a new passphrase**: use this option, if you would like to provide your own new encryption phrase
      - **Generate 12-word passphrase**: use this option, if you would like to generate a new encryption phrase
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/s3_credentials_4.png)
+7. Select the permissions you want to allow:
+   - Read
+   - Write
+   - List
+   - Delete
 
-6. Click **Create Access** to finish creation of your S3 credentials
+8. Select the object lock permissions you want to allow
+   - PutObjectRetention
+   - GetObjectRetention
+   - BypassGovernanceRetention
+   - PutObjectLegalHold
+   - GetObjectLegalHold
+   - PutObjectLockConfiguration
+   - GetObjectLockConfiguration
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/s3_credentials_5.png)
+9. Choose the buckets you want the access to include:
+   - All Buckets
+   - Select Buckets
 
-7. Click **Confirm** the Confirm details pop-up message
+10. Set an expiration
 
-8. Your S3 credentials are created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
+11. Click **Create Access** to finish creation of your S3 credentials
 
-   ![](https://link.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/s3_credentials_6.png)
+12. Your S3 credentials are created. Write them down and store them, or click the **Download all** button. You will need these credentials for the following steps.
+
+### Object Lock Permission Details
+| Permission Name | Description |
+|---|---|
+| PutObjectRetention | Allows you to set retention policies, protecting objects from deletion or modification until the retention period expires. |
+| GetObjectRetention | Allows you to view the retention settings of objects, helping ensure compliance with retention policies. |
+| BypassGovernanceRetention | Allows you to bypass governance-mode retention, enabling deletion of objects before the retention period ends. |
+| PutObjectLegalHold | Allows you to place a legal hold on objects, preventing deletion or modification regardless of retention policies. |
+| GetObjectLegalHold | Allows you to view the legal hold status of objects, which is useful for auditing and compliance purposes. |
+| PutObjectLockConfiguration | Allows you to set retention policies on the specified bucket, automatically applying them to every new object added to that bucket. |
+| GetObjectLockConfiguration | Allows you to view the default retention policies configured for the specified bucket. |

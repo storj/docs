@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "storj-docs",
+    "site": "storj-dev",
     "public": "dist",
     "cleanUrls": true,
     "trailingSlash": false,

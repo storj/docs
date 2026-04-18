@@ -1,5 +1,17 @@
 {
   "files.associations": {
     "*.md": "markdoc"
-  }
+  },
+  "cSpell.words": [
+    "cuno",
+    "Gbps",
+    "markdoc",
+    "mdash",
+    "posix",
+    "Storj",
+    "Virtio",
+    "virtiofs"
+  ],
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false
 }

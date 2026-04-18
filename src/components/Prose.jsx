@@ -19,7 +19,9 @@ export function Prose({ as: Component = 'div', className, ...props }) {
         // pre
         'prose-pre:rounded-xl prose-pre:bg-storj-black prose-pre:shadow-lg dark:prose-pre:bg-slate-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-slate-300/10',
         // hr
-        'dark:prose-hr:border-slate-800'
+        'dark:prose-hr:border-slate-800',
+        // blockquote
+        'dark:prose-blockquote:text-slate-300'
       )}
       {...props}
     />

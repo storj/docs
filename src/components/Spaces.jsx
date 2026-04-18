@@ -6,8 +6,10 @@ import clsx from 'clsx'
 const spaces = [
   { name: 'Home', path: '/', href: '/dcs' },
   { name: 'Learn', href: '/learn' },
+  { name: 'Object Mount', href: '/object-mount' },
   { name: 'Node', href: '/node' },
   { name: 'Help Center', href: '/support' },
+  { name: 'Eng Blog', href: '/blog' },
 ]
 
 export function TopLevelLink({ href, className, current, children }) {

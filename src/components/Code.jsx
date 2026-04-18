@@ -25,15 +25,13 @@ function CodePanelHeader({ tag, label }) {
   }
 
   return (
-    <div className="rounded-lg border-b-white/7.5 bg-white/2.5 dark:bg-white/1 flex h-9 items-center gap-2 border-y border-t-transparent bg-slate-900 px-4 dark:border-b-white/5 dark:bg-slate-700">
+    <div className="border-b-white/7.5 bg-white/2.5 dark:bg-white/1 flex h-9 items-center gap-2 rounded-lg border-y border-t-transparent bg-slate-900 px-4 dark:border-b-white/5 dark:bg-slate-700">
       {tag && (
         <div className="flex">
           <Tag variant="small">{tag}</Tag>
         </div>
       )}
-      {tag && label && (
-        <span className="h-0.5 w-0.5 rounded-lg bg-zinc-500" />
-      )}
+      {tag && label && <span className="h-0.5 w-0.5 rounded-lg bg-zinc-500" />}
       {label && (
         <span className="font-mono text-xs text-zinc-400">{label}</span>
       )}
@@ -71,10 +69,10 @@ function CodeGroupHeader({ title, languages, selectedIndex }) {
               id={`${lang}-${childIndex}`}
               key={`${lang}-${childIndex}`}
               className={clsx(
-                'flex flex-none items-center border-b px-4 py-2 pr-2 text-storj-blue-700 dark:text-white font-medium',
+                'flex flex-none items-center border-b px-4 py-2 pr-2 font-medium text-storj-blue-700 dark:text-white',
                 childIndex === selectedIndex
                   ? 'bg-none'
-                  : 'rounded-t border-slate-300 dark:border-slate-900/30 text-zinc-700 dark:text-white/50'
+                  : 'rounded-t border-slate-300 text-zinc-700 dark:border-slate-900/30 dark:text-white/50'
               )}
             >
               {title ?? languageNames[lang] ?? lang}
@@ -202,7 +200,7 @@ export function CodeGroup({ children, title, languages, className, ...props }) {
       {...tabGroupProps}
       className={clsx(
         className,
-        'not-prose my-8 overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-700 text-slate-900 dark:storj-black/60 dark:ring-1 dark:ring-slate-300/10'
+        'not-prose dark:storj-black/60 my-8 overflow-hidden rounded-xl bg-slate-200 text-slate-900 dark:bg-slate-700 dark:ring-1 dark:ring-slate-300/10'
       )}
     >
       <CodeGroupHeader

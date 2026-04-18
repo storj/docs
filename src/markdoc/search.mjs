@@ -57,10 +57,14 @@ export default function (nextConfig = {}) {
             let files = glob.sync('**/*.md', { cwd: dir })
             let data = files.map((file) => {
               let url = null
+              let re = /((\(docs\)|\(blog\))\/)/g
               if (file.endsWith('page.md')) {
-                url = `/${file.replace(/page\.md$/, '')}`.slice(0, -1) // remove trailing slash
+                url = `/${file.replace(re, '').replace(/page\.md$/, '')}`.slice(
+                  0,
+                  -1
+                ) // remove trailing slash
               } else {
-                url = `/${file.replace(/\.md$/, '')}`
+                url = `/${file.replace(re, '').replace(/\.md$/, '')}`
               }
               let md = fs.readFileSync(path.join(dir, file), 'utf8')
 

@@ -12,7 +12,8 @@ const nextConfig = {
   output: 'export',
   distDir: 'dist',
   env: {
-    SITE_URL: 'https://docs.storj.io',
+    SITE_URL: 'https://storj.dev',
+    NEXT_PUBLIC_SITE_URL: 'https://storj.dev',
   },
   experimental: {
     scrollRestoration: true,
@@ -29,6 +30,8 @@ const nextConfig = {
           let cleanedPath = relativePath
             .replace('app', '')
             .replace('/page.md', '')
+            .replace('/(docs)', '')
+            .replace('/(blog)', '')
 
           if (cleanedPath === '') {
             cleanedPath = '/'

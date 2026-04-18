@@ -37,7 +37,7 @@ export function Callout({ type = 'note', title, children }) {
       <IconComponent className="h-8 w-8 flex-none" />
       <div className="ml-4 flex-auto">
         {title && (
-          <p className={clsx('m-0 font-display text-xl', styles[type].title)}>
+          <p className={clsx('font-display m-0 text-xl', styles[type].title)}>
             {title}
           </p>
         )}

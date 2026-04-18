@@ -7,8 +7,13 @@ import { QuickLink, QuickLinks } from '@/components/QuickLinks'
 import { TagLinks } from '@/components/TagLinks'
 import PartnerIntegration from '@/components/PartnerIntegration'
 import YouTubeEmbed from '@/components/YouTubeEmbed'
+import { RegistrationToken } from '@/components/RegistrationToken'
+import BlogLayout from '@/components/BlogLayout'
 
 const tags = {
+  blog: {
+    render: BlogLayout,
+  },
   callout: {
     attributes: {
       title: { type: String },
@@ -101,6 +106,9 @@ const tags = {
       'cloud-ops',
       'content-delivery',
     ],
+  },
+  'registration-token': {
+    render: RegistrationToken,
   },
   'quick-links': {
     render: QuickLinks,

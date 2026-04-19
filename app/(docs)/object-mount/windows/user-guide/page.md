@@ -17,23 +17,11 @@ hidden: false
 This guide walks you through the core steps to get started with **Object Mount** on Windows, including: activation, adding credentials, and mounting your cloud-based object storage as a local drive.
 
 
-## Step 1. Launch & Activate Object Mount
+## Step 1. Launch Object Mount
 
 - Run Object Mount from the Start Menu or Desktop shortcut.
 
-- You will be prompted to enter your Object Mount **License Key**.
-  - Contact your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch) if you need to obtain an Object Mount License Key.
-
-- Click **Install New License** and paste your Object Mount license key into the text box.
-
-- Click **Activate**.
-
-    ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-license-key-valid.jpg)
-
 - If prompted, click **Allow Access** to permit firewall changes.
-
-Once activated, you can view your license key details in the **About** tab within Object Mount.
-
 
 ## Step 2. Configure S3 Credentials & Create a Mount
 

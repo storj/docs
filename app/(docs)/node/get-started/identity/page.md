@@ -61,7 +61,12 @@ sudo mv identity /usr/local/bin/identity
 PowerShell:
 
 ```powershell
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; curl https://github.com/storj/storj/releases/latest/download/identity_windows_amd64.zip -o identity_windows_amd64.zip; Expand-Archive ./identity_windows_amd64.zip . -Force
+Invoke-WebRequest https://github.com/storj/storj/releases/latest/download/identity_windows_amd64.zip -OutFile identity_windows_amd64.zip; Expand-Archive ./identity_windows_amd64.zip . -Force
+```
+
+For older PowerShell (`$PSVersionTable.PSVersion` is less than 5.1):
+```powershell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest https://github.com/storj/storj/releases/latest/download/identity_windows_amd64.zip -OutFile identity_windows_amd64.zip; Expand-Archive ./identity_windows_amd64.zip . -Force
 ```
 
 {% /tab %}

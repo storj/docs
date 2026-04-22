@@ -248,7 +248,7 @@ The gateway functions as a daemon. Start it and leave it running.
 
 {% tab label="Linux" %}
 
-```shell
+```bash
 gateway run
 ```
 
@@ -289,14 +289,13 @@ Once you do, in a new terminal session, configure it with your Gateway's credent
 ```shell
 # terminal
 aws configure
-# /terminal
 ---
 AWS Access Key ID: [Enter your Gateway's Access Key]
 AWS Secret Access Key: [Enter your Gateway's Secret Key]
 Default region name: [null]
 Default output format: [null]
 # terminal
-$ aws configure set default.s3.multipart_threshold 64MB
+aws configure set default.s3.multipart_threshold 64MB
 ```
 
 Then, test out some AWS S3 CLI commands!

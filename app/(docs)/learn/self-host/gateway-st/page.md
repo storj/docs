@@ -100,7 +100,7 @@ Direct Download
 {% tab label="macOS" %}
 Curl Download
 
-```Text
+```shell
 curl -L https://github.com/storj/gateway-st/releases/latest/download/gateway_darwin_amd64.zip -O && unzip gateway_darwin_amd64.zip
 chmod 755 gateway
 sudo mv gateway /usr/local/bin/gateway
@@ -113,7 +113,7 @@ Direct Download
 
 {% tab label="Docker" %}
 
-```Text
+```shell
 docker pull storjlabs/gateway
 ```
 
@@ -162,7 +162,7 @@ gateway setup
 
 {% tab label="Docker" %}
 
-```dockerfile
+```shell
 docker run -it --rm --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway setup
 ```
 
@@ -240,7 +240,7 @@ The gateway functions as a daemon. Start it and leave it running.
 {% tabs %}
 {% tab label="Windows" %}
 
-```Text
+```powershell
 ./gateway.exe run
 ```
 
@@ -248,7 +248,7 @@ The gateway functions as a daemon. Start it and leave it running.
 
 {% tab label="Linux" %}
 
-```Text
+```shell
 gateway run
 ```
 
@@ -256,7 +256,7 @@ gateway run
 
 {% tab label="macOS" %}
 
-```Text
+```shell
 gateway run
 ```
 
@@ -264,7 +264,7 @@ gateway run
 
 {% tab label="Docker" %}
 
-```Text
+```shell
 docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run
 ```
 
@@ -286,14 +286,16 @@ Please make sure you have [AWS S3 CLI installed](https://docs.aws.amazon.com/cli
 
 Once you do, in a new terminal session, configure it with your Gateway's credentials:
 
-```Text
-$ aws configure
+```shell
+# terminal
+aws configure
+# /terminal
 ---
 AWS Access Key ID: [Enter your Gateway's Access Key]
 AWS Secret Access Key: [Enter your Gateway's Secret Key]
 Default region name: [null]
 Default output format: [null]
-
+# terminal
 $ aws configure set default.s3.multipart_threshold 64MB
 ```
 
@@ -307,31 +309,31 @@ See also [](docId:20zlQyfMD9gmHJOUPx3jh)
 
 ### Create a bucket
 
-```none
+```shell
 aws s3 --endpoint=http://localhost:7777 mb s3://bucket-name
 ```
 
 ### Upload an object
 
-```none
+```shell
 aws s3 --endpoint=http://localhost:7777 cp your-large-file.mp4 s3://bucket-name/your-large-file.mp4
 ```
 
 ### List objects in a bucket
 
-```none
+```shell
 aws s3 --endpoint=http://localhost:7777 ls s3://bucket-name/
 ```
 
 ### Download an object
 
-```none
+```shell
 aws s3 --endpoint=http://localhost:7777 cp s3://bucket-name/your-large-file.mp4 ~/Downloads/your-large-file.mp4
 ```
 
 ### Generate a URL for an object
 
-```none
+```shell
 aws s3 --endpoint=http://localhost:7777 presign s3://bucket-name/your-large-file.mp4
 ```
 
@@ -339,7 +341,7 @@ aws s3 --endpoint=http://localhost:7777 presign s3://bucket-name/your-large-file
 
 ### Delete an object
 
-```none
+```shell
 aws s3 --endpoint=http://localhost:7777 rm s3://bucket-name/your-large-file.mp4
 ```
 
@@ -371,7 +373,7 @@ Advanced usage for the single-tenant Gateway
 
 You can add several access grants to the `config.yaml`, using this format:
 
-```Text
+```shell
 access: 14aV.... # default Access
 accesses.site: 26NBm..... # the Access with name "site"
 ```
@@ -381,7 +383,7 @@ You can see the path to the default config file `config.yaml` with this command:
 {% tabs %}
 {% tab label="Windows" %}
 
-```Text
+```shell
 ./gateway help
 ```
 
@@ -389,7 +391,7 @@ You can see the path to the default config file `config.yaml` with this command:
 
 {% tab label="Linux" %}
 
-```Text
+```shell
 gateway help
 ```
 
@@ -397,7 +399,7 @@ gateway help
 
 {% tab label="macOS" %}
 
-```Text
+```shell
 gateway help
 ```
 
@@ -411,7 +413,7 @@ You can run a gateway with specifying the access grant (or its name for example 
 {% tabs %}
 {% tab label="Windows" %}
 
-```Text
+```shell
 ./gateway run --access 14aV....
 ```
 
@@ -419,7 +421,7 @@ You can run a gateway with specifying the access grant (or its name for example 
 
 {% tab label="Linux" %}
 
-```Text
+```shell
 gateway run --access 14aV....
 ```
 
@@ -427,7 +429,7 @@ gateway run --access 14aV....
 
 {% tab label="macOS" %}
 
-```Text
+```shell
 gateway run --access 14aV....
 ```
 
@@ -435,7 +437,7 @@ gateway run --access 14aV....
 
 {% tab label="Docker" %}
 
-```Text
+```shell
 docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access 14aV....
 ```
 
@@ -449,7 +451,7 @@ You can also run a gateway to handle a bucket as a static website.
 {% tabs %}
 {% tab label="Windows" %}
 
-```Text
+```shell
 ./gateway run --access 14aV.... --website
 ```
 
@@ -457,7 +459,7 @@ You can also run a gateway to handle a bucket as a static website.
 
 {% tab label="Linux" %}
 
-```Text
+```shell
 gateway run --access 14aV.... --website
 ```
 
@@ -465,7 +467,7 @@ gateway run --access 14aV.... --website
 
 {% tab label="macOS" %}
 
-```Text
+```shell
 gateway run --access 14aV.... --website
 ```
 
@@ -473,7 +475,7 @@ gateway run --access 14aV.... --website
 
 {% tab label="Docker" %}
 
-```Text
+```shell
 docker run -it --rm -p 127.0.0.1:7777:7777 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access 14aV.... --website
 ```
 
@@ -500,7 +502,7 @@ Export the environment variables before running the Gateway:
 {% tab label="Windows" %}
 Cache disks are not supported, because caching requires the [`atime`](https://kerolasa.github.io/filetimes.html) function to be enabled.
 
-```Text
+```powershell
 $env:MINIO_CACHE="on"
 $env:MINIO_CACHE_EXCLUDE="*.pdf,mybucket/*"
 $env:MINIO_CACHE_QUOTA=80
@@ -513,7 +515,7 @@ $env:MINIO_CACHE_WATERMARK_HIGH=90
 
 {% tab label="Linux" %}
 
-```Text
+```shell
 export MINIO_CACHE="on"
 export MINIO_CACHE_DRIVES="/mnt/drive1,/mnt/drive2,/mnt/cache{1...3}"
 export MINIO_CACHE_EXCLUDE="*.pdf,mybucket/*"
@@ -527,7 +529,7 @@ export MINIO_CACHE_WATERMARK_HIGH=90
 
 {% tab label="macOS" %}
 
-```Text
+```shell
 export MINIO_CACHE="on"
 export MINIO_CACHE_DRIVES="/mnt/drive1,/mnt/drive2,/mnt/cache{1...3}"
 export MINIO_CACHE_EXCLUDE="*.pdf,mybucket/*"
@@ -542,7 +544,7 @@ export MINIO_CACHE_WATERMARK_HIGH=90
 {% tab label="Docker" %}
 You can create a file with environment variables, for example - `minio_vars` with such content:
 
-```Text
+```shell
 MINIO_CACHE="on"
 MINIO_CACHE_DRIVES="/mnt/drive1,/mnt/drive2,/mnt/cache{1...3}"
 MINIO_CACHE_EXCLUDE="*.pdf,mybucket/*"
@@ -556,7 +558,7 @@ For Windows, the option `-e MINIO_CACHE_DRIVES` is useless due to the lack of an
 
 Then add parameters `--env-file ./minio_vars --mount type=bind,src=/mnt/drive1,dst=/mnt/drive1 --mount type=bind,src=/mnt/drive2,dst=/mnt/drive2 --mount type=bind,src=/mnt/cache1,dst=/mnt/cache1 --mount type=bind,src=/mnt/cache2,dst=/mnt/cache2 --mount type=bind,src=/mnt/cache3,dst=/mnt/cache3` to the `docker run` section, for example:
 
-```Text
+```shell
 docker run -it --rm -p 127.0.0.1:7777:7777 --env-file ./minio_vars --mount type=bind,src=/mnt/drive1,dst=/mnt/drive1 --mount type=bind,src=/mnt/drive2,dst=/mnt/drive2 --mount type=bind,src=/mnt/cache1,dst=/mnt/cache1 --mount type=bind,src=/mnt/cache2,dst=/mnt/cache2 --mount type=bind,src=/mnt/cache3,dst=/mnt/cache3 --mount type=bind,source=/path/to/gateway-config-dir/,destination=/root/.local/share/storj/gateway/ --name gateway storjlabs/gateway run --access site --website
 ```
 

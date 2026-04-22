@@ -294,6 +294,8 @@ AWS Access Key ID: [Enter your Gateway's Access Key]
 AWS Secret Access Key: [Enter your Gateway's Secret Key]
 Default region name: [null]
 Default output format: [null]
+```
+```shell
 # terminal
 aws configure set default.s3.multipart_threshold 64MB
 ```

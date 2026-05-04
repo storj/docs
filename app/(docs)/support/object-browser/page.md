@@ -41,9 +41,9 @@ When you click the **Continue** button, you will be placed into the **Objects** 
 ## Upload files and folders
 
 {% callout type="warning"  %}
-**The web browser is best for uploads up to 1GB. **
+**The web browser is best for uploads up to 5GB. **
 
-To upload larger files, please utilize the [](docId:TbMdOGCAXNWyPpQmH6EOq).
+For files over 5GB, we recommend using [Object Mount](https://www.storj.io/object-mount).
 {% /callout %}
 
 If you have not yet created a bucket, the bucket **_demo-bucket_** will be created automatically to allow you to upload objects right away.

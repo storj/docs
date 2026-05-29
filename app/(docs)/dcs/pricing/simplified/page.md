@@ -57,7 +57,7 @@ Usage is rounded up to the nearest whole GB **per tier** (Global Collaboration, 
 
 For example, if you store 1,000 objects of 1 MB each in a single tier, your total storage is 1,000 MB (~1 GB) and would be billed as 1 GB of storage—not 1,000 GB.
 
-**Note:** Small objects below the [minimum object size](#minimums) threshold (50-100 kB depending on tier) are billed as if they meet that minimum. This is separate from the GB rounding policy described here.
+**Note:** Small objects below the [minimum object size](#minimums) threshold (50kB) are billed as if they meet that minimum. This is separate from the GB rounding policy described here.
 {% /callout %}
 
 **Examples:**

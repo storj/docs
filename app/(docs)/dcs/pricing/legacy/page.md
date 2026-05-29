@@ -11,6 +11,8 @@ metadata:
 
 # Object Storage: Legacy Pricing
 
+{% youtube-embed videoId="9uhX0X3ZW2c" /%}
+
 {% callout type="info" %}
 Legacy pricing will be retired on **November 1, 2025** and replaced by our new [tiered pricing model](docId:mqRRgT,hL*dk3zNT).
 

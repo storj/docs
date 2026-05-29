@@ -32,7 +32,9 @@ We’ve recently added new products, new capabilities, and have introduced simpl
 
 Storj has consistent and competitive pricing that provides the global scale productions need &mdash; without scaling up your monthly bill. 
 
+<!-- REMOVE FOR NOW - it's a legacy pricing comparing
 {% youtube-embed videoId="9uhX0X3ZW2c" /%}
+-->
 
 **What to know about the new object storage simplified pricing:**
 

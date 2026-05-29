@@ -1,7 +1,7 @@
 ---
 title: Object Mount Pricing
 hideTitle: true
-docId: FwEG)7uVcTBcepCT
+docId: b464fda8-9e3b-4417-aa64-2eb1efb69c39
 weight: 2
 metadata:
   title: Object Mount Pricing

@@ -55,7 +55,7 @@ Storj has consistent and competitive pricing that provides the global scale prod
 {% quick-link
   title="Object Mount Pricing"
   description="Details on Storj’s Object Mount product and pricing."
-  href="docId:FwEG)7uVcTBcepCT"
+  href="docId:b464fda8-9e3b-4417-aa64-2eb1efb69c39"
 /%}
 
 {% quick-link

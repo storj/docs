@@ -34,7 +34,7 @@ Storj’s new simplified pricing model introduces **two distinct storage tiers**
 | **Egress cost** | $7/TB | $7/TB |
 | **Minimum storage duration** | 30 days | 30 days |
 | **Minimum object size** | 50 kB | 50 kB |
-| [**Object Mount**](docId:FwEG)7uVcTBcepCT#pricing-starting-july-1-2026) | 2 free licenses included | 2 free licenses included |
+| [**Object Mount**](docId:b464fda8-9e3b-4417-aa64-2eb1efb69c39#pricing-starting-july-1-2026) | 2 free licenses included | 2 free licenses included |
 
 ## How the [](docId:mqRRgT,hL*dk3zNT) and the [](docId:x3xPZJXCp!CB@spN) transition to a new simplified pricing
 

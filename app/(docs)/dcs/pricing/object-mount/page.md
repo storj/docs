@@ -67,7 +67,7 @@ Each Storj account has 2 free licenses of Object Mount.
 
 **Pro ($29/license/month)** For teams that need more than 2 licenses. Each paid license includes 500 GB of Storj Object Storage as a billing credit. Works with Storj Object Storage only. Egress charges of $7/TB still apply. Please reference [Storj Object Storage pricing for per TB costs](docId:1ea1de87-5e14-402b-afb7-15d83c135563). Additionally, Storj charges a $50 minimum storage fee. You must maintain at least $50 in storage costs per month in order to access your free 500 GB of storage.
 
-**Any Cloud ($39/license/month)** Use Object Mount with any S3-compatible storage provider, including AWS, GCP, Backblaze, and others. Includes a 30-day trial for customers who want to bring their own storage. After the trial, users convert at $39/license or migrate their storage to Storj Object Storage to access **Pro** pricing at $29/license and have a free 500 GB credits per additional license.
+**Any Cloud ($39/license/month)** Use Object Mount with any S3-compatible storage provider, including AWS, GCP, Backblaze, and others. Includes a 30-day trial for customers who want to bring their own storage. After the trial, users convert at $39/license or migrate their storage to Storj Object Storage to access **Pro** pricing at $29/license and have a free 500 GB credits per paid license.
 
 
 #### **Free 500 GB Storj Object Storage credits**

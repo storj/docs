@@ -14,9 +14,9 @@ metadata:
 {% callout type="info" %}
 As of **July 1, 2026**, Storj will transition to a new **Simplified pricing model** for object storage.
 
-Projects created **before November 1, 2025** retain [legacy pricing](docId:x3xPZJXCp!CB@spN) until they **opt-in** or on July 1, 2026, whichever comes first.
+Projects created **before November 1, 2025** retain [legacy pricing](docId:x3xPZJXCp!CB@spN) until July 1, 2026.
 
-Projects created **after November 1, 2025** retain [tiered pricing](docId:mqRRgT,hL*dk3zNT) until they **opt-in** or on July 1, 2026, whichever comes first.
+Projects created **after November 1, 2025** retain [tiered pricing](docId:mqRRgT,hL*dk3zNT) until July 1, 2026.
 
 If you opt-out, **your account will be frozen and data deleted within 45 days**.
 

@@ -21,7 +21,6 @@ We’ve recently added new products, new capabilities, and have introduced simpl
 
 - **New Object Storage tiers** that better support customer needs, simplify fees, and eliminate segment fees: 
 - **Object Mount is now available**, allowing you to connect to your object storage as a local file system; optimized for peak performance with Storj’s Object Storage.
-- **New Production Cloud offerings** that combine the unique benefits of Storj’s distributed cloud storage with local-like file access.
 - **SOC2 Type 2 certification** has been achieved by Storj on specific storage offerings, reinforcing our commitment to delivering enterprise-grade security and privacy.
 
 <!-- REMOVING FOR NOW
@@ -37,9 +36,10 @@ Storj has consistent and competitive pricing that provides the global scale prod
 
 **What to know about the new object storage tiered pricing:**
 
-- No action is needed at this time.
-- **Existing Projects** created before November 1, 2025 will continue to use the current pricing model ([](docId:x3xPZJXCp!CB@spN)) for a full additional year (through October 31, 2026).
-- **New Projects** created on or after November 1, 2025 will be charged using the new model ([](docId:mqRRgT,hL*dk3zNT)).
+- You will need to Opt-In for the new pricing or Opt-Out. An opt-in/out selection is in your [](docId:nGzxQBhV8nx5Pukj6O0zT). Make your selection before July 1, 2026. If you opt-out, **your account will be frozen and data deleted within 45 days**.
+- **Existing Projects** created before November 1, 2025 will continue to use the current [](docId:x3xPZJXCp!CB@spN) until July 1, 2026 or Opt-In. If you opt-out, **your account will be frozen and data deleted within 45 days**.
+- **New Projects** created after November 1, 2025 will continue to use the current [](docId:mqRRgT,hL*dk3zNT) until July 1, 2026 or Opt-In. If you opt-out, **your account will be frozen and data deleted within 45 days**.
+- **New Projects** created on or after July 1, 2026 will be charged using the new model ([](docId:1ea1de87-5e14-402b-afb7-15d83c135563)).
 
 
 ## Choose a Storj Product Below to Learn More
@@ -64,6 +64,11 @@ Storj has consistent and competitive pricing that provides the global scale prod
   href="docId:mqRRgT,hL*dk3zNT"
 /%}
 
+{% quick-link
+  title="Object Storage: Simplified Pricing"
+  description="Details on Storj’s Object Storage product and simplified pricing model."
+  href="docId:1ea1de87-5e14-402b-afb7-15d83c135563"
+/%}
 
 <!-- REMOVING FOR NOW
 {% quick-link
@@ -90,6 +95,7 @@ There is a **$5 minimum monthly charge** for all object storage accounts.
 
 See the “Additional Pricing Notes“ section for your applicable pricing plan for details:
 
+- [Object Storage: Simplified Pricing](docId:1ea1de87-5e14-402b-afb7-15d83c135563#minimums)
 - [Object Storage: Tiered Pricing](docId:mqRRgT,hL*dk3zNT#minimums)
 - [Object Storage: Legacy Pricing](docId:x3xPZJXCp!CB@spN#additional-pricing-notes)
 

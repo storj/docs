@@ -96,8 +96,8 @@ Bandwidth includes all data transferred out of the Storj network.
 
 Each tier has a few minimums that affect billing:
 
-- **Minimum Object Size:** Objects smaller than the listed minimum (50 kB) are billed as if they meet that minimum threshold.  
-- **Minimum Storage Duration:** Data deleted before **30 days** will still be billed for the full 1 month period.  
+- **Minimum Object Size:** Objects smaller than the listed minimum (50 kB) are billed as if they meet that minimum threshold. [Object Mount](docId:b464fda8-9e3b-4417-aa64-2eb1efb69c39#pricing-starting-july-1-2026) users are excluded.
+- **Minimum Storage Duration:** Data deleted before **30 days** will still be billed for the full 1 month period. [Object Mount](docId:b464fda8-9e3b-4417-aa64-2eb1efb69c39#pricing-starting-july-1-2026) users are excluded.
 - **Minimum Monthly Usage:** A **$50 minimum monthly fee** applies to all active storage accounts. The minimum fee applies as follows:
   - If your total usage for the month exceeds $50, no minimum fee is charged.
   - If your total usage is less than $50, you are charged $50 for that month.

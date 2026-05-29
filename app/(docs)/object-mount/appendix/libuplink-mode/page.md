@@ -14,7 +14,7 @@ Object Mount can connect to Storj’s Distributed Cloud Storage offering as well
 
 ## Obtaining a latest version of Object Mount
 
-1. Download latest Object Mount release for your OS here: https://link.storjshare.io/s/ju4fw3iep5pp2bxqioi7dlaaxqgq/object-mount-builds/latest/
+1. Download [latest Object Mount release for your OS](https://link.storjshare.io/s/ju4fw3iep5pp2bxqioi7dlaaxqgq/object-mount-builds/latest/)
 
 2. Install and reboot if asked
 

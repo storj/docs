@@ -27,6 +27,16 @@ Open your project in Storj web portal, go to **Access Keys**
 and [create a new access grant](docId:_xWsamBjOsZYyu9xtQCm5#create-access-grant):
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/access-grant-1.png)
 
+If you have a project with a [Manual encryption phrases management](docId:aitie6rohXai9uuv), then you need to provide your encryption phrase, used to upload previous objects.
+
+{% callout type="warning"  %}
+**This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
+
+Importantly, if you want two access grants to have access to the same data, **they must use the same passphrase**. You won’t be able to access your data if the passphrase in your access grant is different than the passphrase you uploaded the data with.
+
+Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
+{% /callout %}
+
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/access-grant-2.png)
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/access-grant-3.png)

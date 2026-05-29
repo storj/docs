@@ -46,3 +46,5 @@ For macOS:
   - Activating a second mount, will automatically de-activate the previously active mount.
 
   
+## How can I add a new bucket to the Mount created with the option "All buckets"?
+You must add a new pair for the new bucket in the **Credentials** tab of the Object Mount window (Windows, macOS) or see [Pairing Containers and Credentials](docId:aish4shuiheeZaig#pairing-containers-and-credentials) for Linux. After adding the new pair, you must delete the current Mount and create a new one in *All buckets* mode.

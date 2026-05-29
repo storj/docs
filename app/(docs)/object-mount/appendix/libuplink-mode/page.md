@@ -69,7 +69,7 @@ Navigate to **Mounts** and create additional mounts if desired using ***Create N
 See [](docId:khHGfZsyY9NJ2uGK#enter-your-credentials-and-create-a-mount) for Windows.
 
 {% /tab %}
-{% tab label="macOs" %}
+{% tab label="macOS" %}
 
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-credentials-macos-mount-path.png)
 

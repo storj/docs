@@ -19,8 +19,8 @@ We’ve recently added new products, new capabilities, and have introduced simpl
 
 **Changes include:**
 
-- **New Object Storage tiers** that better support customer needs, simplify fees, and eliminate segment fees: 
-- **Object Mount is now available**, allowing you to connect to your object storage as a local file system; optimized for peak performance with Storj’s Object Storage.
+- **New Object Storage tiers** that better support customer needs, simplify fees, and eliminate segment fees.
+- **Object Mount is now available**, allowing you to connect to your object storage as a local file system; optimized for peak performance with Storj’s Object Storage. 2 free licenses are included for each Storj account.
 - **SOC2 Type 2 certification** has been achieved by Storj on specific storage offerings, reinforcing our commitment to delivering enterprise-grade security and privacy.
 
 <!-- REMOVING FOR NOW
@@ -34,12 +34,12 @@ Storj has consistent and competitive pricing that provides the global scale prod
 
 {% youtube-embed videoId="9uhX0X3ZW2c" /%}
 
-**What to know about the new object storage tiered pricing:**
+**What to know about the new object storage simplified pricing:**
 
 - You will need to Opt-In for the new pricing or Opt-Out. An opt-in/out selection is in your [](docId:nGzxQBhV8nx5Pukj6O0zT). Make your selection before July 1, 2026. If you opt-out, **your account will be frozen and data deleted within 45 days**.
 - **Existing Projects** created before November 1, 2025 will continue to use the current [](docId:x3xPZJXCp!CB@spN) until July 1, 2026 or Opt-In. If you opt-out, **your account will be frozen and data deleted within 45 days**.
 - **New Projects** created after November 1, 2025 will continue to use the current [](docId:mqRRgT,hL*dk3zNT) until July 1, 2026 or Opt-In. If you opt-out, **your account will be frozen and data deleted within 45 days**.
-- **New Projects** created on or after July 1, 2026 will be charged using the new model ([](docId:1ea1de87-5e14-402b-afb7-15d83c135563)).
+- **New Projects** created on or after July 1, 2026 will be charged using the new [](docId:1ea1de87-5e14-402b-afb7-15d83c135563).
 
 
 ## Choose a Storj Product Below to Learn More
@@ -47,21 +47,9 @@ Storj has consistent and competitive pricing that provides the global scale prod
 {% quick-links %}
 
 {% quick-link
-  title="Production Cloud Pricing"
-  description="Details on Storj’s Production Cloud products and pricing."
-  href="docId:ZnRTYv8k?KEC3hzk"
-/%}
-
-{% quick-link
   title="Object Mount Pricing"
   description="Details on Storj’s Object Mount product and pricing."
   href="docId:b464fda8-9e3b-4417-aa64-2eb1efb69c39"
-/%}
-
-{% quick-link
-  title="Object Storage: Tiered Pricing"
-  description="Details on Storj’s Object Storage product and tiered pricing model."
-  href="docId:mqRRgT,hL*dk3zNT"
 /%}
 
 {% quick-link
@@ -71,6 +59,18 @@ Storj has consistent and competitive pricing that provides the global scale prod
 /%}
 
 <!-- REMOVING FOR NOW
+{% quick-link
+  title="Production Cloud Pricing"
+  description="Details on Storj’s Production Cloud products and pricing."
+  href="docId:ZnRTYv8k?KEC3hzk"
+/%}
+
+{% quick-link
+  title="Object Storage: Tiered Pricing"
+  description="Details on Storj’s Object Storage product and tiered pricing model."
+  href="docId:mqRRgT,hL*dk3zNT"
+/%}
+
 {% quick-link
   title="Object Storage: Legacy Pricing"
   description="Details on Storj’s legacy pricing model for Object Storage (for projects created before Nov. 1, 2025)."
@@ -88,10 +88,14 @@ Storj has consistent and competitive pricing that provides the global scale prod
 
 _Looking for Object Storage Legacy pricing? See: [Legacy Pricing](docId:x3xPZJXCp!CB@spN)_
 
+_Looking for Object Storage Production Cloud pricing? See: [Production Cloud Pricing](docId:ZnRTYv8k?KEC3hzk)_
+
+_Looking for Object Storage Tiered pricing? See: [Tiered Pricing](docId:mqRRgT,hL*dk3zNT)_
+
 
 ## Minimum Monthly Billing
 
-There is a **$5 minimum monthly charge** for all object storage accounts.
+There is a **minimum monthly charge** for all object storage accounts.
 
 See the “Additional Pricing Notes“ section for your applicable pricing plan for details:
 

@@ -40,7 +40,7 @@ Storj has consistent and competitive pricing that provides the global scale prod
 
 - You will need to Opt-In for the new pricing or Opt-Out. An opt-in/out selection is in your [](docId:nGzxQBhV8nx5Pukj6O0zT). Make your selection before July 1, 2026. If you opt-out, **your account will be frozen and data deleted within 45 days**.
 - **Existing Projects** created before November 1, 2025 will continue to use the current [](docId:x3xPZJXCp!CB@spN) until July 1, 2026. If you opt-out, **your account will be frozen and data deleted within 45 days**.
-- **New Projects** created after November 1, 2025 will continue to use the current [](docId:mqRRgT,hL*dk3zNT) until July 1, 2026 or Opt-In. If you opt-out, **your account will be frozen and data deleted within 45 days**.
+- **New Projects** created after November 1, 2025 will continue to use the current [](docId:mqRRgT,hL*dk3zNT) until July 1, 2026. If you opt-out, **your account will be frozen and data deleted within 45 days**.
 - **New Projects** created on or after July 1, 2026 will be charged using the new [](docId:1ea1de87-5e14-402b-afb7-15d83c135563).
 
 

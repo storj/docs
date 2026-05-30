@@ -113,5 +113,7 @@ To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGY
 
 ---
 
+See our [Pricing Change FAQ](https://www.storj.io/pricing/change-faqs) for additional details.
+
 **Effective Date:** July 1, 2026
 **Last Updated:** May 29, 2025

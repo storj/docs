@@ -74,3 +74,7 @@ Each Storj account has 2 free licenses of Object Mount.
 
 Each paid Object Mount license (using Storj Object Storage) includes 500 GB of Storj Object Storage as a billing credit. This is not a hard storage limit. It is deducted from your metered storage charges at the time of invoicing.
 For example, if you purchase 3 paid licenses, you get 1.5 TB of included storage. Any storage beyond that is billed at your tier rate. The credit applies to storage charges only and minimum storage fees as referenced in the storage section of this document. Minimum file size fees and retention fees are metered independently and still do not apply when using Object Mount with Storj object storage.
+
+---
+
+See our [Pricing Change FAQ](https://www.storj.io/pricing/change-faqs) for additional details.

@@ -50,7 +50,7 @@ Storj’s new simplified pricing model introduces **two distinct storage tiers**
 
 Storj bills based on **GB** and **GB-months** (not MB or MB-months).  
 
-Usage is rounded up to the nearest whole GB **per tier** (Global Collaboration, Regional Workflows, Active Archive) for each usage type. Within a tier, Storj sums all storage usage across objects and rounds once for storage, and sums all egress usage and rounds once for egress.
+Usage is rounded up to the nearest whole GB **per tier** (Standard, Advanced) for each usage type. Within a tier, Storj sums all storage usage across objects and rounds once for storage, and sums all egress usage and rounds once for egress.
 
 {% callout type="info" %}
 **Important:** Rounding is applied per tier total, not per object. You can store as many small objects as you want without each one being rounded up individually.
@@ -61,9 +61,9 @@ For example, if you store 1,000 objects of 1 MB each in a single tier, your tota
 {% /callout %}
 
 **Examples:**
-- If your storage usage in the **Regional Workflows** tier for the month is **500 MB**, it is billed as **1 GB** of storage for that tier.
-- If your egress usage in the **Global Collaboration** tier for the month is **1001 MB**, it is billed as **2 GB** of egress for that tier.
-- If you use **500 MB** of storage and **500 MB** of egress in the **Active Archive** tier in a month, your invoice shows **1 GB** of storage and **1 GB** of egress for that tier (not a combined 1 GB line item).
+- If your storage usage for the month is **500 MB**, it is billed as **1 GB** of storage.
+- If your egress usage for the month is **1001 MB**, it is billed as **2 GB** of egress.
+- If you use **500 MB** of storage and **500 MB** of egress in a month, your invoice shows **1 GB** of storage and **1 GB** of egress (not a combined 1 GB line item).
 
 This rounding rule applies separately to **storage and egress bandwidth totals within each tier**.
 

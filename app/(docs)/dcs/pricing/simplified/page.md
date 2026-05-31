@@ -36,7 +36,7 @@ Storj’s new simplified pricing model introduces **two distinct storage tiers**
 | **Minimum object size** | 50 kB | 50 kB |
 | [**Object Mount**](docId:b464fda8-9e3b-4417-aa64-2eb1efb69c39#pricing-starting-july-1-2026) | 2 free licenses included | 2 free licenses included |
 
-## How the [](docId:mqRRgT,hL*dk3zNT) and the [](docId:x3xPZJXCp!CB@spN) transition to a new simplified pricing
+## How the [Tiered pricing](docId:mqRRgT,hL*dk3zNT) and the [Legacy pricing](docId:x3xPZJXCp!CB@spN) transition to a new simplified pricing
 
 | **Previous Tier** | **New Tier** | **New Storage Rate** | **New Egress Rate** |
 | :--- | :--- | :--- | :--- |
@@ -116,4 +116,4 @@ To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGY
 See our [Pricing Change FAQ](https://www.storj.io/pricing/change-faqs) for additional details.
 
 **Effective Date:** July 1, 2026
-**Last Updated:** May 30, 2025
+**Last Updated:** May 31, 2026

@@ -12,17 +12,18 @@ metadata:
 # Object Storage: Tiered Pricing
 
 {% callout type="info" %}
-As of **November 1, 2025**, Storj has transitioned to a new **tiered pricing model** for object storage.
+- You will need to Opt-In for the [new pricing](docId:1ea1de87-5e14-402b-afb7-15d83c135563) or Opt-Out. An opt-in/out selection is in your [](docId:nGzxQBhV8nx5Pukj6O0zT). Make your selection before July 1, 2026.
+- **Existing Projects** created before November 1, 2025 will continue to use the current [](docId:x3xPZJXCp!CB@spN) until July 1, 2026.
+- **New Projects** created after November 1, 2025 will continue to use the current [](docId:mqRRgT,hL*dk3zNT) until July 1, 2026.
+- **New Projects** created on or after July 1, 2026 will be charged using the new [](docId:1ea1de87-5e14-402b-afb7-15d83c135563).
 
-Projects created **before November 1, 2025** retain legacy pricing for **one calendar year** or until they **upgrade or migrate**, whichever comes first.
-
-See details on our [legacy pricing model](docId:x3xPZJXCp!CB@spN).
+If you opt-out or do nothing, **your account will be frozen and data deleted within 45 days**.
 {% /callout %}
 
 
 ## Overview
 
-Storj’s new pricing model introduces **three distinct storage tiers** designed to meet different performance, compliance, and budget requirements:
+Storj’s tiered pricing model introduces **three distinct storage tiers** designed to meet different performance, compliance, and budget requirements:
 
 | | **Global Collaboration** | **Regional Workflows** | **Active Archive** |
 | :---- | :---- | :---- | :---- |

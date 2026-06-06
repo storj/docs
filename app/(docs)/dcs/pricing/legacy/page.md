@@ -14,10 +14,12 @@ metadata:
 {% youtube-embed videoId="9uhX0X3ZW2c" /%}
 
 {% callout type="info" %}
-Legacy pricing will be retired on **November 1, 2025** and replaced by our new [tiered pricing model](docId:mqRRgT,hL*dk3zNT).
+- You will need to Opt-In for the [new pricing](docId:1ea1de87-5e14-402b-afb7-15d83c135563) or Opt-Out. An opt-in/out selection is in your [](docId:nGzxQBhV8nx5Pukj6O0zT). Make your selection before July 1, 2026.
+- **Existing Projects** created before November 1, 2025 will continue to use the current [](docId:x3xPZJXCp!CB@spN) until July 1, 2026.
+- **New Projects** created after November 1, 2025 will continue to use the current [](docId:mqRRgT,hL*dk3zNT) until July 1, 2026.
+- **New Projects** created on or after July 1, 2026 will be charged using the new [](docId:1ea1de87-5e14-402b-afb7-15d83c135563).
 
-Projects created **before November 1, 2025** will retain legacy pricing for **one calendar year** or until they **upgrade or migrate**, whichever comes first.
-
+If you opt-out or do nothing, **your account will be frozen and data deleted within 45 days**.
 {% /callout %}
 
 

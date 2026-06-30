@@ -31,6 +31,6 @@ juicefs format \
 
 See other options in [JuiceFS documentation](https://juicefs.com/docs/community/command_reference).
 
-{%callout type="info %}
+{%callout type="info" %}
 Because encryption happens before upload and the keys never leave your client, Storj already provides the same protection that JuiceFS' own encryption would offer. Because of this, adding [JuiceFS encryption at rest](https://juicefs.com/docs/community/security/encryption/#enable-data-encryption-at-rest) using `--encrypt-rsa-key` on top would result in double-encrypting every block: first by JuiceFS (RSA key-wrap + AES) and then again by the uplink library (AES-GCM). The result is the same security, but with measurably higher CPU usage on every read and write. For more information, check [Storj encryption documentation](docId:yI4q9JDB3w01xEkFWA4_z).
 {% /callout %}

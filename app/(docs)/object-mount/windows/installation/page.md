@@ -43,7 +43,7 @@ Before you begin, make sure your PC meets the following system requirements:
 
 [Download](https://link.storjshare.io/s/ju4fw3iep5pp2bxqioi7dlaaxqgq/object-mount-builds/latest/Windows/) the latest Object Mount `.exe` Windows installer program.
 
-**Note:** To obtain additional licenses or if you are not Storj customer, reach out to your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch).
+**Note:** Storj customers have 2 free licenses included. To obtain additional licenses or if you are not a Storj customer, reach out to your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch).
 
 
 ## Step 2: Install the Object Mount App

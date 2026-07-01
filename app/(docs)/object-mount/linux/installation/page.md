@@ -29,10 +29,9 @@ A outline of these steps include:
 1. **Obtain** an Object Mount license key.
 
     - **Note:** If you do not yet have a license key, you can install Object Mount for Linux in a fully-featured **Free Trial** mode. Reach out to your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch) for more details.
+    - **Note:** Storj customers have 2 free licenses included. To obtain additional licenses or if you are not a Storj customer, reach out to your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch).
 
-2. **Download** the latest scripted installer or installation package for your Linux distribution.
-
-    - **Note:** If you do not have a download link, reach out to your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch).
+2. [**Download**](https://link.storjshare.io/s/ju4fw3iep5pp2bxqioi7dlaaxqgq/object-mount-builds/latest/Linux/) the latest scripted installer or installation package for your Linux distribution.
 
 3. **Install & Activate** Object Mount.
 

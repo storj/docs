@@ -46,9 +46,9 @@ Before you begin, make sure your Mac meets the following system requirements:
 
 ## Step 1: Download the latest Installation Image
 
-Download the correct macOS `.dmg` disk image file for your system. 
+[Download](https://link.storjshare.io/s/ju4fw3iep5pp2bxqioi7dlaaxqgq/object-mount-builds/latest/macOS/) the correct macOS `.dmg` disk image file for your system. 
 
-**Note:** Contact your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch) if you need access to the most up-to-date disk image.
+**Note:** Storj customers have 2 free licenses included. To obtain additional licenses or if you are not a Storj customer, reach out to your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch).
 
 {% callout type="info" %}
   **Mac Chip Types**

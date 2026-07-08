@@ -20,6 +20,8 @@ Projects created **after November 1, 2025** retain [tiered pricing](docId:mqRRgT
 
 If you opt-out, **your account will be frozen and data deleted within 45 days**.
 
+**_Customers with a custom contract are excluded._**
+
 {% /callout %}
 
 
@@ -116,4 +118,4 @@ To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGY
 See our [Pricing Change FAQ](https://www.storj.io/pricing/change-faqs) for additional details.
 
 **Effective Date:** July 1, 2026
-**Last Updated:** May 31, 2026
+**Last Updated:** July 8, 2026

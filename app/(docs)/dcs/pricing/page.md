@@ -45,6 +45,7 @@ Storj has consistent and competitive pricing that provides the global scale prod
 
 If you opt-out or do nothing, **your account will be frozen and data deleted within 45 days**.
 
+**_Customers with a custom contract are excluded._**
 
 ## Choose a Storj Product Below to Learn More
 

@@ -20,6 +20,8 @@ metadata:
 - **New Projects** created on or after July 1, 2026 will be charged using the new [](docId:1ea1de87-5e14-402b-afb7-15d83c135563).
 
 If you opt-out or do nothing, **your account will be frozen and data deleted within 45 days**.
+
+**_Customers with a custom contract are excluded._**
 {% /callout %}
 
 ## Overview

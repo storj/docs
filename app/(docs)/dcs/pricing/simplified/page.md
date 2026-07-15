@@ -12,15 +12,19 @@ metadata:
 # Object Storage: Simplified Pricing
 
 {% callout type="info" %}
-As of **July 1, 2026**, Storj will transition to a new **Simplified pricing model** for object storage.
+As of **July 1, 2026**, Storj is transitioned to a new **Simplified pricing model** for object storage.
 
 Projects created **before November 1, 2025** retain [legacy pricing](docId:x3xPZJXCp!CB@spN) until July 1, 2026.
 
 Projects created **after November 1, 2025** retain [tiered pricing](docId:mqRRgT,hL*dk3zNT) until July 1, 2026.
 
+You will need to Opt-In for the [new pricing](docId:1ea1de87-5e14-402b-afb7-15d83c135563) or Opt-Out. An opt-in/out selection is in your [](docId:nGzxQBhV8nx5Pukj6O0zT). Make your selection before July 30, 2026.
+
 If you opt-out, **your account will be frozen and data deleted within 45 days**.
 
-If you do nothing, **it will be considered as opt-in**.
+EU customers must explicitly Opt-In by July 30, 2026, **otherwise their accounts will be frozen on July 31, 2026 and deleted 45 days later.**
+
+US and AP customers who do not take action by July 30, 2026 **will be deemed to have accepted the Simplified pricing model, which is already in effect as of July 1, 2026.**
 
 **_Customers with a custom contract are excluded._**
 
@@ -120,4 +124,4 @@ To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGY
 See our [Pricing Change FAQ](https://www.storj.io/pricing/change-faqs) for additional details.
 
 **Effective Date:** July 1, 2026
-**Last Updated:** July 10, 2026
+**Last Updated:** July 15, 2026

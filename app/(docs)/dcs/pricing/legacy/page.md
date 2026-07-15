@@ -19,7 +19,9 @@ metadata:
 - **New Projects** created after November 1, 2025 will continue to use the current [](docId:mqRRgT,hL*dk3zNT) until July 1, 2026.
 - **New Projects** created on or after July 1, 2026 will be charged using the new [](docId:1ea1de87-5e14-402b-afb7-15d83c135563).
 
-If you opt-out or do nothing, **your account will be frozen and data deleted within 45 days**.
+If you opt-out, **your account will be frozen and data deleted within 45 days**.
+
+If you do nothing, **it will be considered as opt-in**.
 
 **_Customers with a custom contract are excluded._**
 {% /callout %}

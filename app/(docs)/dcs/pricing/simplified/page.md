@@ -20,6 +20,8 @@ Projects created **after November 1, 2025** retain [tiered pricing](docId:mqRRgT
 
 If you opt-out, **your account will be frozen and data deleted within 45 days**.
 
+If you do nothing, **it will be considered as opt-in**.
+
 **_Customers with a custom contract are excluded._**
 
 {% /callout %}
@@ -100,9 +102,9 @@ Each tier has a few minimums that affect billing:
 
 - **Minimum Object Size:** Objects smaller than the listed minimum (50 kB) are billed as if they meet that minimum threshold.
 - **Minimum Storage Duration:** Data deleted before **30 days** will still be billed for the full 1 month period. [Object Mount](docId:b464fda8-9e3b-4417-aa64-2eb1efb69c39#pricing-starting-july-1-2026) users are excluded.
-- **Minimum Monthly Usage:** A **$50 minimum monthly fee** applies to all active storage accounts. The minimum fee applies as follows:
-  - If your total usage for the month exceeds $50, no minimum fee is charged.
-  - If your total usage is less than $50, you are charged $50 for that month.
+- **Minimum Monthly Usage:** A **$5 minimum monthly fee** applies to all active storage accounts. The minimum fee applies as follows:
+  - If your total usage for the month exceeds $5, no minimum fee is charged.
+  - If your total usage is less than $5, you are charged $5 for that month.
   - Accounts paying with STORJ token are exempt from the minimum monthly fee.
   - Accounts on custom or negotiated contracts are not subject to the standard minimum fee. Your account team will communicate any applicable terms.
   - The minimum fee does not apply during the free trial period. It takes effect at the start of your first billing cycle after the trial ends.
@@ -118,4 +120,4 @@ To learn more, check out the [](docId:Zrbz4XYhIOm99hhRShWHg) and [](docId:A4kUGY
 See our [Pricing Change FAQ](https://www.storj.io/pricing/change-faqs) for additional details.
 
 **Effective Date:** July 1, 2026
-**Last Updated:** July 8, 2026
+**Last Updated:** July 10, 2026

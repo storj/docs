@@ -74,7 +74,7 @@ For older PowerShell (`$PSVersionTable.PSVersion` is less than 5.1):
 {% tab label="macOS" %}
 
 ```shell
-curl -L https://github.com/storj/storj/releases/latest/download/identity_darwin_amd64.zip -o identity_darwin_amd64.zip
+curl -L https://github.com/storj/storj/releases/latest/download/identity_macos_amd64.zip -o identity_darwin_amd64.zip
 unzip -o identity_darwin_amd64.zip
 chmod +x identity
 sudo mv identity /usr/local/bin/identity
@@ -83,7 +83,7 @@ sudo mv identity /usr/local/bin/identity
 ARM-based macOS
 
 ```shell
-curl -L https://github.com/storj/storj/releases/latest/download/identity_darwin_arm64.zip -o identity_darwin_arm64.zip
+curl -L https://github.com/storj/storj/releases/latest/download/identity_macos_arm64.zip -o identity_darwin_arm64.zip
 unzip -o identity_darwin_arm64.zip
 chmod +x identity
 sudo mv identity /usr/local/bin/identity

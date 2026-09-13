@@ -45,7 +45,7 @@ Please note: some Debit cards maybe accepted too, but prepaid cards are not supp
 Adding $10 or more worth of STORJ tokens to your account deposit address will automatically upgrade your account to PRO and you will also receive a bonus of 10% of the deposit amount on your balance.
 
 {% callout type="info"  %}
-Please note: The deposit address currently only accepts transactions with ERC20 STORJ tokens on Ethereum mainnet or zkSync Era (note that **zkSync Lite is not supported**).
+Please note: The deposit address currently only accepts transactions with ERC20 STORJ tokens on Ethereum mainnet or zkSync Era (note that **zkSync Lite is not supported**, and we are considering to sunset zkSync Era payments too).
 {% /callout %}
 
 ### Google Pay Payment method

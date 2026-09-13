@@ -39,6 +39,8 @@ When you will pay the needed amount of STORJ, they will be added automatically t
 
 {% callout type="warning"  %}
 This deposit address supports only L1 ERC20 STORJ transactions on the Ethereum network and L2 ERC20 STORJ transactions on the zkSync Era network. zkSync Lite, Polygon and other Layer 2 protocols are not supported at this time.
+
+Please note that we are considering discontinuing support for the zkSync Era [payment method](docId:7U4_uu6Pzg6u2N6FpV9VE) soon.
 {% /callout %}
 
 {% callout type="info"  %}

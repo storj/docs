@@ -46,7 +46,7 @@ The following table includes the current Storj Satellite payout rates.
 
 All payments are made pursuant to the terms specified in the [Node Operator Terms & Conditions](https://www.storj.io/node-operator-terms-conditions).
 
-For a detailed understanding of how TB is defined, please see [](docId:59T_2l7c1rvZVhI8p91VX#object-storage).
+For a detailed understanding of how TB is defined, please see [](docId:x3xPZJXCp!CB@spN#object-storage-fees).
 
 ## Related FAQ
 

@@ -38,11 +38,11 @@ Storage Node Fees will not be paid for the following Storage Node usage:
 
 The following table includes the current Storj Satellite payout rates.
 
-| **Payment Category**       | **Rates as of Dec 1st, 2023** |
+| **Payment Category**       | **Rates as of Sep 1st, 2026** |
 | -------------------------- | ----------------------------- |
-| Storage (per TB per Month) | $1.50                         |
-| Egress (per TB)            | $2.00                         |
-| Audit/Repair (per TB)      | $2.00                         |
+| Storage (per TB per Month) | $1.35                         |
+| Egress (per TB)            | $1.00                         |
+| Audit/Repair (per TB)      | $1.00                         |
 
 All payments are made pursuant to the terms specified in the [Node Operator Terms & Conditions](https://www.storj.io/node-operator-terms-conditions).
 
@@ -66,7 +66,7 @@ One of the reasons our terms and conditions require you to share the same wallet
 
 For wallet addresses that have earned less than the threshold, the earned payout will be included the following month, as long as the aggregate amount of payouts owed meets the minimum threshold at the time payouts are sent. In the example above, all Node Operators that earn less than $50.00 would have their payouts rolled into their payout the following month.
 
-In case of a final payout when you gracefuly exited or shutdown all nodes but the Undistributed amount is not enough to clear a [Minimum Payout Threshold](#minimum-payment-thresholds) on Ethereum (L1), we recommend to [opt-in for zkSync (L2)](docId:6TX_ve1PyUrXuwax-mWWw), where fees are usually lower and thus the probability to clear the Minimum Payout Threshold is significantly higher. The alternative is to wait until fees on L1 would become lower or run a new node using the same wallet address to allow to collect enough funds to clear the Minimum Payout Threshold.
+In case of a final payout when you gracefuly exited or shutdown all nodes but the Undistributed amount is not enough to clear a [Minimum Payout Threshold](#minimum-payment-thresholds) on Ethereum (L1), then you will be forced to wait until fees on L1 would become lower or run a new node using the same wallet address to allow to collect enough funds to clear the Minimum Payout Threshold.
 
 ### Payment options
 
@@ -74,23 +74,11 @@ Storage node operators have two options for payment, and these options impact wh
 
 - Ethereum layer 1 - these are the default transactions, but have much higher fees, and therefore higher minimum payout thresholds ($50 wouldn't be surprising here, depending on current fees).
 
-- zkSync layer 2 - these are new. You can opt in to them, and the fees are much lower, therefore, there will be much lower minimum payout thresholds ($1 wouldn't be surprising here, depending on current fees).
-
-{% callout type="info"  %}
-Both of these options will (for now) happen on a monthly schedule. We are committing to get the prior month's payments out before the 15th of the following month.
-{% /callout %}
-
-{% callout type="warning"  %}
-If you are running multiple storage nodes, the payment method you select will apply to the individual storage nodes separately. For instance, if you have four nodes, two using default layer 1 transactions, and two using zkSync, then you will receive two payouts, one on layer 1 for those two nodes, and one through zkSync for the zkSync enabled ones.
-
-**IMPORTANT**: These will be considered two separate payouts for purposes of reaching the minimum threshold.
-{% /callout %}
+- zkSync layer 2 - these are [sunset on September 1, 2026](https://forum.storj.io/t/sunsetting-zksync-for-storagenode-payouts/32513). Starting September 1, 2026 all opted-in wallets will receive a payout via layer 1 (Ethereum), if the unpaid amount would clear a [minimum payout threshold](#minimum-payment-thresholds).
 
 ## Ethereum layer 1 transactions
 
 The default behavior is for us to transmit funds using Ethereum layer 1 (standard ERC20 transactions) for our STORJ token. This fee is calculated using the Ethereum gas costs of similar transactions, the gas to ETH conversion prices, and the price of ETH.
-
-These transaction fees are typically much higher than layer 2 transactions (see below), and thus incur a much higher minimum payout threshold.
 
 {% callout type="info"  %}
 **Example calculation for layer 1 transaction:**
@@ -100,23 +88,7 @@ At a gas price of 274 GWei, with a per-transaction Gas cost of 36508, a transact
 
 ## zkSync layer 2 transactions
 
-Any node operator running [v1.22.2](https://github.com/storj/storj/releases/tag/v1.22.2) or later also can opt into zkSync Layer 2 transactions to receive payouts. zkSync is new technology and comes with some additional risk. You can read more about why we've chosen [](docId:6TX_ve1PyUrXuwax-mWWw) here.
-
-{% callout type="warning"  %}
-We will use this type of transaction when possible, but we may revert to layer 1 transactions (and associated minimum payout thresholds) if circumstances require.
-{% /callout %}
-
-The main benefit of zkSync is a much lower L2 transaction fee, and therefore a much lower minimum payout threshold. Low earning wallet addresses will get payouts at a more frequent schedule with zkSync.
-
-The main consideration with this method is that if the node operator wants to withdraw their funds from layer 2 back to layer 1 (for an exchange address of an exchange that does not yet support zkSync or similar), they will have to pay a transaction fee for that withdrawal. This withdrawal fee can be paid in STORJ, but may be more than a standard layer ERC20 transfer.
-
-{% callout type="success"  %}
-Transaction fees can be paid using STORJ in zkSync, so no ETH will be needed for zkSync transactions.
-{% /callout %}
-
-- Read about how to opt-in to [](docId:6TX_ve1PyUrXuwax-mWWw).
-
-- You can read more about zkSync in general [here](https://zksync.io).
+[zkSync Era layer 2 payout method is sunset on September 1, 2026](https://forum.storj.io/t/sunsetting-zksync-for-storagenode-payouts/32513). Starting September 1, 2026 all opted-in wallets will receive a payout via layer 1 (Ethereum), if the unpaid amount would clear a [minimum payout threshold](#minimum-payment-thresholds).
 
 ## General advice
 
@@ -124,4 +96,6 @@ Transaction fees can be paid using STORJ in zkSync, so no ETH will be needed for
 Always control your private keys to your wallet.
 {% /callout %}
 
-While it may be convenient to use an exchange address for your storage node payout, it's always safest to use an address for which you control the private keys. If you opt to use zkSync, you definitely want to use an address for which you control the private keys. Withdrawing your funds from zkSync is designed for use with wallets for which you control the private keys. If you use an address from an exchange or for which you otherwise don't have the private keys, you will be required to trigger an emergency withdrawal process, and this will be significantly more costly for you.
+While using an exchange address for payouts from your storage node can be convenient, it's always safer to use an address whose private keys you control. Please note that if you used zkSync, starting September 1, 2026, you will receive payouts to your Ethereum Level 1 address. Therefore, please ensure you are able to receive these funds to your exchange address or [update it](docId:65905400-c86d-40f3-a078-b476a522c4c5) as soon as possible.
+
+If you are a EU resident, you will be eligible to confirm the source address of funds due to MiCA changes, due to this mandatory requirement it's not possible for you to use the exchange address as your wallet address in the node's configuration at all, see the [relarted thread](https://forum.storj.io/t/getting-payed-to-kraken-address-with-mica/30295) on the forum.

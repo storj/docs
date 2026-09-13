@@ -8,10 +8,9 @@ Currently, none of the blockchains really solve the issue of high transaction co
 
 Switching blockchains would either mean you end up on a less popular blockchain which makes it less secure, and harder for customers and node operators to use as it would most likely be relying on a less active developer community. Or you may get lucky and pick the blockchain of the future, which will then be overloaded and most likely, eventually run into the exact same scaling issues.
 
-The Ethereum roadmap actually has a lot of promising developments to alleviate the scaling issues it’s facing now, zk-rollups being one of them. Right now the best approach is to use a Layer 2 solution like zkSync instead of taking a gamble on a less proven blockchain.
+Ethereum's roadmap actually contains many promising developments to address the scaling issues it has faced in the past, and zk-rollups are one of them. Some time ago, the best approach was to use a second-layer solution like zkSync Era, rather than risk using a less-proven blockchain.
 
-
-Our project already experienced moving blockchains in the past, where we migrated the Counterparty based SJCX token (running on the Bitcoin blockchain) to the  STORJ ERC-20 token on the Ethereum blockchain at the time when Bitcoin had run into scaling issues making Counterparty token transactions very expensive to send. While initially the move alleviated the issue with transaction fees, now the Ethereum blockchain is experiencing the same scaling issues and high fees. So, the best approach is to use a Layer 2 solution like Rollups ([zkSync](docId:6TX_ve1PyUrXuwax-mWWw) in particular), until Ethereum releases version 2.0 to further address scaling issues.
-
+Our project has already experienced blockchain migration in the past, when we migrated the Counterparty-based SJCX token (running on the Bitcoin blockchain) to the ERC-20 STORJ token on the Ethereum blockchain at a time when Bitcoin was experiencing scaling issues that made transactions with Counterparty tokens very expensive. While this migration initially mitigated the transaction fee problem, the Ethereum blockchain subsequently began to experience the same scaling issues and high fees. Therefore, we briefly used a second-layer solution such as Rollups (specifically zkSync Era) until Ethereum released version 2.0 to further address the scaling issues.
+We have now [deprecated Layer 2](https://forum.storj.io/t/sunsetting-zksync-for-storagenode-payouts/32513) as Layer 1 fees have become acceptable.
 
 Thanks to René Smeekes (@BrightSilence) for summarizing all reasons in one [post](https://forum.storj.io/t/move-storj-to-the-xrpl-for-faster-payouts/13404/8?u=alexey).

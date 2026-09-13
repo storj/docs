@@ -67,6 +67,8 @@ Making payments with STORJ token is a different process than using a credit card
 
 {% callout type="info"  %}
 Please note that at the moment your deposit address in your account can accept only L1 (Ethereum) and zkSync Era (L2) transactions with STORJ tokens. zkSync Lite and any other blockchains are not supported and will result in loss of funds.
+
+Please note that we are considering discontinuing support for the zkSync Era payment method soon.
 {% /callout %}
 
 {% callout type="info"  %}

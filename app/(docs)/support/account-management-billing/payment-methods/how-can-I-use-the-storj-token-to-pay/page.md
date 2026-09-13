@@ -13,6 +13,10 @@ As the number of apps and ecosystems built on the Storj network grows, so too wi
 
 The billing page for your satellite account offers an option to select your payment method. This is where you would choose "Add STORJ Tokens" which will then show the screen with STORJ deposit address and QR, it accepts only STORJ ERC20 Tokens via L1 (Ethereum) or L2 (zkSync Era only) to in order to be credited to your account in USD equivalent on the sent date.
 
+{% callout type="warning" %}
+Please note that we are considering discontinuing support for the zkSync Era [payment method](docId:7U4_uu6Pzg6u2N6FpV9VE) soon.
+{% /callout %}
+
 Once your STORJ deposit is confirmed by StorjScan, the value of your STORJ deposit in USD will be shown in your Storj account on the billing page as available balance after an additional waiting period which may last up to several hours, depending on the time taken by StorjScan to pass the payment to the Storj platform.
 
 You can see more detailed instructions on how to pay with STORJ token in the [billing & payment](docId:Hurx0SirlRp_O5aUzew7_) section of our Storj documentation.

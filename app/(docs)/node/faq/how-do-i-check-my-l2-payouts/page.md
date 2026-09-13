@@ -7,7 +7,7 @@ redirects:
   - /node/resources/faq/how-do-i-check-my-l2-payouts
 ---
 
-If you opted-in [](docId:6TX_ve1PyUrXuwax-mWWw), you can check your payout in three ways:
+If you opted-in zkSync Era (it has been [sunset on September 1, 2026](https://forum.storj.io/t/sunsetting-zksync-for-storagenode-payouts/32513)), you can check your payout in three ways:
 
 ## Payout section on the Dashboard
 
@@ -16,7 +16,7 @@ You can click the **View on zkScan** button on the main page of your web-dashboa
 ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/A9Wtk342aTte-ic4IKik6_image.png)
 
 {% callout type="info"  %}
-If you do not see the notification "zkSync is opted-in", then you did not enable zkSync in the configuration of the node. See [](docId:6TX_ve1PyUrXuwax-mWWw) how to opt in.
+If you do not see the notification "zkSync is opted-in", then you did not enable zkSync in the configuration of the node.
 {% /callout %}
 
 ## Payout Information

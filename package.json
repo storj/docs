@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predev": "node scripts/fetch-image-sizes.mjs",
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "prebuild": "node scripts/fetch-image-sizes.mjs",
     "build": "next build --webpack",
     "start": "next start",

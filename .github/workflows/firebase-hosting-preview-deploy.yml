@@ -1,0 +1,171 @@
+# This is the PRIVILEGED half of the pull request preview deploy.
+#
+# The build half (.github/workflows/firebase-hosting-pull-request.yml) runs on
+# `pull_request` and gets no secrets when the pull request comes from a fork or
+# from Dependabot, which is why it only builds and uploads an artifact. This
+# workflow is triggered by `workflow_run`, so it runs in the context of the
+# base repository on the default branch and does have access to the Firebase
+# service account. That makes previews work for Dependabot and fork pull
+# requests, which previously either failed or were skipped.
+#
+# SECURITY: this job holds secrets, so it must never check out or execute pull
+# request code. It checks out the base branch for configuration only,
+# downloads the build artifact, and deploys the static files. Everything that
+# comes out of the artifact is treated as untrusted data.
+#
+# NOTE: GitHub only ever triggers `workflow_run` from the copy of this file on
+# the default branch, so this workflow does nothing until it is merged to main.
+
+name: Deploy preview to Firebase Hosting
+
+'on':
+  workflow_run:
+    # Must match the `name:` of .github/workflows/firebase-hosting-pull-request.yml
+    workflows: ['Deploy to Firebase Hosting on PR']
+    types: [completed]
+
+permissions:
+  contents: read
+  actions: read # required to download an artifact from another workflow run
+  pull-requests: write # required to post the preview comment
+
+jobs:
+  deploy_preview:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    environment: Preview
+    steps:
+      # Deliberately checks out the BASE repository at the default branch: no
+      # `ref:` is passed, which in `workflow_run` context resolves to main.
+      # The pull request head is never checked out. This step exists only to
+      # get the trusted firebase.base.json and .firebaserc.
+      - uses: actions/checkout@v4
+
+      # The artifact belongs to a different workflow run, so download-artifact
+      # needs both the run id and a token. It is extracted into its own
+      # directory so it cannot overwrite anything from the base checkout.
+      - name: Download the build from the pull request run
+        uses: actions/download-artifact@v4
+        with:
+          name: preview-build
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: pr-artifact
+
+      # github.event.workflow_run.pull_requests is empty on this repository, so
+      # the pull request number travels in the artifact instead. Strip it down
+      # to digits before it is used anywhere.
+      - name: Resolve pull request number
+        id: pr
+        run: |
+          set -euo pipefail
+          number="$(tr -cd '0-9' < pr-artifact/pr-number.txt | head -c 10)"
+          if [ -z "$number" ]; then
+            echo "::error::No usable pull request number in the build artifact"
+            exit 1
+          fi
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+          echo "Deploying preview for pull request #$number"
+
+      # firebase.json is generated during the build (firebase.base.json plus
+      # the redirects declared in the docs frontmatter) and is git-ignored, so
+      # it is not in the base checkout. Rebuild it here from the base branch's
+      # firebase.base.json and copy across only the redirect entries from the
+      # build, field by field. The artifact's own firebase.json is never used
+      # as-is: it could otherwise carry `predeploy` hooks, which firebase-tools
+      # would happily execute inside this privileged job.
+      - name: Assemble firebase.json from the base branch config
+        run: |
+          set -euo pipefail
+          if [ -f pr-artifact/pr-firebase.json ] && jq -e . pr-artifact/pr-firebase.json >/dev/null 2>&1; then
+            jq --slurpfile pr pr-artifact/pr-firebase.json '
+              .hosting.redirects = [
+                (($pr[0].hosting.redirects) // [])[]
+                | select(type == "object")
+                | select((.source | type) == "string" and (.destination | type) == "string")
+                | {source, destination, type: (if (.type | type) == "number" then .type else 308 end)}
+              ]
+            ' firebase.base.json > firebase.json
+          else
+            echo "::warning::No usable firebase.json in the build artifact; deploying without the redirects from this pull request"
+            cp firebase.base.json firebase.json
+          fi
+          echo "serving $(jq -r '.hosting.public' firebase.json) with $(jq '.hosting.redirects | length' firebase.json) redirects"
+
+      # firebase.json serves "dist", so the build output has to sit at the repo
+      # root next to it.
+      - name: Stage the built site
+        run: |
+          set -euo pipefail
+          if [ ! -d pr-artifact/dist ]; then
+            echo "::error::The build artifact does not contain a dist directory"
+            exit 1
+          fi
+          rm -rf dist
+          mv pr-artifact/dist dist
+
+      - name: Deploy to the preview channel
+        id: deploy
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_STORJ_MARKETING }}'
+          projectId: storj-marketing
+          # An explicit, stable channel per pull request, so a re-run replaces
+          # the same preview rather than creating a new one.
+          channelId: pr-${{ steps.pr.outputs.number }}
+          # No repoToken and no auto-comment: in `workflow_run` context this
+          # action has no pull request to comment on. We post it ourselves.
+          disableComment: true
+
+      - name: Comment the preview URL on the pull request
+        if: steps.deploy.outputs.details_url != '' || steps.deploy.outputs.urls != ''
+        uses: actions/github-script@v7
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          DETAILS_URL: ${{ steps.deploy.outputs.details_url }}
+          URLS: ${{ steps.deploy.outputs.urls }}
+          EXPIRES: ${{ steps.deploy.outputs.expire_time_formatted }}
+        with:
+          script: |
+            const marker = '<!-- firebase-hosting-preview -->'
+            const prNumber = Number(process.env.PR_NUMBER)
+            const url = (process.env.DETAILS_URL || process.env.URLS || '').trim()
+            if (!prNumber || !url) {
+              core.info('No preview URL to report; skipping the comment.')
+              return
+            }
+            const { owner, repo } = context.repo
+            const lines = [
+              marker,
+              '### Firebase preview',
+              '',
+              `Preview URL: ${url}`,
+            ]
+            if (process.env.EXPIRES) {
+              lines.push('', `Expires: ${process.env.EXPIRES}`)
+            }
+            const body = lines.join('\n')
+            const comments = await github.paginate(
+              github.rest.issues.listComments,
+              { owner, repo, issue_number: prNumber, per_page: 100 }
+            )
+            const existing = comments.find(
+              (comment) => comment.body && comment.body.includes(marker)
+            )
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existing.id,
+                body,
+              })
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: prNumber,
+                body,
+              })
+            }

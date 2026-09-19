@@ -47,6 +47,14 @@ jobs:
       # deploy workflow cannot get it from a checkout. Carry it along under a
       # distinct name to make clear it is untrusted build output: the deploy
       # workflow copies only the redirect entries out of it.
+      #
+      # The pull request number is carried across too:
+      # github.event.workflow_run.pull_requests is populated for
+      # same-repository pull requests but empty for fork ones, so the deploy
+      # workflow cannot rely on it. (The head SHA it needs for the check run
+      # does not travel here - workflow_run.head_sha is always set, and taking
+      # it from GitHub rather than from this artifact is what stops a fork
+      # pull request from reporting a check against an arbitrary commit.)
       - name: Collect deploy metadata
         run: |
           set -euo pipefail

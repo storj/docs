@@ -15,6 +15,19 @@
 #
 # NOTE: GitHub only ever triggers `workflow_run` from the copy of this file on
 # the default branch, so this workflow does nothing until it is merged to main.
+#
+# CHECK RUN: `Deploy Preview` is a required status check on main. It used to be
+# created by FirebaseExtended/action-hosting-deploy, but that action only does
+# so when it can see a `pull_request` event payload:
+#
+#     const isPullRequest = !!github.context.payload.pull_request;
+#     if (token && isPullRequest) { finish = await createCheck(...); }
+#
+# A `workflow_run` job never has that payload, so the action would silently
+# never create the check, and a required check that is never reported leaves
+# every pull request stuck on "Expected" and unmergeable. This workflow
+# therefore opens and closes that check run itself, against the pull request
+# head commit, which is what branch protection evaluates.
 
 name: Deploy preview to Firebase Hosting
 
@@ -27,16 +40,53 @@ name: Deploy preview to Firebase Hosting
 permissions:
   contents: read
   actions: read # required to download an artifact from another workflow run
+  checks: write # required to report the `Deploy Preview` check run
   pull-requests: write # required to post the preview comment
 
 jobs:
   deploy_preview:
-    if: >-
-      github.event.workflow_run.conclusion == 'success' &&
-      github.event.workflow_run.event == 'pull_request'
+    # Deliberately NOT limited to successful build runs. The job has to report
+    # the required `Deploy Preview` check either way: a failed check is
+    # actionable, a check that never appears is not.
+    if: github.event.workflow_run.event == 'pull_request'
     runs-on: ubuntu-latest
     environment: Preview
     steps:
+      # Opened before anything else can fail, so every path below has a check
+      # run to close. `workflow_run.head_sha` is the pull request head commit
+      # (GitHub run metadata, not artifact content, so a fork pull request
+      # cannot point it at someone else's commit).
+      - name: Open the Deploy Preview check run
+        id: check
+        uses: actions/github-script@v7
+        env:
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        with:
+          script: |
+            const { owner, repo } = context.repo
+            const { data } = await github.rest.checks.create({
+              owner,
+              repo,
+              name: 'Deploy Preview',
+              head_sha: process.env.HEAD_SHA,
+              status: 'in_progress',
+              details_url: `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`,
+            })
+            core.setOutput('id', data.id)
+
+      # The build failed, so there is nothing to deploy. Fail the job here,
+      # before any artifact is downloaded or any secret is used: GitHub skips
+      # the remaining steps and the closing step at the bottom reports the
+      # check as failed.
+      - name: Stop if the build run did not succeed
+        if: github.event.workflow_run.conclusion != 'success'
+        env:
+          UPSTREAM_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+        run: |
+          set -euo pipefail
+          echo "::error::The build run concluded \"${UPSTREAM_CONCLUSION}\"; there is nothing to deploy."
+          exit 1
+
       # Deliberately checks out the BASE repository at the default branch: no
       # `ref:` is passed, which in `workflow_run` context resolves to main.
       # The pull request head is never checked out. This step exists only to
@@ -54,9 +104,10 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path: pr-artifact
 
-      # github.event.workflow_run.pull_requests is empty on this repository, so
-      # the pull request number travels in the artifact instead. Strip it down
-      # to digits before it is used anywhere.
+      # github.event.workflow_run.pull_requests is populated for same-repository
+      # pull requests but empty for fork ones, so it cannot be relied on here.
+      # The number travels in the artifact instead. That makes it untrusted
+      # input: strip it down to digits before it is used anywhere.
       - name: Resolve pull request number
         id: pr
         run: |
@@ -120,7 +171,11 @@ jobs:
           disableComment: true
 
       - name: Comment the preview URL on the pull request
-        if: steps.deploy.outputs.details_url != '' || steps.deploy.outputs.urls != ''
+        # An explicit `if:` replaces the implicit success() condition, so spell
+        # it out again - this step must not run after an earlier failure.
+        if: >-
+          success() &&
+          (steps.deploy.outputs.details_url != '' || steps.deploy.outputs.urls != '')
         uses: actions/github-script@v7
         env:
           PR_NUMBER: ${{ steps.pr.outputs.number }}
@@ -169,3 +224,64 @@ jobs:
                 body,
               })
             }
+
+      # THE ONLY PLACE THE CHECK RUN IS COMPLETED. Every failure path above
+      # just fails the job and falls through to here, so the check can never be
+      # written twice with conflicting conclusions. `always()` is essential: a
+      # check run left "in progress" blocks the pull request forever with
+      # nothing to click.
+      - name: Close the Deploy Preview check run
+        if: always() && steps.check.outputs.id != ''
+        uses: actions/github-script@v7
+        env:
+          CHECK_ID: ${{ steps.check.outputs.id }}
+          JOB_STATUS: ${{ job.status }}
+          DETAILS_URL: ${{ steps.deploy.outputs.details_url }}
+          URLS: ${{ steps.deploy.outputs.urls }}
+          UPSTREAM_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+        with:
+          script: |
+            const { owner, repo } = context.repo
+            const runUrl = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`
+            const previewUrl = (process.env.DETAILS_URL || process.env.URLS || '').trim()
+            const upstream = process.env.UPSTREAM_CONCLUSION
+            const jobStatus = process.env.JOB_STATUS
+
+            let conclusion
+            if (jobStatus === 'success') {
+              conclusion = 'success'
+            } else if (jobStatus === 'cancelled' || upstream === 'cancelled') {
+              conclusion = 'cancelled'
+            } else {
+              conclusion = 'failure'
+            }
+
+            // Titles match what FirebaseExtended/action-hosting-deploy used to
+            // report, so the check reads the same as it always has.
+            let title
+            let summary
+            if (conclusion === 'success') {
+              title = 'Deploy preview succeeded'
+              summary = previewUrl
+                ? `[${previewUrl}](${previewUrl})`
+                : `The preview deployed, but no URL was reported. See ${runUrl}.`
+            } else if (conclusion === 'cancelled') {
+              title = 'Deploy preview cancelled'
+              summary = `The preview deploy was cancelled. See ${runUrl}.`
+            } else {
+              title = 'Deploy preview failed'
+              summary = upstream !== 'success'
+                ? `The build run concluded "${upstream}", so there was nothing to deploy. See ${runUrl}.`
+                : `See ${runUrl} for the deploy log.`
+            }
+
+            await github.rest.checks.update({
+              owner,
+              repo,
+              check_run_id: Number(process.env.CHECK_ID),
+              status: 'completed',
+              conclusion,
+              completed_at: new Date().toISOString(),
+              details_url: previewUrl || runUrl,
+              output: { title, summary },
+            })

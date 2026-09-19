@@ -16,7 +16,22 @@
 # NOTE: GitHub only ever triggers `workflow_run` from the copy of this file on
 # the default branch, so this workflow does nothing until it is merged to main.
 #
-# CHECK RUN: `Deploy Preview` is a required status check on main. It used to be
+# MERGE GATE: what actually blocks merging into main is branch protection's
+# "require deployments to succeed before merging", naming the `Preview`
+# environment - NOT a status check. GitHub looks for a successful, *active*
+# `Preview` deployment recorded against the PULL REQUEST HEAD commit.
+#
+# That is the one thing a `workflow_run` job does not get for free. The run's
+# SHA here is main, so the deployment GitHub creates for the job-level
+# `environment: Preview` is recorded against main and does nothing for the pull
+# request, leaving it stuck on "Missing successful active Preview deployment".
+# This workflow therefore creates and completes a `Preview` deployment on
+# `workflow_run.head_sha` itself, through the Deployments API.
+#
+# CHECK RUN: `Deploy Preview` is *not* the merge gate - the deployment above is.
+# Branch protection cannot be read from inside a workflow, so the check run is
+# still reported in case it is required too; it is cheap and it mirrors what the
+# previous workflow produced. It used to be
 # created by FirebaseExtended/action-hosting-deploy, but that action only does
 # so when it can see a `pull_request` event payload:
 #
@@ -41,6 +56,7 @@ permissions:
   contents: read
   actions: read # required to download an artifact from another workflow run
   checks: write # required to report the `Deploy Preview` check run
+  deployments: write # required to record the `Preview` deployment that gates merging
   pull-requests: write # required to post the preview comment
 
 jobs:
@@ -73,6 +89,53 @@ jobs:
               details_url: `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`,
             })
             core.setOutput('id', data.id)
+
+      # THE MERGE GATE. Opened next to the check run and before anything can
+      # fail, so every path below has a deployment to close. The job-level
+      # `environment: Preview` further down makes GitHub record its own Preview
+      # deployment, but against main (the `workflow_run` SHA), which the pull
+      # request cannot use - this is the one branch protection evaluates.
+      - name: Open the Preview deployment on the pull request head
+        id: deployment
+        uses: actions/github-script@v7
+        env:
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        with:
+          script: |
+            const { owner, repo } = context.repo
+            const runUrl = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`
+            // `required_contexts: []` is load-bearing: with the default, GitHub
+            // waits on the commit's other checks and answers with a queued
+            // "merged"/"conflict" message instead of creating a deployment.
+            // `transient_environment`/`production_environment` are both false,
+            // matching the deployments the previous workflow produced - the
+            // shape branch protection is known to accept here.
+            const { data } = await github.rest.repos.createDeployment({
+              owner,
+              repo,
+              ref: process.env.HEAD_SHA,
+              environment: 'Preview',
+              auto_merge: false,
+              required_contexts: [],
+              transient_environment: false,
+              production_environment: false,
+              description: 'Firebase Hosting preview for this pull request',
+            })
+            if (!data || !data.id) {
+              throw new Error(
+                `GitHub did not create a deployment: ${JSON.stringify(data)}`
+              )
+            }
+            core.setOutput('id', data.id)
+            await github.rest.repos.createDeploymentStatus({
+              owner,
+              repo,
+              deployment_id: data.id,
+              state: 'in_progress',
+              log_url: runUrl,
+              description: 'Deploying the Firebase Hosting preview',
+              auto_inactive: false,
+            })
 
       # The build failed, so there is nothing to deploy. Fail the job here,
       # before any artifact is downloaded or any secret is used: GitHub skips
@@ -285,3 +348,53 @@ jobs:
               details_url: previewUrl || runUrl,
               output: { title, summary },
             })
+
+      # THE ONLY PLACE THE PREVIEW DEPLOYMENT IS COMPLETED. Deliberately the last
+      # step in the job: GitHub records its own Preview deployment (against main)
+      # for the job-level `environment:` when the job ends, and ordering this
+      # last keeps the pull request head deployment the most recent successful
+      # one for the environment. That ordering is load-bearing.
+      #
+      # `auto_inactive: false` stops this status from flipping every other pull
+      # request's Preview deployment to `inactive`, which is what leaves older
+      # pull requests stuck on "Missing successful active Preview deployment"
+      # long after their own preview deployed fine.
+      #
+      # `always()` is essential for the same reason it is on the check run: a
+      # deployment left `in_progress` blocks the pull request with nothing to
+      # click. The `id` guard means a failure to create the deployment does not
+      # try to close one that does not exist.
+      - name: Close the Preview deployment on the pull request head
+        if: always() && steps.deployment.outputs.id != ''
+        uses: actions/github-script@v7
+        env:
+          DEPLOYMENT_ID: ${{ steps.deployment.outputs.id }}
+          JOB_STATUS: ${{ job.status }}
+          DETAILS_URL: ${{ steps.deploy.outputs.details_url }}
+          URLS: ${{ steps.deploy.outputs.urls }}
+        with:
+          script: |
+            const { owner, repo } = context.repo
+            const runUrl = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`
+            const previewUrl = (process.env.DETAILS_URL || process.env.URLS || '').trim()
+            const state = process.env.JOB_STATUS === 'success' ? 'success' : 'failure'
+
+            const status = {
+              owner,
+              repo,
+              deployment_id: Number(process.env.DEPLOYMENT_ID),
+              state,
+              log_url: runUrl,
+              description:
+                state === 'success'
+                  ? 'Preview deployed'
+                  : 'The preview deploy did not succeed',
+              auto_inactive: false,
+            }
+            // environment_url has to be a real URL or the API rejects the whole
+            // status, which would leave the deployment in_progress forever.
+            if (state === 'success' && /^https?:\/\//.test(previewUrl)) {
+              status.environment_url = previewUrl
+            }
+
+            await github.rest.repos.createDeploymentStatus(status)

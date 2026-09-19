@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import re
 import sys
 import yaml
 import hashlib
@@ -15,7 +16,7 @@ MAX_AUTO_DESCRIPTION_LENGTH = 300
 
 def download(url):
   print("downloading", url, file=sys.stderr)
-  resp = requests.get(url)
+  resp = requests.get(url, timeout=30)
   if resp.status_code == 404:
     print("error 404: %r" % url, file=sys.stderr)
     return b""
@@ -24,13 +25,17 @@ def download(url):
 
 
 def cached_download(url):
-  cache = os.path.join("cache", hashlib.sha256(url.encode("utf8")).hexdigest())
+  digest = hashlib.sha256(url.encode("utf8")).hexdigest()
+  if not re.fullmatch(r"[0-9a-f]{64}", digest):
+    raise ValueError("invalid cache digest")
+  cache = os.path.join("cache", digest)
+  cache_url_meta = os.path.join("cache", digest + ".url")
   if not os.path.exists(cache):
     os.makedirs("cache", exist_ok=True)
     data = download(url)
     with open(cache, "wb") as fh:
       fh.write(data)
-    with open(cache + ".url", "wb") as fh:
+    with open(cache_url_meta, "wb") as fh:
       fh.write(url.encode("utf8"))
   with open(cache, "rb") as fh:
     return fh.read()

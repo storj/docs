@@ -19,28 +19,26 @@ metadata:
 
 Manage your Billing, Invoices and Payment methods
 
-The Billing screen allows you to see all your projects and their **Total Estimated Charges** for the current Billing Period and **Available Balance** on the **Overview** tab. You can check **Transactions** for your STORJ deposit address on the **Payment Methods** tab. Your invoices you can see on the **Billing History** tab, your coupons and [](docId:i6OGJ9eZJC7Vw04nKSqcD) you can see and add on the **Coupons** tab.
+The Billing screen allows you to see all your projects and their **Total Estimated Charges** for the current Billing Period and **Available Balance** on the **Overview** tab. You can check **Transactions** for your USDC deposit address on the **Payment Methods** tab. Your invoices you can see on the **Billing History** tab, your coupons and [](docId:i6OGJ9eZJC7Vw04nKSqcD) you can see and add on the **Coupons** tab.
 
 You can expand any Project to see details of the charge. See [](docId:59T_2l7c1rvZVhI8p91VX) for details.
 
 ## Add a Payment Method
 
-To add a [](docId:7U4_uu6Pzg6u2N6FpV9VE) you can switch to the **Payment Methods** tab and select **Add STORJ Tokens** or Add New Payment Method.
+To add a [](docId:7U4_uu6Pzg6u2N6FpV9VE) you can switch to the **Payment Methods** tab and select **Add USDC** or Add New Payment Method.
 
 Please read the [](docId:59T_2l7c1rvZVhI8p91VX) section for details.
 
-### Adding STORJ tokens
+### Adding USDC
 
-You can select to **Add STORJ Tokens** on the **_Billing - Payment Methods_** screen, the deposit address will be automatically generated for you.
+You can select to **Add USDC** on the **_Billing - Payment Methods_** screen, the deposit address will be automatically generated for you.
 
-If you click **Add funds** button, you will see a screen with QR code and your deposit address where you can send your STORJ tokens.
+If you click **Add funds** button, you will see a screen with QR code and your deposit address where you can send your USDC.
 
-When you will pay the needed amount of STORJ, they will be added automatically to your **Available Balance** in USD value.
+When you pay the needed amount of USDC, it will be added automatically to your **Available Balance** in USD value.
 
 {% callout type="warning"  %}
-This deposit address supports only L1 ERC20 STORJ transactions on the Ethereum network and L2 ERC20 STORJ transactions on the zkSync Era network. zkSync Lite, Polygon and other Layer 2 protocols are not supported at this time.
-
-Please note that we are considering discontinuing support for the zkSync Era [payment method](docId:7U4_uu6Pzg6u2N6FpV9VE) soon.
+This deposit address supports only ERC20 USDC transactions on the Ethereum network (L1). zkSync, Polygon and other Layer 2 protocols are not supported. Tokens other than USDC, including STORJ, will not be credited to your account.
 {% /callout %}
 
 {% callout type="info"  %}

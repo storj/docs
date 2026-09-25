@@ -7,15 +7,15 @@ metadata:
   title: Payment Methods and Policies
   description:
     Learn about the payment methods accepted by Storj, the process for
-    adding a payment method, and unique guidelines for using credit card and STORJ
-    token for payments.
+    adding a payment method, and unique guidelines for using credit card and USDC
+    for payments.
 ---
 
 Storj accepts the following several payment methods:
 
 1.  Credit Card
 
-2.  STORJ Token - ERC20 compatible utility token that leverages the Ethereum blockchain
+2.  USDC - a US dollar stablecoin (ERC20 token on the Ethereum blockchain)
 
 3.  Google Pay (available only in the browser logged in to your Google Account with enabled Google Pay)
 
@@ -59,33 +59,29 @@ You’ll be prompted to add your card information. Using a credit card is somewh
 
 - If a credit card expires, a user will receive a notification to the registered email on the account, however, if a new payment method is not added within a reasonable amount of time, we reserve the right to reclaim the available storage and bandwidth, reset usage limits to zero and delete any data stored on the account pursuant to our data retention policy.
 
-## Using STORJ Token
+## Using USDC
 
-In addition to credit cards, users may also pay for usage fees with STORJ token. Storj created the STORJ utility token as a medium of exchange on its decentralized cloud storage network. The STORJ utility token facilitates payments from people around the world for their use of the Storj network to store their data, and Storj uses it to pay our community of Storage Node Operators that rent their unused hard drive capacity and bandwidth to the network.
+In addition to credit cards, users may also pay for usage fees with USD Coin (USDC). USDC is a stablecoin issued by a third party that is designed to hold a value of one US dollar. It is an ERC20 token on the Ethereum blockchain.
 
-Making payments with STORJ token is a different process than using a credit card. When using STORJ as your payment method, you commit to using a pre-payment model, which means you must first deposit X amount of STORJ tokens, which will be automatically converted to Y amount of $USD based on the spot price of the token at the time of the payment transaction.
+Making payments with USDC is a different process than using a credit card. When using USDC as your payment method, you commit to using a pre-payment model, which means you must first deposit USDC to your account. Each USDC you deposit is added to your account balance as one US dollar.
 
 {% callout type="info"  %}
-Please note that at the moment your deposit address in your account can accept only L1 (Ethereum) and zkSync Era (L2) transactions with STORJ tokens. zkSync Lite and any other blockchains are not supported and will result in loss of funds.
-
-Please note that we are considering discontinuing support for the zkSync Era payment method soon.
+Please note that your deposit address can accept only USDC transactions on the Ethereum network (L1). zkSync, other Layer 2 networks and other blockchains are not supported and will result in loss of funds. Tokens other than USDC, including STORJ, sent to the deposit address will not be credited to your account.
 {% /callout %}
 
 {% callout type="info"  %}
-Important: If a user does not want to add a credit card but wants to pay only via STORJ token, they should exclusively deposit STORJ token and should not add a credit card to their account because, once a credit card is added as a payment method, it can only be removed by closing the account or requesting removal of the credit card after adding STORJ token, using the support process defined in this documentation.
+Important: If a user does not want to add a credit card but wants to pay only via USDC, they should exclusively deposit USDC and should not add a credit card to their account because, once a credit card is added as a payment method, it can only be removed by closing the account or requesting removal of the credit card after adding USDC, using the support process defined in this documentation.
 {% /callout %}
 
-Depending on the amount of platform usage and the usage limits configured on your account, you may be required to keep a minimum deposit of STORJ token on your account to ensure monthly usage fees are paid in full each billing cycle.
+Depending on the amount of platform usage and the usage limits configured on your account, you may be required to keep a minimum deposit of USDC on your account to ensure monthly usage fees are paid in full each billing cycle.
 
-We realize the STORJ token price can fluctuate, so our billing system is designed to ensure any such fluctuation does not affect the amount deposited in terms of USD. The value attributed to your account will be based on the STORJ to USD exchange rate at the time of deposit, not at the time of usage or bill payment. In other words, the account balance will be incremented by the USD equivalent of any STORJ deposit as soon as the deposit gets registered on Stripe. This is intended to minimize the potential impact of fluctuations in the STORJ token price because the price is fixed in USD on an account until the deposit balance is exhausted.
-
-To deposit STORJ tokens in an account, open a **_Payment Methods_** tab on the **Billing** page and click **Add STORJ tokens**, then use provided deposit address to deposit STORJ tokens via L1 (Ethereum).
+To deposit USDC in an account, open a **_Payment Methods_** tab on the **Billing** page and click **Add USDC**, then use the provided deposit address to deposit USDC on the Ethereum network.
 
 {% callout type="info"  %}
 Important: The deposit address generated for your account is a deposit-only address to prepay for usage on the Storj Platform. Users are not able to remove or otherwise withdraw tokens from this address. Any request for a refund or return of an unused prepaid deposit must follow the support process [](docId:LX9pqXsAduR8LEaEiX_It).
 {% /callout %}
 
-If the STORJ token balance runs out, a user will receive a notification to the registered email on the account. However, if a new payment is not added within a reasonable amount of time, Storj reserves the right to reduce account usage limits to zero and/or reclaim the available storage and bandwidth resources and delete your data stored on the network pursuant to our data retention policy.
+If the USDC balance runs out, a user will receive a notification to the registered email on the account. However, if a new payment is not added within a reasonable amount of time, Storj reserves the right to reduce account usage limits to zero and/or reclaim the available storage and bandwidth resources and delete your data stored on the network pursuant to our data retention policy.
 
 ## Using Online payment link in the Open invoice
 This option is available only in the Opened unpaid invoices. You need to download the invoice PDF from the Billing History and open it, then click the Online payment link.

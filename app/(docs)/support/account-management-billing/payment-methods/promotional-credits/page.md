@@ -14,7 +14,7 @@ The Storj Service includes incentive programs to encourage adoption and use of t
 
 ## Credits
 
-Credits are a bonus amount that is deposited to a user’s account that the user receives when paying in STORJ token. Credits may be offered from time to time, at varying percentages, at our sole discretion. You will be notified at the time of your deposit if a Credit is offered. Credits are non-refundable and unused Credits expire when you close the account.
+Credits are a bonus amount that was previously deposited to a user’s account when paying in STORJ token. The deposit bonus has been discontinued, and deposits made in USDC do not receive a bonus. Credits already on an account remain available to pay for usage. Credits are non-refundable and unused Credits expire when you close the account.
 
 ### Coupons
 

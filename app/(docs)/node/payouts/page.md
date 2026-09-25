@@ -10,6 +10,8 @@ weight: 10
 
 Storage Node Operators are compensated for the resources that are used by Storj Satellites for their nodes every month. Our payout policy and details can be found on the [Storage Node Operator Terms and Conditions](https://storj.io/storj-operator-terms/). In the event of a conflict between this documentation and Node Operator Terms & Conditions, the Node Operator Terms & Conditions shall govern.
 
+Payouts are made in USD Coin (USDC), a US dollar stablecoin, on the Ethereum blockchain. Earnings are calculated in USD and paid at one USDC per US dollar, so there is no exchange rate to track. Storj no longer pays out in STORJ tokens.
+
 ## Understanding How Storage Nodes are Paid on the Storj Network
 
 This document explains how storage node operators are paid for the data they store and the bandwidth that is utilized by Storj. Storage node operators are paid for the resources actually used on the service by Storj Labs-operated satellites. Any satellites operated by third parties not associated with Storj Labs may be subject to different terms, rates and payment methodologies.
@@ -78,7 +80,7 @@ Storage node operators have two options for payment, and these options impact wh
 
 ## Ethereum layer 1 transactions
 
-The default behavior is for us to transmit funds using Ethereum layer 1 (standard ERC20 transactions) for our STORJ token. This fee is calculated using the Ethereum gas costs of similar transactions, the gas to ETH conversion prices, and the price of ETH.
+The default behavior is for us to transmit funds using Ethereum layer 1 (standard ERC20 transactions) in USDC. This fee is calculated using the Ethereum gas costs of similar transactions, the gas to ETH conversion prices, and the price of ETH.
 
 {% callout type="info"  %}
 **Example calculation for layer 1 transaction:**

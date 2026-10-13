@@ -10,6 +10,7 @@ redirects:
   - /hc/en-us/articles/360026611692
 ---
 Payouts are made in USDC, an ERC-20 token running on the Ethereum platform. In order to receive and hold your USDC payouts, you should use an ERC-20 compatible wallet to which you hold the private key yourself. Several options are available:
+* [Iron Wallet](https://forum.storj.io/t/no-recommendation-just-a-mention-iron-wallet/31838)
 * [mycrypto](https://mycrypto.com/)
 * [MyEtherWallet](https://www.myetherwallet.com/)
 * [MetaMask](https://metamask.io/)

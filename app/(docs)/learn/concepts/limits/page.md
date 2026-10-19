@@ -40,12 +40,12 @@ Adding a valid Payment method will result in your per-project limits being autom
 Please note: some Debit cards maybe accepted too, but prepaid cards are not supported.
 {% /callout %}
 
-### STORJ token Payment method
+### USDC Payment method
 
-Adding $10 or more worth of STORJ tokens to your account deposit address will automatically upgrade your account to PRO and you will also receive a bonus of 10% of the deposit amount on your balance.
+Adding $10 or more in USDC to your account deposit address will automatically upgrade your account to PRO. Deposits no longer receive a bonus.
 
 {% callout type="info"  %}
-Please note: The deposit address currently only accepts transactions with ERC20 STORJ tokens on Ethereum mainnet or zkSync Era (note that **zkSync Lite is not supported**, and we are considering to sunset zkSync Era payments too).
+Please note: The deposit address only accepts ERC20 USDC transactions on Ethereum mainnet. zkSync and other Layer 2 networks are not supported.
 {% /callout %}
 
 ### Google Pay Payment method
@@ -76,4 +76,4 @@ We have also set the default limit for the number of segments to a healthy level
 
 Customers can request a limit increase when needed by filling out the [limit increase request form](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212) on our Storj support portal.
 
-An automatic limit increase to Pro Account can be accomplished by adding a credit card or STORJ tokens (more or equal to $10) as a payment method. Please only make such requests if your use case requires more than the current default limits.
+An automatic limit increase to Pro Account can be accomplished by adding a credit card or USDC (more or equal to $10) as a payment method. Please only make such requests if your use case requires more than the current default limits.

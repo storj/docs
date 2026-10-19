@@ -7,7 +7,7 @@ metadata:
   title: Payment Method Hierarchy & Order of Operations
   description:
     'Explanation of the order in which payments are debited against various
-    methods: Coupons, Credits, STORJ Token, credit card, along with implications of
+    methods: Coupons, Credits, USDC, credit card, along with implications of
     unpaid balances.'
 ---
 
@@ -17,8 +17,8 @@ If you have an amount due, your payment methods will be debited in the following
 
 2.  **Credits** - After applying any Coupons, any valid Credit (including the balance after use of an "Add funds" feature) on an account will then be used to pay an invoice amount. If the entire invoice is paid from the amount of valid Credits on an account, no further payment is needed. If, after all Credits are exhausted in a billing cycle, a balance on an invoice remains, the balance will be debited to the next available payment method;
 
-3.  **STORJ Token Balance** - After applying any Coupons and Credits, any valid STORJ token balance on an account will then be used to pay an invoice amount. If the entire invoice is paid from the amount of STORJ token balance on an account, no further payment is needed. If, after all STORJ token balance is exhausted in a billing cycle, a balance on an invoice remains, the balance will be debited to the next available payment method;
+3.  **USDC Balance** - After applying any Coupons and Credits, any valid USDC balance on an account will then be used to pay an invoice amount. If the entire invoice is paid from the amount of USDC balance on an account, no further payment is needed. If, after all USDC balance is exhausted in a billing cycle, a balance on an invoice remains, the balance will be debited to the next available payment method;
 
-4.  **Credit Card** - After applying any available Coupons, Credits, or STORJ tokens, any valid credit card on the account will be used to pay the invoice amount. If the entire invoice is paid using a credit card on the account, no further payment is required. If a credit card payment is partially or fully rejected and a balance remains on the invoice, the user will be notified by email sent to the registered email address on the account regarding the unpaid balance that must be paid.
+4.  **Credit Card** - After applying any available Coupons, Credits, or USDC, any valid credit card on the account will be used to pay the invoice amount. If the entire invoice is paid using a credit card on the account, no further payment is required. If a credit card payment is partially or fully rejected and a balance remains on the invoice, the user will be notified by email sent to the registered email address on the account regarding the unpaid balance that must be paid.
 
 All unpaid balances must be paid via a valid payment method in a billing cycle. Note that, if there is no valid payment method on an account, and a new payment method is not added within a reasonable amount of time, we reserve the right to reduce account usage limits to zero and/or reclaim the available resources (the storage space and bandwidth made available by Storage Node Operators to the Storj network) and delete your data stored on the network pursuant to our data retention policy.

@@ -30,7 +30,7 @@ Private Internet Access (PIA) is one of the safest and most popular VPN’s out 
 
 For Operators not interested in internet privacy (e.g. private browsing) and who want to rent out only a few GBs of data, the cost of paying for a VPN will not be justified.
 
-However, Operators that value internet privacy or are unable to connect to the storage node network due to a variety of issues discussed in the introduction, and who plan to rent out more than 500 GB, can expect to pay for their VPN through their earnings from running storagenode. The other large advantage for Storage Node Operators is that PIA accepts payments in Bitcoin/Etherium/etc., which makes paying with the Storj earnings even easier, since this will only involve selling the STORJ tokens earned on an exchange for Bitcoin/Etherium/etc., which can then directly be used to pay the VPN invoice. The workflow covered in this guide can of course also be applied to other VPNs. Storj does not endorse any particular VPN service, every user is free to decide for themselves which VPN company they want to select.
+However, Operators that value internet privacy or are unable to connect to the storage node network due to a variety of issues discussed in the introduction, and who plan to rent out more than 500 GB, can expect to pay for their VPN through their earnings from running storagenode. The other large advantage for Storage Node Operators is that PIA accepts payments in Bitcoin/Etherium/etc., which makes paying with the Storj earnings even easier, since this will only involve selling the USDC earned on an exchange for Bitcoin/Etherium/etc., which can then directly be used to pay the VPN invoice. The workflow covered in this guide can of course also be applied to other VPNs. Storj does not endorse any particular VPN service, every user is free to decide for themselves which VPN company they want to select.
 
 There are plenty of other competitors in that space:
 * [portmap.io](https://portmap.io/)
@@ -104,7 +104,7 @@ You need to [create a new Identity](docId:aT6VAB297OWLd4vqeXxf5) for your storag
 
 ## 3.4. Wallet address
 
-The article [](docId:66d6c295-53e4-4308-9cde-1c6193155f52) will let you create a valid STORJ token address if you do not already have one. If you already have a compatible STORJ payout address, or an address made with another [ERC20 compatible wallet](docId:a045be02-e05a-11ef-9338-6045bd1fa4e3), you can continue with the steps below.
+The article [](docId:66d6c295-53e4-4308-9cde-1c6193155f52) will let you create a valid USDC payout address if you do not already have one. If you already have a compatible payout address, or an address made with another [ERC20 compatible wallet](docId:a045be02-e05a-11ef-9338-6045bd1fa4e3), you can continue with the steps below.
 
 ## 3.5. Storage Location
 

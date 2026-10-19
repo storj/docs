@@ -5,7 +5,7 @@ redirects:
   - /hc/en-us/articles/360026892091-Is-an-account-required-to-rent-out-drive-space
 ---
 
-**No**. You do not need to create an account to start earning STORJ tokens by renting your drive space.
+**No**. You do not need to create an account to start earning USDC by renting your drive space.
 
 All you need to do is run the storagenode software and [configure it properly](/node).
 

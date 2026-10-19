@@ -109,7 +109,7 @@ Each tier has a few minimums that affect billing:
 - **Minimum Monthly Usage:** A **$5 minimum monthly fee** applies to all active storage accounts. The minimum fee applies as follows:
   - If your total usage for the month exceeds $5, no minimum fee is charged.
   - If your total usage is less than $5, you are charged $5 for that month.
-  - Accounts paying with STORJ token are exempt from the minimum monthly fee.
+  - Accounts paying with USDC are exempt from the minimum monthly fee.
   - Accounts on custom or negotiated contracts are not subject to the standard minimum fee. Your account team will communicate any applicable terms.
   - The minimum fee does not apply during the free trial period. It takes effect at the start of your first billing cycle after the trial ends.
   - Accounts with a $0 balance at the end of a billing cycle and no active storage will be suspended and then deleted. Free trial accounts are excluded from this.

@@ -170,4 +170,4 @@ This helps cover the cost of payment processing and basic operations so we can c
 - Any monthly usage that results in an invoice less than $5 will result in the minimum usage fee.
 - If your usage exceeds $5 per month, you will not be charged a minimum usage fee.
 - If you bought a starter package via a partner before August 1, 2025, you will not be charged a minimum usage fee until your starter package expires. The starter package expires one year from purchase or when the starter package credits have been fully used.
-- If you pay with STORJ token, you will not be charged a minimum usage fee.
+- If you pay with USDC, you will not be charged a minimum usage fee.

@@ -252,7 +252,7 @@ We recommend to create a subfolder for the storagenode on your disk, as this wou
 
 Parameters used in the Docker run command:
 
-* `WALLET`: ERC20 compatible ethereum address for STORJ token payments (use the same payout address for all nodes if you are running multiple nodes).
+* `WALLET`: ERC20 compatible ethereum address for USDC payments (use the same payout address for all nodes if you are running multiple nodes).
 * `EMAIL`: (optional) email address so that we can notify you when a new version has been released, or when the node goes offline and return online, about suspension and disqualification
 * `ADDRESS`: external IP address or the DDNS you configured and the port you opened on your router.
 

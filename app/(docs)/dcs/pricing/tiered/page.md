@@ -117,7 +117,7 @@ Each tier has a few minimums that affect billing:
 - **Minimum Storage Duration (Active Archive tier only):** Data deleted before **30 days** will still be billed for the full 1 month period.  
 - **Minimum Monthly Usage:** A **$5 minimum monthly fee** applies to all active storage accounts. You won’t be charged the minimum if:
   - Your usage exceeds $5
-  - You pay with **STORJ token**
+  - You pay with **USDC**
   - You purchased a **starter package** prior to August 1, 2025 (valid until expiration).
 
 

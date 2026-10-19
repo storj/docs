@@ -10,7 +10,7 @@ metadata:
 
 ## Introduction
 
-By becoming a Storage Node Operator you enable your unused hard drive space to be accessible by the Storj storage services. Once your node is up and running you will be compensated in STORJ for any storage and bandwidth usage accessing your node.
+By becoming a Storage Node Operator you enable your unused hard drive space to be accessible by the Storj storage services. Once your node is up and running you will be compensated in USDC for any storage and bandwidth usage accessing your node.
 
 {% callout type="warning"  %}
 **Failure to complete these steps will prevent your storage node from working.**

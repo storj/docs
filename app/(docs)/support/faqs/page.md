@@ -139,9 +139,9 @@ You can generate a restricted Access Grant from the Satellite user interface, us
 
 For some sample Go code around access-restriction, check out: <https://godoc.org/storj.io/storj/lib/uplink#example-package--RestrictAccess>
 
-## How do I pay with Storj Token?
+## How do I pay with USDC?
 
-When you decide to become a paid customer of Storj, you can choose to pay with a credit card or using STORJ token. The process for adding a payment method is covered in [](docId:59T_2l7c1rvZVhI8p91VX).
+When you decide to become a paid customer of Storj, you can choose to pay with a credit card or using USDC. The process for adding a payment method is covered in [](docId:59T_2l7c1rvZVhI8p91VX).
 
 ## What are the current rate and usage limits?
 
@@ -149,7 +149,7 @@ The default usage limits for a new account are published on the [](docId:Zrbz4XY
 
 ## How do I increase my usage limits?
 
-The default usage limits may not be suitable for all projects. Usage limits may be increased for paid tier accounts. A valid credit card or a sufficient balance of STORJ token relative to the usage limit increase requested as the payment method must be added before a [usage limit request form may be submitted](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212). Please note that you will be required to verify email address on account by making a help desk account before requesting a limit increase.
+The default usage limits may not be suitable for all projects. Usage limits may be increased for paid tier accounts. A valid credit card or a sufficient balance of USDC relative to the usage limit increase requested as the payment method must be added before a [usage limit request form may be submitted](https://supportdcs.storj.io/hc/en-us/requests/new?ticket_form_id=360000683212). Please note that you will be required to verify email address on account by making a help desk account before requesting a limit increase.
 
 For more information on rate limits view the [](docId:Zrbz4XYhIOm99hhRShWHg) section under Concepts.
 

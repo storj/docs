@@ -2,14 +2,14 @@
 title: Wallet address for storagenode
 docId: 66d6c295-53e4-4308-9cde-1c6193155f52
 metadata:
-  title: ERC20-compatible wallet address for STORJ tokens
-  description: Learn what is valid wallet address to receive STORJ ERC20 tokens.
+  title: ERC20-compatible wallet address for USDC payouts
+  description: Learn what is valid wallet address to receive USDC payouts.
 redirects:
   - /hc/en-us/articles/360029700972-Wallet-address-for-storagenode
 ---
-Here is walkthrough for one of the popular software wallet - [https://MyEtherWallet.com](https://MyEtherWallet.com) . The following step will let you create a valid STORJ token address if you do not already have one. If you already have a compatible STORJ payout address, or an address made with another ERC20 compatible wallet such as Metamask, Parity or Mist, you can skip this article.
+Here is walkthrough for one of the popular software wallet - [https://MyEtherWallet.com](https://MyEtherWallet.com) . The following step will let you create a valid USDC payout address if you do not already have one. If you already have a compatible payout address, or an address made with another ERC20 compatible wallet such as Metamask, Parity or Mist, you can skip this article.
 
-First we will add a STORJ ERC20 payout address. STORJ is the name of the token which is used to pay the Operators for renting out their storage space. STORJ has a monetary value and divisibility which makes it suitable as a means of payment. To create a new payout address, you can use any compatible ethereum wallet; we use [https://www.myetherwallet.com/ (MEW)](https://www.myetherwallet.com/) here as example. There are many other options available; Storj Labs does not endorse any particular wallet, please choose the one you are most comfortable with.
+First we will add an ERC20 payout address. Operators are paid in USDC, a US dollar stablecoin on the Ethereum network, for renting out their storage space. To create a new payout address, you can use any compatible ethereum wallet; we use [https://www.myetherwallet.com/ (MEW)](https://www.myetherwallet.com/) here as example. There are many other options available; Storj Labs does not endorse any particular wallet, please choose the one you are most comfortable with.
 
 You have three options how to create a new wallet on MEW site
 

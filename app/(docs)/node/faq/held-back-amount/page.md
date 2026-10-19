@@ -7,7 +7,7 @@ redirects:
 
 The **held back amount (staked)** component provides a preferred way for Node Operators to exit the network. This model optimizes liveliness by deterring Nodes to exit the network without transferring their pieces (thus limiting repair costs). Importantly, this strikes an equilibrium between a very low cost of entry for Nodes while also way to insulate against the cost of data repair.
 
-Nodes don't need to provide any up-front stake to start earning STORJ tokens as a Storage Node Operator. Rather, during the first nine months of Storage Node Operation, a percentage of earnings are placed in a holding account. These funds are held until a Storage Node Operator chooses to leave the network. After the 15th month, a portion of the balance is returned to the Storage Node Operator, while the remainder is held indefinitely.
+Nodes don't need to provide any up-front stake to start earning USDC as a Storage Node Operator. Rather, during the first nine months of Storage Node Operation, a percentage of earnings are placed in a holding account. These funds are held until a Storage Node Operator chooses to leave the network. After the 15th month, a portion of the balance is returned to the Storage Node Operator, while the remainder is held indefinitely.
 
 If the Storage Node Operator uses the Graceful Exit function when leaving one or more satellites, the funds corresponding to the satellite(s) they exited will be returned in full after the exit is complete. If the Storage Node Operator exits the network abruptly without completing the Graceful Exit, the held back funds for all the satellites their node was operating on at the time of abrupt exit will be forfeited to offset the cost of data repair.
 

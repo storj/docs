@@ -54,5 +54,8 @@
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.6",
     "sharp": "^0.35.5"
+  },
+  "overrides": {
+    "postcss-selector-parser": "^6.1.5"
   }
 }

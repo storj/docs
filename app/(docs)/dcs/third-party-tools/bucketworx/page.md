@@ -30,7 +30,12 @@ access type. Copy the **Access Key** and **Secret Key**: the secret is shown onl
 2. Choose **Storj** from the **Provider** list. BucketWorx fills in the endpoint,
    `https://gateway.storjshare.io`, and the settings Storj needs.
 3. Give the account a name, and paste the access key and secret key.
+
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/699205781-0aeafa65-dbc2-4c71-bf5a-0c92e7b86067.png)
+
 4. Press **Test connection**, then **Save**. Your buckets appear under the account in the sidebar.
+
+![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/699205787-fbbc6394-be0e-4f84-9392-d48490db0dc0.png)
 
 BucketWorx keeps the secret key in your operating system's keychain.
 

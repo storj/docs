@@ -74,29 +74,29 @@ FlexMount is set up as follows:
 
 The same FlexMount can be re-used across multiple Object Mount-wrapped shells.
 
-The `--flex` option can also be used with `cuno run` to run a single command or script with Object Mount enabled.
+The `--flex` option can also be used with `cuno run` to run a single command or script with Object Mount enabled. Put `--flex` before `run`:
 
 For example:
 
 ```shell
 # terminal
-cuno run --flex "$HOME/my-object-storage" bash -c "touch $HOME/object_storage_mount/s3/<bucket>/newfile"
+cuno --flex "$HOME/my-object-storage" run bash -c "touch $HOME/my-object-storage/s3/<bucket>/newfile"
 ```
 
 
 ## FlexMount Interception Details
 
-The `--flex` option is synonymous with the `-o cloudrootover=exact -o cloudroot="<mount point>"` option, which is used to tell Object Mount to intercept paths that exactly match the `cloudroot` setting, and to handle them using Object Mount on FUSE.
+The `--flex <mount point>` option adds `cloudrootover=<mount point>` to `CUNO_OPTIONS`. With a path as its value, `cloudrootover` resolves each path and redirects paths inside the mount point to Direct Interception instead of the FUSE mount. If the path does not exist, `cuno` ignores `--flex` with a warning.
 
 When using Object Mount Direct Interception in FlexMount Mode, most “local” paths are intercepted but not acted upon as they are handled by the local file system. 
 
 The `cloudrootover` setting tells Object Mount to intercept local paths that match the `cloudroot` setting, and to prioritize itself handling them via the mount. This means that whenever a path is recognized as the `cloudroot`, it will be more efficiently handled in user-space by the Direct Interception/`LD_PRELOAD` library. 
 
-That path recognition can be done in two ways:
+Instead of `--flex`, you can set `cloudrootover` and `cloudroot` yourself. Path recognition can then be done in two ways:
 
   - **Exact String Matching:** (`exact`) This method will match the `cloudroot` setting exactly. This is faster, and will end up relying on the FUSE mount whenever the paths don’t match the `cloudroot` &mdash; for example with symbolic links located outside the mount pointing into the mount. 
   
-    Exact String Matching is the default method. No additional configuration is needed to enable.
+    Exact String Matching is used when `cloudrootover` is given without a value: `-o cloudrootover -o cloudroot="<full path to mount point>"`.
 
   - **Resolved Path Matching:** (`resolve`) This method will resolve the full path given in a file system call, including symbolic links, to check if the file is ultimately located inside the mount point. 
   
@@ -110,5 +110,5 @@ That path recognition can be done in two ways:
 
     ```console
     $ cuno -o cloudrootover=resolve -o cloudroot="$HOME/my-object-storage"
-    (cuno) $ ls $HOME/object_storage_mount/s3/<bucket>/<path>
+    (cuno) $ ls $HOME/my-object-storage/s3/<bucket>/<path>
     ```

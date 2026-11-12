@@ -197,14 +197,14 @@ To do this, additional options must be passed to `cuno mount` when it is run.
 
 You will need to:
   - Use the `--fusion` option to specify the path to the associated attached storage directory
-  - Use the `--root` option to specify the path to the object storage
+  - Use the `--root` option to specify the object storage location as a URI, such as `s3://<bucket>/<path>`
 
 Use a command similar to the one below to enable both these options:
 
 ```sh
 cuno mount \
     --fusion "<path to attached-storage backing directory>" \
-    --root "<path to object storage backing directory>" \
+    --root "<URI of object storage backing directory>" \
     "<mount location>"
 ```
 
@@ -244,7 +244,7 @@ Refer to your environment for specific commands:
 
   ```shell
   #terminal
-  cuno mount --fusion "/mnt/fast/fusion-store" --root "/cuno/s3/<bucket>/fusion-store" "~/my-fusion-filesystem"
+  cuno mount --fusion "/mnt/fast/fusion-store" --root "s3://<bucket>/fusion-store" "~/my-fusion-filesystem"
   ```
 {% /tab %}
 
@@ -269,7 +269,7 @@ Refer to your environment for specific commands:
 
   ```shell
   #terminal
-  cuno mount --fusion "/mnt/fast/fusion-store" --root "/cuno/s3/<bucket>/fusion-store" "~/my-fusion-filesystem"
+  cuno mount --fusion "/mnt/fast/fusion-store" --root "s3://<bucket>/fusion-store" "~/my-fusion-filesystem"
   ```
 {% /tab %}
 
@@ -294,7 +294,7 @@ Refer to your environment for specific commands:
 
   ```shell
   #terminal
-  cuno mount --fusion "/mnt/fast/fusion-store" --root "/cuno/az/<account-name>/<bucket>/fusion-store" "~/my-fusion-filesystem"
+  cuno mount --fusion "/mnt/fast/fusion-store" --root "az://<account-name>/<bucket>/fusion-store" "~/my-fusion-filesystem"
   ```
 {% /tab %}
 
@@ -319,7 +319,7 @@ Refer to your environment for specific commands:
 
   ```shell
   #terminal
-  cuno mount --fusion "/mnt/fast/fusion-store" --root "/cuno/gs/<bucket>/fusion-store" "~/my-fusion-filesystem"
+  cuno mount --fusion "/mnt/fast/fusion-store" --root "gs://<bucket>/fusion-store" "~/my-fusion-filesystem"
   ```
 {% /tab %}
 
@@ -344,7 +344,7 @@ Refer to your environment for specific commands:
 
   ```shell
   #terminal
-  cuno mount --fusion "/mnt/fast/fusion-store" --root "/cuno/s3/<bucket>/fusion-store" "~/my-fusion-filesystem"
+  cuno mount --fusion "/mnt/fast/fusion-store" --root "s3://<bucket>/fusion-store" "~/my-fusion-filesystem"
   ```
 {% /tab %}
 {% /tabs %}
@@ -569,7 +569,7 @@ Check that access, modification and migration are working as expected.
 
 We recommend measuring cost differences, and the overall time taken for equivalent jobs run on attached storage alone.
 
-**Note:** You can set the `CUNO_DEBUG` environment variable to `trace`, or `debug` at the time of mounting for more details logging information.
+**Note:** You can set the `CUNO_LOG` environment variable to `trace`, or `debug` at the time of mounting for more details logging information.
 
 Not seeing what you expect? Contact us at our 🌐 [Support Team](https://supportdcs.storj.io/hc/en-us/requests/new).
 
@@ -605,6 +605,6 @@ Not seeing what you expect? Contact us at our 🌐 [Support Team](https://suppor
 |---------------------|-----------------|-------------|
 | `<mount location>` | The location from which the Fusion filesystem will be accessed. | `$HOME/my-fusion-filesystem` |
 | `--fusion "<path to attached storage backing directory>"` | Enables Fusion for this mount, and sets it to use the location specified to store file-storage data. This is where files that are migrated off the object store into local storage go. This can happen when access patterns suggest the file would benefit from higher IOPS, or when a file doesn’t meet the minimum size or age thresholds. | `/dev/sdf/fusion-store` |
-| `--root "<path to object storage backing directory>"` | Sets the object storage location to be used as the place to store data that is better suited to be stored on object storage rather than on the file storage. | `/cuno/s3/bucket/fusion-store` |
+| `--root "<URI of object storage backing directory>"` | Sets the object storage location to be used as the place to store data that is better suited to be stored on object storage rather than on the file storage. Must be a URI such as `s3://bucket/path`. | `s3://bucket/fusion-store` |
 | `--fusion-size-threshold <size: default 10M>` (optional) | Defines the minimum size that a file needs to be for it to be migrated from file storage to object storage. The argument value is of the form `<INTEGER>[UNIT]`. If no unit is given, the value is assumed to be in *bytes*. Valid units are `K` (Kilobytes), `M` (Megabytes), `G` (Gigabytes), `T` (Terabytes). | |
 | `--fusion-age-threshold <age: default 1h>` (optional) | Defines the minimum age requirement for files to be considered for migration from file storage to object storage. The age is measured as the time since the most recent of the POSIX creation time, modify time, access time, and change time - in other words, the time since each of these must be greater than the set threshold. The argument value is of the form  `<INTEGER>[UNIT]`. If no unit is given, the value is assumed to be in seconds. Valid units are `s` (seconds), `m` (minutes), `h` (hours), `d` (days). | |

@@ -35,13 +35,13 @@ Download the latest package installer.
 Use the installer’s `.run` script to unpack the archive by entering the following command from a terminal window:
 
 ```console
-sh cuno_mne_x86_64_glibc_rpm.run
+sh cuno_<version>_x86_64_glibc_rpm.run
 ```
 
 {% callout type="info" %}
   **Processor Compatibility**
 
-  Although the Red Hat distro file naming convention is to only specify `X86_64` (ex: `cuno_mne_x86_64_glibc_rpm.run`), the Object Mount YUM/RPM Installer Package is designed to run on _both_ AMD64 and Intel x86_64 processors (although not ARM-based CPUs).
+  Although the Red Hat distro file naming convention is to only specify `X86_64` (ex: `cuno_<version>_x86_64_glibc_rpm.run`), the Object Mount YUM/RPM Installer Package is designed to run on _both_ AMD64 and Intel x86_64 processors (although not ARM-based CPUs).
 
   **Note:** ARM-based processors are not supported at this time.
 {% /callout %}
@@ -52,14 +52,14 @@ The unpacking process will prompt you to read and agree to the Object Mount **en
 
 - **Note:** You can automate this step by setting the environment variable `CUNO_INSTALL_ACCEPT_EULA="yes"`. (This is equivalent to accepting the EULA).
 
-The archive and its contents will be unpacked into a directory named `cuno_{VERSION}_x86_64_glibc_rpm` containing the package itself plus some additional files.
+The archive and its contents will be unpacked into a directory named `cuno_<version>_x86_64_glibc_rpm` containing the package itself plus some additional files.
 
 View the unpacked contents with the following `ls` command (substituting your version number):
 
 ```console
-$ ls cuno_1.2.8.8_x86_64_glibc_rpm
-cuno_1.2.8.8_x86_64_glibc.rpm
-CUNO-Installation-and-Usage-Guide.pdf
+$ ls cuno_26.11.3_x86_64_glibc_rpm
+cuno_26.11.3_x86_64_glibc.rpm
+Object-Mount-User-Guide.pdf
 ```
 
 
@@ -69,21 +69,14 @@ CUNO-Installation-and-Usage-Guide.pdf
 
 ```console
 sudo yum makecache
-sudo yum install ./cuno_1.2.8.8_x86_64_glibc_rpm/cuno_1.2.8.8_x86_64_glibc.rpm
+sudo yum install ./cuno_26.11.3_x86_64_glibc_rpm/cuno_26.11.3_x86_64_glibc.rpm
 ```
 
 The installer will fetch and install any necessary additional packages (such as `libfuse`, etc.).
 
-**3b.** Next, the installation process will prompt you to **activate Object Mount**. 
+**3b.** The installer then activates Object Mount if the environment variable `CUNO_INSTALL_LICENSE` is set to your license key or to the full path of a license key file. Set it to `none`, or leave it unset, to skip activation. With `sudo`, set `CUNO_INSTALL_LICENSE` and `CUNO_INSTALL_ACCEPT_EULA` after `sudo` (for example `sudo CUNO_INSTALL_LICENSE=/path/to/license.txt <install command>`); `sudo` drops variables set before it.
 
-- Press 1 to activate a **free trial**:
-  - This will activate a fully-featured 14-day free trial.
-- Press 2 if you already have a **license key**:
-  - Paste your license key or enter a full path to a license key file.
-
-  ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-linux-cuno-enter-license-key.jpg)
-
-- **Note:** You can automate this step by setting the environment variable `CUNO_INSTALL_LICENSE` to one of `trial | none | <your license key> | <full path to your license key file>`.
+If Object Mount is not activated, the installer prints the next steps. Activate it afterwards with `cuno creds activate`; see [](docId:BN6yJrwasPnZsaf).
 
 {% callout type="note" %}
   **Access for: All-Users**

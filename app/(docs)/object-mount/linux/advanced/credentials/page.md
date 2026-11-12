@@ -30,12 +30,13 @@ You can override the defaults by setting the `CUNO_CREDENTIALS` environment vari
 {% callout type="note" %}
   **Credential Storage**
 
-  `cuno creds` will determine the presence of the following paths to store credentials, in descending order of precedence:
+  `cuno creds` stores credentials in `$CUNO_CREDENTIALS` if it is set, and otherwise in `"${XDG_CONFIG_HOME}"/cuno/creds` (or `~/.config/cuno/creds`).
+
+  When Object Mount reads credentials, it uses the first of these directories that exists:
 
   1. `$CUNO_CREDENTIALS`
-  2. `"${XDG_CONFIG_HOME}"/cuno/creds`
-  3. `~/.config/cuno/creds`
-  4. `"${CUNO_ROOT}"/cuno-config/creds`
+  2. `"${XDG_CONFIG_HOME}"/cuno/creds` (or `~/.config/cuno/creds` if `XDG_CONFIG_HOME` is not set)
+  3. `cuno-config/creds` next to the installation directory, e.g. `/opt/cuno-config/creds` for an installation in `/opt/cuno`
 {% /callout %}
 
 

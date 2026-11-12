@@ -43,46 +43,37 @@ user:~$
 
 As mentioned in the Object Mount for Linux [Introduction](docId:wxtofwqcb5f2), Object Mount provides a User-mode Library, `cuno.so`. This dynamic loader can be pre-loaded into a running process using the `LD_PRELOAD` environment variable.
 
-Set the environment variable `LD_PRELOAD="$CUNO_ROOT"/cuno.so` before executing a command and Object Mount will be enabled for that command.
+Set the environment variable `LD_PRELOAD=/opt/cuno/lib/cuno.so` before executing a command and Object Mount will be enabled for that command.
 
 {% callout type="note" %}
-  **`CUNO_ROOT`**
+  **Installation Directory**
 
-  The `CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is:
+  The examples on this page use `/opt/cuno`, the directory of a system-wide installation. Replace it with your installation directory:
   
   - `/opt/cuno` for a system-wide installation
   - `$HOME/.local/opt/cuno` for a user-local installation (generally)
 
-  Display your `CUNO_ROOT` variable:
+  Inside a `cuno` shell, the `CUNO_BASEDIR` environment variable holds the installation directory:
   ```sh
-  echo $CUNO_ROOT
+  echo $CUNO_BASEDIR
   ```
 
-  If it is blank, first set the `CUNO_ROOT` environment variable:
-  
-  1. Locate your deployment by running:
+  Otherwise, locate your deployment by running:
     
-      ```sh
-      ls /opt/cuno
-      ls $HOME/.local/opt/cuno
-      ```
+  ```sh
+  ls /opt/cuno
+  ls $HOME/.local/opt/cuno
+  ```
   
   One of those directories should display multiple cuno-related files.
-
-  2. Set your CUNO_ROOT variable (for the current shell session) by running:
-      ```sh
-      export CUNO_ROOT="/opt/cuno"
-        -or-
-      export CUNO_ROOT="$HOME/.local/opt/cuno"
-      ```
 
   See [Installation Locations](docId:ahWohd5eegh6eizi#installation-locations-scripted-installers) for more information on installation locations.
 {% /callout %}
 
-After verifying that your `CUNO_ROOT` variable is set to the `cuno` installation directory, you can start a `bash` shell wrapped by `cuno.so` with the following command:
+To start a `bash` shell wrapped by `cuno.so`, run:
 
 ```console
-LD_PRELOAD="$CUNO_ROOT"/lib/cuno.so bash
+LD_PRELOAD=/opt/cuno/lib/cuno.so bash
 ```
 
 The `bash` shell, and any command executed from within this shell instance, will run with Object Mount enabled. Other processes and applications will not be affected.
@@ -96,13 +87,13 @@ ls gs://gcp-public-data-landsat/
 
 ### Additional Environment Variables
 
-In addition to `CUNO_ROOT`, you may consider setting the following environment variables for convenience:
+You may consider setting the following environment variables for convenience:
 
 | **Environment Variable** | **Description** | **Value** |
 |--------------------------|-----------------|-----------|
-| `LD_PRELOAD`| Load the Object Mount library  | "${CUNO_ROOT}"/lib/cuno.so${LD_PRELOAD+:$LD_PRELOAD}
-| `PATH`      | Path-free access to Object Mount executables  | "${CUNO_ROOT}"/bin:${PATH}
-| `MANPATH`   | Easy access to Object Mount manual pages |  "${CUNO_ROOT}"/share/man:${MANPATH}
+| `LD_PRELOAD`| Load the Object Mount library  | /opt/cuno/lib/cuno.so${LD_PRELOAD+:$LD_PRELOAD}
+| `PATH`      | Path-free access to Object Mount executables  | /opt/cuno/bin:${PATH}
+| `MANPATH`   | Easy access to Object Mount manual pages |  /opt/cuno/share/man:${MANPATH}
 
 
 ## Via Shell Profiles
@@ -110,12 +101,12 @@ In addition to `CUNO_ROOT`, you may consider setting the following environment v
 To _always_ load Object Mount when starting a new interactive shell, append the following line to `~/.bashrc` or `~/.zshrc`:
 
 ```console
-export LD_PRELOAD="${CUNO_ROOT}"/lib/cuno.so`
+export LD_PRELOAD=/opt/cuno/lib/cuno.so
 ```
 
 `/etc/profile.d` contains application-specific startup scripts, which are executed at user login by their respective login shells.
 
-A sample script is provided in `${CUNO_ROOT}/etc/profile.d/cunorc.sh`.
+A sample script is provided in `/opt/cuno/etc/profile.d/cunorc.sh`.
 
 Copy this to `/etc/profile.d/` to enable Object Mount for all users.
 
@@ -170,7 +161,7 @@ To inject Object Mount into a Docker container when it is launched:
       ```console
       docker run                                               \
         --tmpfs /cunodb                                      \
-        -v $CUNO_ROOT:/opt/cuno:ro                           \
+        -v /opt/cuno:/opt/cuno:ro                            \
         -v /opt/cuno/etc/ld.so.preload:/etc/ld.so.preload:ro \
         -v $CUNO_CREDENTIALS:/opt/cuno-config/creds:ro       \
         <image> [container-commands]
@@ -191,7 +182,7 @@ To enable this, bind mount the nested `bindpoint` directory instead of the crede
 ```console
 docker run                                                             \
     --tmpfs /cunodb                                                    \
-    -v $CUNO_ROOT:/opt/cuno:ro                                         \
+    -v /opt/cuno:/opt/cuno:ro                                          \
     -v /opt/cuno/etc/ld.so.preload:/etc/ld.so.preload:ro               \
     -v $CUNO_CREDENTIALS/bindpoint:/opt/cuno-config/creds/bindpoint:ro \
     <image> [container-commands]
@@ -248,8 +239,8 @@ The following commands demonstrate injecting Object Mount into a Singularity ima
 
 ```
 $ singularity exec   \
-    --bind $CUNO_ROOT:/opt/cuno \
-    --bind $CUNO_ROOT/etc/ld.so.preload:/etc/ld.so.preload \
+    --bind /opt/cuno:/opt/cuno \
+    --bind /opt/cuno/etc/ld.so.preload:/etc/ld.so.preload \
     --bind "$CUNO_CREDENTIALS":/opt/cuno-config/creds     \
     ./singularity_image.sif ls s3://commoncrawl
 
@@ -267,14 +258,14 @@ crawl-001  crawl-data      mapred-temp    parse-output-test  stats-output
 Alternatively, rather than using command options, the `--bind` parameters can be specified as environment variables before the `singularity` binary is called, making it easier to modify existing pipelines without changing the command line call, like so:
 
 ```
-export SINGULARITY_BIND="$CUNO_ROOT:/opt/cuno,$CUNO_CREDENTIALS:/opt/cuno-config/creds"
+export SINGULARITY_BIND="/opt/cuno:/opt/cuno,$CUNO_CREDENTIALS:/opt/cuno-config/creds"
 ```
 
 As another alternative, Object Mount can be used via a FUSE mount inside Singularity with the `--fusemount` parameter:
 
 ```
 $ singularity exec \
-    --bind "$CUNO_ROOT":/opt/cuno \
+    --bind /opt/cuno:/opt/cuno \
     --bind "$CUNO_CREDENTIALS":/opt/cuno-config/creds \
     --fusemount 'container:/opt/cuno/bin/cuno mount --root /cuno /cuno' \
     ./singularity_image.sif /cuno/s3/commoncrawl
@@ -289,11 +280,11 @@ The [Lmod](https://lmod.readthedocs.io/en/latest/) Environment Module System is 
 
 Many HPC environments incorporate `module` as one of the means by which software can be loaded by their users.
 
-A sample script has been provided within your Object Mount installation directory here: `${CUNO_ROOT}/share/modulefiles/cuno/{FULL-VERSION}.lua`.
+A sample script has been provided within your Object Mount installation directory here: `/opt/cuno/share/modulefiles/cuno/{FULL-VERSION}.lua`.
 
 It is built specifically for the **Lmod** implementation in **Lua**, and uses values set to example paths (see the `base` variable in particular) and default options that you might want to append to, modify, or remove to suit your environment and your installation choices.
 
-After adding the parent directory of the file to the `MODULEPATH` with `module use "${CUNO_ROOT}/share/modulefiles/cuno"`, a user should be able to run `module load cuno` to add Object Mount to their environment.
+After adding the parent directory of the file to the `MODULEPATH` with `module use /opt/cuno/share/modulefiles/cuno`, a user should be able to run `module load cuno` to add Object Mount to their environment.
 
 
 ## With Spectrum LSF

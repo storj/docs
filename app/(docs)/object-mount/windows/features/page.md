@@ -21,15 +21,15 @@ Features that are global and apply to **all OS versions** of Object Mount (macOS
 
 ## Fast Paste on Windows
 
-**Fast Paste** provide a much faster way to upload files to your object storage &mdash; ideal when working with large media assets or entire folder trees of content.
+**Fast Paste** provides a much faster way to copy or move files to and from your object storage &mdash; ideal when working with large media assets or entire folder trees of content.
 
 To use **Fast Paste**:
 
-1. Copy a file or folder from your local drive as normal: using **CTRL+C** or **right-click + Copy**.
+1. Copy a file or folder as normal, using **CTRL+C** or **right-click + Copy**. To move it instead, use **CTRL+X** or **right-click + Cut**.
 
-2. Navigate to an Object Mount drive and directory.
+2. Navigate to the destination directory. Either the source or the destination must be on an Object Mount drive.
 
-3. Right click and choose the **Fast Paste here** menu option (shown with a white and blue Object Mount icon).
+3. Right-click and choose **Object Mount > Copy items here** (or **Move items here** after a Cut). The menu is shown with a white and blue Object Mount icon.
 
     ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-fast-paste.jpg)
 
@@ -70,7 +70,7 @@ Additionally, **Fast Paste**:
 
 ## File Pinning on Windows
 
-Starting with **Object Mount v1.0.5**, you can now **pin files** in Windows to ensure they remain in the **local Object Mount cache**.
+Starting with **Object Mount v1.0.5**, you can now **pin files and folders** in Windows to ensure they remain in the **local Object Mount cache**.
 
 This improves performance and is especially useful for:
 - Preventing delays when reopening large media assets
@@ -93,22 +93,24 @@ When you **pin a file**, Object Mount:
 
 ### Pinning Files
 
-To Pin a file:
+To Pin a file or folder:
 
-1. Right-click any file _stored within_ an **Object Mount volume**.
+1. Right-click any file or folder _stored within_ an **Object Mount volume**.
 
-2. Select the **Pin selected item** menu option (shown with a white and blue Object Mount icon).
+2. Select **Object Mount > Pin selected item** (shown with a white and blue Object Mount icon).
 
-3. A small icon overlay in File Explorer will indicate the file is pinned: 🟢
+3. A small icon overlay in File Explorer will indicate the item is pinned: 🟢
 
-To Unpin a file:
+Pinning a folder also pins the files in it, including files added to the folder later.
 
-1. Right-click the file and choose **Unpin selected item**.
+To Unpin a file or folder:
 
-**Note:** Currently you can only pin individual _files_, not entire _folders_.
+1. Right-click the item and choose **Object Mount > Unpin selected item**.
 
-Pinned files can be identified by:
-  - A visual “green dot” 🟢 overlay indicator when viewed in **File Explorer**
+For an item inside a pinned folder, **Object Mount > Reset pinned status** returns the item to the folder's pinned status.
+
+Pinned items can be identified by:
+  - Overlay icons in **File Explorer**: one for pinned items (the “green dot” 🟢), one while pinning is in progress, and one for items pinned through a pinned parent folder
   - Their status in the **Object Mount logs**
 
     ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-pinned-file-marker.jpg)
@@ -125,7 +127,11 @@ Pinned files can be identified by:
 {% callout type="warning" %}
   **Clearing the Cache**
 
-  If you click **Clear Caches** in the Settings tab of Object Mount, all pinned files will be removed from the cache and will revert to an “unpinned” status.
+  The **Clear Cache** button in the Settings tab of Object Mount opens a dialog with several options:
+
+  - **Clear Disk Cache** removes cached data but keeps pinned items.
+  - **Clear Everything** removes the metadata cache, the disk cache and all pinned items. Pinned items revert to an “unpinned” status.
+  - **Manage Pinned Items** lets you unpin all items or selected items.
 {% /callout %}
 
 ### Best Practices for Using Pinning

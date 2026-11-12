@@ -29,21 +29,13 @@ If Object Mount was installed using a Scripted Installer, follow the steps below
 
 ### Step 1: Determine the Installation Root
 
-The `CUNO_ROOT` environment variable should be set to wherever your Object Mount installation is. 
-
-This directory is usually:
+The scripted installer installs Object Mount into:
 
   - `/opt/cuno` for a system-wide installation
-  - `$HOME/.local/opt/cuno` for a user-local installation (generally)
+  - `$HOME/.local/opt/cuno` for a user-local installation
 
-Display your `CUNO_ROOT` variable:
+Locate your installation by running:
 
-```sh
-echo $CUNO_ROOT
-```
-
-If it is blank or not set, locate your deployment by running:
-  
 ```sh
 ls /opt/cuno
 ls $HOME/.local/opt/cuno
@@ -53,11 +45,11 @@ One of those directories should display multiple cuno-related files.
 
 **See:** [Installation Locations](docId:ahWohd5eegh6eizi#installation-locations-scripted-installers) for more information on installation locations.
 
-## Step 2: Remove the CUNO_ROOT Directory
+## Step 2: Remove the Installation Directory
 
-Delete the CUNO_ROOT directory and all files and subfolders within that CUNO_ROOT directory.
+Delete the installation directory and all files and subfolders within it. This also removes the license (`etc/license`).
 
-In addition, you can remove the following added files:
+In addition, remove the symlinks the installer created:
 
 **For Single User/Local Uninstallation:**
 
@@ -66,11 +58,9 @@ Remove the following additional files:
 ```
 ~/.local/lib/x86_64-linux-gnu/cuno.so
 ~/.local/bin/cuno
-~/.local/share/man/man1/cuno.1
-~/.local/share/man/man1/cuno-creds.1
-~/.local/share/man/man1/cuno-mount.1
-~/.local/share/man/man8/cuno.so.8
 ```
+
+Also remove the links in `~/.local/share/bash-completion/completions/` that point into `~/.local/opt/cuno`.
 
 **For System-wide/Global Uninstallation:**
 
@@ -79,11 +69,9 @@ Remove the following additional files:
 ```
 /usr/lib/cuno.so
 /usr/bin/cuno
-/usr/share/man/man1/cuno.1
-/usr/share/man/man1/cuno-creds.1
-/usr/share/man/man1/cuno-mount.1
-/usr/share/man/man8/cuno.so.8
 ```
+
+Also remove the links in the system bash-completion directory (usually `/usr/share/bash-completion/completions/`) and in `/usr/share/zsh/vendor-completions/` that point into `/opt/cuno`.
 
 ### Step 3: Shell Customization Removal
 
@@ -99,6 +87,8 @@ Remove any customizations made to shell initialization scripts such as
 ## Uninstall for: Package Managers
 
 If Object Mount was installed using a Package Manager, use the commands in the following sections to uninstall Object Mount for specific Linux distributions.
+
+The package manager does not remove the license file (`/opt/cuno/etc/license`), which is created after installation. To remove it, delete `/opt/cuno` afterwards with `sudo rm -rf /opt/cuno`.
 
 ### Debian derivatives (e.g. Ubuntu)
 

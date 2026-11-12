@@ -21,13 +21,18 @@ The steps below work for Macs with either Intel processors or Apple Silicon (M1-
 
 Before you begin, make sure your Mac meets the following system requirements:
 
-- macOS 12 Monterey or later
-
-  (Note: macOS 13 Ventura or later is required for advanced features such as Fast Copy & Fast Move.)
+- macOS 13 Ventura or later (macOS 13.5 or later for the Finder extension)
 
 - At least 300MB of free disk space
 - Internet connection for mounting cloud-hosted buckets, or LAN connection for mounting local S3 buckets
-- macFUSE 4.8.2 or later must be installed (see instructions below)
+- macFUSE must be installed (see instructions below), at least the version for your macOS:
+
+  | macOS        | Minimum macFUSE |
+  |--------------|-----------------|
+  | 13 Ventura   | 4.4.0           |
+  | 14 Sonoma    | 4.5.0           |
+  | 15 Sequoia   | 4.8.0           |
+  | 26 Tahoe     | 5.0.6           |
 
 {% callout type="note" %}
   **S3 Provider Support:**

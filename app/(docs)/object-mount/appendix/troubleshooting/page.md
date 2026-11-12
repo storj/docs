@@ -44,7 +44,7 @@ Here are a few common issues to be aware of:
 
   - Verify your license is active
     - Windows and macOS: Click the **About** tab
-    - Linux: run `cuno creds list`
+    - Linux: run `cuno creds license`
   - Re-import your credentials and confirm bucket visibility
   - Ensure dependencies are installed:
     - **macOS**: [macFUSE](docId:MyV4Bv3fKJEZucAb#step-3-install-mac-fuse-required)

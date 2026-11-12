@@ -94,7 +94,6 @@ Each storage backend behaves slightly differently depending on API responsivenes
 {% tab label="Storj" %}
   - Use [Storj-managed encryption](docId:aitie6rohXai9uuv) projects.
   - Use [**lexicographically ordered buckets**](docId:eZ4caegh9queuQuaazoo#list-objects) for faster directory listings.
-  - Enable `-filePrefetch` for large file reads.
   - Ensure your satellite and uplink are in the same region as your client when possible.
   - POSIX mode is supported but not required for most workflows.
 {% /tab %}

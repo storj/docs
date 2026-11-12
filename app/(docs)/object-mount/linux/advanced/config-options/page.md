@@ -267,12 +267,10 @@ If a bucket’s POSIX mode tag is already set but the `--posix` flag is not, the
 
 If you are mounting for yourself and others, mount the bucket in a location that is accessible to the users who need access to the files. This can be a shared location or a location that is only accessible to the user who needs access.
 
-If setting up the mount as an admin user, to allow for sudo access, please use the `-o allow_root` flag.
-
-To allow other users to access the mount as themselves, use `-o allow_other`.
+`--posix` sets the FUSE option `-o allow_other`, so other users, including root, can access the mount as themselves. Do not add `-o allow_root`: FUSE refuses to mount with both `allow_root` and `allow_other`. If you mount as a non-root user, `allow_other` requires `user_allow_other` in `/etc/fuse.conf`.
 
 ```console
-$ cuno mount --posix -o allow_root -o allow_other --root s3://mybucket /mnt/cloud/bucket
+$ cuno mount --posix --root s3://mybucket /mnt/cloud/bucket
 ```
 
 Users will now be able to see the files in the bucket at `/mnt/cloud/bucket`. You should now treat this as any other POSIX file system, and set permissions as you need to control access.

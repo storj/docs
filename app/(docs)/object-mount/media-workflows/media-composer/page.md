@@ -38,10 +38,10 @@ Object Mount allows you to treat object storage as a native volume, but there ar
 
 To ensure a smooth editing experience:
 
-  - Enable **Object Mount caching** in the Preferences tab.
+  - Enable the **Data cache** in the Object Mount **Settings** tab.
   - Store **data and metadata cache** on a fast, local volume.
   - If you’re working with large, high-resolution files (4K, RAW), enable the following:
-    - Increase **S3 connection pool size** in Advanced Settings (e.g., 150-200).
+    - Increase the **S3 connections limit** in Advanced settings (e.g., 150-200).
     - Use Avid’s **Background Bin Saving** to reduce interruptions.
   - **Avoid background virus scanning** or indexing on the mounted path (especially on Windows)
 
@@ -64,7 +64,7 @@ Transfers via Object Mount may not show progress in Avid’s interface, so we su
 
   - On **macOS**: Open **Activity Monitor > Network**.
   - On **Windows**: Use **Task Manager > Performance > Network**.
-  - For detailed diagnostics, set the Object Mount log level to `debug` or `trace` in Preferences.
+  - For detailed diagnostics, set the **Object Mount log level** to `debug` or `trace` in the **Settings** tab.
 
 {% callout type="info" %}
   **Use Patience with Slow Transfers**

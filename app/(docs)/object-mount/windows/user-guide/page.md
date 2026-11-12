@@ -69,9 +69,8 @@ Follow the steps below to create a new mount using  the **Add New Credentials** 
 4. Select **Mount all buckets** or choose one or more specific buckets to create a mounted drive for. Click **Next**.
 
 5. Enter a **Display name** for your mount.
-    - Make note of the drive letter that Windows initially assigns to the new mount.
-    - If this drive letter is in use when you enable your mount, you will be prompted to select a new drive letter (see step 8, below).
-    - **Note:** You can also set a **Preferred drive letter** to use under the **Settings** tab.
+    - Choose a **Drive Letter** for the mount. The default, **Automatically assign**, picks a free drive letter each time the mount is enabled.
+    - If you pick a specific letter and it is in use when you enable your mount, you will be prompted to select a new drive letter (see step 8, below).
 
 6. Tick the **Mount as read-only** box if all you need is to browse and copy content. 
     - Uncheck the box to enable **full read/write access**.
@@ -85,7 +84,7 @@ Follow the steps below to create a new mount using  the **Add New Credentials** 
 
     ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-enable-your-mount.jpg)
 
-    - If the drive letter assigned by Windows is already in use, you will be prompted to select a new drive letter:
+    - If you picked a specific drive letter and it is already in use, you will be prompted to select a new drive letter:
 
     ![](https://link.us1.storjshare.io/raw/jua7rls6hkx5556qfcmhrqed2tfa/docs/images/om-docs/om-win-drive-assignment.jpg)
 
@@ -118,9 +117,13 @@ Refer to the following sections for details on each setting:
 
 ### General
 
-Select a **Preferred drive letter** for Object Mount to use.
+- **Confirm before exiting if mount is active:** Shows a confirmation dialog when you exit Object Mount while a mount is active.
 
-- **Note:** Object Mount only allows for a single mount to be active at any time. This preferred drive letter will be used for that one, active mount.
+{% callout type="info" %}
+  **Multiple Mounts**
+
+  Several mounts can be active at the same time. A mount cannot be enabled while another active mount uses the same drive letter or an overlapping cloud path, such as the same bucket.
+{% /callout %}
 
 ### Data Cache
 

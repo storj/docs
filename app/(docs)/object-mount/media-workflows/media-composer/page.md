@@ -41,7 +41,6 @@ To ensure a smooth editing experience:
   - Enable **Object Mount caching** in the Preferences tab.
   - Store **data and metadata cache** on a fast, local volume.
   - If you’re working with large, high-resolution files (4K, RAW), enable the following:
-    - Set `CUNO_OPTIONS = -filePrefetch` as a custom environment variable.
     - Increase **S3 connection pool size** in Advanced Settings (e.g., 150-200).
     - Use Avid’s **Background Bin Saving** to reduce interruptions.
   - **Avoid background virus scanning** or indexing on the mounted path (especially on Windows)

@@ -14,10 +14,9 @@ hidden: false
 
 ## Activate using an Object Mount License Key
 
-When you first [installed Object Mount](docId:wxtofwqcb5f2) for Linux, you may have already added your license key.
+When you first [installed Object Mount](docId:wxtofwqcb5f2) for Linux, you may have already added your license key with the `CUNO_INSTALL_LICENSE` environment variable.
 
-  - If not, you may have selected the option to start a Free Trial.
-  - At the end of your free trial period you will need to register and obtain an Object Mount License Key.
+  - If not, the installer told you to activate Object Mount with `cuno creds activate`.
   - Or you may have renewed an expired license key.
 
 **Note:** If you do not yet have a license key, reach out to your 🌐 [Storj Representative](https://www.storj.io/landing/get-in-touch).
@@ -32,7 +31,7 @@ cuno creds activate
 
 ## Non-Interactive Activation
 
-Alternatively, for non-interactive license key activation, you can point the command to a license key file:
+Alternatively, for non-interactive license key activation, you can point the command to a license key file. The file's permissions must be `0600`, `0400` or `0500`, otherwise the command rejects it:
 
 ```shell
 # terminal
@@ -49,7 +48,7 @@ echo "<your license key>" | cuno creds activate
 {% callout type="note" %}
   **License File Location**
 
-  Once activated, the location of the license file is: `$CUNO_ROOT/etc/license`. 
+  Once activated, the license file is `etc/license` in the install directory: `/opt/cuno/etc/license` for a system-wide install, or `~/.local/opt/cuno/etc/license` for a single-user install.
 
   By default, the permissions on this file are set to `0600`. If needed, Administrators can manually modify the group and permissions to allow other system users access to the `cuno` CLI command.
 {% /callout %}
@@ -59,4 +58,4 @@ echo "<your license key>" | cuno creds activate
 
 Normally, activation means that access to Object Mount is **limited to the one user** who runs the `cuno creds activate` command.
 
-However, if the user that runs `cuno creds activate` is `root`, then access can be optionally given to all users.
+However, if the user that runs `cuno creds activate` is `root` and runs it in a terminal, the command asks whether to give access to the root group and to all other users. When the key is piped in, or set with `CUNO_INSTALL_LICENSE` during a package install, it does not ask and the license stays readable by `root` only.

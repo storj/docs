@@ -42,8 +42,8 @@ For macOS:
 
 ## I have multiple Mounts added but I can only activate one at a time?
 
-  - Object Mount for both Windows and Mac can only have **one active** mount at a time.
-  - Activating a second mount, will automatically de-activate the previously active mount.
+  - Object Mount for Windows and Mac can have several mounts active at the same time.
+  - Two mounts conflict, and cannot be active together, when their mount paths overlap or their cloud roots overlap (for example `s3://bucket` and `s3://bucket/prefix`). The toggle of a mount that conflicts with an active mount is grayed out.
 
   
 ## How can I add a new bucket to the Mount created with the option "All buckets"?

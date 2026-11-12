@@ -123,17 +123,13 @@ Mount a bucket in a location that is accessible to the users.
 
 In this guide, we will use a shared location of `/mnt/cloud/bucket` as the mount point.
 
-When setting up the mount as an **admin user**, allow for sudo access using the `-o allow_root` flag:
+`--posix` sets the FUSE option `-o allow_other`, so **other users**, including root, can access the mount as themselves:
 
 ```console
-$ cuno mount --posix -o allow_root --root s3://mybucket /mnt/cloud/bucket
+$ cuno mount --posix --root s3://mybucket /mnt/cloud/bucket
 ```
 
-To allow **other users** to access the mount as themselves, use the `-o allow_other` flag:
-
-```console
-$ cuno mount --posix -o allow_other --root s3://mybucket /mnt/cloud/bucket
-```
+Do not add `-o allow_root`: FUSE refuses to mount with both `allow_root` and `allow_other`. If you mount as a non-root user, `allow_other` requires `user_allow_other` in `/etc/fuse.conf`.
 
 Users will now be able to see the files in the bucket at `/mnt/cloud/bucket`, and POSIX permissions persisted by Object Mount for files in that bucket will be respected. 
 
@@ -208,25 +204,9 @@ Change: 2022-03-01 12:00:00.000000000 +0000
 {% callout type="warning" %}
   **POSIX ACL Support**
 
-  Work to support POSIX ACLs is under development. 
+  Object Mount does not support POSIX ACLs, so default ACLs set with `setfacl` cannot be used to set inherited permissions.
 
   If this is a feature you need, please contact our 🌐 [Support Team](https://supportdcs.storj.io/hc/en-us/requests/new).
 {% /callout %}
 
-Use the [set file access control lists (setfacl)](https://linux.die.net/man/1/setfacl) command to define additional default permissions to be applied to files in a directory when they are created.
-
-For example, an admin could create a shared space, `/mnt/cloud/bucket/shared`, for users to collaborate, and set the default permissions to allow all users and groups to read and write files in the directory:
-
-```console
-$ setfacl -m u::rwX,g::rwX,o::- /mnt/cloud/bucket/shared
-```
-
-This will result in the following behavior:
-
-```console
-$ touch /mnt/cloud/bucket/shared/newfile
-$ mkdir /mnt/cloud/bucket/shared/newdir
-$ ls -l /mnt/cloud/bucket/shared/
-drwxrwxr-x 1 user1 group1 0 Mar  1 12:00 /mnt/cloud/bucket/shared/newdir
--rw-rw-r-- 1 user1 group1 0 Mar  1 12:00 /mnt/cloud/bucket/shared/newfile
-```
+To control the permissions of new files, set a `umask` as described in [Setting Default Permissions for New Files](#setting-default-permissions-for-new-files).

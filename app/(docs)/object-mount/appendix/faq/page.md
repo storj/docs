@@ -19,7 +19,7 @@ Short answer, for a generic cloud: read, write, and list permissions for the buc
 The maximum performance comes from Object Mount’s ability to prefetch data based on how it handle certain file types. It is not dependent on being able to write the POSIX-metadata file. With read-only permissions to a bucket, Object Mount will still achieve maximum performance &mdash; but it will not be able to update any POSIX-related metadata associated with the original files.
 
 ## Why don’t read-only credentials work when POSIX is enabled in Object Mount?
-The POSIX mode needs to write a hidden file at the root of the bucket that tracks all the POSIX permissions, etc. This is why the read-only use case works _so long as_ you mount the bucket without POSIX enabled.
+The POSIX mode needs to write POSIX permissions, ownership and times as objects in a hidden folder inside each directory. This is why the read-only use case works _so long as_ you mount the bucket without POSIX enabled.
 
 ## How can I mount all buckets with Object Mount?
 In order for Object Mount to “see” the buckets to be mounted when adding new credentials into Object Mount, the AWS equivalent of `ListAllMyBuckets` is required. In the absence of `ListAllMyBuckets`, you can specify what bucket to mount by manually pairing the bucket.

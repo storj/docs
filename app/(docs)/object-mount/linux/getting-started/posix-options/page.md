@@ -33,7 +33,7 @@ The levels of POSIX compatibility provided in Object Mount for Linux are:
 **How to check if you need to enable “POSIX File Access”**
 
 - Run your workload using a local file system volume. Then run the same workload using an Object Mount volume. Compare the outputs and results. If you find discrepancies, it is likely that POSIX File Access needs to be enabled.
-- If Object Mount running with only **Core File Access** fails with an error `(134) ENOTSUP` (not supported) or `Operation not permitted` then it is likely that POSIX File Access needs to be enabled.
+- If Object Mount running with only **Core File Access** fails with an error `(95) ENOTSUP` (not supported) or `Operation not permitted` then it is likely that POSIX File Access needs to be enabled.
 {% /callout %}
 
 
@@ -72,7 +72,7 @@ The levels of POSIX compatibility provided in Object Mount for Linux are:
 
 There are two main ways to enable “POSIX File Access”:
 
-  - If the object storage provider supports setting **tags** at the bucket level, then you can enable POSIX File Access mode for _all users_ using the command `cuno creds setposix s3://your_bucket_name true` from a command line/shell interface. This will affect _everyone_ using the bucket and will force all Object Mount users of that bucket into POSIX File Access mode. 
+  - If the object storage provider supports setting **tags** at the bucket level, then you can enable POSIX File Access mode for _all users_ using the command `cuno creds setposix s3://your_bucket_name permissive` from a command line/shell interface. This will affect _everyone_ using the bucket and will force all Object Mount users of that bucket into POSIX File Access mode. (`setposix ... true` selects the enforced mode instead; see [POSIX Enforced File Access](#posix-enforced-file-access).)
 
   - Otherwise, to enable POSIX File Access on an _individual workstation-basis_ you can set a local environment variable. Enter `export CUNO_POSIX=1` from a command line/shell interface. This setting is valid per-session.
 

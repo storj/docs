@@ -35,7 +35,7 @@ When enabled, POSIX Mode generates, stores, and maintains the metadata that is t
 - Timestamps (mtime, ctime, etc.)
 - Symbolic links and directory flags (where supported)
 
-To retain this metadata, Object Mount creates and writes to a hidden index file that is stored at the root of your object storage bucket.
+To retain this metadata, Object Mount writes it as objects in a hidden folder inside each directory of your object storage bucket. Object Mount hides these folders from view.
 
 {% callout type="info" %}
   **POSIX Mode Requirements**
@@ -73,7 +73,7 @@ You should _not_ enable POSIX Mode in Object Mount for:
 
 - **Read-only Bucket Credentials**
 
-  POSIX Mode requires _write_ access to the object storage bucket in order to create and write to the hidden metadata file. If your credentials are read-only, POSIX mode will not function and may prevent the mount from working correctly.
+  POSIX Mode requires _write_ access to the object storage bucket in order to write the hidden metadata objects. If your credentials are read-only, POSIX mode will not function and may prevent the mount from working correctly.
 
 - **Lightweight Access** 
 

@@ -66,10 +66,6 @@ Depending on the capabilities and behaviors of your object storage provider’s 
 | `no-remote-copy`    | Do not copy objects within the same bucket via the server &mdash; download and upload instead.
 | `no-object-tagging` | Do not attempt to get/put object tags.
 | `no-object-acl`     | Do not attempt to get/put object ACLs.
-| `no-multipart-upload` | Do not attempt to use 🌐 [multipart upload](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html).
-| `no-copy-part`      | Do not attempt to use 🌐 [UploadPartCopy](https://docs.aws.amazon.com/AmazonS3/latest/API/API_UploadPartCopy.html).
-| `no-range-download` | Do not attempt to use 🌐 [Byte-Range Fetches](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance-guidelines.html#optimizing-performance-guidelines-get-range) &mdash; use a single request to download the whole object instead.
-| `no-delete-objects` | Do not attempt to use 🌐 [DeleteObjects](https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObjects.html) (**plural**) when deleting multiple objects &mdash; use 🌐 [DeleteObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObject.html) (**singular**) for each object to delete.
 | `directory-marker` | Create a placeholder object when creating an empty prefix (e.g., `mkdir`). Remove the placeholder object when removing an empty directory.
 | `ignore-empty-prefixes` | Ignore directories that were removed but still reported as existing prefixes by the server.
 | `posix=<true/false>` | Set POSIX mode for all buckets associated with this credential. This option takes precedence over the POSIX mode runtime environment variable, but may be overridden by a bucket-wide POSIX setting (set via `cuno creds`).
@@ -77,7 +73,7 @@ Depending on the capabilities and behaviors of your object storage provider’s 
 {% callout type="note" %}
   **Detect Features**
   
-  Some of the above options can be automatically detected and populated by running `cuno creds detectfeatures <URI> <credential file name>` (e.g. `cuno creds detectfeatures s3://test-bucket test_credentials.s3c`).
+  For S3 buckets, `no-delete-objects` and `no-remote-copy` can be detected and added by running `cuno creds detectfeatures <URI> <imported credential file>`. Give the name of an imported credential file as shown by `cuno creds list` (e.g. `cuno creds detectfeatures s3://test-bucket test_credentials.s3c`); any other argument is treated as a file path, and the results are appended to that file instead.
   
   This command needs a bucket to be specified that it can write temporary files to for testing purposes. The command will run a series of tests against the specified bucket, checking the availability of S3 features that Object Mount uses and updating the credentials file accordingly.
 

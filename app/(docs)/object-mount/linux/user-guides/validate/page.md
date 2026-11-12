@@ -146,10 +146,10 @@ See the [](docId:aish4shuiheeZaig) article for additional `cuno creds` details.
 If you are using an S3-compatible service and are having problems, you can run a compatibility check using the `detectfeatures` command:
 
 ```sh
-cuno creds detectfeatures s3://bucket-to-test credentials.txt
+cuno creds detectfeatures s3://bucket-to-test credentials.s3c
 ```
 
-This command will iterate through multiple S3-compatibility tests, settings, and limitations, and then reconfigure and adjust the generated credentials `.s3c` file based on its findings. 
+This command will iterate through multiple S3-compatibility tests, settings, and limitations, and then adjust the imported `.s3c` credential file based on its findings. Give the imported name shown by `cuno creds list` (`credentials.s3c`), not the original `credentials.txt`: any other argument is treated as a file path, and the results are appended to that file instead.
 
 **Note:** The bucket specified must permit **write access** to allow for the creation of temporary files for testing purposes.
 
